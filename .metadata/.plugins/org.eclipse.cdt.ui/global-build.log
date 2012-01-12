@@ -7,17 +7,7 @@ Nothing to build for Darwin
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
 g++ -o Darwin.exe src\Darwin.o
 Build complete for project Darwin
-Time consumed: 402  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
+Time consumed: 400  ms.  
