@@ -1,0 +1,10 @@
+!SESSION 2012-01-12 21:25:40.635 -----------------------------------------------
+eclipse.buildId=M20110909-1335
+java.version=1.6.0_29
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=nl_BE
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.cdt.core 1 0 2012-01-12 21:34:22.373
+!MESSAGE Indexed 'Darwin' (1 sources, 87 headers) in 2,52 sec: 8.080 declarations; 13.720 references; 2 unresolved inclusions; 6 syntax errors; 76 unresolved names (0,35%)
