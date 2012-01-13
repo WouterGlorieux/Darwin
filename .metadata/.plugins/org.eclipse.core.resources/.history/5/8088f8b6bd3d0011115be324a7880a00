@@ -12,7 +12,7 @@ int status;
 
 void printStatus(){
 	cout << "Status: ok" << endl; // prints !!!Hello World!!!
-
+	return 0;
 }
 
 int main() {

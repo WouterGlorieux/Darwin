@@ -10,13 +10,13 @@ using namespace std;
 
 int status;
 
-void printStatus(){
+int printStatus(){
 	cout << "Status: ok" << endl; // prints !!!Hello World!!!
-
+	return 0;
 }
 
 int main() {
-	printStatus();
+	status = printStatus();
 	return 0;
 }
 
