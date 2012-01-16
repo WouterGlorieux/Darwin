@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Config" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Title" type="xs:normalizedString" />
+  <xs:element name="PopulationSize" type="xs:positiveInteger" />
+</xs:schema>
