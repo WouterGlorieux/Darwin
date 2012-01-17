@@ -22,26 +22,9 @@ using namespace rapidxml;
 
 int status;
 
-void traverse_xml(const std::string& input_xml);
-void printStatus();
-void readConfig();
+void printStatus(){
+	cout << "Status: ok16" << endl; // prints !!!Hello World!!!
 
-
-void printStatus()
-{
-	cout << "Status: ok17" << endl; // prints !!!Hello World!!!
-
-}
-
-void readConfig()
-{
-	std::ifstream t("C:\\workspaces\\Darwin\\Darwin\\src\\config.xml");
-	std::stringstream buffer;
-	buffer << t.rdbuf();
-
-
-	std::cout << buffer.str() << endl;
-	traverse_xml(buffer.str());
 }
 
 void traverse_xml(const std::string& input_xml)
@@ -129,8 +112,15 @@ int main() {
 
 	cout << xml_as_string << endl;
 
+	std::ifstream t("C:\\workspaces\\Darwin\\Darwin\\src\\config.xml");
+	std::stringstream buffer;
+	buffer << t.rdbuf();
 
-	readConfig();
+
+	std::cout << buffer.str() << endl;
+	traverse_xml(buffer.str());
+
+
 	printStatus();
 	return 0;
 }

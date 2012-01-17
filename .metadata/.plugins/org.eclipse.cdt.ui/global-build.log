@@ -118,3 +118,48 @@ Time consumed: 973  ms.
 
 **** Internal Builder is used for build               ****
 Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+..\src\Darwin.cpp: In functie ‘void readConfig()’:
+..\src\Darwin.cpp:37:27: fout: ‘traverse_xml’ was not declared in this scope
+..\src\Darwin.cpp:39:9: fout: return-statement with a value, in function returning 'void' [-fpermissive]
+Build error occurred, build is stopped
+Time consumed: 359  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+..\src\Darwin.cpp: In functie ‘void readConfig()’:
+..\src\Darwin.cpp:45:9: fout: return-statement with a value, in function returning 'void' [-fpermissive]
+Build error occurred, build is stopped
+Time consumed: 329  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -o Darwin.exe src\Darwin.o
+Build complete for project Darwin
+Time consumed: 954  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -o Darwin.exe src\Darwin.o
+Build complete for project Darwin
+Time consumed: 967  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin

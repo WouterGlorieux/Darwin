@@ -21,7 +21,6 @@ using namespace rapidxml;
 
 
 int status;
-
 void traverse_xml(const std::string& input_xml);
 void printStatus();
 void readConfig();
@@ -42,6 +41,9 @@ void readConfig()
 
 	std::cout << buffer.str() << endl;
 	traverse_xml(buffer.str());
+
+	return 0;
+
 }
 
 void traverse_xml(const std::string& input_xml)
