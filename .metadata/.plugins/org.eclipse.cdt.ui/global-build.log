@@ -3,24 +3,118 @@
 
 **** Internal Builder is used for build               ****
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
-g++ -o Darwin.exe src\Darwin.o
-Build complete for project Darwin
-Time consumed: 422  ms.  
+..\src\Darwin.cpp: In functie ‘int main()’:
+..\src\Darwin.cpp:111:20: fout: aggregate ‘std::stringstream buffer’ has incomplete type and cannot be defined
+Build error occurred, build is stopped
+Time consumed: 331  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
-Nothing to build for Darwin
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+..\src\Darwin.cpp: In functie ‘int main()’:
+..\src\Darwin.cpp:111:20: fout: aggregate ‘std::stringstream test’ has incomplete type and cannot be defined
+Build error occurred, build is stopped
+Time consumed: 329  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
-Nothing to build for Darwin
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+..\src\Darwin.cpp: In functie ‘int main()’:
+..\src\Darwin.cpp:111:20: fout: aggregate ‘std::stringstream buffer’ has incomplete type and cannot be defined
+Build error occurred, build is stopped
+Time consumed: 328  ms.  
 
-**** Rebuild of configuration Debug for project Darwin ****
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+..\src\Darwin.cpp: In functie ‘int main()’:
+..\src\Darwin.cpp:111:26: fout: variable ‘std::stringstream buffer’ has initializer but incomplete type
+Build error occurred, build is stopped
+Time consumed: 327  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+..\src\Darwin.cpp: In functie ‘int main()’:
+..\src\Darwin.cpp:111:20: fout: aggregate ‘std::stringstream buffer’ has incomplete type and cannot be defined
+Build error occurred, build is stopped
+Time consumed: 326  ms.  
+
+**** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
 g++ -o Darwin.exe src\Darwin.o
 Build complete for project Darwin
-Time consumed: 2433  ms.  
+Time consumed: 1058  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -o Darwin.exe src\Darwin.o
+Build complete for project Darwin
+Time consumed: 1017  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -o Darwin.exe src\Darwin.o
+Build complete for project Darwin
+Time consumed: 1019  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -o Darwin.exe src\Darwin.o
+Build complete for project Darwin
+Time consumed: 958  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+..\src\Darwin.cpp: In functie ‘int main()’:
+..\src\Darwin.cpp:111:18: let op: onbekende escape sequence: '\w' [enabled by default]
+..\src\Darwin.cpp:111:18: let op: onbekende escape sequence: '\D' [enabled by default]
+..\src\Darwin.cpp:111:18: let op: onbekende escape sequence: '\D' [enabled by default]
+..\src\Darwin.cpp:111:18: let op: onbekende escape sequence: '\s' [enabled by default]
+..\src\Darwin.cpp:111:18: let op: onbekende escape sequence: '\c' [enabled by default]
+g++ -o Darwin.exe src\Darwin.o
+Build complete for project Darwin
+Time consumed: 956  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -o Darwin.exe src\Darwin.o
+Build complete for project Darwin
+Time consumed: 954  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -o Darwin.exe src\Darwin.o
+Build complete for project Darwin
+Time consumed: 964  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -o Darwin.exe src\Darwin.o
+Build complete for project Darwin
+Time consumed: 973  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin

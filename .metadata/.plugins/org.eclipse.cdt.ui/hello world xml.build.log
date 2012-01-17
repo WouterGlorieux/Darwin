@@ -1,0 +1,10 @@
+
+**** Build of configuration Debug for project hello world xml ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o driver.o ..\driver.cxx
+In file included from ..\driver.cxx:8:0:
+..\/hello-pskel.hxx:42:30: fatale fout: xsd/cxx/config.hxx: No such file or directory
+compilation terminated.
+Build error occurred, build is stopped
+Time consumed: 171  ms.  

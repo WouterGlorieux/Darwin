@@ -1,0 +1,30 @@
+//============================================================================
+// Name        : Darwin.cpp
+// Author      : Skidzobolder
+// Version     :
+// Description : main for Darwin
+//============================================================================
+
+#include <iostream>
+#include "rapidxml.hpp"
+
+using namespace std;
+using namespace rapidxml;
+
+
+
+int status;
+
+void printStatus(){
+	cout << "Status: ok6" << endl; // prints !!!Hello World!!!
+
+}
+
+int main() {
+	xml_document<>doc;    // character type defaults to char
+	doc.parse<0>("text");    // 0 means default parse flags
+	printStatus();
+	return 0;
+}
+
+
