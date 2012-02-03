@@ -14,8 +14,7 @@ int main() {
 
 	Evolver cEvolver;
 	std::cout << cEvolver.GetTitle() << ' ' << cEvolver.GetPopulationSize() << std::endl;
-
-	cEvolver.readConfig();
+	cEvolver.
 
 
 	return 0;

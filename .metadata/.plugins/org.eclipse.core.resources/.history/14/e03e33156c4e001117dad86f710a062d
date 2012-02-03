@@ -16,7 +16,9 @@ void Evolver::readConfig()
 	std::stringstream buffer;
 	buffer << t.rdbuf();
 
-	Evolver::traverse_xml(buffer.str());
+
+	std::cout << buffer.str() << std::endl;
+	traverse_xml(buffer.str());
 }
 
 void Evolver::traverse_xml(const std::string& input_xml)

@@ -29,14 +29,12 @@ public:
          m_nPopulationSize = 100;
          m_strTitle = "mijn titel";
          std::cout << "Evolver created" << std::endl;
-
     }
 
     int GetPopulationSize() { return m_nPopulationSize; }
     std::string GetTitle() { return m_strTitle; }
 
-    void readConfig();
-    void traverse_xml(const std::string& input_xml);
+
 
 
 };

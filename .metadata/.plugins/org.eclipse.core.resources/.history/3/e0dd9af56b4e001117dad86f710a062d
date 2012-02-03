@@ -7,19 +7,22 @@
 
 #include "Evolver.h"
 
+void readConfig();
+void traverse_xml(const std::string& input_xml);
 
 
-
-void Evolver::readConfig()
+void readConfig()
 {
 	std::ifstream t("C:\\workspaces\\Darwin\\Darwin\\src\\config.xml");
 	std::stringstream buffer;
 	buffer << t.rdbuf();
 
-	Evolver::traverse_xml(buffer.str());
+
+	std::cout << buffer.str() << std::endl;
+	traverse_xml(buffer.str());
 }
 
-void Evolver::traverse_xml(const std::string& input_xml)
+void traverse_xml(const std::string& input_xml)
 {
 	using namespace rapidxml;
     // (input_xml contains the above XML)
