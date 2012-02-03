@@ -2,7 +2,4 @@
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 362  ms.  
+Nothing to build for Darwin
