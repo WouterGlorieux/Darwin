@@ -34,9 +34,9 @@ public:
     int GetPopulationSize() { return m_nPopulationSize; }
     std::string GetTitle() { return m_strTitle; }
 
-
-
-
+    void traverse_xml(const std::string& input_xml);
+    void printStatus();
+   // double GetFraction() { return static_cast<double>(m_nNumerator) / m_nDenominator; }
 };
 
 

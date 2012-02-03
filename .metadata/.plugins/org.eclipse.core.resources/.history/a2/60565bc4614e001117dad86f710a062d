@@ -7,10 +7,6 @@
 
 #include "Evolver.h"
 
-void readConfig();
-void traverse_xml(const std::string& input_xml);
-
-
 void readConfig()
 {
 	std::ifstream t("C:\\workspaces\\Darwin\\Darwin\\src\\config.xml");
@@ -18,7 +14,7 @@ void readConfig()
 	buffer << t.rdbuf();
 
 
-	std::cout << buffer.str() << std::endl;
+	std::cout << buffer.str() << endl;
 	traverse_xml(buffer.str());
 }
 
@@ -29,7 +25,7 @@ void traverse_xml(const std::string& input_xml)
 
     // make a safe-to-modify copy of input_xml
     // (you should never modify the contents of an std::string directly)
-    std::vector<char> xml_copy(input_xml.begin(), input_xml.end());
+    vector<char> xml_copy(input_xml.begin(), input_xml.end());
     xml_copy.push_back('\0');
 
     // only use xml_copy from here on!
@@ -51,27 +47,27 @@ void traverse_xml(const std::string& input_xml)
 
     // since we have parsed the XML declaration, it is the first node
     // (otherwise the first node would be our root node)
-    std::string encoding = doc.first_node()->first_attribute("encoding")->value();
+    string encoding = doc.first_node()->first_attribute("encoding")->value();
     // encoding == "utf-8"
 
     // we didn't keep track of our previous traversal, so let's start again
     // we can match nodes by name, skipping the xml declaration entirely
     xml_node<>* cur_node = doc.first_node("rootnode");
-    std::string rootnode_type = cur_node->first_attribute("type")->value();
+    string rootnode_type = cur_node->first_attribute("type")->value();
     // rootnode_type == "example"
 
     // go straight to the first evendeepernode
     cur_node = cur_node->first_node("childnode")->first_node("evendeepernode");
-    std::string attr2 = cur_node->first_attribute("attr2")->value();
+    string attr2 = cur_node->first_attribute("attr2")->value();
     // attr2 == "dog"
-    std::cout << attr2 << std::endl;
+    std::cout << attr2 << endl;
 
 
     // and then to the second evendeepernode
     cur_node = cur_node->next_sibling("evendeepernode");
     attr2 = cur_node->first_attribute("attr2")->value();
     // now attr2 == "wolf"
-    std::cout << attr2 << std::endl;
+    std::cout << attr2 << endl;
 
 }
 

@@ -7,10 +7,6 @@
 
 #include "Evolver.h"
 
-void readConfig();
-void traverse_xml(const std::string& input_xml);
-
-
 void readConfig()
 {
 	std::ifstream t("C:\\workspaces\\Darwin\\Darwin\\src\\config.xml");

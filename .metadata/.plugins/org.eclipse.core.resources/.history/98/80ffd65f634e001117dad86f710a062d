@@ -35,8 +35,8 @@ public:
     std::string GetTitle() { return m_strTitle; }
 
 
-
-
+    //void printStatus();
+   // double GetFraction() { return static_cast<double>(m_nNumerator) / m_nDenominator; }
 };
 
 

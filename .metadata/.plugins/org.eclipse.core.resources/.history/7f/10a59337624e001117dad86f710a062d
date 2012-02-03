@@ -7,10 +7,6 @@
 
 #include "Evolver.h"
 
-void readConfig();
-void traverse_xml(const std::string& input_xml);
-
-
 void readConfig()
 {
 	std::ifstream t("C:\\workspaces\\Darwin\\Darwin\\src\\config.xml");
@@ -57,7 +53,7 @@ void traverse_xml(const std::string& input_xml)
     // we didn't keep track of our previous traversal, so let's start again
     // we can match nodes by name, skipping the xml declaration entirely
     xml_node<>* cur_node = doc.first_node("rootnode");
-    std::string rootnode_type = cur_node->first_attribute("type")->value();
+    string rootnode_type = cur_node->first_attribute("type")->value();
     // rootnode_type == "example"
 
     // go straight to the first evendeepernode

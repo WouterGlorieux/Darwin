@@ -13,15 +13,37 @@
 
 
 
-//#include "rapidxml.hpp"
-//#include "rapidxml_print.hpp"
+#include "rapidxml.hpp"
+#include "rapidxml_print.hpp"
 
 #include "Evolver.h"
 
 using namespace std;
 using namespace rapidxml;
 
+
+int status;
+
+
+
+
+
+void printStatus()
+{
+	cout << "Status: ok19" << endl; // prints !!!Hello World!!!
+
+}
+
+
+
+
 int main() {
+
+
+
+
+	//readConfig();
+	//printStatus();
 
 	Evolver cEvolver;
 	std::cout << cEvolver.GetTitle() << ' ' << cEvolver.GetPopulationSize() << std::endl;
@@ -30,7 +52,7 @@ int main() {
 	return 0;
 }
 
-/*
+
 void makexml(){
 	xml_document<> doc;
 
@@ -63,4 +85,4 @@ void makexml(){
 
 	cout << xml_as_string << endl;
 }
-*/
+

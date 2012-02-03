@@ -8,20 +8,13 @@
 #ifndef EVOLVER_H_
 #define EVOLVER_H_
 
-#include <iostream>
-#include <vector>
 #include <string>
-#include <sstream>
-#include <fstream>
-
-#include "rapidxml.hpp"
-#include "rapidxml_print.hpp"
 
 class Evolver
 {
 private:
     int m_nPopulationSize;		//total number of children in every epoch
-    std::string m_strTitle;		//
+    std::string m_strTitle;
 
 public:
     Evolver() // default constructor
@@ -33,10 +26,7 @@ public:
 
     int GetPopulationSize() { return m_nPopulationSize; }
     std::string GetTitle() { return m_strTitle; }
-
-
-
-
+   // double GetFraction() { return static_cast<double>(m_nNumerator) / m_nDenominator; }
 };
 
 

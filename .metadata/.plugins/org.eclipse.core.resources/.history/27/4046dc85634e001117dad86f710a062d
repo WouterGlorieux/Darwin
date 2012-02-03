@@ -13,25 +13,32 @@
 
 
 
-//#include "rapidxml.hpp"
-//#include "rapidxml_print.hpp"
+#include "rapidxml.hpp"
+#include "rapidxml_print.hpp"
 
 #include "Evolver.h"
 
 using namespace std;
 using namespace rapidxml;
 
-int main() {
 
-	Evolver cEvolver;
-	std::cout << cEvolver.GetTitle() << ' ' << cEvolver.GetPopulationSize() << std::endl;
+int status;
 
 
-	return 0;
+
+
+
+void printStatus()
+{
+	cout << "Status: ok19" << endl; // prints !!!Hello World!!!
+
 }
 
-/*
-void makexml(){
+
+
+
+int main() {
+	/*
 	xml_document<> doc;
 
 	// xml declaration
@@ -62,5 +69,16 @@ void makexml(){
 	// xml_no_indent now contains non-indented XML
 
 	cout << xml_as_string << endl;
-}
+
 */
+	//readConfig();
+	//printStatus();
+
+	Evolver cEvolver;
+	std::cout << cEvolver.GetTitle() << ' ' << cEvolver.GetPopulationSize() << std::endl;
+
+
+	return 0;
+}
+
+
