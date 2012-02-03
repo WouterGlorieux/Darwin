@@ -10,11 +10,13 @@
 #include <string>
 #include <sstream>
 #include <fstream>
-#include <streambuf>
+
 
 
 #include "rapidxml.hpp"
 #include "rapidxml_print.hpp"
+
+#include "Evolver.h"
 
 using namespace std;
 using namespace rapidxml;
@@ -29,7 +31,7 @@ void readConfig();
 
 void printStatus()
 {
-	cout << "Status: ok17" << endl; // prints !!!Hello World!!!
+	cout << "Status: ok19" << endl; // prints !!!Hello World!!!
 
 }
 
@@ -132,6 +134,11 @@ int main() {
 
 	readConfig();
 	printStatus();
+
+	Evolver cEvolver;
+	std::cout << cEvolver.GetTitle() << ' ' << cEvolver.GetPopulationSize() << std::endl;
+
+
 	return 0;
 }
 

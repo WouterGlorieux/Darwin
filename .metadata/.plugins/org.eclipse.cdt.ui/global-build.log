@@ -3,35 +3,9 @@
 
 **** Internal Builder is used for build               ****
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
-..\src\Darwin.cpp: In functie ‘int main()’:
-..\src\Darwin.cpp:111:20: fout: aggregate ‘std::stringstream buffer’ has incomplete type and cannot be defined
-Build error occurred, build is stopped
-Time consumed: 331  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
-..\src\Darwin.cpp: In functie ‘int main()’:
-..\src\Darwin.cpp:111:20: fout: aggregate ‘std::stringstream test’ has incomplete type and cannot be defined
-Build error occurred, build is stopped
-Time consumed: 329  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
-..\src\Darwin.cpp: In functie ‘int main()’:
-..\src\Darwin.cpp:111:20: fout: aggregate ‘std::stringstream buffer’ has incomplete type and cannot be defined
-Build error occurred, build is stopped
-Time consumed: 328  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
-..\src\Darwin.cpp: In functie ‘int main()’:
-..\src\Darwin.cpp:111:26: fout: variable ‘std::stringstream buffer’ has initializer but incomplete type
+In file included from ..\src\Darwin.cpp:19:0:
+..\src\/Evolver.h: In constructor ‘Evolver::Evolver()’:
+..\src\/Evolver.h:23:32: fout: no match for call to ‘(std::string {aka std::basic_string<char>}) (const char [10])’
 Build error occurred, build is stopped
 Time consumed: 327  ms.  
 
@@ -39,125 +13,39 @@ Time consumed: 327  ms.
 
 **** Internal Builder is used for build               ****
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
-..\src\Darwin.cpp: In functie ‘int main()’:
-..\src\Darwin.cpp:111:20: fout: aggregate ‘std::stringstream buffer’ has incomplete type and cannot be defined
+In file included from ..\src\Darwin.cpp:19:0:
+..\src\/Evolver.h: In constructor ‘Evolver::Evolver()’:
+..\src\/Evolver.h:23:32: fout: no match for call to ‘(std::string {aka std::basic_string<char>}) (const char [10])’
 Build error occurred, build is stopped
-Time consumed: 326  ms.  
+Time consumed: 330  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
-g++ -o Darwin.exe src\Darwin.o
+g++ -o Darwin.exe src\Evolver.o src\Darwin.o
 Build complete for project Darwin
-Time consumed: 1058  ms.  
+Time consumed: 949  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
-g++ -o Darwin.exe src\Darwin.o
+In file included from ..\src\Darwin.cpp:19:0:
+..\src\/Evolver.h:23:23: let op: karakterconstante te lang voor zijn type [enabled by default]
+..\src\/Evolver.h: In constructor ‘Evolver::Evolver()’:
+..\src\/Evolver.h:23:23: let op: overflow in impliciete omzetting van constante [-Woverflow]
+g++ -o Darwin.exe src\Evolver.o src\Darwin.o
 Build complete for project Darwin
-Time consumed: 1017  ms.  
+Time consumed: 979  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
-g++ -o Darwin.exe src\Darwin.o
+g++ -o Darwin.exe src\Evolver.o src\Darwin.o
 Build complete for project Darwin
-Time consumed: 1019  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
-g++ -o Darwin.exe src\Darwin.o
-Build complete for project Darwin
-Time consumed: 958  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
-..\src\Darwin.cpp: In functie ‘int main()’:
-..\src\Darwin.cpp:111:18: let op: onbekende escape sequence: '\w' [enabled by default]
-..\src\Darwin.cpp:111:18: let op: onbekende escape sequence: '\D' [enabled by default]
-..\src\Darwin.cpp:111:18: let op: onbekende escape sequence: '\D' [enabled by default]
-..\src\Darwin.cpp:111:18: let op: onbekende escape sequence: '\s' [enabled by default]
-..\src\Darwin.cpp:111:18: let op: onbekende escape sequence: '\c' [enabled by default]
-g++ -o Darwin.exe src\Darwin.o
-Build complete for project Darwin
-Time consumed: 956  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
-g++ -o Darwin.exe src\Darwin.o
-Build complete for project Darwin
-Time consumed: 954  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
-g++ -o Darwin.exe src\Darwin.o
-Build complete for project Darwin
-Time consumed: 964  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
-g++ -o Darwin.exe src\Darwin.o
-Build complete for project Darwin
-Time consumed: 973  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
-..\src\Darwin.cpp: In functie ‘void readConfig()’:
-..\src\Darwin.cpp:37:27: fout: ‘traverse_xml’ was not declared in this scope
-..\src\Darwin.cpp:39:9: fout: return-statement with a value, in function returning 'void' [-fpermissive]
-Build error occurred, build is stopped
-Time consumed: 359  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
-..\src\Darwin.cpp: In functie ‘void readConfig()’:
-..\src\Darwin.cpp:45:9: fout: return-statement with a value, in function returning 'void' [-fpermissive]
-Build error occurred, build is stopped
-Time consumed: 329  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
-g++ -o Darwin.exe src\Darwin.o
-Build complete for project Darwin
-Time consumed: 954  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
-g++ -o Darwin.exe src\Darwin.o
-Build complete for project Darwin
-Time consumed: 967  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
+Time consumed: 948  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 

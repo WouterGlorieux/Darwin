@@ -1,0 +1,30 @@
+/*
+ * Evolver.h
+ *
+ *  Created on: 3-feb.-2012
+ *      Author: Skidzobolder
+ */
+
+#ifndef EVOLVER_H_
+#define EVOLVER_H_
+
+class Evolver
+{
+private:
+    int m_nNumerator;
+    int m_nDenominator;
+
+public:
+    Evolver() // default constructor
+    {
+         m_nNumerator = 0;
+         m_nDenominator = 1;
+    }
+
+    int GetNumerator() { return m_nNumerator; }
+    int GetDenominator() { return m_nDenominator; }
+    double GetFraction() { return static_cast<double>(m_nNumerator) / m_nDenominator; }
+};
+
+
+#endif /* EVOLVER_H_ */
