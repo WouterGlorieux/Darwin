@@ -27,7 +27,7 @@ public:
     Evolver() // default constructor
     {
          m_nPopulationSize = 100;
-         m_strTitle = "mijn titel";
+         m_strTitle = "mijn titel2";
          std::cout << "Evolver created" << std::endl;
     }
 
