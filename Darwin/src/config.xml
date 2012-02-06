@@ -4,7 +4,7 @@
   <Description>A more detailed discription of this job.</Description>
   <Settings>
     <PopulationSize>100</PopulationSize>
-    <Generations>10</Generations>
+    <MaxGenerations>10</MaxGenerations>
   </Settings>
   <Mutations>
     <duplication allowed="true" />

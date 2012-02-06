@@ -41,7 +41,7 @@ void Evolver::traverse_xml(const std::string& input_xml)
 
     xml_node<>* settingsNode = rootNode->first_node("Settings");
     m_nPopulationSize = atoi(settingsNode->first_node("PopulationSize")->value());
-    m_nMaxGenerations = atoi(settingsNode->first_node("MaxGenerations")->value());
+    m_nGenerations = atoi(settingsNode->first_node("Generations")->value());
 
 
 
@@ -52,7 +52,7 @@ void Evolver::printSettings(){
 	std::cout << "Title: " << m_strTitle << std::endl;
 	std::cout << "Description: " << m_strDescription << std::endl;
 	std::cout << "PopulationSize: " << m_nPopulationSize << std::endl;
-	std::cout << "Max Generations: " << m_nMaxGenerations << std::endl;
+	std::cout << "Generations: " << m_nGenerations << std::endl;
 
 
 }

@@ -34,8 +34,7 @@ int main(int argc, char *argv[]) {
 	//start evolving
 	//cEvolver.start();
 
-	//save results
-	//cEvolver.saveResults();
+
 
 
 	//std::cout << "Press any key to terminate this program. " ;

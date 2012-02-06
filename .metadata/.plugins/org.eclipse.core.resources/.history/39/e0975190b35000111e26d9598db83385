@@ -41,7 +41,7 @@ void Evolver::traverse_xml(const std::string& input_xml)
 
     xml_node<>* settingsNode = rootNode->first_node("Settings");
     m_nPopulationSize = atoi(settingsNode->first_node("PopulationSize")->value());
-    m_nMaxGenerations = atoi(settingsNode->first_node("MaxGenerations")->value());
+    m_nGenerations = atoi(settingsNode->first_node("Generations")->value());
 
 
 
@@ -52,29 +52,7 @@ void Evolver::printSettings(){
 	std::cout << "Title: " << m_strTitle << std::endl;
 	std::cout << "Description: " << m_strDescription << std::endl;
 	std::cout << "PopulationSize: " << m_nPopulationSize << std::endl;
-	std::cout << "Max Generations: " << m_nMaxGenerations << std::endl;
-
-
-}
-
-void Evolver::start(){
-	//create Rosetta object
-
-	//make random children
-
-	//create Aperture object
-
-//do until maxGenerations reached
-
-	//calculate scores
-
-	//save state
-
-	//make next generation
-
-	//do mutations
-//loop
-
+	std::cout << "Generations: " << m_nGenerations << std::endl;
 
 
 }

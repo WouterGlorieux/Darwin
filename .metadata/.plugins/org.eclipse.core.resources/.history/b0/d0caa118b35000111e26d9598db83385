@@ -23,19 +23,15 @@ int main(int argc, char *argv[]) {
 	}
 	else if (argc == 1){
 		std::cout << "Usage: Darwin.exe filename" << std::endl;
-		return 1;
 
 	}
 	else{
 		std::cout << "too many arguments" << std::endl;
-		return 2;
 	}
 
-	//start evolving
-	//cEvolver.start();
 
-	//save results
-	//cEvolver.saveResults();
+
+
 
 
 	//std::cout << "Press any key to terminate this program. " ;

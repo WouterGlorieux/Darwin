@@ -25,7 +25,7 @@ private:
     std::string m_strDescription; 	//detailed description of this job
 
     int m_nPopulationSize;			//total number of children in every epoch
-    int m_nMaxGenerations;        		//maximum number of generations to calculate (-1 for unlimited)
+    int m_nMaxGenerations;        		//number of generations to calculate
 
 public:
     Evolver() // default constructor
