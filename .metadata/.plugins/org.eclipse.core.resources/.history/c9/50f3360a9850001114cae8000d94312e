@@ -12,7 +12,7 @@
 
 void Evolver::readConfig(std::string strFileName)
 {
-	std::ifstream t(strFileName.c_str());
+	std::ifstream t(strFileName);
 	std::stringstream buffer;
 	buffer << t.rdbuf();
 

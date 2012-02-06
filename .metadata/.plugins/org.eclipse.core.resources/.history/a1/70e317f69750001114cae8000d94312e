@@ -35,7 +35,7 @@ public:
     int GetPopulationSize() { return m_nPopulationSize; }
     std::string GetTitle() { return m_strTitle; }
 
-    void readConfig(std::string strFileName);
+    void readConfig();
     void traverse_xml(const std::string& input_xml);
 
 

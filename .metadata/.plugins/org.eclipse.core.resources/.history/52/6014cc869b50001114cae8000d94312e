@@ -9,7 +9,7 @@
 //#include "rapidxml_print.hpp"
 
 #include <String>
-#include <conio.h>
+
 #include "Evolver.h"
 
 int main(int argc, char *argv[]) {
@@ -28,8 +28,7 @@ int main(int argc, char *argv[]) {
 
 
 
-	std::cout << "Press any key to terminate this program. " ;
-	getch();
+	std::cin << std::getchar() << std::endl;
 	return 0;
 }
 

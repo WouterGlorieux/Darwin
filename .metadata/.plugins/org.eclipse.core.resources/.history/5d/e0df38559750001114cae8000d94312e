@@ -8,28 +8,16 @@
 //#include "rapidxml.hpp"
 //#include "rapidxml_print.hpp"
 
-#include <String>
-#include <conio.h>
 #include "Evolver.h"
 
-int main(int argc, char *argv[]) {
+int main() {
 
 	Evolver cEvolver;
 	std::cout << cEvolver.GetTitle() << ' ' << cEvolver.GetPopulationSize() << std::endl;
 
-
-	if(argc == 2){
-		std::cout  << "Parameter: " << argv[1] << std::endl;
-	}
+	cEvolver.readConfig();
 
 
-	std::string strFileName(argv[1]);
-	cEvolver.readConfig(strFileName);
-
-
-
-	std::cout << "Press any key to terminate this program. " ;
-	getch();
 	return 0;
 }
 

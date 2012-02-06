@@ -10,9 +10,9 @@
 
 
 
-void Evolver::readConfig(std::string strFileName)
+void Evolver::readConfig()
 {
-	std::ifstream t(strFileName.c_str());
+	std::ifstream t("C:\\workspaces\\Darwin\\Darwin\\src\\config.xml");
 	std::stringstream buffer;
 	buffer << t.rdbuf();
 
