@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rootnode version="1.0" type="example">
-  <childnode entry="1">
-    <evendeepernode attr1="cat" attr2="dog1"/>
-    <evendeepernode attr1="lion" attr2="wolf"/>
-  </childnode>
-  <childnode entry="2">
-  </childnode>
-</rootnode>
+<Config>
+  <Title>Title of this job</Title>
+  <Description>A more detailed discription of this job.</Description>
+  <Settings>
+    <PopulationSize>100</PopulationSize>
+    <Generations>10</Generations>
+  </Settings>
+  <Mutations>
+    <duplication allowed="true" />
+  
+  </Mutations>
+</Config>

@@ -30,8 +30,9 @@ private:
 public:
     Evolver() // default constructor
     {
-         m_nPopulationSize = 0;
-         m_strTitle = "";
+         m_nPopulationSize = 100;
+         m_strTitle = "mijn titel";
+         std::cout << "Evolver created" << std::endl;
 
     }
 

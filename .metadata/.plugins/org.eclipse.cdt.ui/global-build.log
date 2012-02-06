@@ -6,16 +6,7 @@ g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Evolver.o src\Darwin.o src\Ap
 c:/mingw/bin/../lib/gcc/mingw32/4.6.2/../../../../mingw32/bin/ld.exe: cannot open output file Darwin.exe: Permission denied
 collect2: ld gaf exit-status 1 terug
 Build error occurred, build is stopped
-Time consumed: 94  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Evolver.o src\Darwin.o src\Aperture.o
-c:/mingw/bin/../lib/gcc/mingw32/4.6.2/../../../../mingw32/bin/ld.exe: cannot open output file Darwin.exe: Permission denied
-collect2: ld gaf exit-status 1 terug
-Build error occurred, build is stopped
-Time consumed: 94  ms.  
+Time consumed: 156  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
@@ -27,25 +18,170 @@ Time consumed: 171  ms.
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
-..\src\Darwin.cpp: In functie ‘int main(int, char**)’:
-..\src\Darwin.cpp:31:2: fout: ‘cout’ was not declared in this scope
-..\src\Darwin.cpp:31:2: note: suggested alternative:
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/iostream:62:18: note:   ‘std::cout’
-..\src\Darwin.cpp:31:62: fout: ‘getch’ was not declared in this scope
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Evolver.o src\Darwin.o src\Aperture.o
+c:/mingw/bin/../lib/gcc/mingw32/4.6.2/../../../../mingw32/bin/ld.exe: cannot open output file Darwin.exe: Permission denied
+collect2: ld gaf exit-status 1 terug
 Build error occurred, build is stopped
-Time consumed: 290  ms.  
+Time consumed: 795  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Evolver.o src\Darwin.o src\Aperture.o
+c:/mingw/bin/../lib/gcc/mingw32/4.6.2/../../../../mingw32/bin/ld.exe: cannot open output file Darwin.exe: Permission denied
+collect2: ld gaf exit-status 1 terug
+Build error occurred, build is stopped
+Time consumed: 156  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
-..\src\Darwin.cpp: In functie ‘int main(int, char**)’:
-..\src\Darwin.cpp:31:2: fout: ‘cout’ was not declared in this scope
-..\src\Darwin.cpp:31:2: note: suggested alternative:
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/iostream:62:18: note:   ‘std::cout’
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Evolver.o src\Darwin.o src\Aperture.o
+c:/mingw/bin/../lib/gcc/mingw32/4.6.2/../../../../mingw32/bin/ld.exe: cannot open output file Darwin.exe: Permission denied
+collect2: ld gaf exit-status 1 terug
 Build error occurred, build is stopped
-Time consumed: 292  ms.  
+Time consumed: 561  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 156  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 905  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 811  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 858  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 811  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::traverse_xml(const string&)’:
+..\src\Evolver.cpp:41:75: fout: invalid conversion from ‘char*’ to ‘int’ [-fpermissive]
+..\src\Evolver.cpp:42:69: fout: invalid conversion from ‘char*’ to ‘int’ [-fpermissive]
+Build error occurred, build is stopped
+Time consumed: 343  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::traverse_xml(const string&)’:
+..\src\Evolver.cpp:43:75: fout: invalid conversion from ‘char*’ to ‘int’ [-fpermissive]
+..\src\Evolver.cpp:44:69: fout: invalid conversion from ‘char*’ to ‘int’ [-fpermissive]
+Build error occurred, build is stopped
+Time consumed: 328  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::traverse_xml(const string&)’:
+..\src\Evolver.cpp:43:25: fout: expected primary-expression before ‘<’ token
+..\src\Evolver.cpp:43:26: fout: expected primary-expression before ‘int’
+..\src\Evolver.cpp:43:26: fout: expected ‘;’ before ‘int’
+..\src\Evolver.cpp:44:69: fout: invalid conversion from ‘char*’ to ‘int’ [-fpermissive]
+Build error occurred, build is stopped
+Time consumed: 749  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::traverse_xml(const string&)’:
+..\src\Evolver.cpp:43:25: fout: expected primary-expression before ‘<’ token
+..\src\Evolver.cpp:43:26: fout: expected primary-expression before ‘int’
+..\src\Evolver.cpp:43:26: fout: expected ‘;’ before ‘int’
+..\src\Evolver.cpp:44:22: fout: expected primary-expression before ‘<’ token
+..\src\Evolver.cpp:44:23: fout: expected primary-expression before ‘int’
+..\src\Evolver.cpp:44:23: fout: expected ‘;’ before ‘int’
+..\src\Evolver.cpp:42:17: let op: unused variable ‘settingsNode’ [-Wunused-variable]
+Build error occurred, build is stopped
+Time consumed: 343  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::traverse_xml(const string&)’:
+..\src\Evolver.cpp:43:75: fout: invalid conversion from ‘char*’ to ‘int’ [-fpermissive]
+..\src\Evolver.cpp:44:69: fout: invalid conversion from ‘char*’ to ‘int’ [-fpermissive]
+Build error occurred, build is stopped
+Time consumed: 343  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::traverse_xml(const string&)’:
+..\src\Evolver.cpp:44:69: fout: invalid conversion from ‘char*’ to ‘int’ [-fpermissive]
+Build error occurred, build is stopped
+Time consumed: 343  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 874  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 951  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 920  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1294  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
@@ -53,66 +189,7 @@ Time consumed: 292  ms.
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
 g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Evolver.o src\Darwin.o src\Aperture.o
 Build complete for project Darwin
-Time consumed: 554  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Evolver.o src\Darwin.o src\Aperture.o
-c:/mingw/bin/../lib/gcc/mingw32/4.6.2/../../../../mingw32/bin/ld.exe: cannot open output file Darwin.exe: Permission denied
-collect2: ld gaf exit-status 1 terug
-Build error occurred, build is stopped
-Time consumed: 524  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 190  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Evolver.o src\Darwin.o src\Aperture.o
-c:/mingw/bin/../lib/gcc/mingw32/4.6.2/../../../../mingw32/bin/ld.exe: cannot open output file Darwin.exe: Permission denied
-collect2: ld gaf exit-status 1 terug
-Build error occurred, build is stopped
-Time consumed: 540  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Evolver.o src\Darwin.o src\Aperture.o
-c:/mingw/bin/../lib/gcc/mingw32/4.6.2/../../../../mingw32/bin/ld.exe: cannot open output file Darwin.exe: Permission denied
-collect2: ld gaf exit-status 1 terug
-Build error occurred, build is stopped
-Time consumed: 507  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Evolver.o src\Darwin.o src\Aperture.o
-c:/mingw/bin/../lib/gcc/mingw32/4.6.2/../../../../mingw32/bin/ld.exe: cannot open output file Darwin.exe: Permission denied
-collect2: ld gaf exit-status 1 terug
-Build error occurred, build is stopped
-Time consumed: 473  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 187  ms.  
+Time consumed: 561  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 

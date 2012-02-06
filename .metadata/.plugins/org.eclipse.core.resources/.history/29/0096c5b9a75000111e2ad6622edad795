@@ -18,7 +18,7 @@ void Evolver::readConfig(std::string strFileName)
 
 	Evolver::traverse_xml(buffer.str());
 
-	Evolver::printSettings();
+
 }
 
 void Evolver::traverse_xml(const std::string& input_xml)
@@ -48,12 +48,6 @@ void Evolver::traverse_xml(const std::string& input_xml)
 }
 
 void Evolver::printSettings(){
-	std::cout << "Config file loaded:" << std::endl;
-	std::cout << "Title: " << m_strTitle << std::endl;
-	std::cout << "Description: " << m_strDescription << std::endl;
-	std::cout << "PopulationSize: " << m_nPopulationSize << std::endl;
-	std::cout << "Generations: " << m_nGenerations << std::endl;
-
 
 }
 

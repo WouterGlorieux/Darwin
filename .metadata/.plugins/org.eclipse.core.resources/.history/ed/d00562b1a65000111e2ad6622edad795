@@ -17,8 +17,6 @@ void Evolver::readConfig(std::string strFileName)
 	buffer << t.rdbuf();
 
 	Evolver::traverse_xml(buffer.str());
-
-	Evolver::printSettings();
 }
 
 void Evolver::traverse_xml(const std::string& input_xml)
@@ -35,25 +33,10 @@ void Evolver::traverse_xml(const std::string& input_xml)
     xml_document<> doc;
     doc.parse<parse_declaration_node | parse_no_data_nodes>(&xml_copy[0]);
 
-    xml_node<>* rootNode = doc.first_node("Config");
-    m_strTitle = rootNode->first_node("Title")->value();
-    m_strDescription = rootNode->first_node("Description")->value();
-
-    xml_node<>* settingsNode = rootNode->first_node("Settings");
-    m_nPopulationSize = atoi(settingsNode->first_node("PopulationSize")->value());
-    m_nGenerations = atoi(settingsNode->first_node("Generations")->value());
-
-
+    xml_node<>* cur_node = doc.first_node("Config");
+    m_strTitle = cur_node->first_node("Title")->value();
+    m_strDescription = cur_node->first_node("Description")->value();
 
 }
 
-void Evolver::printSettings(){
-	std::cout << "Config file loaded:" << std::endl;
-	std::cout << "Title: " << m_strTitle << std::endl;
-	std::cout << "Description: " << m_strDescription << std::endl;
-	std::cout << "PopulationSize: " << m_nPopulationSize << std::endl;
-	std::cout << "Generations: " << m_nGenerations << std::endl;
-
-
-}
 

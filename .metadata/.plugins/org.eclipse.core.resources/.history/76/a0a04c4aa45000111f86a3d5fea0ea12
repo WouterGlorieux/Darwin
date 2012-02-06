@@ -20,18 +20,15 @@
 class Evolver
 {
 private:
-
-    std::string m_strTitle;			//Title of this job
-    std::string m_strDescription; 	//detailed description of this job
-
-    int m_nPopulationSize;			//total number of children in every epoch
-    int m_nGenerations;        		//number of generations to calculate
+    int m_nPopulationSize;		//total number of children in every epoch
+    std::string m_strTitle;		//
 
 public:
     Evolver() // default constructor
     {
-         m_nPopulationSize = 0;
-         m_strTitle = "";
+         m_nPopulationSize = 100;
+         m_strTitle = "mijn titel";
+         std::cout << "Evolver created" << std::endl;
 
     }
 
@@ -40,7 +37,6 @@ public:
 
     void readConfig(std::string strFileName);
     void traverse_xml(const std::string& input_xml);
-    void printSettings();
 
 
 };
