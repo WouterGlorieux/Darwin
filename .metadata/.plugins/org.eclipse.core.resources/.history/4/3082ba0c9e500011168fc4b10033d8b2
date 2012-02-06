@@ -19,20 +19,12 @@ int main(int argc, char *argv[]) {
 
 
 	if(argc == 2){
-		std::cout  << "Loading config file: " << argv[1] << std::endl;
-		std::string strFileName(argv[1]);
-		cEvolver.readConfig(strFileName);
-	}
-	else if (argc == 1){
-		std::cout << "Usage: Darwin.exe filename" << std::endl;
-
-	}
-	else{
-		std::cout << "too many arguments" << std::endl;
+		std::cout  << "Parameter: " << argv[1] << std::endl;
 	}
 
 
-
+	std::string strFileName(argv[1]);
+	cEvolver.readConfig(strFileName);
 
 
 

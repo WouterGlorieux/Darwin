@@ -27,9 +27,6 @@ int main(int argc, char *argv[]) {
 		std::cout << "Usage: Darwin.exe filename" << std::endl;
 
 	}
-	else{
-		std::cout << "too many arguments" << std::endl;
-	}
 
 
 

@@ -76,3 +76,45 @@ Time consumed: 190  ms.
 
 **** Internal Builder is used for build               ****
 Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Evolver.o src\Darwin.o src\Aperture.o
+c:/mingw/bin/../lib/gcc/mingw32/4.6.2/../../../../mingw32/bin/ld.exe: cannot open output file Darwin.exe: Permission denied
+collect2: ld gaf exit-status 1 terug
+Build error occurred, build is stopped
+Time consumed: 540  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Evolver.o src\Darwin.o src\Aperture.o
+c:/mingw/bin/../lib/gcc/mingw32/4.6.2/../../../../mingw32/bin/ld.exe: cannot open output file Darwin.exe: Permission denied
+collect2: ld gaf exit-status 1 terug
+Build error occurred, build is stopped
+Time consumed: 507  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Evolver.o src\Darwin.o src\Aperture.o
+c:/mingw/bin/../lib/gcc/mingw32/4.6.2/../../../../mingw32/bin/ld.exe: cannot open output file Darwin.exe: Permission denied
+collect2: ld gaf exit-status 1 terug
+Build error occurred, build is stopped
+Time consumed: 473  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 187  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
