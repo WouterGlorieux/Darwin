@@ -289,3 +289,26 @@ Time consumed: 1342  ms.
 
 **** Internal Builder is used for build               ****
 Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\DNA.o ..\src\DNA.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Evolver.o src\Darwin.o src\DNA.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 374  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin

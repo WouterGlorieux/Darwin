@@ -20,8 +20,8 @@ public:
 
     }
 
-    void ModeltoDNA();
-    void DNAtoModel();
+    void toDNA();
+    void fromDNA();
 
     void randomDNA();
 
