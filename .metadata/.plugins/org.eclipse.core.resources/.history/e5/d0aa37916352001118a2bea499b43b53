@@ -54,17 +54,20 @@ void Genome::addGene(const char* pchId, const char* pchChromosomeId ){
 
 	for (xml_node<> *child = chromosome->first_node("Chromosome"); child; child = child->next_sibling("Chromosome"))
 	{
-
+		std::cout << "in for loop" << std::endl;
 	    if(child->first_attribute("id")->value() == pchChromosomeId){
 	    // gene node
 		xml_node<>* gene = m_Genome.allocate_node(node_element, "Gene");
 		gene->append_attribute(m_Genome.allocate_attribute("id", pchId ));
-		child->append_node(gene);
+		chromosome->append_node(gene);
+		 std::cout << "adding gene" << std::endl;
 		break;
 	    }
 
+	    std::cout << "going back to next for loop" << std::endl;
 	}
 
+	std::cout << "out of for loop" << std::endl;
 }
 
 std::string Genome::GetGenome(){

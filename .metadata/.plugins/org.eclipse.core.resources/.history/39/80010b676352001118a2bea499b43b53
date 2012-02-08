@@ -68,6 +68,7 @@ void Evolver::start(){
 	cGenome.newGenome(strType);
 	//std::cout << cGenome.GetGenome() << std::endl;
 
+	std::string strId = "1";
 	const char* pchId;
 
 	pchId = "1";
@@ -78,14 +79,13 @@ void Evolver::start(){
 	cGenome.addChromosome(pchId);
 
 
-	pchId = "3654";
+	pchId = "3";
 	cGenome.addChromosome(pchId);
 
 	std::cout << std::endl << cGenome.GetGenome() << std::endl;
 
-	pchId = "1";
-	cGenome.addGene(pchId, "2");
-	std::cout << cGenome.GetGenome() << std::endl;
+	cGenome.addGene(pchId, "1");
+	//std::cout << cGenome.GetGenome() << std::endl;
 
 
 
