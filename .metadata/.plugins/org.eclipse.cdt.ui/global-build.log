@@ -1183,3 +1183,698 @@ Time consumed: 860  ms.
 
 **** Internal Builder is used for build               ****
 Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 733  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+..\src\Genome.cpp: In memberfunctie ‘void Genome::addChromosome()’:
+..\src\Genome.cpp:38:5: fout: ‘xml_node’ was not declared in this scope
+..\src\Genome.cpp:38:5: note: suggested alternative:
+..\src\/rapidxml.hpp:137:30: note:   ‘rapidxml::xml_node’
+..\src\Genome.cpp:38:14: fout: expected primary-expression before ‘>’ token
+..\src\Genome.cpp:38:17: fout: ‘rootNode’ was not declared in this scope
+..\src\Genome.cpp:41:11: fout: expected primary-expression before ‘>’ token
+..\src\Genome.cpp:41:14: fout: ‘chromosome’ was not declared in this scope
+..\src\Genome.cpp:41:50: fout: ‘node_element’ was not declared in this scope
+..\src\Genome.cpp:41:50: note: suggested alternative:
+..\src\/rapidxml.hpp:146:9: note:   ‘rapidxml::node_element’
+Build error occurred, build is stopped
+Time consumed: 280  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 686  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 920  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start()’:
+..\src\Evolver.cpp:71:24: fout: no matching function for call to ‘Genome::addChromosome()’
+..\src\Evolver.cpp:71:24: note: candidate is:
+..\src\/Genome.h:37:10: note: void Genome::addChromosome(std::string&)
+..\src\/Genome.h:37:10: note:   candidate expects 1 argument, 0 provided
+Build error occurred, build is stopped
+Time consumed: 359  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start()’:
+..\src\Evolver.cpp:71:14: fout: redeclaration of ‘std::string strType’
+..\src\Evolver.cpp:66:14: fout: ‘std::string strType’ previously declared here
+..\src\Evolver.cpp:72:24: fout: ‘strId’ was not declared in this scope
+Build error occurred, build is stopped
+Time consumed: 795  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 936  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+..\src\Genome.cpp: In memberfunctie ‘void Genome::addGene(std::string&)’:
+..\src\Genome.cpp:56:32: fout: request for member ‘allocate_node’ in ‘chromosome’, which is of non-class type ‘rapidxml::xml_node<char>*’
+Build error occurred, build is stopped
+Time consumed: 983  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 686  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 624  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 952  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1466  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start()’:
+..\src\Evolver.cpp:72:27: fout: no matching function for call to ‘Genome::addChromosome(const char [2])’
+..\src\Evolver.cpp:72:27: note: candidate is:
+..\src\/Genome.h:37:10: note: void Genome::addChromosome(std::string&)
+..\src\/Genome.h:37:10: note:   no known conversion for argument 1 from ‘const char [2]’ to ‘std::string& {aka std::basic_string<char>&}’
+..\src\Evolver.cpp:74:27: fout: no matching function for call to ‘Genome::addChromosome(const char [2])’
+..\src\Evolver.cpp:74:27: note: candidate is:
+..\src\/Genome.h:37:10: note: void Genome::addChromosome(std::string&)
+..\src\/Genome.h:37:10: note:   no known conversion for argument 1 from ‘const char [2]’ to ‘std::string& {aka std::basic_string<char>&}’
+..\src\Evolver.cpp:76:27: fout: no matching function for call to ‘Genome::addChromosome(const char [2])’
+..\src\Evolver.cpp:76:27: note: candidate is:
+..\src\/Genome.h:37:10: note: void Genome::addChromosome(std::string&)
+..\src\/Genome.h:37:10: note:   no known conversion for argument 1 from ‘const char [2]’ to ‘std::string& {aka std::basic_string<char>&}’
+Build error occurred, build is stopped
+Time consumed: 405  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 920  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 920  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 624  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 858  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 936  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+..\src\Genome.cpp: In memberfunctie ‘void Genome::addChromosome(std::string&)’:
+..\src\Genome.cpp:44:75: fout: invalid conversion from ‘const char*’ to ‘unsigned int’ [-fpermissive]
+..\src\/rapidxml.hpp:476:13: fout:   initializing argument 2 of ‘Ch* rapidxml::memory_pool<Ch>::allocate_string(const Ch*, std::size_t) [with Ch = char, std::size_t = unsigned int]’ [-fpermissive]
+..\src\Genome.cpp:44:76: fout: no matching function for call to ‘rapidxml::xml_node<char>::append_attribute(char*)’
+..\src\Genome.cpp:44:76: note: candidate is:
+..\src\/rapidxml.hpp:1217:14: note: void rapidxml::xml_node<Ch>::append_attribute(rapidxml::xml_attribute<Ch>*) [with Ch = char]
+..\src\/rapidxml.hpp:1217:14: note:   no known conversion for argument 1 from ‘char*’ to ‘rapidxml::xml_attribute<char>*’
+Build error occurred, build is stopped
+Time consumed: 281  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+..\src\Genome.cpp: In memberfunctie ‘void Genome::addChromosome(std::string&)’:
+..\src\Genome.cpp:44:64: fout: no matching function for call to ‘rapidxml::xml_node<char>::append_attribute(char*)’
+..\src\Genome.cpp:44:64: note: candidate is:
+..\src\/rapidxml.hpp:1217:14: note: void rapidxml::xml_node<Ch>::append_attribute(rapidxml::xml_attribute<Ch>*) [with Ch = char]
+..\src\/rapidxml.hpp:1217:14: note:   no known conversion for argument 1 from ‘char*’ to ‘rapidxml::xml_attribute<char>*’
+Build error occurred, build is stopped
+Time consumed: 280  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+..\src\Genome.cpp: In memberfunctie ‘void Genome::addChromosome(std::string&)’:
+..\src\Genome.cpp:44:80: fout: ‘((Genome*)this)->Genome::m_Genome.rapidxml::xml_document<>::<anonymous>.rapidxml::memory_pool<Ch>::allocate_attribute [with Ch = char, std::size_t = unsigned int](0u, 0u, 0u, 0u)’ cannot be used as a function
+Build error occurred, build is stopped
+Time consumed: 281  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 671  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 920  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 671  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 668  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+..\src\Genome.cpp:37:6: fout: prototype for ‘void Genome::addChromosome(std::string*)’ does not match any in class ‘Genome’
+..\src\/Genome.h:37:10: fout: kandidaat is: void Genome::addChromosome(std::string&)
+..\src\Genome.cpp:50:6: fout: prototype for ‘void Genome::addGene(std::string&)’ does not match any in class ‘Genome’
+..\src\/Genome.h:38:10: fout: kandidaat is: void Genome::addGene(std::string*)
+Build error occurred, build is stopped
+Time consumed: 970  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+..\src\Genome.cpp: In memberfunctie ‘void Genome::addChromosome(std::string*)’:
+..\src\Genome.cpp:44:71: fout: request for member ‘c_str’ in ‘strId’, which is of non-class type ‘std::string* {aka std::basic_string<char>*}’
+Build error occurred, build is stopped
+Time consumed: 279  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+..\src\Genome.cpp: In memberfunctie ‘void Genome::addChromosome(std::string*)’:
+..\src\Genome.cpp:44:72: fout: request for member ‘c_str’ in ‘strId’, which is of non-class type ‘std::string* {aka std::basic_string<char>*}’
+Build error occurred, build is stopped
+Time consumed: 279  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+..\src\Genome.cpp: In memberfunctie ‘void Genome::addChromosome(std::string*)’:
+..\src\Genome.cpp:44:72: fout: request for member ‘c_str’ in ‘strId’, which is of non-class type ‘std::string* {aka std::basic_string<char>*}’
+Build error occurred, build is stopped
+Time consumed: 276  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start()’:
+..\src\Evolver.cpp:72:29: fout: no matching function for call to ‘Genome::addChromosome(std::string&)’
+..\src\Evolver.cpp:72:29: note: candidate is:
+..\src\/Genome.h:37:10: note: void Genome::addChromosome(std::string*)
+..\src\/Genome.h:37:10: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘std::string* {aka std::basic_string<char>*}’
+..\src\Evolver.cpp:77:29: fout: no matching function for call to ‘Genome::addChromosome(std::string&)’
+..\src\Evolver.cpp:77:29: note: candidate is:
+..\src\/Genome.h:37:10: note: void Genome::addChromosome(std::string*)
+..\src\/Genome.h:37:10: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘std::string* {aka std::basic_string<char>*}’
+..\src\Evolver.cpp:82:29: fout: no matching function for call to ‘Genome::addChromosome(std::string&)’
+..\src\Evolver.cpp:82:29: note: candidate is:
+..\src\/Genome.h:37:10: note: void Genome::addChromosome(std::string*)
+..\src\/Genome.h:37:10: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘std::string* {aka std::basic_string<char>*}’
+Build error occurred, build is stopped
+Time consumed: 812  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+..\src\Genome.cpp: In memberfunctie ‘void Genome::addChromosome(std::string)’:
+..\src\Genome.cpp:44:70: fout: base operand of ‘->’ has non-pointer type ‘std::string {aka std::basic_string<char>}’
+Build error occurred, build is stopped
+Time consumed: 952  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+..\src\Genome.cpp: In memberfunctie ‘void Genome::addChromosome(std::string)’:
+..\src\Genome.cpp:44:70: fout: base operand of ‘->’ has non-pointer type ‘std::string {aka std::basic_string<char>}’
+Build error occurred, build is stopped
+Time consumed: 276  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 665  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start()’:
+..\src\Evolver.cpp:76:10: fout: passing ‘const string {aka const std::basic_string<char>}’ as ‘this’ argument of ‘std::basic_string<_CharT, _Traits, _Alloc>& std::basic_string<_CharT, _Traits, _Alloc>::operator=(const _CharT*) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>, std::basic_string<_CharT, _Traits, _Alloc> = std::basic_string<char>]’ discards qualifiers [-fpermissive]
+..\src\Evolver.cpp:81:10: fout: passing ‘const string {aka const std::basic_string<char>}’ as ‘this’ argument of ‘std::basic_string<_CharT, _Traits, _Alloc>& std::basic_string<_CharT, _Traits, _Alloc>::operator=(const _CharT*) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>, std::basic_string<_CharT, _Traits, _Alloc> = std::basic_string<char>]’ discards qualifiers [-fpermissive]
+Build error occurred, build is stopped
+Time consumed: 433  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 859  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 864  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 859  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+..\src\Genome.cpp:37:34: fout: ‘ch’ does not name a type
+..\src\Genome.cpp:37:38: fout: ISO C++ forbids declaration of ‘chId’ with no type [-fpermissive]
+..\src\Genome.cpp:37:6: fout: prototype for ‘void Genome::addChromosome(const int*)’ does not match any in class ‘Genome’
+..\src\/Genome.h:37:10: fout: kandidaat is: void Genome::addChromosome(std::string)
+Build error occurred, build is stopped
+Time consumed: 290  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+In file included from ..\src\Evolver.cpp:9:0:
+..\src\/Genome.h:37:30: fout: ‘ch’ does not name a type
+..\src\/Genome.h:37:34: fout: ISO C++ forbids declaration of ‘chId’ with no type [-fpermissive]
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start()’:
+..\src\Evolver.cpp:72:29: fout: no matching function for call to ‘Genome::addChromosome(std::string&)’
+..\src\Evolver.cpp:72:29: note: candidate is:
+..\src\/Genome.h:37:10: note: void Genome::addChromosome(const int*)
+..\src\/Genome.h:37:10: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘const int*’
+..\src\Evolver.cpp:77:29: fout: no matching function for call to ‘Genome::addChromosome(std::string&)’
+..\src\Evolver.cpp:77:29: note: candidate is:
+..\src\/Genome.h:37:10: note: void Genome::addChromosome(const int*)
+..\src\/Genome.h:37:10: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘const int*’
+..\src\Evolver.cpp:82:37: fout: no matching function for call to ‘Genome::addChromosome(const char*)’
+..\src\Evolver.cpp:82:37: note: candidate is:
+..\src\/Genome.h:37:10: note: void Genome::addChromosome(const int*)
+..\src\/Genome.h:37:10: note:   no known conversion for argument 1 from ‘const char*’ to ‘const int*’
+Build error occurred, build is stopped
+Time consumed: 388  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start()’:
+..\src\Evolver.cpp:72:29: fout: no matching function for call to ‘Genome::addChromosome(std::string&)’
+..\src\Evolver.cpp:72:29: note: candidate is:
+..\src\/Genome.h:37:10: note: void Genome::addChromosome(const char*)
+..\src\/Genome.h:37:10: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘const char*’
+..\src\Evolver.cpp:77:29: fout: no matching function for call to ‘Genome::addChromosome(std::string&)’
+..\src\Evolver.cpp:77:29: note: candidate is:
+..\src\/Genome.h:37:10: note: void Genome::addChromosome(const char*)
+..\src\/Genome.h:37:10: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘const char*’
+Build error occurred, build is stopped
+Time consumed: 814  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 857  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 928  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 860  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start()’:
+..\src\Evolver.cpp:71:16: let op: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+..\src\Evolver.cpp:72:30: fout: request for member ‘c_str’ in ‘strId’, which is of non-class type ‘char*’
+..\src\Evolver.cpp:76:10: let op: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+..\src\Evolver.cpp:81:10: let op: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+..\src\Evolver.cpp:82:30: fout: request for member ‘c_str’ in ‘strId’, which is of non-class type ‘char*’
+Build error occurred, build is stopped
+Time consumed: 351  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start()’:
+..\src\Evolver.cpp:71:16: let op: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+..\src\Evolver.cpp:76:10: let op: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+..\src\Evolver.cpp:81:10: let op: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 869  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start()’:
+..\src\Evolver.cpp:71:17: let op: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+..\src\Evolver.cpp:76:10: let op: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+..\src\Evolver.cpp:81:10: let op: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 856  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start()’:
+..\src\Evolver.cpp:71:17: let op: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+..\src\Evolver.cpp:76:10: let op: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+..\src\Evolver.cpp:81:10: let op: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 872  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start()’:
+..\src\Evolver.cpp:71:19: let op: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+..\src\Evolver.cpp:76:10: let op: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+..\src\Evolver.cpp:81:10: let op: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 916  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start()’:
+..\src\Evolver.cpp:71:18: fout: invalid conversion from ‘const char*’ to ‘char’ [-fpermissive]
+..\src\Evolver.cpp:72:29: fout: invalid conversion from ‘char’ to ‘const char*’ [-fpermissive]
+..\src\/Genome.h:37:10: fout:   initializing argument 1 of ‘void Genome::addChromosome(const char*)’ [-fpermissive]
+..\src\Evolver.cpp:76:10: fout: invalid conversion from ‘const char*’ to ‘char’ [-fpermissive]
+..\src\Evolver.cpp:81:10: fout: invalid conversion from ‘const char*’ to ‘char’ [-fpermissive]
+..\src\Evolver.cpp:82:29: fout: invalid conversion from ‘char’ to ‘const char*’ [-fpermissive]
+..\src\/Genome.h:37:10: fout:   initializing argument 1 of ‘void Genome::addChromosome(const char*)’ [-fpermissive]
+Build error occurred, build is stopped
+Time consumed: 336  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start()’:
+..\src\Evolver.cpp:71:20: let op: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+..\src\Evolver.cpp:76:10: let op: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+..\src\Evolver.cpp:81:10: let op: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 923  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start()’:
+..\src\Evolver.cpp:71:6: fout: expected unqualified-id before ‘[’ token
+..\src\Evolver.cpp:72:24: fout: ‘strId’ was not declared in this scope
+Build error occurred, build is stopped
+Time consumed: 334  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start()’:
+..\src\Evolver.cpp:71:6: fout: expected unqualified-id before ‘[’ token
+..\src\Evolver.cpp:72:24: fout: ‘strId’ was not declared in this scope
+Build error occurred, build is stopped
+Time consumed: 333  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start()’:
+..\src\Evolver.cpp:71:6: fout: expected unqualified-id before ‘[’ token
+..\src\Evolver.cpp:72:24: fout: ‘strId’ was not declared in this scope
+Build error occurred, build is stopped
+Time consumed: 327  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start()’:
+..\src\Evolver.cpp:71:6: fout: expected unqualified-id before ‘[’ token
+..\src\Evolver.cpp:72:2: fout: ‘strId’ was not declared in this scope
+Build error occurred, build is stopped
+Time consumed: 331  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start()’:
+..\src\Evolver.cpp:73:10: let op: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+..\src\Evolver.cpp:78:10: let op: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+..\src\Evolver.cpp:83:10: let op: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 853  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start()’:
+..\src\Evolver.cpp:73:10: let op: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+..\src\Evolver.cpp:78:10: let op: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+..\src\Evolver.cpp:83:10: let op: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 869  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start()’:
+..\src\Evolver.cpp:73:10: let op: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+..\src\Evolver.cpp:78:10: let op: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+..\src\Evolver.cpp:83:10: let op: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 862  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start()’:
+..\src\Evolver.cpp:73:10: let op: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+..\src\Evolver.cpp:78:10: let op: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+..\src\Evolver.cpp:83:10: let op: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 905  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start()’:
+..\src\Evolver.cpp:71:6: fout: expected unqualified-id before ‘[’ token
+..\src\Evolver.cpp:73:2: fout: ‘pchId’ was not declared in this scope
+Build error occurred, build is stopped
+Time consumed: 352  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start()’:
+..\src\Evolver.cpp:71:6: fout: expected unqualified-id before ‘[’ token
+..\src\Evolver.cpp:73:2: fout: ‘pchId’ was not declared in this scope
+Build error occurred, build is stopped
+Time consumed: 328  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start()’:
+..\src\Evolver.cpp:71:6: fout: expected unqualified-id before ‘[’ token
+..\src\Evolver.cpp:73:2: fout: ‘pchId’ was not declared in this scope
+Build error occurred, build is stopped
+Time consumed: 332  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start()’:
+..\src\Evolver.cpp:73:10: let op: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+..\src\Evolver.cpp:78:10: let op: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+..\src\Evolver.cpp:83:10: let op: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 885  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start()’:
+..\src\Evolver.cpp:74:22: fout: invalid conversion from ‘const char*’ to ‘char*’ [-fpermissive]
+..\src\Evolver.cpp:79:10: let op: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+..\src\Evolver.cpp:84:10: let op: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
+Build error occurred, build is stopped
+Time consumed: 336  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 858  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 914  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin

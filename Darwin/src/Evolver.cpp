@@ -66,7 +66,29 @@ void Evolver::start(){
 	std::string strType = "Tokamak5";
 
 	cGenome.newGenome(strType);
-	std::cout << cGenome.GetGenome() << std::endl;
+	//std::cout << cGenome.GetGenome() << std::endl;
+
+	std::string strId = "159654654";
+	const char* pchId;
+
+	pchId = strId.c_str();
+	cGenome.addChromosome(pchId);
+
+	std::cout << std::endl << cGenome.GetGenome() << std::endl;
+
+	pchId = "654";
+	cGenome.addChromosome(pchId);
+
+	std::cout << std::endl << cGenome.GetGenome() << std::endl;
+
+	pchId = "3";
+	cGenome.addChromosome(pchId);
+
+	std::cout << std::endl << cGenome.GetGenome() << std::endl;
+
+	//cGenome.addGene(strId);
+	//std::cout << cGenome.GetGenome() << std::endl;
+
 
 
 	//create Rosetta object

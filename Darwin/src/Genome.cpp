@@ -23,7 +23,7 @@ void Genome::newGenome(std::string &strType){
 
 	root->append_attribute(m_Genome.allocate_attribute("type", strType.c_str()));
 	m_Genome.append_node(root);
-
+/*
 	// chromosome node
 	xml_node<>* chromosome = m_Genome.allocate_node(node_element, "Chromosome");
 	root->append_node(chromosome);
@@ -31,14 +31,38 @@ void Genome::newGenome(std::string &strType){
 	// gene node
 	xml_node<>* gene = m_Genome.allocate_node(node_element, "Gene");
 	chromosome->append_node(gene);
+*/
+}
 
-	std::string xml_as_string;
-	// watch for name collisions here, print() is a very common function name!
-	print(std::back_inserter(xml_as_string), m_Genome);
-	// xml_as_string now contains the XML in string form, indented
-	// (in all its angle bracket glory)
+void Genome::addChromosome(const char* chId ){
+	using namespace rapidxml;
 
-	std::cout << xml_as_string << std::endl;
+    xml_node<>* rootNode = m_Genome.first_node("Genome");
+
+	// chromosome node
+	xml_node<>* chromosome = m_Genome.allocate_node(node_element, "Chromosome");
+	chromosome->append_attribute(m_Genome.allocate_attribute("id", chId));
+	rootNode->append_node(chromosome);
+
+
+}
+
+void Genome::addGene(std::string &strId){
+	using namespace rapidxml;
+
+    xml_node<>* chromosome = m_Genome.first_node("Genome")->first_node("Chromosome");
+
+	// gene node
+	xml_node<>* gene = m_Genome.allocate_node(node_element, "Gene");
+	gene->append_attribute(m_Genome.allocate_attribute("id", strId.c_str()));
+	chromosome->append_node(gene);
+
+/*	xml_node<> *node = ...
+	for (xml_node<> *child = node->first_node(); child; child = child->next_sibling())
+	{
+	    // do stuff with child
+	}
+*/
 
 
 

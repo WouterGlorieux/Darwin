@@ -34,8 +34,8 @@ public:
     void traverse_xml(const std::string& input_xml);
 
     void newGenome(std::string &strType);
-    void addChromosome();
-    void addGene();
+    void addChromosome(const char* chId );
+    void addGene(std::string &strId);
 
     std::string GetGenome();
 
