@@ -54,7 +54,7 @@ void Genome::addGene(const char* pchId ){
 
 	for (xml_node<> *child = chromosome->first_node("Chromosome"); child; child = child->next_sibling("Chromosome"))
 	{
-	    std::cout << child->first_attribute("id")->value() << std::endl;
+	    // do stuff with child
 	}
 	// gene node
 	xml_node<>* gene = m_Genome.allocate_node(node_element, "Gene");

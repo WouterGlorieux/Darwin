@@ -74,10 +74,12 @@ void Evolver::start(){
 	pchId = strId.c_str();
 	cGenome.addChromosome(pchId);
 
+	std::cout << std::endl << cGenome.GetGenome() << std::endl;
 
 	pchId = "2";
 	cGenome.addChromosome(pchId);
 
+	std::cout << std::endl << cGenome.GetGenome() << std::endl;
 
 	pchId = "3";
 	cGenome.addChromosome(pchId);

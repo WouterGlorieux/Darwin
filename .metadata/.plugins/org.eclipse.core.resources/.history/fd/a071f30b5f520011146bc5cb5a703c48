@@ -50,19 +50,19 @@ void Genome::addChromosome(const char* pchId ){
 void Genome::addGene(const char* pchId ){
 	using namespace rapidxml;
 
-    xml_node<>* chromosome = m_Genome.first_node("Genome");
+    xml_node<>* chromosome = m_Genome.first_node("Genome")->first_node("Chromosome");
 
-	for (xml_node<> *child = chromosome->first_node("Chromosome"); child; child = child->next_sibling("Chromosome"))
-	{
-	    std::cout << child->first_attribute("id")->value() << std::endl;
-	}
 	// gene node
 	xml_node<>* gene = m_Genome.allocate_node(node_element, "Gene");
 	gene->append_attribute(m_Genome.allocate_attribute("id", pchId ));
 	chromosome->append_node(gene);
 
-
-
+/*	xml_node<> *node = ...
+	for (xml_node<> *child = node->first_node(); child; child = child->next_sibling())
+	{
+	    // do stuff with child
+	}
+*/
 
 
 
