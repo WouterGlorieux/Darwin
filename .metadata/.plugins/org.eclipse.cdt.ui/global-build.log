@@ -312,3 +312,874 @@ Time consumed: 374  ms.
 
 **** Internal Builder is used for build               ****
 Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o src\DNA.o
+Build complete for project Darwin
+Time consumed: 328  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2792  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1419  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1404  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 920  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 952  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+In file included from ..\src\Genome.cpp:8:0:
+..\src\/Genome.h:24:20: fout: ‘std::string’ has not been declared
+..\src\/Genome.h:25:29: fout: ‘string’ in namespace ‘std’ does not name a type
+..\src\/Genome.h:25:42: fout: ISO C++ forbids declaration of ‘input_xml’ with no type [-fpermissive]
+Build error occurred, build is stopped
+Time consumed: 358  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1046  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+..\src\Genome.cpp: In memberfunctie ‘void Genome::newGenome()’:
+..\src\Genome.cpp:11:2: fout: ‘xml_document’ was not declared in this scope
+..\src\Genome.cpp:11:2: note: suggested alternative:
+..\src\/rapidxml.hpp:139:30: note:   ‘rapidxml::xml_document’
+..\src\Genome.cpp:11:15: fout: expected primary-expression before ‘>’ token
+..\src\Genome.cpp:11:17: fout: ‘doc’ was not declared in this scope
+..\src\Genome.cpp:14:2: fout: ‘xml_node’ was not declared in this scope
+..\src\Genome.cpp:14:2: note: suggested alternative:
+..\src\/rapidxml.hpp:137:30: note:   ‘rapidxml::xml_node’
+..\src\Genome.cpp:14:11: fout: expected primary-expression before ‘>’ token
+..\src\Genome.cpp:14:14: fout: ‘decl’ was not declared in this scope
+..\src\Genome.cpp:14:39: fout: ‘node_declaration’ was not declared in this scope
+..\src\Genome.cpp:14:39: note: suggested alternative:
+..\src\/rapidxml.hpp:150:9: note:   ‘rapidxml::node_declaration’
+..\src\Genome.cpp:20:11: fout: expected primary-expression before ‘>’ token
+..\src\Genome.cpp:20:14: fout: ‘root’ was not declared in this scope
+..\src\Genome.cpp:20:39: fout: ‘node_element’ was not declared in this scope
+..\src\Genome.cpp:20:39: note: suggested alternative:
+..\src\/rapidxml.hpp:146:9: note:   ‘rapidxml::node_element’
+..\src\Genome.cpp:26:11: fout: expected primary-expression before ‘>’ token
+..\src\Genome.cpp:26:14: fout: ‘child’ was not declared in this scope
+..\src\Genome.cpp:31:46: fout: ‘print’ was not declared in this scope
+..\src\Genome.cpp:31:46: note: suggested alternative:
+..\src\/rapidxml_print.hpp:401:36: note:   ‘rapidxml::print’
+..\src\Genome.cpp:37:48: fout: ‘print_no_indenting’ was not declared in this scope
+..\src\Genome.cpp:37:48: note: suggested alternative:
+..\src\/rapidxml_print.hpp:23:15: note:   ‘rapidxml::print_no_indenting’
+..\src\Genome.cpp:40:2: fout: ‘cout’ was not declared in this scope
+..\src\Genome.cpp:40:27: fout: ‘endl’ was not declared in this scope
+..\src\Genome.cpp:40:27: note: suggested alternative:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:543:5: note:   ‘std::endl’
+Build error occurred, build is stopped
+Time consumed: 593  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+..\src\Genome.cpp: In memberfunctie ‘void Genome::newGenome()’:
+..\src\Genome.cpp:42:2: fout: ‘cout’ was not declared in this scope
+..\src\Genome.cpp:42:27: fout: ‘endl’ was not declared in this scope
+..\src\Genome.cpp:42:27: note: suggested alternative:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:543:5: note:   ‘std::endl’
+Build error occurred, build is stopped
+Time consumed: 280  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+..\src\Genome.cpp: In memberfunctie ‘void Genome::newGenome()’:
+..\src\Genome.cpp:42:2: fout: ‘cout’ is not a member of ‘std’
+..\src\Genome.cpp:42:32: fout: ‘endl’ was not declared in this scope
+..\src\Genome.cpp:42:32: note: suggested alternative:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:543:5: note:   ‘std::endl’
+Build error occurred, build is stopped
+Time consumed: 265  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+..\src\Genome.cpp: In memberfunctie ‘void Genome::newGenome()’:
+..\src\Genome.cpp:42:32: fout: ‘endl’ was not declared in this scope
+..\src\Genome.cpp:42:32: note: suggested alternative:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:543:5: note:   ‘std::endl’
+Build error occurred, build is stopped
+Time consumed: 281  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 671  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+..\src\Genome.cpp: In memberfunctie ‘void Genome::newGenome()’:
+..\src\Genome.cpp:16:10: fout: missing template arguments before ‘*’ token
+..\src\Genome.cpp:16:12: fout: ‘decl’ was not declared in this scope
+Build error occurred, build is stopped
+Time consumed: 281  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 687  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 749  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1046  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 889  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 608  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 624  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 624  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 671  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 608  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 702  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 624  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+..\src\Genome.cpp:10:6: fout: prototype for ‘void Genome::newGenome(std::string)’ does not match any in class ‘Genome’
+..\src\/Genome.h:33:10: fout: kandidaat is: void Genome::newGenome()
+Build error occurred, build is stopped
+Time consumed: 281  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start()’:
+..\src\Evolver.cpp:65:20: fout: no matching function for call to ‘Genome::newGenome()’
+..\src\Evolver.cpp:65:20: note: candidate is:
+..\src\/Genome.h:33:10: note: void Genome::newGenome(std::string)
+..\src\/Genome.h:33:10: note:   candidate expects 1 argument, 0 provided
+Build error occurred, build is stopped
+Time consumed: 343  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+..\src\Genome.cpp: In memberfunctie ‘void Genome::newGenome(std::string)’:
+..\src\Genome.cpp:23:63: fout: no matching function for call to ‘rapidxml::xml_document<>::allocate_attribute(const char [5], std::string&)’
+..\src\Genome.cpp:23:63: note: candidate is:
+..\src\/rapidxml.hpp:447:28: note: rapidxml::xml_attribute<Ch>* rapidxml::memory_pool<Ch>::allocate_attribute(const Ch*, const Ch*, std::size_t, std::size_t) [with Ch = char, std::size_t = unsigned int]
+..\src\/rapidxml.hpp:447:28: note:   no known conversion for argument 2 from ‘std::string {aka std::basic_string<char>}’ to ‘const char*’
+Build error occurred, build is stopped
+Time consumed: 265  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1404  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+In file included from ..\src\Evolver.cpp:9:0:
+..\src\/Genome.h:33:5: fout: ‘xml_document’ does not name a type
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start()’:
+..\src\Evolver.cpp:65:10: fout: ‘class Genome’ has no member named ‘newGenome’
+Build error occurred, build is stopped
+Time consumed: 343  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+In file included from ..\src\Genome.cpp:8:0:
+..\src\/Genome.h:33:5: fout: ‘xml_document’ does not name a type
+..\src\Genome.cpp:10:1: fout: ‘xml_document’ does not name a type
+Build error occurred, build is stopped
+Time consumed: 281  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+In file included from ..\src\Evolver.cpp:9:0:
+..\src\/Genome.h:33:5: fout: invalid use of template-name ‘rapidxml::xml_document’ without an argument list
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start()’:
+..\src\Evolver.cpp:65:10: fout: ‘class Genome’ has no member named ‘newGenome’
+Build error occurred, build is stopped
+Time consumed: 343  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+..\src\Genome.cpp: In memberfunctie ‘rapidxml::xml_document<> Genome::newGenome(std::string)’:
+..\src\Genome.cpp:42:1: let op: no return statement in function returning non-void [-Wreturn-type]
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1389  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+In file included from ..\src\/Genome.h:14:0,
+                 from ..\src\Genome.cpp:8:
+..\src\/rapidxml.hpp: In copy constructor ‘rapidxml::xml_document<>::xml_document(const rapidxml::xml_document<>&)’:
+..\src\/rapidxml.hpp:1322:9: fout: ‘rapidxml::xml_node<Ch>::xml_node(const rapidxml::xml_node<Ch>&) [with Ch = char, rapidxml::xml_node<Ch> = rapidxml::xml_node<char>]’ is private
+..\src\/rapidxml.hpp:1358:11: fout: within this context
+..\src\Genome.cpp: In memberfunctie ‘rapidxml::xml_document<> Genome::newGenome(std::string)’:
+..\src\Genome.cpp:43:9: note: synthesized method ‘rapidxml::xml_document<>::xml_document(const rapidxml::xml_document<>&)’ first required here 
+Build error occurred, build is stopped
+Time consumed: 281  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1388  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1419  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+In file included from ..\src\Genome.cpp:8:0:
+..\src\/Genome.h:21:2: fout: ‘xml_document’ does not name a type
+Build error occurred, build is stopped
+Time consumed: 296  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1341  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+In file included from ..\src\/Genome.h:14:0,
+                 from ..\src\Genome.cpp:8:
+..\src\/rapidxml.hpp: In memberfunctie ‘rapidxml::xml_document<>& rapidxml::xml_document<>::operator=(const rapidxml::xml_document<>&)’:
+..\src\/rapidxml.hpp:1323:14: fout: ‘void rapidxml::xml_node<Ch>::operator=(const rapidxml::xml_node<Ch>&) [with Ch = char, rapidxml::xml_node<Ch> = rapidxml::xml_node<char>]’ is private
+..\src\/rapidxml.hpp:1358:11: fout: within this context
+..\src\Genome.cpp: In memberfunctie ‘void Genome::newGenome(std::string)’:
+..\src\Genome.cpp:44:13: note: synthesized method ‘rapidxml::xml_document<>& rapidxml::xml_document<>::operator=(const rapidxml::xml_document<>&)’ first required here 
+Build error occurred, build is stopped
+Time consumed: 281  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+In file included from ..\src\/Genome.h:14:0,
+                 from ..\src\Genome.cpp:8:
+..\src\/rapidxml.hpp: In memberfunctie ‘rapidxml::xml_document<>& rapidxml::xml_document<>::operator=(const rapidxml::xml_document<>&)’:
+..\src\/rapidxml.hpp:1323:14: fout: ‘void rapidxml::xml_node<Ch>::operator=(const rapidxml::xml_node<Ch>&) [with Ch = char, rapidxml::xml_node<Ch> = rapidxml::xml_node<char>]’ is private
+..\src\/rapidxml.hpp:1358:11: fout: within this context
+..\src\Genome.cpp: In memberfunctie ‘void Genome::newGenome(std::string)’:
+..\src\Genome.cpp:44:13: note: synthesized method ‘rapidxml::xml_document<>& rapidxml::xml_document<>::operator=(const rapidxml::xml_document<>&)’ first required here 
+Build error occurred, build is stopped
+Time consumed: 281  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+In file included from ..\src\/Genome.h:14:0,
+                 from ..\src\Genome.cpp:8:
+..\src\/rapidxml.hpp: In memberfunctie ‘rapidxml::xml_document<>& rapidxml::xml_document<>::operator=(const rapidxml::xml_document<>&)’:
+..\src\/rapidxml.hpp:1323:14: fout: ‘void rapidxml::xml_node<Ch>::operator=(const rapidxml::xml_node<Ch>&) [with Ch = char, rapidxml::xml_node<Ch> = rapidxml::xml_node<char>]’ is private
+..\src\/rapidxml.hpp:1358:11: fout: within this context
+..\src\Genome.cpp: In memberfunctie ‘void Genome::newGenome(std::string)’:
+..\src\Genome.cpp:44:13: note: synthesized method ‘rapidxml::xml_document<>& rapidxml::xml_document<>::operator=(const rapidxml::xml_document<>&)’ first required here 
+Build error occurred, build is stopped
+Time consumed: 967  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+In file included from ..\src\/Genome.h:14:0,
+                 from ..\src\Genome.cpp:8:
+..\src\/rapidxml.hpp: In memberfunctie ‘rapidxml::xml_document<>& rapidxml::xml_document<>::operator=(const rapidxml::xml_document<>&)’:
+..\src\/rapidxml.hpp:1323:14: fout: ‘void rapidxml::xml_node<Ch>::operator=(const rapidxml::xml_node<Ch>&) [with Ch = char, rapidxml::xml_node<Ch> = rapidxml::xml_node<char>]’ is private
+..\src\/rapidxml.hpp:1358:11: fout: within this context
+..\src\Genome.cpp: In memberfunctie ‘void Genome::newGenome(std::string)’:
+..\src\Genome.cpp:44:13: note: synthesized method ‘rapidxml::xml_document<>& rapidxml::xml_document<>::operator=(const rapidxml::xml_document<>&)’ first required here 
+Build error occurred, build is stopped
+Time consumed: 343  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1389  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1341  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+In file included from ..\src\/Genome.h:14:0,
+                 from ..\src\Genome.cpp:8:
+..\src\/rapidxml.hpp: In memberfunctie ‘rapidxml::xml_document<>& rapidxml::xml_document<>::operator=(const rapidxml::xml_document<>&)’:
+..\src\/rapidxml.hpp:1323:14: fout: ‘void rapidxml::xml_node<Ch>::operator=(const rapidxml::xml_node<Ch>&) [with Ch = char, rapidxml::xml_node<Ch> = rapidxml::xml_node<char>]’ is private
+..\src\/rapidxml.hpp:1358:11: fout: within this context
+..\src\Genome.cpp: In memberfunctie ‘void Genome::newGenome(std::string)’:
+..\src\Genome.cpp:44:13: note: synthesized method ‘rapidxml::xml_document<>& rapidxml::xml_document<>::operator=(const rapidxml::xml_document<>&)’ first required here 
+Build error occurred, build is stopped
+Time consumed: 343  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 624  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1404  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1341  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+In file included from ..\src\/Genome.h:14:0,
+                 from ..\src\Genome.cpp:8:
+..\src\/rapidxml.hpp: In memberfunctie ‘rapidxml::xml_document<>& rapidxml::xml_document<>::operator=(const rapidxml::xml_document<>&)’:
+..\src\/rapidxml.hpp:1323:14: fout: ‘void rapidxml::xml_node<Ch>::operator=(const rapidxml::xml_node<Ch>&) [with Ch = char, rapidxml::xml_node<Ch> = rapidxml::xml_node<char>]’ is private
+..\src\/rapidxml.hpp:1358:11: fout: within this context
+..\src\Genome.cpp: In memberfunctie ‘void Genome::newGenome(std::string)’:
+..\src\Genome.cpp:44:13: note: synthesized method ‘rapidxml::xml_document<>& rapidxml::xml_document<>::operator=(const rapidxml::xml_document<>&)’ first required here 
+Build error occurred, build is stopped
+Time consumed: 281  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+In file included from ..\src\/Genome.h:14:0,
+                 from ..\src\Genome.cpp:8:
+..\src\/rapidxml.hpp: In memberfunctie ‘rapidxml::xml_document<>& rapidxml::xml_document<>::operator=(const rapidxml::xml_document<>&)’:
+..\src\/rapidxml.hpp:1323:14: fout: ‘void rapidxml::xml_node<Ch>::operator=(const rapidxml::xml_node<Ch>&) [with Ch = char, rapidxml::xml_node<Ch> = rapidxml::xml_node<char>]’ is private
+..\src\/rapidxml.hpp:1358:11: fout: within this context
+..\src\Genome.cpp: In memberfunctie ‘void Genome::newGenome(std::string)’:
+..\src\Genome.cpp:44:13: note: synthesized method ‘rapidxml::xml_document<>& rapidxml::xml_document<>::operator=(const rapidxml::xml_document<>&)’ first required here 
+Build error occurred, build is stopped
+Time consumed: 281  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+..\src\Genome.cpp: In memberfunctie ‘void Genome::newGenome(std::string)’:
+..\src\Genome.cpp:44:21: fout: no match for ‘operator*’ in ‘*doc’
+Build error occurred, build is stopped
+Time consumed: 983  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 687  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+In file included from ..\src\Genome.cpp:8:0:
+..\src\/Genome.h:40:40: fout: expected identifier before ‘return’
+..\src\/Genome.h:40:40: fout: expected ‘,’ or ‘...’ before ‘return’
+Build error occurred, build is stopped
+Time consumed: 280  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+In file included from ..\src\/Evolver.h:17:0,
+                 from ..\src\Evolver.cpp:8:
+..\src\/rapidxml.hpp: In copy constructor ‘rapidxml::xml_document<>::xml_document(const rapidxml::xml_document<>&)’:
+..\src\/rapidxml.hpp:1322:9: fout: ‘rapidxml::xml_node<Ch>::xml_node(const rapidxml::xml_node<Ch>&) [with Ch = char, rapidxml::xml_node<Ch> = rapidxml::xml_node<char>]’ is private
+..\src\/rapidxml.hpp:1358:11: fout: within this context
+In file included from ..\src\Evolver.cpp:9:0:
+..\src\/Genome.h: In memberfunctie ‘rapidxml::xml_document<> Genome::GetGenome()’:
+..\src\/Genome.h:40:51: note: synthesized method ‘rapidxml::xml_document<>::xml_document(const rapidxml::xml_document<>&)’ first required here 
+Build error occurred, build is stopped
+Time consumed: 328  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1388  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+In file included from ..\src\Evolver.cpp:9:0:
+..\src\/rapidxml.hpp: In memberfunctie ‘std::string Genome::GetGenome()’:
+..\src\/rapidxml.hpp:1464:16: fout: ‘struct rapidxml::xml_document<>::text_pure_no_ws_pred’ is private
+..\src\/Genome.h:40:47: fout: within this context
+..\src\/Genome.h:40:47: fout: invalid use of ‘struct rapidxml::xml_document<>::text_pure_no_ws_pred’
+Build error occurred, build is stopped
+Time consumed: 343  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1388  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+..\src\Genome.cpp: In functie ‘std::string GetGenome()’:
+..\src\Genome.cpp:52:43: fout: ‘m_Genome’ was not declared in this scope
+Build error occurred, build is stopped
+Time consumed: 281  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+..\src\Genome.cpp: In functie ‘std::string GetGenome()’:
+..\src\Genome.cpp:52:43: fout: invalid use of ‘this’ in non-member function
+Build error occurred, build is stopped
+Time consumed: 265  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+..\src\Genome.cpp: In functie ‘std::string GetGenome()’:
+..\src\Genome.cpp:52:43: fout: ‘m_Genome’ was not declared in this scope
+Build error occurred, build is stopped
+Time consumed: 281  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1389  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 671  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 921  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+..\src\Genome.cpp: In memberfunctie ‘void Genome::newGenome(std::string)’:
+..\src\Genome.cpp:34:15: fout: ‘xml_as_string’ was not declared in this scope
+Build error occurred, build is stopped
+Time consumed: 296  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 671  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 936  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 904  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+..\src\Genome.cpp: In memberfunctie ‘void Genome::newGenome(std::string)’:
+..\src\Genome.cpp:23:76: fout: lvalue required as unary ‘&’ operand
+Build error occurred, build is stopped
+Time consumed: 281  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+..\src\Genome.cpp: In memberfunctie ‘void Genome::newGenome(std::string)’:
+..\src\Genome.cpp:23:77: fout: invalid conversion from ‘char’ to ‘const char*’ [-fpermissive]
+..\src\/rapidxml.hpp:447:28: fout:   initializing argument 2 of ‘rapidxml::xml_attribute<Ch>* rapidxml::memory_pool<Ch>::allocate_attribute(const Ch*, const Ch*, std::size_t, std::size_t) [with Ch = char, std::size_t = unsigned int]’ [-fpermissive]
+Build error occurred, build is stopped
+Time consumed: 281  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 687  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 664  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+..\src\Genome.cpp:10:6: fout: prototype for ‘void Genome::newGenome(std::string&)’ does not match any in class ‘Genome’
+..\src\/Genome.h:36:10: fout: kandidaat is: void Genome::newGenome(std::string)
+Build error occurred, build is stopped
+Time consumed: 229  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start()’:
+..\src\Evolver.cpp:66:44: fout: no matching function for call to ‘Genome::newGenome(const char [23])’
+..\src\Evolver.cpp:66:44: note: candidate is:
+..\src\/Genome.h:36:10: note: void Genome::newGenome(std::string&)
+..\src\/Genome.h:36:10: note:   no known conversion for argument 1 from ‘const char [23]’ to ‘std::string& {aka std::basic_string<char>&}’
+Build error occurred, build is stopped
+Time consumed: 331  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1398  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+..\src\Genome.cpp: In memberfunctie ‘void Genome::newGenome(std::string)’:
+..\src\Genome.cpp:23:36: fout: invalid conversion from ‘const char*’ to ‘char’ [-fpermissive]
+..\src\Genome.cpp:24:67: fout: invalid conversion from ‘char’ to ‘const char*’ [-fpermissive]
+..\src\/rapidxml.hpp:447:28: fout:   initializing argument 2 of ‘rapidxml::xml_attribute<Ch>* rapidxml::memory_pool<Ch>::allocate_attribute(const Ch*, const Ch*, std::size_t, std::size_t) [with Ch = char, std::size_t = unsigned int]’ [-fpermissive]
+Build error occurred, build is stopped
+Time consumed: 290  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 663  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+..\src\Genome.cpp: In memberfunctie ‘void Genome::newGenome(std::string)’:
+..\src\Genome.cpp:23:31: fout: invalid conversion from ‘const char*’ to ‘char*’ [-fpermissive]
+Build error occurred, build is stopped
+Time consumed: 276  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 663  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 664  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 667  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start()’:
+..\src\Evolver.cpp:66:44: fout: no matching function for call to ‘Genome::newGenome(const char [23])’
+..\src\Evolver.cpp:66:44: note: candidate is:
+..\src\/Genome.h:36:10: note: void Genome::newGenome(std::string&)
+..\src\/Genome.h:36:10: note:   no known conversion for argument 1 from ‘const char [23]’ to ‘std::string& {aka std::basic_string<char>&}’
+Build error occurred, build is stopped
+Time consumed: 327  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1413  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 860  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin

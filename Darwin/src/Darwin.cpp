@@ -32,7 +32,7 @@ int main(int argc, char *argv[]) {
 	}
 
 	//start evolving
-	//cEvolver.start();
+	cEvolver.start();
 
 	//save results
 	//cEvolver.saveResults();

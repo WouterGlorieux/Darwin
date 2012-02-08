@@ -20,10 +20,10 @@ public:
 
     }
 
-    void ModeltoDNA();
-    void DNAtoModel();
+    void ModelToGenome();
+    void GenomeToModel();
 
-    void randomDNA();
+    void randomGenome();
 
 
 };

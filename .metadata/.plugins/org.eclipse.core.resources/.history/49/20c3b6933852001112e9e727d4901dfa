@@ -1,0 +1,13 @@
+/*
+ * Genome.cpp
+ *
+ *  Created on: 6-feb.-2012
+ *      Author: woutergl
+ */
+
+#include "Genome.h"
+
+void Genome::newGenome(){
+
+}
+

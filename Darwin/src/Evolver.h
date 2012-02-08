@@ -21,11 +21,13 @@ class Evolver
 {
 private:
 
+	std::string m_strPath; 			//Path to working directory
+
     std::string m_strTitle;			//Title of this job
     std::string m_strDescription; 	//detailed description of this job
 
-    int m_nPopulationSize;			//total number of children in every epoch
-    int m_nMaxGenerations;        		//maximum number of generations to calculate (-1 for unlimited)
+    int m_nPopulationSize;			//total number of offspring in every generation
+    int m_nMaxGenerations;        	//maximum number of generations to calculate (-1 for unlimited)
 
 public:
     Evolver() // default constructor
@@ -37,6 +39,7 @@ public:
 
     int GetPopulationSize() { return m_nPopulationSize; }
     std::string GetTitle() { return m_strTitle; }
+    std::string GetPath() { return m_strPath; }
 
     void readConfig(std::string strFileName);
     void traverse_xml(const std::string& input_xml);

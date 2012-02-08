@@ -6,6 +6,7 @@
  */
 
 #include "Evolver.h"
+#include "Genome.h"
 
 
 
@@ -38,6 +39,7 @@ void Evolver::traverse_xml(const std::string& input_xml)
     xml_node<>* rootNode = doc.first_node("Config");
     m_strTitle = rootNode->first_node("Title")->value();
     m_strDescription = rootNode->first_node("Description")->value();
+    m_strPath = rootNode->first_node("DirectoryPath")->value();
 
     xml_node<>* settingsNode = rootNode->first_node("Settings");
     m_nPopulationSize = atoi(settingsNode->first_node("PopulationSize")->value());
@@ -51,6 +53,7 @@ void Evolver::printSettings(){
 	std::cout << "Config file loaded:" << std::endl;
 	std::cout << "Title: " << m_strTitle << std::endl;
 	std::cout << "Description: " << m_strDescription << std::endl;
+	std::cout << "Directory path: " << m_strPath << std::endl;
 	std::cout << "PopulationSize: " << m_nPopulationSize << std::endl;
 	std::cout << "Max Generations: " << m_nMaxGenerations << std::endl;
 
@@ -58,6 +61,14 @@ void Evolver::printSettings(){
 }
 
 void Evolver::start(){
+	Genome cGenome;
+
+	std::string strType = "Tokamak5";
+
+	cGenome.newGenome(strType);
+	std::cout << cGenome.GetGenome() << std::endl;
+
+
 	//create Rosetta object
 
 	//make random children
@@ -66,7 +77,7 @@ void Evolver::start(){
 
 //do until maxGenerations reached
 
-	//calculate scores
+	//calculate fitness
 
 	//save state
 
