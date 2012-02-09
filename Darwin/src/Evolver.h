@@ -17,6 +17,11 @@
 #include "rapidxml.hpp"
 #include "rapidxml_print.hpp"
 
+#include "Globals.h"
+
+#include "Genome.h"
+#include "Rosetta.h"
+
 class Evolver
 {
 private:

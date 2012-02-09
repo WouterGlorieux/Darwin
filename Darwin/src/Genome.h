@@ -37,7 +37,7 @@ public:
     void addChromosome(const char* pchId );
     void addGene(const char* pchId , const char* pchChromosomeId );
 
-    std::string GetGenome();
+    std::string GetGenomeXML();
 
 };
 

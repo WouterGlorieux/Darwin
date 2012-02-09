@@ -67,7 +67,7 @@ void Genome::addGene(const char* pchId, const char* pchChromosomeId ){
 
 }
 
-std::string Genome::GetGenome(){
+std::string Genome::GetGenomeXML(){
 	using namespace rapidxml;
 
 	std::string xml_as_string;

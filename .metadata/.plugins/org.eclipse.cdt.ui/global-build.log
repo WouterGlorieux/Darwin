@@ -2163,3 +2163,504 @@ Time consumed: 862  ms.
 
 **** Internal Builder is used for build               ****
 Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 999  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 936  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 876  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start()’:
+..\src\Evolver.cpp:95:10: fout: no matching function for call to ‘Rosetta::Rosetta()’
+..\src\Evolver.cpp:95:10: note: candidates are:
+..\src\/Rosetta.h:20:5: note: Rosetta::Rosetta(GenomeType)
+..\src\/Rosetta.h:20:5: note:   candidate expects 1 argument, 0 provided
+..\src\/Rosetta.h:14:7: note: Rosetta::Rosetta(const Rosetta&)
+..\src\/Rosetta.h:14:7: note:   candidate expects 1 argument, 0 provided
+Build error occurred, build is stopped
+Time consumed: 337  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start()’:
+..\src\Evolver.cpp:95:51: fout: conversion from ‘Rosetta*’ to non-scalar type ‘Rosetta’ requested
+Build error occurred, build is stopped
+Time consumed: 357  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 854  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 871  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 986  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+..\src\Rosetta.cpp: In memberfunctie ‘void Rosetta::initGenome()’:
+..\src\Rosetta.cpp:16:14: fout: ‘cout’ was not declared in this scope
+Build error occurred, build is stopped
+Time consumed: 134  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+..\src\Rosetta.cpp: In memberfunctie ‘void Rosetta::initGenome()’:
+..\src\Rosetta.cpp:16:14: fout: ‘cout’ is not a member of ‘std’
+..\src\Rosetta.cpp:20:14: fout: ‘cout’ is not a member of ‘std’
+Build error occurred, build is stopped
+Time consumed: 76  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+..\src\Rosetta.cpp: In memberfunctie ‘void Rosetta::initGenome()’:
+..\src\Rosetta.cpp:16:14: fout: ‘cout’ is not a member of ‘std’
+..\src\Rosetta.cpp:16:60: fout: ‘endl’ is not a member of ‘std’
+..\src\Rosetta.cpp:20:14: fout: ‘cout’ is not a member of ‘std’
+..\src\Rosetta.cpp:20:52: fout: ‘endl’ is not a member of ‘std’
+Build error occurred, build is stopped
+Time consumed: 131  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1139  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1140  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 457  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+..\src\Rosetta.cpp: In memberfunctie ‘void Rosetta::initTokamak()’:
+..\src\Rosetta.cpp:29:2: fout: ‘Genome’ was not declared in this scope
+..\src\Rosetta.cpp:29:9: fout: expected ‘;’ before ‘cGenome’
+..\src\Rosetta.cpp:33:2: fout: ‘cGenome’ was not declared in this scope
+Build error occurred, build is stopped
+Time consumed: 229  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp:13:6: fout: ‘Evolver’ has not been declared
+..\src\Evolver.cpp:13:31: fout: variable or field ‘readConfig’ declared void
+..\src\Evolver.cpp:13:26: fout: ‘string’ is not a member of ‘std’
+..\src\Evolver.cpp:24:6: fout: ‘Evolver’ has not been declared
+..\src\Evolver.cpp:24:34: fout: ‘string’ in namespace ‘std’ does not name a type
+..\src\Evolver.cpp:24:47: fout: ISO C++ forbids declaration of ‘input_xml’ with no type [-fpermissive]
+..\src\Evolver.cpp: In functie ‘void traverse_xml(const int&)’:
+..\src\Evolver.cpp:26:18: fout: ‘rapidxml’ is not a namespace-name
+..\src\Evolver.cpp:26:26: fout: expected namespace-name before ‘;’ token
+..\src\Evolver.cpp:31:5: fout: ‘vector’ is not a member of ‘std’
+..\src\Evolver.cpp:31:17: fout: expected primary-expression before ‘char’
+..\src\Evolver.cpp:31:17: fout: expected ‘;’ before ‘char’
+..\src\Evolver.cpp:32:5: fout: ‘xml_copy’ was not declared in this scope
+..\src\Evolver.cpp:35:5: fout: ‘xml_document’ was not declared in this scope
+..\src\Evolver.cpp:35:18: fout: expected primary-expression before ‘>’ token
+..\src\Evolver.cpp:35:20: fout: ‘doc’ was not declared in this scope
+..\src\Evolver.cpp:36:15: fout: ‘parse_declaration_node’ was not declared in this scope
+..\src\Evolver.cpp:36:40: fout: ‘parse_no_data_nodes’ was not declared in this scope
+..\src\Evolver.cpp:38:5: fout: ‘xml_node’ was not declared in this scope
+..\src\Evolver.cpp:38:14: fout: expected primary-expression before ‘>’ token
+..\src\Evolver.cpp:38:17: fout: ‘rootNode’ was not declared in this scope
+..\src\Evolver.cpp:39:5: fout: ‘m_strTitle’ was not declared in this scope
+..\src\Evolver.cpp:40:5: fout: ‘m_strDescription’ was not declared in this scope
+..\src\Evolver.cpp:41:5: fout: ‘m_strPath’ was not declared in this scope
+..\src\Evolver.cpp:43:14: fout: expected primary-expression before ‘>’ token
+..\src\Evolver.cpp:43:17: fout: ‘settingsNode’ was not declared in this scope
+..\src\Evolver.cpp:44:5: fout: ‘m_nPopulationSize’ was not declared in this scope
+..\src\Evolver.cpp:44:81: fout: ‘atoi’ was not declared in this scope
+..\src\Evolver.cpp:45:5: fout: ‘m_nMaxGenerations’ was not declared in this scope
+..\src\Evolver.cpp: At global scope:
+..\src\Evolver.cpp:51:6: fout: ‘Evolver’ has not been declared
+..\src\Evolver.cpp: In functie ‘void printSettings()’:
+..\src\Evolver.cpp:52:2: fout: ‘cout’ is not a member of ‘std’
+..\src\Evolver.cpp:52:40: fout: ‘endl’ is not a member of ‘std’
+..\src\Evolver.cpp:53:2: fout: ‘cout’ is not a member of ‘std’
+..\src\Evolver.cpp:53:28: fout: ‘m_strTitle’ was not declared in this scope
+..\src\Evolver.cpp:53:42: fout: ‘endl’ is not a member of ‘std’
+..\src\Evolver.cpp:54:2: fout: ‘cout’ is not a member of ‘std’
+..\src\Evolver.cpp:54:34: fout: ‘m_strDescription’ was not declared in this scope
+..\src\Evolver.cpp:54:54: fout: ‘endl’ is not a member of ‘std’
+..\src\Evolver.cpp:55:2: fout: ‘cout’ is not a member of ‘std’
+..\src\Evolver.cpp:55:37: fout: ‘m_strPath’ was not declared in this scope
+..\src\Evolver.cpp:55:50: fout: ‘endl’ is not a member of ‘std’
+..\src\Evolver.cpp:56:2: fout: ‘cout’ is not a member of ‘std’
+..\src\Evolver.cpp:56:37: fout: ‘m_nPopulationSize’ was not declared in this scope
+..\src\Evolver.cpp:56:58: fout: ‘endl’ is not a member of ‘std’
+..\src\Evolver.cpp:57:2: fout: ‘cout’ is not a member of ‘std’
+..\src\Evolver.cpp:57:38: fout: ‘m_nMaxGenerations’ was not declared in this scope
+..\src\Evolver.cpp:57:59: fout: ‘endl’ is not a member of ‘std’
+..\src\Evolver.cpp: At global scope:
+..\src\Evolver.cpp:62:6: fout: ‘Evolver’ has not been declared
+..\src\Evolver.cpp: In functie ‘void start()’:
+..\src\Evolver.cpp:63:2: fout: ‘Genome’ was not declared in this scope
+..\src\Evolver.cpp:63:9: fout: expected ‘;’ before ‘cGenome’
+..\src\Evolver.cpp:65:2: fout: ‘string’ is not a member of ‘std’
+..\src\Evolver.cpp:65:14: fout: expected ‘;’ before ‘strType’
+..\src\Evolver.cpp:67:2: fout: ‘cGenome’ was not declared in this scope
+..\src\Evolver.cpp:67:20: fout: ‘strType’ was not declared in this scope
+..\src\Evolver.cpp:83:2: fout: ‘cout’ is not a member of ‘std’
+..\src\Evolver.cpp:83:15: fout: ‘endl’ is not a member of ‘std’
+..\src\Evolver.cpp:83:51: fout: ‘endl’ is not a member of ‘std’
+..\src\Evolver.cpp:87:2: fout: ‘cout’ is not a member of ‘std’
+..\src\Evolver.cpp:87:38: fout: ‘endl’ is not a member of ‘std’
+..\src\Evolver.cpp:92:2: fout: ‘Rosetta’ was not declared in this scope
+..\src\Evolver.cpp:92:10: fout: expected ‘;’ before ‘cRosetta’
+..\src\Evolver.cpp:93:2: fout: ‘cout’ is not a member of ‘std’
+..\src\Evolver.cpp:93:38: fout: ‘cRosetta’ was not declared in this scope
+..\src\Evolver.cpp:93:66: fout: ‘endl’ is not a member of ‘std’
+Build error occurred, build is stopped
+Time consumed: 268  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp:13:6: fout: ‘Evolver’ has not been declared
+..\src\Evolver.cpp:13:31: fout: variable or field ‘readConfig’ declared void
+..\src\Evolver.cpp:13:26: fout: ‘string’ is not a member of ‘std’
+..\src\Evolver.cpp:24:6: fout: ‘Evolver’ has not been declared
+..\src\Evolver.cpp:24:34: fout: ‘string’ in namespace ‘std’ does not name a type
+..\src\Evolver.cpp:24:47: fout: ISO C++ forbids declaration of ‘input_xml’ with no type [-fpermissive]
+..\src\Evolver.cpp: In functie ‘void traverse_xml(const int&)’:
+..\src\Evolver.cpp:26:18: fout: ‘rapidxml’ is not a namespace-name
+..\src\Evolver.cpp:26:26: fout: expected namespace-name before ‘;’ token
+..\src\Evolver.cpp:31:5: fout: ‘vector’ is not a member of ‘std’
+..\src\Evolver.cpp:31:17: fout: expected primary-expression before ‘char’
+..\src\Evolver.cpp:31:17: fout: expected ‘;’ before ‘char’
+..\src\Evolver.cpp:32:5: fout: ‘xml_copy’ was not declared in this scope
+..\src\Evolver.cpp:35:5: fout: ‘xml_document’ was not declared in this scope
+..\src\Evolver.cpp:35:18: fout: expected primary-expression before ‘>’ token
+..\src\Evolver.cpp:35:20: fout: ‘doc’ was not declared in this scope
+..\src\Evolver.cpp:36:15: fout: ‘parse_declaration_node’ was not declared in this scope
+..\src\Evolver.cpp:36:40: fout: ‘parse_no_data_nodes’ was not declared in this scope
+..\src\Evolver.cpp:38:5: fout: ‘xml_node’ was not declared in this scope
+..\src\Evolver.cpp:38:14: fout: expected primary-expression before ‘>’ token
+..\src\Evolver.cpp:38:17: fout: ‘rootNode’ was not declared in this scope
+..\src\Evolver.cpp:39:5: fout: ‘m_strTitle’ was not declared in this scope
+..\src\Evolver.cpp:40:5: fout: ‘m_strDescription’ was not declared in this scope
+..\src\Evolver.cpp:41:5: fout: ‘m_strPath’ was not declared in this scope
+..\src\Evolver.cpp:43:14: fout: expected primary-expression before ‘>’ token
+..\src\Evolver.cpp:43:17: fout: ‘settingsNode’ was not declared in this scope
+..\src\Evolver.cpp:44:5: fout: ‘m_nPopulationSize’ was not declared in this scope
+..\src\Evolver.cpp:44:81: fout: ‘atoi’ was not declared in this scope
+..\src\Evolver.cpp:45:5: fout: ‘m_nMaxGenerations’ was not declared in this scope
+..\src\Evolver.cpp: At global scope:
+..\src\Evolver.cpp:51:6: fout: ‘Evolver’ has not been declared
+..\src\Evolver.cpp: In functie ‘void printSettings()’:
+..\src\Evolver.cpp:52:2: fout: ‘cout’ is not a member of ‘std’
+..\src\Evolver.cpp:52:40: fout: ‘endl’ is not a member of ‘std’
+..\src\Evolver.cpp:53:2: fout: ‘cout’ is not a member of ‘std’
+..\src\Evolver.cpp:53:28: fout: ‘m_strTitle’ was not declared in this scope
+..\src\Evolver.cpp:53:42: fout: ‘endl’ is not a member of ‘std’
+..\src\Evolver.cpp:54:2: fout: ‘cout’ is not a member of ‘std’
+..\src\Evolver.cpp:54:34: fout: ‘m_strDescription’ was not declared in this scope
+..\src\Evolver.cpp:54:54: fout: ‘endl’ is not a member of ‘std’
+..\src\Evolver.cpp:55:2: fout: ‘cout’ is not a member of ‘std’
+..\src\Evolver.cpp:55:37: fout: ‘m_strPath’ was not declared in this scope
+..\src\Evolver.cpp:55:50: fout: ‘endl’ is not a member of ‘std’
+..\src\Evolver.cpp:56:2: fout: ‘cout’ is not a member of ‘std’
+..\src\Evolver.cpp:56:37: fout: ‘m_nPopulationSize’ was not declared in this scope
+..\src\Evolver.cpp:56:58: fout: ‘endl’ is not a member of ‘std’
+..\src\Evolver.cpp:57:2: fout: ‘cout’ is not a member of ‘std’
+..\src\Evolver.cpp:57:38: fout: ‘m_nMaxGenerations’ was not declared in this scope
+..\src\Evolver.cpp:57:59: fout: ‘endl’ is not a member of ‘std’
+..\src\Evolver.cpp: At global scope:
+..\src\Evolver.cpp:62:6: fout: ‘Evolver’ has not been declared
+..\src\Evolver.cpp: In functie ‘void start()’:
+..\src\Evolver.cpp:63:2: fout: ‘Genome’ was not declared in this scope
+..\src\Evolver.cpp:63:9: fout: expected ‘;’ before ‘cGenome’
+..\src\Evolver.cpp:65:2: fout: ‘string’ is not a member of ‘std’
+..\src\Evolver.cpp:65:14: fout: expected ‘;’ before ‘strType’
+..\src\Evolver.cpp:67:2: fout: ‘cGenome’ was not declared in this scope
+..\src\Evolver.cpp:67:20: fout: ‘strType’ was not declared in this scope
+..\src\Evolver.cpp:83:2: fout: ‘cout’ is not a member of ‘std’
+..\src\Evolver.cpp:83:15: fout: ‘endl’ is not a member of ‘std’
+..\src\Evolver.cpp:83:51: fout: ‘endl’ is not a member of ‘std’
+..\src\Evolver.cpp:87:2: fout: ‘cout’ is not a member of ‘std’
+..\src\Evolver.cpp:87:38: fout: ‘endl’ is not a member of ‘std’
+..\src\Evolver.cpp:92:2: fout: ‘Rosetta’ was not declared in this scope
+..\src\Evolver.cpp:92:10: fout: expected ‘;’ before ‘cRosetta’
+..\src\Evolver.cpp:93:2: fout: ‘cout’ is not a member of ‘std’
+..\src\Evolver.cpp:93:38: fout: ‘cRosetta’ was not declared in this scope
+..\src\Evolver.cpp:93:66: fout: ‘endl’ is not a member of ‘std’
+Build error occurred, build is stopped
+Time consumed: 677  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1240  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 862  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 861  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 674  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 561  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1675  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 565  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1563  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+In file included from ..\src\Rosetta.cpp:8:0:
+..\src\/Rosetta.h: In memberfunctie ‘GenomeType Rosetta::GetGenome()’:
+..\src\/Rosetta.h:38:37: fout: cannot convert ‘Genome’ to ‘GenomeType’ in return
+Build error occurred, build is stopped
+Time consumed: 285  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+In file included from ..\src\/Genome.h:14:0,
+                 from ..\src\/Rosetta.h:14,
+                 from ..\src\Rosetta.cpp:8:
+..\src\/rapidxml.hpp: In copy constructor ‘rapidxml::xml_document<>::xml_document(const rapidxml::xml_document<>&)’:
+..\src\/rapidxml.hpp:1322:9: fout: ‘rapidxml::xml_node<Ch>::xml_node(const rapidxml::xml_node<Ch>&) [with Ch = char, rapidxml::xml_node<Ch> = rapidxml::xml_node<char>]’ is private
+..\src\/rapidxml.hpp:1358:11: fout: within this context
+In file included from ..\src\/Rosetta.h:14:0,
+                 from ..\src\Rosetta.cpp:8:
+..\src\/Genome.h: In copy constructor ‘Genome::Genome(const Genome&)’:
+..\src\/Genome.h:17:7: note: synthesized method ‘rapidxml::xml_document<>::xml_document(const rapidxml::xml_document<>&)’ first required here 
+In file included from ..\src\Rosetta.cpp:8:0:
+..\src\/Rosetta.h: In memberfunctie ‘Genome Rosetta::GetGenome()’:
+..\src\/Rosetta.h:38:33: note: synthesized method ‘Genome::Genome(const Genome&)’ first required here 
+Build error occurred, build is stopped
+Time consumed: 275  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+In file included from ..\src\/Evolver.h:17:0,
+                 from ..\src\Evolver.cpp:8:
+..\src\/rapidxml.hpp: In copy constructor ‘rapidxml::xml_document<>::xml_document(const rapidxml::xml_document<>&)’:
+..\src\/rapidxml.hpp:1322:9: fout: ‘rapidxml::xml_node<Ch>::xml_node(const rapidxml::xml_node<Ch>&) [with Ch = char, rapidxml::xml_node<Ch> = rapidxml::xml_node<char>]’ is private
+..\src\/rapidxml.hpp:1358:11: fout: within this context
+In file included from ..\src\/Evolver.h:22:0,
+                 from ..\src\Evolver.cpp:8:
+..\src\/Genome.h: In copy constructor ‘Genome::Genome(const Genome&)’:
+..\src\/Genome.h:17:7: note: synthesized method ‘rapidxml::xml_document<>::xml_document(const rapidxml::xml_document<>&)’ first required here 
+In file included from ..\src\/Evolver.h:23:0,
+                 from ..\src\Evolver.cpp:8:
+..\src\/Rosetta.h: In memberfunctie ‘Genome Rosetta::GetGenome()’:
+..\src\/Rosetta.h:38:33: note: synthesized method ‘Genome::Genome(const Genome&)’ first required here 
+Build error occurred, build is stopped
+Time consumed: 342  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+..\src\Rosetta.cpp: In memberfunctie ‘void Rosetta::initTokamak()’:
+..\src\Rosetta.cpp:44:25: fout: ‘class Genome’ has no member named ‘GetGenome’
+Build error occurred, build is stopped
+Time consumed: 1097  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1237  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+In file included from ..\src\/Evolver.h:20:0,
+                 from ..\src\Darwin.cpp:13:
+..\src\/Globals.h:14:2: fout: expected ‘}’ before ‘GENOMETYPE_TOKAMAKTIME’
+..\src\/Globals.h:14:27: fout: invalid conversion from ‘int’ to ‘GenomeType’ [-fpermissive]
+..\src\/Globals.h:15:1: fout: expected ‘,’ or ‘;’ before ‘}’ token
+..\src\/Globals.h:15:1: fout: expected declaration before ‘}’ token
+Build error occurred, build is stopped
+Time consumed: 281  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1615  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 558  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin

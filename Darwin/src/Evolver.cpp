@@ -6,7 +6,6 @@
  */
 
 #include "Evolver.h"
-#include "Genome.h"
 
 
 
@@ -61,7 +60,7 @@ void Evolver::printSettings(){
 }
 
 void Evolver::start(){
-	Genome cGenome;
+/*	Genome cGenome;
 
 	std::string strType = "Tokamak5";
 
@@ -79,7 +78,7 @@ void Evolver::start(){
 
 
 	pchId = "3654";
-	cGenome.addChromosome(pchId);
+	cGenome.addChromosome("5");
 
 	std::cout << std::endl << cGenome.GetGenome() << std::endl;
 
@@ -87,9 +86,15 @@ void Evolver::start(){
 	cGenome.addGene(pchId, "2");
 	std::cout << cGenome.GetGenome() << std::endl;
 
-
+*/
 
 	//create Rosetta object
+	Rosetta cRosetta(GENOMETYPE_TOKAMAK);
+	std::cout << "Rosetta type is: " << cRosetta.GetGenomeType() << std::endl;
+
+	cRosetta.initGenome();
+
+
 
 	//make random children
 

@@ -1,0 +1,26 @@
+/*
+ * Rosetta.cpp
+ *
+ *  Created on: 3-feb.-2012
+ *      Author: woutergl
+ */
+
+#include "Rosetta.h"
+
+
+void Rosetta::initGenome(){
+
+	switch (m_eGenomeType)
+	    {
+	        case GENOMETYPE_TOKAMAK:
+	            std::cout << "Initializing tokamak genome" << std::endl;
+	            break;
+
+	        default:
+	            std::cout << "Unknown genome type" << std::endl;
+	            break;
+	    }
+
+
+}
+

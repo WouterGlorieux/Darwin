@@ -1,0 +1,35 @@
+/*
+ * Rosetta.h
+ *
+ *  Created on: 3-feb.-2012
+ *      Author: woutergl
+ */
+
+#ifndef ROSETTA_H_
+#define ROSETTA_H_
+
+#include "Globals.h"
+
+
+class Rosetta
+{
+private:
+	GenomeType m_eGenomeType;
+
+public:
+    Rosetta() // default constructor
+    {
+
+    }
+
+    void ModelToGenome();
+    void GenomeToModel();
+
+    void randomGenome();
+
+
+};
+
+
+
+#endif /* ROSETTA_H_ */
