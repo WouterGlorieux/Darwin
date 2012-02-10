@@ -78,6 +78,11 @@ void Evolver::start(){
 //do until maxGenerations reached
 
 	//calculate fitness
+	srand(time(0)); // set initial seed value to system clock
+	for(int i = 0; i<m_nPopulationSize; i++ ){
+		pacRosetta[i].CalcFitness();
+		std::cout << "fitness of " << i << ": " << pacRosetta[i].GetFitness() << std::endl;
+	}
 
 	//save state
 

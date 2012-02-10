@@ -50,11 +50,12 @@ void Rosetta::initTokamak(){
 }
 
 void Rosetta::CalcFitness(){
+    srand(time(0)); // set initial seed value to system clock
+    for (int nCount=0; nCount < 100; ++nCount)
+    {
+        std::cout << rand() << "\t";
 
-	int nLow = 0;
-	int nHigh = 100;
-
-	m_dFitness = (rand() % (nHigh - nLow + 1)) + nLow;
-
+        if ((nCount+1) % 5 == 0)
+            std::cout << std::endl;
+    }
 }
-

@@ -10,7 +10,6 @@
 
 #include <iostream>
 
-
 #include "Globals.h"
 #include "Genome.h"
 
@@ -40,7 +39,7 @@ public:
     GenomeType GetGenomeType() { return m_eGenomeType; }
     double GetFitness() { return m_dFitness; }
 
-    void CalcFitness();
+
 
 
 };

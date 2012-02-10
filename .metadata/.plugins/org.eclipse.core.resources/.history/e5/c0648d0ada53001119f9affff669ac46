@@ -51,10 +51,13 @@ void Rosetta::initTokamak(){
 
 void Rosetta::CalcFitness(){
 
-	int nLow = 0;
-	int nHigh = 100;
-
-	m_dFitness = (rand() % (nHigh - nLow + 1)) + nLow;
+	m_dFitness = GetRandomNumber(0.0, 100.0);
 
 }
 
+// Generate a random number between nLow and nHigh (inclusive)
+double GetRandomNumber(double nLow, double nHigh)
+{
+	srand(time(0)); // set initial seed value to system clock
+    return (rand() % (nHigh - nLow + 1)) + nLow;
+}
