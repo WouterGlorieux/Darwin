@@ -39,6 +39,7 @@ void Evolver::traverse_xml(const std::string& input_xml)
     m_strTitle = rootNode->first_node("Title")->value();
     m_strDescription = rootNode->first_node("Description")->value();
     m_strPath = rootNode->first_node("DirectoryPath")->value();
+    m_eGenomeType = static_cast<GenomeType> (atoi(rootNode->first_node("GenomeType")->value()));
 
     xml_node<>* settingsNode = rootNode->first_node("Settings");
     m_nPopulationSize = atoi(settingsNode->first_node("PopulationSize")->value());
@@ -60,43 +61,17 @@ void Evolver::printSettings(){
 }
 
 void Evolver::start(){
-/*	Genome cGenome;
 
-	std::string strType = "Tokamak5";
+	//create pointer to array of Rosetta objects
+	Rosetta *pacRosetta = new Rosetta[m_nPopulationSize];
 
-	cGenome.newGenome(strType);
-	//std::cout << cGenome.GetGenome() << std::endl;
+	//initialize Rosetta objects
+	for(int i = 0; i<m_nPopulationSize; i++ ){
+		pacRosetta[i].SetGenomeType(m_eGenomeType);
+		pacRosetta[i].initGenome();
+	}
 
-	const char* pchId;
-
-	pchId = "1";
-	cGenome.addChromosome(pchId);
-
-
-	pchId = "2";
-	cGenome.addChromosome(pchId);
-
-
-	pchId = "3654";
-	cGenome.addChromosome("5");
-
-	std::cout << std::endl << cGenome.GetGenome() << std::endl;
-
-	pchId = "1";
-	cGenome.addGene(pchId, "2");
-	std::cout << cGenome.GetGenome() << std::endl;
-
-*/
-
-	//create Rosetta object
-	Rosetta cRosetta(GENOMETYPE_TOKAMAK);
-	std::cout << "Rosetta type is: " << cRosetta.GetGenomeType() << std::endl;
-
-	cRosetta.initGenome();
-
-
-
-	//make random children
+	//put random data in all genomes
 
 	//create Aperture object
 
@@ -112,6 +87,6 @@ void Evolver::start(){
 //loop
 
 
-
+	delete[] pacRosetta;
 }
 

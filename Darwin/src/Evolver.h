@@ -30,9 +30,12 @@ private:
 
     std::string m_strTitle;			//Title of this job
     std::string m_strDescription; 	//detailed description of this job
+    GenomeType m_eGenomeType;       //Type of genomes for this job
 
     int m_nPopulationSize;			//total number of offspring in every generation
     int m_nMaxGenerations;        	//maximum number of generations to calculate (-1 for unlimited)
+
+
 
 public:
     Evolver() // default constructor
