@@ -13,6 +13,9 @@
 #include <string>
 #include <sstream>
 #include <fstream>
+#include <algorithm>
+#include <cassert>
+
 
 #include "rapidxml.hpp"
 #include "rapidxml_print.hpp"
@@ -34,6 +37,9 @@ private:
 
     int m_nPopulationSize;			//total number of offspring in every generation
     int m_nMaxGenerations;        	//maximum number of generations to calculate (-1 for unlimited)
+    double m_dHasOffspring;         //percentage of population that gets to have offspring (0% -> 100%) (100%: every genome has offspring)
+
+    bool m_bElitism;				//Elitism enabled or not?
 
 
 
@@ -56,6 +62,13 @@ public:
     void start();
 
 
+};
+
+struct Parent
+{
+    int nIndex;						//index in current population
+    double dFitness;				//fitness
+    double dChanceForReproduction;	//percentual chance that this parent is selected for reproduction
 };
 
 

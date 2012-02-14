@@ -44,8 +44,8 @@ void Evolver::traverse_xml(const std::string& input_xml)
     xml_node<>* settingsNode = rootNode->first_node("Settings");
     m_nPopulationSize = atoi(settingsNode->first_node("PopulationSize")->value());
     m_nMaxGenerations = atoi(settingsNode->first_node("MaxGenerations")->value());
-
-
+    m_dHasOffspring = atof(settingsNode->first_node("HasOffspring")->value());
+    m_bElitism = (settingsNode->first_node("Elitism")->value() == std::string("true"))? true: false;
 
 }
 
@@ -60,10 +60,12 @@ void Evolver::printSettings(){
 
 }
 
+
+
 void Evolver::start(){
 
 	//create pointer to array of Rosetta objects
-	Rosetta *pacRosetta = new Rosetta[m_nPopulationSize];
+	Rosetta* pacRosetta = new Rosetta[m_nPopulationSize];
 
 	//initialize Rosetta objects
 	for(int i = 0; i<m_nPopulationSize; i++ ){
@@ -84,6 +86,56 @@ void Evolver::start(){
 		std::cout << "fitness of " << i << ": " << pacRosetta[i].GetFitness() << std::endl;
 	}
 
+	//calculate chance to make offspring for each genome
+	int nSelectedGenomes;  		//number of genomes that get to have offspring
+
+	assert(m_dHasOffspring > 0 && m_dHasOffspring <= 100);	//Has offspring must be greater than 0 and smaller or equal to 100.
+	nSelectedGenomes = m_nPopulationSize * m_dHasOffspring/100;
+
+	std::cout << "number of selected genomes: " << nSelectedGenomes << std::endl;
+	std::cout << "elitism: " << m_bElitism << std::endl;
+
+	Parent* asParent = new Parent[nSelectedGenomes];
+
+	int nParentsAdded = 0;
+
+	double dFitnessBelow = -1.0;
+	while(nParentsAdded < nSelectedGenomes){
+		double dHighestFitness = 0.0;
+		int nFitnessOccurences = 0;
+
+		for(int i = 0; i<m_nPopulationSize; i++ ){
+
+			if(pacRosetta[i].GetFitness() == dHighestFitness && nParentsAdded+nFitnessOccurences < nSelectedGenomes){
+				nFitnessOccurences++;
+				//std::cout << "adding parent with same fitness at index " << nParentsAdded+nFitnessOccurences-1 << " occurence: " << nFitnessOccurences << std::endl;
+
+				asParent[nParentsAdded+nFitnessOccurences-1].nIndex = i;
+				asParent[nParentsAdded+nFitnessOccurences-1].dFitness = pacRosetta[i].GetFitness();
+			}
+
+			if(pacRosetta[i].GetFitness() > dHighestFitness && (pacRosetta[i].GetFitness() < dFitnessBelow || dFitnessBelow == -1.0)){
+				//std::cout << "adding parent at index " << nParentsAdded << std::endl;
+
+				dHighestFitness = pacRosetta[i].GetFitness();
+				nFitnessOccurences = 1;
+				asParent[nParentsAdded].nIndex = i;
+				asParent[nParentsAdded].dFitness = pacRosetta[i].GetFitness();
+
+			}
+		}
+		dFitnessBelow = dHighestFitness;
+
+
+		nParentsAdded = nParentsAdded + nFitnessOccurences;
+		std::cout << "Parentsadded: "<<nParentsAdded << " fitnessBelow: " << dFitnessBelow << " occurences: " << nFitnessOccurences << std::endl;
+	}
+
+
+	for(int i = 0; i<nSelectedGenomes; i++ ){
+		std::cout << "Parent " << i << " index: " << asParent[i].nIndex << " fitness: " << asParent[i].dFitness << std::endl;
+	}
+
 	//save state
 
 	//make next generation
@@ -93,5 +145,6 @@ void Evolver::start(){
 
 
 	delete[] pacRosetta;
+	delete[] asParent;
 }
 

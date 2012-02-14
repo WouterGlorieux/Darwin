@@ -8,7 +8,7 @@
   <Settings>
     <PopulationSize>100</PopulationSize>
     <MaxGenerations>10</MaxGenerations>
-    <Crossover>100.0</Crossover>
+    <HasOffspring>10.5</HasOffspring>
     <Elitism>true</Elitism>
   </Settings>
   <Mutations>
