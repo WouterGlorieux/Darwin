@@ -44,7 +44,8 @@ void Evolver::traverse_xml(const std::string& input_xml)
     xml_node<>* settingsNode = rootNode->first_node("Settings");
     m_nPopulationSize = atoi(settingsNode->first_node("PopulationSize")->value());
     m_nMaxGenerations = atoi(settingsNode->first_node("MaxGenerations")->value());
-    m_dHasOffspring = atof(settingsNode->first_node("HasOffspring")->value());
+    m_dTruncation = atof(settingsNode->first_node("Truncation")->value());
+    m_eNormalization = static_cast<Normalization> (atoi(settingsNode->first_node("Truncation")->first_attribute("normalization")->value()));
     m_bElitism = (settingsNode->first_node("Elitism")->value() == std::string("true"))? true: false;
 
 }
@@ -86,16 +87,38 @@ void Evolver::start(){
 		std::cout << "fitness of " << i << ": " << pacRosetta[i].GetFitness() << std::endl;
 	}
 
-	//calculate chance to make offspring for each genome
+	std::vector<Parent> vsSelection = MakeSelection(pacRosetta);
+
+	for(unsigned int i = 0; i < vsSelection.size(); i++ ){
+		std::cout << "Parent " << i << " index: " << vsSelection[i].nIndex;
+		std::cout << " fitness: " << vsSelection[i].dFitness;
+		std::cout << " normalized fitness: " << vsSelection[i].dNormalizedFitness;
+		std::cout << " accumulated fitness: " << vsSelection[i].dAccumulatedNormalizedFitness << std::endl;
+	}
+
+
+	//save state
+
+	//make next generation
+
+	//do mutations
+//loop
+
+
+	delete[] pacRosetta;	//clean up memory
+}
+
+std::vector<Parent> Evolver::MakeSelection(Rosetta* population){
+	//calculate which genomes are selected als possible parents
 	int nSelectedGenomes;  		//number of genomes that get to have offspring
 
-	assert(m_dHasOffspring > 0 && m_dHasOffspring <= 100);	//Has offspring must be greater than 0 and smaller or equal to 100.
-	nSelectedGenomes = m_nPopulationSize * m_dHasOffspring/100;
+	assert(m_dTruncation > 0 && m_dTruncation <= 100);	//Truncation must be greater than 0 and smaller or equal to 100.
+	nSelectedGenomes = m_nPopulationSize * m_dTruncation/100;
 
 	std::cout << "number of selected genomes: " << nSelectedGenomes << std::endl;
 	std::cout << "elitism: " << m_bElitism << std::endl;
 
-	Parent* asParent = new Parent[nSelectedGenomes];
+	std::vector<Parent> vsParent(nSelectedGenomes);
 
 	int nParentsAdded = 0;
 
@@ -106,45 +129,73 @@ void Evolver::start(){
 
 		for(int i = 0; i<m_nPopulationSize; i++ ){
 
-			if(pacRosetta[i].GetFitness() == dHighestFitness && nParentsAdded+nFitnessOccurences < nSelectedGenomes){
+			if(population[i].GetFitness() == dHighestFitness && nParentsAdded+nFitnessOccurences < nSelectedGenomes){
 				nFitnessOccurences++;
-				//std::cout << "adding parent with same fitness at index " << nParentsAdded+nFitnessOccurences-1 << " occurence: " << nFitnessOccurences << std::endl;
 
-				asParent[nParentsAdded+nFitnessOccurences-1].nIndex = i;
-				asParent[nParentsAdded+nFitnessOccurences-1].dFitness = pacRosetta[i].GetFitness();
+				vsParent[nParentsAdded+nFitnessOccurences-1].nIndex = i;
+				vsParent[nParentsAdded+nFitnessOccurences-1].dFitness = population[i].GetFitness();
 			}
 
-			if(pacRosetta[i].GetFitness() > dHighestFitness && (pacRosetta[i].GetFitness() < dFitnessBelow || dFitnessBelow == -1.0)){
-				//std::cout << "adding parent at index " << nParentsAdded << std::endl;
-
-				dHighestFitness = pacRosetta[i].GetFitness();
+			if(population[i].GetFitness() > dHighestFitness && (population[i].GetFitness() < dFitnessBelow || dFitnessBelow == -1.0)){
+				dHighestFitness = population[i].GetFitness();
 				nFitnessOccurences = 1;
-				asParent[nParentsAdded].nIndex = i;
-				asParent[nParentsAdded].dFitness = pacRosetta[i].GetFitness();
 
+				vsParent[nParentsAdded].nIndex = i;
+				vsParent[nParentsAdded].dFitness = population[i].GetFitness();
 			}
 		}
 		dFitnessBelow = dHighestFitness;
-
-
 		nParentsAdded = nParentsAdded + nFitnessOccurences;
-		std::cout << "Parentsadded: "<<nParentsAdded << " fitnessBelow: " << dFitnessBelow << " occurences: " << nFitnessOccurences << std::endl;
+
 	}
 
+
+
+	//calculate chance to make offspring for each parent
+	double dTotalFitness = 0;
+	for(int i = 0; i<nSelectedGenomes; i++ ){
+		dTotalFitness += vsParent[i].dFitness;
+	}
+
+	assert(dTotalFitness != 0);
+	double dTmpAccumulatedFitness = 0.0;
+	int nTotalUnits = 0;
+
+	for(int j = 1; j<=nSelectedGenomes; j++ ){
+    		nTotalUnits += j;
+    }
 
 	for(int i = 0; i<nSelectedGenomes; i++ ){
-		std::cout << "Parent " << i << " index: " << asParent[i].nIndex << " fitness: " << asParent[i].dFitness << std::endl;
+
+		switch (m_eNormalization)
+	    {
+    		case NORM_PROPORTIONAL:
+    			vsParent[i].dNormalizedFitness = vsParent[i].dFitness/dTotalFitness;
+    			vsParent[i].dAccumulatedNormalizedFitness = dTmpAccumulatedFitness;
+    			break;
+    		case NORM_RANK:
+
+
+    			vsParent[i].dNormalizedFitness = ((nSelectedGenomes-i)/(nSelectedGenomes*1.0))*((nSelectedGenomes*1.0)/nTotalUnits);
+    			vsParent[i].dAccumulatedNormalizedFitness = dTmpAccumulatedFitness;
+    			break;
+    		case NORM_EQUAL:
+    			vsParent[i].dNormalizedFitness = 1.0/nSelectedGenomes;
+    			vsParent[i].dAccumulatedNormalizedFitness = dTmpAccumulatedFitness;
+    			break;
+
+	        default:
+	            std::cout << "Unknown normalization type" << std::endl;
+	            break;
+	    }
+
+
+		dTmpAccumulatedFitness += vsParent[i].dNormalizedFitness;
 	}
 
-	//save state
-
-	//make next generation
-
-	//do mutations
-//loop
 
 
-	delete[] pacRosetta;
-	delete[] asParent;
+
+	return vsParent;
 }
 

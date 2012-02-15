@@ -37,7 +37,8 @@ private:
 
     int m_nPopulationSize;			//total number of offspring in every generation
     int m_nMaxGenerations;        	//maximum number of generations to calculate (-1 for unlimited)
-    double m_dHasOffspring;         //percentage of population that gets to have offspring (0% -> 100%) (100%: every genome has offspring)
+    double m_dTruncation  ;         //percentage of population that gets to have offspring (0% -> 100%) (100%: every genome has offspring)
+    Normalization m_eNormalization; //Normalization method used in truncation
 
     bool m_bElitism;				//Elitism enabled or not?
 
@@ -60,16 +61,12 @@ public:
     void printSettings();
 
     void start();
+    std::vector<Parent> MakeSelection(Rosetta* population);
 
 
 };
 
-struct Parent
-{
-    int nIndex;						//index in current population
-    double dFitness;				//fitness
-    double dChanceForReproduction;	//percentual chance that this parent is selected for reproduction
-};
+
 
 
 #endif /* EVOLVER_H_ */

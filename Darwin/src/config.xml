@@ -8,7 +8,7 @@
   <Settings>
     <PopulationSize>100</PopulationSize>
     <MaxGenerations>10</MaxGenerations>
-    <HasOffspring>10.5</HasOffspring>
+    <Truncation normalization="2">10</Truncation>
     <Elitism>true</Elitism>
   </Settings>
   <Mutations>
