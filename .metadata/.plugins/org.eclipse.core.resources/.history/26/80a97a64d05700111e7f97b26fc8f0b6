@@ -37,8 +37,6 @@ private:
 
     int m_nPopulationSize;			//total number of offspring in every generation
     int m_nMaxGenerations;        	//maximum number of generations to calculate (-1 for unlimited)
-    int m_nMaxParents;              //maximum number of parents for recombination (must be greater of equal to 1)
-
     double m_dTruncation  ;         //percentage of population that gets to have offspring (0% -> 100%) (100%: every genome has offspring)
     Normalization m_eNormalization; //Normalization method used in truncation
 

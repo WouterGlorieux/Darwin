@@ -99,10 +99,7 @@ void Evolver::start(){
 	//do recombinations
 	Rosetta* pacNextGeneration = new Rosetta[m_nPopulationSize];
 
-/*	for(int i = 0; i<m_nPopulationSize; i++ ){
-		pacNextGeneration[i].initFromParents();
-	}
-*/
+
 	//do mutations
 //loop
 

@@ -47,7 +47,7 @@ void Evolver::traverse_xml(const std::string& input_xml)
     m_dTruncation = atof(settingsNode->first_node("Truncation")->value());
     m_eNormalization = static_cast<Normalization> (atoi(settingsNode->first_node("Truncation")->first_attribute("normalization")->value()));
     m_bElitism = (settingsNode->first_node("Elitism")->value() == std::string("true"))? true: false;
-    m_nMaxParents = atoi(settingsNode->first_node("MaxParents")->value());
+
 }
 
 void Evolver::printSettings(){
@@ -66,12 +66,12 @@ void Evolver::printSettings(){
 void Evolver::start(){
 
 	//create pointer to array of Rosetta objects
-	Rosetta* pacPopulation = new Rosetta[m_nPopulationSize];
+	Rosetta* pacRosetta = new Rosetta[m_nPopulationSize];
 
 	//initialize Rosetta objects
 	for(int i = 0; i<m_nPopulationSize; i++ ){
-		pacPopulation[i].SetGenomeType(m_eGenomeType);
-		pacPopulation[i].initGenome();
+		pacRosetta[i].SetGenomeType(m_eGenomeType);
+		pacRosetta[i].initGenome();
 	}
 
 	//put random data in all genomes
@@ -83,11 +83,11 @@ void Evolver::start(){
 	//calculate fitness
 	srand(time(0)); // set initial seed value to system clock
 	for(int i = 0; i<m_nPopulationSize; i++ ){
-		pacPopulation[i].CalcFitness();
-		std::cout << "fitness of " << i << ": " << pacPopulation[i].GetFitness() << std::endl;
+		pacRosetta[i].CalcFitness();
+		std::cout << "fitness of " << i << ": " << pacRosetta[i].GetFitness() << std::endl;
 	}
 
-	std::vector<Parent> vsSelection = MakeSelection(pacPopulation);
+	std::vector<Parent> vsSelection = MakeSelection(pacRosetta);
 
 	for(unsigned int i = 0; i < vsSelection.size(); i++ ){
 		std::cout << "Parent " << i << " index: " << vsSelection[i].nIndex;
@@ -96,19 +96,16 @@ void Evolver::start(){
 		std::cout << " accumulated fitness: " << vsSelection[i].dAccumulatedNormalizedFitness << std::endl;
 	}
 
-	//do recombinations
-	Rosetta* pacNextGeneration = new Rosetta[m_nPopulationSize];
 
-/*	for(int i = 0; i<m_nPopulationSize; i++ ){
-		pacNextGeneration[i].initFromParents();
-	}
-*/
+	//save state
+
+	//make next generation
+
 	//do mutations
 //loop
 
 
-	delete[] pacPopulation;	//clean up memory
-	delete[] pacNextGeneration;
+	delete[] pacRosetta;	//clean up memory
 }
 
 std::vector<Parent> Evolver::MakeSelection(Rosetta* population){
@@ -160,30 +157,29 @@ std::vector<Parent> Evolver::MakeSelection(Rosetta* population){
 		dTotalFitness += vsParent[i].dFitness;
 	}
 
-	//some initializations to be used in the normalization
-	assert(dTotalFitness != 0);		//check to avoid divide by zero error
+	assert(dTotalFitness != 0);
 	double dTmpAccumulatedFitness = 0.0;
 	int nTotalUnits = 0;
 
-	if(m_eNormalization == NORM_RANK){			//totalUnits is only needed for rank based selection , totalUnits = permutation of nSelectedGenomes
-		for(int j = 1; j<=nSelectedGenomes; j++ ){
+	for(int j = 1; j<=nSelectedGenomes; j++ ){
     		nTotalUnits += j;
-		}
-	}
+    }
 
-	//normalize the fitness for each genome based on normalization method
 	for(int i = 0; i<nSelectedGenomes; i++ ){
+
 		switch (m_eNormalization)
 	    {
-    		case NORM_PROPORTIONAL: //chance is proportional based on fitness
+    		case NORM_PROPORTIONAL:
     			vsParent[i].dNormalizedFitness = vsParent[i].dFitness/dTotalFitness;
     			vsParent[i].dAccumulatedNormalizedFitness = dTmpAccumulatedFitness;
     			break;
-    		case NORM_RANK:		//for example: if you have a selection of 10 genomes, the first genome is 10 times more likely to be picked, the second is 9 times, third is 8 times, ...
-    			vsParent[i].dNormalizedFitness = ((nSelectedGenomes-i)/(double)nSelectedGenomes)*(((double)nSelectedGenomes)/(double)nTotalUnits);
+    		case NORM_RANK:
+
+
+    			vsParent[i].dNormalizedFitness = ((nSelectedGenomes-i)/(double)nSelectedGenomes)*(((double)nSelectedGenomes)/nTotalUnits);
     			vsParent[i].dAccumulatedNormalizedFitness = dTmpAccumulatedFitness;
     			break;
-    		case NORM_EQUAL:	//chance to be picked is equal for all genomes
+    		case NORM_EQUAL:
     			vsParent[i].dNormalizedFitness = 1.0/nSelectedGenomes;
     			vsParent[i].dAccumulatedNormalizedFitness = dTmpAccumulatedFitness;
     			break;
@@ -192,8 +188,13 @@ std::vector<Parent> Evolver::MakeSelection(Rosetta* population){
 	            std::cout << "Unknown normalization type" << std::endl;
 	            break;
 	    }
+
+
 		dTmpAccumulatedFitness += vsParent[i].dNormalizedFitness;
 	}
+
+
+
 
 	return vsParent;
 }
