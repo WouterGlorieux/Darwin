@@ -13,16 +13,23 @@
 
 enum GenomeType
 {
-	GENOMETYPE_TOKAMAK = 1, //steady state tokamak
-	GENOMETYPE_TOKAMAKTIME = 2 //time dependent tokamak
+	GENOME_TOKAMAK = 1, //steady state tokamak
+	GENOME_TOKAMAKTIME = 2 //time dependent tokamak
 };
 
-enum Normalization
+enum NormalizationType
 {
 	NORM_PROPORTIONAL = 1,		// normalized fitness is based on proportional fitness
 	NORM_RANK = 2,				// normalized fitness is based on rank
 	NORM_EQUAL = 3				// normalized fitness is equal for all genomes
 
+};
+
+enum RecombinationType
+{
+	RECOMBINATION_RWS = 1,			//Roulette Wheel selection
+	RECOMBINATION_SUS = 2,			//Stochastic Universal Sampling
+	RECOMBINATION_TOURNAMENT = 3	//Tournament selection
 };
 
 struct Parent

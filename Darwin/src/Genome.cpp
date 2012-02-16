@@ -7,7 +7,7 @@
 
 #include "Genome.h"
 
-void Genome::newGenome(std::string &strType){
+void Genome::newGenome(const char* pchId ){
 
 	using namespace rapidxml;
 	//xml_document<> doc;
@@ -21,7 +21,7 @@ void Genome::newGenome(std::string &strType){
 	// root node
 	xml_node<>* root = m_Genome.allocate_node(node_element, "Genome");
 
-	root->append_attribute(m_Genome.allocate_attribute("type", strType.c_str()));
+	root->append_attribute(m_Genome.allocate_attribute("type", pchId));
 	m_Genome.append_node(root);
 /*
 	// chromosome node
@@ -77,5 +77,18 @@ std::string Genome::GetGenomeXML(){
 	// (in all its angle bracket glory)
 
 	return xml_as_string;
+}
+
+void Genome::SetGenomeXML(const std::string& input_xml){
+	using namespace rapidxml;
+    // (input_xml contains the above XML)
+
+    // make a safe-to-modify copy of input_xml
+    // (you should never modify the contents of an std::string directly)
+    std::vector<char> xml_copy(input_xml.begin(), input_xml.end());
+    xml_copy.push_back('\0');
+
+    // only use xml_copy from here on!
+    m_Genome.parse<parse_declaration_node | parse_no_data_nodes>(&xml_copy[0]);
 }
 

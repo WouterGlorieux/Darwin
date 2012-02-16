@@ -40,7 +40,7 @@ private:
     int m_nMaxParents;              //maximum number of parents for recombination (must be greater of equal to 1)
 
     double m_dTruncation  ;         //percentage of population that gets to have offspring (0% -> 100%) (100%: every genome has offspring)
-    Normalization m_eNormalization; //Normalization method used in truncation
+    NormalizationType m_eNormalization; //Normalization method used in truncation
 
     bool m_bElitism;				//Elitism enabled or not?
 

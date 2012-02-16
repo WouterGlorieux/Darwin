@@ -12,11 +12,11 @@ void Rosetta::initGenome(){
 
 	switch (m_eGenomeType)
 	    {
-	        case GENOMETYPE_TOKAMAK:
+	        case GENOME_TOKAMAK:
 	           // std::cout << "Initializing steady state tokamak genome" << std::endl;
 	            initTokamak();
 	            break;
-	        case GENOMETYPE_TOKAMAKTIME:
+	        case GENOME_TOKAMAKTIME:
 	           // std::cout << "Initializing time dependent tokamak genome" << std::endl;
 	            initTokamak();
 	            break;
@@ -31,21 +31,16 @@ void Rosetta::initGenome(){
 
 void Rosetta::initTokamak(){
 
+	cGenome.newGenome("Tokamak steady state");
 
-	std::string strType = "Tokamak steady state";
+	cGenome.addChromosome("Auxiliary Heating Power");
+	cGenome.addGene("1", "Auxiliary Heating Power");
 
-	m_cGenome.newGenome(strType);
+	cGenome.addChromosome("Magnetic Field");
+	cGenome.addGene("1", "Magnetic Field");
 
-	m_cGenome.addChromosome("Auxiliary Heating Power");
-	m_cGenome.addGene("1", "Auxiliary Heating Power");
-
-	m_cGenome.addChromosome("Magnetic Field");
-	m_cGenome.addGene("1", "Magnetic Field");
-
-	m_cGenome.addChromosome("Plasma Density");
-	m_cGenome.addGene("1", "Plasma Density");
-
-	//std::cout << m_cGenome.GetGenomeXML() << std::endl;
+	cGenome.addChromosome("Plasma Density");
+	cGenome.addGene("1", "Plasma Density");
 
 }
 
@@ -56,5 +51,9 @@ void Rosetta::CalcFitness(){
 
 	m_dFitness = (rand() % (nHigh - nLow + 1)) + nLow;
 
+}
+
+void Rosetta::SetGenome(const std::string& input_xml){
+	cGenome.SetGenomeXML(input_xml);
 }
 

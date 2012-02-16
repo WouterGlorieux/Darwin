@@ -45,7 +45,7 @@ void Evolver::traverse_xml(const std::string& input_xml)
     m_nPopulationSize = atoi(settingsNode->first_node("PopulationSize")->value());
     m_nMaxGenerations = atoi(settingsNode->first_node("MaxGenerations")->value());
     m_dTruncation = atof(settingsNode->first_node("Truncation")->value());
-    m_eNormalization = static_cast<Normalization> (atoi(settingsNode->first_node("Truncation")->first_attribute("normalization")->value()));
+    m_eNormalization = static_cast<NormalizationType> (atoi(settingsNode->first_node("Truncation")->first_attribute("normalization")->value()));
     m_bElitism = (settingsNode->first_node("Elitism")->value() == std::string("true"))? true: false;
     m_nMaxParents = atoi(settingsNode->first_node("MaxParents")->value());
 }
@@ -65,14 +65,17 @@ void Evolver::printSettings(){
 
 void Evolver::start(){
 
-	//create pointer to array of Rosetta objects
+	//create pointer to array of Rosetta objects for population and next generation
 	Rosetta* pacPopulation = new Rosetta[m_nPopulationSize];
+	Rosetta* pacNextGeneration = new Rosetta[m_nPopulationSize];
+
 
 	//initialize Rosetta objects
 	for(int i = 0; i<m_nPopulationSize; i++ ){
 		pacPopulation[i].SetGenomeType(m_eGenomeType);
 		pacPopulation[i].initGenome();
 	}
+
 
 	//put random data in all genomes
 
@@ -96,14 +99,36 @@ void Evolver::start(){
 		std::cout << " accumulated fitness: " << vsSelection[i].dAccumulatedNormalizedFitness << std::endl;
 	}
 
+
 	//do recombinations
-	Rosetta* pacNextGeneration = new Rosetta[m_nPopulationSize];
+
+
+	if(m_bElitism){
+		pacNextGeneration[0].SetGenome(pacPopulation[vsSelection[0].nIndex].cGenome.GetGenomeXML());
+		pacNextGeneration[0].SetGenomeType(m_eGenomeType);
+	}
+
+
+
+
+
+
+
 
 /*	for(int i = 0; i<m_nPopulationSize; i++ ){
 		pacNextGeneration[i].initFromParents();
 	}
 */
 	//do mutations
+
+
+	//copy next generation to population
+	for(int i = 0; i<m_nPopulationSize; i++ ){
+		pacPopulation[i].SetGenome(pacNextGeneration[i].cGenome.GetGenomeXML());
+		pacPopulation[i].SetGenomeType(m_eGenomeType);
+	}
+
+
 //loop
 
 

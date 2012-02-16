@@ -19,9 +19,12 @@ class Rosetta
 {
 private:
 	GenomeType m_eGenomeType;
-	Genome m_cGenome;
 	double m_dFitness;
+
 public:
+
+	Genome cGenome;
+
     Rosetta() // default constructor
     {
 
@@ -38,9 +41,11 @@ public:
     void SetGenomeType(GenomeType eGenomeType) {m_eGenomeType = eGenomeType; }
 
     GenomeType GetGenomeType() { return m_eGenomeType; }
+
     double GetFitness() { return m_dFitness; }
 
     void CalcFitness();
+    void SetGenome(const std::string& input_xml);
 
 
 
