@@ -8,12 +8,7 @@
 #ifndef GENOME_H_
 #define GENOME_H_
 
-#include <string>
-#include <iostream>
-#include <vector>
-
-#include "rapidxml.hpp"
-#include "rapidxml_print.hpp"
+#include "Globals.h"
 
 class Genome
 {

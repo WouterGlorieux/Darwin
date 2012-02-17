@@ -102,34 +102,39 @@ void Evolver::start(){
 	}
 
 
-	//do recombinations
 
+	//if elitims is true, set the first genome of the next generation to the genome with highest fitness
 	if(m_bElitism){
 		pacNextGeneration[0].SetGenome(pacPopulation[vsSelection[0].nIndex].cGenome.GetGenomeXML());
 		pacNextGeneration[0].SetGenomeType(m_eGenomeType);
 	}
 
-	//Recombination cRecombination;
 
-	//cRecombination.Clear();
+	//do recombinations
 
-	switch (m_eRecombination)
-    {
-		case RECOMBINATION_RWS:
-			RWS(vsSelection);
-			break;
-		case RECOMBINATION_SUS:
-			SUS(vsSelection);
-			break;
-		case RECOMBINATION_TOURNAMENT:
-			Tournament(vsSelection);
-			break;
 
-        default:
-            std::cout << "Unknown recombination type" << std::endl;
-            break;
-    }
+	for(int i = m_bElitism; i<m_nPopulationSize; i++ ){		//if elitism is true, the for loop begins at 1 instead of 0
+		m_cRecombination.Clear();		//make sure new genome is empty
+		switch (m_eRecombination)
+		{
+			case RECOMBINATION_RWS:
+				RWS(vsSelection, pacPopulation);
+				break;
+			case RECOMBINATION_SUS:
+				SUS(vsSelection, pacPopulation);
+				break;
+			case RECOMBINATION_TOURNAMENT:
+				Tournament(vsSelection, pacPopulation);
+				break;
 
+			default:
+				std::cout << "Unknown recombination type" << std::endl;
+				break;
+		}
+
+		pacNextGeneration[i].SetGenome(m_cRecombination.RecombinedGenomeXML());
+		pacNextGeneration[i].SetGenomeType(m_eGenomeType);
+	}
 
 
 
@@ -246,19 +251,19 @@ std::vector<Parent> Evolver::MakeSelection(Rosetta* population){
 	return vsParent;
 }
 
-void Evolver::RWS(std::vector<Parent> selection){
+void Evolver::RWS(std::vector<Parent> selection, Rosetta* population){
 
 	int nLow = 0;
-	int nHigh = 10000;
+	int nHigh = 10000;	//5 decimals
 	double dRandom = 0;
 
 	for(int i = 0; i<m_nMaxParents; i++){
 		dRandom = ((rand() % (nHigh - nLow + 1)) + nLow)/(double)nHigh;		//random number between 0 and 1, 5 decimals
-		std::cout << "random number: " << dRandom << std::endl;
+
 		for(unsigned int j = 0; j < selection.size(); j++){
 			if(selection[j].dAccumulatedNormalizedFitness + selection[j].dNormalizedFitness >= dRandom){
-				std::cout << "adding parent " << j << std::endl;
 				//add parent to recombination
+				m_cRecombination.AddParent(population[selection[j].nIndex].cGenome.GetGenomeXML());
 				break;
 			}
 
@@ -267,29 +272,27 @@ void Evolver::RWS(std::vector<Parent> selection){
 	}
 
 }
-void Evolver::SUS(std::vector<Parent> selection){
+void Evolver::SUS(std::vector<Parent> selection, Rosetta* population){
 	int nLow = 0;
-	int nHigh = 10000;
+	int nHigh = 10000;	//5 decimals
 	double dRandom = 0;
 
 	dRandom = ((rand() % (nHigh - nLow + 1)) + nLow)/(double)nHigh;		//random number between 0 and 1, 5 decimals
-	std::cout << "random number: " << dRandom << std::endl;
 
 	for(int i = 0; i<m_nMaxParents; i++){
 
 		for(unsigned int j = 0; j < selection.size(); j++){
 			if(selection[j].dAccumulatedNormalizedFitness + selection[j].dNormalizedFitness >= dRandom){
-				std::cout << "adding parent " << j << std::endl;
 				//add parent to recombination
+				m_cRecombination.AddParent(population[selection[j].nIndex].cGenome.GetGenomeXML());
 				break;
 			}
-
 		}
+
 		dRandom += 1.0/(double)m_nMaxParents;
 		(dRandom > 1)?dRandom -= 1:dRandom;		//if dRandom get bigger than 1, subtract 1 to make it between 0 and 1 again
-		std::cout << "random number is now: " << dRandom << std::endl;
 	}
 }
-void Evolver::Tournament(std::vector<Parent> selection){
+void Evolver::Tournament(std::vector<Parent> selection, Rosetta* population){
 
 }

@@ -8,8 +8,21 @@
 #ifndef GLOBALS_H_
 #define GLOBALS_H_
 
+#include <iostream>
+#include <vector>
+#include <sstream>
+#include <fstream>
+#include <algorithm>
+#include <cassert>
+#include <string>
 #include <cstdlib> // for rand() and srand()
 #include <ctime> // for time()
+
+
+#include "rapidxml.hpp"
+#include "rapidxml_print.hpp"
+
+
 
 enum GenomeType
 {

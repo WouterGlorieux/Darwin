@@ -15,7 +15,8 @@ class Recombination
 {
 private:
 
-	//std::vector
+	std::vector<std::string> vstrParents;
+
 
 public:
 
@@ -25,7 +26,13 @@ public:
 
     }
 
+
     void Clear();
+
+    void AddParent(const std::string& input_xml);
+
+    std::string	RecombinedGenomeXML();
+
 };
 
 

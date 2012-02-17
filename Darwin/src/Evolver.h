@@ -8,18 +8,6 @@
 #ifndef EVOLVER_H_
 #define EVOLVER_H_
 
-#include <iostream>
-#include <vector>
-#include <string>
-#include <sstream>
-#include <fstream>
-#include <algorithm>
-#include <cassert>
-
-
-#include "rapidxml.hpp"
-#include "rapidxml_print.hpp"
-
 #include "Globals.h"
 
 #include "Genome.h"
@@ -48,10 +36,12 @@ private:
 
     bool m_bElitism;				//Elitism enabled or not?
 
+    Recombination m_cRecombination;
 
-    void RWS(std::vector<Parent> selection);
-    void SUS(std::vector<Parent> selection);
-    void Tournament(std::vector<Parent> selection);
+    void RWS(std::vector<Parent> selection, Rosetta* population);
+    void SUS(std::vector<Parent> selection, Rosetta* population);
+    void Tournament(std::vector<Parent> selection, Rosetta* population);
+
 
 public:
     Evolver() // default constructor

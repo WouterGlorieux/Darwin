@@ -8,10 +8,9 @@
 #ifndef ROSETTA_H_
 #define ROSETTA_H_
 
-#include <iostream>
-
 
 #include "Globals.h"
+
 #include "Genome.h"
 
 
