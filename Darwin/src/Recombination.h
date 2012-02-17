@@ -10,12 +10,15 @@
 
 #include "Globals.h"
 
+#include "Genome.h"
+
 
 class Recombination
 {
 private:
 
 	std::vector<std::string> vstrParents;
+	Genome m_cNewGenome;
 
 
 public:
@@ -26,12 +29,19 @@ public:
 
     }
 
+    ~Recombination() // default deconstructor
+    {
+    	//std::cout << "recombination class destroyed" << std::endl;
+
+    }
 
     void Clear();
 
     void AddParent(const std::string& input_xml);
 
-    std::string	RecombinedGenomeXML();
+    std::string	RecombinedGenomeXML(int chromosomes);
+
+    void PrintRecombination();
 
 };
 

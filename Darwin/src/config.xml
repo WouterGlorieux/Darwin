@@ -3,7 +3,7 @@
   <Title>Title of this job</Title>
   <Description>A more detailed discription of this job.</Description>
   <DirectoryPath>C:\Darwin</DirectoryPath>
-  <GenomeType>1</GenomeType>
+  <GenomeType chromosomes="3">1</GenomeType>
   <FitnessFunction>Tokamak</FitnessFunction>
   <Settings>
     <PopulationSize>100</PopulationSize>

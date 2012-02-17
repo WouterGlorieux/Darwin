@@ -40,6 +40,7 @@ void Evolver::traverse_xml(const std::string& input_xml)
     m_strDescription = rootNode->first_node("Description")->value();
     m_strPath = rootNode->first_node("DirectoryPath")->value();
     m_eGenomeType = static_cast<GenomeType> (atoi(rootNode->first_node("GenomeType")->value()));
+    m_nChromosomes = atoi(rootNode->first_node("GenomeType")->first_attribute("chromosomes")->value());
 
     xml_node<>* settingsNode = rootNode->first_node("Settings");
     m_nPopulationSize = atoi(settingsNode->first_node("PopulationSize")->value());
@@ -78,6 +79,11 @@ void Evolver::start(){
 		pacPopulation[i].initGenome();
 	}
 
+	std::cout << pacPopulation[0].cGenome.GetGenomeXML() << std::endl;
+
+	//use the first genome as a template for recombination later
+	//m_cRecombination.ParseTemplate(pacPopulation[0].cGenome.GetGenomeXML());
+	//m_cRecombination.RecombinedGenomeXML();
 
 	//put random data in all genomes
 
@@ -89,18 +95,18 @@ void Evolver::start(){
 	srand(time(0)); // set initial seed value to system clock
 	for(int i = 0; i<m_nPopulationSize; i++ ){
 		pacPopulation[i].CalcFitness();
-		std::cout << "fitness of " << i << ": " << pacPopulation[i].GetFitness() << std::endl;
+		//std::cout << "fitness of " << i << ": " << pacPopulation[i].GetFitness() << std::endl;
 	}
 
 	std::vector<Parent> vsSelection = MakeSelection(pacPopulation);
 
-	for(unsigned int i = 0; i < vsSelection.size(); i++ ){
+/*	for(unsigned int i = 0; i < vsSelection.size(); i++ ){
 		std::cout << "Parent " << i << " index: " << vsSelection[i].nIndex;
 		std::cout << " fitness: " << vsSelection[i].dFitness;
 		std::cout << " normalized fitness: " << vsSelection[i].dNormalizedFitness;
 		std::cout << " accumulated fitness: " << vsSelection[i].dAccumulatedNormalizedFitness << std::endl;
 	}
-
+*/
 
 
 	//if elitims is true, set the first genome of the next generation to the genome with highest fitness
@@ -115,6 +121,7 @@ void Evolver::start(){
 
 	for(int i = m_bElitism; i<m_nPopulationSize; i++ ){		//if elitism is true, the for loop begins at 1 instead of 0
 		m_cRecombination.Clear();		//make sure new genome is empty
+
 		switch (m_eRecombination)
 		{
 			case RECOMBINATION_RWS:
@@ -132,11 +139,14 @@ void Evolver::start(){
 				break;
 		}
 
-		pacNextGeneration[i].SetGenome(m_cRecombination.RecombinedGenomeXML());
+
+		//pacNextGeneration[i].SetGenome(m_cRecombination.RecombinedGenomeXML());
 		pacNextGeneration[i].SetGenomeType(m_eGenomeType);
 	}
 
 
+
+	pacNextGeneration[0].SetGenome(m_cRecombination.RecombinedGenomeXML(m_nChromosomes));
 
 
 

@@ -10,7 +10,6 @@
 void Genome::newGenome(const char* pchId ){
 
 	using namespace rapidxml;
-	//xml_document<> doc;
 
 	// xml declaration
 	xml_node<>* decl = m_Genome.allocate_node(node_declaration);
@@ -23,15 +22,7 @@ void Genome::newGenome(const char* pchId ){
 
 	root->append_attribute(m_Genome.allocate_attribute("type", pchId));
 	m_Genome.append_node(root);
-/*
-	// chromosome node
-	xml_node<>* chromosome = m_Genome.allocate_node(node_element, "Chromosome");
-	root->append_node(chromosome);
 
-	// gene node
-	xml_node<>* gene = m_Genome.allocate_node(node_element, "Gene");
-	chromosome->append_node(gene);
-*/
 }
 
 void Genome::addChromosome(const char* pchId ){
@@ -64,6 +55,10 @@ void Genome::addGene(const char* pchId, const char* pchChromosomeId ){
 	    }
 
 	}
+
+}
+
+void Genome::CopyChromosomeFromParent(){
 
 }
 

@@ -13,19 +13,27 @@
 class Genome
 {
 private:
-	rapidxml::xml_document<> m_Genome;
+
 
 public:
+	rapidxml::xml_document<> m_Genome;
 
     Genome() // default constructor
     {
 
 
     }
+    ~Genome() // default deconstructor
+    {
+    	//std::cout << "genome class destroyed" << std::endl;
+
+    }
 
     void newGenome(const char* pchId );
     void addChromosome(const char* pchId );
     void addGene(const char* pchId , const char* pchChromosomeId );
+
+    void CopyChromosomeFromParent();
 
     std::string GetGenomeXML();
     void SetGenomeXML(const std::string& input_xml);

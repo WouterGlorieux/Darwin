@@ -1,0 +1,67 @@
+/*
+ * Recombination.cpp
+ *
+ *  Created on: 16-feb.-2012
+ *      Author: woutergl
+ */
+
+#include "Recombination.h"
+
+void Recombination::Clear(){
+	vstrParents.clear();
+}
+
+
+
+void Recombination::ParseTemplate(const std::string& input_xml){
+	using namespace rapidxml;
+
+    // make a safe-to-modify copy of input_xml
+    // (you should never modify the contents of an std::string directly)
+    std::vector<char> xml_copy(input_xml.begin(), input_xml.end());
+    xml_copy.push_back('\0');
+
+    // only use xml_copy from here on!
+    m_cGenomeTemplate.m_Genome.parse<parse_declaration_node | parse_no_data_nodes>(&xml_copy[0]);
+
+    std::cout << m_cGenomeTemplate.GetGenomeXML() << std::endl;
+    std::cout << m_cGenomeTemplate.GetGenomeXML() << std::endl;
+}
+
+
+void Recombination::AddParent(const std::string& input_xml){
+	vstrParents.push_back(input_xml);
+}
+
+std::string	Recombination::RecombinedGenomeXML(){
+	using namespace rapidxml;
+
+    std::cout << m_cGenomeTemplate.GetGenomeXML() << std::endl;
+
+	//m_cNewGenome.newGenome("Tokamak steady state");
+
+    //xml_node<>* rootNode = m_cGenomeTemplate.m_Genome.first_node("Genome");
+
+
+  //  xml_node<>* chromosomeNode = rootNode->first_node("Chromosome");
+
+/*    m_strTitle = rootNode->first_node("Title")->value();
+    m_strDescription = rootNode->first_node("Description")->value();
+    m_strPath = rootNode->first_node("DirectoryPath")->value();
+    m_eGenomeType = static_cast<GenomeType> (atoi(rootNode->first_node("GenomeType")->value()));
+
+    xml_node<>* settingsNode = rootNode->first_node("Settings");
+
+*/
+	return std::string("");
+}
+
+void Recombination::PrintRecombination(){
+	std::cout << "recombination contains " << vstrParents.size() << " parents" << std::endl;
+
+	for(unsigned int i = 0; i < vstrParents.size(); i++){
+		std::cout << vstrParents[i] << std::endl;
+	}
+
+
+}
