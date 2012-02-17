@@ -45,9 +45,11 @@ void Evolver::traverse_xml(const std::string& input_xml)
     m_nPopulationSize = atoi(settingsNode->first_node("PopulationSize")->value());
     m_nMaxGenerations = atoi(settingsNode->first_node("MaxGenerations")->value());
     m_dTruncation = atof(settingsNode->first_node("Truncation")->value());
-    m_eNormalization = static_cast<NormalizationType> (atoi(settingsNode->first_node("Truncation")->first_attribute("normalization")->value()));
+    m_eNormalization = static_cast<Normalization> (atoi(settingsNode->first_node("Truncation")->first_attribute("normalization")->value()));
     m_bElitism = (settingsNode->first_node("Elitism")->value() == std::string("true"))? true: false;
     m_nMaxParents = atoi(settingsNode->first_node("MaxParents")->value());
+    m_eRecombination = static_cast<RecombinationType> (atoi(settingsNode->first_node("Recombination")->value()));
+
 }
 
 void Evolver::printSettings(){
@@ -102,12 +104,31 @@ void Evolver::start(){
 
 	//do recombinations
 
-
 	if(m_bElitism){
 		pacNextGeneration[0].SetGenome(pacPopulation[vsSelection[0].nIndex].cGenome.GetGenomeXML());
 		pacNextGeneration[0].SetGenomeType(m_eGenomeType);
 	}
 
+	//Recombination cRecombination;
+
+	//cRecombination.Clear();
+
+	switch (m_eRecombination)
+    {
+		case RECOMBINATION_RWS:
+			RWS(vsSelection);
+			break;
+		case RECOMBINATION_SUS:
+			SUS(vsSelection);
+			break;
+		case RECOMBINATION_TOURNAMENT:
+			Tournament(vsSelection);
+			break;
+
+        default:
+            std::cout << "Unknown recombination type" << std::endl;
+            break;
+    }
 
 
 
@@ -123,13 +144,14 @@ void Evolver::start(){
 
 
 	//copy next generation to population
-	for(int i = 0; i<m_nPopulationSize; i++ ){
+/*	for(int i = 0; i<m_nPopulationSize; i++ ){
 		pacPopulation[i].SetGenome(pacNextGeneration[i].cGenome.GetGenomeXML());
 		pacPopulation[i].SetGenomeType(m_eGenomeType);
 	}
-
+*/
 
 //loop
+
 
 
 	delete[] pacPopulation;	//clean up memory
@@ -220,6 +242,54 @@ std::vector<Parent> Evolver::MakeSelection(Rosetta* population){
 		dTmpAccumulatedFitness += vsParent[i].dNormalizedFitness;
 	}
 
+
 	return vsParent;
 }
 
+void Evolver::RWS(std::vector<Parent> selection){
+
+	int nLow = 0;
+	int nHigh = 10000;
+	double dRandom = 0;
+
+	for(int i = 0; i<m_nMaxParents; i++){
+		dRandom = ((rand() % (nHigh - nLow + 1)) + nLow)/(double)nHigh;		//random number between 0 and 1, 5 decimals
+		std::cout << "random number: " << dRandom << std::endl;
+		for(unsigned int j = 0; j < selection.size(); j++){
+			if(selection[j].dAccumulatedNormalizedFitness + selection[j].dNormalizedFitness >= dRandom){
+				std::cout << "adding parent " << j << std::endl;
+				//add parent to recombination
+				break;
+			}
+
+		}
+
+	}
+
+}
+void Evolver::SUS(std::vector<Parent> selection){
+	int nLow = 0;
+	int nHigh = 10000;
+	double dRandom = 0;
+
+	dRandom = ((rand() % (nHigh - nLow + 1)) + nLow)/(double)nHigh;		//random number between 0 and 1, 5 decimals
+	std::cout << "random number: " << dRandom << std::endl;
+
+	for(int i = 0; i<m_nMaxParents; i++){
+
+		for(unsigned int j = 0; j < selection.size(); j++){
+			if(selection[j].dAccumulatedNormalizedFitness + selection[j].dNormalizedFitness >= dRandom){
+				std::cout << "adding parent " << j << std::endl;
+				//add parent to recombination
+				break;
+			}
+
+		}
+		dRandom += 1.0/(double)m_nMaxParents;
+		(dRandom > 1)?dRandom -= 1:dRandom;		//if dRandom get bigger than 1, subtract 1 to make it between 0 and 1 again
+		std::cout << "random number is now: " << dRandom << std::endl;
+	}
+}
+void Evolver::Tournament(std::vector<Parent> selection){
+
+}

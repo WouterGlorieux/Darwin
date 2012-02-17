@@ -11,6 +11,7 @@
     <Truncation normalization="1">10</Truncation>
     <Elitism>true</Elitism>
     <MaxParents>2</MaxParents>
+    <Recombination>2</Recombination>
   </Settings>
   <Mutations>
     <Duplication allowed="true">0.5</Duplication>

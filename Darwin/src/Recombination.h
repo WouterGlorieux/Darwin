@@ -15,6 +15,7 @@ class Recombination
 {
 private:
 
+	//std::vector
 
 public:
 
@@ -24,7 +25,7 @@ public:
 
     }
 
-
+    void Clear();
 };
 
 
