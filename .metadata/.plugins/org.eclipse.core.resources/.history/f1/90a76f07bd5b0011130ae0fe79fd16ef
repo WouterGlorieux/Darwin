@@ -1,0 +1,66 @@
+/*
+ * Genome.h
+ *
+ *  Created on: 6-feb.-2012
+ *      Author: Skidzobolder
+ */
+
+#ifndef GENOME_H_
+#define GENOME_H_
+
+#include "Globals.h"
+
+class Genome
+{
+private:
+
+	std::string m_strXML;
+
+public:
+
+    Genome(const char* pchId ) // default constructor
+    {
+    	rapidxml::xml_document<> doc;
+        doc.parse<rapidxml::parse_declaration_node | rapidxml::parse_no_data_nodes>(&m_strXML[0]);
+
+    	// xml declaration
+        rapidxml::xml_node<>* decl = doc.allocate_node(rapidxml::node_declaration);
+    	decl->append_attribute(doc.allocate_attribute("version", "1.0"));
+    	decl->append_attribute(doc.allocate_attribute("encoding", "utf-8"));
+    	doc.append_node(decl);
+
+    	// root node
+    	rapidxml::xml_node<>* root = doc.allocate_node(rapidxml::node_element, "Genome");
+
+    	root->append_attribute(doc.allocate_attribute("type", pchId));
+    	doc.append_node(root);
+
+    	std::string xml_as_string;
+    	// watch for name collisions here, print() is a very common function name!
+    	rapidxml::print(std::back_inserter(xml_as_string), doc);
+    	// xml_as_string now contains the XML in string form, indented
+    	// (in all its angle bracket glory)
+
+    	//set m_strXML to string value
+    	SetXML(xml_as_string);
+
+
+    }
+    ~Genome() // default deconstructor
+    {
+    	//std::cout << "genome class destroyed" << std::endl;
+
+    }
+
+    void newGenome(const char* pchId );
+    void addChromosome(const char* pchId );
+    void addGene(const char* pchId , std::string strChromosomeId );
+
+    void CopyChromosomeFromParent();
+
+    void SetXML(std::string input_xml);
+    std::string GetXML() {return m_strXML;}
+};
+
+
+#endif /* GENOME_H_ */

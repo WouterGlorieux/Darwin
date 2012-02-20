@@ -96,6 +96,11 @@ void Genome::addGene(const char* pchId, std::string strChromosomeId ){
 
 }
 
+void Genome::CopyChromosomeFromParent(){
+
+}
+
+
 void Genome::SetXML(std::string input_xml){
 	m_strXML = input_xml;
 }

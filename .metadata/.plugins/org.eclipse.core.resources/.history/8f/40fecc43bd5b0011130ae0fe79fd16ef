@@ -33,6 +33,8 @@ public:
     void addChromosome(const char* pchId );
     void addGene(const char* pchId , std::string strChromosomeId );
 
+    void CopyChromosomeFromParent();
+
     void SetXML(std::string input_xml);
     std::string GetXML() {return m_strXML;}
 };
