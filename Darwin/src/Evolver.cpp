@@ -79,7 +79,7 @@ void Evolver::start(){
 		pacPopulation[i].initGenome();
 	}
 
-	std::cout << pacPopulation[0].cGenome.GetGenomeXML() << std::endl;
+	std::cout << pacPopulation[0].cGenome.GetXML() << std::endl;
 
 	//use the first genome as a template for recombination later
 	//m_cRecombination.ParseTemplate(pacPopulation[0].cGenome.GetGenomeXML());
@@ -111,7 +111,7 @@ void Evolver::start(){
 
 	//if elitims is true, set the first genome of the next generation to the genome with highest fitness
 	if(m_bElitism){
-		pacNextGeneration[0].SetGenome(pacPopulation[vsSelection[0].nIndex].cGenome.GetGenomeXML());
+		pacNextGeneration[0].SetGenome(pacPopulation[vsSelection[0].nIndex].cGenome.GetXML());
 		pacNextGeneration[0].SetGenomeType(m_eGenomeType);
 	}
 
@@ -140,30 +140,18 @@ void Evolver::start(){
 		}
 
 
-		//pacNextGeneration[i].SetGenome(m_cRecombination.RecombinedGenomeXML());
+		pacNextGeneration[i].SetGenome(m_cRecombination.RecombinedGenomeXML(m_nChromosomes));
 		pacNextGeneration[i].SetGenomeType(m_eGenomeType);
 	}
 
-
-
-	pacNextGeneration[0].SetGenome(m_cRecombination.RecombinedGenomeXML(m_nChromosomes));
-
-
-
-
-/*	for(int i = 0; i<m_nPopulationSize; i++ ){
-		pacNextGeneration[i].initFromParents();
-	}
-*/
 	//do mutations
 
-
 	//copy next generation to population
-/*	for(int i = 0; i<m_nPopulationSize; i++ ){
-		pacPopulation[i].SetGenome(pacNextGeneration[i].cGenome.GetGenomeXML());
+	for(int i = 0; i<m_nPopulationSize; i++ ){
+		pacPopulation[i].SetGenome(pacNextGeneration[i].cGenome.GetXML());
 		pacPopulation[i].SetGenomeType(m_eGenomeType);
 	}
-*/
+
 
 //loop
 
@@ -273,7 +261,7 @@ void Evolver::RWS(std::vector<Parent> selection, Rosetta* population){
 		for(unsigned int j = 0; j < selection.size(); j++){
 			if(selection[j].dAccumulatedNormalizedFitness + selection[j].dNormalizedFitness >= dRandom){
 				//add parent to recombination
-				m_cRecombination.AddParent(population[selection[j].nIndex].cGenome.GetGenomeXML());
+				m_cRecombination.AddParent(population[selection[j].nIndex].cGenome.GetXML());
 				break;
 			}
 
@@ -294,7 +282,7 @@ void Evolver::SUS(std::vector<Parent> selection, Rosetta* population){
 		for(unsigned int j = 0; j < selection.size(); j++){
 			if(selection[j].dAccumulatedNormalizedFitness + selection[j].dNormalizedFitness >= dRandom){
 				//add parent to recombination
-				m_cRecombination.AddParent(population[selection[j].nIndex].cGenome.GetGenomeXML());
+				m_cRecombination.AddParent(population[selection[j].nIndex].cGenome.GetXML());
 				break;
 			}
 		}

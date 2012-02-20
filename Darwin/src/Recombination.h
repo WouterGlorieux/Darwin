@@ -18,7 +18,7 @@ class Recombination
 private:
 
 	std::vector<std::string> vstrParents;
-	Genome m_cNewGenome;
+	//Genome m_cNewGenome;
 
 
 public:

@@ -9,6 +9,7 @@
 
 void Recombination::Clear(){
 	vstrParents.clear();
+	//m_cNewGenome.SetXML("");
 }
 
 
@@ -22,18 +23,24 @@ void Recombination::AddParent(const std::string& input_xml){
 std::string	Recombination::RecombinedGenomeXML(int chromosomes){
 	using namespace rapidxml;
 
-	std::cout << "number of chromosomes: "<< chromosomes << std::endl;
+	Genome newGenome;
+    newGenome.newGenome("next generation");
 
-	m_cNewGenome.newGenome("next generation");
-    xml_node<>* newRootNode = m_cNewGenome.m_Genome.first_node("Genome");
+    std::string newGenomeXML = newGenome.GetXML();
+    std::vector<char> xml_copyNewGenome(newGenomeXML.begin(), newGenomeXML.end());
+    xml_copyNewGenome.push_back('\0');
+
+    xml_document<> docNewGenome;
+    docNewGenome.parse<parse_declaration_node | parse_no_data_nodes>(&xml_copyNewGenome[0]);
+
+    xml_node<>* newRootNode = docNewGenome.first_node("Genome");
+    xml_node<>* clonedNode;
 
 
 	for(int i = 0; i < chromosomes; i++){
 		int nLow = 0;
 		int nHigh = vstrParents.size()-1;
 		int parent =  (rand() % (nHigh - nLow + 1)) + nLow;
-
-		std::cout << "adding chromosome " << i << " from parent " << parent << std::endl;
 
 	    // make a safe-to-modify copy of input_xml
 	    // (you should never modify the contents of an std::string directly)
@@ -51,15 +58,15 @@ std::string	Recombination::RecombinedGenomeXML(int chromosomes){
 	    	chromosomeNode = chromosomeNode->next_sibling("Chromosome");		//go to nth chromosome of this parent
 	    }
 
-	    xml_node<>* clonedNode = m_cNewGenome.m_Genome.clone_node( chromosomeNode );
+	    clonedNode = docNewGenome.clone_node( chromosomeNode );
 	    newRootNode->append_node(clonedNode);
-
 
 	}
 
-	std::cout << m_cNewGenome.GetGenomeXML();
+	std::string xml_as_string;
+	rapidxml::print(std::back_inserter(xml_as_string), docNewGenome);
 
-	return std::string("");
+	return xml_as_string;
 }
 
 void Recombination::PrintRecombination(){

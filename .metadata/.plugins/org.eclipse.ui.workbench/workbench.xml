@@ -18,6 +18,7 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.compare.CompareEditor" itemType="typePlaceholder" x="84" y="22"/>
 <coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -54,9 +55,9 @@
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Darwin/src/Evolver.h"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="575" selectionTopPixel="135"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Evolver.cpp" partName="Evolver.cpp" path="C:/workspaces/Darwin/Darwin/src/Evolver.cpp" title="Evolver.cpp" tooltip="Darwin/src/Evolver.cpp" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="Evolver.cpp" partName="Evolver.cpp" path="C:/workspaces/Darwin/Darwin/src/Evolver.cpp" title="Evolver.cpp" tooltip="Darwin/src/Evolver.cpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Darwin/src/Evolver.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="64" selectionOffset="1294" selectionTopPixel="300"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5000" selectionTopPixel="1845"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="Rosetta.h" partName="Rosetta.h" path="C:/workspaces/Darwin/Darwin/src/Rosetta.h" title="Rosetta.h" tooltip="Darwin/src/Rosetta.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Darwin/src/Rosetta.h"/>
@@ -64,7 +65,7 @@
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="Rosetta.cpp" partName="Rosetta.cpp" path="C:/workspaces/Darwin/Darwin/src/Rosetta.cpp" title="Rosetta.cpp" tooltip="Darwin/src/Rosetta.cpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Darwin/src/Rosetta.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="88" selectionOffset="1033" selectionTopPixel="329"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="943" selectionTopPixel="135"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="Aperture.h" partName="Aperture.h" path="C:/workspaces/Darwin/Darwin/src/Aperture.h" title="Aperture.h" tooltip="Darwin/src/Aperture.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Darwin/src/Aperture.h"/>
@@ -84,11 +85,11 @@
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="Genome.h" partName="Genome.h" path="C:/workspaces/Darwin/Darwin/src/Genome.h" title="Genome.h" tooltip="Darwin/src/Genome.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Darwin/src/Genome.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="36" selectionOffset="560" selectionTopPixel="59"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="567" selectionTopPixel="104"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="Genome.cpp" partName="Genome.cpp" path="C:/workspaces/Darwin/Darwin/src/Genome.cpp" title="Genome.cpp" tooltip="Darwin/src/Genome.cpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Darwin/src/Genome.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="994" selectionTopPixel="134"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2410" selectionTopPixel="554"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="Globals.h" partName="Globals.h" path="C:/workspaces/Darwin/Darwin/src/Globals.h" title="Globals.h" tooltip="Darwin/src/Globals.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Darwin/src/Globals.h"/>
@@ -96,11 +97,11 @@
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="Recombination.h" partName="Recombination.h" path="C:/workspaces/Darwin/Darwin/src/Recombination.h" title="Recombination.h" tooltip="Darwin/src/Recombination.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Darwin/src/Recombination.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="270" selectionTopPixel="134"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="273" selectionTopPixel="0"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="Recombination.cpp" partName="Recombination.cpp" path="C:/workspaces/Darwin/Darwin/src/Recombination.cpp" title="Recombination.cpp" tooltip="Darwin/src/Recombination.cpp" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Recombination.cpp" partName="Recombination.cpp" path="C:/workspaces/Darwin/Darwin/src/Recombination.cpp" title="Recombination.cpp" tooltip="Darwin/src/Recombination.cpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Darwin/src/Recombination.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1673" selectionTopPixel="389"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="783" selectionTopPixel="75"/>
 </editor>
 </editors>
 <views>
@@ -116,9 +117,8 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Warnings (1 item)"/>
+<category IMemento.internal.id="Warnings (3 items)"/>
 <category IMemento.internal.id="Errors"/>
-<category IMemento.internal.id="Warnings"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="129" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="1238"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -131,7 +131,23 @@
 <view id="org.eclipse.ui.console.ConsoleView" partName="Console">
 <viewState/>
 </view>
-<view id="org.eclipse.mylyn.tasks.ui.views.tasks" partName="Task List"/>
+<view id="org.eclipse.mylyn.tasks.ui.views.tasks" partName="Task List">
+<viewState linkWithEditor="true" presentation="org.eclipse.mylyn.tasks.ui.categorized">
+<sorter groupBy="CATEGORY_QUERY">
+<sorter>
+<sort0 sortDirection="1" sortKey="PRIORITY"/>
+<sort1 sortDirection="1" sortKey="RANK"/>
+<sort2 sortDirection="1" sortKey="DATE_CREATED"/>
+<sort3 sortDirection="1" sortKey="NONE"/>
+<sort4 sortDirection="1" sortKey="NONE"/>
+<sort5 sortDirection="1" sortKey="NONE"/>
+<sort6 sortDirection="1" sortKey="NONE"/>
+<sort7 sortDirection="1" sortKey="NONE"/>
+</sorter>
+</sorter>
+<filteredTreeFindHistory/>
+</viewState>
+</view>
 <view id="org.eclipse.ui.views.TaskList" partName="Tasks">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.completionField" categoryGroup="none" markerContentGenerator="org.eclipse.ui.ide.tasksGenerator" partName="Tasks">
 <columnWidths org.eclipse.ui.ide.completionField="40" org.eclipse.ui.ide.descriptionField="300" org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.priorityField="30" org.eclipse.ui.ide.resourceField="90"/>
@@ -148,7 +164,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.ui.console.ConsoleView" activePerspective="org.eclipse.cdt.ui.CPerspective">
+<perspectives activePart="org.eclipse.cdt.ui.editor.CEditor" activePerspective="org.eclipse.cdt.ui.CPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.cdt.internal.ui.CPerspectiveFactory" id="org.eclipse.cdt.ui.CPerspective" label="C/C++"/>
 <alwaysOnActionSet id="org.eclipse.egit.ui.navigation"/>
@@ -242,6 +258,7 @@
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.ui.views.PropertySheet" label="Properties"/>
 <page content="org.eclipse.debug.ui.DebugView" label="LabelNotFound"/>
+<page content="org.eclipse.team.ui.GenericHistoryView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
@@ -251,7 +268,7 @@
 </folder>
 </info>
 <info folder="true" part="topRight" ratio="0.7493333" ratioLeft="562" ratioRight="188" relationship="2" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
+<folder activePageID="org.eclipse.mylyn.tasks.ui.views.tasks" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <page content="org.eclipse.cdt.make.ui.views.MakeView" label="Make Target"/>
 <page content="org.eclipse.mylyn.tasks.ui.views.tasks" label="Task List"/>
@@ -269,163 +286,161 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Recombination.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Recombination.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Genome.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Recombination.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Evolver.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Genome.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Rosetta.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Evolver.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Recombination.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Globals.h"/>
 </editors>
-<item historyLabel="Evolver.cpp" index="3">
-<position info="not_deleted" x="3075" y="0"/>
-</item>
-<item historyLabel="Recombination.cpp" index="0">
-<position info="not_deleted" x="185" y="0"/>
-</item>
-<item historyLabel="Recombination.h" index="1">
-<position info="not_deleted" x="525" y="0"/>
-</item>
-<item historyLabel="Evolver.cpp" index="3">
-<position info="not_deleted" x="3075" y="0"/>
-</item>
-<item historyLabel="Evolver.h" index="6">
-<position info="not_deleted" x="575" y="0"/>
-</item>
-<item historyLabel="Evolver.cpp" index="3">
-<position info="not_deleted" x="1289" y="0"/>
-</item>
-<item historyLabel="Recombination.cpp" index="0">
-<position info="not_deleted" x="339" y="15"/>
-</item>
-<item historyLabel="Recombination.h" index="1">
-<position info="not_deleted" x="629" y="0"/>
-</item>
-<item historyLabel="Recombination.cpp" index="0">
-<position info="not_deleted" x="426" y="0"/>
-</item>
-<item historyLabel="Evolver.cpp" index="3">
-<position info="not_deleted" x="1289" y="0"/>
-</item>
-<item historyLabel="Evolver.cpp" index="3">
-<position info="not_deleted" x="4944" y="0"/>
-</item>
-<item historyLabel="Recombination.cpp" index="0">
+<item historyLabel="Recombination.cpp" index="1">
 <position/>
 </item>
-<item historyLabel="Recombination.h" index="1">
-<position info="not_deleted" x="270" y="0"/>
+<item historyLabel="Recombination.cpp" index="1">
+<position info="not_deleted" x="1924" y="0"/>
 </item>
-<item historyLabel="Recombination.cpp" index="0">
+<item historyLabel="Recombination.cpp" index="1">
+<position info="not_deleted" x="1821" y="0"/>
+</item>
+<item historyLabel="Recombination.cpp" index="1">
+<position info="not_deleted" x="1924" y="0"/>
+</item>
+<item historyLabel="Recombination.cpp" index="1">
+<position info="not_deleted" x="641" y="17"/>
+</item>
+<item historyLabel="Recombination.cpp" index="1">
 <position/>
 </item>
-<item historyLabel="Genome.h" index="4">
-<position info="not_deleted" x="339" y="0"/>
+<item historyLabel="Recombination.cpp" index="1">
+<position info="not_deleted" x="713" y="5"/>
 </item>
-<item historyLabel="Genome.cpp" index="2">
-<position info="not_deleted" x="183" y="0"/>
+<item historyLabel="Genome.cpp" index="0">
+<position info="not_deleted" x="2410" y="0"/>
 </item>
-<item historyLabel="Recombination.cpp" index="0">
+<item historyLabel="Recombination.cpp" index="1">
+<position info="not_deleted" x="713" y="5"/>
+</item>
+<item historyLabel="Recombination.h" index="3">
+<position info="not_deleted" x="273" y="0"/>
+</item>
+<item historyLabel="Globals.h" index="4">
+<position info="not_deleted" x="407" y="0"/>
+</item>
+<item historyLabel="Recombination.cpp" index="1">
+<position info="not_deleted" x="713" y="5"/>
+</item>
+<item historyLabel="Recombination.cpp" index="1">
+<position info="not_deleted" x="696" y="0"/>
+</item>
+<item historyLabel="Recombination.cpp" index="1">
+<position info="not_deleted" x="700" y="0"/>
+</item>
+<item historyLabel="Recombination.cpp" index="1">
+<position info="not_deleted" x="796" y="60"/>
+</item>
+<item historyLabel="Recombination.cpp" index="1">
+<position info="not_deleted" x="1989" y="0"/>
+</item>
+<item historyLabel="Recombination.cpp" index="1">
+<position info="not_deleted" x="1992" y="21"/>
+</item>
+<item historyLabel="Recombination.cpp" index="1">
 <position/>
 </item>
-<item historyLabel="Recombination.cpp" index="0">
-<position info="not_deleted" x="1623" y="0"/>
-</item>
-<item historyLabel="Rosetta.cpp" index="5">
-<position info="not_deleted" x="1033" y="88"/>
-</item>
-<item historyLabel="Recombination.cpp" index="0">
-<position info="not_deleted" x="1623" y="0"/>
-</item>
-<item historyLabel="Recombination.cpp" index="0">
-<position info="not_deleted" x="674" y="0"/>
-</item>
-<item historyLabel="Recombination.cpp" index="0">
-<position info="not_deleted" x="677" y="0"/>
-</item>
-<item historyLabel="Recombination.cpp" index="0">
-<position info="not_deleted" x="780" y="0"/>
-</item>
-<item historyLabel="Evolver.cpp" index="3">
-<position info="not_deleted" x="475" y="421"/>
-</item>
-<item historyLabel="Recombination.cpp" index="0">
+<item historyLabel="Recombination.cpp" index="1">
 <position/>
 </item>
-<item historyLabel="Evolver.cpp" index="3">
-<position info="not_deleted" x="1294" y="64"/>
-</item>
-<item historyLabel="Recombination.cpp" index="0">
-<position info="not_deleted" x="1266" y="0"/>
-</item>
-<item historyLabel="Evolver.cpp" index="3">
-<position info="not_deleted" x="1294" y="64"/>
-</item>
-<item historyLabel="Recombination.cpp" index="0">
-<position info="not_deleted" x="1623" y="0"/>
-</item>
-<item historyLabel="Recombination.cpp" index="0">
-<position info="not_deleted" x="1621" y="0"/>
-</item>
-<item historyLabel="Genome.h" index="4">
-<position info="not_deleted" x="339" y="0"/>
-</item>
-<item historyLabel="Genome.h" index="4">
-<position info="not_deleted" x="560" y="36"/>
-</item>
-<item historyLabel="Genome.cpp" index="2">
-<position info="not_deleted" x="1616" y="0"/>
-</item>
-<item historyLabel="Recombination.cpp" index="0">
-<position info="not_deleted" x="1621" y="0"/>
-</item>
-<item historyLabel="Recombination.cpp" index="0">
-<position info="not_deleted" x="1619" y="0"/>
-</item>
-<item historyLabel="Genome.cpp" index="2">
-<position info="not_deleted" x="958" y="34"/>
-</item>
-<item historyLabel="Recombination.cpp" index="0">
-<position info="not_deleted" x="1619" y="0"/>
-</item>
-<item historyLabel="Genome.cpp" index="2">
-<position info="not_deleted" x="722" y="57"/>
-</item>
-<item historyLabel="Recombination.cpp" index="0">
-<position info="not_deleted" x="1619" y="0"/>
-</item>
-<item historyLabel="Recombination.cpp" index="0">
-<position info="not_deleted" x="1621" y="0"/>
-</item>
-<item historyLabel="Recombination.cpp" index="0">
+<item historyLabel="Recombination.cpp" index="1">
 <position/>
 </item>
-<item historyLabel="Recombination.cpp" index="0">
-<position info="not_deleted" x="508" y="69"/>
+<item historyLabel="Evolver.cpp" index="2">
+<position info="not_deleted" x="4981" y="0"/>
 </item>
-<item historyLabel="Recombination.cpp" index="0">
-<position info="not_deleted" x="579" y="0"/>
+<item historyLabel="Evolver.cpp" index="2">
+<position info="not_deleted" x="4981" y="0"/>
 </item>
-<item historyLabel="Recombination.cpp" index="0">
+<item historyLabel="Recombination.cpp" index="1">
+<position info="not_deleted" x="662" y="0"/>
+</item>
+<item historyLabel="Evolver.cpp" index="2">
+<position info="not_deleted" x="4981" y="0"/>
+</item>
+<item historyLabel="Evolver.cpp" index="2">
 <position/>
 </item>
-<item historyLabel="Evolver.cpp" index="3">
-<position info="not_deleted" x="1294" y="64"/>
-</item>
-<item historyLabel="Genome.cpp" index="2">
-<position info="not_deleted" x="994" y="0"/>
-</item>
-<item historyLabel="Recombination.cpp" index="0">
+<item historyLabel="Recombination.cpp" index="1">
 <position/>
 </item>
-<item historyLabel="Genome.cpp" index="2">
-<position info="not_deleted" x="994" y="0"/>
+<item historyLabel="Evolver.cpp" index="2">
+<position info="not_deleted" x="4984" y="0"/>
 </item>
-<item historyLabel="Recombination.cpp" index="0">
-<position info="not_deleted" x="1618" y="0"/>
+<item historyLabel="Recombination.cpp" index="1">
+<position/>
 </item>
-<item active="true" historyLabel="Recombination.cpp" index="0">
-<position info="not_deleted" x="1673" y="0"/>
+<item historyLabel="Recombination.cpp" index="1">
+<position info="not_deleted" x="534" y="0"/>
+</item>
+<item historyLabel="Recombination.cpp" index="1">
+<position info="not_deleted" x="1989" y="0"/>
+</item>
+<item historyLabel="Recombination.cpp" index="1">
+<position info="not_deleted" x="796" y="60"/>
+</item>
+<item historyLabel="Recombination.cpp" index="1">
+<position/>
+</item>
+<item historyLabel="Recombination.cpp" index="1">
+<position info="not_deleted" x="713" y="5"/>
+</item>
+<item historyLabel="Genome.cpp" index="0">
+<position info="not_deleted" x="2410" y="0"/>
+</item>
+<item historyLabel="Recombination.cpp" index="1">
+<position info="not_deleted" x="713" y="5"/>
+</item>
+<item historyLabel="Recombination.cpp" index="1">
+<position/>
+</item>
+<item historyLabel="Recombination.cpp" index="1">
+<position info="not_deleted" x="796" y="60"/>
+</item>
+<item historyLabel="Recombination.cpp" index="1">
+<position info="not_deleted" x="1720" y="55"/>
+</item>
+<item historyLabel="Recombination.cpp" index="1">
+<position info="not_deleted" x="696" y="0"/>
+</item>
+<item historyLabel="Recombination.cpp" index="1">
+<position info="not_deleted" x="482" y="0"/>
+</item>
+<item historyLabel="Recombination.cpp" index="1">
+<position info="not_deleted" x="696" y="0"/>
+</item>
+<item historyLabel="Recombination.cpp" index="1">
+<position info="not_deleted" x="796" y="60"/>
+</item>
+<item historyLabel="Recombination.cpp" index="1">
+<position info="not_deleted" x="700" y="88"/>
+</item>
+<item historyLabel="Recombination.cpp" index="1">
+<position info="not_deleted" x="1989" y="0"/>
+</item>
+<item historyLabel="Recombination.cpp" index="1">
+<position info="not_deleted" x="796" y="60"/>
+</item>
+<item historyLabel="Recombination.cpp" index="1">
+<position info="not_deleted" x="889" y="0"/>
+</item>
+<item historyLabel="Recombination.cpp" index="1">
+<position info="not_deleted" x="1311" y="0"/>
+</item>
+<item historyLabel="Evolver.cpp" index="2">
+<position/>
+</item>
+<item historyLabel="Recombination.cpp" index="1">
+<position info="not_deleted" x="783" y="0"/>
+</item>
+<item active="true" historyLabel="Evolver.cpp" index="2">
+<position/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -445,6 +460,9 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="rapidxml.hpp" tooltip="Darwin/src/rapidxml.hpp">
+<persistable path="/Darwin/src/rapidxml.hpp"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Recombination.cpp" tooltip="Darwin/src/Recombination.cpp">
 <persistable path="/Darwin/src/Recombination.cpp"/>
 </file>
@@ -483,12 +501,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Rosetta.h" tooltip="Darwin/src/Rosetta.h">
 <persistable path="/Darwin/src/Rosetta.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Evolver.cpp" tooltip="Darwin/src/Evolver.cpp">
-<persistable path="/Darwin/src/Evolver.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Evolver.h" tooltip="Darwin/src/Evolver.h">
-<persistable path="/Darwin/src/Evolver.h"/>
 </file>
 </mruList>
 </workbench>

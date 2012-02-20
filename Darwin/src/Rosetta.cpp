@@ -37,11 +37,23 @@ void Rosetta::initTokamak(){
 	cGenome.addGene("1", "Auxiliary Heating Power");
 
 	cGenome.addChromosome("Magnetic Field");
-	cGenome.addGene("1", "Magnetic Field");
+
+	std::string test("Magnetic Field");
+	cGenome.addGene("1", test.c_str());
 
 	cGenome.addChromosome("Plasma Density");
 	cGenome.addGene("1", "Plasma Density");
+	cGenome.addGene("2", "Plasma Density");
+	cGenome.addGene("3", "Plasma Density");
 
+/*	cGenome.addChromosome("Auxiliary Heating Power2");
+	cGenome.addGene("1", "Auxiliary Heating Power2");
+
+	cGenome.addChromosome("Magnetic Field2");
+	cGenome.addGene("1", "Magnetic Field2");
+
+	cGenome.addChromosome("Plasma Density2");
+	cGenome.addGene("1", "Plasma Density2");*/
 }
 
 void Rosetta::CalcFitness(){
@@ -54,6 +66,7 @@ void Rosetta::CalcFitness(){
 }
 
 void Rosetta::SetGenome(const std::string& input_xml){
-	cGenome.SetGenomeXML(input_xml);
+	//cGenome.SetGenomeXML(input_xml);
+	cGenome.SetXML(input_xml);
 }
 

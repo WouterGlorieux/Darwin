@@ -14,9 +14,10 @@ class Genome
 {
 private:
 
+	std::string m_strXML;
 
 public:
-	rapidxml::xml_document<> m_Genome;
+	//rapidxml::xml_document<> m_Genome;
 
     Genome() // default constructor
     {
@@ -31,12 +32,12 @@ public:
 
     void newGenome(const char* pchId );
     void addChromosome(const char* pchId );
-    void addGene(const char* pchId , const char* pchChromosomeId );
+    void addGene(const char* pchId , std::string strChromosomeId );
 
     void CopyChromosomeFromParent();
 
-    std::string GetGenomeXML();
-    void SetGenomeXML(const std::string& input_xml);
+    void SetXML(std::string input_xml);
+    std::string GetXML();
 };
 
 
