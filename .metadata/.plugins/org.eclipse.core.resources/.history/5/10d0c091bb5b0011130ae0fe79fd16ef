@@ -9,24 +9,26 @@
 
 void Genome::newGenome(const char* pchId ){
 
-	rapidxml::xml_document<> doc;
-    doc.parse<rapidxml::parse_declaration_node | rapidxml::parse_no_data_nodes>(&m_strXML[0]);
+	using namespace rapidxml;
+
+    xml_document<> doc;
+    doc.parse<parse_declaration_node | parse_no_data_nodes>(&m_strXML[0]);
 
 	// xml declaration
-    rapidxml::xml_node<>* decl = doc.allocate_node(rapidxml::node_declaration);
+	xml_node<>* decl = doc.allocate_node(node_declaration);
 	decl->append_attribute(doc.allocate_attribute("version", "1.0"));
 	decl->append_attribute(doc.allocate_attribute("encoding", "utf-8"));
 	doc.append_node(decl);
 
 	// root node
-	rapidxml::xml_node<>* root = doc.allocate_node(rapidxml::node_element, "Genome");
+	xml_node<>* root = doc.allocate_node(node_element, "Genome");
 
 	root->append_attribute(doc.allocate_attribute("type", pchId));
 	doc.append_node(root);
 
 	std::string xml_as_string;
 	// watch for name collisions here, print() is a very common function name!
-	rapidxml::print(std::back_inserter(xml_as_string), doc);
+	print(std::back_inserter(xml_as_string), doc);
 	// xml_as_string now contains the XML in string form, indented
 	// (in all its angle bracket glory)
 
@@ -37,6 +39,7 @@ void Genome::newGenome(const char* pchId ){
 }
 
 void Genome::addChromosome(const char* pchId ){
+	//using namespace rapidxml;
 
 	rapidxml::xml_document<> doc;
     doc.parse<rapidxml::parse_declaration_node | rapidxml::parse_no_data_nodes>(&m_strXML[0]);
@@ -44,7 +47,7 @@ void Genome::addChromosome(const char* pchId ){
     rapidxml::xml_node<>* rootNode = doc.first_node("Genome");
 
 	// chromosome node
-    rapidxml::xml_node<>* chromosome = doc.allocate_node(rapidxml::node_element, "Chromosome");
+    rapidxml::xml_node<>* chromosome = doc.allocate_node(node_element, "Chromosome");
 	chromosome->append_attribute(doc.allocate_attribute("id", pchId));
 	rootNode->append_node(chromosome);
 

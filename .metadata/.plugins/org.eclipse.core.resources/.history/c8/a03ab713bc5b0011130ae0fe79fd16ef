@@ -17,6 +17,7 @@ private:
 	std::string m_strXML;
 
 public:
+	//rapidxml::xml_document<> m_Genome;
 
     Genome() // default constructor
     {

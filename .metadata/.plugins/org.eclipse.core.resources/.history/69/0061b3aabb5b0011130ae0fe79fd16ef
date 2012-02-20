@@ -19,7 +19,7 @@ void Genome::newGenome(const char* pchId ){
 	doc.append_node(decl);
 
 	// root node
-	rapidxml::xml_node<>* root = doc.allocate_node(rapidxml::node_element, "Genome");
+	rapidxml::xml_node<>* root = doc.allocate_node(node_element, "Genome");
 
 	root->append_attribute(doc.allocate_attribute("type", pchId));
 	doc.append_node(root);

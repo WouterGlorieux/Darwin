@@ -18,6 +18,8 @@ class Recombination
 private:
 
 	std::vector<std::string> vstrParents;
+	//Genome m_cNewGenome;
+
 
 public:
 

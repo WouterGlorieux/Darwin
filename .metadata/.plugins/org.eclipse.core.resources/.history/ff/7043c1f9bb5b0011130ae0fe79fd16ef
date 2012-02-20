@@ -23,6 +23,8 @@ void Evolver::readConfig(std::string strFileName)
 
 void Evolver::traverse_xml(const std::string& input_xml)
 {
+	//using namespace rapidxml;
+    // (input_xml contains the above XML)
 
     // make a safe-to-modify copy of input_xml
     // (you should never modify the contents of an std::string directly)
