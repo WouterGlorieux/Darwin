@@ -30,8 +30,10 @@ public:
     }
 
     void newGenome(const char* pchId );
-    void addChromosome(const char* pchId );
+    void addChromosome(const char* pchId , EncodingType encoding);
     void addGene(const char* pchId , std::string strChromosomeId );
+
+    void CopyChromosome(std::string input_xml);
 
     void SetXML(std::string input_xml);
     std::string GetXML() {return m_strXML;}

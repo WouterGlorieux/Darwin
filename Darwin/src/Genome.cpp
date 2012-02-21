@@ -36,7 +36,7 @@ void Genome::newGenome(const char* pchId ){
 
 }
 
-void Genome::addChromosome(const char* pchId ){
+void Genome::addChromosome(const char* pchId, EncodingType encoding ){
 
 	rapidxml::xml_document<> doc;
     doc.parse<rapidxml::parse_declaration_node | rapidxml::parse_no_data_nodes>(&m_strXML[0]);
@@ -46,6 +46,26 @@ void Genome::addChromosome(const char* pchId ){
 	// chromosome node
     rapidxml::xml_node<>* chromosome = doc.allocate_node(rapidxml::node_element, "Chromosome");
 	chromosome->append_attribute(doc.allocate_attribute("id", pchId));
+
+	std::string strEncoding;
+	switch (encoding)
+	    {
+	        case ENCODING_BINARY:
+	        	strEncoding = "binary";
+	            break;
+	        case ENCODING_VALUE:
+	        	strEncoding = "value";
+	            break;
+	        case ENCODING_TREE:
+	        	strEncoding = "tree";
+	            break;
+
+	        default:
+	            std::cout << "Unknown encoding type" << std::endl;
+	            break;
+	    }
+
+	chromosome->append_attribute(doc.allocate_attribute("encoding", strEncoding.c_str()));
 	rootNode->append_node(chromosome);
 
 	std::string xml_as_string;
@@ -101,3 +121,16 @@ void Genome::SetXML(std::string input_xml){
 }
 
 
+void Genome::CopyChromosome(std::string input_xml){
+
+	std::cout << "old string" << m_strXML << std::endl;
+
+	std::string searchString("</Genome>");
+	int pos = m_strXML.find(searchString.c_str());
+	std::cout << "pos: " << pos << std::endl;
+
+	//m_strXML.insert(pos, input_xml);
+
+	std::cout << "new string" << m_strXML << std::endl;
+
+}

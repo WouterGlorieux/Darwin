@@ -44,7 +44,7 @@ void Evolver::traverse_xml(const std::string& input_xml)
     m_nPopulationSize = atoi(settingsNode->first_node("PopulationSize")->value());
     m_nMaxGenerations = atoi(settingsNode->first_node("MaxGenerations")->value());
     m_dTruncation = atof(settingsNode->first_node("Truncation")->value());
-    m_eNormalization = static_cast<Normalization> (atoi(settingsNode->first_node("Truncation")->first_attribute("normalization")->value()));
+    m_eNormalization = static_cast<NormalizationType> (atoi(settingsNode->first_node("Truncation")->first_attribute("normalization")->value()));
     m_bElitism = (settingsNode->first_node("Elitism")->value() == std::string("true"))? true: false;
     m_nMaxParents = atoi(settingsNode->first_node("MaxParents")->value());
     m_eRecombination = static_cast<RecombinationType> (atoi(settingsNode->first_node("Recombination")->value()));
@@ -76,12 +76,6 @@ void Evolver::start(){
 		pacPopulation[i].SetGenomeType(m_eGenomeType);
 		pacPopulation[i].initGenome();
 	}
-
-	std::cout << pacPopulation[0].cGenome.GetXML() << std::endl;
-
-	//use the first genome as a template for recombination later
-	//m_cRecombination.ParseTemplate(pacPopulation[0].cGenome.GetGenomeXML());
-	//m_cRecombination.RecombinedGenomeXML();
 
 	//put random data in all genomes
 
@@ -118,7 +112,7 @@ void Evolver::start(){
 
 
 	for(int i = m_bElitism; i<m_nPopulationSize; i++ ){		//if elitism is true, the for loop begins at 1 instead of 0
-		m_cRecombination.Clear();		//make sure new genome is empty
+		m_cRecombination.Clear();		//make sure new recombination is empty
 
 		switch (m_eRecombination)
 		{
@@ -137,7 +131,6 @@ void Evolver::start(){
 				break;
 		}
 
-
 		pacNextGeneration[i].SetGenome(m_cRecombination.RecombinedGenomeXML(m_nChromosomes));
 		pacNextGeneration[i].SetGenomeType(m_eGenomeType);
 	}
@@ -149,6 +142,7 @@ void Evolver::start(){
 		pacPopulation[i].SetGenome(pacNextGeneration[i].cGenome.GetXML());
 		pacPopulation[i].SetGenomeType(m_eGenomeType);
 	}
+
 
 
 //loop
@@ -227,7 +221,7 @@ std::vector<Parent> Evolver::MakeSelection(Rosetta* population){
     			vsParent[i].dNormalizedFitness = vsParent[i].dFitness/dTotalFitness;
     			vsParent[i].dAccumulatedNormalizedFitness = dTmpAccumulatedFitness;
     			break;
-    		case NORM_RANK:		//for example: if you have a selection of 10 genomes, the first genome is 10 times more likely to be picked, the second is 9 times, third is 8 times, ...
+    		case NORM_RANK:		//for example: if you have a selection of 10 genomes, the first genome is 10 times more likely to be picked than the last, the second is 9 times, third is 8 times, ...
     			vsParent[i].dNormalizedFitness = ((nSelectedGenomes-i)/(double)nSelectedGenomes)*(((double)nSelectedGenomes)/(double)nTotalUnits);
     			vsParent[i].dAccumulatedNormalizedFitness = dTmpAccumulatedFitness;
     			break;

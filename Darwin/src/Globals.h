@@ -31,7 +31,7 @@ enum GenomeType
 };
 
 
-enum Normalization
+enum NormalizationType
 {
 	NORM_PROPORTIONAL = 1,		// normalized fitness is based on proportional fitness
 	NORM_RANK = 2,				// normalized fitness is based on rank
@@ -44,6 +44,13 @@ enum RecombinationType
 	RECOMBINATION_RWS = 1,			//Roulette Wheel selection
 	RECOMBINATION_SUS = 2,			//Stochastic Universal Sampling
 	RECOMBINATION_TOURNAMENT = 3	//Tournament selection
+};
+
+enum EncodingType
+{
+	ENCODING_BINARY = 1,			//genes are encoded as binary numbers
+	ENCODING_VALUE = 2,				//genes are encoded as numeric values
+	ENCODING_TREE = 3				//genes are encoded as a tree structure
 };
 
 struct Parent

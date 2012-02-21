@@ -33,7 +33,7 @@ private:
     RecombinationType m_eRecombination;  //Method used to pick parents for recombination
 
     double m_dTruncation  ;         //percentage of population that gets to have offspring (0% -> 100%) (100%: every genome has offspring)
-    Normalization m_eNormalization; //Normalization method used in truncation
+    NormalizationType m_eNormalization; //Normalization method used in truncation
 
     bool m_bElitism;				//Elitism enabled or not?
 

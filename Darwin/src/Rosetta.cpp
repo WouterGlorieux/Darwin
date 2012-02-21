@@ -33,15 +33,13 @@ void Rosetta::initTokamak(){
 
 	cGenome.newGenome("Tokamak steady state");
 
-	cGenome.addChromosome("Auxiliary Heating Power");
+	cGenome.addChromosome("Auxiliary Heating Power", ENCODING_BINARY);
 	cGenome.addGene("1", "Auxiliary Heating Power");
 
-	cGenome.addChromosome("Magnetic Field");
+	cGenome.addChromosome("Magnetic Field", ENCODING_VALUE);
+	cGenome.addGene("1", "Magnetic Field");
 
-	std::string test("Magnetic Field");
-	cGenome.addGene("1", test.c_str());
-
-	cGenome.addChromosome("Plasma Density");
+	cGenome.addChromosome("Plasma Density", ENCODING_TREE);
 	cGenome.addGene("1", "Plasma Density");
 	cGenome.addGene("2", "Plasma Density");
 	cGenome.addGene("3", "Plasma Density");

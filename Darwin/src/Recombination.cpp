@@ -32,7 +32,16 @@ std::string	Recombination::RecombinedGenomeXML(int chromosomes){
     docNewGenome.parse<rapidxml::parse_declaration_node | rapidxml::parse_no_data_nodes>(&xml_copyNewGenome[0]);
 
     rapidxml::xml_node<>* newRootNode = docNewGenome.first_node("Genome");
-    rapidxml::xml_node<>* clonedNode;
+
+    rapidxml::xml_document<>* paDocs = new rapidxml::xml_document<>[vstrParents.size()];
+    std::vector<char>* xml_copies = new std::vector<char>[vstrParents.size()];
+
+    for(unsigned int i = 0; i < vstrParents.size(); i++){
+    	xml_copies[i].assign(vstrParents[i].begin(), vstrParents[i].end());
+    	xml_copies[i].push_back('\0');
+    	paDocs[i].parse<rapidxml::parse_declaration_node | rapidxml::parse_no_data_nodes>(&xml_copies[i][0]);
+
+    }
 
 
 	for(int i = 0; i < chromosomes; i++){
@@ -40,29 +49,26 @@ std::string	Recombination::RecombinedGenomeXML(int chromosomes){
 		int nHigh = vstrParents.size()-1;
 		int parent =  (rand() % (nHigh - nLow + 1)) + nLow;
 
-	    // make a safe-to-modify copy of input_xml
-	    // (you should never modify the contents of an std::string directly)
-	    std::vector<char> xml_copy(vstrParents[parent].begin(), vstrParents[parent].end());
-	    xml_copy.push_back('\0');
-
-	    // only use xml_copy from here on!
-	    rapidxml::xml_document<> doc;
-	    doc.parse<rapidxml::parse_declaration_node | rapidxml::parse_no_data_nodes>(&xml_copy[0]);
-
-	    rapidxml::xml_node<>* rootNode = doc.first_node("Genome");
+	    rapidxml::xml_node<>* rootNode = paDocs[parent].first_node("Genome");
 	    rapidxml::xml_node<>* chromosomeNode = rootNode->first_node("Chromosome");
 
 	    for(int j = 0; j < i; j++){
 	    	chromosomeNode = chromosomeNode->next_sibling("Chromosome");		//go to nth chromosome of this parent
 	    }
 
-	    clonedNode = docNewGenome.clone_node( chromosomeNode );
+	    rapidxml::xml_node<>* clonedNode = docNewGenome.allocate_node(rapidxml::node_element);
+	    clonedNode = paDocs[parent].clone_node(chromosomeNode);
+
 	    newRootNode->append_node(clonedNode);
 
 	}
 
 	std::string xml_as_string;
 	rapidxml::print(std::back_inserter(xml_as_string), docNewGenome);
+	//std::cout << "Recombined genome:" << std::endl << xml_as_string << std::endl;
+
+	delete[] paDocs;	//clean up memory
+	delete[] xml_copies;
 
 	return xml_as_string;
 }
