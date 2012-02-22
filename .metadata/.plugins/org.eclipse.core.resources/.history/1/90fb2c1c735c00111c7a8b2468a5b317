@@ -1,0 +1,36 @@
+/*
+ * ValueEncoding.h
+ *
+ *  Created on: 21-feb.-2012
+ *      Author: woutergl
+ */
+
+#ifndef VALUEENCODING_H_
+#define VALUEENCODING_H_
+
+//#include "Globals.h"
+
+class ValueEncoding : public Encoding
+{
+private:
+
+
+
+public:
+
+    ValueEncoding() // default constructor
+    {
+
+
+    }
+    ~ValueEncoding() // default deconstructor
+    {
+
+
+    }
+
+};
+
+
+
+#endif /* VALUEENCODING_H_ */

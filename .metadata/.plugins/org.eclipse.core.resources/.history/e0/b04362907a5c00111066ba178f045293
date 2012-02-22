@@ -1,0 +1,16 @@
+/*
+ * BinaryEncoding.h
+ *
+ *  Created on: 21-feb.-2012
+ *      Author: woutergl
+ */
+
+#ifndef BINARYENCODING_H_
+#define BINARYENCODING_H_
+
+#include "Encoding.h"
+
+
+
+
+#endif /* BINARYENCODING_H_ */

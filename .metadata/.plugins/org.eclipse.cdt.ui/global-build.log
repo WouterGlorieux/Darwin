@@ -2,599 +2,81 @@
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-..\src\Recombination.cpp: In memberfunctie ‘std::string Recombination::RecombinedGenomeXML(int)’:
-..\src\Recombination.cpp:33:17: fout: base operand of ‘->’ has non-pointer type ‘rapidxml::xml_document<>’
-..\src\Recombination.cpp:33:84: fout: ISO C++ forbids comparison between pointer and integer [-fpermissive]
-..\src\Recombination.cpp:35:43: fout: base operand of ‘->’ has non-pointer type ‘rapidxml::xml_document<>’
-..\src\Recombination.cpp:62:31: fout: base operand of ‘->’ has non-pointer type ‘rapidxml::xml_document<>’
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o src\BinaryEncoding.o src\TreeEncoding.o src\ValueEncoding.o
+Build complete for project Darwin
+Time consumed: 874  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
+In file included from ..\src\Encoding.cpp:8:0:
+..\src\/Encoding.h:26:5: fout: ‘string’ in namespace ‘std’ does not name a type
+..\src\Encoding.cpp:10:1: fout: ‘string’ in namespace ‘std’ does not name a type
 Build error occurred, build is stopped
-Time consumed: 390  ms.  
+Time consumed: 142  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-..\src\Recombination.cpp: In memberfunctie ‘std::string Recombination::RecombinedGenomeXML(int)’:
-..\src\Recombination.cpp:33:37: fout: no matching function for call to ‘rapidxml::xml_document<>::parse(char*)’
-..\src\Recombination.cpp:33:37: note: candidate is:
-..\src\/rapidxml.hpp:1381:14: note: template<int Flags> void rapidxml::xml_document::parse(Ch*) [with int Flags = Flags, Ch = char]
-..\src\Recombination.cpp:36:43: fout: base operand of ‘->’ has non-pointer type ‘rapidxml::xml_document<>’
-..\src\Recombination.cpp:63:31: fout: base operand of ‘->’ has non-pointer type ‘rapidxml::xml_document<>’
-Build error occurred, build is stopped
-Time consumed: 343  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-..\src\Recombination.cpp: In memberfunctie ‘std::string Recombination::RecombinedGenomeXML(int)’:
-..\src\Recombination.cpp:33:18: fout: no match for ‘operator<<’ in ‘std::cout << xml_copy2’
-..\src\Recombination.cpp:33:18: note: candidates are:
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:110:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:110:7: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘std::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&) {aka std::basic_ostream<char>& (*)(std::basic_ostream<char>&)}’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:119:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>, std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:119:7: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘std::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&) {aka std::basic_ios<char>& (*)(std::basic_ios<char>&)}’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:129:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:129:7: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘std::ios_base& (*)(std::ios_base&)’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:167:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:167:7: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘long int’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:171:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:171:7: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘long unsigned int’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:175:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:175:7: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘bool’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/ostream.tcc:93:5: note: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char, _Traits = std::char_traits<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/ostream.tcc:93:5: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘short int’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:182:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:182:7: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘short unsigned int’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/ostream.tcc:107:5: note: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char, _Traits = std::char_traits<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/ostream.tcc:107:5: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘int’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:193:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:193:7: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘unsigned int’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:202:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:202:7: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘long long int’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:206:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:206:7: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘long long unsigned int’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:211:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:211:7: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘double’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:215:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:215:7: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘float’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:223:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:223:7: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘long double’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:227:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:227:7: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘const void*’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/ostream.tcc:121:5: note: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_ostream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/ostream.tcc:121:5: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘std::basic_ostream<char>::__streambuf_type* {aka std::basic_streambuf<char>*}’
-..\src\/rapidxml_print.hpp:412:36: note: template<class Ch> std::basic_ostream<Ch>& rapidxml::operator<<(std::basic_ostream<Ch>&, const rapidxml::xml_node<Ch>&)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:528:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:523:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:510:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/ostream.tcc:323:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:493:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:473:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:468:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:462:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:456:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:451:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2693:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
-..\src\Recombination.cpp:79:9: fout: ‘xml_as_string’ was not declared in this scope
-..\src\Recombination.cpp:80:1: let op: control reaches end of non-void function [-Wreturn-type]
-Build error occurred, build is stopped
-Time consumed: 1653  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-..\src\Recombination.cpp: In memberfunctie ‘std::string Recombination::RecombinedGenomeXML(int)’:
-..\src\Recombination.cpp:33:18: fout: no match for ‘operator<<’ in ‘std::cout << xml_copy2’
-..\src\Recombination.cpp:33:18: note: candidates are:
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:110:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:110:7: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘std::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&) {aka std::basic_ostream<char>& (*)(std::basic_ostream<char>&)}’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:119:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>, std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:119:7: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘std::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&) {aka std::basic_ios<char>& (*)(std::basic_ios<char>&)}’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:129:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:129:7: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘std::ios_base& (*)(std::ios_base&)’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:167:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:167:7: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘long int’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:171:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:171:7: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘long unsigned int’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:175:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:175:7: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘bool’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/ostream.tcc:93:5: note: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char, _Traits = std::char_traits<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/ostream.tcc:93:5: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘short int’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:182:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:182:7: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘short unsigned int’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/ostream.tcc:107:5: note: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char, _Traits = std::char_traits<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/ostream.tcc:107:5: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘int’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:193:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:193:7: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘unsigned int’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:202:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:202:7: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘long long int’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:206:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:206:7: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘long long unsigned int’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:211:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:211:7: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘double’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:215:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:215:7: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘float’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:223:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:223:7: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘long double’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:227:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:227:7: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘const void*’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/ostream.tcc:121:5: note: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_ostream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/ostream.tcc:121:5: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘std::basic_ostream<char>::__streambuf_type* {aka std::basic_streambuf<char>*}’
-..\src\/rapidxml_print.hpp:412:36: note: template<class Ch> std::basic_ostream<Ch>& rapidxml::operator<<(std::basic_ostream<Ch>&, const rapidxml::xml_node<Ch>&)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:528:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:523:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:510:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/ostream.tcc:323:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:493:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:473:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:468:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:462:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:456:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:451:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2693:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
-Build error occurred, build is stopped
-Time consumed: 1592  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 858  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 873  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1076  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1061  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start()’:
-..\src\Evolver.cpp:162:2: fout: expected ‘;’ before ‘delete’
-Build error occurred, build is stopped
-Time consumed: 406  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1185  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-..\src\Recombination.cpp: In memberfunctie ‘std::string Recombination::RecombinedGenomeXML(int)’:
-..\src\Recombination.cpp:33:37: fout: ‘xml_copy2’ was not declared in this scope
-Build error occurred, build is stopped
-Time consumed: 343  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-..\src\Recombination.cpp: In memberfunctie ‘std::string Recombination::RecombinedGenomeXML(int)’:
-..\src\Recombination.cpp:33:37: fout: ‘xml_copy2’ was not declared in this scope
-Build error occurred, build is stopped
-Time consumed: 1232  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-..\src\Recombination.cpp: In memberfunctie ‘std::string Recombination::RecombinedGenomeXML(int)’:
-..\src\Recombination.cpp:33:37: fout: ‘xml_copy2’ was not declared in this scope
-Build error occurred, build is stopped
-Time consumed: 358  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-..\src\Recombination.cpp: In memberfunctie ‘std::string Recombination::RecombinedGenomeXML(int)’:
-..\src\Recombination.cpp:33:37: fout: ‘xml_copy2’ was not declared in this scope
-Build error occurred, build is stopped
-Time consumed: 343  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1575  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1061  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 686  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 749  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 733  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 795  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
+..\src\Encoding.cpp: In memberfunctie ‘std::string Encoding::RandomData()’:
+..\src\Encoding.cpp:12:1: let op: no return statement in function returning non-void [-Wreturn-type]
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
 Build complete for project Darwin
 Time consumed: 811  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
 Build complete for project Darwin
-Time consumed: 811  ms.  
+Time consumed: 667  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
 Build complete for project Darwin
-Time consumed: 858  ms.  
+Time consumed: 673  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-..\src\Recombination.cpp: In memberfunctie ‘std::string Recombination::RecombinedGenomeXML(int)’:
-..\src\Recombination.cpp:37:37: fout: no matching function for call to ‘rapidxml::xml_document<>::parse(char*)’
-..\src\Recombination.cpp:37:37: note: candidate is:
-..\src\/rapidxml.hpp:1381:14: note: template<int Flags> void rapidxml::xml_document::parse(Ch*) [with int Flags = Flags, Ch = char]
-..\src\Recombination.cpp:40:43: fout: base operand of ‘->’ has non-pointer type ‘rapidxml::xml_document<>’
-..\src\Recombination.cpp:67:31: fout: base operand of ‘->’ has non-pointer type ‘rapidxml::xml_document<>’
-Build error occurred, build is stopped
-Time consumed: 374  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-..\src\Recombination.cpp: In memberfunctie ‘std::string Recombination::RecombinedGenomeXML(int)’:
-..\src\Recombination.cpp:37:17: fout: base operand of ‘->’ has non-pointer type ‘rapidxml::xml_document<>’
-..\src\Recombination.cpp:37:84: fout: ISO C++ forbids comparison between pointer and integer [-fpermissive]
-..\src\Recombination.cpp:39:43: fout: base operand of ‘->’ has non-pointer type ‘rapidxml::xml_document<>’
-..\src\Recombination.cpp:66:31: fout: base operand of ‘->’ has non-pointer type ‘rapidxml::xml_document<>’
-Build error occurred, build is stopped
-Time consumed: 374  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-..\src\Recombination.cpp: In memberfunctie ‘std::string Recombination::RecombinedGenomeXML(int)’:
-..\src\Recombination.cpp:36:37: fout: no matching function for call to ‘rapidxml::xml_document<>::parse(char*)’
-..\src\Recombination.cpp:36:37: note: candidate is:
-..\src\/rapidxml.hpp:1381:14: note: template<int Flags> void rapidxml::xml_document::parse(Ch*) [with int Flags = Flags, Ch = char]
-..\src\Recombination.cpp:39:43: fout: base operand of ‘->’ has non-pointer type ‘rapidxml::xml_document<>’
-..\src\Recombination.cpp:66:31: fout: base operand of ‘->’ has non-pointer type ‘rapidxml::xml_document<>’
-Build error occurred, build is stopped
-Time consumed: 421  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-..\src\Recombination.cpp: In memberfunctie ‘std::string Recombination::RecombinedGenomeXML(int)’:
-..\src\Recombination.cpp:34:37: fout: no matching function for call to ‘rapidxml::xml_document<>::parse(char*)’
-..\src\Recombination.cpp:34:37: note: candidate is:
-..\src\/rapidxml.hpp:1381:14: note: template<int Flags> void rapidxml::xml_document::parse(Ch*) [with int Flags = Flags, Ch = char]
-..\src\Recombination.cpp:37:43: fout: base operand of ‘->’ has non-pointer type ‘rapidxml::xml_document<>’
-..\src\Recombination.cpp:64:31: fout: base operand of ‘->’ has non-pointer type ‘rapidxml::xml_document<>’
-Build error occurred, build is stopped
-Time consumed: 343  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-..\src\Recombination.cpp: In memberfunctie ‘std::string Recombination::RecombinedGenomeXML(int)’:
-..\src\Recombination.cpp:34:37: fout: no matching function for call to ‘rapidxml::xml_document<>::parse(char*)’
-..\src\Recombination.cpp:34:37: note: candidate is:
-..\src\/rapidxml.hpp:1381:14: note: template<int Flags> void rapidxml::xml_document::parse(Ch*) [with int Flags = Flags, Ch = char]
-Build error occurred, build is stopped
-Time consumed: 343  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-..\src\Recombination.cpp: In memberfunctie ‘std::string Recombination::RecombinedGenomeXML(int)’:
-..\src\Recombination.cpp:35:17: fout: base operand of ‘->’ has non-pointer type ‘rapidxml::xml_document<>’
-..\src\Recombination.cpp:35:84: fout: ISO C++ forbids comparison between pointer and integer [-fpermissive]
-Build error occurred, build is stopped
-Time consumed: 343  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-..\src\Recombination.cpp: In memberfunctie ‘std::string Recombination::RecombinedGenomeXML(int)’:
-..\src\Recombination.cpp:34:17: fout: base operand of ‘->’ has non-pointer type ‘rapidxml::xml_document<>’
-..\src\Recombination.cpp:34:84: fout: ISO C++ forbids comparison between pointer and integer [-fpermissive]
-Build error occurred, build is stopped
-Time consumed: 343  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
 Build complete for project Darwin
-Time consumed: 811  ms.  
+Time consumed: 660  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-..\src\Recombination.cpp: In memberfunctie ‘std::string Recombination::RecombinedGenomeXML(int)’:
-..\src\Recombination.cpp:33:18: fout: no match for ‘operator<<’ in ‘std::cout << xml_copy2’
-..\src\Recombination.cpp:33:18: note: candidates are:
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:110:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:110:7: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘std::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&) {aka std::basic_ostream<char>& (*)(std::basic_ostream<char>&)}’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:119:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>, std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:119:7: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘std::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&) {aka std::basic_ios<char>& (*)(std::basic_ios<char>&)}’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:129:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:129:7: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘std::ios_base& (*)(std::ios_base&)’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:167:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:167:7: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘long int’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:171:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:171:7: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘long unsigned int’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:175:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:175:7: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘bool’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/ostream.tcc:93:5: note: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char, _Traits = std::char_traits<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/ostream.tcc:93:5: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘short int’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:182:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:182:7: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘short unsigned int’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/ostream.tcc:107:5: note: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char, _Traits = std::char_traits<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/ostream.tcc:107:5: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘int’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:193:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:193:7: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘unsigned int’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:202:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:202:7: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘long long int’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:206:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:206:7: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘long long unsigned int’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:211:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:211:7: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘double’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:215:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:215:7: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘float’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:223:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:223:7: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘long double’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:227:7: note: std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:227:7: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘const void*’
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/ostream.tcc:121:5: note: std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_ostream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<char>]
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/ostream.tcc:121:5: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘std::basic_ostream<char>::__streambuf_type* {aka std::basic_streambuf<char>*}’
-..\src\/rapidxml_print.hpp:412:36: note: template<class Ch> std::basic_ostream<Ch>& rapidxml::operator<<(std::basic_ostream<Ch>&, const rapidxml::xml_node<Ch>&)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:528:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:523:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:510:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/ostream.tcc:323:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:493:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:473:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:468:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:462:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:456:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:451:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2693:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
-Build error occurred, build is stopped
-Time consumed: 1809  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
 Build complete for project Darwin
-Time consumed: 795  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 858  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-..\src\Recombination.cpp: In memberfunctie ‘std::string Recombination::RecombinedGenomeXML(int)’:
-..\src\Recombination.cpp:36:17: fout: base operand of ‘->’ has non-pointer type ‘rapidxml::xml_document<char>’
-..\src\Recombination.cpp:36:84: fout: ISO C++ forbids comparison between pointer and integer [-fpermissive]
-Build error occurred, build is stopped
-Time consumed: 343  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-..\src\Recombination.cpp: In memberfunctie ‘std::string Recombination::RecombinedGenomeXML(int)’:
-..\src\Recombination.cpp:36:17: fout: base operand of ‘->’ has non-pointer type ‘rapidxml::xml_document<char>’
-Build error occurred, build is stopped
-Time consumed: 343  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-..\src\Recombination.cpp: In memberfunctie ‘std::string Recombination::RecombinedGenomeXML(int)’:
-..\src\Recombination.cpp:36:85: let op: ‘docNewGenome’ may be used uninitialized in this function [-Wuninitialized]
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1061  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1061  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-..\src\Recombination.cpp: In memberfunctie ‘std::string Recombination::RecombinedGenomeXML(int)’:
-..\src\Recombination.cpp:38:43: fout: base operand of ‘->’ has non-pointer type ‘rapidxml::xml_document<char>’
-..\src\Recombination.cpp:65:31: fout: base operand of ‘->’ has non-pointer type ‘rapidxml::xml_document<char>’
-Build error occurred, build is stopped
-Time consumed: 374  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-..\src\Recombination.cpp: In memberfunctie ‘std::string Recombination::RecombinedGenomeXML(int)’:
-..\src\Recombination.cpp:65:31: fout: base operand of ‘->’ has non-pointer type ‘rapidxml::xml_document<char>’
-Build error occurred, build is stopped
-Time consumed: 343  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1123  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1202  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1061  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1092  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1061  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1201  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-..\src\Recombination.cpp: In memberfunctie ‘std::string Recombination::RecombinedGenomeXML(int)’:
-..\src\Recombination.cpp:54:32: fout: base operand of ‘->’ has non-pointer type ‘rapidxml::xml_document<>’
-Build error occurred, build is stopped
-Time consumed: 406  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1186  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1186  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1060  ms.  
+Time consumed: 666  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
@@ -604,490 +86,245 @@ Nothing to build for Darwin
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
 Build complete for project Darwin
-Time consumed: 1155  ms.  
+Time consumed: 618  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1107  ms.  
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+..\src\Genome.cpp: In memberfunctie ‘void Genome::FillWithRandomData()’:
+..\src\Genome.cpp:136:4: fout: ‘BinaryEncoding’ was not declared in this scope
+..\src\Genome.cpp:136:19: fout: expected ‘;’ before ‘BinaryEncoding’
+..\src\Genome.cpp:142:4: fout: ‘ValueEncoding’ was not declared in this scope
+..\src\Genome.cpp:142:18: fout: expected ‘;’ before ‘BinaryEncoding’
+..\src\Genome.cpp:143:20: fout: ‘BinaryEncoding’ was not declared in this scope
+Build error occurred, build is stopped
+Time consumed: 387  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1139  ms.  
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+..\src\Genome.cpp: In memberfunctie ‘void Genome::FillWithRandomData()’:
+..\src\Genome.cpp:136:4: fout: ‘BinaryEncoding’ was not declared in this scope
+..\src\Genome.cpp:136:19: fout: expected ‘;’ before ‘BinaryEncoding’
+..\src\Genome.cpp:142:4: fout: ‘ValueEncoding’ was not declared in this scope
+..\src\Genome.cpp:142:18: fout: expected ‘;’ before ‘ValueEncoding’
+Build error occurred, build is stopped
+Time consumed: 335  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
-Nothing to build for Darwin
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+..\src\Genome.cpp: In memberfunctie ‘void Genome::FillWithRandomData()’:
+..\src\Genome.cpp:136:4: fout: ‘BinaryEncoding’ was not declared in this scope
+..\src\Genome.cpp:136:19: fout: expected ‘;’ before ‘BinaryEncoding’
+Build error occurred, build is stopped
+Time consumed: 332  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+..\src\Genome.cpp: In memberfunctie ‘void Genome::FillWithRandomData()’:
+..\src\Genome.cpp:136:4: fout: ‘BinaryEncoding’ was not declared in this scope
+..\src\Genome.cpp:136:19: fout: expected ‘;’ before ‘cBinaryEncoding’
+..\src\Genome.cpp:137:20: fout: ‘cBinaryEncoding’ was not declared in this scope
+Build error occurred, build is stopped
+Time consumed: 329  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+..\src\Genome.cpp: In memberfunctie ‘void Genome::FillWithRandomData()’:
+..\src\Genome.cpp:136:4: fout: ‘BinaryEncoding’ was not declared in this scope
+..\src\Genome.cpp:136:19: fout: expected ‘;’ before ‘cBinaryEncoding’
+..\src\Genome.cpp:137:20: fout: ‘cBinaryEncoding’ was not declared in this scope
+Build error occurred, build is stopped
+Time consumed: 328  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 3635  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
-..\src\Genome.cpp: In memberfunctie ‘void Genome::addGene(const char*, std::string)’:
-..\src\Genome.cpp:72:15: fout: ‘parse_declaration_node’ was not declared in this scope
-..\src\Genome.cpp:72:15: note: suggested alternative:
-..\src\/rapidxml.hpp:200:15: note:   ‘rapidxml::parse_declaration_node’
-..\src\Genome.cpp:72:40: fout: ‘parse_no_data_nodes’ was not declared in this scope
-..\src\Genome.cpp:72:40: note: suggested alternative:
-..\src\/rapidxml.hpp:163:15: note:   ‘rapidxml::parse_no_data_nodes’
-..\src\Genome.cpp:72:73: fout: no matching function for call to ‘rapidxml::xml_document<>::parse(char*)’
-..\src\Genome.cpp:72:73: note: candidate is:
-..\src\/rapidxml.hpp:1381:14: note: template<int Flags> void rapidxml::xml_document::parse(Ch*) [with int Flags = Flags, Ch = char]
-..\src\Genome.cpp:76:7: fout: ‘xml_node’ was not declared in this scope
-..\src\Genome.cpp:76:7: note: suggested alternative:
-..\src\/rapidxml.hpp:137:30: note:   ‘rapidxml::xml_node’
-..\src\Genome.cpp:76:16: fout: expected primary-expression before ‘>’ token
-..\src\Genome.cpp:76:19: fout: ‘child’ was not declared in this scope
-..\src\Genome.cpp:82:50: fout: ‘node_element’ was not declared in this scope
-..\src\Genome.cpp:82:50: note: suggested alternative:
-..\src\/rapidxml.hpp:146:9: note:   ‘rapidxml::node_element’
+..\src\Genome.cpp: In memberfunctie ‘void Genome::FillWithRandomData()’:
+..\src\Genome.cpp:137:36: fout: request for member ‘RandomData’ in ‘cBinaryEncoding’, which is of non-class type ‘BinaryEncoding()’
 Build error occurred, build is stopped
-Time consumed: 405  ms.  
+Time consumed: 2895  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
-..\src\Genome.cpp: In memberfunctie ‘void Genome::addGene(const char*, std::string)’:
-..\src\Genome.cpp:72:15: fout: ‘parse_declaration_node’ was not declared in this scope
-..\src\Genome.cpp:72:15: note: suggested alternative:
-..\src\/rapidxml.hpp:200:15: note:   ‘rapidxml::parse_declaration_node’
-..\src\Genome.cpp:72:40: fout: ‘parse_no_data_nodes’ was not declared in this scope
-..\src\Genome.cpp:72:40: note: suggested alternative:
-..\src\/rapidxml.hpp:163:15: note:   ‘rapidxml::parse_no_data_nodes’
-..\src\Genome.cpp:72:73: fout: no matching function for call to ‘rapidxml::xml_document<>::parse(char*)’
-..\src\Genome.cpp:72:73: note: candidate is:
-..\src\/rapidxml.hpp:1381:14: note: template<int Flags> void rapidxml::xml_document::parse(Ch*) [with int Flags = Flags, Ch = char]
-..\src\Genome.cpp:82:50: fout: ‘node_element’ was not declared in this scope
-..\src\Genome.cpp:82:50: note: suggested alternative:
-..\src\/rapidxml.hpp:146:9: note:   ‘rapidxml::node_element’
+..\src\Genome.cpp: In memberfunctie ‘void Genome::FillWithRandomData()’:
+..\src\Genome.cpp:137:36: fout: request for member ‘RandomData’ in ‘cBinaryEncoding’, which is of non-class type ‘BinaryEncoding()’
 Build error occurred, build is stopped
-Time consumed: 405  ms.  
+Time consumed: 326  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
-..\src\Genome.cpp: In memberfunctie ‘void Genome::addGene(const char*, std::string)’:
-..\src\Genome.cpp:72:15: fout: ‘parse_declaration_node’ was not declared in this scope
-..\src\Genome.cpp:72:15: note: suggested alternative:
-..\src\/rapidxml.hpp:200:15: note:   ‘rapidxml::parse_declaration_node’
-..\src\Genome.cpp:72:40: fout: ‘parse_no_data_nodes’ was not declared in this scope
-..\src\Genome.cpp:72:40: note: suggested alternative:
-..\src\/rapidxml.hpp:163:15: note:   ‘rapidxml::parse_no_data_nodes’
-..\src\Genome.cpp:72:73: fout: no matching function for call to ‘rapidxml::xml_document<>::parse(char*)’
-..\src\Genome.cpp:72:73: note: candidate is:
-..\src\/rapidxml.hpp:1381:14: note: template<int Flags> void rapidxml::xml_document::parse(Ch*) [with int Flags = Flags, Ch = char]
+..\src\Genome.cpp: In memberfunctie ‘void Genome::FillWithRandomData()’:
+..\src\Genome.cpp:137:36: fout: request for member ‘RandomData’ in ‘cBinaryEncoding’, which is of non-class type ‘BinaryEncoding()’
 Build error occurred, build is stopped
-Time consumed: 405  ms.  
+Time consumed: 702  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1045  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
-..\src\Genome.cpp: In memberfunctie ‘void Genome::addChromosome(const char*)’:
-..\src\Genome.cpp:50:58: fout: ‘node_element’ was not declared in this scope
-..\src\Genome.cpp:50:58: note: suggested alternative:
-..\src\/rapidxml.hpp:146:9: note:   ‘rapidxml::node_element’
+..\src\Genome.cpp: In memberfunctie ‘void Genome::FillWithRandomData()’:
+..\src\Genome.cpp:139:3: fout: expected unqualified-id before ‘}’ token
+..\src\Genome.cpp:139:3: fout: expected ‘;’ before ‘}’ token
 Build error occurred, build is stopped
-Time consumed: 406  ms.  
+Time consumed: 381  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1061  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 998  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
-..\src\Genome.cpp: In memberfunctie ‘void Genome::newGenome(const char*)’:
-..\src\Genome.cpp:22:49: fout: ‘node_element’ was not declared in this scope
-..\src\Genome.cpp:22:49: note: suggested alternative:
-..\src\/rapidxml.hpp:146:9: note:   ‘rapidxml::node_element’
-Build error occurred, build is stopped
-Time consumed: 343  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1060  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1123  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 2543  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1108  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1061  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 3541  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 3557  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
-In file included from ..\src\/Evolver.h:14:0,
-                 from ..\src\Darwin.cpp:13:
-..\src\/Rosetta.h: In constructor ‘Rosetta::Rosetta()’:
-..\src\/Rosetta.h:28:5: fout: no matching function for call to ‘Genome::Genome()’
-..\src\/Rosetta.h:28:5: note: candidates are:
-..\src\/Genome.h:21:5: note: Genome::Genome(const char*)
-..\src\/Genome.h:21:5: note:   candidate expects 1 argument, 0 provided
-..\src\/Genome.h:13:7: note: Genome::Genome(const Genome&)
-..\src\/Genome.h:13:7: note:   candidate expects 1 argument, 0 provided
-Build error occurred, build is stopped
-Time consumed: 405  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 3619  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 3588  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1201  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1061  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1185  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 3573  ms.  
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+..\src\Genome.cpp: In memberfunctie ‘void Genome::FillWithRandomData()’:
+..\src\Genome.cpp:139:3: fout: expected unqualified-id before ‘}’ token
+..\src\Genome.cpp:139:3: fout: expected ‘;’ before ‘}’ token
+Build error occurred, build is stopped
+Time consumed: 2831  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
-In file included from ..\src\Darwin.cpp:13:0:
-..\src\/Evolver.h:36:5: fout: ‘Normalization’ does not name a type
+..\src\Genome.cpp: In memberfunctie ‘void Genome::FillWithRandomData()’:
+..\src\Genome.cpp:137:36: fout: request for member ‘RandomData’ in ‘cBinaryEncoding’, which is of non-class type ‘BinaryEncoding()’
 Build error occurred, build is stopped
-Time consumed: 1560  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-..\src\Evolver.cpp: In memberfunctie ‘void Evolver::traverse_xml(const string&)’:
-..\src\Evolver.cpp:47:36: fout: expected type-specifier before ‘Normalization’
-..\src\Evolver.cpp:47:36: fout: expected ‘>’ before ‘Normalization’
-..\src\Evolver.cpp:47:36: fout: expected ‘(’ before ‘Normalization’
-..\src\Evolver.cpp:47:36: fout: ‘Normalization’ was not declared in this scope
-..\src\Evolver.cpp:47:140: fout: expected ‘)’ before ‘;’ token
-Build error occurred, build is stopped
-Time consumed: 358  ms.  
+Time consumed: 381  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 2355  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 3807  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
-..\src\Rosetta.cpp: In memberfunctie ‘void Rosetta::initTokamak()’:
-..\src\Rosetta.cpp:36:49: fout: no matching function for call to ‘Genome::addChromosome(const char [24])’
-..\src\Rosetta.cpp:36:49: note: candidate is:
-..\src\/Genome.h:33:10: note: void Genome::addChromosome(const char*, EncodingType)
-..\src\/Genome.h:33:10: note:   candidate expects 2 arguments, 1 provided
-..\src\Rosetta.cpp:39:40: fout: no matching function for call to ‘Genome::addChromosome(const char [15])’
-..\src\Rosetta.cpp:39:40: note: candidate is:
-..\src\/Genome.h:33:10: note: void Genome::addChromosome(const char*, EncodingType)
-..\src\/Genome.h:33:10: note:   candidate expects 2 arguments, 1 provided
-..\src\Rosetta.cpp:44:40: fout: no matching function for call to ‘Genome::addChromosome(const char [15])’
-..\src\Rosetta.cpp:44:40: note: candidate is:
-..\src\/Genome.h:33:10: note: void Genome::addChromosome(const char*, EncodingType)
-..\src\/Genome.h:33:10: note:   candidate expects 2 arguments, 1 provided
+..\src\Genome.cpp: In memberfunctie ‘void Genome::FillWithRandomData()’:
+..\src\Genome.cpp:137:46: fout: request for member ‘Encoding:: RandomData’ in ‘cBinaryEncoding’, which is of non-class type ‘BinaryEncoding()’
 Build error occurred, build is stopped
-Time consumed: 2528  ms.  
+Time consumed: 819  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
-..\src\Rosetta.cpp: In memberfunctie ‘void Rosetta::initTokamak()’:
-..\src\Rosetta.cpp:36:52: fout: invalid conversion from ‘int’ to ‘EncodingType’ [-fpermissive]
-..\src\/Genome.h:33:10: fout:   initializing argument 2 of ‘void Genome::addChromosome(const char*, EncodingType)’ [-fpermissive]
-..\src\Rosetta.cpp:39:43: fout: invalid conversion from ‘int’ to ‘EncodingType’ [-fpermissive]
-..\src\/Genome.h:33:10: fout:   initializing argument 2 of ‘void Genome::addChromosome(const char*, EncodingType)’ [-fpermissive]
-..\src\Rosetta.cpp:42:43: fout: invalid conversion from ‘int’ to ‘EncodingType’ [-fpermissive]
-..\src\/Genome.h:33:10: fout:   initializing argument 2 of ‘void Genome::addChromosome(const char*, EncodingType)’ [-fpermissive]
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+..\src\Genome.cpp: In memberfunctie ‘void Genome::FillWithRandomData()’:
+..\src\Genome.cpp:137:52: fout: request for member ‘BinaryEncoding:: RandomData’ in ‘cBinaryEncoding’, which is of non-class type ‘BinaryEncoding()’
 Build error occurred, build is stopped
-Time consumed: 343  ms.  
+Time consumed: 376  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
 Build complete for project Darwin
-Time consumed: 1388  ms.  
+Time consumed: 1120  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 659  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
-..\src\Genome.cpp: In memberfunctie ‘void Genome::addChromosome(const char*, EncodingType)’:
-..\src\Genome.cpp:54:24: let op: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-..\src\Genome.cpp:57:24: let op: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-..\src\Genome.cpp:60:24: let op: deprecated conversion from string constant to ‘char*’ [-Wwrite-strings]
-..\src\Genome.cpp:70:74: fout: no matching function for call to ‘rapidxml::xml_document<>::allocate_attribute(const char [9], EncodingType&)’
-..\src\Genome.cpp:70:74: note: candidate is:
-..\src\/rapidxml.hpp:447:28: note: rapidxml::xml_attribute<Ch>* rapidxml::memory_pool<Ch>::allocate_attribute(const Ch*, const Ch*, std::size_t, std::size_t) [with Ch = char, std::size_t = unsigned int]
-..\src\/rapidxml.hpp:447:28: note:   no known conversion for argument 2 from ‘EncodingType’ to ‘const char*’
+..\src\Genome.cpp: In memberfunctie ‘void Genome::FillWithRandomData()’:
+..\src\Genome.cpp:132:15: fout: ‘rEncoding’ declared as reference but not initialized
 Build error occurred, build is stopped
-Time consumed: 406  ms.  
+Time consumed: 332  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
-..\src\Genome.cpp: In memberfunctie ‘void Genome::addChromosome(const char*, EncodingType)’:
-..\src\Genome.cpp:70:74: fout: no matching function for call to ‘rapidxml::xml_document<>::allocate_attribute(const char [9], EncodingType&)’
-..\src\Genome.cpp:70:74: note: candidate is:
-..\src\/rapidxml.hpp:447:28: note: rapidxml::xml_attribute<Ch>* rapidxml::memory_pool<Ch>::allocate_attribute(const Ch*, const Ch*, std::size_t, std::size_t) [with Ch = char, std::size_t = unsigned int]
-..\src\/rapidxml.hpp:447:28: note:   no known conversion for argument 2 from ‘EncodingType’ to ‘const char*’
+..\src\Genome.cpp: In memberfunctie ‘void Genome::FillWithRandomData()’:
+..\src\Genome.cpp:132:27: fout: ‘Null’ was not declared in this scope
 Build error occurred, build is stopped
-Time consumed: 343  ms.  
+Time consumed: 326  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
-..\src\Genome.cpp: In memberfunctie ‘void Genome::addChromosome(const char*, EncodingType)’:
-..\src\Genome.cpp:70:77: fout: no matching function for call to ‘rapidxml::xml_document<>::allocate_attribute(const char [9], std::string&)’
-..\src\Genome.cpp:70:77: note: candidate is:
-..\src\/rapidxml.hpp:447:28: note: rapidxml::xml_attribute<Ch>* rapidxml::memory_pool<Ch>::allocate_attribute(const Ch*, const Ch*, std::size_t, std::size_t) [with Ch = char, std::size_t = unsigned int]
-..\src\/rapidxml.hpp:447:28: note:   no known conversion for argument 2 from ‘std::string {aka std::basic_string<char>}’ to ‘const char*’
+..\src\Genome.cpp: In memberfunctie ‘void Genome::FillWithRandomData()’:
+..\src\Genome.cpp:132:27: fout: invalid initialization of non-const reference of type ‘Encoding&’ from an rvalue of type ‘int’
 Build error occurred, build is stopped
-Time consumed: 390  ms.  
+Time consumed: 378  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
 Build complete for project Darwin
-Time consumed: 1061  ms.  
+Time consumed: 1129  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
 Build complete for project Darwin
-Time consumed: 1139  ms.  
+Time consumed: 1113  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1108  ms.  
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+..\src\Genome.cpp: In memberfunctie ‘void Genome::FillWithRandomData()’:
+..\src\Genome.cpp:139:14: let op: unused variable ‘rEncoding’ [-Wunused-variable]
+..\src\Genome.cpp:146:14: let op: unused variable ‘rEncoding’ [-Wunused-variable]
+..\src\Genome.cpp:152:14: let op: unused variable ‘rEncoding’ [-Wunused-variable]
+..\src\Genome.cpp:158:19: fout: ‘rEncoding’ was not declared in this scope
+Build error occurred, build is stopped
+Time consumed: 383  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1061  ms.  
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+..\src\Genome.cpp: In memberfunctie ‘void Genome::FillWithRandomData()’:
+..\src\Genome.cpp:158:19: fout: ‘rEncoding’ was not declared in this scope
+Build error occurred, build is stopped
+Time consumed: 376  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
 Build complete for project Darwin
-Time consumed: 1108  ms.  
+Time consumed: 1068  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
 Build complete for project Darwin
 Time consumed: 1123  ms.  
 
@@ -1095,181 +332,79 @@ Time consumed: 1123  ms.
 
 **** Internal Builder is used for build               ****
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+In file included from ..\src\/Evolver.h:13:0,
+                 from ..\src\Evolver.cpp:8:
+..\src\/Genome.h:19:27: fout: ‘rapidxml::xml_node’ is not a type
+Build error occurred, build is stopped
+Time consumed: 397  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
 Build complete for project Darwin
-Time consumed: 1107  ms.  
+Time consumed: 3719  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1063  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1072  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1077  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1078  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
 Build complete for project Darwin
-Time consumed: 1185  ms.  
+Time consumed: 1178  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
 Build complete for project Darwin
-Time consumed: 1092  ms.  
+Time consumed: 1126  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1186  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-..\src\Recombination.cpp: In memberfunctie ‘std::string Recombination::RecombinedGenomeXML(int)’:
-..\src\Recombination.cpp:62:65: fout: no matching function for call to ‘print(std::back_insert_iterator<std::basic_string<char> >, rapidxml::xml_node<char>*&)’
-..\src\Recombination.cpp:62:65: note: candidates are:
-..\src\/rapidxml_print.hpp:388:18: note: template<class OutIt, class Ch> OutIt rapidxml::print(OutIt, const rapidxml::xml_node<Ch>&, int)
-..\src\/rapidxml_print.hpp:401:36: note: template<class Ch> std::basic_ostream<Ch>& rapidxml::print(std::basic_ostream<Ch>&, const rapidxml::xml_node<Ch>&, int)
-Build error occurred, build is stopped
-Time consumed: 406  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-..\src\Recombination.cpp: In memberfunctie ‘std::string Recombination::RecombinedGenomeXML(int)’:
-..\src\Recombination.cpp:62:66: fout: no matching function for call to ‘print(std::back_insert_iterator<std::basic_string<char> >, rapidxml::xml_node<char>**)’
-..\src\Recombination.cpp:62:66: note: candidates are:
-..\src\/rapidxml_print.hpp:388:18: note: template<class OutIt, class Ch> OutIt rapidxml::print(OutIt, const rapidxml::xml_node<Ch>&, int)
-..\src\/rapidxml_print.hpp:401:36: note: template<class Ch> std::basic_ostream<Ch>& rapidxml::print(std::basic_ostream<Ch>&, const rapidxml::xml_node<Ch>&, int)
-Build error occurred, build is stopped
-Time consumed: 406  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1123  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1201  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1061  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1201  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1108  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-..\src\Recombination.cpp: In memberfunctie ‘std::string Recombination::RecombinedGenomeXML(int)’:
-..\src\Recombination.cpp:59:59: let op: ‘clonedNode’ may be used uninitialized in this function [-Wuninitialized]
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1201  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1123  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1107  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1186  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1123  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1186  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1201  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1201  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-..\src\Recombination.cpp: In memberfunctie ‘std::string Recombination::RecombinedGenomeXML(int)’:
-..\src\Recombination.cpp:67:35: fout: no matching function for call to ‘rapidxml::xml_node<char>::value(std::string&)’
-..\src\Recombination.cpp:67:35: note: candidates are:
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+..\src\Genome.cpp: In memberfunctie ‘void Genome::FillGenes(rapidxml::xml_node<>*, Encoding&)’:
+..\src\Genome.cpp:178:40: fout: no matching function for call to ‘rapidxml::xml_node<>::value(std::string)’
+..\src\Genome.cpp:178:40: note: candidates are:
 ..\src\/rapidxml.hpp:692:13: note: Ch* rapidxml::xml_base<Ch>::value() const [with Ch = char]
 ..\src\/rapidxml.hpp:692:13: note:   candidate expects 0 arguments, 1 provided
 ..\src\/rapidxml.hpp:751:14: note: void rapidxml::xml_base<Ch>::value(const Ch*, std::size_t) [with Ch = char, std::size_t = unsigned int]
@@ -1277,210 +412,375 @@ g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombinat
 ..\src\/rapidxml.hpp:760:14: note: void rapidxml::xml_base<Ch>::value(const Ch*) [with Ch = char]
 ..\src\/rapidxml.hpp:760:14: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘const char*’
 Build error occurred, build is stopped
-Time consumed: 405  ms.  
+Time consumed: 376  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
 Build complete for project Darwin
-Time consumed: 1186  ms.  
+Time consumed: 1067  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1185  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1124  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1154  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-..\src\Recombination.cpp: In memberfunctie ‘std::string Recombination::RecombinedGenomeXML(int)’:
-..\src\Recombination.cpp:67:17: fout: cannot convert ‘rapidxml::xml_node<char>’ to ‘rapidxml::xml_node<char>*’ in assignment
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+..\src\Genome.cpp: In memberfunctie ‘void Genome::FillGenes(rapidxml::xml_node<>*, Encoding&)’:
+..\src\Genome.cpp:178:45: fout: cannot convert ‘std::string {aka std::basic_string<char>}’ to ‘char*’ in initialization
 Build error occurred, build is stopped
-Time consumed: 344  ms.  
+Time consumed: 376  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-..\src\Recombination.cpp: In memberfunctie ‘std::string Recombination::RecombinedGenomeXML(int)’:
-..\src\Recombination.cpp:67:17: fout: cannot convert ‘rapidxml::xml_node<char>**’ to ‘rapidxml::xml_node<char>*’ in assignment
-Build error occurred, build is stopped
-Time consumed: 343  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1108  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1170  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1185  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1186  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-..\src\Recombination.cpp: In memberfunctie ‘std::string Recombination::RecombinedGenomeXML(int)’:
-..\src\Recombination.cpp:67:35: fout: no matching function for call to ‘rapidxml::xml_node<char>::value(std::string&)’
-..\src\Recombination.cpp:67:35: note: candidates are:
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+..\src\Genome.cpp: In memberfunctie ‘void Genome::FillGenes(rapidxml::xml_node<>*, Encoding&)’:
+..\src\Genome.cpp:181:29: fout: no matching function for call to ‘rapidxml::xml_node<>::value(std::vector<char>&)’
+..\src\Genome.cpp:181:29: note: candidates are:
 ..\src\/rapidxml.hpp:692:13: note: Ch* rapidxml::xml_base<Ch>::value() const [with Ch = char]
 ..\src\/rapidxml.hpp:692:13: note:   candidate expects 0 arguments, 1 provided
 ..\src\/rapidxml.hpp:751:14: note: void rapidxml::xml_base<Ch>::value(const Ch*, std::size_t) [with Ch = char, std::size_t = unsigned int]
 ..\src\/rapidxml.hpp:751:14: note:   candidate expects 2 arguments, 1 provided
 ..\src\/rapidxml.hpp:760:14: note: void rapidxml::xml_base<Ch>::value(const Ch*) [with Ch = char]
-..\src\/rapidxml.hpp:760:14: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘const char*’
+..\src\/rapidxml.hpp:760:14: note:   no known conversion for argument 1 from ‘std::vector<char>’ to ‘const char*’
 Build error occurred, build is stopped
-Time consumed: 406  ms.  
+Time consumed: 383  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
 Build complete for project Darwin
-Time consumed: 1108  ms.  
+Time consumed: 1090  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
 Build complete for project Darwin
-Time consumed: 1061  ms.  
+Time consumed: 1060  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1158  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1063  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1063  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1068  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1087  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1070  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1066  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1068  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1065  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1087  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+..\src\Genome.cpp: In memberfunctie ‘void Genome::FillGenes(rapidxml::xml_node<>*, Encoding&)’:
+..\src\Genome.cpp:179:15: let op: unused variable ‘pchRandomData’ [-Wunused-variable]
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1116  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1084  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1074  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+..\src\Genome.cpp: In memberfunctie ‘void Genome::FillGenes(rapidxml::xml_node<>*, Encoding&)’:
+..\src\Genome.cpp:179:45: fout: invalid conversion from ‘const char*’ to ‘char*’ [-fpermissive]
+Build error occurred, build is stopped
+Time consumed: 384  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1128  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+..\src\Genome.cpp: In memberfunctie ‘void Genome::FillWithRandomData()’:
+..\src\Genome.cpp:140:30: fout: no matching function for call to ‘Genome::FillGenes(rapidxml::xml_node<>*&, Encoding&)’
+..\src\Genome.cpp:140:30: note: candidate is:
+..\src\/Genome.h:19:7: note: void Genome::FillGenes(rapidxml::xml_document<>, rapidxml::xml_node<>*, Encoding&)
+..\src\/Genome.h:19:7: note:   candidate expects 3 arguments, 2 provided
+..\src\Genome.cpp: In memberfunctie ‘void Genome::FillGenes(rapidxml::xml_document<>, rapidxml::xml_node<>*, Encoding&)’:
+..\src\Genome.cpp:177:9: let op: unused variable ‘pchRandomData’ [-Wunused-variable]
+Build error occurred, build is stopped
+Time consumed: 1711  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 3572  ms.  
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+In file included from ..\src\/Globals.h:22:0,
+                 from ..\src\/Genome.h:11,
+                 from ..\src\Genome.cpp:8:
+..\src\/rapidxml.hpp: In copy constructor ‘rapidxml::xml_document<>::xml_document(const rapidxml::xml_document<>&)’:
+..\src\/rapidxml.hpp:1322:9: fout: ‘rapidxml::xml_node<Ch>::xml_node(const rapidxml::xml_node<Ch>&) [with Ch = char, rapidxml::xml_node<Ch> = rapidxml::xml_node<>]’ is private
+..\src\/rapidxml.hpp:1358:11: fout: within this context
+..\src\Genome.cpp: In memberfunctie ‘void Genome::FillWithRandomData()’:
+..\src\Genome.cpp:140:35: note: synthesized method ‘rapidxml::xml_document<>::xml_document(const rapidxml::xml_document<>&)’ first required here 
+..\src\/Genome.h:19:7: fout:   initializing argument 1 of ‘void Genome::FillGenes(rapidxml::xml_document<>, rapidxml::xml_node<>*, Encoding&)’
+Build error occurred, build is stopped
+Time consumed: 1688  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1139  ms.  
+In file included from ..\src\/Globals.h:22:0,
+                 from ..\src\/Genome.h:11,
+                 from ..\src\Genome.cpp:8:
+..\src\/rapidxml.hpp: In copy constructor ‘rapidxml::xml_document<>::xml_document(const rapidxml::xml_document<>&)’:
+..\src\/rapidxml.hpp:1322:9: fout: ‘rapidxml::xml_node<Ch>::xml_node(const rapidxml::xml_node<Ch>&) [with Ch = char, rapidxml::xml_node<Ch> = rapidxml::xml_node<>]’ is private
+..\src\/rapidxml.hpp:1358:11: fout: within this context
+..\src\Genome.cpp: In memberfunctie ‘void Genome::FillWithRandomData()’:
+..\src\Genome.cpp:140:35: note: synthesized method ‘rapidxml::xml_document<>::xml_document(const rapidxml::xml_document<>&)’ first required here 
+..\src\/Genome.h:19:7: fout:   initializing argument 1 of ‘void Genome::FillGenes(rapidxml::xml_document<>, rapidxml::xml_node<>*, Encoding&)’
+Build error occurred, build is stopped
+Time consumed: 433  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-..\src\Recombination.cpp: In memberfunctie ‘std::string Recombination::RecombinedGenomeXML(int)’:
-..\src\Recombination.cpp:59:28: let op: unused variable ‘clonedNode’ [-Wunused-variable]
-..\src\Recombination.cpp:34:27: let op: unused variable ‘newRootNode’ [-Wunused-variable]
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
 Build complete for project Darwin
-Time consumed: 1061  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-..\src\Recombination.cpp: In memberfunctie ‘std::string Recombination::RecombinedGenomeXML(int)’:
-..\src\Recombination.cpp:34:27: let op: unused variable ‘newRootNode’ [-Wunused-variable]
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1123  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1045  ms.  
+Time consumed: 3637  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+..\src\Genome.cpp: In memberfunctie ‘void Genome::FillGenes(rapidxml::xml_document<>&, rapidxml::xml_node<>*, Encoding&)’:
+..\src\Genome.cpp:177:9: let op: unused variable ‘pchRandomData’ [-Wunused-variable]
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
 Build complete for project Darwin
-Time consumed: 1124  ms.  
+Time consumed: 1118  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
 Build complete for project Darwin
-Time consumed: 1061  ms.  
+Time consumed: 1130  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
 Build complete for project Darwin
-Time consumed: 1045  ms.  
+Time consumed: 1118  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
 Build complete for project Darwin
-Time consumed: 1139  ms.  
+Time consumed: 1114  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
+..\src\Encoding.cpp: In memberfunctie ‘virtual std::string ValueEncoding::RandomData()’:
+..\src\Encoding.cpp:27:9: fout: invalid conversion from ‘int’ to ‘const char*’ [-fpermissive]
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.tcc:214:5: fout:   initializing argument 1 of ‘std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>]’ [-fpermissive]
+Build error occurred, build is stopped
+Time consumed: 378  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
+..\src\Encoding.cpp: In memberfunctie ‘virtual std::string ValueEncoding::RandomData()’:
+..\src\Encoding.cpp:27:24: fout: invalid conversion from ‘int’ to ‘const char*’ [-fpermissive]
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.tcc:214:5: fout:   initializing argument 1 of ‘std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>]’ [-fpermissive]
+Build error occurred, build is stopped
+Time consumed: 382  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
+..\src\Encoding.cpp: In memberfunctie ‘virtual std::string ValueEncoding::RandomData()’:
+..\src\Encoding.cpp:27:22: fout: expected initializer before ‘<<’ token
+..\src\Encoding.cpp:28:9: fout: ‘strData’ was not declared in this scope
+..\src\Encoding.cpp:25:6: let op: unused variable ‘data’ [-Wunused-variable]
+..\src\Encoding.cpp:29:1: let op: control reaches end of non-void function [-Wreturn-type]
+Build error occurred, build is stopped
+Time consumed: 335  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
+..\src\Encoding.cpp: In memberfunctie ‘virtual std::string ValueEncoding::RandomData()’:
+..\src\Encoding.cpp:28:13: fout: no match for ‘operator<<’ in ‘strData << data’
+..\src\Encoding.cpp:28:13: note: candidates are:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:528:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:523:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:510:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/ostream.tcc:323:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:493:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:473:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:468:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:462:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:456:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:451:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2693:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+Build error occurred, build is stopped
+Time consumed: 591  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
+..\src\Encoding.cpp: In memberfunctie ‘virtual std::string ValueEncoding::RandomData()’:
+..\src\Encoding.cpp:27:5: fout: ‘stringstream’ was not declared in this scope
+..\src\Encoding.cpp:27:5: note: suggested alternative:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/iosfwd:153:37: note:   ‘std::stringstream’
+..\src\Encoding.cpp:27:18: fout: expected ‘;’ before ‘ss’
+..\src\Encoding.cpp:28:5: fout: ‘ss’ was not declared in this scope
+..\src\Encoding.cpp:28:11: fout: ‘number’ was not declared in this scope
+..\src\Encoding.cpp:30:9: fout: ‘strData’ was not declared in this scope
+..\src\Encoding.cpp:25:6: let op: unused variable ‘data’ [-Wunused-variable]
+..\src\Encoding.cpp:31:1: let op: control reaches end of non-void function [-Wreturn-type]
+Build error occurred, build is stopped
+Time consumed: 335  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
+..\src\Encoding.cpp: In memberfunctie ‘virtual std::string ValueEncoding::RandomData()’:
+..\src\Encoding.cpp:27:5: fout: ‘stringstream’ was not declared in this scope
+..\src\Encoding.cpp:27:5: note: suggested alternative:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/iosfwd:153:37: note:   ‘std::stringstream’
+..\src\Encoding.cpp:27:18: fout: expected ‘;’ before ‘ss’
+..\src\Encoding.cpp:28:5: fout: ‘ss’ was not declared in this scope
+..\src\Encoding.cpp:31:1: let op: control reaches end of non-void function [-Wreturn-type]
+Build error occurred, build is stopped
+Time consumed: 331  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
 Build complete for project Darwin
-Time consumed: 1061  ms.  
+Time consumed: 719  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 715  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 
@@ -1490,253 +790,653 @@ Nothing to build for Darwin
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-..\src\Recombination.cpp: In memberfunctie ‘std::string Recombination::RecombinedGenomeXML(int)’:
-..\src\Recombination.cpp:36:39: fout: type/value mismatch at argument 1 in template parameter list for ‘template<class _Tp, class _Alloc> class std::vector’
-..\src\Recombination.cpp:36:39: fout:   expected a type, got ‘xml_document’
-..\src\Recombination.cpp:36:39: fout: template argument 2 is invalid
-..\src\Recombination.cpp:36:45: fout: invalid type in declaration before ‘;’ token
-..\src\Recombination.cpp:37:41: let op: comparison between signed and unsigned integer expressions [-Wsign-compare]
-..\src\Recombination.cpp:38:11: fout: request for member ‘parse’ in ‘docs’, which is of non-class type ‘int’
-..\src\Recombination.cpp:38:98: fout: ISO C++ forbids comparison between pointer and integer [-fpermissive]
-Build error occurred, build is stopped
-Time consumed: 422  ms.  
+Nothing to build for Darwin
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-..\src\Recombination.cpp: In memberfunctie ‘std::string Recombination::RecombinedGenomeXML(int)’:
-..\src\Recombination.cpp:36:39: fout: type/value mismatch at argument 1 in template parameter list for ‘template<class _Tp, class _Alloc> class std::vector’
-..\src\Recombination.cpp:36:39: fout:   expected a type, got ‘xml_document’
-..\src\Recombination.cpp:36:39: fout: template argument 2 is invalid
-..\src\Recombination.cpp:36:45: fout: invalid type in declaration before ‘;’ token
-..\src\Recombination.cpp:37:41: let op: comparison between signed and unsigned integer expressions [-Wsign-compare]
-..\src\Recombination.cpp:38:12: fout: invalid types ‘int[int]’ for array subscript
-..\src\Recombination.cpp:38:101: fout: ISO C++ forbids comparison between pointer and integer [-fpermissive]
-Build error occurred, build is stopped
-Time consumed: 375  ms.  
+Nothing to build for Darwin
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-..\src\Recombination.cpp: In memberfunctie ‘std::string Recombination::RecombinedGenomeXML(int)’:
-..\src\Recombination.cpp:36:39: fout: type/value mismatch at argument 1 in template parameter list for ‘template<class _Tp, class _Alloc> class std::vector’
-..\src\Recombination.cpp:36:39: fout:   expected a type, got ‘xml_document’
-..\src\Recombination.cpp:36:39: fout: template argument 2 is invalid
-..\src\Recombination.cpp:36:45: fout: invalid type in declaration before ‘;’ token
-..\src\Recombination.cpp:37:41: let op: comparison between signed and unsigned integer expressions [-Wsign-compare]
-..\src\Recombination.cpp:36:41: let op: unused variable ‘docs’ [-Wunused-variable]
-Build error occurred, build is stopped
-Time consumed: 343  ms.  
+Nothing to build for Darwin
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-..\src\Recombination.cpp: In memberfunctie ‘std::string Recombination::RecombinedGenomeXML(int)’:
-..\src\Recombination.cpp:36:27: fout: missing template arguments before ‘[’ token
-..\src\Recombination.cpp:36:28: fout: expected primary-expression before ‘]’ token
-..\src\Recombination.cpp:36:30: fout: expected ‘;’ before ‘docs’
-..\src\Recombination.cpp:37:41: let op: comparison between signed and unsigned integer expressions [-Wsign-compare]
-Build error occurred, build is stopped
-Time consumed: 421  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-..\src\Recombination.cpp: In memberfunctie ‘std::string Recombination::RecombinedGenomeXML(int)’:
-..\src\Recombination.cpp:36:27: fout: missing template arguments before ‘*’ token
-..\src\Recombination.cpp:36:29: fout: ‘docs’ was not declared in this scope
-..\src\Recombination.cpp:36:40: fout: expected type-specifier
-..\src\Recombination.cpp:36:40: fout: expected ‘;’
-..\src\Recombination.cpp:38:41: let op: comparison between signed and unsigned integer expressions [-Wsign-compare]
-Build error occurred, build is stopped
-Time consumed: 405  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-..\src\Recombination.cpp: In memberfunctie ‘std::string Recombination::RecombinedGenomeXML(int)’:
-..\src\Recombination.cpp:36:27: fout: missing template arguments before ‘*’ token
-..\src\Recombination.cpp:36:29: fout: ‘padocs’ was not declared in this scope
-..\src\Recombination.cpp:36:42: fout: expected type-specifier
-..\src\Recombination.cpp:36:42: fout: expected ‘;’
-..\src\Recombination.cpp:38:41: let op: comparison between signed and unsigned integer expressions [-Wsign-compare]
-Build error occurred, build is stopped
-Time consumed: 421  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-..\src\Recombination.cpp: In memberfunctie ‘std::string Recombination::RecombinedGenomeXML(int)’:
-..\src\Recombination.cpp:38:41: let op: comparison between signed and unsigned integer expressions [-Wsign-compare]
-..\src\Recombination.cpp:36:31: let op: unused variable ‘padocs’ [-Wunused-variable]
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1310  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-..\src\Recombination.cpp: In memberfunctie ‘std::string Recombination::RecombinedGenomeXML(int)’:
-..\src\Recombination.cpp:39:103: fout: no matching function for call to ‘rapidxml::xml_document<>::parse(std::basic_string<char>*)’
-..\src\Recombination.cpp:39:103: note: candidate is:
-..\src\/rapidxml.hpp:1381:14: note: template<int Flags> void rapidxml::xml_document::parse(Ch*) [with int Flags = Flags, Ch = char]
-Build error occurred, build is stopped
-Time consumed: 390  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-..\src\Recombination.cpp: In memberfunctie ‘std::string Recombination::RecombinedGenomeXML(int)’:
-..\src\Recombination.cpp:39:110: fout: lvalue required as unary ‘&’ operand
-Build error occurred, build is stopped
-Time consumed: 406  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-..\src\Recombination.cpp: In memberfunctie ‘std::string Recombination::RecombinedGenomeXML(int)’:
-..\src\Recombination.cpp:39:110: fout: no matching function for call to ‘rapidxml::xml_document<>::parse(const char*)’
-..\src\Recombination.cpp:39:110: note: candidate is:
-..\src\/rapidxml.hpp:1381:14: note: template<int Flags> void rapidxml::xml_document::parse(Ch*) [with int Flags = Flags, Ch = char]
-Build error occurred, build is stopped
-Time consumed: 422  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-..\src\Recombination.cpp: In memberfunctie ‘std::string Recombination::RecombinedGenomeXML(int)’:
-..\src\Recombination.cpp:40:32: fout: ‘parent’ was not declared in this scope
-..\src\Recombination.cpp:42:101: fout: no matching function for call to ‘rapidxml::xml_document<>::parse(std::vector<char>&)’
-..\src\Recombination.cpp:42:101: note: candidate is:
-..\src\/rapidxml.hpp:1381:14: note: template<int Flags> void rapidxml::xml_document::parse(Ch*) [with int Flags = Flags, Ch = char]
-Build error occurred, build is stopped
-Time consumed: 406  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-..\src\Recombination.cpp: In memberfunctie ‘std::string Recombination::RecombinedGenomeXML(int)’:
-..\src\Recombination.cpp:40:64: fout: no match for call to ‘(std::vector<char>) (std::basic_string<char>::iterator, std::basic_string<char>::iterator)’
-..\src\Recombination.cpp:42:101: fout: no matching function for call to ‘rapidxml::xml_document<>::parse(std::vector<char>&)’
-..\src\Recombination.cpp:42:101: note: candidate is:
-..\src\/rapidxml.hpp:1381:14: note: template<int Flags> void rapidxml::xml_document::parse(Ch*) [with int Flags = Flags, Ch = char]
-Build error occurred, build is stopped
-Time consumed: 406  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-..\src\Recombination.cpp: In memberfunctie ‘std::string Recombination::RecombinedGenomeXML(int)’:
-..\src\Recombination.cpp:40:64: fout: no match for call to ‘(std::vector<char>) (std::basic_string<char>::iterator, std::basic_string<char>::iterator)’
-..\src\Recombination.cpp:36:31: let op: unused variable ‘paDocs’ [-Wunused-variable]
-Build error occurred, build is stopped
-Time consumed: 405  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-..\src\Recombination.cpp: In memberfunctie ‘std::string Recombination::RecombinedGenomeXML(int)’:
-..\src\Recombination.cpp:36:31: let op: unused variable ‘paDocs’ [-Wunused-variable]
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1123  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-..\src\Recombination.cpp: In memberfunctie ‘std::string Recombination::RecombinedGenomeXML(int)’:
-..\src\Recombination.cpp:42:101: fout: no matching function for call to ‘rapidxml::xml_document<>::parse(std::vector<char>&)’
-..\src\Recombination.cpp:42:101: note: candidate is:
-..\src\/rapidxml.hpp:1381:14: note: template<int Flags> void rapidxml::xml_document::parse(Ch*) [with int Flags = Flags, Ch = char]
-Build error occurred, build is stopped
-Time consumed: 359  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1201  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1186  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1186  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1170  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1185  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1186  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1326  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1170  ms.  
+Nothing to build for Darwin
 
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Darwin.o src\Aperture.o
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
 Build complete for project Darwin
-Time consumed: 1170  ms.  
+Time consumed: 1602  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 678  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 714  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 670  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+..\src\Genome.cpp: In memberfunctie ‘void Genome::FillGenes(rapidxml::xml_document<>&, rapidxml::xml_node<>*, Encoding&)’:
+..\src\Genome.cpp:177:65: fout: no matching function for call to ‘Encoding::RandomData()’
+..\src\Genome.cpp:177:65: note: candidate is:
+..\src\/Encoding.h:26:25: note: virtual std::string Encoding::RandomData(int)
+..\src\/Encoding.h:26:25: note:   candidate expects 1 argument, 0 provided
+Build error occurred, build is stopped
+Time consumed: 813  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
+..\src\Encoding.cpp:10:48: fout: default argument given for parameter 1 of ‘std::string Encoding::RandomData(int)’ [-fpermissive]
+..\src\/Encoding.h:26:25: fout: after previous specification in ‘virtual std::string Encoding::RandomData(int)’ [-fpermissive]
+..\src\Encoding.cpp:15:54: fout: default argument given for parameter 1 of ‘std::string BinaryEncoding::RandomData(int)’ [-fpermissive]
+..\src\/Encoding.h:43:22: fout: after previous specification in ‘virtual std::string BinaryEncoding::RandomData(int)’ [-fpermissive]
+..\src\Encoding.cpp:32:53: fout: default argument given for parameter 1 of ‘std::string ValueEncoding::RandomData(int)’ [-fpermissive]
+..\src\/Encoding.h:61:25: fout: after previous specification in ‘virtual std::string ValueEncoding::RandomData(int)’ [-fpermissive]
+..\src\Encoding.cpp:45:52: fout: default argument given for parameter 1 of ‘std::string TreeEncoding::RandomData(int)’ [-fpermissive]
+..\src\/Encoding.h:78:25: fout: after previous specification in ‘virtual std::string TreeEncoding::RandomData(int)’ [-fpermissive]
+Build error occurred, build is stopped
+Time consumed: 2923  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
+..\src\Encoding.cpp:10:48: fout: default argument given for parameter 1 of ‘std::string Encoding::RandomData(int)’ [-fpermissive]
+..\src\/Encoding.h:26:25: fout: after previous specification in ‘virtual std::string Encoding::RandomData(int)’ [-fpermissive]
+..\src\Encoding.cpp:15:54: fout: default argument given for parameter 1 of ‘std::string BinaryEncoding::RandomData(int)’ [-fpermissive]
+..\src\/Encoding.h:43:22: fout: after previous specification in ‘virtual std::string BinaryEncoding::RandomData(int)’ [-fpermissive]
+..\src\Encoding.cpp:32:53: fout: default argument given for parameter 1 of ‘std::string ValueEncoding::RandomData(int)’ [-fpermissive]
+..\src\/Encoding.h:61:25: fout: after previous specification in ‘virtual std::string ValueEncoding::RandomData(int)’ [-fpermissive]
+..\src\Encoding.cpp:45:52: fout: default argument given for parameter 1 of ‘std::string TreeEncoding::RandomData(int)’ [-fpermissive]
+..\src\/Encoding.h:78:25: fout: after previous specification in ‘virtual std::string TreeEncoding::RandomData(int)’ [-fpermissive]
+Build error occurred, build is stopped
+Time consumed: 1700  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 4060  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 667  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1120  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+..\src\Genome.cpp: In memberfunctie ‘void Genome::FillGenes(rapidxml::xml_document<>&, rapidxml::xml_node<>*, Encoding&)’:
+..\src\Genome.cpp:177:7: let op: unused variable ‘bits’ [-Wunused-variable]
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1117  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
+..\src\Encoding.cpp: In memberfunctie ‘virtual std::string BinaryEncoding::RandomData(rapidxml::xml_node<>*)’:
+..\src\Encoding.cpp:23:22: fout: ‘param1’ was not declared in this scope
+Build error occurred, build is stopped
+Time consumed: 334  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 4063  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
+..\src\Encoding.cpp: In memberfunctie ‘virtual std::string BinaryEncoding::RandomData(rapidxml::xml_node<>*)’:
+..\src\Encoding.cpp:20:6: let op: unused variable ‘bits’ [-Wunused-variable]
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 720  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 667  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
+..\src\Encoding.cpp: In memberfunctie ‘virtual std::string BinaryEncoding::RandomData(rapidxml::xml_node<>*)’:
+..\src\Encoding.cpp:21:7: let op: unused variable ‘bits’ [-Wunused-variable]
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 829  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
+..\src\Encoding.cpp: In memberfunctie ‘virtual std::string BinaryEncoding::RandomData(rapidxml::xml_node<>*)’:
+..\src\Encoding.cpp:19:6: let op: variable ‘bits’ set but not used [-Wunused-but-set-variable]
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 718  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 711  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 820  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1184  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1134  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 764  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1116  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 3631  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 3612  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1121  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 608  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1114  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1071  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1064  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 663  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1075  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1062  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1113  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1065  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1070  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1077  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1064  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 667  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 616  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 664  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 729  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 675  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 722  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 661  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 775  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 678  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 676  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 4117  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 4109  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 769  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 664  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1060  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1124  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 726  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 664  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 684  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 4136  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 4069  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 667  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1130  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1065  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 682  ms.  
 
 **** Build of configuration Debug for project Darwin ****
 

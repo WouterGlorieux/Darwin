@@ -32,7 +32,7 @@ public:
     void ModelToGenome();
     void GenomeToModel();
 
-    void randomGenome();
+    void randomGenome();	//fills the genome with random data
     void initGenome();
 
     void initTokamak();

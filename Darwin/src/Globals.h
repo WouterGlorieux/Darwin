@@ -50,7 +50,9 @@ enum EncodingType
 {
 	ENCODING_BINARY = 1,			//genes are encoded as binary numbers
 	ENCODING_VALUE = 2,				//genes are encoded as numeric values
-	ENCODING_TREE = 3				//genes are encoded as a tree structure
+	ENCODING_TREE = 3,				//genes are encoded as a tree structure
+	ENCODING_INTEGER = 4,			//genes are encoded as integer numbers
+	ENCODING_ALPHANUM = 5			//genes are encoded as alphanumeric characters
 };
 
 struct Parent

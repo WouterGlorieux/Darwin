@@ -47,6 +47,7 @@ private:
 public:
     Evolver() // default constructor
     {
+    	 srand(time(0)); // set initial seed value to system clock
          m_nPopulationSize = 0;
          m_strTitle = "";
 
