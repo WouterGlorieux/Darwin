@@ -3414,3 +3414,147 @@ Nothing to build for Darwin
 
 **** Internal Builder is used for build               ****
 Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+In file included from ..\src\Genome.cpp:8:0:
+..\src\/Genome.h:43:25: fout: ‘rapidxml::xml_document’ is not a type
+..\src\Genome.cpp:287:29: fout: variable or field ‘Save’ declared void
+..\src\Genome.cpp:287:42: fout: missing template arguments before ‘doc’
+Build error occurred, build is stopped
+Time consumed: 386  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 3864  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1164  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+In file included from ..\src\/Globals.h:22:0,
+                 from ..\src\/Genome.h:11,
+                 from ..\src\Genome.cpp:8:
+..\src\/rapidxml.hpp: In copy constructor ‘rapidxml::xml_document<>::xml_document(const rapidxml::xml_document<>&)’:
+..\src\/rapidxml.hpp:1322:9: fout: ‘rapidxml::xml_node<Ch>::xml_node(const rapidxml::xml_node<Ch>&) [with Ch = char, rapidxml::xml_node<Ch> = rapidxml::xml_node<>]’ is private
+..\src\/rapidxml.hpp:1358:11: fout: within this context
+..\src\Genome.cpp: In memberfunctie ‘void Genome::FillWithRandomData()’:
+..\src\Genome.cpp:266:10: note: synthesized method ‘rapidxml::xml_document<>::xml_document(const rapidxml::xml_document<>&)’ first required here 
+..\src\/Genome.h:43:10: fout:   initializing argument 1 of ‘void Genome::Save(rapidxml::xml_document<>)’
+Build error occurred, build is stopped
+Time consumed: 387  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+In file included from ..\src\/Globals.h:22:0,
+                 from ..\src\/Genome.h:11,
+                 from ..\src\Genome.cpp:8:
+..\src\/rapidxml.hpp: In copy constructor ‘rapidxml::xml_document<>::xml_document(const rapidxml::xml_document<>&)’:
+..\src\/rapidxml.hpp:1322:9: fout: ‘rapidxml::xml_node<Ch>::xml_node(const rapidxml::xml_node<Ch>&) [with Ch = char, rapidxml::xml_node<Ch> = rapidxml::xml_node<>]’ is private
+..\src\/rapidxml.hpp:1358:11: fout: within this context
+..\src\Genome.cpp: In memberfunctie ‘void Genome::FillWithRandomData()’:
+..\src\Genome.cpp:266:10: note: synthesized method ‘rapidxml::xml_document<>::xml_document(const rapidxml::xml_document<>&)’ first required here 
+..\src\/Genome.h:43:10: fout:   initializing argument 1 of ‘void Genome::Save(rapidxml::xml_document<>)’
+Build error occurred, build is stopped
+Time consumed: 380  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+In file included from ..\src\/Globals.h:22:0,
+                 from ..\src\/Genome.h:11,
+                 from ..\src\Genome.cpp:8:
+..\src\/rapidxml.hpp: In copy constructor ‘rapidxml::xml_document<>::xml_document(const rapidxml::xml_document<>&)’:
+..\src\/rapidxml.hpp:1322:9: fout: ‘rapidxml::xml_node<Ch>::xml_node(const rapidxml::xml_node<Ch>&) [with Ch = char, rapidxml::xml_node<Ch> = rapidxml::xml_node<>]’ is private
+..\src\/rapidxml.hpp:1358:11: fout: within this context
+..\src\Genome.cpp: In memberfunctie ‘void Genome::FillWithRandomData()’:
+..\src\Genome.cpp:266:18: note: synthesized method ‘rapidxml::xml_document<>::xml_document(const rapidxml::xml_document<>&)’ first required here 
+..\src\/Genome.h:43:10: fout:   initializing argument 1 of ‘void Genome::Save(rapidxml::xml_document<>)’
+Build error occurred, build is stopped
+Time consumed: 385  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Rosetta.o ..\src\Rosetta.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 3812  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1161  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1171  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1168  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1114  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1162  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1165  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin

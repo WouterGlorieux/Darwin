@@ -24,7 +24,16 @@ void Genome::newGenome(const char* pchId ){
 	root->append_attribute(doc.allocate_attribute("type", pchId));
 	doc.append_node(root);
 
-	Genome::Save(doc);
+	std::string xml_as_string;
+	// watch for name collisions here, print() is a very common function name!
+	rapidxml::print(std::back_inserter(xml_as_string), doc);
+	// xml_as_string now contains the XML in string form, indented
+	// (in all its angle bracket glory)
+
+	//set m_strXML to string value
+	SetXML(xml_as_string);
+
+
 }
 
 void Genome::addChromosome(const char* pchId, EncodingType encoding ){

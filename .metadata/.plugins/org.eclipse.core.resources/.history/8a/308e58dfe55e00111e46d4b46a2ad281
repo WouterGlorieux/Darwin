@@ -40,7 +40,7 @@ public:
 
     void FillWithRandomData();
 
-    void Save(rapidxml::xml_document<>& doc);
+    void Save(rapidxml::xml_document doc);
     void SetXML(std::string input_xml);
     std::string GetXML() {return m_strXML;}
 };
