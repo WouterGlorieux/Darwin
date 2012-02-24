@@ -79,7 +79,7 @@ std::string DoubleEncoding::RandomData(rapidxml::xml_node<>* geneNode){
 		nDecimals = atoi(geneNode->first_attribute("decimals")->value());
 	}
 
-	if(data < nHigh && nDecimals){
+	if(data < nHigh){
 			data = (rand() % ((int)pow(10,nDecimals) - 1));
 			ss  << "." << data;//add decimal part to the stream
 	}
