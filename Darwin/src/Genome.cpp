@@ -53,17 +53,25 @@ void Genome::addChromosome(const char* pchId, EncodingType encoding ){
 	        case ENCODING_BINARY:
 	        	strEncoding = "binary";
 	            break;
-	        case ENCODING_VALUE:
-	        	strEncoding = "value";
-	            break;
-	        case ENCODING_TREE:
-	        	strEncoding = "tree";
-	            break;
+
 	        case ENCODING_INTEGER:
 	        	strEncoding = "integer";
 	            break;
+
+	        case ENCODING_DOUBLE:
+	        	strEncoding = "double";
+	            break;
+
 	        case ENCODING_ALPHANUM:
 	        	strEncoding = "alphanum";
+	            break;
+
+	        case ENCODING_CUSTOM:
+	        	strEncoding = "custom";
+	            break;
+
+	        case ENCODING_TREE:
+	        	strEncoding = "tree";
 	            break;
 
 	        default:
@@ -212,14 +220,6 @@ void Genome::FillWithRandomData(){
 			BinaryEncoding cBinaryEncoding;
 			Encoding& rEncoding = cBinaryEncoding;
 			FillGenes(doc, child, rEncoding);
-
-
-		}
-		else if(strEncoding == "value"){
-			//std::cout << "putting random data in value genes" << std::endl;
-			ValueEncoding cValueEncoding;
-			Encoding& rEncoding = cValueEncoding;
-			FillGenes(doc, child, rEncoding);
 		}
 		else if(strEncoding == "integer"){
 			//std::cout << "putting random data in value genes" << std::endl;
@@ -227,10 +227,10 @@ void Genome::FillWithRandomData(){
 			Encoding& rEncoding = cIntegerEncoding;
 			FillGenes(doc, child, rEncoding);
 		}
-		else if(strEncoding == "tree"){
-			//std::cout << "putting random data in tree genes" << std::endl;
-			TreeEncoding cTreeEncoding;
-			Encoding& rEncoding = cTreeEncoding;
+		else if(strEncoding == "double"){
+			//std::cout << "putting random data in value genes" << std::endl;
+			DoubleEncoding cDoubleEncoding;
+			Encoding& rEncoding = cDoubleEncoding;
 			FillGenes(doc, child, rEncoding);
 		}
 		else if(strEncoding == "alphanum"){
@@ -239,6 +239,23 @@ void Genome::FillWithRandomData(){
 			Encoding& rEncoding = cAlphanumEncoding;
 			FillGenes(doc, child, rEncoding);
 		}
+		else if(strEncoding == "custom"){
+			//std::cout << "putting random data in tree genes" << std::endl;
+			CustomEncoding cCustomEncoding;
+			if(child->first_attribute("chars")){
+				std::string	strCharacters = child->first_attribute("chars")->value();
+				cCustomEncoding.SetChars(strCharacters);
+			}
+			Encoding& rEncoding = cCustomEncoding;
+			FillGenes(doc, child, rEncoding);
+		}
+		else if(strEncoding == "tree"){
+			//std::cout << "putting random data in tree genes" << std::endl;
+			TreeEncoding cTreeEncoding;
+			Encoding& rEncoding = cTreeEncoding;
+			FillGenes(doc, child, rEncoding);
+		}
+
 		else{
 			std::cout << "unknown encoding type" << std::endl;
 		}

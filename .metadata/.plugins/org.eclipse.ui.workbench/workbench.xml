@@ -31,6 +31,13 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
 </presentation>
 </folder>
 </info>
@@ -39,9 +46,37 @@
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Darwin/src/Darwin.cpp"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="819" selectionTopPixel="225"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="Encoding.h" partName="Encoding.h" path="C:/workspaces/Darwin/Darwin/src/Encoding.h" title="Encoding.h" tooltip="Darwin/src/Encoding.h" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Encoding.h" partName="Encoding.h" path="C:/workspaces/Darwin/Darwin/src/Encoding.h" title="Encoding.h" tooltip="Darwin/src/Encoding.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Darwin/src/Encoding.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="444" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1488" selectionTopPixel="1184"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Evolver.cpp" partName="Evolver.cpp" path="C:/workspaces/Darwin/Darwin/src/Evolver.cpp" title="Evolver.cpp" tooltip="Darwin/src/Evolver.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Darwin/src/Evolver.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4928" selectionTopPixel="945"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="Rosetta.cpp" partName="Rosetta.cpp" path="C:/workspaces/Darwin/Darwin/src/Rosetta.cpp" title="Rosetta.cpp" tooltip="Darwin/src/Rosetta.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Darwin/src/Rosetta.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1332" selectionTopPixel="434"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Genome.cpp" partName="Genome.cpp" path="C:/workspaces/Darwin/Darwin/src/Genome.cpp" title="Genome.cpp" tooltip="Darwin/src/Genome.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Darwin/src/Genome.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2012" selectionTopPixel="674"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Encoding.cpp" partName="Encoding.cpp" path="C:/workspaces/Darwin/Darwin/src/Encoding.cpp" title="Encoding.cpp" tooltip="Darwin/src/Encoding.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Darwin/src/Encoding.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2458" selectionTopPixel="1019"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Genome.h" partName="Genome.h" path="C:/workspaces/Darwin/Darwin/src/Genome.h" title="Genome.h" tooltip="Darwin/src/Genome.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Darwin/src/Genome.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="227" selectionOffset="700" selectionTopPixel="119"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Evolver.h" partName="Evolver.h" path="C:/workspaces/Darwin/Darwin/src/Evolver.h" title="Evolver.h" tooltip="Darwin/src/Evolver.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Darwin/src/Evolver.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1553" selectionTopPixel="390"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Globals.h" partName="Globals.h" path="C:/workspaces/Darwin/Darwin/src/Globals.h" title="Globals.h" tooltip="Darwin/src/Globals.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Darwin/src/Globals.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1324" selectionTopPixel="315"/>
 </editor>
 </editors>
 <views>
@@ -57,6 +92,8 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
+<category IMemento.internal.id="Warnings (4 items)"/>
+<category IMemento.internal.id="Warnings"/>
 <category IMemento.internal.id="Errors"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="129" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="1238"/>
@@ -72,9 +109,7 @@
 </view>
 <view id="org.eclipse.mylyn.tasks.ui.views.tasks" partName="Task List">
 <viewState linkWithEditor="true" presentation="org.eclipse.mylyn.tasks.ui.categorized">
-<sorter groupBy="CATEGORY_QUERY">
-<sorter>
-<sort0 sortDirection="1" sortKey="PRIORITY"/>
+<sorter groupBy="CATEGORY_QUERY">&#x0A;<sorter>&#x0A;<sort0 sortDirection="1" sortKey="PRIORITY"/>
 <sort1 sortDirection="1" sortKey="RANK"/>
 <sort2 sortDirection="1" sortKey="DATE_CREATED"/>
 <sort3 sortDirection="1" sortKey="NONE"/>
@@ -226,170 +261,162 @@
 <navigationHistory>
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Encoding.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Encoding.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/BinaryEncoding.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/BinaryEncoding.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/ValueEncoding.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Globals.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/ValueEncoding.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Encoding.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Darwin.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Evolver.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Rosetta.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/BinaryEncoding.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/ValueEncoding.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Encoding.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/BinaryEncoding.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Encoding.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Genome.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Encoding.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Genome.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Globals.h"/>
 </editors>
+<item historyLabel="Genome.cpp" index="3">
+<position info="not_deleted" x="7827" y="0"/>
+</item>
+<item historyLabel="Genome.h" index="5">
+<position info="not_deleted" x="268" y="0"/>
+</item>
+<item historyLabel="Genome.cpp" index="3">
+<position info="not_deleted" x="7827" y="0"/>
+</item>
+<item historyLabel="Genome.h" index="5">
+<position info="not_deleted" x="268" y="0"/>
+</item>
+<item historyLabel="Genome.h" index="5">
+<position info="not_deleted" x="700" y="227"/>
+</item>
+<item historyLabel="Genome.cpp" index="3">
+<position info="not_deleted" x="7827" y="0"/>
+</item>
+<item historyLabel="Genome.cpp" index="3">
+<position info="not_deleted" x="4612" y="0"/>
+</item>
+<item historyLabel="Rosetta.cpp" index="2">
+<position info="not_deleted" x="1336" y="0"/>
+</item>
+<item historyLabel="Evolver.cpp" index="1">
+<position info="not_deleted" x="4928" y="0"/>
+</item>
+<item historyLabel="Encoding.cpp" index="4">
+<position info="not_deleted" x="368" y="0"/>
+</item>
+<item historyLabel="Genome.cpp" index="3">
+<position info="not_deleted" x="4600" y="0"/>
+</item>
+<item historyLabel="Rosetta.cpp" index="2">
+<position info="not_deleted" x="909" y="0"/>
+</item>
+<item historyLabel="Genome.cpp" index="3">
+<position info="not_deleted" x="6101" y="0"/>
+</item>
+<item historyLabel="Rosetta.cpp" index="2">
+<position info="not_deleted" x="909" y="0"/>
+</item>
+<item historyLabel="Rosetta.cpp" index="2">
+<position info="not_deleted" x="907" y="0"/>
+</item>
+<item historyLabel="Rosetta.cpp" index="2">
+<position info="not_deleted" x="892" y="0"/>
+</item>
+<item historyLabel="Rosetta.cpp" index="2">
+<position info="not_deleted" x="907" y="0"/>
+</item>
+<item historyLabel="Rosetta.cpp" index="2">
+<position info="not_deleted" x="909" y="0"/>
+</item>
+<item historyLabel="Genome.cpp" index="3">
+<position info="not_deleted" x="6101" y="0"/>
+</item>
+<item historyLabel="Genome.cpp" index="3">
+<position/>
+</item>
+<item historyLabel="Rosetta.cpp" index="2">
+<position info="not_deleted" x="909" y="0"/>
+</item>
+<item historyLabel="Genome.cpp" index="3">
+<position info="not_deleted" x="5929" y="0"/>
+</item>
+<item historyLabel="Rosetta.cpp" index="2">
+<position info="not_deleted" x="838" y="0"/>
+</item>
+<item historyLabel="Encoding.cpp" index="4">
+<position info="not_deleted" x="364" y="0"/>
+</item>
+<item historyLabel="Rosetta.cpp" index="2">
+<position info="not_deleted" x="838" y="0"/>
+</item>
+<item historyLabel="Rosetta.cpp" index="2">
+<position/>
+</item>
+<item historyLabel="Rosetta.cpp" index="2">
+<position info="not_deleted" x="1144" y="0"/>
+</item>
+<item historyLabel="Rosetta.cpp" index="2">
+<position info="not_deleted" x="1062" y="0"/>
+</item>
+<item historyLabel="Rosetta.cpp" index="2">
+<position info="not_deleted" x="1074" y="0"/>
+</item>
+<item historyLabel="Rosetta.cpp" index="2">
+<position info="not_deleted" x="1206" y="0"/>
+</item>
+<item historyLabel="Genome.cpp" index="3">
+<position info="not_deleted" x="6111" y="0"/>
+</item>
+<item historyLabel="Encoding.cpp" index="4">
+<position info="not_deleted" x="1373" y="0"/>
+</item>
+<item historyLabel="Rosetta.cpp" index="2">
+<position info="not_deleted" x="1139" y="0"/>
+</item>
+<item historyLabel="Globals.h" index="6">
+<position info="not_deleted" x="1324" y="0"/>
+</item>
 <item historyLabel="Encoding.h" index="0">
-<position info="not_deleted" x="327" y="0"/>
+<position info="not_deleted" x="1346" y="0"/>
 </item>
-<item historyLabel="ValueEncoding.h" index="4">
-<position info="not_deleted" x="170" y="0"/>
+<item historyLabel="Genome.cpp" index="3">
+<position info="not_deleted" x="6111" y="0"/>
 </item>
-<item historyLabel="Encoding.h" index="0">
-<position info="not_deleted" x="327" y="0"/>
+<item historyLabel="Encoding.cpp" index="4">
+<position info="not_deleted" x="1800" y="0"/>
 </item>
-<item historyLabel="ValueEncoding.h" index="4">
-<position info="not_deleted" x="168" y="0"/>
+<item historyLabel="Rosetta.cpp" index="2">
+<position info="not_deleted" x="970" y="0"/>
 </item>
-<item historyLabel="Encoding.h" index="0">
-<position info="not_deleted" x="327" y="0"/>
+<item historyLabel="Genome.cpp" index="3">
+<position info="not_deleted" x="1920" y="0"/>
 </item>
-<item historyLabel="ValueEncoding.h" index="4">
-<position info="not_deleted" x="168" y="0"/>
+<item historyLabel="Encoding.cpp" index="4">
+<position info="not_deleted" x="1800" y="0"/>
 </item>
-<item historyLabel="Encoding.h" index="0">
-<position info="not_deleted" x="327" y="0"/>
+<item historyLabel="Genome.cpp" index="3">
+<position info="not_deleted" x="7733" y="0"/>
 </item>
-<item historyLabel="Encoding.cpp" index="1">
-<position info="not_deleted" x="88" y="0"/>
+<item historyLabel="Rosetta.cpp" index="2">
+<position info="not_deleted" x="1073" y="0"/>
 </item>
-<item historyLabel="Encoding.h" index="0">
-<position info="not_deleted" x="327" y="0"/>
+<item historyLabel="Encoding.cpp" index="4">
+<position info="not_deleted" x="1800" y="0"/>
 </item>
-<item historyLabel="BinaryEncoding.h" index="2">
-<position info="not_deleted" x="2" y="0"/>
+<item historyLabel="Globals.h" index="6">
+<position info="not_deleted" x="1324" y="0"/>
 </item>
-<item historyLabel="ValueEncoding.h" index="4">
-<position info="not_deleted" x="168" y="0"/>
-</item>
-<item historyLabel="BinaryEncoding.cpp" index="3">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="BinaryEncoding.h" index="2">
-<position info="not_deleted" x="2" y="0"/>
-</item>
-<item historyLabel="ValueEncoding.h" index="4">
-<position info="not_deleted" x="168" y="0"/>
+<item historyLabel="Genome.cpp" index="3">
+<position info="not_deleted" x="7787" y="218"/>
 </item>
 <item historyLabel="Encoding.h" index="0">
-<position info="not_deleted" x="162" y="8"/>
+<position info="not_deleted" x="1488" y="0"/>
 </item>
-<item historyLabel="ValueEncoding.h" index="4">
-<position info="not_deleted" x="228" y="0"/>
+<item historyLabel="Encoding.cpp" index="4">
+<position info="not_deleted" x="2458" y="0"/>
 </item>
-<item historyLabel="Encoding.h" index="0">
-<position info="not_deleted" x="132" y="0"/>
+<item historyLabel="Evolver.cpp" index="1">
+<position info="not_deleted" x="4928" y="0"/>
 </item>
-<item historyLabel="ValueEncoding.h" index="4">
-<position info="not_deleted" x="228" y="0"/>
+<item historyLabel="Genome.cpp" index="3">
+<position info="not_deleted" x="2012" y="0"/>
 </item>
-<item historyLabel="ValueEncoding.h" index="4">
-<position info="not_deleted" x="374" y="0"/>
-</item>
-<item historyLabel="Encoding.h" index="0">
-<position info="not_deleted" x="319" y="0"/>
-</item>
-<item historyLabel="ValueEncoding.h" index="4">
-<position info="not_deleted" x="172" y="202"/>
-</item>
-<item historyLabel="BinaryEncoding.h" index="2">
-<position info="not_deleted" x="322" y="0"/>
-</item>
-<item historyLabel="ValueEncoding.h" index="4">
-<position info="not_deleted" x="147" y="21"/>
-</item>
-<item historyLabel="BinaryEncoding.h" index="2">
-<position info="not_deleted" x="169" y="0"/>
-</item>
-<item historyLabel="Globals.h" index="5">
-<position info="not_deleted" x="1185" y="0"/>
-</item>
-<item historyLabel="BinaryEncoding.h" index="2">
-<position info="not_deleted" x="169" y="0"/>
-</item>
-<item historyLabel="Encoding.h" index="0">
-<position info="not_deleted" x="200" y="0"/>
-</item>
-<item historyLabel="BinaryEncoding.h" index="2">
-<position info="not_deleted" x="230" y="0"/>
-</item>
-<item historyLabel="ValueEncoding.h" index="6">
-<position info="not_deleted" x="147" y="21"/>
-</item>
-<item historyLabel="Encoding.cpp" index="7">
-<position info="not_deleted" x="88" y="0"/>
-</item>
-<item historyLabel="Darwin.cpp" index="8">
-<position info="not_deleted" x="819" y="0"/>
-</item>
-<item historyLabel="Rosetta.cpp" index="9">
-<position info="not_deleted" x="1708" y="0"/>
-</item>
-<item historyLabel="Darwin.cpp" index="8">
-<position info="not_deleted" x="819" y="0"/>
-</item>
-<item historyLabel="BinaryEncoding.h" index="10">
-<position info="not_deleted" x="203" y="8"/>
-</item>
-<item historyLabel="ValueEncoding.h" index="11">
-<position info="not_deleted" x="201" y="8"/>
-</item>
-<item historyLabel="Encoding.h" index="12">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="BinaryEncoding.h" index="10">
-<position info="not_deleted" x="203" y="8"/>
-</item>
-<item historyLabel="ValueEncoding.h" index="11">
-<position info="not_deleted" x="201" y="8"/>
-</item>
-<item historyLabel="ValueEncoding.h" index="11">
-<position info="not_deleted" x="172" y="200"/>
-</item>
-<item historyLabel="Encoding.h" index="12">
-<position info="not_deleted" x="327" y="0"/>
-</item>
-<item historyLabel="ValueEncoding.h" index="11">
-<position info="not_deleted" x="172" y="200"/>
-</item>
-<item historyLabel="Encoding.h" index="12">
-<position info="not_deleted" x="325" y="0"/>
-</item>
-<item historyLabel="ValueEncoding.h" index="11">
-<position info="not_deleted" x="172" y="200"/>
-</item>
-<item historyLabel="BinaryEncoding.h" index="10">
-<position info="not_deleted" x="203" y="8"/>
-</item>
-<item historyLabel="ValueEncoding.h" index="11">
-<position info="not_deleted" x="172" y="200"/>
-</item>
-<item historyLabel="BinaryEncoding.h" index="13">
-<position info="not_deleted" x="203" y="8"/>
-</item>
-<item historyLabel="ValueEncoding.h" index="11">
-<position info="not_deleted" x="168" y="0"/>
-</item>
-<item historyLabel="Encoding.h" index="14">
-<position info="not_deleted" x="931" y="0"/>
-</item>
-<item historyLabel="BinaryEncoding.h" index="13">
-<position info="not_deleted" x="203" y="8"/>
-</item>
-<item active="true" historyLabel="Encoding.h" index="14">
-<position info="not_deleted" x="931" y="0"/>
+<item active="true" historyLabel="Rosetta.cpp" index="2">
+<position info="not_deleted" x="1073" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -409,6 +436,27 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Globals.h" tooltip="Darwin/src/Globals.h">
+<persistable path="/Darwin/src/Globals.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Evolver.h" tooltip="Darwin/src/Evolver.h">
+<persistable path="/Darwin/src/Evolver.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Genome.h" tooltip="Darwin/src/Genome.h">
+<persistable path="/Darwin/src/Genome.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Encoding.cpp" tooltip="Darwin/src/Encoding.cpp">
+<persistable path="/Darwin/src/Encoding.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Genome.cpp" tooltip="Darwin/src/Genome.cpp">
+<persistable path="/Darwin/src/Genome.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Rosetta.cpp" tooltip="Darwin/src/Rosetta.cpp">
+<persistable path="/Darwin/src/Rosetta.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Evolver.cpp" tooltip="Darwin/src/Evolver.cpp">
+<persistable path="/Darwin/src/Evolver.cpp"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Encoding.h" tooltip="Darwin/src/Encoding.h">
 <persistable path="/Darwin/src/Encoding.h"/>
 </file>
@@ -430,29 +478,8 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="BinaryEncoding.cpp" tooltip="Darwin/src/BinaryEncoding.cpp">
 <persistable path="/Darwin/src/BinaryEncoding.cpp"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Encoding.cpp" tooltip="Darwin/src/Encoding.cpp">
-<persistable path="/Darwin/src/Encoding.cpp"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="rapidxml_print.hpp" tooltip="Darwin/src/rapidxml_print.hpp">
 <persistable path="/Darwin/src/rapidxml_print.hpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="rapidxml.hpp" tooltip="Darwin/src/rapidxml.hpp">
-<persistable path="/Darwin/src/rapidxml.hpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Recombination.cpp" tooltip="Darwin/src/Recombination.cpp">
-<persistable path="/Darwin/src/Recombination.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Recombination.h" tooltip="Darwin/src/Recombination.h">
-<persistable path="/Darwin/src/Recombination.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Globals.h" tooltip="Darwin/src/Globals.h">
-<persistable path="/Darwin/src/Globals.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Genome.cpp" tooltip="Darwin/src/Genome.cpp">
-<persistable path="/Darwin/src/Genome.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Genome.h" tooltip="Darwin/src/Genome.h">
-<persistable path="/Darwin/src/Genome.h"/>
 </file>
 </mruList>
 </workbench>

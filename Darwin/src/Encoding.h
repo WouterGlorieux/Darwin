@@ -31,51 +31,19 @@ class BinaryEncoding : public Encoding
 {
 private:
 
-
+	int m_nbits;	// number of random bits
 
 public:
 
 	BinaryEncoding() // default constructor
-    {    }
+    {
+		m_nbits = 64;	//set default nBits to 64
+
+    }
 	virtual ~BinaryEncoding() // default deconstructor
     {    }
 
 	virtual std::string RandomData(rapidxml::xml_node<>* geneNode);
-
-};
-
-
-class ValueEncoding : public Encoding
-{
-private:
-
-
-
-public:
-
-    ValueEncoding() // default constructor
-    {    }
-    virtual ~ValueEncoding() // default deconstructor
-    {    }
-
-    virtual std::string RandomData(rapidxml::xml_node<>* geneNode);
-
-};
-
-class TreeEncoding : public Encoding
-{
-private:
-
-
-
-public:
-
-	TreeEncoding() // default constructor
-    {    }
-	virtual ~TreeEncoding() // default deconstructor
-    {    }
-
-    virtual std::string RandomData(rapidxml::xml_node<>* geneNode);
 
 };
 
@@ -96,7 +64,7 @@ public:
 
 };
 
-class AlphanumEncoding : public Encoding
+class DoubleEncoding : public Encoding
 {
 private:
 
@@ -104,13 +72,78 @@ private:
 
 public:
 
-	AlphanumEncoding() // default constructor
+	DoubleEncoding() // default constructor
     {    }
+    virtual ~DoubleEncoding() // default deconstructor
+    {    }
+
+    virtual std::string RandomData(rapidxml::xml_node<>* geneNode);
+
+};
+
+
+class AlphanumEncoding : public Encoding
+{
+private:
+
+	std::vector<char> m_vChars;
+
+public:
+
+	AlphanumEncoding() // default constructor
+    {
+		std::string characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+		std::copy ( characters.begin(), characters.end(), std::back_inserter ( m_vChars ) );
+    }
     virtual ~AlphanumEncoding() // default deconstructor
     {    }
 
     virtual std::string RandomData(rapidxml::xml_node<>* geneNode);
 
 };
+
+class CustomEncoding : public Encoding
+{
+private:
+
+	std::vector<char> m_vChars;
+
+public:
+
+	CustomEncoding() // default constructor
+    {
+		m_vChars.push_back(' ');	//add space in case there is no custom character set, will be cleared when characters are set
+    }
+    virtual ~CustomEncoding() // default deconstructor
+    {    }
+
+    virtual std::string RandomData(rapidxml::xml_node<>* geneNode);
+
+    void SetChars(std::string characters);
+
+};
+
+
+
+
+
+class TreeEncoding : public Encoding
+{
+private:
+
+
+
+public:
+
+	TreeEncoding() // default constructor
+    {    }
+	virtual ~TreeEncoding() // default deconstructor
+    {    }
+
+    virtual std::string RandomData(rapidxml::xml_node<>* geneNode);
+
+};
+
+
 
 #endif /* ENCODING_H_ */
