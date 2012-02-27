@@ -308,8 +308,9 @@ void Evolver::Tournament(std::vector<Parent> selection, Rosetta* population){
 		//since selection is already sorted by ascending fitness, all that needs to be done is to sort the tournament vector and then add parent at the first index
 		std::sort(tournament.begin(), tournament.end());
 		m_cRecombination.AddParent(population[selection[tournament[0]].nIndex].cGenome.GetXML());
+		std::cout << "added parent: " << selection[tournament[0]].nIndex << " " << tournament[0] << std::endl;
 
 	}
-
+	std::cout << std::endl;
 
 }

@@ -311,5 +311,4 @@ void Evolver::Tournament(std::vector<Parent> selection, Rosetta* population){
 
 	}
 
-
 }
