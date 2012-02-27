@@ -48,7 +48,6 @@ void Evolver::traverse_xml(const std::string& input_xml)
     m_bElitism = (settingsNode->first_node("Elitism")->value() == std::string("true"))? true: false;
     m_nMaxParents = atoi(settingsNode->first_node("MaxParents")->value());
     m_eRecombination = static_cast<RecombinationType> (atoi(settingsNode->first_node("Recombination")->value()));
-    //check if there is a "tournament" attribute, if not, set tournament size to 1.
     m_nTournamentSize = settingsNode->first_node("Recombination")->first_attribute("tournament")?atoi(settingsNode->first_node("Recombination")->first_attribute("tournament")->value()):1;
 
 }
@@ -290,25 +289,23 @@ void Evolver::SUS(std::vector<Parent> selection, Rosetta* population){
 }
 void Evolver::Tournament(std::vector<Parent> selection, Rosetta* population){
 
-	int nLow = 0;
-	int nHigh = selection.size()-1;
-	int nRandom = 0;
+	std::cout << "tournament size is " << m_nTournamentSize << std::endl;
 
-	std::vector<int> tournament;
+	int nLow = 0;
+	int nHigh = 10000;	//5 decimals
+	double dRandom = 0;
 
 	for(int i = 0; i<m_nMaxParents; i++){
-		tournament.clear();
+		dRandom = ((rand() % (nHigh - nLow + 1)) + nLow)/(double)nHigh;		//random number between 0 and 1, 5 decimals
 
-		//pick m_nTournamentSize parents at random from selection and add them to the vector
-		for(int j = 0; j<m_nTournamentSize; j++ ){
-			nRandom = (rand() % (nHigh - nLow + 1)) + nLow;		//random number between 0 and selection.size-1
-			tournament.push_back(nRandom);
+		for(unsigned int j = 0; j < selection.size(); j++){
+			if(selection[j].dAccumulatedNormalizedFitness + selection[j].dNormalizedFitness >= dRandom){
+				//add parent to recombination
+				m_cRecombination.AddParent(population[selection[j].nIndex].cGenome.GetXML());
+				break;
+			}
+
 		}
 
-		//since selection is already sorted by ascending fitness, all that needs to be done is to sort the tournament vector and then add parent at the first index
-		std::sort(tournament.begin(), tournament.end());
-		m_cRecombination.AddParent(population[tournament[0]].cGenome.GetXML());
-
 	}
-
 }

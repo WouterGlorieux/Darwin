@@ -290,25 +290,37 @@ void Evolver::SUS(std::vector<Parent> selection, Rosetta* population){
 }
 void Evolver::Tournament(std::vector<Parent> selection, Rosetta* population){
 
+	std::cout << "tournament size is " << m_nTournamentSize << std::endl;
+
 	int nLow = 0;
-	int nHigh = selection.size()-1;
+	int nHigh = selection.size();
 	int nRandom = 0;
 
 	std::vector<int> tournament;
 
+	std::cout << "getting random number between" << nlow << " and " << nHigh << std::endl;
 	for(int i = 0; i<m_nMaxParents; i++){
-		tournament.clear();
-
-		//pick m_nTournamentSize parents at random from selection and add them to the vector
 		for(int j = 0; j<m_nTournamentSize; j++ ){
-			nRandom = (rand() % (nHigh - nLow + 1)) + nLow;		//random number between 0 and selection.size-1
-			tournament.push_back(nRandom);
-		}
 
-		//since selection is already sorted by ascending fitness, all that needs to be done is to sort the tournament vector and then add parent at the first index
-		std::sort(tournament.begin(), tournament.end());
-		m_cRecombination.AddParent(population[tournament[0]].cGenome.GetXML());
+			nRandom = ((rand() % (nHigh - nLow + 1)) + nLow)/nHigh;		//random number between 1 and tournamentSize
+			tournament.push_back(nRandom);
+			std::cout << nRandom << " ";
+
+		}
+		std::cout << "\ntournament: " << tournament.size() << std::endl;
+
+
+
+	/*	for(unsigned int j = 0; j < dRandom; j++){
+
+
+			if(selection[j].dAccumulatedNormalizedFitness + selection[j].dNormalizedFitness >= dRandom){
+				//add parent to recombination
+				m_cRecombination.AddParent(population[selection[j].nIndex].cGenome.GetXML());
+				break;
+			}
+
+		}*/
 
 	}
-
 }

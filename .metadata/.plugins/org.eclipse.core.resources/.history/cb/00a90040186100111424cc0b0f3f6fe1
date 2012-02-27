@@ -31,7 +31,6 @@ private:
     int m_nMaxGenerations;        	//maximum number of generations to calculate (-1 for unlimited)
     int m_nMaxParents;              //maximum number of parents for recombination (must be greater of equal to 1)
     RecombinationType m_eRecombination;  //Method used to pick parents for recombination
-    int m_nTournamentSize;			//number of genomes selected for each tournament
 
     double m_dTruncation  ;         //percentage of population that gets to have offspring (0% -> 100%) (100%: every genome has offspring)
     NormalizationType m_eNormalization; //Normalization method used in truncation

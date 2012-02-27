@@ -8,10 +8,10 @@
   <Settings>
     <PopulationSize>100</PopulationSize>
     <MaxGenerations>10</MaxGenerations>
-    <Truncation normalization="1">10</Truncation>
+    <Truncation normalization="1">100</Truncation>
     <Elitism>true</Elitism>
     <MaxParents>2</MaxParents>
-    <Recombination>2</Recombination>
+    <Recombination tournament="5">3</Recombination>
   </Settings>
   <Mutations>
     <Duplication allowed="true">0.5</Duplication>

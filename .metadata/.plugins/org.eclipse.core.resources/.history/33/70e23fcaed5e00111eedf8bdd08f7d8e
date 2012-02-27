@@ -184,25 +184,25 @@ void Genome::FillWithRandomData(){
 			FillGenes(doc, child, rEncoding);
 		}
 		else if(strEncoding == "integer"){
-			//std::cout << "putting random data in integer genes" << std::endl;
+			//std::cout << "putting random data in value genes" << std::endl;
 			IntegerEncoding cIntegerEncoding;
 			Encoding& rEncoding = cIntegerEncoding;
 			FillGenes(doc, child, rEncoding);
 		}
 		else if(strEncoding == "double"){
-			//std::cout << "putting random data in double genes" << std::endl;
+			//std::cout << "putting random data in value genes" << std::endl;
 			DoubleEncoding cDoubleEncoding;
 			Encoding& rEncoding = cDoubleEncoding;
 			FillGenes(doc, child, rEncoding);
 		}
 		else if(strEncoding == "alphanum"){
-			//std::cout << "putting random data in alphanum genes" << std::endl;
+			//std::cout << "putting random data in tree genes" << std::endl;
 			AlphanumEncoding cAlphanumEncoding;
 			Encoding& rEncoding = cAlphanumEncoding;
 			FillGenes(doc, child, rEncoding);
 		}
 		else if(strEncoding == "custom"){
-			//std::cout << "putting random data in custom genes" << std::endl;
+			//std::cout << "putting random data in tree genes" << std::endl;
 			CustomEncoding cCustomEncoding;
 			if(child->first_attribute("chars")){
 				std::string	strCharacters = child->first_attribute("chars")->value();
