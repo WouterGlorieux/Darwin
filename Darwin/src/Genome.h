@@ -10,6 +10,7 @@
 
 #include "Globals.h"
 #include "Encoding.h"
+#include "Mutation.h"
 
 class Genome
 {
@@ -17,6 +18,7 @@ private:
 
 	std::string m_strXML;
 	void FillGenes(rapidxml::xml_document<>& doc, rapidxml::xml_node<>* chromosomeNode, Encoding& encoding);
+	void GeneMutations(rapidxml::xml_document<>& doc, rapidxml::xml_node<>* geneNode, Mutation& mutation);
 
 public:
 
@@ -39,6 +41,7 @@ public:
     void addGeneAttribute(std::string strChromosomeId, std::string strGeneId, std::string strName, std::string strValue);
 
     void FillWithRandomData();
+    void DoMutations();
 
     void Save(rapidxml::xml_document<>& doc);
     void SetXML(std::string input_xml);

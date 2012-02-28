@@ -82,3 +82,8 @@ void Rosetta::SetGenome(const std::string& input_xml){
 void Rosetta::randomGenome(){
 	cGenome.FillWithRandomData();
 }
+
+void Rosetta::DoMutations(){
+	cGenome.DoMutations();
+
+}

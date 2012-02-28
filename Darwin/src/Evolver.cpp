@@ -110,8 +110,6 @@ void Evolver::start(){
 
 
 	//do recombinations
-
-
 	for(int i = m_bElitism; i<m_nPopulationSize; i++ ){		//if elitism is true, the for loop begins at 1 instead of 0
 		m_cRecombination.Clear();		//make sure new recombination is empty
 
@@ -137,10 +135,12 @@ void Evolver::start(){
 	}
 
 	//do mutations
-//	for(int i = 0; i<m_nPopulationSize; i++ ){
-//		pacNextGeneration[i].DoMutations();
-//
-//	}
+	std::cout << pacNextGeneration[0].cGenome.GetXML() << std::endl;
+	for(int i = 0; i<m_nPopulationSize; i++ ){
+		pacNextGeneration[i].DoMutations();
+
+	}
+	std::cout << pacNextGeneration[0].cGenome.GetXML() << std::endl;
 
 	//copy next generation to population
 	for(int i = 0; i<m_nPopulationSize; i++ ){
@@ -308,8 +308,5 @@ void Evolver::Tournament(std::vector<Parent> selection, Rosetta* population){
 		//since selection is already sorted by ascending fitness, all that needs to be done is to sort the tournament vector and then add parent at the first index
 		std::sort(tournament.begin(), tournament.end());
 		m_cRecombination.AddParent(population[selection[tournament[0]].nIndex].cGenome.GetXML());
-
 	}
-
-
 }

@@ -1,0 +1,33 @@
+/*
+ * Mutation.h
+ *
+ *  Created on: 3-feb.-2012
+ *      Author: woutergl
+ */
+
+#ifndef MUTATION_H_
+#define MUTATION_H_
+
+#include "Globals.h"
+
+class Mutation
+{
+private:
+
+	rapidxml::xml_node<>* m_Node;
+
+public:
+
+	Mutation(rapidxml::xml_node<>* node) // default constructor
+    {
+		m_Node = node;
+    }
+    ~Mutation() // default deconstructor
+    {    }
+
+
+};
+
+
+
+#endif /* MUTATION_H_ */

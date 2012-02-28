@@ -1,0 +1,230 @@
+/*
+ * Mutation.cpp
+ *
+ *  Created on: 3-feb.-2012
+ *      Author: woutergl
+ */
+
+#include "Mutation.h"
+
+
+/***************************************************************************************************************
+ * Base Class BitMutation
+ ***************************************************************************************************************/
+
+rapidxml::xml_node<>* Mutation::BitString(){
+	return m_Node;
+}
+rapidxml::xml_node<>* Mutation::FlipBits(){
+	return m_Node;
+}
+rapidxml::xml_node<>* Mutation::Boundary(){
+	return m_Node;
+}
+rapidxml::xml_node<>* Mutation::Uniform(){
+	return m_Node;
+}
+rapidxml::xml_node<>* Mutation::Gaussian(){
+	return m_Node;
+}
+rapidxml::xml_node<>* Mutation::Duplication(){
+	return m_Node;
+}
+rapidxml::xml_node<>* Mutation::Deletion(){
+	return m_Node;
+}
+rapidxml::xml_node<>* Mutation::Insertion(){
+	return m_Node;
+}
+
+
+/***************************************************************************************************************
+ * Derived Class BitMutation
+ ***************************************************************************************************************/
+
+rapidxml::xml_node<>* BitMutation::BitString(){
+	std::cout << "original value: " << m_Node->value() << std::endl;
+	std::string value = m_Node->value();
+
+	int nRandom = rand() % value.size();
+	std::cout << "changing bit " << nRandom << std::endl;
+
+	if(value[nRandom] =="1"){
+		//value.at(nRandom) = "0";
+		std::cout	<< "1 to 0" << std::endl;
+	}
+	else{
+		//value.at(nRandom) = "1";
+		std::cout	<< "0 to 1" << std::endl;
+	}
+
+	std::cout << "mutated value:  " << m_Node->value() << std::endl;
+	return m_Node;
+}
+rapidxml::xml_node<>* BitMutation::FlipBits(){
+	return m_Node;
+}
+rapidxml::xml_node<>* BitMutation::Boundary(){
+	return m_Node;
+}
+rapidxml::xml_node<>* BitMutation::Uniform(){
+	return m_Node;
+}
+rapidxml::xml_node<>* BitMutation::Gaussian(){
+	return m_Node;
+}
+rapidxml::xml_node<>* BitMutation::Duplication(){
+	return m_Node;
+}
+rapidxml::xml_node<>* BitMutation::Deletion(){
+	return m_Node;
+}
+rapidxml::xml_node<>* BitMutation::Insertion(){
+	return m_Node;
+}
+
+
+/***************************************************************************************************************
+ * Derived Class IntegerMutation
+ ***************************************************************************************************************/
+rapidxml::xml_node<>* IntegerMutation::BitString(){
+	return m_Node;
+}
+rapidxml::xml_node<>* IntegerMutation::FlipBits(){
+	return m_Node;
+}
+rapidxml::xml_node<>* IntegerMutation::Boundary(){
+	return m_Node;
+}
+rapidxml::xml_node<>* IntegerMutation::Uniform(){
+	return m_Node;
+}
+rapidxml::xml_node<>* IntegerMutation::Gaussian(){
+	return m_Node;
+}
+rapidxml::xml_node<>* IntegerMutation::Duplication(){
+	return m_Node;
+}
+rapidxml::xml_node<>* IntegerMutation::Deletion(){
+	return m_Node;
+}
+rapidxml::xml_node<>* IntegerMutation::Insertion(){
+	return m_Node;
+}
+
+
+/***************************************************************************************************************
+ * Derived Class DoubleMutation
+ ***************************************************************************************************************/
+rapidxml::xml_node<>* DoubleMutation::BitString(){
+	return m_Node;
+}
+rapidxml::xml_node<>* DoubleMutation::FlipBits(){
+	return m_Node;
+}
+rapidxml::xml_node<>* DoubleMutation::Boundary(){
+	return m_Node;
+}
+rapidxml::xml_node<>* DoubleMutation::Uniform(){
+	return m_Node;
+}
+rapidxml::xml_node<>* DoubleMutation::Gaussian(){
+	return m_Node;
+}
+rapidxml::xml_node<>* DoubleMutation::Duplication(){
+	return m_Node;
+}
+rapidxml::xml_node<>* DoubleMutation::Deletion(){
+	return m_Node;
+}
+rapidxml::xml_node<>* DoubleMutation::Insertion(){
+	return m_Node;
+}
+
+
+/***************************************************************************************************************
+ * Derived Class AlphanumMutation
+ ***************************************************************************************************************/
+rapidxml::xml_node<>* AlphanumMutation::BitString(){
+	return m_Node;
+}
+rapidxml::xml_node<>* AlphanumMutation::FlipBits(){
+	return m_Node;
+}
+rapidxml::xml_node<>* AlphanumMutation::Boundary(){
+	return m_Node;
+}
+rapidxml::xml_node<>* AlphanumMutation::Uniform(){
+	return m_Node;
+}
+rapidxml::xml_node<>* AlphanumMutation::Gaussian(){
+	return m_Node;
+}
+rapidxml::xml_node<>* AlphanumMutation::Duplication(){
+	return m_Node;
+}
+rapidxml::xml_node<>* AlphanumMutation::Deletion(){
+	return m_Node;
+}
+rapidxml::xml_node<>* AlphanumMutation::Insertion(){
+	return m_Node;
+}
+
+
+/***************************************************************************************************************
+ * Derived Class CustomMutation
+ ***************************************************************************************************************/
+rapidxml::xml_node<>* CustomMutation::BitString(){
+	return m_Node;
+}
+rapidxml::xml_node<>* CustomMutation::FlipBits(){
+	return m_Node;
+}
+rapidxml::xml_node<>* CustomMutation::Boundary(){
+	return m_Node;
+}
+rapidxml::xml_node<>* CustomMutation::Uniform(){
+	return m_Node;
+}
+rapidxml::xml_node<>* CustomMutation::Gaussian(){
+	return m_Node;
+}
+rapidxml::xml_node<>* CustomMutation::Duplication(){
+	return m_Node;
+}
+rapidxml::xml_node<>* CustomMutation::Deletion(){
+	return m_Node;
+}
+rapidxml::xml_node<>* CustomMutation::Insertion(){
+	return m_Node;
+}
+
+
+/***************************************************************************************************************
+ * Derived Class TreeMutation
+ ***************************************************************************************************************/
+rapidxml::xml_node<>* TreeMutation::BitString(){
+	return m_Node;
+}
+rapidxml::xml_node<>* TreeMutation::FlipBits(){
+	return m_Node;
+}
+rapidxml::xml_node<>* TreeMutation::Boundary(){
+	return m_Node;
+}
+rapidxml::xml_node<>* TreeMutation::Uniform(){
+	return m_Node;
+}
+rapidxml::xml_node<>* TreeMutation::Gaussian(){
+	return m_Node;
+}
+rapidxml::xml_node<>* TreeMutation::Duplication(){
+	return m_Node;
+}
+rapidxml::xml_node<>* TreeMutation::Deletion(){
+	return m_Node;
+}
+rapidxml::xml_node<>* TreeMutation::Insertion(){
+	return m_Node;
+}
+

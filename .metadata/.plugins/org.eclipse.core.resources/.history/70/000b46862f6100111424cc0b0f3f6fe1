@@ -1,0 +1,31 @@
+/*
+ * Mutation.h
+ *
+ *  Created on: 3-feb.-2012
+ *      Author: woutergl
+ */
+
+#ifndef MUTATION_H_
+#define MUTATION_H_
+
+#include "Globals.h"
+
+class Mutation
+{
+private:
+
+
+
+public:
+
+	Mutation() // default constructor
+    {    }
+    virtual ~Mutation() // default deconstructor
+    {    }
+
+
+};
+
+
+
+#endif /* MUTATION_H_ */

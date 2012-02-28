@@ -46,6 +46,8 @@ public:
     void CalcFitness();
     void SetGenome(const std::string& input_xml);
 
+    void DoMutations();
+
 
 
 };
