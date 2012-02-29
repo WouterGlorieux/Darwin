@@ -55,7 +55,7 @@ void Rosetta::initTokamak(){
 	cGenome.addChromosome("Magnetic Field2", ENCODING_CUSTOM);
 	cGenome.addChromosomeAttribute("Magnetic Field2", "chars", "ACGT");
 	cGenome.addGene("1", "Magnetic Field2");
-	cGenome.addGeneAttribute("Magnetic Field2", "1", "maxChars", "100");
+	cGenome.addGeneAttribute("Magnetic Field2", "1", "maxChars", "10");
 
 
 	cGenome.addChromosome("Plasma Density2", ENCODING_TREE);

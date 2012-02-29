@@ -13,28 +13,28 @@
  ***************************************************************************************************************/
 
 std::string Mutation::BitString(){
-	return "";
+	return m_Node->value();
 }
 std::string Mutation::FlipBits(){
-	return "";
+	return m_Node->value();
 }
 std::string Mutation::Boundary(){
-	return "";
+	return m_Node->value();
 }
 std::string Mutation::Uniform(){
-	return "";
+	return m_Node->value();
 }
 std::string Mutation::Gaussian(){
-	return "";
+	return m_Node->value();
 }
 std::string Mutation::Duplication(){
-	return "";
+	return m_Node->value();
 }
 std::string Mutation::Deletion(){
-	return "";
+	return m_Node->value();
 }
 std::string Mutation::Insertion(){
-	return "";
+	return m_Node->value();
 }
 
 
@@ -76,14 +76,13 @@ std::string BitMutation::Uniform(){
 	BinaryEncoding cBinaryEncoding;
 	return cBinaryEncoding.RandomData(m_Node);
 }
-std::string BitMutation::Gaussian(){
+/*std::string BitMutation::Gaussian(){
 
-	std::cout << box_muller(0, 2.0) << std::endl;
+	//std::cout << box_muller(0, 2.0) << std::endl;
 	return "";
-}
+}*/
 std::string BitMutation::Duplication(){
 	std::string strValue = m_Node->value();
-
 
 	//duplicate a random part of the string
 	int nBegin = rand() % strValue.size();
@@ -150,11 +149,20 @@ std::string BitMutation::Insertion(){
  * Derived Class IntegerMutation
  ***************************************************************************************************************/
 std::string IntegerMutation::BitString(){
-	return "";
+	std::string strValue = m_Node->value();
+
+	int nRandom = rand() % strValue.size();
+	int nNewBit = rand() % 10;
+
+	std::stringstream ss;//create a stringstream
+	ss << nNewBit;
+	strValue.replace(nRandom, 1, ss.str());
+
+	return strValue;
 }
-std::string IntegerMutation::FlipBits(){
+/*std::string IntegerMutation::FlipBits(){
 	return "";
-}
+}*/
 std::string IntegerMutation::Boundary(){
 	return "";
 }
@@ -179,11 +187,24 @@ std::string IntegerMutation::Insertion(){
  * Derived Class DoubleMutation
  ***************************************************************************************************************/
 std::string DoubleMutation::BitString(){
-	return "";
+	std::string strValue = m_Node->value();
+
+	int nRandom = rand() % strValue.size();	//position to be replaced
+	int nNewBit = rand() % 10;				//new character
+
+	std::stringstream ss;//create a stringstream
+	ss << nNewBit;
+
+	//make sure the decimal point is not replaced
+	if(strValue.at(nRandom) != '.'){
+		strValue.replace(nRandom, 1, ss.str());
+	}
+
+	return strValue;
 }
-std::string DoubleMutation::FlipBits(){
+/*std::string DoubleMutation::FlipBits(){
 	return "";
-}
+}*/
 std::string DoubleMutation::Boundary(){
 	return "";
 }
@@ -208,7 +229,22 @@ std::string DoubleMutation::Insertion(){
  * Derived Class AlphanumMutation
  ***************************************************************************************************************/
 std::string AlphanumMutation::BitString(){
-	return "";
+	std::string strValue = m_Node->value();
+
+	// make sure there is a string
+	if(strValue.size() > 0 ){
+		AlphanumEncoding cAlphanumEncoding;
+		std::vector<char> characters = cAlphanumEncoding.GetChars();
+
+		int nRandom = rand() % strValue.size();
+		int nNewBit = rand() % characters.size();
+
+		std::stringstream ss;//create a stringstream
+		ss << characters.at(nNewBit);
+		strValue.replace(nRandom, 1, ss.str());
+	}
+
+	return strValue;
 }
 std::string AlphanumMutation::FlipBits(){
 	return "";
@@ -237,7 +273,23 @@ std::string AlphanumMutation::Insertion(){
  * Derived Class CustomMutation
  ***************************************************************************************************************/
 std::string CustomMutation::BitString(){
-	return "";
+		std::string strValue = m_Node->value();
+
+		// make sure there is a string
+		if(strValue.size() > 0 ){
+			CustomEncoding cCustomEncoding;
+			cCustomEncoding.SetChars(m_Node->parent()->first_attribute("chars")->value());
+			std::vector<char> characters = cCustomEncoding.GetChars();
+
+			int nRandom = rand() % strValue.size();
+			int nNewBit = rand() % characters.size();
+
+			std::stringstream ss;//create a stringstream
+			ss << characters.at(nNewBit);
+			strValue.replace(nRandom, 1, ss.str());
+		}
+
+		return strValue;
 }
 std::string CustomMutation::FlipBits(){
 	return "";

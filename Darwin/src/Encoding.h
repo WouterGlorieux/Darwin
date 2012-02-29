@@ -99,6 +99,7 @@ public:
     {    }
 
     virtual std::string RandomData(rapidxml::xml_node<>* geneNode);
+    std::vector<char> GetChars(){ return m_vChars; }
 
 };
 
@@ -120,7 +121,7 @@ public:
     virtual std::string RandomData(rapidxml::xml_node<>* geneNode);
 
     void SetChars(std::string characters);
-
+    std::vector<char> GetChars(){ return m_vChars; }
 };
 
 

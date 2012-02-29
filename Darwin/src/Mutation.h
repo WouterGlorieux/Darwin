@@ -57,7 +57,7 @@ public:
     virtual std::string FlipBits();
     virtual std::string Boundary();
     virtual std::string Uniform();
-    virtual std::string Gaussian();
+    //virtual std::string Gaussian();
     virtual std::string Duplication();
     virtual std::string Deletion();
     virtual std::string Insertion();
@@ -72,14 +72,14 @@ public:
 
 	IntegerMutation(rapidxml::xml_node<>* node) // default constructor
     {
-		//m_Node = node;
+		m_Node = node;
     }
 
 	virtual ~IntegerMutation() // default deconstructor
     {    }
 
     virtual std::string BitString();
-    virtual std::string FlipBits();
+    //virtual std::string FlipBits();
     virtual std::string Boundary();
     virtual std::string Uniform();
     virtual std::string Gaussian();
@@ -97,14 +97,15 @@ public:
 
 	DoubleMutation(rapidxml::xml_node<>* node) // default constructor
     {
-		//m_Node = node;
+		m_Node = node;
+
     }
 
 	virtual ~DoubleMutation() // default deconstructor
-    {    }
+    {  }
 
     virtual std::string BitString();
-    virtual std::string FlipBits();
+    //virtual std::string FlipBits();
     virtual std::string Boundary();
     virtual std::string Uniform();
     virtual std::string Gaussian();
@@ -122,7 +123,8 @@ public:
 
 	AlphanumMutation(rapidxml::xml_node<>* node) // default constructor
     {
-		//m_Node = node;
+		m_Node = node;
+
     }
 
 	virtual ~AlphanumMutation() // default deconstructor
@@ -147,7 +149,7 @@ public:
 
 	CustomMutation(rapidxml::xml_node<>* node) // default constructor
     {
-		//m_Node = node;
+		m_Node = node;
     }
 
 	virtual ~CustomMutation() // default deconstructor
@@ -172,7 +174,7 @@ public:
 
 	TreeMutation(rapidxml::xml_node<>* node) // default constructor
     {
-		//m_Node = node;
+		m_Node = node;
     }
 
 	virtual ~TreeMutation() // default deconstructor

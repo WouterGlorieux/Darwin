@@ -264,6 +264,7 @@ void Genome::DoMutations(){
 		for (rapidxml::xml_node<>* geneNode = chromosomeNode->first_node("Gene"); geneNode; geneNode = geneNode->next_sibling("Gene"))
 		{
 			std::string strEncoding = chromosomeNode->first_attribute("encoding")->value();
+
 			if(strEncoding == "binary"){
 				BitMutation cBitMutation(geneNode);
 				Mutation& rMutation = cBitMutation;
@@ -308,8 +309,8 @@ void Genome::GeneMutations(rapidxml::xml_document<>& doc, rapidxml::xml_node<>* 
 
 		char* pchMutatedData;
 
-		//pchMutatedData = doc.allocate_string(mutation.BitString().c_str());
-		//geneNode->value(pchMutatedData);
+		pchMutatedData = doc.allocate_string(mutation.BitString().c_str());
+		geneNode->value(pchMutatedData);
 
 		//pchMutatedData = doc.allocate_string(mutation.FlipBits().c_str());
 		//geneNode->value(pchMutatedData);
@@ -320,8 +321,8 @@ void Genome::GeneMutations(rapidxml::xml_document<>& doc, rapidxml::xml_node<>* 
 		//pchMutatedData = doc.allocate_string(mutation.Uniform().c_str());
 		//geneNode->value(pchMutatedData);
 
-		pchMutatedData = doc.allocate_string(mutation.Gaussian().c_str());
-		geneNode->value(pchMutatedData);
+		//pchMutatedData = doc.allocate_string(mutation.Gaussian().c_str());
+		//geneNode->value(pchMutatedData);
 
 		//pchMutatedData = doc.allocate_string(mutation.Duplication().c_str());
 		//geneNode->value(pchMutatedData);
