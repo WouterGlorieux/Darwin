@@ -84,10 +84,12 @@ std::string BitMutation::Uniform(){
 std::string BitMutation::Duplication(){
 	std::string strValue = m_Node->value();
 
-	//duplicate a random part of the string
-	int nBegin = rand() % strValue.size();
-	int nEnd = (rand() % (strValue.size()-1 - nBegin + 1)) + nBegin;
-	strValue.insert(nBegin, strValue, nBegin, nEnd-nBegin+1); // insert substring of strValue from index [nBegin,nEnd) into strValue at index nBegin
+	if(strValue.size() > 0){
+		//duplicate a random part of the string
+		int nBegin = rand() % strValue.size();
+		int nEnd = (rand() % (strValue.size()-1 - nBegin + 1)) + nBegin;
+		strValue.insert(nBegin, strValue, nBegin, nEnd-nBegin+1); // insert substring of strValue from index [nBegin,nEnd) into strValue at index nBegin
+	}
 
 	//if there is a bits attribute, cut off the string at that length
 	if(m_Node->first_attribute("bits")){
@@ -212,7 +214,28 @@ std::string IntegerMutation::Gaussian(){
 	return "";
 }
 std::string IntegerMutation::Duplication(){
-	return "";
+	std::string strValue = m_Node->value();
+
+	//duplicate a random part of the string
+	int nBegin = rand() % strValue.size();
+	int nEnd = (rand() % (strValue.size()-1 - nBegin + 1)) + nBegin;
+	strValue.insert(nBegin, strValue, nBegin, nEnd-nBegin+1); // insert substring of strValue from index [nBegin,nEnd) into strValue at index nBegin
+
+	//make sure new value is not smaller than min boundary
+	if(m_Node->first_attribute("min")){
+		if( atoi(strValue.c_str()) < atoi(m_Node->first_attribute("min")->value()) ){
+			return m_Node->value();
+		}
+	}
+
+	//make sure new value is not greater than max boundary
+	if(m_Node->first_attribute("max")){
+		if( atoi(strValue.c_str()) > atoi(m_Node->first_attribute("max")->value()) ){
+			return m_Node->value();
+		}
+	}
+
+	return strValue;
 }
 std::string IntegerMutation::Deletion(){
 	return "";
@@ -290,7 +313,48 @@ std::string DoubleMutation::Gaussian(){
 	return "";
 }
 std::string DoubleMutation::Duplication(){
-	return "";
+	std::string strValue = m_Node->value();
+
+	//duplicate a random part of the string
+	int nBegin = rand() % strValue.size();
+	int nEnd = (rand() % (strValue.size()-1 - nBegin + 1)) + nBegin;
+	std::string strSubstring = strValue.substr(nBegin,nEnd-nBegin+1);
+
+	//make sure there is no decimal point in the substring
+	size_t nFound = strSubstring.find('.');
+	if(nFound != std::string::npos){
+		strSubstring.erase((int)nFound, 1);
+	}
+
+	if(strSubstring.size() > 0){
+		strValue.insert(nBegin, strSubstring); // insert substring into strValue at index nBegin
+	}
+
+	//make sure new value is not smaller than min boundary
+	if(m_Node->first_attribute("min")){
+		if( atof(strValue.c_str()) < atof(m_Node->first_attribute("min")->value()) ){
+			return m_Node->value();
+		}
+	}
+
+	//make sure new value is not greater than max boundary
+	if(m_Node->first_attribute("max")){
+		if( atof(strValue.c_str()) > atof(m_Node->first_attribute("max")->value()) ){
+			return m_Node->value();
+		}
+	}
+
+	//make sure new value doesn't have more decimals than allowed
+	if(m_Node->first_attribute("decimals")){
+		int nDecimals = atoi(m_Node->first_attribute("decimals")->value());
+		nFound = strValue.find('.');
+		if(nFound != std::string::npos && (strValue.size()-nFound) > nDecimals){
+			strValue = strValue.substr(0, nFound + nDecimals+1);
+		}
+
+	}
+
+	return strValue;
 }
 std::string DoubleMutation::Deletion(){
 	return "";
@@ -335,7 +399,23 @@ std::string AlphanumMutation::Gaussian(){
 	return "";
 }
 std::string AlphanumMutation::Duplication(){
-	return "";
+	std::string strValue = m_Node->value();
+
+	if(strValue.size() > 0){
+		//duplicate a random part of the string
+		int nBegin = rand() % strValue.size();
+		int nEnd = (rand() % (strValue.size()-1 - nBegin + 1)) + nBegin;
+		strValue.insert(nBegin, strValue, nBegin, nEnd-nBegin+1); // insert substring of strValue from index [nBegin,nEnd) into strValue at index nBegin
+
+	}
+
+	//if there is a maxChars attribute, cut off the string at that length
+	if(m_Node->first_attribute("maxChars")){
+		int chars = atoi(m_Node->first_attribute("maxChars")->value());
+		strValue = strValue.substr(0, chars);
+	}
+
+	return strValue;
 }
 std::string AlphanumMutation::Deletion(){
 	return "";
@@ -382,7 +462,23 @@ std::string CustomMutation::Gaussian(){
 	return "";
 }
 std::string CustomMutation::Duplication(){
-	return "";
+	std::string strValue = m_Node->value();
+
+	if(strValue.size() > 0){
+		//duplicate a random part of the string
+		int nBegin = rand() % strValue.size();
+		int nEnd = (rand() % (strValue.size()-1 - nBegin + 1)) + nBegin;
+		strValue.insert(nBegin, strValue, nBegin, nEnd-nBegin+1); // insert substring of strValue from index [nBegin,nEnd) into strValue at index nBegin
+
+	}
+
+	//if there is a maxChars attribute, cut off the string at that length
+	if(m_Node->first_attribute("maxChars")){
+		int chars = atoi(m_Node->first_attribute("maxChars")->value());
+		strValue = strValue.substr(0, chars);
+	}
+
+	return strValue;
 }
 std::string CustomMutation::Deletion(){
 	return "";
