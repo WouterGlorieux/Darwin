@@ -220,20 +220,7 @@ std::string IntegerMutation::Duplication(){
 	//duplicate a random part of the string
 	int nBegin = rand() % strValue.size();
 	int nEnd = (rand() % (strValue.size()-1 - nBegin + 1)) + nBegin;
-
-	std::string strSubstring = strValue.substr(nBegin,nEnd-nBegin+1);
-
-	//make sure there is no - in the substring
-	size_t nFound = strSubstring.find('-');
-	if(nFound != std::string::npos){
-		strSubstring.erase((int)nFound, 1);
-	}
-
-	if(strSubstring.size() > 0){
-		strValue.insert(nBegin, strSubstring); // insert substring into strValue at index nBegin
-	}
-
-
+	strValue.insert(nBegin, strValue, nBegin, nEnd-nBegin+1); // insert substring of strValue from index [nBegin,nEnd) into strValue at index nBegin
 
 	//make sure new value is not smaller than min boundary
 	if(m_Node->first_attribute("min")){
@@ -369,12 +356,6 @@ std::string DoubleMutation::Duplication(){
 		strSubstring.erase((int)nFound, 1);
 	}
 
-	//make sure there is no - in the substring
-	nFound = strSubstring.find('-');
-	if(nFound != std::string::npos){
-		strSubstring.erase((int)nFound, 1);
-	}
-
 	if(strSubstring.size() > 0){
 		strValue.insert(nBegin, strSubstring); // insert substring into strValue at index nBegin
 	}
@@ -428,11 +409,6 @@ std::string DoubleMutation::Deletion(){
 		if( atof(strValue.c_str()) > atof(m_Node->first_attribute("max")->value()) ){
 			return m_Node->value();
 		}
-	}
-
-	//make sure the new value is not just a -
-	if(strValue == "-"){
-		strValue = "";
 	}
 
 	return strValue;
@@ -496,16 +472,7 @@ std::string AlphanumMutation::Duplication(){
 	return strValue;
 }
 std::string AlphanumMutation::Deletion(){
-	std::string strValue = m_Node->value();
-
-	if(strValue.size() > 0){
-		//delete a random part of the string
-		int nBegin = rand() % strValue.size();
-		int nEnd = (rand() % (strValue.size()-1 - nBegin + 1)) + nBegin;
-		strValue = strValue.erase(nBegin, nEnd-nBegin+1);
-
-	}
-	return strValue;
+	return "";
 }
 std::string AlphanumMutation::Insertion(){
 	return "";
@@ -568,16 +535,7 @@ std::string CustomMutation::Duplication(){
 	return strValue;
 }
 std::string CustomMutation::Deletion(){
-	std::string strValue = m_Node->value();
-
-	if(strValue.size() > 0){
-		//delete a random part of the string
-		int nBegin = rand() % strValue.size();
-		int nEnd = (rand() % (strValue.size()-1 - nBegin + 1)) + nBegin;
-		strValue = strValue.erase(nBegin, nEnd-nBegin+1);
-
-	}
-	return strValue;
+	return "";
 }
 std::string CustomMutation::Insertion(){
 	return "";

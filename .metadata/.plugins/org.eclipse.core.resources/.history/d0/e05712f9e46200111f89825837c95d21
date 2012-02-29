@@ -496,16 +496,7 @@ std::string AlphanumMutation::Duplication(){
 	return strValue;
 }
 std::string AlphanumMutation::Deletion(){
-	std::string strValue = m_Node->value();
-
-	if(strValue.size() > 0){
-		//delete a random part of the string
-		int nBegin = rand() % strValue.size();
-		int nEnd = (rand() % (strValue.size()-1 - nBegin + 1)) + nBegin;
-		strValue = strValue.erase(nBegin, nEnd-nBegin+1);
-
-	}
-	return strValue;
+	return "";
 }
 std::string AlphanumMutation::Insertion(){
 	return "";
@@ -568,16 +559,7 @@ std::string CustomMutation::Duplication(){
 	return strValue;
 }
 std::string CustomMutation::Deletion(){
-	std::string strValue = m_Node->value();
-
-	if(strValue.size() > 0){
-		//delete a random part of the string
-		int nBegin = rand() % strValue.size();
-		int nEnd = (rand() % (strValue.size()-1 - nBegin + 1)) + nBegin;
-		strValue = strValue.erase(nBegin, nEnd-nBegin+1);
-
-	}
-	return strValue;
+	return "";
 }
 std::string CustomMutation::Insertion(){
 	return "";

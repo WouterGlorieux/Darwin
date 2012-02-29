@@ -46,7 +46,7 @@ void Rosetta::initTokamak(){
 	cGenome.addGene("1", "Plasma Density");
 	cGenome.addGeneAttribute("Plasma Density", "1", "min", "-1000");
 	cGenome.addGeneAttribute("Plasma Density", "1", "max", "0");
-	cGenome.addGeneAttribute("Plasma Density", "1", "decimals", "5");
+	cGenome.addGeneAttribute("Plasma Density", "1", "decimals", "1");
 
 	cGenome.addChromosome("Auxiliary Heating Power2", ENCODING_ALPHANUM);
 	cGenome.addGene("1", "Auxiliary Heating Power2");
