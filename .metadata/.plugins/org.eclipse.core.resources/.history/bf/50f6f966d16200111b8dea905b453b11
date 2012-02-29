@@ -158,21 +158,11 @@ std::string IntegerMutation::BitString(){
 	ss << nNewBit;
 	strValue.replace(nRandom, 1, ss.str());
 
-	//make sure new value is not smaller than min boundary
 	if(m_Node->first_attribute("min")){
-		if( atoi(strValue.c_str()) < atoi(m_Node->first_attribute("min")->value()) ){
+		if( atoi("2") < atoi(m_Node->first_attribute("min")->value()) ){
 			return m_Node->value();
 		}
 	}
-
-	//make sure new value is not greater than max boundary
-	if(m_Node->first_attribute("max")){
-		if( atoi(strValue.c_str()) > atoi(m_Node->first_attribute("max")->value()) ){
-			return m_Node->value();
-		}
-	}
-
-
 	return strValue;
 }
 /*std::string IntegerMutation::FlipBits(){
@@ -236,20 +226,6 @@ std::string DoubleMutation::BitString(){
 	//make sure the decimal point is not replaced
 	if(strValue.at(nRandom) != '.'){
 		strValue.replace(nRandom, 1, ss.str());
-	}
-
-	//make sure new value is not smaller than min boundary
-	if(m_Node->first_attribute("min")){
-		if( atof(strValue.c_str()) < atof(m_Node->first_attribute("min")->value()) ){
-			return m_Node->value();
-		}
-	}
-
-	//make sure new value is not greater than max boundary
-	if(m_Node->first_attribute("max")){
-		if( atof(strValue.c_str()) > atof(m_Node->first_attribute("max")->value()) ){
-			return m_Node->value();
-		}
 	}
 
 	return strValue;

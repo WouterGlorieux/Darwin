@@ -309,11 +309,11 @@ void Genome::GeneMutations(rapidxml::xml_document<>& doc, rapidxml::xml_node<>* 
 
 		char* pchMutatedData;
 
-		pchMutatedData = doc.allocate_string(mutation.BitString().c_str());
-		geneNode->value(pchMutatedData);
+		//pchMutatedData = doc.allocate_string(mutation.BitString().c_str());
+		//geneNode->value(pchMutatedData);
 
-		pchMutatedData = doc.allocate_string(mutation.FlipBits().c_str());
-		geneNode->value(pchMutatedData);
+		//pchMutatedData = doc.allocate_string(mutation.FlipBits().c_str());
+		//geneNode->value(pchMutatedData);
 
 		pchMutatedData = doc.allocate_string(mutation.Boundary().c_str());
 		geneNode->value(pchMutatedData);

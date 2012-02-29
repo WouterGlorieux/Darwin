@@ -158,21 +158,6 @@ std::string IntegerMutation::BitString(){
 	ss << nNewBit;
 	strValue.replace(nRandom, 1, ss.str());
 
-	//make sure new value is not smaller than min boundary
-	if(m_Node->first_attribute("min")){
-		if( atoi(strValue.c_str()) < atoi(m_Node->first_attribute("min")->value()) ){
-			return m_Node->value();
-		}
-	}
-
-	//make sure new value is not greater than max boundary
-	if(m_Node->first_attribute("max")){
-		if( atoi(strValue.c_str()) > atoi(m_Node->first_attribute("max")->value()) ){
-			return m_Node->value();
-		}
-	}
-
-
 	return strValue;
 }
 /*std::string IntegerMutation::FlipBits(){
@@ -181,27 +166,18 @@ std::string IntegerMutation::BitString(){
 std::string IntegerMutation::Boundary(){
 
 	std::string strValue = m_Node->value();
-
-	std::stringstream ss;//create a stringstream
+	int nRandom = rand() % 2;
 
 	if(m_Node->first_attribute("min") && m_Node->first_attribute("max")){
-		//pick one of the 2 boundaries at random
-		int nRandom = rand() % 2;
-		(nRandom == 0) ? ss << m_Node->first_attribute("min")->value() : ss << m_Node->first_attribute("max")->value();
-		return ss.str();//return a string with the contents of the stream
-	}
-	else if(m_Node->first_attribute("min")){
-		 ss << m_Node->first_attribute("min")->value();
-		return ss.str();//return a string with the contents of the stream
-	}
-	else if(m_Node->first_attribute("max")){
-		ss << m_Node->first_attribute("max")->value();
+		std::stringstream ss;//create a stringstream
+		(nRandom == 0)? ss << m_Node->first_attribute("min")->value():m_Node->first_attribute("max")->value();
 		return ss.str();//return a string with the contents of the stream
 	}
 	else
 	{
 		return strValue;
 	}
+
 
 }
 std::string IntegerMutation::Uniform(){
@@ -238,48 +214,13 @@ std::string DoubleMutation::BitString(){
 		strValue.replace(nRandom, 1, ss.str());
 	}
 
-	//make sure new value is not smaller than min boundary
-	if(m_Node->first_attribute("min")){
-		if( atof(strValue.c_str()) < atof(m_Node->first_attribute("min")->value()) ){
-			return m_Node->value();
-		}
-	}
-
-	//make sure new value is not greater than max boundary
-	if(m_Node->first_attribute("max")){
-		if( atof(strValue.c_str()) > atof(m_Node->first_attribute("max")->value()) ){
-			return m_Node->value();
-		}
-	}
-
 	return strValue;
 }
 /*std::string DoubleMutation::FlipBits(){
 	return "";
 }*/
 std::string DoubleMutation::Boundary(){
-	std::string strValue = m_Node->value();
-
-	std::stringstream ss;//create a stringstream
-
-	if(m_Node->first_attribute("min") && m_Node->first_attribute("max")){
-		//pick one of the 2 boundaries at random
-		int nRandom = rand() % 2;
-		(nRandom == 0) ? ss << m_Node->first_attribute("min")->value() : ss << m_Node->first_attribute("max")->value();
-		return ss.str();//return a string with the contents of the stream
-	}
-	else if(m_Node->first_attribute("min")){
-		 ss << m_Node->first_attribute("min")->value();
-		return ss.str();//return a string with the contents of the stream
-	}
-	else if(m_Node->first_attribute("max")){
-		ss << m_Node->first_attribute("max")->value();
-		return ss.str();//return a string with the contents of the stream
-	}
-	else
-	{
-		return strValue;
-	}
+	return "";
 }
 std::string DoubleMutation::Uniform(){
 	return "";
@@ -322,9 +263,9 @@ std::string AlphanumMutation::BitString(){
 /*std::string AlphanumMutation::FlipBits(){
 	return "";
 }*/
-/*std::string AlphanumMutation::Boundary(){
+std::string AlphanumMutation::Boundary(){
 	return "";
-}*/
+}
 std::string AlphanumMutation::Uniform(){
 	return "";
 }
@@ -367,9 +308,9 @@ std::string CustomMutation::BitString(){
 /*std::string CustomMutation::FlipBits(){
 	return "";
 }*/
-/*std::string CustomMutation::Boundary(){
+std::string CustomMutation::Boundary(){
 	return "";
-}*/
+}
 std::string CustomMutation::Uniform(){
 	return "";
 }
@@ -390,15 +331,15 @@ std::string CustomMutation::Insertion(){
 /***************************************************************************************************************
  * Derived Class TreeMutation
  ***************************************************************************************************************/
-/*std::string TreeMutation::BitString(){
+std::string TreeMutation::BitString(){
 	return "";
-}*/
+}
 /*std::string TreeMutation::FlipBits(){
 	return "";
 }*/
-/*std::string TreeMutation::Boundary(){
+std::string TreeMutation::Boundary(){
 	return "";
-}*/
+}
 std::string TreeMutation::Uniform(){
 	return "";
 }

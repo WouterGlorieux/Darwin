@@ -132,7 +132,7 @@ public:
 
     virtual std::string BitString();
     //virtual std::string FlipBits();
-    //virtual std::string Boundary();
+    virtual std::string Boundary();
     virtual std::string Uniform();
     virtual std::string Gaussian();
     virtual std::string Duplication();
@@ -157,7 +157,7 @@ public:
 
     virtual std::string BitString();
     //virtual std::string FlipBits();
-    //virtual std::string Boundary();
+    virtual std::string Boundary();
     virtual std::string Uniform();
     virtual std::string Gaussian();
     virtual std::string Duplication();
@@ -180,9 +180,9 @@ public:
 	virtual ~TreeMutation() // default deconstructor
     {    }
 
-    //virtual std::string BitString();
+    virtual std::string BitString();
     //virtual std::string FlipBits();
-    //virtual std::string Boundary();
+    virtual std::string Boundary();
     virtual std::string Uniform();
     virtual std::string Gaussian();
     virtual std::string Duplication();

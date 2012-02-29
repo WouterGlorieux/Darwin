@@ -39,14 +39,14 @@ void Rosetta::initTokamak(){
 
 	cGenome.addChromosome("Magnetic Field", ENCODING_INTEGER);
 	cGenome.addGene("1", "Magnetic Field");
-	cGenome.addGeneAttribute("Magnetic Field", "1", "min", "0");
-	cGenome.addGeneAttribute("Magnetic Field", "1", "max", "1000");
+	//cGenome.addGeneAttribute("Magnetic Field", "1", "min", "0");
+	//cGenome.addGeneAttribute("Magnetic Field", "1", "max", "1000");
 
 	cGenome.addChromosome("Plasma Density", ENCODING_DOUBLE);
 	cGenome.addGene("1", "Plasma Density");
 	cGenome.addGeneAttribute("Plasma Density", "1", "min", "0");
-	cGenome.addGeneAttribute("Plasma Density", "1", "max", "20");
-	cGenome.addGeneAttribute("Plasma Density", "1", "decimals", "2");
+	cGenome.addGeneAttribute("Plasma Density", "1", "max", "100");
+	cGenome.addGeneAttribute("Plasma Density", "1", "decimals", "5");
 
 	cGenome.addChromosome("Auxiliary Heating Power2", ENCODING_ALPHANUM);
 	cGenome.addGene("1", "Auxiliary Heating Power2");

@@ -241,6 +241,7 @@ std::string DoubleMutation::BitString(){
 	//make sure new value is not smaller than min boundary
 	if(m_Node->first_attribute("min")){
 		if( atof(strValue.c_str()) < atof(m_Node->first_attribute("min")->value()) ){
+			std::cout << "new value too small" << std::endl;
 			return m_Node->value();
 		}
 	}
@@ -248,6 +249,7 @@ std::string DoubleMutation::BitString(){
 	//make sure new value is not greater than max boundary
 	if(m_Node->first_attribute("max")){
 		if( atof(strValue.c_str()) > atof(m_Node->first_attribute("max")->value()) ){
+			std::cout << "new value too big" << std::endl;
 			return m_Node->value();
 		}
 	}
