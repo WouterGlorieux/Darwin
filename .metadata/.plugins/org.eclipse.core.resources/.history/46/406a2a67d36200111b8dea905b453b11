@@ -374,9 +374,7 @@ std::string CustomMutation::BitString(){
 	return "";
 }*/
 std::string CustomMutation::Uniform(){
-	CustomEncoding cCustomEncoding;
-	cCustomEncoding.SetChars(m_Node->parent()->first_attribute("chars")->value());
-	return cCustomEncoding.RandomData(m_Node);
+	return "";
 }
 std::string CustomMutation::Gaussian(){
 	return "";

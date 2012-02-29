@@ -328,8 +328,7 @@ std::string AlphanumMutation::BitString(){
 	return "";
 }*/
 std::string AlphanumMutation::Uniform(){
-	AlphanumEncoding cAlphanumEncoding;
-	return cAlphanumEncoding.RandomData(m_Node);
+	return "";
 }
 std::string AlphanumMutation::Gaussian(){
 	return "";
@@ -374,9 +373,7 @@ std::string CustomMutation::BitString(){
 	return "";
 }*/
 std::string CustomMutation::Uniform(){
-	CustomEncoding cCustomEncoding;
-	cCustomEncoding.SetChars(m_Node->parent()->first_attribute("chars")->value());
-	return cCustomEncoding.RandomData(m_Node);
+	return "";
 }
 std::string CustomMutation::Gaussian(){
 	return "";
