@@ -122,14 +122,9 @@ std::string BitMutation::Deletion(){
 std::string BitMutation::Insertion(){
 	std::string strValue = m_Node->value();
 
-	int nBegin = 0;
-	int nEnd = 0;
-	if(strValue.size() > 0){
-		//insert random bits into the string
-		nBegin = rand() % strValue.size();
-		nEnd = (rand() % (strValue.size()-1 - nBegin + 1)) + nBegin;
-	}
-
+	//insert random bits into the string
+	int nBegin = rand() % strValue.size();
+	int nEnd = (rand() % (strValue.size()-1 - nBegin + 1)) + nBegin;
 
 	std::stringstream ss;//create a stringstream
 	int bit;
@@ -316,14 +311,12 @@ std::string IntegerMutation::Insertion(){
 	//check if strValue is not empty, otherwise let nBegin be at 0
 	if(strValue.size() > 0){
 		nBegin = rand() % strValue.size();
-
-		//make sure the inserted character is not before a - sign
-		if(strValue.at(0) == '-' && nBegin == 0){
-			nBegin = 1;
-		}
 	}
 
-
+	//make sure the inserted character is not before a - sign
+	if(strValue.at(0) == '-' && nBegin == 0){
+		nBegin = 1;
+	}
 
 	std::stringstream ss;//create a stringstream
 	ss << nRandom;
@@ -552,14 +545,12 @@ std::string DoubleMutation::Insertion(){
 	//check if strValue is not empty, otherwise let nBegin be at 0
 	if(strValue.size() > 0){
 		nBegin = rand() % strValue.size();
-
-		//make sure the inserted character is not before a - sign
-		if(strValue.at(0) == '-' && nBegin == 0){
-			nBegin = 1;
-		}
 	}
 
-
+	//make sure the inserted character is not before a - sign
+	if(strValue.at(0) == '-' && nBegin == 0){
+		nBegin = 1;
+	}
 
 	std::stringstream ss;//create a stringstream
 	ss << nRandom;

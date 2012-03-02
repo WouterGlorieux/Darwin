@@ -312,7 +312,7 @@ void Genome::GeneMutations(rapidxml::xml_document<>& doc, rapidxml::xml_node<>* 
 		pchMutatedData = doc.allocate_string(mutation.BitString().c_str());
 		geneNode->value(pchMutatedData);
 
-		pchMutatedData = doc.allocate_string(mutation.FlipBits().c_str());
+/*		pchMutatedData = doc.allocate_string(mutation.FlipBits().c_str());
 		geneNode->value(pchMutatedData);
 
 		pchMutatedData = doc.allocate_string(mutation.Boundary().c_str());
@@ -327,13 +327,12 @@ void Genome::GeneMutations(rapidxml::xml_document<>& doc, rapidxml::xml_node<>* 
 		pchMutatedData = doc.allocate_string(mutation.Duplication().c_str());
 		geneNode->value(pchMutatedData);
 
-
 		pchMutatedData = doc.allocate_string(mutation.Deletion().c_str());
 		geneNode->value(pchMutatedData);
 
 		pchMutatedData = doc.allocate_string(mutation.Insertion().c_str());
 		geneNode->value(pchMutatedData);
-
+*/
 }
 /*
 void Genome::Mutations(Mutation& mutation){

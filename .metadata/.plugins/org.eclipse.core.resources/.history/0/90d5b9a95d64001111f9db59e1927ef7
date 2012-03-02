@@ -121,6 +121,7 @@ std::string BitMutation::Deletion(){
 }
 std::string BitMutation::Insertion(){
 	std::string strValue = m_Node->value();
+	std::cout << "binary" << std::endl;
 
 	int nBegin = 0;
 	int nEnd = 0;
@@ -310,21 +311,20 @@ std::string IntegerMutation::Deletion(){
 }
 std::string IntegerMutation::Insertion(){
 	std::string strValue = m_Node->value();
+	std::cout << "integer" << std::endl;
 	int nRandom = rand() % 10;
 
 	int nBegin = 0;
 	//check if strValue is not empty, otherwise let nBegin be at 0
 	if(strValue.size() > 0){
 		nBegin = rand() % strValue.size();
-
-		//make sure the inserted character is not before a - sign
-		if(strValue.at(0) == '-' && nBegin == 0){
-			nBegin = 1;
-		}
 	}
 
-
-
+/*	//make sure the inserted character is not before a - sign
+	if(strValue.at(0) == '-' && nBegin == 0){
+		nBegin = 1;
+	}
+*/
 	std::stringstream ss;//create a stringstream
 	ss << nRandom;
 	strValue.insert(nBegin, ss.str());
@@ -546,21 +546,20 @@ std::string DoubleMutation::Deletion(){
 }
 std::string DoubleMutation::Insertion(){
 	std::string strValue = m_Node->value();
+	std::cout << "double" << std::endl;
 	int nRandom = rand() % 10;
 
 	int nBegin = 0;
 	//check if strValue is not empty, otherwise let nBegin be at 0
 	if(strValue.size() > 0){
 		nBegin = rand() % strValue.size();
-
-		//make sure the inserted character is not before a - sign
-		if(strValue.at(0) == '-' && nBegin == 0){
-			nBegin = 1;
-		}
 	}
 
-
-
+/*	//make sure the inserted character is not before a - sign
+	if(strValue.at(0) == '-' && nBegin == 0){
+		nBegin = 1;
+	}
+*/
 	std::stringstream ss;//create a stringstream
 	ss << nRandom;
 	strValue.insert(nBegin, ss.str());
@@ -664,7 +663,7 @@ std::string AlphanumMutation::Deletion(){
 }
 std::string AlphanumMutation::Insertion(){
 	std::string strValue = m_Node->value();
-
+	std::cout << "alphanum" << std::endl;
 	//check if there is a maxChars attribute
 	if(m_Node->first_attribute("maxChars")){
 		int nChars = atoi(m_Node->first_attribute("maxChars")->value());
@@ -762,7 +761,7 @@ std::string CustomMutation::Deletion(){
 }
 std::string CustomMutation::Insertion(){
 	std::string strValue = m_Node->value();
-
+	std::cout << "custom" << std::endl;
 	//check if there is a maxChars attribute
 	if(m_Node->first_attribute("maxChars")){
 		int nChars = atoi(m_Node->first_attribute("maxChars")->value());
