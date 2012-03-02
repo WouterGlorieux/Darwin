@@ -210,9 +210,29 @@ std::string IntegerMutation::Uniform(){
 	return cIntegerEncoding.RandomData(m_Node);
 }
 std::string IntegerMutation::Gaussian(){
+	std::string strValue = m_Node->value();
 
-	//std::cout << box_muller(0, 1.0) << std::endl;
-	return "";
+	int nValue = atoi(strValue.c_str());
+	int nChange = (int)box_muller(0, 5.0);
+	nValue += nChange;
+
+	//make sure new value is not smaller than min boundary
+	if(m_Node->first_attribute("min")){
+		if( nValue < atoi(m_Node->first_attribute("min")->value()) ){
+			return m_Node->value();
+		}
+	}
+
+	//make sure new value is not greater than max boundary
+	if(m_Node->first_attribute("max")){
+		if( nValue > atoi(m_Node->first_attribute("max")->value()) ){
+			return m_Node->value();
+		}
+	}
+
+	std::stringstream ss;//create a stringstream
+	ss << nValue;
+	return ss.str();
 }
 std::string IntegerMutation::Duplication(){
 	std::string strValue = m_Node->value();
@@ -389,7 +409,51 @@ std::string DoubleMutation::Uniform(){
 	return cDoubleEncoding.RandomData(m_Node);
 }
 std::string DoubleMutation::Gaussian(){
-	return "";
+	std::string strValue = m_Node->value();
+
+	double dValue = atof(strValue.c_str());
+	double dChange = box_muller(0, 5.0);
+
+	dValue += dChange;
+
+	//make sure new value is not smaller than min boundary
+	if(m_Node->first_attribute("min")){
+		if( dValue < atoi(m_Node->first_attribute("min")->value()) ){
+			return m_Node->value();
+		}
+	}
+
+	//make sure new value is not greater than max boundary
+	if(m_Node->first_attribute("max")){
+		if( dValue > atoi(m_Node->first_attribute("max")->value()) ){
+			return m_Node->value();
+		}
+	}
+
+	std::stringstream ss;//create a stringstream
+	char buffer[256]; //use sprintf to make sure no decimals are lost
+	std::sprintf(buffer, "%f", dValue);
+	ss << buffer;
+	strValue = ss.str();
+
+	//make sure new value doesn't have more decimals than allowed
+	if(m_Node->first_attribute("decimals")){
+		int nDecimals = atoi(m_Node->first_attribute("decimals")->value());
+		size_t nFound = strValue.find('.');
+
+		if(nFound != std::string::npos && (strValue.size()-nFound) > nDecimals){
+			//if decimals is 0, make sure the new value doesn't end with a point
+			if(nDecimals == 0){
+				nFound--;
+			}
+			strValue = strValue.substr(0, nFound + nDecimals+1);
+		}
+
+
+
+	}
+
+	return strValue;
 }
 std::string DoubleMutation::Duplication(){
 	std::string strValue = m_Node->value();
