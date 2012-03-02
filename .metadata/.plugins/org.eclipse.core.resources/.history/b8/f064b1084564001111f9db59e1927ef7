@@ -77,6 +77,8 @@ std::string BitMutation::Uniform(){
 	return cBinaryEncoding.RandomData(m_Node);
 }
 /*std::string BitMutation::Gaussian(){
+
+	//std::cout << box_muller(0, 2.0) << std::endl;
 	return "";
 }*/
 std::string BitMutation::Duplication(){
@@ -210,8 +212,6 @@ std::string IntegerMutation::Uniform(){
 	return cIntegerEncoding.RandomData(m_Node);
 }
 std::string IntegerMutation::Gaussian(){
-
-	//std::cout << box_muller(0, 1.0) << std::endl;
 	return "";
 }
 std::string IntegerMutation::Duplication(){
@@ -508,16 +508,6 @@ std::string DoubleMutation::Insertion(){
 		if(atoi(strValue.c_str()) > nMax){
 			return m_Node->value();
 		}
-	}
-
-	//make sure new value doesn't have more decimals than allowed
-	if(m_Node->first_attribute("decimals")){
-		int nDecimals = atoi(m_Node->first_attribute("decimals")->value());
-		size_t nFound = strValue.find('.');
-		if(nFound != std::string::npos && (strValue.size()-nFound) > nDecimals){
-			strValue = strValue.substr(0, nFound + nDecimals+1);
-		}
-
 	}
 
 	return strValue;

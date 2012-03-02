@@ -1296,3 +1296,364 @@ Nothing to build for Darwin
 
 **** Internal Builder is used for build               ****
 Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
+..\src\Mutation.cpp: In memberfunctie ‘virtual std::string AlphanumMutation::Insertion()’:
+..\src\Mutation.cpp:515:24: let op: comparison between signed and unsigned integer expressions [-Wsign-compare]
+..\src\Mutation.cpp:521:51: fout: invalid conversion from ‘char’ to ‘const char*’ [-fpermissive]
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:1283:7: fout:   initializing argument 2 of ‘std::basic_string<_CharT, _Traits, _Alloc>& std::basic_string<_CharT, _Traits, _Alloc>::insert(std::basic_string<_CharT, _Traits, _Alloc>::size_type, const _CharT*) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>, std::basic_string<_CharT, _Traits, _Alloc> = std::basic_string<char>, std::basic_string<_CharT, _Traits, _Alloc>::size_type = unsigned int]’ [-fpermissive]
+Build error occurred, build is stopped
+Time consumed: 796  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
+..\src\Mutation.cpp: In memberfunctie ‘virtual std::string AlphanumMutation::Insertion()’:
+..\src\Mutation.cpp:521:51: fout: invalid conversion from ‘char’ to ‘const char*’ [-fpermissive]
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:1283:7: fout:   initializing argument 2 of ‘std::basic_string<_CharT, _Traits, _Alloc>& std::basic_string<_CharT, _Traits, _Alloc>::insert(std::basic_string<_CharT, _Traits, _Alloc>::size_type, const _CharT*) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>, std::basic_string<_CharT, _Traits, _Alloc> = std::basic_string<char>, std::basic_string<_CharT, _Traits, _Alloc>::size_type = unsigned int]’ [-fpermissive]
+Build error occurred, build is stopped
+Time consumed: 468  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
+..\src\Mutation.cpp: In memberfunctie ‘virtual std::string AlphanumMutation::Insertion()’:
+..\src\Mutation.cpp:521:58: fout: invalid conversion from ‘char’ to ‘const char*’ [-fpermissive]
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.tcc:214:5: fout:   initializing argument 1 of ‘std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>]’ [-fpermissive]
+Build error occurred, build is stopped
+Time consumed: 421  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
+..\src\Mutation.cpp: In memberfunctie ‘virtual std::string AlphanumMutation::Insertion()’:
+..\src\Mutation.cpp:523:45: fout: invalid conversion from ‘char’ to ‘const char*’ [-fpermissive]
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:1283:7: fout:   initializing argument 2 of ‘std::basic_string<_CharT, _Traits, _Alloc>& std::basic_string<_CharT, _Traits, _Alloc>::insert(std::basic_string<_CharT, _Traits, _Alloc>::size_type, const _CharT*) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>, std::basic_string<_CharT, _Traits, _Alloc> = std::basic_string<char>, std::basic_string<_CharT, _Traits, _Alloc>::size_type = unsigned int]’ [-fpermissive]
+Build error occurred, build is stopped
+Time consumed: 484  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
+..\src\Mutation.cpp: In memberfunctie ‘virtual std::string AlphanumMutation::Insertion()’:
+..\src\Mutation.cpp:523:41: fout: invalid conversion from ‘char’ to ‘const char*’ [-fpermissive]
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.tcc:214:5: fout:   initializing argument 1 of ‘std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>]’ [-fpermissive]
+Build error occurred, build is stopped
+Time consumed: 421  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
+..\src\Mutation.cpp: In memberfunctie ‘virtual std::string AlphanumMutation::Insertion()’:
+..\src\Mutation.cpp:523:45: fout: invalid conversion from ‘char’ to ‘const char*’ [-fpermissive]
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:1283:7: fout:   initializing argument 2 of ‘std::basic_string<_CharT, _Traits, _Alloc>& std::basic_string<_CharT, _Traits, _Alloc>::insert(std::basic_string<_CharT, _Traits, _Alloc>::size_type, const _CharT*) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>, std::basic_string<_CharT, _Traits, _Alloc> = std::basic_string<char>, std::basic_string<_CharT, _Traits, _Alloc>::size_type = unsigned int]’ [-fpermissive]
+Build error occurred, build is stopped
+Time consumed: 453  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
+..\src\Mutation.cpp: In memberfunctie ‘virtual std::string AlphanumMutation::Insertion()’:
+..\src\Mutation.cpp:521:52: fout: invalid conversion from ‘char’ to ‘char*’ [-fpermissive]
+Build error occurred, build is stopped
+Time consumed: 343  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1404  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1185  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1170  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1060  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1123  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1202  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
+..\src\Mutation.cpp: In memberfunctie ‘virtual std::string CustomMutation::Insertion()’:
+..\src\Mutation.cpp:621:70: fout: request for member ‘value’ in ‘((CustomMutation*)this)->CustomMutation::<anonymous>.Mutation::m_Node->rapidxml::xml_node<>::<anonymous>.rapidxml::xml_base<Ch>::parent [with Ch = char]()->rapidxml::xml_node<Ch>::first_attribute [with Ch = char, std::size_t = unsigned int](((const char*)"chars"), 0u, 1)’, which is of non-class type ‘rapidxml::xml_attribute<char>*’
+Build error occurred, build is stopped
+Time consumed: 405  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1201  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1248  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1202  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1123  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1154  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1108  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1201  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
+..\src\Mutation.cpp: In memberfunctie ‘virtual std::string IntegerMutation::Gaussian()’:
+..\src\Mutation.cpp:215:1: let op: no return statement in function returning non-void [-Wreturn-type]
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1139  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1123  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin

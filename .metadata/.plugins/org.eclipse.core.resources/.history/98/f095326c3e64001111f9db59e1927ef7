@@ -77,6 +77,8 @@ std::string BitMutation::Uniform(){
 	return cBinaryEncoding.RandomData(m_Node);
 }
 /*std::string BitMutation::Gaussian(){
+
+	//std::cout << box_muller(0, 2.0) << std::endl;
 	return "";
 }*/
 std::string BitMutation::Duplication(){
@@ -210,8 +212,6 @@ std::string IntegerMutation::Uniform(){
 	return cIntegerEncoding.RandomData(m_Node);
 }
 std::string IntegerMutation::Gaussian(){
-
-	//std::cout << box_muller(0, 1.0) << std::endl;
 	return "";
 }
 std::string IntegerMutation::Duplication(){
@@ -284,43 +284,7 @@ std::string IntegerMutation::Deletion(){
 	return strValue;
 }
 std::string IntegerMutation::Insertion(){
-	std::string strValue = m_Node->value();
-	int nRandom = rand() % 10;
-
-	int nBegin = 0;
-	//check if strValue is not empty, otherwise let nBegin be at 0
-	if(strValue.size() > 0){
-		nBegin = rand() % strValue.size();
-	}
-
-	//make sure the inserted character is not before a - sign
-	if(strValue.at(0) == '-' && nBegin == 0){
-		nBegin = 1;
-	}
-
-	std::stringstream ss;//create a stringstream
-	ss << nRandom;
-	strValue.insert(nBegin, ss.str());
-
-	//check if there is a min attribute
-	if(m_Node->first_attribute("max")){
-		int nMin = atoi(m_Node->first_attribute("min")->value());
-		//check if the new value is smaller than min, if so return original value
-		if(atoi(strValue.c_str()) < nMin){
-			return m_Node->value();
-		}
-	}
-
-	//check if there is a max attribute
-	if(m_Node->first_attribute("max")){
-		int nMax = atoi(m_Node->first_attribute("max")->value());
-		//check if the new value is bigger than max, if so return original value
-		if(atoi(strValue.c_str()) > nMax){
-			return m_Node->value();
-		}
-	}
-
-	return strValue;
+	return "";
 }
 
 
@@ -474,53 +438,7 @@ std::string DoubleMutation::Deletion(){
 	return strValue;
 }
 std::string DoubleMutation::Insertion(){
-	std::string strValue = m_Node->value();
-	int nRandom = rand() % 10;
-
-	int nBegin = 0;
-	//check if strValue is not empty, otherwise let nBegin be at 0
-	if(strValue.size() > 0){
-		nBegin = rand() % strValue.size();
-	}
-
-	//make sure the inserted character is not before a - sign
-	if(strValue.at(0) == '-' && nBegin == 0){
-		nBegin = 1;
-	}
-
-	std::stringstream ss;//create a stringstream
-	ss << nRandom;
-	strValue.insert(nBegin, ss.str());
-
-	//check if there is a min attribute
-	if(m_Node->first_attribute("max")){
-		int nMin = atoi(m_Node->first_attribute("min")->value());
-		//check if the new value is smaller than min, if so return original value
-		if(atoi(strValue.c_str()) < nMin){
-			return m_Node->value();
-		}
-	}
-
-	//check if there is a max attribute
-	if(m_Node->first_attribute("max")){
-		int nMax = atoi(m_Node->first_attribute("max")->value());
-		//check if the new value is bigger than max, if so return original value
-		if(atoi(strValue.c_str()) > nMax){
-			return m_Node->value();
-		}
-	}
-
-	//make sure new value doesn't have more decimals than allowed
-	if(m_Node->first_attribute("decimals")){
-		int nDecimals = atoi(m_Node->first_attribute("decimals")->value());
-		size_t nFound = strValue.find('.');
-		if(nFound != std::string::npos && (strValue.size()-nFound) > nDecimals){
-			strValue = strValue.substr(0, nFound + nDecimals+1);
-		}
-
-	}
-
-	return strValue;
+	return "";
 }
 
 
@@ -592,29 +510,19 @@ std::string AlphanumMutation::Deletion(){
 std::string AlphanumMutation::Insertion(){
 	std::string strValue = m_Node->value();
 
-	//check if there is a maxChars attribute
 	if(m_Node->first_attribute("maxChars")){
 		int nChars = atoi(m_Node->first_attribute("maxChars")->value());
-		if((int)strValue.size() >= nChars){
-			return strValue;
+		if((int)strValue.size() < nChars){
+			AlphanumEncoding cAlphanumEncoding;
+			std::vector<char> vCharacters = cAlphanumEncoding.GetChars();
+			int nRandom = rand() % vCharacters.size();
+			int nBegin = rand() % strValue.size();
+
+			strValue.insert(nBegin, vCharacters.at(nRandom));
 		}
+
+
 	}
-
-	//get a random character and insert it in strValue;
-	AlphanumEncoding cAlphanumEncoding;
-	std::vector<char> vCharacters = cAlphanumEncoding.GetChars();
-
-	int nRandom = rand() % vCharacters.size();
-
-	int nBegin = 0;
-	//check if strValue is not empty, otherwise let nBegin be at 0
-	if(strValue.size() > 0){
-		nBegin = rand() % strValue.size();
-	}
-
-	std::stringstream ss;//create a stringstream
-	ss << vCharacters.at(nRandom);
-	strValue.insert(nBegin, ss.str());
 
 	return strValue;
 }
@@ -688,34 +596,7 @@ std::string CustomMutation::Deletion(){
 	return strValue;
 }
 std::string CustomMutation::Insertion(){
-	std::string strValue = m_Node->value();
-
-	//check if there is a maxChars attribute
-	if(m_Node->first_attribute("maxChars")){
-		int nChars = atoi(m_Node->first_attribute("maxChars")->value());
-		if((int)strValue.size() >= nChars){
-			return strValue;
-		}
-	}
-
-	//get a random character and insert it in strValue;
-	CustomEncoding cCustomEncoding;
-	cCustomEncoding.SetChars(m_Node->parent()->first_attribute("chars")->value());
-	std::vector<char> vCharacters = cCustomEncoding.GetChars();
-
-	int nRandom = rand() % vCharacters.size();
-
-	int nBegin = 0;
-	//check if strValue is not empty, otherwise let nBegin be at 0
-	if(strValue.size() > 0){
-		nBegin = rand() % strValue.size();
-	}
-
-	std::stringstream ss;//create a stringstream
-	ss << vCharacters.at(nRandom);
-	strValue.insert(nBegin, ss.str());
-
-	return strValue;
+	return "";
 }
 
 

@@ -77,6 +77,8 @@ std::string BitMutation::Uniform(){
 	return cBinaryEncoding.RandomData(m_Node);
 }
 /*std::string BitMutation::Gaussian(){
+
+	//std::cout << box_muller(0, 2.0) << std::endl;
 	return "";
 }*/
 std::string BitMutation::Duplication(){
@@ -210,8 +212,6 @@ std::string IntegerMutation::Uniform(){
 	return cIntegerEncoding.RandomData(m_Node);
 }
 std::string IntegerMutation::Gaussian(){
-
-	//std::cout << box_muller(0, 1.0) << std::endl;
 	return "";
 }
 std::string IntegerMutation::Duplication(){

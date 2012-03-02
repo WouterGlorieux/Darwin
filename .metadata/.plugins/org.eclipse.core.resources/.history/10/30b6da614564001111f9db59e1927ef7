@@ -212,7 +212,6 @@ std::string IntegerMutation::Uniform(){
 std::string IntegerMutation::Gaussian(){
 
 	//std::cout << box_muller(0, 1.0) << std::endl;
-	return "";
 }
 std::string IntegerMutation::Duplication(){
 	std::string strValue = m_Node->value();
