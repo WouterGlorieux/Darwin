@@ -40,14 +40,6 @@ private:
 
     Recombination m_cRecombination;
 
-    MutationChance sBinaryMutationChance;
-    MutationChance sIntegerMutationChance;
-    MutationChance sDoubleMutationChance;
-    MutationChance sAlphanumMutationChance;
-    MutationChance sCustomMutationChance;
-    MutationChance sTreeMutationChance;
-
-
     void RWS(std::vector<Parent> selection, Rosetta* population);
     void SUS(std::vector<Parent> selection, Rosetta* population);
     void Tournament(std::vector<Parent> selection, Rosetta* population);

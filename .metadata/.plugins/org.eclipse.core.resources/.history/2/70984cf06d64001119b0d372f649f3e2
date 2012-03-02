@@ -68,18 +68,4 @@ struct Parent
 
 };
 
-struct MutationChance
-{
-	double dBitString;
-	double dFlipBits;
-	double dBoundary;
-	double dUniform;
-	double dGaussian;
-	double dGaussianSigma;
-	double dDuplication;
-	double dDeletion;
-	double dInsertion;
-
-};
-
 #endif /* GLOBALS_H_ */
