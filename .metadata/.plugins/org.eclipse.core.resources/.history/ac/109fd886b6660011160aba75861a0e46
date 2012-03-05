@@ -39,10 +39,15 @@ private:
 
     bool m_bElitism;				//Elitism enabled or not?
 
-    int m_nGeneration;
-
     Recombination m_cRecombination;
-
+/*
+    MutationChance m_cBinaryMutationChance;
+    MutationChance m_cIntegerMutationChance;
+    MutationChance m_cDoubleMutationChance;
+    MutationChance m_cAlphanumMutationChance;
+    MutationChance m_cCustomMutationChance;
+    MutationChance m_cTreeMutationChance;
+*/
     MutationChance SetMutationChance(rapidxml::xml_node<>* node );
     MutationChance GetMutationChance(EncodingType encodingType);
     MutationChances sMutationChances;
@@ -52,7 +57,6 @@ private:
     void SUS(std::vector<Parent> selection, Rosetta* population);
     void Tournament(std::vector<Parent> selection, Rosetta* population);
 
-    bool DoNextGeneration();
 
 public:
     Evolver() // default constructor

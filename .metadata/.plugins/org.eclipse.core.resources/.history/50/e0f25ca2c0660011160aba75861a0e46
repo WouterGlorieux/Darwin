@@ -318,51 +318,80 @@ void Genome::GeneMutations(rapidxml::xml_document<>& doc, rapidxml::xml_node<>* 
 
 		dRandom = (double)((rand() % (nHigh - nLow + 1)) + nLow)/nHigh;
 		if(dRandom <=  mutationChance.dBitString){
+			std::cout << "bitstring begin" << std::endl;
 			pchMutatedData = doc.allocate_string(mutation.BitString().c_str());
 			geneNode->value(pchMutatedData);
+			std::cout << "bitstring end" << std::endl;
 		}
 
 		dRandom = (double)((rand() % (nHigh - nLow + 1)) + nLow)/nHigh;
 		if(dRandom <=  mutationChance.dFlipBits){
+			std::cout << "flipbits begin" << std::endl;
 			pchMutatedData = doc.allocate_string(mutation.FlipBits().c_str());
 			geneNode->value(pchMutatedData);
+			std::cout << "flipbits end" << std::endl;
 		}
 
 		dRandom = (double)((rand() % (nHigh - nLow + 1)) + nLow)/nHigh;
 		if(dRandom <=  mutationChance.dBoundary){
+			std::cout << "boundary begin" << std::endl;
 			pchMutatedData = doc.allocate_string(mutation.Boundary().c_str());
 			geneNode->value(pchMutatedData);
+			std::cout << "boundary end" << std::endl;
 		}
 
 		dRandom = (double)((rand() % (nHigh - nLow + 1)) + nLow)/nHigh;
 		if(dRandom <=  mutationChance.dUniform){
+			std::cout << "uniform begin" << std::endl;
 			pchMutatedData = doc.allocate_string(mutation.Uniform().c_str());
 			geneNode->value(pchMutatedData);
+			std::cout << "uniform end" << std::endl;
 		}
 
 		dRandom = (double)((rand() % (nHigh - nLow + 1)) + nLow)/nHigh;
 		if(dRandom <=  mutationChance.dGaussian){
+			std::cout << "gaussian begin" << std::endl;
 			pchMutatedData = doc.allocate_string(mutation.Gaussian(mutationChance.dGaussianSigma).c_str());
 			geneNode->value(pchMutatedData);
+			std::cout << "gaussian end" << std::endl;
 		}
 
 		dRandom = (double)((rand() % (nHigh - nLow + 1)) + nLow)/nHigh;
 		if(dRandom <=  mutationChance.dDuplication){
+			std::cout << "duplication begin" << std::endl;
 			pchMutatedData = doc.allocate_string(mutation.Duplication().c_str());
 			geneNode->value(pchMutatedData);
+			std::cout << "duplication end" << std::endl;
 		}
 
 		dRandom = (double)((rand() % (nHigh - nLow + 1)) + nLow)/nHigh;
 		if(dRandom <=  mutationChance.dDeletion){
+			std::cout << "deletion begin" << std::endl;
 			pchMutatedData = doc.allocate_string(mutation.Deletion().c_str());
 			geneNode->value(pchMutatedData);
+			std::cout << "deletion end" << std::endl;
 		}
 
 		dRandom = (double)((rand() % (nHigh - nLow + 1)) + nLow)/nHigh;
 		if(dRandom <=  mutationChance.dInsertion){
+			std::cout << "insertion begin" << std::endl;
 			pchMutatedData = doc.allocate_string(mutation.Insertion().c_str());
 			geneNode->value(pchMutatedData);
+			std::cout << "insertion end" << std::endl;
 		}
 
 }
+/*
+void Genome::Mutations(Mutation& mutation){
 
+	mutation.BitString();
+	mutation.FlipBits();
+	mutation.Boundary();
+	mutation.Uniform();
+	mutation.Gaussian();
+	mutation.Duplication();
+	mutation.Deletion();
+	mutation.Insertion();
+
+}
+*/

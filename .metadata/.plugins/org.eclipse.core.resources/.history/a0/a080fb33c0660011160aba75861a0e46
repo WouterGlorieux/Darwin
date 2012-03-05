@@ -160,29 +160,28 @@ std::string BitMutation::Insertion(){
 std::string IntegerMutation::BitString(){
 	std::string strValue = m_Node->value();
 
-	if(strValue.size() > 0){
-		int nRandom = rand() % strValue.size();
-		int nNewBit = rand() % 10;
+	int nRandom = rand() % strValue.size();
+	int nNewBit = rand() % 10;
 
-		std::stringstream ss;//create a stringstream
-		ss << nNewBit;
-		strValue.replace(nRandom, 1, ss.str());
+	std::stringstream ss;//create a stringstream
+	ss << nNewBit;
+	strValue.replace(nRandom, 1, ss.str());
 
-		//make sure new value is not smaller than min boundary
-		if(m_Node->first_attribute("min")){
-			if( atoi(strValue.c_str()) < atoi(m_Node->first_attribute("min")->value()) ){
-				return m_Node->value();
-			}
+	//make sure new value is not smaller than min boundary
+	if(m_Node->first_attribute("min")){
+		if( atoi(strValue.c_str()) < atoi(m_Node->first_attribute("min")->value()) ){
+			return m_Node->value();
 		}
-
-		//make sure new value is not greater than max boundary
-		if(m_Node->first_attribute("max")){
-			if( atoi(strValue.c_str()) > atoi(m_Node->first_attribute("max")->value()) ){
-				return m_Node->value();
-			}
-		}
-
 	}
+
+	//make sure new value is not greater than max boundary
+	if(m_Node->first_attribute("max")){
+		if( atoi(strValue.c_str()) > atoi(m_Node->first_attribute("max")->value()) ){
+			return m_Node->value();
+		}
+	}
+
+
 	return strValue;
 }
 /*std::string IntegerMutation::FlipBits(){
@@ -362,32 +361,31 @@ std::string IntegerMutation::Insertion(){
 std::string DoubleMutation::BitString(){
 	std::string strValue = m_Node->value();
 
-	if(strValue.size() > 0){
-		int nRandom = rand() % strValue.size();	//position to be replaced
-		int nNewBit = rand() % 10;				//new character
+	int nRandom = rand() % strValue.size();	//position to be replaced
+	int nNewBit = rand() % 10;				//new character
 
-		std::stringstream ss;//create a stringstream
-		ss << nNewBit;
+	std::stringstream ss;//create a stringstream
+	ss << nNewBit;
 
-		//make sure the decimal point is not replaced
-		if(strValue.at(nRandom) != '.'){
-			strValue.replace(nRandom, 1, ss.str());
-		}
+	//make sure the decimal point is not replaced
+	if(strValue.at(nRandom) != '.'){
+		strValue.replace(nRandom, 1, ss.str());
+	}
 
-		//make sure new value is not smaller than min boundary
-		if(m_Node->first_attribute("min")){
-			if( atof(strValue.c_str()) < atof(m_Node->first_attribute("min")->value()) ){
-				return m_Node->value();
-			}
-		}
-
-		//make sure new value is not greater than max boundary
-		if(m_Node->first_attribute("max")){
-			if( atof(strValue.c_str()) > atof(m_Node->first_attribute("max")->value()) ){
-				return m_Node->value();
-			}
+	//make sure new value is not smaller than min boundary
+	if(m_Node->first_attribute("min")){
+		if( atof(strValue.c_str()) < atof(m_Node->first_attribute("min")->value()) ){
+			return m_Node->value();
 		}
 	}
+
+	//make sure new value is not greater than max boundary
+	if(m_Node->first_attribute("max")){
+		if( atof(strValue.c_str()) > atof(m_Node->first_attribute("max")->value()) ){
+			return m_Node->value();
+		}
+	}
+
 	return strValue;
 }
 /*std::string DoubleMutation::FlipBits(){
@@ -471,52 +469,51 @@ std::string DoubleMutation::Gaussian(double sigma = 1.0){
 std::string DoubleMutation::Duplication(){
 	std::string strValue = m_Node->value();
 
-	if(strValue.size() > 0){
-		//duplicate a random part of the string
-		int nBegin = rand() % strValue.size();
-		int nEnd = (rand() % (strValue.size()-1 - nBegin + 1)) + nBegin;
-		std::string strSubstring = strValue.substr(nBegin,nEnd-nBegin+1);
+	//duplicate a random part of the string
+	int nBegin = rand() % strValue.size();
+	int nEnd = (rand() % (strValue.size()-1 - nBegin + 1)) + nBegin;
+	std::string strSubstring = strValue.substr(nBegin,nEnd-nBegin+1);
 
-		//make sure there is no decimal point in the substring
-		size_t nFound = strSubstring.find('.');
-		if(nFound != std::string::npos){
-			strSubstring.erase((int)nFound, 1);
-		}
+	//make sure there is no decimal point in the substring
+	size_t nFound = strSubstring.find('.');
+	if(nFound != std::string::npos){
+		strSubstring.erase((int)nFound, 1);
+	}
 
-		//make sure there is no - in the substring
-		nFound = strSubstring.find('-');
-		if(nFound != std::string::npos){
-			strSubstring.erase((int)nFound, 1);
-		}
+	//make sure there is no - in the substring
+	nFound = strSubstring.find('-');
+	if(nFound != std::string::npos){
+		strSubstring.erase((int)nFound, 1);
+	}
 
-		if(strSubstring.size() > 0){
-			strValue.insert(nBegin, strSubstring); // insert substring into strValue at index nBegin
-		}
+	if(strSubstring.size() > 0){
+		strValue.insert(nBegin, strSubstring); // insert substring into strValue at index nBegin
+	}
 
-		//make sure new value is not smaller than min boundary
-		if(m_Node->first_attribute("min")){
-			if( atof(strValue.c_str()) < atof(m_Node->first_attribute("min")->value()) ){
-				return m_Node->value();
-			}
-		}
-
-		//make sure new value is not greater than max boundary
-		if(m_Node->first_attribute("max")){
-			if( atof(strValue.c_str()) > atof(m_Node->first_attribute("max")->value()) ){
-				return m_Node->value();
-			}
-		}
-
-		//make sure new value doesn't have more decimals than allowed
-		if(m_Node->first_attribute("decimals")){
-			int nDecimals = atoi(m_Node->first_attribute("decimals")->value());
-			nFound = strValue.find('.');
-			if(nFound != std::string::npos && (strValue.size()-nFound) > nDecimals){
-				strValue = strValue.substr(0, nFound + nDecimals+1);
-			}
-
+	//make sure new value is not smaller than min boundary
+	if(m_Node->first_attribute("min")){
+		if( atof(strValue.c_str()) < atof(m_Node->first_attribute("min")->value()) ){
+			return m_Node->value();
 		}
 	}
+
+	//make sure new value is not greater than max boundary
+	if(m_Node->first_attribute("max")){
+		if( atof(strValue.c_str()) > atof(m_Node->first_attribute("max")->value()) ){
+			return m_Node->value();
+		}
+	}
+
+	//make sure new value doesn't have more decimals than allowed
+	if(m_Node->first_attribute("decimals")){
+		int nDecimals = atoi(m_Node->first_attribute("decimals")->value());
+		nFound = strValue.find('.');
+		if(nFound != std::string::npos && (strValue.size()-nFound) > nDecimals){
+			strValue = strValue.substr(0, nFound + nDecimals+1);
+		}
+
+	}
+
 	return strValue;
 }
 std::string DoubleMutation::Deletion(){

@@ -365,4 +365,17 @@ void Genome::GeneMutations(rapidxml::xml_document<>& doc, rapidxml::xml_node<>* 
 		}
 
 }
+/*
+void Genome::Mutations(Mutation& mutation){
 
+	mutation.BitString();
+	mutation.FlipBits();
+	mutation.Boundary();
+	mutation.Uniform();
+	mutation.Gaussian();
+	mutation.Duplication();
+	mutation.Deletion();
+	mutation.Insertion();
+
+}
+*/

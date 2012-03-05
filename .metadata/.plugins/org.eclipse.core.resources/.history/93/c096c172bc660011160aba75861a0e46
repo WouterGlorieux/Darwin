@@ -132,8 +132,6 @@ void Evolver::start(){
 	m_nGeneration = 1;
 
 //do until maxGenerations reached
-while(DoNextGeneration()){
-	std::cout << "Generation " << m_nGeneration << std::endl;
 
 	//calculate fitness
 	for(int i = 0; i<m_nPopulationSize; i++ ){
@@ -185,12 +183,12 @@ while(DoNextGeneration()){
 	}
 
 	//do mutations
-	//std::cout << pacNextGeneration[0].cGenome.GetXML() << std::endl;
+	std::cout << pacNextGeneration[0].cGenome.GetXML() << std::endl;
 	for(int i = 0; i<m_nPopulationSize; i++ ){
 		pacNextGeneration[i].DoMutations(sMutationChances);
 
 	}
-	//std::cout << pacNextGeneration[0].cGenome.GetXML() << std::endl;
+	std::cout << pacNextGeneration[0].cGenome.GetXML() << std::endl;
 
 	//copy next generation to population
 	for(int i = 0; i<m_nPopulationSize; i++ ){
@@ -198,25 +196,18 @@ while(DoNextGeneration()){
 		pacPopulation[i].SetGenomeType(m_eGenomeType);
 	}
 
-	m_nGeneration++;
-}
+
+
 //loop
 
 
 
 	delete[] pacPopulation;	//clean up memory
 	delete[] pacNextGeneration;
-
-	std::cout << "Evolution finished" << std::endl;
 }
 
 bool Evolver::DoNextGeneration(){
-	bool doNextGeneration = false;
-	if(m_nGeneration <= m_nMaxGenerations){
-		doNextGeneration = true;
-	}
 
-	return doNextGeneration;
 }
 
 std::vector<Parent> Evolver::MakeSelection(Rosetta* population){
@@ -225,6 +216,9 @@ std::vector<Parent> Evolver::MakeSelection(Rosetta* population){
 
 	assert(m_dTruncation > 0 && m_dTruncation <= 100);	//Truncation must be greater than 0 and smaller or equal to 100.
 	nSelectedGenomes = m_nPopulationSize * m_dTruncation/100;
+
+	std::cout << "number of selected genomes: " << nSelectedGenomes << std::endl;
+	std::cout << "elitism: " << m_bElitism << std::endl;
 
 	std::vector<Parent> vsParent(nSelectedGenomes);
 

@@ -52,7 +52,6 @@ private:
     void SUS(std::vector<Parent> selection, Rosetta* population);
     void Tournament(std::vector<Parent> selection, Rosetta* population);
 
-    bool DoNextGeneration();
 
 public:
     Evolver() // default constructor

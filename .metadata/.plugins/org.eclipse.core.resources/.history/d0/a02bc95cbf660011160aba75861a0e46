@@ -318,8 +318,10 @@ void Genome::GeneMutations(rapidxml::xml_document<>& doc, rapidxml::xml_node<>* 
 
 		dRandom = (double)((rand() % (nHigh - nLow + 1)) + nLow)/nHigh;
 		if(dRandom <=  mutationChance.dBitString){
+			std::cout << "bitstring begin" << std::endl;
 			pchMutatedData = doc.allocate_string(mutation.BitString().c_str());
 			geneNode->value(pchMutatedData);
+			std::cout << "bitstring end" << std::endl;
 		}
 
 		dRandom = (double)((rand() % (nHigh - nLow + 1)) + nLow)/nHigh;
@@ -365,4 +367,17 @@ void Genome::GeneMutations(rapidxml::xml_document<>& doc, rapidxml::xml_node<>* 
 		}
 
 }
+/*
+void Genome::Mutations(Mutation& mutation){
 
+	mutation.BitString();
+	mutation.FlipBits();
+	mutation.Boundary();
+	mutation.Uniform();
+	mutation.Gaussian();
+	mutation.Duplication();
+	mutation.Deletion();
+	mutation.Insertion();
+
+}
+*/
