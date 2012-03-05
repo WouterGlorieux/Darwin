@@ -249,7 +249,7 @@ void Genome::Save(rapidxml::xml_document<>& doc){
 	SetXML(xml_as_string);
 }
 
-void Genome::DoMutations(){
+void Genome::DoMutations(MutationChances mutationChances){
 	//std::cout << "starting mutations" << std::endl;
 
 	rapidxml::xml_document<> doc;
@@ -268,32 +268,32 @@ void Genome::DoMutations(){
 			if(strEncoding == "binary"){
 				BitMutation cBitMutation(geneNode);
 				Mutation& rMutation = cBitMutation;
-				GeneMutations(doc, geneNode, rMutation);
+				GeneMutations(doc, geneNode, rMutation, mutationChances.BinaryMutationChance);
 			}
 			else if(strEncoding == "integer"){
 				IntegerMutation cIntegerMutation(geneNode);
 				Mutation& rMutation = cIntegerMutation;
-				GeneMutations(doc, geneNode, rMutation);
+				GeneMutations(doc, geneNode, rMutation, mutationChances.IntegerMutationChance);
 			}
 			else if(strEncoding == "double"){
 				DoubleMutation cDoubleMutation(geneNode);
 				Mutation& rMutation = cDoubleMutation;
-				GeneMutations(doc, geneNode, rMutation);
+				GeneMutations(doc, geneNode, rMutation, mutationChances.DoubleMutationChance);
 			}
 			else if(strEncoding == "alphanum"){
 				AlphanumMutation cAlphanumMutation(geneNode);
 				Mutation& rMutation =  cAlphanumMutation;
-				GeneMutations(doc, geneNode, rMutation);
+				GeneMutations(doc, geneNode, rMutation, mutationChances.AlphanumMutationChance);
 			}
 			else if(strEncoding == "custom"){
 				CustomMutation cCustomMutation(geneNode);
 				Mutation& rMutation = cCustomMutation;
-				GeneMutations(doc, geneNode, rMutation);
+				GeneMutations(doc, geneNode, rMutation, mutationChances.CustomMutationChance);
 			}
 			else if(strEncoding == "tree"){
 				TreeMutation cTreeMutation(geneNode);
 				Mutation& rMutation = cTreeMutation;
-				GeneMutations(doc, geneNode, rMutation);
+				GeneMutations(doc, geneNode, rMutation, mutationChances.TreeMutationChance);
 			}
 
 			else{
@@ -305,34 +305,64 @@ void Genome::DoMutations(){
 	Genome::Save(doc);
 }
 
-void Genome::GeneMutations(rapidxml::xml_document<>& doc, rapidxml::xml_node<>* geneNode, Mutation& mutation){
+void Genome::GeneMutations(rapidxml::xml_document<>& doc, rapidxml::xml_node<>* geneNode, Mutation& mutation, MutationChance mutationChance){
 
 		char* pchMutatedData;
+		MutationChance cMutationChance ;
 
-		pchMutatedData = doc.allocate_string(mutation.BitString().c_str());
-		geneNode->value(pchMutatedData);
+		int nLow = 0;
+		int nHigh = RAND_MAX;
 
-		pchMutatedData = doc.allocate_string(mutation.FlipBits().c_str());
-		geneNode->value(pchMutatedData);
-
-		pchMutatedData = doc.allocate_string(mutation.Boundary().c_str());
-		geneNode->value(pchMutatedData);
-
-		pchMutatedData = doc.allocate_string(mutation.Uniform().c_str());
-		geneNode->value(pchMutatedData);
-
-		pchMutatedData = doc.allocate_string(mutation.Gaussian().c_str());
-		geneNode->value(pchMutatedData);
-
-		pchMutatedData = doc.allocate_string(mutation.Duplication().c_str());
-		geneNode->value(pchMutatedData);
+		double dRandom;
 
 
-		pchMutatedData = doc.allocate_string(mutation.Deletion().c_str());
-		geneNode->value(pchMutatedData);
+		dRandom = (double)((rand() % (nHigh - nLow + 1)) + nLow)/nHigh;
+		if(dRandom <=  mutationChance.dBitString){
+			pchMutatedData = doc.allocate_string(mutation.BitString().c_str());
+			geneNode->value(pchMutatedData);
+		}
 
-		pchMutatedData = doc.allocate_string(mutation.Insertion().c_str());
-		geneNode->value(pchMutatedData);
+		dRandom = (double)((rand() % (nHigh - nLow + 1)) + nLow)/nHigh;
+		if(dRandom <=  mutationChance.dFlipBits){
+			pchMutatedData = doc.allocate_string(mutation.FlipBits().c_str());
+			geneNode->value(pchMutatedData);
+		}
+
+		dRandom = (double)((rand() % (nHigh - nLow + 1)) + nLow)/nHigh;
+		if(dRandom <=  mutationChance.dBoundary){
+			pchMutatedData = doc.allocate_string(mutation.Boundary().c_str());
+			geneNode->value(pchMutatedData);
+		}
+
+		dRandom = (double)((rand() % (nHigh - nLow + 1)) + nLow)/nHigh;
+		if(dRandom <=  mutationChance.dUniform){
+			pchMutatedData = doc.allocate_string(mutation.Uniform().c_str());
+			geneNode->value(pchMutatedData);
+		}
+
+		dRandom = (double)((rand() % (nHigh - nLow + 1)) + nLow)/nHigh;
+		if(dRandom <=  mutationChance.dGaussian){
+			pchMutatedData = doc.allocate_string(mutation.Gaussian(mutationChance.dGaussianSigma).c_str());
+			geneNode->value(pchMutatedData);
+		}
+
+		dRandom = (double)((rand() % (nHigh - nLow + 1)) + nLow)/nHigh;
+		if(dRandom <=  mutationChance.dDuplication){
+			pchMutatedData = doc.allocate_string(mutation.Duplication().c_str());
+			geneNode->value(pchMutatedData);
+		}
+
+		dRandom = (double)((rand() % (nHigh - nLow + 1)) + nLow)/nHigh;
+		if(dRandom <=  mutationChance.dDeletion){
+			pchMutatedData = doc.allocate_string(mutation.Deletion().c_str());
+			geneNode->value(pchMutatedData);
+		}
+
+		dRandom = (double)((rand() % (nHigh - nLow + 1)) + nLow)/nHigh;
+		if(dRandom <=  mutationChance.dInsertion){
+			pchMutatedData = doc.allocate_string(mutation.Insertion().c_str());
+			geneNode->value(pchMutatedData);
+		}
 
 }
 /*

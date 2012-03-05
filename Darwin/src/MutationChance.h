@@ -40,5 +40,14 @@ public:
 	}
 };
 
+struct MutationChances
+{
+    MutationChance BinaryMutationChance;
+    MutationChance IntegerMutationChance;
+    MutationChance DoubleMutationChance;
+    MutationChance AlphanumMutationChance;
+    MutationChance CustomMutationChance;
+    MutationChance TreeMutationChance;
+};
 
 #endif /* MUTATIONCHANCE_H_ */

@@ -40,17 +40,17 @@ private:
     bool m_bElitism;				//Elitism enabled or not?
 
     Recombination m_cRecombination;
-
+/*
     MutationChance m_cBinaryMutationChance;
     MutationChance m_cIntegerMutationChance;
     MutationChance m_cDoubleMutationChance;
     MutationChance m_cAlphanumMutationChance;
     MutationChance m_cCustomMutationChance;
     MutationChance m_cTreeMutationChance;
-
+*/
     MutationChance SetMutationChance(rapidxml::xml_node<>* node );
     MutationChance GetMutationChance(EncodingType encodingType);
-
+    MutationChances sMutationChances;
 
 
     void RWS(std::vector<Parent> selection, Rosetta* population);

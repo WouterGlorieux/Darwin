@@ -83,7 +83,7 @@ void Rosetta::randomGenome(){
 	cGenome.FillWithRandomData();
 }
 
-void Rosetta::DoMutations(){
-	cGenome.DoMutations();
+void Rosetta::DoMutations(MutationChances mutationChances){
+	cGenome.DoMutations(mutationChances);
 
 }

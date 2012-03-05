@@ -24,7 +24,7 @@ std::string Mutation::Boundary(){
 std::string Mutation::Uniform(){
 	return m_Node->value();
 }
-std::string Mutation::Gaussian(){
+std::string Mutation::Gaussian(double sigma = 1.0){
 	return m_Node->value();
 }
 std::string Mutation::Duplication(){
@@ -76,7 +76,7 @@ std::string BitMutation::Uniform(){
 	BinaryEncoding cBinaryEncoding;
 	return cBinaryEncoding.RandomData(m_Node);
 }
-/*std::string BitMutation::Gaussian(){
+/*std::string BitMutation::Gaussian(double sigma = 1.0){
 	return "";
 }*/
 std::string BitMutation::Duplication(){
@@ -214,11 +214,11 @@ std::string IntegerMutation::Uniform(){
 	IntegerEncoding cIntegerEncoding;
 	return cIntegerEncoding.RandomData(m_Node);
 }
-std::string IntegerMutation::Gaussian(){
+std::string IntegerMutation::Gaussian(double sigma = 1.0){
 	std::string strValue = m_Node->value();
 
 	int nValue = atoi(strValue.c_str());
-	int nChange = (int)box_muller(0, 5.0);
+	int nChange = (int)box_muller(0, sigma);
 	nValue += nChange;
 
 	//make sure new value is not smaller than min boundary
@@ -415,11 +415,11 @@ std::string DoubleMutation::Uniform(){
 	DoubleEncoding cDoubleEncoding;
 	return cDoubleEncoding.RandomData(m_Node);
 }
-std::string DoubleMutation::Gaussian(){
+std::string DoubleMutation::Gaussian(double sigma = 1.0){
 	std::string strValue = m_Node->value();
 
 	double dValue = atof(strValue.c_str());
-	double dChange = box_muller(0, 5.0);
+	double dChange = box_muller(0, sigma);
 
 	dValue += dChange;
 
@@ -628,9 +628,9 @@ std::string AlphanumMutation::Uniform(){
 	AlphanumEncoding cAlphanumEncoding;
 	return cAlphanumEncoding.RandomData(m_Node);
 }
-std::string AlphanumMutation::Gaussian(){
+/*std::string AlphanumMutation::Gaussian(double sigma = 1.0){
 	return "";
-}
+}*/
 std::string AlphanumMutation::Duplication(){
 	std::string strValue = m_Node->value();
 
@@ -726,9 +726,9 @@ std::string CustomMutation::Uniform(){
 	cCustomEncoding.SetChars(m_Node->parent()->first_attribute("chars")->value());
 	return cCustomEncoding.RandomData(m_Node);
 }
-std::string CustomMutation::Gaussian(){
+/*std::string CustomMutation::Gaussian(double sigma = 1.0){
 	return "";
-}
+}*/
 std::string CustomMutation::Duplication(){
 	std::string strValue = m_Node->value();
 
@@ -804,21 +804,21 @@ std::string CustomMutation::Insertion(){
 /*std::string TreeMutation::Boundary(){
 	return "";
 }*/
-std::string TreeMutation::Uniform(){
+/*std::string TreeMutation::Uniform(){
 	return "";
-}
-std::string TreeMutation::Gaussian(){
+}*/
+/*std::string TreeMutation::Gaussian(double sigma = 1.0){
 	return "";
-}
-std::string TreeMutation::Duplication(){
+}*/
+/*std::string TreeMutation::Duplication(){
 	return "";
-}
-std::string TreeMutation::Deletion(){
+}*/
+/*std::string TreeMutation::Deletion(){
 	return "";
-}
-std::string TreeMutation::Insertion(){
+}*/
+/*std::string TreeMutation::Insertion(){
 	return "";
-}
+}*/
 
 /***************************************************************************************************************
  boxmuller.c           Implements the Polar form of the Box-Muller
@@ -835,7 +835,7 @@ std::string TreeMutation::Insertion(){
 float ranf(){
 
 	int nLow = 0;
-	int nHigh = 10000;
+	int nHigh = RAND_MAX;
 	int data = (rand() % (nHigh - nLow + 1)) + nLow;
 
 	return (float)data/nHigh;

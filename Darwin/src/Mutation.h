@@ -32,7 +32,7 @@ public:
     virtual std::string FlipBits();
     virtual std::string Boundary();
     virtual std::string Uniform();
-    virtual std::string Gaussian();
+    virtual std::string Gaussian(double sigma);
     virtual std::string Duplication();
     virtual std::string Deletion();
     virtual std::string Insertion();
@@ -57,7 +57,7 @@ public:
     virtual std::string FlipBits();
     virtual std::string Boundary();
     virtual std::string Uniform();
-    //virtual std::string Gaussian();
+    //virtual std::string Gaussian(double sigma = 1.0);
     virtual std::string Duplication();
     virtual std::string Deletion();
     virtual std::string Insertion();
@@ -82,7 +82,7 @@ public:
     //virtual std::string FlipBits();
     virtual std::string Boundary();
     virtual std::string Uniform();
-    virtual std::string Gaussian();
+    virtual std::string Gaussian(double sigma);
     virtual std::string Duplication();
     virtual std::string Deletion();
     virtual std::string Insertion();
@@ -108,7 +108,7 @@ public:
     //virtual std::string FlipBits();
     virtual std::string Boundary();
     virtual std::string Uniform();
-    virtual std::string Gaussian();
+    virtual std::string Gaussian(double sigma );
     virtual std::string Duplication();
     virtual std::string Deletion();
     virtual std::string Insertion();
@@ -134,7 +134,7 @@ public:
     //virtual std::string FlipBits();
     //virtual std::string Boundary();
     virtual std::string Uniform();
-    virtual std::string Gaussian();
+    //virtual std::string Gaussian(double sigma );
     virtual std::string Duplication();
     virtual std::string Deletion();
     virtual std::string Insertion();
@@ -159,7 +159,7 @@ public:
     //virtual std::string FlipBits();
     //virtual std::string Boundary();
     virtual std::string Uniform();
-    virtual std::string Gaussian();
+    //virtual std::string Gaussian(double sigma );
     virtual std::string Duplication();
     virtual std::string Deletion();
     virtual std::string Insertion();
@@ -183,11 +183,11 @@ public:
     //virtual std::string BitString();
     //virtual std::string FlipBits();
     //virtual std::string Boundary();
-    virtual std::string Uniform();
-    virtual std::string Gaussian();
-    virtual std::string Duplication();
-    virtual std::string Deletion();
-    virtual std::string Insertion();
+    //virtual std::string Uniform();
+    //virtual std::string Gaussian(double sigma );
+    //virtual std::string Duplication();
+    //virtual std::string Deletion();
+    //virtual std::string Insertion();
 
 };
 

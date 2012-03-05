@@ -15,45 +15,45 @@
   </Settings>
   <Mutations>
     <Binary>
-      <BitString allowed="true">0.5</BitString>
-      <FlipBits allowed="true">0.5</FlipBits>
-      <Boundary allowed="true">0.5</Boundary>
-      <Uniform allowed="true">0.5</Uniform>
-      <Duplication allowed="true">0.5</Duplication>
-      <Deletion allowed="true">0.5</Deletion>
-      <Insertion allowed="true">0.5</Insertion>
+      <BitString allowed="true">0.05</BitString>
+      <FlipBits allowed="true">0.05</FlipBits>
+      <Boundary allowed="true">0.05</Boundary>
+      <Uniform allowed="true">0.05</Uniform>
+      <Duplication allowed="true">0.05</Duplication>
+      <Deletion allowed="true">0.05</Deletion>
+      <Insertion allowed="true">0.05</Insertion>
     </Binary>
     <Integer>
-      <BitString allowed="true">0.5</BitString>
-      <Boundary allowed="true">0.5</Boundary>
-      <Uniform allowed="true">0.5</Uniform>
-      <Gaussian allowed="true" sigma="5.0">0.5</Gaussian>
-      <Duplication allowed="true">0.5</Duplication>
-      <Deletion allowed="true">0.5</Deletion>
-      <Insertion allowed="true">0.5</Insertion>
+      <BitString allowed="true">0.05</BitString>
+      <Boundary allowed="true">0.05</Boundary>
+      <Uniform allowed="true">0.05</Uniform>
+      <Gaussian allowed="true" sigma="5.0">0.05</Gaussian>
+      <Duplication allowed="true">0.05</Duplication>
+      <Deletion allowed="true">0.05</Deletion>
+      <Insertion allowed="true">0.05</Insertion>
     </Integer>
     <Double>
-      <BitString allowed="true">0.5</BitString>
-      <Boundary allowed="true">0.5</Boundary>
-      <Uniform allowed="true">0.5</Uniform>
-      <Gaussian allowed="true" sigma="5.0">0.5</Gaussian>
-      <Duplication allowed="true">0.5</Duplication>
-      <Deletion allowed="true">0.5</Deletion>
-      <Insertion allowed="true">0.5</Insertion>
+      <BitString allowed="true">0.05</BitString>
+      <Boundary allowed="true">0.05</Boundary>
+      <Uniform allowed="true">0.05</Uniform>
+      <Gaussian allowed="true" sigma="5.0">0.05</Gaussian>
+      <Duplication allowed="true">0.05</Duplication>
+      <Deletion allowed="true">0.05</Deletion>
+      <Insertion allowed="true">0.05</Insertion>
     </Double>
     <Alphanum>
-      <BitString allowed="true">0.5</BitString>
-      <Uniform allowed="true">0.5</Uniform>
-      <Duplication allowed="true">0.5</Duplication>
-      <Deletion allowed="true">0.5</Deletion>
-      <Insertion allowed="true">0.5</Insertion>
+      <BitString allowed="true">0.05</BitString>
+      <Uniform allowed="true">0.05</Uniform>
+      <Duplication allowed="true">0.05</Duplication>
+      <Deletion allowed="true">0.05</Deletion>
+      <Insertion allowed="true">0.05</Insertion>
     </Alphanum>
     <Custom>
-      <BitString allowed="true">0.5</BitString>
-      <Uniform allowed="true">0.5</Uniform>
-      <Duplication allowed="true">0.5</Duplication>
-      <Deletion allowed="true">0.5</Deletion>
-      <Insertion allowed="true">0.5</Insertion>
+      <BitString allowed="true">0.05</BitString>
+      <Uniform allowed="true">0.05</Uniform>
+      <Duplication allowed="true">0.05</Duplication>
+      <Deletion allowed="true">0.05</Deletion>
+      <Insertion allowed="true">0.05</Insertion>
     </Custom>
   </Mutations>
 </Config>
