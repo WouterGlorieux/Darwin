@@ -40,8 +40,8 @@ private:
 
     bool m_bElitism;				//Elitism enabled or not?
 
-    int m_nGeneration;
-    double m_dHighestFitness;
+    int m_nGeneration = 0;
+    double m_dHighestFitness = 0;
 
     Recombination m_cRecombination;
 

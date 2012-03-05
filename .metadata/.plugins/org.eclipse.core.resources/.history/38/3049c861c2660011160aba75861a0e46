@@ -68,7 +68,7 @@ void Rosetta::initTokamak(){
 void Rosetta::CalcFitness(){
 
 	int nLow = 0;
-	int nHigh = RAND_MAX;
+	int nHigh = 100;
 
 	m_dFitness = (rand() % (nHigh - nLow + 1)) + nLow;
 

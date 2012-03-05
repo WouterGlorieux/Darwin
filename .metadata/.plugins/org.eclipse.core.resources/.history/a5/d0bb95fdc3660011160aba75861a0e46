@@ -131,7 +131,6 @@ void Evolver::start(){
 	//create Aperture object
 
 	m_nGeneration = 1;
-	m_dHighestFitness = 0;
 
 //do until maxGenerations or a suitable solution is reached
 while(DoNextGeneration()){

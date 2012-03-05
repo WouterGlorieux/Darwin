@@ -47,7 +47,6 @@ void Evolver::traverse_xml(const std::string& input_xml)
     m_eNormalization = static_cast<NormalizationType> (atoi(settingsNode->first_node("Truncation")->first_attribute("normalization")->value()));
     m_bElitism = (settingsNode->first_node("Elitism")->value() == std::string("true"))? true: false;
     m_nMaxParents = atoi(settingsNode->first_node("MaxParents")->value());
-    m_dTargetFitness =atof(settingsNode->first_node("TargetFitness")->value());
     m_eRecombination = static_cast<RecombinationType> (atoi(settingsNode->first_node("Recombination")->value()));
     //check if there is a "tournament" attribute, if not, set tournament size to 1.
     m_nTournamentSize = settingsNode->first_node("Recombination")->first_attribute("tournament")?atoi(settingsNode->first_node("Recombination")->first_attribute("tournament")->value()):1;
@@ -131,7 +130,6 @@ void Evolver::start(){
 	//create Aperture object
 
 	m_nGeneration = 1;
-	m_dHighestFitness = 0;
 
 //do until maxGenerations or a suitable solution is reached
 while(DoNextGeneration()){
@@ -144,8 +142,7 @@ while(DoNextGeneration()){
 	}
 
 	std::vector<Parent> vsSelection = MakeSelection(pacPopulation);
-	std::cout << " Highest fitness: " << vsSelection[0].dFitness << std::endl;
-	m_dHighestFitness = vsSelection[0].dFitness;
+	std::cout " Highest fitness: " << vsSelection[0].dFitness << std::endl;
 
 /*	for(unsigned int i = 0; i < vsSelection.size(); i++ ){
 		std::cout << "Parent " << i << " index: " << vsSelection[i].nIndex;
@@ -218,10 +215,6 @@ bool Evolver::DoNextGeneration(){
 	bool doNextGeneration = false;
 	if(m_nGeneration <= m_nMaxGenerations){
 		doNextGeneration = true;
-	}
-	if(m_dHighestFitness >= m_dTargetFitness){
-		doNextGeneration = false;
-		std::cout << "Found suitable solution " << m_dHighestFitness << " stopping evolution now." << std::endl;
 	}
 
 	return doNextGeneration;

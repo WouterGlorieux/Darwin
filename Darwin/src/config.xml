@@ -8,6 +8,7 @@
   <Settings>
     <PopulationSize>100</PopulationSize>
     <MaxGenerations>1000</MaxGenerations>
+    <TargetFitness>32750</TargetFitness>
     <Truncation normalization="1">50</Truncation>
     <Elitism>true</Elitism>
     <MaxParents>2</MaxParents>

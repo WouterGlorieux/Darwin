@@ -131,7 +131,6 @@ void Evolver::start(){
 	//create Aperture object
 
 	m_nGeneration = 1;
-	m_dHighestFitness = 0;
 
 //do until maxGenerations or a suitable solution is reached
 while(DoNextGeneration()){
@@ -221,7 +220,7 @@ bool Evolver::DoNextGeneration(){
 	}
 	if(m_dHighestFitness >= m_dTargetFitness){
 		doNextGeneration = false;
-		std::cout << "Found suitable solution " << m_dHighestFitness << " stopping evolution now." << std::endl;
+		std::cout << "Found suitable solution. stopping evolution now." << std::endl;
 	}
 
 	return doNextGeneration;
