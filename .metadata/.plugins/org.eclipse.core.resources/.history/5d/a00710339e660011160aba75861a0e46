@@ -53,22 +53,22 @@ void Evolver::traverse_xml(const std::string& input_xml)
 
     rapidxml::xml_node<>* mutationsNode = rootNode->first_node("Mutations");
     if(mutationsNode->first_node("Binary"))
-    	m_cBinaryMutationChance = Evolver::SetMutationChance(mutationsNode->first_node("Binary"));
+    	sBinaryMutationChance = Evolver::SetMutationChance(mutationsNode->first_node("Binary"));
 
     if(mutationsNode->first_node("Integer"))
-    	m_cIntegerMutationChance = Evolver::SetMutationChance(mutationsNode->first_node("Integer"));
+    	sIntegerMutationChance = Evolver::SetMutationChance(mutationsNode->first_node("Integer"));
 
     if(mutationsNode->first_node("Double"))
-    	m_cDoubleMutationChance = Evolver::SetMutationChance(mutationsNode->first_node("Double"));
+    	sDoubleMutationChance = Evolver::SetMutationChance(mutationsNode->first_node("Double"));
 
     if(mutationsNode->first_node("Alphanum"))
-    	m_cAlphanumMutationChance = Evolver::SetMutationChance(mutationsNode->first_node("Alphanum"));
+    	sAlphanumMutationChance = Evolver::SetMutationChance(mutationsNode->first_node("Alphanum"));
 
     if(mutationsNode->first_node("Custom"))
-    	m_cCustomMutationChance = Evolver::SetMutationChance(mutationsNode->first_node("Custom"));
+    	sCustomMutationChance = Evolver::SetMutationChance(mutationsNode->first_node("Custom"));
 
     if(mutationsNode->first_node("Tree"))
-    	m_cTreeMutationChance = Evolver::SetMutationChance(mutationsNode->first_node("Tree"));
+    	sTreeMutationChance = Evolver::SetMutationChance(mutationsNode->first_node("Tree"));
 
 
 
@@ -83,31 +83,18 @@ void Evolver::printSettings(){
 	std::cout << "Max Generations: " << m_nMaxGenerations << std::endl << std::endl;
 
 	std::cout << "Mutation chances:" << std::endl;
-	std::cout << "Binary:" << std::endl;
-	Evolver::printMutationChance(m_cBinaryMutationChance);
-	std::cout << "Integer:" << std::endl;
-	Evolver::printMutationChance(m_cIntegerMutationChance);
-	std::cout << "Double:" << std::endl;
-	Evolver::printMutationChance(m_cDoubleMutationChance);
-	std::cout << "Alphanum:" << std::endl;
-	Evolver::printMutationChance(m_cAlphanumMutationChance);
-	std::cout << "Custom:" << std::endl;
-	Evolver::printMutationChance(m_cCustomMutationChance);
-	std::cout << "Tree:" << std::endl;
-	Evolver::printMutationChance(m_cTreeMutationChance);
+	std::cout << "Binary: << std::endl "
+			<< " BitString: " << sBinaryMutationChance.dBitString << std::endl
+			<< " FlipBits: " << sBinaryMutationChance.dFlipBits << std::endl
+			<< " Boundary: " << sBinaryMutationChance.dBoundary << std::endl
+			<< " Gaussian: " << sBinaryMutationChance.dGaussian << std::endl
+			<< " Duplication: " << sBinaryMutationChance.dDuplication << std::endl
+			<< " Deletion: " << sBinaryMutationChance.dDeletion << std::endl
+			<< " Insertion: " << sBinaryMutationChance.dInsertion << std::endl << std::endl;
 
 }
 
-void Evolver::printMutationChance(MutationChance mutationChance){
-	std::cout << " BitString: " << mutationChance.dBitString << std::endl
-			<< " FlipBits: " << mutationChance.dFlipBits << std::endl
-			<< " Boundary: " << mutationChance.dBoundary << std::endl
-			<< " Gaussian: " << mutationChance.dGaussian  << " sigma: " << mutationChance.dGaussianSigma << std::endl
-			<< " Duplication: " << mutationChance.dDuplication << std::endl
-			<< " Deletion: " << mutationChance.dDeletion << std::endl
-			<< " Insertion: " << mutationChance.dInsertion << std::endl << std::endl;
 
-}
 
 void Evolver::start(){
 
@@ -355,41 +342,6 @@ MutationChance Evolver::SetMutationChance(rapidxml::xml_node<>* node ){
 	return sMutationChance;
 }
 
-MutationChance Evolver::GetMutationChance(EncodingType encodingType){
-
-	MutationChance cMutationChance;
-	switch (encodingType)
-	    {
-	        case ENCODING_BINARY:
-	        	cMutationChance = m_cBinaryMutationChance;
-	            break;
-
-	        case ENCODING_INTEGER:
-	        	cMutationChance =  m_cIntegerMutationChance;
-	            break;
-
-	        case ENCODING_DOUBLE:
-	        	cMutationChance =  m_cDoubleMutationChance;
-	            break;
-
-	        case ENCODING_ALPHANUM:
-	        	cMutationChance =  m_cAlphanumMutationChance;
-	            break;
-
-	        case ENCODING_CUSTOM:
-	        	cMutationChance =  m_cCustomMutationChance;
-	            break;
-
-	        case ENCODING_TREE:
-	        	cMutationChance =  m_cTreeMutationChance;
-	            break;
-
-	        default:
-	            std::cout << "Unknown encoding type" << std::endl;
-	            break;
-	    }
-	return cMutationChance;
-}
 
 void Evolver::RWS(std::vector<Parent> selection, Rosetta* population){
 

@@ -355,41 +355,6 @@ MutationChance Evolver::SetMutationChance(rapidxml::xml_node<>* node ){
 	return sMutationChance;
 }
 
-MutationChance Evolver::GetMutationChance(EncodingType encodingType){
-
-	MutationChance cMutationChance;
-	switch (encodingType)
-	    {
-	        case ENCODING_BINARY:
-	        	cMutationChance = m_cBinaryMutationChance;
-	            break;
-
-	        case ENCODING_INTEGER:
-	        	cMutationChance =  m_cIntegerMutationChance;
-	            break;
-
-	        case ENCODING_DOUBLE:
-	        	cMutationChance =  m_cDoubleMutationChance;
-	            break;
-
-	        case ENCODING_ALPHANUM:
-	        	cMutationChance =  m_cAlphanumMutationChance;
-	            break;
-
-	        case ENCODING_CUSTOM:
-	        	cMutationChance =  m_cCustomMutationChance;
-	            break;
-
-	        case ENCODING_TREE:
-	        	cMutationChance =  m_cTreeMutationChance;
-	            break;
-
-	        default:
-	            std::cout << "Unknown encoding type" << std::endl;
-	            break;
-	    }
-	return cMutationChance;
-}
 
 void Evolver::RWS(std::vector<Parent> selection, Rosetta* population){
 

@@ -51,27 +51,6 @@ void Evolver::traverse_xml(const std::string& input_xml)
     //check if there is a "tournament" attribute, if not, set tournament size to 1.
     m_nTournamentSize = settingsNode->first_node("Recombination")->first_attribute("tournament")?atoi(settingsNode->first_node("Recombination")->first_attribute("tournament")->value()):1;
 
-    rapidxml::xml_node<>* mutationsNode = rootNode->first_node("Mutations");
-    if(mutationsNode->first_node("Binary"))
-    	m_cBinaryMutationChance = Evolver::SetMutationChance(mutationsNode->first_node("Binary"));
-
-    if(mutationsNode->first_node("Integer"))
-    	m_cIntegerMutationChance = Evolver::SetMutationChance(mutationsNode->first_node("Integer"));
-
-    if(mutationsNode->first_node("Double"))
-    	m_cDoubleMutationChance = Evolver::SetMutationChance(mutationsNode->first_node("Double"));
-
-    if(mutationsNode->first_node("Alphanum"))
-    	m_cAlphanumMutationChance = Evolver::SetMutationChance(mutationsNode->first_node("Alphanum"));
-
-    if(mutationsNode->first_node("Custom"))
-    	m_cCustomMutationChance = Evolver::SetMutationChance(mutationsNode->first_node("Custom"));
-
-    if(mutationsNode->first_node("Tree"))
-    	m_cTreeMutationChance = Evolver::SetMutationChance(mutationsNode->first_node("Tree"));
-
-
-
 }
 
 void Evolver::printSettings(){
@@ -80,34 +59,12 @@ void Evolver::printSettings(){
 	std::cout << "Description: " << m_strDescription << std::endl;
 	std::cout << "Directory path: " << m_strPath << std::endl;
 	std::cout << "PopulationSize: " << m_nPopulationSize << std::endl;
-	std::cout << "Max Generations: " << m_nMaxGenerations << std::endl << std::endl;
+	std::cout << "Max Generations: " << m_nMaxGenerations << std::endl;
 
-	std::cout << "Mutation chances:" << std::endl;
-	std::cout << "Binary:" << std::endl;
-	Evolver::printMutationChance(m_cBinaryMutationChance);
-	std::cout << "Integer:" << std::endl;
-	Evolver::printMutationChance(m_cIntegerMutationChance);
-	std::cout << "Double:" << std::endl;
-	Evolver::printMutationChance(m_cDoubleMutationChance);
-	std::cout << "Alphanum:" << std::endl;
-	Evolver::printMutationChance(m_cAlphanumMutationChance);
-	std::cout << "Custom:" << std::endl;
-	Evolver::printMutationChance(m_cCustomMutationChance);
-	std::cout << "Tree:" << std::endl;
-	Evolver::printMutationChance(m_cTreeMutationChance);
 
 }
 
-void Evolver::printMutationChance(MutationChance mutationChance){
-	std::cout << " BitString: " << mutationChance.dBitString << std::endl
-			<< " FlipBits: " << mutationChance.dFlipBits << std::endl
-			<< " Boundary: " << mutationChance.dBoundary << std::endl
-			<< " Gaussian: " << mutationChance.dGaussian  << " sigma: " << mutationChance.dGaussianSigma << std::endl
-			<< " Duplication: " << mutationChance.dDuplication << std::endl
-			<< " Deletion: " << mutationChance.dDeletion << std::endl
-			<< " Insertion: " << mutationChance.dInsertion << std::endl << std::endl;
 
-}
 
 void Evolver::start(){
 
@@ -292,104 +249,24 @@ std::vector<Parent> Evolver::MakeSelection(Rosetta* population){
 MutationChance Evolver::SetMutationChance(rapidxml::xml_node<>* node ){
 	MutationChance sMutationChance;
 
-	sMutationChance.dBitString = 0;
 	if(node->first_node("BitString")){
 		rapidxml::xml_node<>* BitStringNode = node->first_node("BitString");
 		if(BitStringNode->first_attribute("allowed")){
-			BitStringNode->first_attribute("allowed")->value() == std::string("true")?	sMutationChance.dBitString = atof(BitStringNode->value()) : sMutationChance.dBitString = 0;
-		}
-	}
+			if(BitStringNode->first_attribute("allowed")->value() == std::string("true")){
+				sMutationChance.dBitString = atof(BitStringNode->value());
 
-	sMutationChance.dFlipBits = 0;
-	if(node->first_node("FlipBits")){
-		rapidxml::xml_node<>* FlipBitsNode = node->first_node("FlipBits");
-		if(FlipBitsNode->first_attribute("allowed")){
-			FlipBitsNode->first_attribute("allowed")->value() == std::string("true")?	sMutationChance.dFlipBits = atof(FlipBitsNode->value()) : sMutationChance.dFlipBits = 0;
+			}
 		}
-	}
 
-	sMutationChance.dBoundary = 0;
-	if(node->first_node("Boundary")){
-		rapidxml::xml_node<>* BoundaryNode = node->first_node("Boundary");
-		if(BoundaryNode->first_attribute("allowed")){
-			BoundaryNode->first_attribute("allowed")->value() == std::string("true")?	sMutationChance.dBoundary = atof(BoundaryNode->value()) : sMutationChance.dBoundary = 0;
-		}
 	}
-
-	sMutationChance.dGaussian = 0;
-	sMutationChance.dGaussianSigma = 0;
-	if(node->first_node("Gaussian")){
-		rapidxml::xml_node<>* GaussianNode = node->first_node("Gaussian");
-		if(GaussianNode->first_attribute("allowed")){
-			GaussianNode->first_attribute("allowed")->value() == std::string("true")?	sMutationChance.dGaussian = atof(GaussianNode->value()) : sMutationChance.dGaussian = 0;
-		}
-		GaussianNode->first_attribute("sigma")?	sMutationChance.dGaussianSigma = atof(GaussianNode->first_attribute("sigma")->value()) : sMutationChance.dGaussianSigma = 1.0;
+	else{
+		sMutationChance.dBitString = 0;
 	}
-
-	sMutationChance.dDuplication = 0;
-	if(node->first_node("Duplication")){
-		rapidxml::xml_node<>* DuplicationNode = node->first_node("Duplication");
-		if(DuplicationNode->first_attribute("allowed")){
-			DuplicationNode->first_attribute("allowed")->value() == std::string("true")?	sMutationChance.dDuplication = atof(DuplicationNode->value()) : sMutationChance.dDuplication = 0;
-		}
-	}
-
-	sMutationChance.dDeletion = 0;
-	if(node->first_node("Deletion")){
-		rapidxml::xml_node<>* DeletionNode = node->first_node("Deletion");
-		if(DeletionNode->first_attribute("allowed")){
-			DeletionNode->first_attribute("allowed")->value() == std::string("true")?	sMutationChance.dDeletion = atof(DeletionNode->value()) : sMutationChance.dDeletion = 0;
-		}
-	}
-
-	sMutationChance.dInsertion = 0;
-	if(node->first_node("Insertion")){
-		rapidxml::xml_node<>* InsertionNode = node->first_node("Insertion");
-		if(InsertionNode->first_attribute("allowed")){
-			InsertionNode->first_attribute("allowed")->value() == std::string("true")?	sMutationChance.dInsertion = atof(InsertionNode->value()) : sMutationChance.dInsertion = 0;
-		}
-	}
-
 
 
 	return sMutationChance;
 }
 
-MutationChance Evolver::GetMutationChance(EncodingType encodingType){
-
-	MutationChance cMutationChance;
-	switch (encodingType)
-	    {
-	        case ENCODING_BINARY:
-	        	cMutationChance = m_cBinaryMutationChance;
-	            break;
-
-	        case ENCODING_INTEGER:
-	        	cMutationChance =  m_cIntegerMutationChance;
-	            break;
-
-	        case ENCODING_DOUBLE:
-	        	cMutationChance =  m_cDoubleMutationChance;
-	            break;
-
-	        case ENCODING_ALPHANUM:
-	        	cMutationChance =  m_cAlphanumMutationChance;
-	            break;
-
-	        case ENCODING_CUSTOM:
-	        	cMutationChance =  m_cCustomMutationChance;
-	            break;
-
-	        case ENCODING_TREE:
-	        	cMutationChance =  m_cTreeMutationChance;
-	            break;
-
-	        default:
-	            std::cout << "Unknown encoding type" << std::endl;
-	            break;
-	    }
-	return cMutationChance;
-}
 
 void Evolver::RWS(std::vector<Parent> selection, Rosetta* population){
 

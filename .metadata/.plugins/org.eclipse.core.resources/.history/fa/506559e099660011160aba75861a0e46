@@ -48,6 +48,8 @@ void Evolver::traverse_xml(const std::string& input_xml)
     m_bElitism = (settingsNode->first_node("Elitism")->value() == std::string("true"))? true: false;
     m_nMaxParents = atoi(settingsNode->first_node("MaxParents")->value());
     m_eRecombination = static_cast<RecombinationType> (atoi(settingsNode->first_node("Recombination")->value()));
+    //check if there is a "tournament" attribute, if not, set tournament size to 1.
+    m_nTournamentSize = settingsNode->first_node("Recombination")->first_attribute("tournament")?atoi(settingsNode->first_node("Recombination")->first_attribute("tournament")->value()):1;
 
 }
 
@@ -108,8 +110,6 @@ void Evolver::start(){
 
 
 	//do recombinations
-
-
 	for(int i = m_bElitism; i<m_nPopulationSize; i++ ){		//if elitism is true, the for loop begins at 1 instead of 0
 		m_cRecombination.Clear();		//make sure new recombination is empty
 
@@ -135,10 +135,12 @@ void Evolver::start(){
 	}
 
 	//do mutations
-//	for(int i = 0; i<m_nPopulationSize; i++ ){
-//		pacNextGeneration[i].DoMutations();
-//
-//	}
+	std::cout << pacNextGeneration[0].cGenome.GetXML() << std::endl;
+	for(int i = 0; i<m_nPopulationSize; i++ ){
+		pacNextGeneration[i].DoMutations();
+
+	}
+	std::cout << pacNextGeneration[0].cGenome.GetXML() << std::endl;
 
 	//copy next generation to population
 	for(int i = 0; i<m_nPopulationSize; i++ ){
@@ -244,6 +246,27 @@ std::vector<Parent> Evolver::MakeSelection(Rosetta* population){
 	return vsParent;
 }
 
+MutationChance Evolver::SetMutationChance(rapidxml::xml_node<>* node ){
+	MutationChance sMutationChance;
+
+	if(node->first_node("BitString")){
+		rapidxml::xml_node<>* BitStringNode = node->first_node("BitString");
+		if(BitStringNode->first_attribute("allowed")){
+			if(BitStringNode->first_attribute("allowed")->value() == 'true'){
+
+			}
+		}
+
+	}
+	else{
+		sMutationChance.dBitString = 0;
+	}
+
+
+	return sMutationChance;
+}
+
+
 void Evolver::RWS(std::vector<Parent> selection, Rosetta* population){
 
 	int nLow = 0;
@@ -288,4 +311,23 @@ void Evolver::SUS(std::vector<Parent> selection, Rosetta* population){
 }
 void Evolver::Tournament(std::vector<Parent> selection, Rosetta* population){
 
+	int nLow = 0;
+	int nHigh = selection.size()-1;
+	int nRandom = 0;
+
+	std::vector<int> tournament;
+
+	for(int i = 0; i<m_nMaxParents; i++){
+		tournament.clear();
+
+		//pick m_nTournamentSize parents at random from selection and add them to the vector
+		for(int j = 0; j<m_nTournamentSize; j++ ){
+			nRandom = (rand() % (nHigh - nLow + 1)) + nLow;		//random number between 0 and selection.size-1
+			tournament.push_back(nRandom);
+		}
+
+		//since selection is already sorted by ascending fitness, all that needs to be done is to sort the tournament vector and then add parent at the first index
+		std::sort(tournament.begin(), tournament.end());
+		m_cRecombination.AddParent(population[selection[tournament[0]].nIndex].cGenome.GetXML());
+	}
 }

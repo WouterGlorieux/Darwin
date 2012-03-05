@@ -49,7 +49,6 @@ private:
     MutationChance m_cTreeMutationChance;
 
     MutationChance SetMutationChance(rapidxml::xml_node<>* node );
-    MutationChance GetMutationChance(EncodingType encodingType);
 
 
 

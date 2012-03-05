@@ -41,15 +41,14 @@ private:
 
     Recombination m_cRecombination;
 
-    MutationChance m_cBinaryMutationChance;
-    MutationChance m_cIntegerMutationChance;
-    MutationChance m_cDoubleMutationChance;
-    MutationChance m_cAlphanumMutationChance;
-    MutationChance m_cCustomMutationChance;
-    MutationChance m_cTreeMutationChance;
+    MutationChance sBinaryMutationChance;
+    MutationChance sIntegerMutationChance;
+    MutationChance sDoubleMutationChance;
+    MutationChance sAlphanumMutationChance;
+    MutationChance sCustomMutationChance;
+    MutationChance sTreeMutationChance;
 
     MutationChance SetMutationChance(rapidxml::xml_node<>* node );
-    MutationChance GetMutationChance(EncodingType encodingType);
 
 
 
