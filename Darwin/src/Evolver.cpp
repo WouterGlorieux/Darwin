@@ -126,6 +126,7 @@ void Evolver::start(){
 	Rosetta* pacNextGeneration = new Rosetta[m_nPopulationSize];
 
 
+
 	//initialize Rosetta objects
 	for(int i = 0; i<m_nPopulationSize; i++ ){
 		pacPopulation[i].SetGenomeType(m_eGenomeType);
@@ -175,7 +176,6 @@ while(DoNextGeneration()){
 		pacNextGeneration[0].SetGenomeType(m_eGenomeType);
 	}
 
-
 	//do recombinations
 	for(int i = m_bElitism; i<m_nPopulationSize; i++ ){		//if elitism is true, the for loop begins at 1 instead of 0
 		m_cRecombination.Clear();		//make sure new recombination is empty
@@ -207,6 +207,9 @@ while(DoNextGeneration()){
 		pacNextGeneration[i].DoMutations(sMutationChances);
 
 	}
+
+
+
 
 	//copy next generation to population
 	for(int i = 0; i<m_nPopulationSize; i++ ){

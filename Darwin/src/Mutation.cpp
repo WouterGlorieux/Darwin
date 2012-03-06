@@ -986,6 +986,76 @@ std::string CustomMutation::Swap(){
 	return m_Node->value();
 }*/
 
+
+/***************************************************************************************************************
+ * Derived Class ChromosomeMutation
+ ***************************************************************************************************************/
+/*std::string ChromosomeMutation::BitString(){
+	return "";
+}*/
+/*std::string ChromosomeMutation::FlipBits(){
+	return "";
+}*/
+/*std::string ChromosomeMutation::Boundary(){
+	return "";
+}*/
+/*std::string ChromosomeMutation::Uniform(){
+	return "";
+}*/
+/*std::string ChromosomeMutation::Gaussian(double sigma = 1.0){
+	return "";
+}*/
+std::string ChromosomeMutation::Duplication(){
+/*	int nGenes = 0;
+	//count genes
+	for (rapidxml::xml_node<>* geneNode = m_Node->first_node("Gene"); geneNode; geneNode = geneNode->next_sibling("Gene")){
+		nGenes++;
+	}
+
+	//if there are genes, delete a random one
+	if(nGenes){
+		int nRandom = rand() % nGenes;
+		rapidxml::xml_node<>* geneNode;
+		geneNode = m_Node->first_node("Gene");
+		for(int i = 0; i < nRandom; i++){
+			geneNode = m_Node->next_sibling("Gene");
+		}
+		m_Node->insert_node( , geneNode);
+	}*/
+	return "";
+}
+std::string ChromosomeMutation::Deletion(){
+	int nGenes = 0;
+	//count genes
+	for (rapidxml::xml_node<>* geneNode = m_Node->first_node("Gene"); geneNode; geneNode = geneNode->next_sibling("Gene")){
+		nGenes++;
+	}
+
+	//if there are genes, delete at random one or more genes
+	if(nGenes){
+		int nBegin = rand() % nGenes;
+		int nEnd = (rand() % (nGenes-1 - nBegin + 1)) + nBegin;
+		rapidxml::xml_node<>* geneNode;
+
+		for(int i = nBegin; i <= nEnd; i++){
+			geneNode = m_Node->first_node("Gene");
+
+			for(int j = 0; j < nBegin; j++){
+				geneNode = geneNode->next_sibling("Gene");
+			}
+			m_Node->remove_node(geneNode);
+		}
+	}
+
+	return "";
+}
+/*std::string ChromosomeMutation::Insertion(){
+	return "";
+}*/
+/*std::string ChromosomeMutation::Swap(){
+	return m_Node->value();
+}*/
+
 /***************************************************************************************************************
  boxmuller.c           Implements the Polar form of the Box-Muller
                          Transformation
