@@ -72,6 +72,7 @@ void Rosetta::CalcFitness(){
 
 	m_dFitness = (rand() % (nHigh - nLow + 1)) + nLow;
 
+
 }
 
 void Rosetta::SetGenome(const std::string& input_xml){

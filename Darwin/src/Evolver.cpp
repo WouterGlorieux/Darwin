@@ -42,7 +42,6 @@ void Evolver::traverse_xml(const std::string& input_xml)
 
     rapidxml::xml_node<>* settingsNode = rootNode->first_node("Settings");
     m_nPopulationSize = atoi(settingsNode->first_node("PopulationSize")->value());
-    m_nMaxGenerations = atoi(settingsNode->first_node("MaxGenerations")->value());
     m_dTruncation = atof(settingsNode->first_node("Truncation")->value());
     m_eNormalization = static_cast<NormalizationType> (atoi(settingsNode->first_node("Truncation")->first_attribute("normalization")->value()));
     m_bElitism = (settingsNode->first_node("Elitism")->value() == std::string("true"))? true: false;
@@ -51,6 +50,13 @@ void Evolver::traverse_xml(const std::string& input_xml)
     m_eRecombination = static_cast<RecombinationType> (atoi(settingsNode->first_node("Recombination")->value()));
     //check if there is a "tournament" attribute, if not, set tournament size to 1.
     m_nTournamentSize = settingsNode->first_node("Recombination")->first_attribute("tournament")?atoi(settingsNode->first_node("Recombination")->first_attribute("tournament")->value()):1;
+
+    rapidxml::xml_node<>* terminationNode = settingsNode->first_node("Termination");
+    m_nMaxGenerations = terminationNode->first_node("MaxGenerations")? atoi(terminationNode->first_node("MaxGenerations")->value()) : 0;
+    m_nMaxTimeTotal = terminationNode->first_node("MaxTimeTotal")? atoi(terminationNode->first_node("MaxTimeTotal")->value()) : 0;
+    m_nMaxTimeGeneration = terminationNode->first_node("MaxTimeGeneration")? atoi(terminationNode->first_node("MaxTimeGeneration")->value()) : 0;
+    m_nStagnation = terminationNode->first_node("Stagnation")? atoi(terminationNode->first_node("Stagnation")->value()) : 0;
+
 
     rapidxml::xml_node<>* mutationsNode = rootNode->first_node("Mutations");
     if(mutationsNode->first_node("Binary"))
@@ -132,9 +138,13 @@ void Evolver::start(){
 
 	m_nGeneration = 1;
 	m_dHighestFitness = 0;
+	m_vdFitness.clear();
+	m_vdGenerationTime.clear();
 
+	clock_t start, finish;
 //do until maxGenerations or a suitable solution is reached
 while(DoNextGeneration()){
+	start = clock();
 	std::cout << "Generation " << m_nGeneration;
 
 	//calculate fitness
@@ -144,8 +154,9 @@ while(DoNextGeneration()){
 	}
 
 	std::vector<Parent> vsSelection = MakeSelection(pacPopulation);
-	std::cout << " Highest fitness: " << vsSelection[0].dFitness << std::endl;
+	std::cout << "\tHighest fitness: " << vsSelection[0].dFitness ;
 	m_dHighestFitness = vsSelection[0].dFitness;
+	m_vdFitness.push_back(vsSelection[0].dFitness);
 
 /*	for(unsigned int i = 0; i < vsSelection.size(); i++ ){
 		std::cout << "Parent " << i << " index: " << vsSelection[i].nIndex;
@@ -203,8 +214,13 @@ while(DoNextGeneration()){
 	}
 
 	m_nGeneration++;
+	finish = clock();
+	m_vdGenerationTime.push_back((double) (finish - start)/CLOCKS_PER_SEC);
+	std::cout << "\ttime: " << (double) (finish - start)/CLOCKS_PER_SEC  << std::endl;
 }
 //loop
+
+
 
 
 
@@ -215,14 +231,58 @@ while(DoNextGeneration()){
 }
 
 bool Evolver::DoNextGeneration(){
-	bool doNextGeneration = false;
-	if(m_nGeneration <= m_nMaxGenerations){
-		doNextGeneration = true;
+	bool doNextGeneration = true;
+
+	//see if the evolution has stagnated
+	if(m_nStagnation && m_nGeneration > m_nStagnation){
+		bool stagnation = true;
+		for(int i = 0; i < m_nStagnation; i++){
+			if( m_vdFitness.at(m_vdFitness.size()-1-i) != m_dHighestFitness) {
+				stagnation = false;
+				break;
+			}
+		}
+		stagnation == true ? doNextGeneration = false : doNextGeneration = true;
+		if (stagnation){
+			std::cout << "Evolution has stagnated." << std::endl;
+		}
 	}
-	if(m_dHighestFitness >= m_dTargetFitness){
+
+
+	//see if maximum number of generations is reached
+	if(m_nMaxGenerations && m_nGeneration >= m_nMaxGenerations){
 		doNextGeneration = false;
-		std::cout << "Found suitable solution " << m_dHighestFitness << " stopping evolution now." << std::endl;
+		std::cout << "Maximum number of generations reached" << std::endl;
 	}
+
+	//see if a suitable solution is found
+	if(m_dTargetFitness && m_dHighestFitness >= m_dTargetFitness){
+		doNextGeneration = false;
+		std::cout << "Found suitable solution " << m_dHighestFitness  << std::endl;
+	}
+
+	//see if the time for the last generation was more than the maximum time allowed
+	if(m_nMaxTimeGeneration && m_nGeneration > 1 && m_vdGenerationTime.at(m_vdGenerationTime.size()-1) >= m_nMaxTimeGeneration ){
+		doNextGeneration = false;
+		std::cout << "Maximum time to calculate each generation has been reached." << std::endl;
+
+	}
+
+	//see if the total time is more than the maximum time allowed
+	double dTotalTime = 0;
+	for(unsigned int i = 0; i < m_vdGenerationTime.size(); i++){
+		dTotalTime += m_vdGenerationTime.at(i);
+	}
+	if(m_nMaxTimeTotal && dTotalTime >= m_nMaxTimeTotal ){
+		doNextGeneration = false;
+		std::cout << "Maximum total time has been reached." << std::endl;
+	}
+
+
+	if(doNextGeneration == false){
+		std::cout << "Stopping Evolution" << std::endl;
+	}
+
 
 	return doNextGeneration;
 }

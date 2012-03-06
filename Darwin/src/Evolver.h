@@ -30,6 +30,9 @@ private:
 
     int m_nPopulationSize;			//total number of offspring in every generation
     int m_nMaxGenerations;        	//maximum number of generations to calculate (-1 for unlimited)
+    int m_nMaxTimeTotal;			//maximum time in seconds for total evolution
+    int m_nMaxTimeGeneration;		//maximum time in seconds for each generation
+    int m_nStagnation;				//if n generations with the same highest fitness occur after each other, the evolution has stagnated and will be stopped
     double m_dTargetFitness;		//when a genome with a fitness higher then this is found, the evolution stops
     int m_nMaxParents;              //maximum number of parents for recombination (must be greater of equal to 1)
     RecombinationType m_eRecombination;  //Method used to pick parents for recombination
@@ -42,6 +45,8 @@ private:
 
     int m_nGeneration;
     double m_dHighestFitness;
+    std::vector<double> m_vdFitness; 		//a vector with the highest fitness of each generation
+    std::vector<double> m_vdGenerationTime; 	//a vector with the time in seconds it took to calculate each generation
 
     Recombination m_cRecombination;
 
