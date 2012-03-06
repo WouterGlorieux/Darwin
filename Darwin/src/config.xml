@@ -14,8 +14,8 @@
     <Recombination >3</Recombination>
       <Termination>
         <MaxGenerations>1000</MaxGenerations>
-        <MaxTimeTotal>2</MaxTimeTotal>
-        <MaxTimeGeneration>1</MaxTimeGeneration>
+        <MaxTimeTotal>30</MaxTimeTotal>
+        <MaxTimeGeneration>5</MaxTimeGeneration>
         <Stagnation>100</Stagnation>
       </Termination>
   </Settings>
@@ -28,6 +28,7 @@
       <Duplication allowed="true">0.05</Duplication>
       <Deletion allowed="true">0.05</Deletion>
       <Insertion allowed="true">0.05</Insertion>
+      <Swap allowed="true">1</Swap>
     </Binary>
     <Integer>
       <BitString allowed="true">0.05</BitString>
@@ -37,6 +38,7 @@
       <Duplication allowed="true">0.05</Duplication>
       <Deletion allowed="true">0.05</Deletion>
       <Insertion allowed="true">0.05</Insertion>
+      <Swap allowed="true">1</Swap>
     </Integer>
     <Double>
       <BitString allowed="true">0.05</BitString>
@@ -46,6 +48,7 @@
       <Duplication allowed="true">0.05</Duplication>
       <Deletion allowed="true">0.05</Deletion>
       <Insertion allowed="true">0.05</Insertion>
+      <Swap allowed="true">1</Swap>
     </Double>
     <Alphanum>
       <BitString allowed="true">0.05</BitString>
@@ -53,6 +56,7 @@
       <Duplication allowed="true">0.05</Duplication>
       <Deletion allowed="true">0.05</Deletion>
       <Insertion allowed="true">0.05</Insertion>
+      <Swap allowed="true">1</Swap>
     </Alphanum>
     <Custom>
       <BitString allowed="true">0.05</BitString>
@@ -60,6 +64,7 @@
       <Duplication allowed="true">0.05</Duplication>
       <Deletion allowed="true">0.05</Deletion>
       <Insertion allowed="true">0.05</Insertion>
+      <Swap allowed="true">1</Swap>
     </Custom>
   </Mutations>
 </Config>

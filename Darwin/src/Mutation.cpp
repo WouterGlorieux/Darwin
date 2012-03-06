@@ -36,6 +36,9 @@ std::string Mutation::Deletion(){
 std::string Mutation::Insertion(){
 	return m_Node->value();
 }
+std::string Mutation::Swap(){
+	return m_Node->value();
+}
 
 
 /***************************************************************************************************************
@@ -152,7 +155,21 @@ std::string BitMutation::Insertion(){
 
 	return strValue;
 }
+std::string BitMutation::Swap(){
+	std::string strValue = m_Node->value();
 
+	int nRandom1 = 0;
+	int nRandom2 = 0;
+	if(strValue.size() > 0){
+		nRandom1 = rand() % strValue.size();
+		nRandom2 = rand() % strValue.size();
+		char chTmp = strValue.at(nRandom1);
+		strValue.at(nRandom1) = strValue.at(nRandom2);
+		strValue.at(nRandom2) = chTmp;
+	}
+
+	return strValue;
+}
 
 /***************************************************************************************************************
  * Derived Class IntegerMutation
@@ -334,27 +351,55 @@ std::string IntegerMutation::Insertion(){
 	ss << nRandom;
 	strValue.insert(nBegin, ss.str());
 
-	//check if there is a min attribute
-	if(m_Node->first_attribute("max")){
-		int nMin = atoi(m_Node->first_attribute("min")->value());
-		//check if the new value is smaller than min, if so return original value
-		if(atoi(strValue.c_str()) < nMin){
+	//make sure new value is not smaller than min boundary
+	if(m_Node->first_attribute("min")){
+		if( atoi(strValue.c_str()) < atoi(m_Node->first_attribute("min")->value()) ){
 			return m_Node->value();
 		}
 	}
 
-	//check if there is a max attribute
+	//make sure new value is not greater than max boundary
 	if(m_Node->first_attribute("max")){
-		int nMax = atoi(m_Node->first_attribute("max")->value());
-		//check if the new value is bigger than max, if so return original value
-		if(atoi(strValue.c_str()) > nMax){
+		if( atoi(strValue.c_str()) > atoi(m_Node->first_attribute("max")->value()) ){
 			return m_Node->value();
 		}
 	}
 
 	return strValue;
 }
+std::string IntegerMutation::Swap(){
+	std::string strValue = m_Node->value();
 
+	int nRandom1 = 0;
+	int nRandom2 = 0;
+	if(strValue.size() > 0){
+		nRandom1 = rand() % strValue.size();
+		nRandom2 = rand() % strValue.size();
+
+		if(strValue.at(nRandom1) != '-' && strValue.at(nRandom2) != '-' ){
+			char chTmp = strValue.at(nRandom1);
+			strValue.at(nRandom1) = strValue.at(nRandom2);
+			strValue.at(nRandom2) = chTmp;
+		}
+
+	}
+
+	//make sure new value is not smaller than min boundary
+	if(m_Node->first_attribute("min")){
+		if( atoi(strValue.c_str()) < atoi(m_Node->first_attribute("min")->value()) ){
+			return m_Node->value();
+		}
+	}
+
+	//make sure new value is not greater than max boundary
+	if(m_Node->first_attribute("max")){
+		if( atoi(strValue.c_str()) > atoi(m_Node->first_attribute("max")->value()) ){
+			return m_Node->value();
+		}
+	}
+
+	return strValue;
+}
 
 /***************************************************************************************************************
  * Derived Class DoubleMutation
@@ -514,7 +559,6 @@ std::string DoubleMutation::Duplication(){
 			if(nFound != std::string::npos && (strValue.size()-nFound) > nDecimals){
 				strValue = strValue.substr(0, nFound + nDecimals+1);
 			}
-
 		}
 	}
 	return strValue;
@@ -581,11 +625,16 @@ std::string DoubleMutation::Insertion(){
 		}
 	}
 
-	//check if there is a max attribute
+	//make sure new value is not smaller than min boundary
+	if(m_Node->first_attribute("min")){
+		if( atof(strValue.c_str()) < atof(m_Node->first_attribute("min")->value()) ){
+			return m_Node->value();
+		}
+	}
+
+	//make sure new value is not greater than max boundary
 	if(m_Node->first_attribute("max")){
-		int nMax = atoi(m_Node->first_attribute("max")->value());
-		//check if the new value is bigger than max, if so return original value
-		if(atoi(strValue.c_str()) > nMax){
+		if( atof(strValue.c_str()) > atof(m_Node->first_attribute("max")->value()) ){
 			return m_Node->value();
 		}
 	}
@@ -597,12 +646,52 @@ std::string DoubleMutation::Insertion(){
 		if(nFound != std::string::npos && (strValue.size()-nFound) > nDecimals){
 			strValue = strValue.substr(0, nFound + nDecimals+1);
 		}
-
 	}
 
 	return strValue;
 }
+std::string DoubleMutation::Swap(){
+	std::string strValue = m_Node->value();
 
+	int nRandom1 = 0;
+	int nRandom2 = 0;
+	if(strValue.size() > 0){
+		nRandom1 = rand() % strValue.size();
+		nRandom2 = rand() % strValue.size();
+
+		if(strValue.at(nRandom1) != '-' && strValue.at(nRandom2) != '-'){
+			char chTmp = strValue.at(nRandom1);
+			strValue.at(nRandom1) = strValue.at(nRandom2);
+			strValue.at(nRandom2) = chTmp;
+		}
+
+	}
+
+	//make sure new value is not smaller than min boundary
+	if(m_Node->first_attribute("min")){
+		if( atof(strValue.c_str()) < atof(m_Node->first_attribute("min")->value()) ){
+			return m_Node->value();
+		}
+	}
+
+	//make sure new value is not greater than max boundary
+	if(m_Node->first_attribute("max")){
+		if( atof(strValue.c_str()) > atof(m_Node->first_attribute("max")->value()) ){
+			return m_Node->value();
+		}
+	}
+
+	//make sure new value doesn't have more decimals than allowed
+	if(m_Node->first_attribute("decimals")){
+		int nDecimals = atoi(m_Node->first_attribute("decimals")->value());
+		size_t nFound = strValue.find('.');
+		if(nFound != std::string::npos && (strValue.size()-nFound) > nDecimals){
+			strValue = strValue.substr(0, nFound + nDecimals+1);
+		}
+	}
+
+	return strValue;
+}
 
 /***************************************************************************************************************
  * Derived Class AlphanumMutation
@@ -698,7 +787,25 @@ std::string AlphanumMutation::Insertion(){
 
 	return strValue;
 }
+std::string AlphanumMutation::Swap(){
+	std::string strValue = m_Node->value();
 
+	int nRandom1 = 0;
+	int nRandom2 = 0;
+	if(strValue.size() > 0){
+		nRandom1 = rand() % strValue.size();
+		nRandom2 = rand() % strValue.size();
+
+		if(strValue.at(nRandom1) != '-' && strValue.at(nRandom2) != '-' ){
+			char chTmp = strValue.at(nRandom1);
+			strValue.at(nRandom1) = strValue.at(nRandom2);
+			strValue.at(nRandom2) = chTmp;
+		}
+
+	}
+
+	return strValue;
+}
 
 /***************************************************************************************************************
  * Derived Class CustomMutation
@@ -797,7 +904,25 @@ std::string CustomMutation::Insertion(){
 
 	return strValue;
 }
+std::string CustomMutation::Swap(){
+	std::string strValue = m_Node->value();
 
+	int nRandom1 = 0;
+	int nRandom2 = 0;
+	if(strValue.size() > 0){
+		nRandom1 = rand() % strValue.size();
+		nRandom2 = rand() % strValue.size();
+
+		if(strValue.at(nRandom1) != '-' && strValue.at(nRandom2) != '-' ){
+			char chTmp = strValue.at(nRandom1);
+			strValue.at(nRandom1) = strValue.at(nRandom2);
+			strValue.at(nRandom2) = chTmp;
+		}
+
+	}
+
+	return strValue;
+}
 
 /***************************************************************************************************************
  * Derived Class TreeMutation
@@ -825,6 +950,40 @@ std::string CustomMutation::Insertion(){
 }*/
 /*std::string TreeMutation::Insertion(){
 	return "";
+}*/
+/*std::string TreeMutation::Swap(){
+	return m_Node->value();
+}*/
+
+/***************************************************************************************************************
+ * Derived Class ListMutation
+ ***************************************************************************************************************/
+/*std::string ListMutation::BitString(){
+	return "";
+}*/
+/*std::string ListMutation::FlipBits(){
+	return "";
+}*/
+/*std::string ListMutation::Boundary(){
+	return "";
+}*/
+/*std::string ListMutation::Uniform(){
+	return "";
+}*/
+/*std::string ListMutation::Gaussian(double sigma = 1.0){
+	return "";
+}*/
+/*std::string ListMutation::Duplication(){
+	return "";
+}*/
+/*std::string ListMutation::Deletion(){
+	return "";
+}*/
+/*std::string ListMutation::Insertion(){
+	return "";
+}*/
+/*std::string ListMutation::Swap(){
+	return m_Node->value();
 }*/
 
 /***************************************************************************************************************

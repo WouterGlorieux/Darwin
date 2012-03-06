@@ -145,6 +145,21 @@ public:
 
 };
 
+class ListEncoding : public Encoding
+{
+private:
 
+
+
+public:
+
+	ListEncoding() // default constructor
+    {    }
+	virtual ~ListEncoding() // default deconstructor
+    {    }
+
+    virtual std::string RandomData(rapidxml::xml_node<>* geneNode);
+
+};
 
 #endif /* ENCODING_H_ */

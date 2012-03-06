@@ -153,3 +153,16 @@ std::string TreeEncoding::RandomData(rapidxml::xml_node<>* geneNode){
 	   return ss.str();//return a string with the contents of the stream
 
 }
+
+std::string ListEncoding::RandomData(rapidxml::xml_node<>* geneNode){
+
+	int nLow = 0;
+	int nHigh = 100;
+
+	int data = (rand() % (nHigh - nLow + 1)) + nLow;
+
+	   std::stringstream ss;//create a stringstream
+	   ss << data;//add number to the stream
+	   return ss.str();//return a string with the contents of the stream
+
+}

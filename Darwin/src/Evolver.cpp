@@ -77,9 +77,8 @@ void Evolver::traverse_xml(const std::string& input_xml)
     if(mutationsNode->first_node("Tree"))
     	sMutationChances.TreeMutationChance = Evolver::SetMutationChance(mutationsNode->first_node("Tree"));
 
-
-
-
+    if(mutationsNode->first_node("List"))
+    	sMutationChances.ListMutationChance = Evolver::SetMutationChance(mutationsNode->first_node("List"));
 
 }
 
@@ -104,7 +103,8 @@ void Evolver::printSettings(){
 	Evolver::printMutationChance(sMutationChances.CustomMutationChance);
 	std::cout << "Tree:" << std::endl;
 	Evolver::printMutationChance(sMutationChances.TreeMutationChance);
-
+	std::cout << "List:" << std::endl;
+	Evolver::printMutationChance(sMutationChances.ListMutationChance);
 }
 
 void Evolver::printMutationChance(MutationChance mutationChance){
@@ -115,8 +115,8 @@ void Evolver::printMutationChance(MutationChance mutationChance){
 			<< " Gaussian: " << mutationChance.dGaussian  << " sigma: " << mutationChance.dGaussianSigma << std::endl
 			<< " Duplication: " << mutationChance.dDuplication << std::endl
 			<< " Deletion: " << mutationChance.dDeletion << std::endl
-			<< " Insertion: " << mutationChance.dInsertion << std::endl << std::endl;
-
+			<< " Insertion: " << mutationChance.dInsertion << std::endl
+			<< " Swap: " << mutationChance.dSwap << std::endl << std::endl;
 }
 
 void Evolver::start(){
@@ -140,6 +140,8 @@ void Evolver::start(){
 	m_dHighestFitness = 0;
 	m_vdFitness.clear();
 	m_vdGenerationTime.clear();
+
+
 
 	clock_t start, finish;
 //do until maxGenerations or a suitable solution is reached
@@ -205,7 +207,6 @@ while(DoNextGeneration()){
 		pacNextGeneration[i].DoMutations(sMutationChances);
 
 	}
-	//std::cout << pacNextGeneration[0].cGenome.GetXML() << std::endl;
 
 	//copy next generation to population
 	for(int i = 0; i<m_nPopulationSize; i++ ){
@@ -220,6 +221,7 @@ while(DoNextGeneration()){
 }
 //loop
 
+	//std::cout << pacNextGeneration[0].cGenome.GetXML() << std::endl;
 
 
 
@@ -250,7 +252,7 @@ bool Evolver::DoNextGeneration(){
 
 
 	//see if maximum number of generations is reached
-	if(m_nMaxGenerations && m_nGeneration >= m_nMaxGenerations){
+	if(m_nMaxGenerations && m_nGeneration > m_nMaxGenerations){
 		doNextGeneration = false;
 		std::cout << "Maximum number of generations reached" << std::endl;
 	}
@@ -288,7 +290,7 @@ bool Evolver::DoNextGeneration(){
 }
 
 std::vector<Parent> Evolver::MakeSelection(Rosetta* population){
-	//calculate which genomes are selected als possible parents
+	//calculate which genomes are selected as possible parents
 	int nSelectedGenomes;  		//number of genomes that get to have offspring
 
 	assert(m_dTruncation > 0 && m_dTruncation <= 100);	//Truncation must be greater than 0 and smaller or equal to 100.
@@ -441,6 +443,13 @@ MutationChance Evolver::SetMutationChance(rapidxml::xml_node<>* node ){
 		}
 	}
 
+	sMutationChance.dSwap = 0;
+	if(node->first_node("Swap")){
+		rapidxml::xml_node<>* InsertionNode = node->first_node("Swap");
+		if(InsertionNode->first_attribute("allowed")){
+			InsertionNode->first_attribute("allowed")->value() == std::string("true")?	sMutationChance.dSwap = atof(InsertionNode->value()) : sMutationChance.dSwap = 0;
+		}
+	}
 
 
 	return sMutationChance;

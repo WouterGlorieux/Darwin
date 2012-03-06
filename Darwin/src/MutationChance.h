@@ -20,6 +20,7 @@ public:
 	double dDuplication;
 	double dDeletion;
 	double dInsertion;
+	double dSwap;
 
 	MutationChance()	//default constructor
 	{
@@ -32,6 +33,7 @@ public:
 		dDuplication = 0;
 		dDeletion = 0;
 		dInsertion = 0;
+		dSwap = 0;
 	}
 
 	~MutationChance()	//default deconstructor
@@ -48,6 +50,7 @@ struct MutationChances
     MutationChance AlphanumMutationChance;
     MutationChance CustomMutationChance;
     MutationChance TreeMutationChance;
+    MutationChance ListMutationChance;
 };
 
 #endif /* MUTATIONCHANCE_H_ */
