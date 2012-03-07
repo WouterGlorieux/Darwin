@@ -28,7 +28,9 @@ public:
     virtual ~Mutation() // default deconstructor
     {    }
 
-    virtual std::string BitString();
+    rapidxml::xml_node<>* GetGeneNode(int n);
+
+	virtual std::string BitString();
     virtual std::string FlipBits();
     virtual std::string Boundary();
     virtual std::string Uniform();
@@ -246,7 +248,7 @@ public:
 	virtual std::string Duplication();
     virtual std::string Deletion();
     //virtual std::string Insertion();
-    //virtual std::string Swap();
+    virtual std::string Swap();
 
 };
 

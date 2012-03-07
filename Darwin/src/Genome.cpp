@@ -271,7 +271,7 @@ void Genome::DoMutations(MutationChances mutationChances){
 	for (rapidxml::xml_node<>* chromosomeNode = rootNode->first_node("Chromosome"); chromosomeNode; chromosomeNode = chromosomeNode->next_sibling("Chromosome"))
 	{
 		ChromosomeMutation cChromosomeMutation(chromosomeNode);
-		cChromosomeMutation.Deletion();
+		cChromosomeMutation.Swap();
 
 
 		for (rapidxml::xml_node<>* geneNode = chromosomeNode->first_node("Gene"); geneNode; geneNode = geneNode->next_sibling("Gene"))
