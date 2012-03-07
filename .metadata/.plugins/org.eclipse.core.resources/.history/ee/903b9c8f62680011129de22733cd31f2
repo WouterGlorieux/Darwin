@@ -21,10 +21,6 @@ public:
 	double dDeletion;
 	double dInsertion;
 	double dSwap;
-	double dGeneDuplication;
-	double dGeneDeletion;
-	double dGeneInsertion;
-	double dGeneSwap;
 
 	MutationChance()	//default constructor
 	{
@@ -38,10 +34,6 @@ public:
 		dDeletion = 0;
 		dInsertion = 0;
 		dSwap = 0;
-		dGeneDuplication = 0;
-		dGeneDeletion = 0;
-		dGeneInsertion = 0;
-		dGeneSwap = 0;
 	}
 
 	~MutationChance()	//default deconstructor

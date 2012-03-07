@@ -270,41 +270,17 @@ void Genome::DoMutations(MutationChances mutationChances){
 
 	for (rapidxml::xml_node<>* chromosomeNode = rootNode->first_node("Chromosome"); chromosomeNode; chromosomeNode = chromosomeNode->next_sibling("Chromosome"))
 	{
-		std::string strEncoding = chromosomeNode->first_attribute("encoding")->value();
-
-		//do chromosome mutations
 		ChromosomeMutation cChromosomeMutation(chromosomeNode);
-		if(strEncoding == "binary"){
-			ChromosomeMutations(chromosomeNode, cChromosomeMutation, mutationChances.BinaryMutationChance);
-		}
-		else if(strEncoding == "integer"){
-			ChromosomeMutations(chromosomeNode, cChromosomeMutation, mutationChances.IntegerMutationChance);
-		}
-		else if(strEncoding == "double"){
-			ChromosomeMutations(chromosomeNode, cChromosomeMutation, mutationChances.DoubleMutationChance);
-		}
-		else if(strEncoding == "alphanum"){
-			ChromosomeMutations(chromosomeNode, cChromosomeMutation, mutationChances.AlphanumMutationChance);
-		}
-		else if(strEncoding == "custom"){
-			ChromosomeMutations(chromosomeNode, cChromosomeMutation, mutationChances.CustomMutationChance);
-		}
-		else if(strEncoding == "tree"){
-			ChromosomeMutations(chromosomeNode, cChromosomeMutation, mutationChances.TreeMutationChance);
-		}
-		else if(strEncoding == "list"){
-			ChromosomeMutations(chromosomeNode, cChromosomeMutation, mutationChances.ListMutationChance);
-		}
-		else{
-			std::cout << "unknown encoding type" << std::endl;
-		}
 
-		//do gene mutations for each gene in this chromosome
+
 		for (rapidxml::xml_node<>* geneNode = chromosomeNode->first_node("Gene"); geneNode; geneNode = geneNode->next_sibling("Gene"))
 		{
+			std::string strEncoding = chromosomeNode->first_attribute("encoding")->value();
+
 			if(strEncoding == "binary"){
 				BitMutation cBitMutation(geneNode);
 				Mutation& rMutation = cBitMutation;
+				ChromosomeMutations(chromosomeNode, cChromosomeMutation, mutationChances.BinaryMutationChance);
 				GeneMutations(doc, geneNode, rMutation, mutationChances.BinaryMutationChance);
 			}
 			else if(strEncoding == "integer"){

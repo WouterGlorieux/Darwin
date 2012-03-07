@@ -115,11 +115,7 @@ void Evolver::printMutationChance(MutationChance mutationChance){
 			<< " Duplication: " << mutationChance.dDuplication << std::endl
 			<< " Deletion: " << mutationChance.dDeletion << std::endl
 			<< " Insertion: " << mutationChance.dInsertion << std::endl
-			<< " Swap: " << mutationChance.dSwap << std::endl
-			<< " Gene Duplication: " << mutationChance.dGeneDuplication << std::endl
-			<< " Gene Deletion: " << mutationChance.dGeneDeletion << std::endl
-			<< " Gene Insertion: " << mutationChance.dGeneInsertion << std::endl
-			<< " Gene Swap: " << mutationChance.dGeneSwap << std::endl << std::endl;
+			<< " Swap: " << mutationChance.dSwap << std::endl << std::endl;
 }
 
 void Evolver::start(){

@@ -862,6 +862,7 @@ std::string CustomMutation::Duplication(){
 		int nBegin = rand() % strValue.size();
 		int nEnd = (rand() % (strValue.size()-1 - nBegin + 1)) + nBegin;
 		strValue.insert(nBegin, strValue, nBegin, nEnd-nBegin+1); // insert substring of strValue from index [nBegin,nEnd) into strValue at index nBegin
+
 	}
 
 	//if there is a maxChars attribute, cut off the string at that length
