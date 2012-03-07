@@ -247,7 +247,7 @@ public:
 
 	virtual std::string Duplication();
     virtual std::string Deletion();
-    //virtual std::string Insertion();
+    virtual std::string Insertion();
     virtual std::string Swap();
 
 };

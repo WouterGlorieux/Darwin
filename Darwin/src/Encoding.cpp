@@ -7,16 +7,16 @@
 
 #include "Encoding.h"
 
-std::string Encoding::RandomData(rapidxml::xml_node<>* geneNode){
+std::string Encoding::RandomData(rapidxml::xml_node<>* chromosomeNode){
 
 	return "base encoding";
 }
 
-std::string BinaryEncoding::RandomData(rapidxml::xml_node<>* geneNode){
+std::string BinaryEncoding::RandomData(rapidxml::xml_node<>* chromosomeNode){
 
-	//check if there is a "bits" attribute in the geneNode
-	if(geneNode->first_attribute("bits")){
-		m_nbits = atoi(geneNode->first_attribute("bits")->value());
+	//check if there is a "bits" attribute in the chromosomeNode
+	if(chromosomeNode->first_attribute("bits")){
+		m_nbits = atoi(chromosomeNode->first_attribute("bits")->value());
 	}
 
 	int bit ;
@@ -32,18 +32,18 @@ std::string BinaryEncoding::RandomData(rapidxml::xml_node<>* geneNode){
 }
 
 
-std::string IntegerEncoding::RandomData(rapidxml::xml_node<>* geneNode){
+std::string IntegerEncoding::RandomData(rapidxml::xml_node<>* chromosomeNode){
 
 	int nLow = 0;
 	int nHigh = 32767;		//default range of rand()
 
-	//check if there is a "min" attribute in the geneNode
-	if(geneNode->first_attribute("min")){
-		nLow = atoi(geneNode->first_attribute("min")->value());
+	//check if there is a "min" attribute in the chromosomeNode
+	if(chromosomeNode->first_attribute("min")){
+		nLow = atoi(chromosomeNode->first_attribute("min")->value());
 	}
-	//check if there is a "max" attribute in the geneNode
-	if(geneNode->first_attribute("max")){
-		nHigh = atoi(geneNode->first_attribute("max")->value());
+	//check if there is a "max" attribute in the chromosomeNode
+	if(chromosomeNode->first_attribute("max")){
+		nHigh = atoi(chromosomeNode->first_attribute("max")->value());
 	}
 
 	int data = (rand() % (nHigh - nLow + 1)) + nLow;
@@ -54,19 +54,19 @@ std::string IntegerEncoding::RandomData(rapidxml::xml_node<>* geneNode){
 
 }
 
-std::string DoubleEncoding::RandomData(rapidxml::xml_node<>* geneNode){
+std::string DoubleEncoding::RandomData(rapidxml::xml_node<>* chromosomeNode){
 
 	int nLow = 0;
 	int nHigh = 32767;	//default range of rand()
 	int nDecimals = 2;
 
-	//check if there is a "min" attribute in the geneNode
-	if(geneNode->first_attribute("min")){
-		nLow = atoi(geneNode->first_attribute("min")->value());
+	//check if there is a "min" attribute in the chromosomeNode
+	if(chromosomeNode->first_attribute("min")){
+		nLow = atoi(chromosomeNode->first_attribute("min")->value());
 	}
-	//check if there is a "max" attribute in the geneNode
-	if(geneNode->first_attribute("max")){
-		nHigh = atoi(geneNode->first_attribute("max")->value());
+	//check if there is a "max" attribute in the chromosomeNode
+	if(chromosomeNode->first_attribute("max")){
+		nHigh = atoi(chromosomeNode->first_attribute("max")->value());
 	}
 
 	int data = (rand() % (nHigh - nLow + 1)) + nLow;
@@ -74,9 +74,9 @@ std::string DoubleEncoding::RandomData(rapidxml::xml_node<>* geneNode){
 	std::stringstream ss;//create a stringstream
 	ss << data;//add integer part to the stream
 
-	//check if there is a "decimals" attribute in the geneNode
-	if(geneNode->first_attribute("decimals")){
-		nDecimals = atoi(geneNode->first_attribute("decimals")->value());
+	//check if there is a "decimals" attribute in the chromosomeNode
+	if(chromosomeNode->first_attribute("decimals")){
+		nDecimals = atoi(chromosomeNode->first_attribute("decimals")->value());
 	}
 
 	if(data < nHigh && nDecimals){
@@ -89,14 +89,14 @@ std::string DoubleEncoding::RandomData(rapidxml::xml_node<>* geneNode){
 }
 
 
-std::string AlphanumEncoding::RandomData(rapidxml::xml_node<>* geneNode){
+std::string AlphanumEncoding::RandomData(rapidxml::xml_node<>* chromosomeNode){
 
 	int nMaxChars = 32767;	//default maxChars
 	int nChars;
 
-	//check if there is a "maxChars" attribute in the geneNode
-	if(geneNode->first_attribute("maxChars")){
-		nMaxChars = atoi(geneNode->first_attribute("maxChars")->value());
+	//check if there is a "maxChars" attribute in the chromosomeNode
+	if(chromosomeNode->first_attribute("maxChars")){
+		nMaxChars = atoi(chromosomeNode->first_attribute("maxChars")->value());
 
 	}
 
@@ -112,14 +112,14 @@ std::string AlphanumEncoding::RandomData(rapidxml::xml_node<>* geneNode){
 
 }
 
-std::string CustomEncoding::RandomData(rapidxml::xml_node<>* geneNode){
+std::string CustomEncoding::RandomData(rapidxml::xml_node<>* chromosomeNode){
 
 	int nMaxChars = 32767;	//default maxChars
 	int nChars;
 
-	//check if there is a "maxChars" attribute in the geneNode
-	if(geneNode->first_attribute("maxChars")){
-		nMaxChars = atoi(geneNode->first_attribute("maxChars")->value());
+	//check if there is a "maxChars" attribute in the chromosomeNode
+	if(chromosomeNode->first_attribute("maxChars")){
+		nMaxChars = atoi(chromosomeNode->first_attribute("maxChars")->value());
 
 	}
 
@@ -141,7 +141,7 @@ void CustomEncoding::SetChars(std::string characters){
 	std::copy ( characters.begin(), characters.end(), std::back_inserter ( m_vChars ) );
 }
 
-std::string TreeEncoding::RandomData(rapidxml::xml_node<>* geneNode){
+std::string TreeEncoding::RandomData(rapidxml::xml_node<>* chromosomeNode){
 
 	int nLow = 0;
 	int nHigh = 100;
@@ -154,7 +154,7 @@ std::string TreeEncoding::RandomData(rapidxml::xml_node<>* geneNode){
 
 }
 
-std::string ListEncoding::RandomData(rapidxml::xml_node<>* geneNode){
+std::string ListEncoding::RandomData(rapidxml::xml_node<>* chromosomeNode){
 
 	int nLow = 0;
 	int nHigh = 100;

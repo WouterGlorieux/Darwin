@@ -3,7 +3,7 @@
   <Title>Title of this job</Title>
   <Description>A more detailed discription of this job.</Description>
   <DirectoryPath>C:\Darwin</DirectoryPath>
-  <GenomeType chromosomes="1">1</GenomeType>
+  <GenomeType>1</GenomeType>
   <FitnessFunction>Tokamak</FitnessFunction>
   <Settings>
     <PopulationSize>100</PopulationSize>
@@ -13,7 +13,7 @@
     <MaxParents>2</MaxParents>
     <Recombination >3</Recombination>
       <Termination>
-        <MaxGenerations>1</MaxGenerations>
+        <MaxGenerations>10</MaxGenerations>
         <MaxTimeTotal>30</MaxTimeTotal>
         <MaxTimeGeneration>5</MaxTimeGeneration>
         <Stagnation>100</Stagnation>
@@ -28,7 +28,11 @@
       <Duplication allowed="true">0.05</Duplication>
       <Deletion allowed="true">0.05</Deletion>
       <Insertion allowed="true">0.05</Insertion>
-      <Swap allowed="true">1</Swap>
+      <Swap allowed="true">0.05</Swap>
+      <GeneDuplication allowed="true">0.05</GeneDuplication>
+      <GeneDeletion allowed="true">0.05</GeneDeletion>
+      <GeneInsertion allowed="true">0.05</GeneInsertion>
+      <GeneSwap allowed="true">0.05</GeneSwap>
     </Binary>
     <Integer>
       <BitString allowed="true">0.05</BitString>
@@ -38,7 +42,11 @@
       <Duplication allowed="true">0.05</Duplication>
       <Deletion allowed="true">0.05</Deletion>
       <Insertion allowed="true">0.05</Insertion>
-      <Swap allowed="true">1</Swap>
+      <Swap allowed="true">0.5</Swap>
+      <GeneDuplication allowed="true">0.05</GeneDuplication>
+      <GeneDeletion allowed="true">0.05</GeneDeletion>
+      <GeneInsertion allowed="true">0.05</GeneInsertion>
+      <GeneSwap allowed="true">0.05</GeneSwap>
     </Integer>
     <Double>
       <BitString allowed="true">0.05</BitString>
@@ -48,7 +56,11 @@
       <Duplication allowed="true">0.05</Duplication>
       <Deletion allowed="true">0.05</Deletion>
       <Insertion allowed="true">0.05</Insertion>
-      <Swap allowed="true">1</Swap>
+      <Swap allowed="true">0.05</Swap>
+      <GeneDuplication allowed="true">0.05</GeneDuplication>
+      <GeneDeletion allowed="true">0.05</GeneDeletion>
+      <GeneInsertion allowed="true">0.05</GeneInsertion>
+      <GeneSwap allowed="true">0.05</GeneSwap>
     </Double>
     <Alphanum>
       <BitString allowed="true">0.05</BitString>
@@ -56,7 +68,11 @@
       <Duplication allowed="true">0.05</Duplication>
       <Deletion allowed="true">0.05</Deletion>
       <Insertion allowed="true">0.05</Insertion>
-      <Swap allowed="true">1</Swap>
+      <Swap allowed="true">0.05</Swap>
+      <GeneDuplication allowed="true">0.05</GeneDuplication>
+      <GeneDeletion allowed="true">0.05</GeneDeletion>
+      <GeneInsertion allowed="true">0.05</GeneInsertion>
+      <GeneSwap allowed="true">0.05</GeneSwap>
     </Alphanum>
     <Custom>
       <BitString allowed="true">0.05</BitString>
@@ -64,7 +80,25 @@
       <Duplication allowed="true">0.05</Duplication>
       <Deletion allowed="true">0.05</Deletion>
       <Insertion allowed="true">0.05</Insertion>
-      <Swap allowed="true">1</Swap>
+      <Swap allowed="true">0.05</Swap>
+      <GeneDuplication allowed="true">0.05</GeneDuplication>
+      <GeneDeletion allowed="true">0.05</GeneDeletion>
+      <GeneInsertion allowed="true">0.05</GeneInsertion>
+      <GeneSwap allowed="true">0.05</GeneSwap>
     </Custom>
+    <List>
+      <BitString allowed="true">0.05</BitString>
+      <Boundary allowed="true">0.05</Boundary>
+      <Uniform allowed="true">0.05</Uniform>
+      <Gaussian allowed="true" sigma="5.0">0.05</Gaussian>
+      <Duplication allowed="true">0.05</Duplication>
+      <Deletion allowed="true">0.05</Deletion>
+      <Insertion allowed="true">0.05</Insertion>
+      <Swap allowed="true">0.05</Swap>
+      <GeneDuplication allowed="true">0.05</GeneDuplication>
+      <GeneDeletion allowed="true">0.05</GeneDeletion>
+      <GeneInsertion allowed="true">0.05</GeneInsertion>
+      <GeneSwap allowed="true">0.05</GeneSwap>
+    </List>
   </Mutations>
 </Config>

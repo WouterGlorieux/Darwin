@@ -241,7 +241,7 @@ void Genome::FillWithRandomData(){
 void Genome::FillGenes(rapidxml::xml_document<>& doc, rapidxml::xml_node<>* chromosomeNode, Encoding& encoding){
 	for (rapidxml::xml_node<>* geneNode = chromosomeNode->first_node("Gene"); geneNode; geneNode = geneNode->next_sibling("Gene"))
 	{
-		char* pchRandomData = doc.allocate_string(encoding.RandomData(geneNode).c_str());
+		char* pchRandomData = doc.allocate_string(encoding.RandomData(chromosomeNode).c_str());
 		geneNode->value(pchRandomData);
 
 	}
@@ -271,8 +271,10 @@ void Genome::DoMutations(MutationChances mutationChances){
 	for (rapidxml::xml_node<>* chromosomeNode = rootNode->first_node("Chromosome"); chromosomeNode; chromosomeNode = chromosomeNode->next_sibling("Chromosome"))
 	{
 		ChromosomeMutation cChromosomeMutation(chromosomeNode);
-		cChromosomeMutation.Swap();
-
+		//cChromosomeMutation.Duplication();
+		//cChromosomeMutation.Deletion();
+		//cChromosomeMutation.Insertion();
+		//cChromosomeMutation.Swap();
 
 		for (rapidxml::xml_node<>* geneNode = chromosomeNode->first_node("Gene"); geneNode; geneNode = geneNode->next_sibling("Gene"))
 		{

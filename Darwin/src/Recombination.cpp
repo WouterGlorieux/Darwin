@@ -19,7 +19,9 @@ void Recombination::AddParent(const std::string& input_xml){
 	vstrParents.push_back(input_xml);
 }
 
-std::string	Recombination::RecombinedGenomeXML(int chromosomes){
+std::string	Recombination::RecombinedGenomeXML(){
+
+
 
 	Genome newGenome;
     newGenome.newGenome("next generation");
@@ -43,8 +45,14 @@ std::string	Recombination::RecombinedGenomeXML(int chromosomes){
 
     }
 
+	int nChromosomes = 0;
+	//count genes
+	rapidxml::xml_node<>* tmpRootNode = paDocs[0].first_node("Genome");
+	for (rapidxml::xml_node<>* chromosomeNode = tmpRootNode->first_node("Chromosome"); chromosomeNode; chromosomeNode = chromosomeNode->next_sibling("Chromosome")){
+		nChromosomes++;
+	}
 
-	for(int i = 0; i < chromosomes; i++){
+	for(int i = 0; i < nChromosomes; i++){
 		int nLow = 0;
 		int nHigh = vstrParents.size()-1;
 		int parent =  (rand() % (nHigh - nLow + 1)) + nLow;

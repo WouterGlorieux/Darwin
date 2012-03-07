@@ -34,38 +34,44 @@ void Rosetta::initTokamak(){
 	cGenome.newGenome("Tokamak steady state");
 
 	cGenome.addChromosome("Auxiliary Heating Power", ENCODING_BINARY);
+	cGenome.addChromosomeAttribute("Auxiliary Heating Power", "bits", "16");
 	cGenome.addGene("1", "Auxiliary Heating Power");
-	cGenome.addGeneAttribute("Auxiliary Heating Power", "1", "bits", "16");
 	cGenome.addGene("2", "Auxiliary Heating Power");
-	cGenome.addGeneAttribute("Auxiliary Heating Power", "2", "bits", "16");
 	cGenome.addGene("3", "Auxiliary Heating Power");
-	cGenome.addGeneAttribute("Auxiliary Heating Power", "3", "bits", "16");
 
-/*	cGenome.addChromosome("Magnetic Field", ENCODING_INTEGER);
+
+	cGenome.addChromosome("Magnetic Field", ENCODING_INTEGER);
+	cGenome.addChromosomeAttribute("Magnetic Field", "min", "-1000");
+	cGenome.addChromosomeAttribute("Magnetic Field", "max", "1000");
 	cGenome.addGene("1", "Magnetic Field");
-	cGenome.addGeneAttribute("Magnetic Field", "1", "min", "-1000");
-	cGenome.addGeneAttribute("Magnetic Field", "1", "max", "0");
+	cGenome.addGene("2", "Magnetic Field");
+	cGenome.addGene("3", "Magnetic Field");
 
 	cGenome.addChromosome("Plasma Density", ENCODING_DOUBLE);
+	cGenome.addChromosomeAttribute("Plasma Density", "min", "-1000");
+	cGenome.addChromosomeAttribute("Plasma Density", "max", "1000");
+	cGenome.addChromosomeAttribute("Plasma Density",  "decimals", "5");
 	cGenome.addGene("1", "Plasma Density");
-	cGenome.addGeneAttribute("Plasma Density", "1", "min", "-1000");
-	cGenome.addGeneAttribute("Plasma Density", "1", "max", "0");
-	cGenome.addGeneAttribute("Plasma Density", "1", "decimals", "1");
+	cGenome.addGene("2", "Plasma Density");
+	cGenome.addGene("3", "Plasma Density");
 
 	cGenome.addChromosome("Auxiliary Heating Power2", ENCODING_ALPHANUM);
+	cGenome.addChromosomeAttribute("Auxiliary Heating Power2", "maxChars", "50");
 	cGenome.addGene("1", "Auxiliary Heating Power2");
-	cGenome.addGeneAttribute("Auxiliary Heating Power2", "1", "maxChars", "5");
+	cGenome.addGene("2", "Auxiliary Heating Power2");
+	cGenome.addGene("3", "Auxiliary Heating Power2");
 
 	cGenome.addChromosome("Magnetic Field2", ENCODING_CUSTOM);
 	cGenome.addChromosomeAttribute("Magnetic Field2", "chars", "ACGT");
+	cGenome.addChromosomeAttribute("Magnetic Field2", "maxChars", "50");
 	cGenome.addGene("1", "Magnetic Field2");
-	cGenome.addGeneAttribute("Magnetic Field2", "1", "maxChars", "10");
+	cGenome.addGene("2", "Magnetic Field2");
+	cGenome.addGene("3", "Magnetic Field2");
+
+	//cGenome.addChromosome("Plasma Density2", ENCODING_TREE);
+	//cGenome.addGene("1", "Plasma Density2");
 
 
-	cGenome.addChromosome("Plasma Density2", ENCODING_TREE);
-	cGenome.addGene("1", "Plasma Density2");
-
-*/
 
 }
 

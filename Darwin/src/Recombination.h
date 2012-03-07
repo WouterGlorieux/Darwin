@@ -37,7 +37,7 @@ public:
 
     void AddParent(const std::string& input_xml);
 
-    std::string	RecombinedGenomeXML(int chromosomes);
+    std::string	RecombinedGenomeXML();
 
     void PrintRecombination();
 

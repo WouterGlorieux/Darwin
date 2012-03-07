@@ -38,7 +38,6 @@ void Evolver::traverse_xml(const std::string& input_xml)
     m_strDescription = rootNode->first_node("Description")->value();
     m_strPath = rootNode->first_node("DirectoryPath")->value();
     m_eGenomeType = static_cast<GenomeType> (atoi(rootNode->first_node("GenomeType")->value()));
-    m_nChromosomes = atoi(rootNode->first_node("GenomeType")->first_attribute("chromosomes")->value());
 
     rapidxml::xml_node<>* settingsNode = rootNode->first_node("Settings");
     m_nPopulationSize = atoi(settingsNode->first_node("PopulationSize")->value());
@@ -135,6 +134,7 @@ void Evolver::start(){
 		pacPopulation[i].randomGenome();
 	}
 
+	std::cout << pacPopulation[0].cGenome.GetXML() << std::endl;
 	//create Aperture object
 
 	m_nGeneration = 1;
@@ -197,7 +197,7 @@ while(DoNextGeneration()){
 				break;
 		}
 
-		pacNextGeneration[i].SetGenome(m_cRecombination.RecombinedGenomeXML(m_nChromosomes));
+		pacNextGeneration[i].SetGenome(m_cRecombination.RecombinedGenomeXML());
 		pacNextGeneration[i].SetGenomeType(m_eGenomeType);
 	}
 
@@ -224,7 +224,7 @@ while(DoNextGeneration()){
 }
 //loop
 
-	//std::cout << pacNextGeneration[0].cGenome.GetXML() << std::endl;
+	std::cout << pacNextGeneration[0].cGenome.GetXML() << std::endl;
 
 
 

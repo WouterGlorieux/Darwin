@@ -2,37 +2,37 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="511" key="DIALOG_WIDTH"/>
-		<item value="190" key="DIALOG_Y_ORIGIN"/>
-		<item value="848" key="DIALOG_X_ORIGIN"/>
+		<item value="455" key="DIALOG_Y_ORIGIN"/>
 		<item value="555" key="DIALOG_HEIGHT"/>
+		<item value="683" key="DIALOG_X_ORIGIN"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="true" key="wrap"/>
-		<item value="false" key="casesensitive"/>
 		<item value="false" key="isRegEx"/>
+		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="m_cTreeMutationChance" key="selection"/>
+		<item value="RandomData" key="selection"/>
 		<list key="findhistory">
+			<item value="RandomData"/>
+			<item value="geneNode"/>
+			<item value="geneNode-&gt;parent()-&gt;first_attribute"/>
+			<item value="geneNode-&gt;first_attribute"/>
+			<item value="m_Node-&gt;first_attribute"/>
 			<item value="sTreeMutationChance"/>
 			<item value="sCustomMutationChance"/>
 			<item value="sAlphanumMutationChance"/>
-			<item value="sDoubleMutationChance"/>
-			<item value="sIntegerMutationChance"/>
-			<item value="sBinaryMutationChance"/>
-			<item value="m_Node"/>
-			<item value="rapidxml::xml_node&lt;&gt;*"/>
 		</list>
 		<list key="replacehistory">
+			<item value="chromosomeNode"/>
+			<item value="geneNode-&gt;first_attribute"/>
+			<item value="geneNode-&gt;parent()-&gt;first_attribute"/>
 			<item value="m_cTreeMutationChance"/>
 			<item value="m_cCustomMutationChance"/>
 			<item value="m_cAlphanumMutationChance"/>
 			<item value="m_cDoubleMutationChance"/>
 			<item value="m_cIntegerMutationChance"/>
-			<item value="m_cBinaryMutationChance"/>
-			<item value="&quot;&quot;"/>
-			<item value="std::string"/>
 		</list>
 	</section>
 </section>
