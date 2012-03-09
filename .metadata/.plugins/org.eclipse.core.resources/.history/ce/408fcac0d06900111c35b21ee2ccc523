@@ -632,15 +632,13 @@ std::string DoubleMutation::Insertion(){
 		if(strValue.at(0) == '-' && nBegin == 0){
 			nBegin = 1;
 		}
-
-		std::stringstream ss;//create a stringstream
-
-		if(!(nRandom == 0 && ((strValue.at(0) == '-' && nBegin == 1) || nBegin == 0))){
-			ss << nRandom;
-			strValue.insert(nBegin, ss.str());
-		}
 	}
 
+
+
+	std::stringstream ss;//create a stringstream
+	ss << nRandom;
+	strValue.insert(nBegin, ss.str());
 
 	//check if there is a min attribute
 	if(m_Node->parent()->first_attribute("max")){
