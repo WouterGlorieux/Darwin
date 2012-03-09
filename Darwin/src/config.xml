@@ -30,7 +30,7 @@
       <Insertion allowed="true">0.05</Insertion>
       <Swap allowed="true">0.05</Swap>
       <GeneDuplication allowed="true">0.05</GeneDuplication>
-      <GeneDeletion allowed="true">0.05</GeneDeletion>
+      <GeneDeletion allowed="true">0.0</GeneDeletion>
       <GeneInsertion allowed="true">0.05</GeneInsertion>
       <GeneSwap allowed="true">0.05</GeneSwap>
     </Binary>
@@ -42,7 +42,7 @@
       <Duplication allowed="true">0.05</Duplication>
       <Deletion allowed="true">0.05</Deletion>
       <Insertion allowed="true">0.05</Insertion>
-      <Swap allowed="true">0.5</Swap>
+      <Swap allowed="true">0.05</Swap>
       <GeneDuplication allowed="true">0.05</GeneDuplication>
       <GeneDeletion allowed="true">0.05</GeneDeletion>
       <GeneInsertion allowed="true">0.05</GeneInsertion>
@@ -58,7 +58,7 @@
       <Insertion allowed="true">0.05</Insertion>
       <Swap allowed="true">0.05</Swap>
       <GeneDuplication allowed="true">0.05</GeneDuplication>
-      <GeneDeletion allowed="true">0.05</GeneDeletion>
+      <GeneDeletion allowed="true">0.0</GeneDeletion>
       <GeneInsertion allowed="true">0.05</GeneInsertion>
       <GeneSwap allowed="true">0.05</GeneSwap>
     </Double>
@@ -70,7 +70,7 @@
       <Insertion allowed="true">0.05</Insertion>
       <Swap allowed="true">0.05</Swap>
       <GeneDuplication allowed="true">0.05</GeneDuplication>
-      <GeneDeletion allowed="true">0.05</GeneDeletion>
+      <GeneDeletion allowed="true">0.0</GeneDeletion>
       <GeneInsertion allowed="true">0.05</GeneInsertion>
       <GeneSwap allowed="true">0.05</GeneSwap>
     </Alphanum>
@@ -82,7 +82,7 @@
       <Insertion allowed="true">0.05</Insertion>
       <Swap allowed="true">0.05</Swap>
       <GeneDuplication allowed="true">0.05</GeneDuplication>
-      <GeneDeletion allowed="true">0.05</GeneDeletion>
+      <GeneDeletion allowed="true">0.0</GeneDeletion>
       <GeneInsertion allowed="true">0.05</GeneInsertion>
       <GeneSwap allowed="true">0.05</GeneSwap>
     </Custom>
@@ -96,7 +96,7 @@
       <Insertion allowed="true">0.05</Insertion>
       <Swap allowed="true">0.05</Swap>
       <GeneDuplication allowed="true">0.05</GeneDuplication>
-      <GeneDeletion allowed="true">0.05</GeneDeletion>
+      <GeneDeletion allowed="true">0.0</GeneDeletion>
       <GeneInsertion allowed="true">0.05</GeneInsertion>
       <GeneSwap allowed="true">0.05</GeneSwap>
     </List>

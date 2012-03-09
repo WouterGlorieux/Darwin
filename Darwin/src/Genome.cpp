@@ -418,22 +418,22 @@ void Genome::ChromosomeMutations(rapidxml::xml_node<>* chromosomeNode, Mutation&
 
 	double dRandom;
 	dRandom = (double)((rand() % (nHigh - nLow + 1)) + nLow)/nHigh;
-	if(dRandom <=  mutationChance.dDuplication){
+	if(dRandom <=  mutationChance.dGeneDuplication){
 		mutation.Duplication();
 	}
 
 	dRandom = (double)((rand() % (nHigh - nLow + 1)) + nLow)/nHigh;
-	if(dRandom <=  mutationChance.dDeletion){
+	if(dRandom <=  mutationChance.dGeneDeletion){
 		mutation.Deletion();
 	}
 
 	dRandom = (double)((rand() % (nHigh - nLow + 1)) + nLow)/nHigh;
-	if(dRandom <=  mutationChance.dInsertion){
+	if(dRandom <=  mutationChance.dGeneInsertion){
 		mutation.Insertion();
 	}
 
 	dRandom = (double)((rand() % (nHigh - nLow + 1)) + nLow)/nHigh;
-	if(dRandom <=  mutationChance.dSwap){
+	if(dRandom <=  mutationChance.dGeneSwap){
 		mutation.Swap();
 	}
 }

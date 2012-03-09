@@ -553,11 +553,6 @@ std::string DoubleMutation::Duplication(){
 			strSubstring.erase((int)nFound, 1);
 		}
 
-		//make sure the duplicated characters are not before a - sign
-		if(strValue.at(0) == '-' && nBegin == 0){
-			nBegin = 1;
-		}
-
 		if(strSubstring.size() > 0){
 			strValue.insert(nBegin, strSubstring); // insert substring into strValue at index nBegin
 		}

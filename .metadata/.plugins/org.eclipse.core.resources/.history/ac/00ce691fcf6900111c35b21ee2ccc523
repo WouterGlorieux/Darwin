@@ -287,11 +287,6 @@ std::string IntegerMutation::Duplication(){
 			strSubstring.erase((int)nFound, 1);
 		}
 
-		//make sure the duplicated characters are not before a - sign
-		if(strValue.at(0) == '-' && nBegin == 0){
-			nBegin = 1;
-		}
-
 		if(strSubstring.size() > 0){
 			strValue.insert(nBegin, strSubstring); // insert substring into strValue at index nBegin
 		}
@@ -348,6 +343,7 @@ std::string IntegerMutation::Deletion(){
 }
 std::string IntegerMutation::Insertion(){
 	std::string strValue = m_Node->value();
+	std::cout << strValue << std::endl;
 	int nRandom = rand() % 10;
 
 	int nBegin = 0;
@@ -359,15 +355,16 @@ std::string IntegerMutation::Insertion(){
 		if(strValue.at(0) == '-' && nBegin == 0){
 			nBegin = 1;
 		}
-
-
-		std::stringstream ss;//create a stringstream
-
-		if(!(nRandom == 0 && ((strValue.at(0) == '-' && nBegin == 1) || nBegin == 0))){
-			ss << nRandom;
-			strValue.insert(nBegin, ss.str());
-		}
 	}
+
+	std::stringstream ss;//create a stringstream
+
+/*	if(!(nRandom == 0 && ((strValue.at(0) == '-' && nBegin == 1) || nBegin == 0))){
+		ss << nRandom;
+		strValue.insert(nBegin, ss.str());
+	}
+*/
+
 
 
 	//make sure new value is not smaller than min boundary
@@ -551,11 +548,6 @@ std::string DoubleMutation::Duplication(){
 		nFound = strSubstring.find('-');
 		if(nFound != std::string::npos){
 			strSubstring.erase((int)nFound, 1);
-		}
-
-		//make sure the duplicated characters are not before a - sign
-		if(strValue.at(0) == '-' && nBegin == 0){
-			nBegin = 1;
 		}
 
 		if(strSubstring.size() > 0){
