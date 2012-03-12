@@ -3688,3 +3688,121 @@ Nothing to build for Darwin
 
 **** Internal Builder is used for build               ****
 Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1607  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1373  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1341  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1311  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1311  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
+..\src\Mutation.cpp: In memberfunctie ‘virtual std::string DoubleMutation::Gaussian(double)’:
+..\src\Mutation.cpp:554:20: fout: redeclaration of ‘std::stringstream ss’
+..\src\Mutation.cpp:531:20: fout: ‘std::stringstream ss’ previously declared here
+Build error occurred, build is stopped
+Time consumed: 500  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
+g++ -o Darwin.exe src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1311  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin

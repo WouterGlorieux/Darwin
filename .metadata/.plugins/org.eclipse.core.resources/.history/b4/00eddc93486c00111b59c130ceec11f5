@@ -91,7 +91,7 @@ std::string BitMutation::Boundary(){
 }
 std::string BitMutation::Uniform(){
 	BinaryEncoding cBinaryEncoding;
-	return cBinaryEncoding.RandomData(m_Node);
+	return cBinaryEncoding.RandomData(m_Node->parent());
 }
 /*std::string BitMutation::Gaussian(double sigma = 1.0){
 	return "";
@@ -107,8 +107,8 @@ std::string BitMutation::Duplication(){
 	}
 
 	//if there is a bits attribute, cut off the string at that length
-	if(m_Node->first_attribute("bits")){
-		int bits = atoi(m_Node->first_attribute("bits")->value());
+	if(m_Node->parent()->first_attribute("bits")){
+		int bits = atoi(m_Node->parent()->first_attribute("bits")->value());
 		strValue = strValue.substr(0, bits);
 	}
 
@@ -124,7 +124,7 @@ std::string BitMutation::Deletion(){
 		strValue = strValue.erase(nBegin, nEnd-nBegin+1);
 
 		//if there is a bits attribute, fill the rest of string with random bits
-		if(m_Node->first_attribute("bits")){
+		if(m_Node->parent()->first_attribute("bits")){
 			std::stringstream ss;//create a stringstream
 			int bit;
 			for(int i = 0; i < (nEnd-nBegin+1); i++){
@@ -159,8 +159,8 @@ std::string BitMutation::Insertion(){
 	strValue.insert(nBegin, ss.str()); // insert ss.str() at index nBegin
 
 	//if there is a bits attribute, cut off the string at that length
-	if(m_Node->first_attribute("bits")){
-		int bits = atoi(m_Node->first_attribute("bits")->value());
+	if(m_Node->parent()->first_attribute("bits")){
+		int bits = atoi(m_Node->parent()->first_attribute("bits")->value());
 		strValue = strValue.substr(0, bits);
 	}
 
@@ -197,15 +197,15 @@ std::string IntegerMutation::BitString(){
 		strValue.replace(nRandom, 1, ss.str());
 
 		//make sure new value is not smaller than min boundary
-		if(m_Node->first_attribute("min")){
-			if( atoi(strValue.c_str()) < atoi(m_Node->first_attribute("min")->value()) ){
+		if(m_Node->parent()->first_attribute("min")){
+			if( atoi(strValue.c_str()) < atoi(m_Node->parent()->first_attribute("min")->value()) ){
 				return m_Node->value();
 			}
 		}
 
 		//make sure new value is not greater than max boundary
-		if(m_Node->first_attribute("max")){
-			if( atoi(strValue.c_str()) > atoi(m_Node->first_attribute("max")->value()) ){
+		if(m_Node->parent()->first_attribute("max")){
+			if( atoi(strValue.c_str()) > atoi(m_Node->parent()->first_attribute("max")->value()) ){
 				return m_Node->value();
 			}
 		}
@@ -222,18 +222,18 @@ std::string IntegerMutation::Boundary(){
 
 	std::stringstream ss;//create a stringstream
 
-	if(m_Node->first_attribute("min") && m_Node->first_attribute("max")){
+	if(m_Node->parent()->first_attribute("min") && m_Node->parent()->first_attribute("max")){
 		//pick one of the 2 boundaries at random
 		int nRandom = rand() % 2;
-		(nRandom == 0) ? ss << m_Node->first_attribute("min")->value() : ss << m_Node->first_attribute("max")->value();
+		(nRandom == 0) ? ss << m_Node->parent()->first_attribute("min")->value() : ss << m_Node->parent()->first_attribute("max")->value();
 		return ss.str();//return a string with the contents of the stream
 	}
-	else if(m_Node->first_attribute("min")){
-		 ss << m_Node->first_attribute("min")->value();
+	else if(m_Node->parent()->first_attribute("min")){
+		 ss << m_Node->parent()->first_attribute("min")->value();
 		return ss.str();//return a string with the contents of the stream
 	}
-	else if(m_Node->first_attribute("max")){
-		ss << m_Node->first_attribute("max")->value();
+	else if(m_Node->parent()->first_attribute("max")){
+		ss << m_Node->parent()->first_attribute("max")->value();
 		return ss.str();//return a string with the contents of the stream
 	}
 	else
@@ -244,7 +244,7 @@ std::string IntegerMutation::Boundary(){
 }
 std::string IntegerMutation::Uniform(){
 	IntegerEncoding cIntegerEncoding;
-	return cIntegerEncoding.RandomData(m_Node);
+	return cIntegerEncoding.RandomData(m_Node->parent());
 }
 std::string IntegerMutation::Gaussian(double sigma = 1.0){
 	std::string strValue = m_Node->value();
@@ -254,15 +254,15 @@ std::string IntegerMutation::Gaussian(double sigma = 1.0){
 	nValue += nChange;
 
 	//make sure new value is not smaller than min boundary
-	if(m_Node->first_attribute("min")){
-		if( nValue < atoi(m_Node->first_attribute("min")->value()) ){
+	if(m_Node->parent()->first_attribute("min")){
+		if( nValue < atoi(m_Node->parent()->first_attribute("min")->value()) ){
 			return m_Node->value();
 		}
 	}
 
 	//make sure new value is not greater than max boundary
-	if(m_Node->first_attribute("max")){
-		if( nValue > atoi(m_Node->first_attribute("max")->value()) ){
+	if(m_Node->parent()->first_attribute("max")){
+		if( nValue > atoi(m_Node->parent()->first_attribute("max")->value()) ){
 			return m_Node->value();
 		}
 	}
@@ -287,6 +287,11 @@ std::string IntegerMutation::Duplication(){
 			strSubstring.erase((int)nFound, 1);
 		}
 
+		//make sure the duplicated characters are not before a - sign
+		if(strValue.at(0) == '-' && nBegin == 0){
+			nBegin = 1;
+		}
+
 		if(strSubstring.size() > 0){
 			strValue.insert(nBegin, strSubstring); // insert substring into strValue at index nBegin
 		}
@@ -294,20 +299,25 @@ std::string IntegerMutation::Duplication(){
 
 
 		//make sure new value is not smaller than min boundary
-		if(m_Node->first_attribute("min")){
-			if( atoi(strValue.c_str()) < atoi(m_Node->first_attribute("min")->value()) ){
+		if(m_Node->parent()->first_attribute("min")){
+			if( atoi(strValue.c_str()) < atoi(m_Node->parent()->first_attribute("min")->value()) ){
 				return m_Node->value();
 			}
 		}
 
 		//make sure new value is not greater than max boundary
-		if(m_Node->first_attribute("max")){
-			if( atoi(strValue.c_str()) > atoi(m_Node->first_attribute("max")->value()) ){
+		if(m_Node->parent()->first_attribute("max")){
+			if( atoi(strValue.c_str()) > atoi(m_Node->parent()->first_attribute("max")->value()) ){
 				return m_Node->value();
 			}
 		}
 	}
-	return strValue;
+
+
+	std::stringstream ss;
+	ss << atoi(strValue.c_str());
+
+	return ss.str();
 }
 std::string IntegerMutation::Deletion(){
 	std::string strValue = m_Node->value();
@@ -321,15 +331,15 @@ std::string IntegerMutation::Deletion(){
 
 
 	//make sure new value is not smaller than min boundary
-	if(m_Node->first_attribute("min")){
-		if( atoi(strValue.c_str()) < atoi(m_Node->first_attribute("min")->value()) ){
+	if(m_Node->parent()->first_attribute("min")){
+		if( atoi(strValue.c_str()) < atoi(m_Node->parent()->first_attribute("min")->value()) ){
 			return m_Node->value();
 		}
 	}
 
 	//make sure new value is not greater than max boundary
-	if(m_Node->first_attribute("max")){
-		if( atoi(strValue.c_str()) > atoi(m_Node->first_attribute("max")->value()) ){
+	if(m_Node->parent()->first_attribute("max")){
+		if( atoi(strValue.c_str()) > atoi(m_Node->parent()->first_attribute("max")->value()) ){
 			return m_Node->value();
 		}
 	}
@@ -354,29 +364,36 @@ std::string IntegerMutation::Insertion(){
 		if(strValue.at(0) == '-' && nBegin == 0){
 			nBegin = 1;
 		}
+
+
+		std::stringstream ss;//create a stringstream
+
+		if(!(nRandom == 0 && ((strValue.at(0) == '-' && nBegin == 1) || nBegin == 0))){
+			ss << nRandom;
+			strValue.insert(nBegin, ss.str());
+		}
 	}
 
 
-
-	std::stringstream ss;//create a stringstream
-	ss << nRandom;
-	strValue.insert(nBegin, ss.str());
-
 	//make sure new value is not smaller than min boundary
-	if(m_Node->first_attribute("min")){
-		if( atoi(strValue.c_str()) < atoi(m_Node->first_attribute("min")->value()) ){
+	if(m_Node->parent()->first_attribute("min")){
+		if( atoi(strValue.c_str()) < atoi(m_Node->parent()->first_attribute("min")->value()) ){
 			return m_Node->value();
 		}
 	}
 
 	//make sure new value is not greater than max boundary
-	if(m_Node->first_attribute("max")){
-		if( atoi(strValue.c_str()) > atoi(m_Node->first_attribute("max")->value()) ){
+	if(m_Node->parent()->first_attribute("max")){
+		if( atoi(strValue.c_str()) > atoi(m_Node->parent()->first_attribute("max")->value()) ){
 			return m_Node->value();
 		}
 	}
 
-	return strValue;
+
+	std::stringstream ss;
+	ss << atoi(strValue.c_str());
+
+	return ss.str();
 }
 std::string IntegerMutation::Swap(){
 	std::string strValue = m_Node->value();
@@ -396,15 +413,15 @@ std::string IntegerMutation::Swap(){
 	}
 
 	//make sure new value is not smaller than min boundary
-	if(m_Node->first_attribute("min")){
-		if( atoi(strValue.c_str()) < atoi(m_Node->first_attribute("min")->value()) ){
+	if(m_Node->parent()->first_attribute("min")){
+		if( atoi(strValue.c_str()) < atoi(m_Node->parent()->first_attribute("min")->value()) ){
 			return m_Node->value();
 		}
 	}
 
 	//make sure new value is not greater than max boundary
-	if(m_Node->first_attribute("max")){
-		if( atoi(strValue.c_str()) > atoi(m_Node->first_attribute("max")->value()) ){
+	if(m_Node->parent()->first_attribute("max")){
+		if( atoi(strValue.c_str()) > atoi(m_Node->parent()->first_attribute("max")->value()) ){
 			return m_Node->value();
 		}
 	}
@@ -431,15 +448,15 @@ std::string DoubleMutation::BitString(){
 		}
 
 		//make sure new value is not smaller than min boundary
-		if(m_Node->first_attribute("min")){
-			if( atof(strValue.c_str()) < atof(m_Node->first_attribute("min")->value()) ){
+		if(m_Node->parent()->first_attribute("min")){
+			if( atof(strValue.c_str()) < atof(m_Node->parent()->first_attribute("min")->value()) ){
 				return m_Node->value();
 			}
 		}
 
 		//make sure new value is not greater than max boundary
-		if(m_Node->first_attribute("max")){
-			if( atof(strValue.c_str()) > atof(m_Node->first_attribute("max")->value()) ){
+		if(m_Node->parent()->first_attribute("max")){
+			if( atof(strValue.c_str()) > atof(m_Node->parent()->first_attribute("max")->value()) ){
 				return m_Node->value();
 			}
 		}
@@ -454,18 +471,18 @@ std::string DoubleMutation::Boundary(){
 
 	std::stringstream ss;//create a stringstream
 
-	if(m_Node->first_attribute("min") && m_Node->first_attribute("max")){
+	if(m_Node->parent()->first_attribute("min") && m_Node->parent()->first_attribute("max")){
 		//pick one of the 2 boundaries at random
 		int nRandom = rand() % 2;
-		(nRandom == 0) ? ss << m_Node->first_attribute("min")->value() : ss << m_Node->first_attribute("max")->value();
+		(nRandom == 0) ? ss << m_Node->parent()->first_attribute("min")->value() : ss << m_Node->parent()->first_attribute("max")->value();
 		return ss.str();//return a string with the contents of the stream
 	}
-	else if(m_Node->first_attribute("min")){
-		 ss << m_Node->first_attribute("min")->value();
+	else if(m_Node->parent()->first_attribute("min")){
+		 ss << m_Node->parent()->first_attribute("min")->value();
 		return ss.str();//return a string with the contents of the stream
 	}
-	else if(m_Node->first_attribute("max")){
-		ss << m_Node->first_attribute("max")->value();
+	else if(m_Node->parent()->first_attribute("max")){
+		ss << m_Node->parent()->first_attribute("max")->value();
 		return ss.str();//return a string with the contents of the stream
 	}
 	else
@@ -475,7 +492,7 @@ std::string DoubleMutation::Boundary(){
 }
 std::string DoubleMutation::Uniform(){
 	DoubleEncoding cDoubleEncoding;
-	return cDoubleEncoding.RandomData(m_Node);
+	return cDoubleEncoding.RandomData(m_Node->parent());
 }
 std::string DoubleMutation::Gaussian(double sigma = 1.0){
 	std::string strValue = m_Node->value();
@@ -486,15 +503,15 @@ std::string DoubleMutation::Gaussian(double sigma = 1.0){
 	dValue += dChange;
 
 	//make sure new value is not smaller than min boundary
-	if(m_Node->first_attribute("min")){
-		if( dValue < atoi(m_Node->first_attribute("min")->value()) ){
+	if(m_Node->parent()->first_attribute("min")){
+		if( dValue < atoi(m_Node->parent()->first_attribute("min")->value()) ){
 			return m_Node->value();
 		}
 	}
 
 	//make sure new value is not greater than max boundary
-	if(m_Node->first_attribute("max")){
-		if( dValue > atoi(m_Node->first_attribute("max")->value()) ){
+	if(m_Node->parent()->first_attribute("max")){
+		if( dValue > atoi(m_Node->parent()->first_attribute("max")->value()) ){
 			return m_Node->value();
 		}
 	}
@@ -506,8 +523,8 @@ std::string DoubleMutation::Gaussian(double sigma = 1.0){
 	strValue = ss.str();
 
 	//make sure new value doesn't have more decimals than allowed
-	if(m_Node->first_attribute("decimals")){
-		int nDecimals = atoi(m_Node->first_attribute("decimals")->value());
+	if(m_Node->parent()->first_attribute("decimals")){
+		int nDecimals = atoi(m_Node->parent()->first_attribute("decimals")->value());
 		size_t nFound = strValue.find('.');
 
 		if(nFound != std::string::npos && (strValue.size()-nFound) > nDecimals){
@@ -545,34 +562,42 @@ std::string DoubleMutation::Duplication(){
 			strSubstring.erase((int)nFound, 1);
 		}
 
+		//make sure the duplicated characters are not before a - sign
+		if(strValue.at(0) == '-' && nBegin == 0){
+			nBegin = 1;
+		}
+
 		if(strSubstring.size() > 0){
 			strValue.insert(nBegin, strSubstring); // insert substring into strValue at index nBegin
 		}
 
 		//make sure new value is not smaller than min boundary
-		if(m_Node->first_attribute("min")){
-			if( atof(strValue.c_str()) < atof(m_Node->first_attribute("min")->value()) ){
+		if(m_Node->parent()->first_attribute("min")){
+			if( atof(strValue.c_str()) < atof(m_Node->parent()->first_attribute("min")->value()) ){
 				return m_Node->value();
 			}
 		}
 
 		//make sure new value is not greater than max boundary
-		if(m_Node->first_attribute("max")){
-			if( atof(strValue.c_str()) > atof(m_Node->first_attribute("max")->value()) ){
+		if(m_Node->parent()->first_attribute("max")){
+			if( atof(strValue.c_str()) > atof(m_Node->parent()->first_attribute("max")->value()) ){
 				return m_Node->value();
 			}
 		}
 
 		//make sure new value doesn't have more decimals than allowed
-		if(m_Node->first_attribute("decimals")){
-			int nDecimals = atoi(m_Node->first_attribute("decimals")->value());
+		if(m_Node->parent()->first_attribute("decimals")){
+			int nDecimals = atoi(m_Node->parent()->first_attribute("decimals")->value());
 			nFound = strValue.find('.');
 			if(nFound != std::string::npos && (strValue.size()-nFound) > nDecimals){
 				strValue = strValue.substr(0, nFound + nDecimals+1);
 			}
 		}
 	}
-	return strValue;
+	std::stringstream ss;
+	ss << atof(strValue.c_str());
+
+	return ss.str();
 }
 std::string DoubleMutation::Deletion(){
 	std::string strValue = m_Node->value();
@@ -586,15 +611,15 @@ std::string DoubleMutation::Deletion(){
 
 
 	//make sure new value is not smaller than min boundary
-	if(m_Node->first_attribute("min")){
-		if( atof(strValue.c_str()) < atof(m_Node->first_attribute("min")->value()) ){
+	if(m_Node->parent()->first_attribute("min")){
+		if( atof(strValue.c_str()) < atof(m_Node->parent()->first_attribute("min")->value()) ){
 			return m_Node->value();
 		}
 	}
 
 	//make sure new value is not greater than max boundary
-	if(m_Node->first_attribute("max")){
-		if( atof(strValue.c_str()) > atof(m_Node->first_attribute("max")->value()) ){
+	if(m_Node->parent()->first_attribute("max")){
+		if( atof(strValue.c_str()) > atof(m_Node->parent()->first_attribute("max")->value()) ){
 			return m_Node->value();
 		}
 	}
@@ -619,17 +644,19 @@ std::string DoubleMutation::Insertion(){
 		if(strValue.at(0) == '-' && nBegin == 0){
 			nBegin = 1;
 		}
+
+		std::stringstream ss;//create a stringstream
+
+		if(!(nRandom == 0 && ((strValue.at(0) == '-' && nBegin == 1) || nBegin == 0))){
+			ss << nRandom;
+			strValue.insert(nBegin, ss.str());
+		}
 	}
 
 
-
-	std::stringstream ss;//create a stringstream
-	ss << nRandom;
-	strValue.insert(nBegin, ss.str());
-
 	//check if there is a min attribute
-	if(m_Node->first_attribute("max")){
-		int nMin = atoi(m_Node->first_attribute("min")->value());
+	if(m_Node->parent()->first_attribute("max")){
+		int nMin = atoi(m_Node->parent()->first_attribute("min")->value());
 		//check if the new value is smaller than min, if so return original value
 		if(atoi(strValue.c_str()) < nMin){
 			return m_Node->value();
@@ -637,29 +664,32 @@ std::string DoubleMutation::Insertion(){
 	}
 
 	//make sure new value is not smaller than min boundary
-	if(m_Node->first_attribute("min")){
-		if( atof(strValue.c_str()) < atof(m_Node->first_attribute("min")->value()) ){
+	if(m_Node->parent()->first_attribute("min")){
+		if( atof(strValue.c_str()) < atof(m_Node->parent()->first_attribute("min")->value()) ){
 			return m_Node->value();
 		}
 	}
 
 	//make sure new value is not greater than max boundary
-	if(m_Node->first_attribute("max")){
-		if( atof(strValue.c_str()) > atof(m_Node->first_attribute("max")->value()) ){
+	if(m_Node->parent()->first_attribute("max")){
+		if( atof(strValue.c_str()) > atof(m_Node->parent()->first_attribute("max")->value()) ){
 			return m_Node->value();
 		}
 	}
 
 	//make sure new value doesn't have more decimals than allowed
-	if(m_Node->first_attribute("decimals")){
-		int nDecimals = atoi(m_Node->first_attribute("decimals")->value());
+	if(m_Node->parent()->first_attribute("decimals")){
+		int nDecimals = atoi(m_Node->parent()->first_attribute("decimals")->value());
 		size_t nFound = strValue.find('.');
 		if(nFound != std::string::npos && (strValue.size()-nFound) > nDecimals){
 			strValue = strValue.substr(0, nFound + nDecimals+1);
 		}
 	}
 
-	return strValue;
+	std::stringstream ss;
+	ss << atof(strValue.c_str());
+
+	return ss.str();
 }
 std::string DoubleMutation::Swap(){
 	std::string strValue = m_Node->value();
@@ -679,22 +709,22 @@ std::string DoubleMutation::Swap(){
 	}
 
 	//make sure new value is not smaller than min boundary
-	if(m_Node->first_attribute("min")){
-		if( atof(strValue.c_str()) < atof(m_Node->first_attribute("min")->value()) ){
+	if(m_Node->parent()->first_attribute("min")){
+		if( atof(strValue.c_str()) < atof(m_Node->parent()->first_attribute("min")->value()) ){
 			return m_Node->value();
 		}
 	}
 
 	//make sure new value is not greater than max boundary
-	if(m_Node->first_attribute("max")){
-		if( atof(strValue.c_str()) > atof(m_Node->first_attribute("max")->value()) ){
+	if(m_Node->parent()->first_attribute("max")){
+		if( atof(strValue.c_str()) > atof(m_Node->parent()->first_attribute("max")->value()) ){
 			return m_Node->value();
 		}
 	}
 
 	//make sure new value doesn't have more decimals than allowed
-	if(m_Node->first_attribute("decimals")){
-		int nDecimals = atoi(m_Node->first_attribute("decimals")->value());
+	if(m_Node->parent()->first_attribute("decimals")){
+		int nDecimals = atoi(m_Node->parent()->first_attribute("decimals")->value());
 		size_t nFound = strValue.find('.');
 		if(nFound != std::string::npos && (strValue.size()-nFound) > nDecimals){
 			strValue = strValue.substr(0, nFound + nDecimals+1);
@@ -733,7 +763,7 @@ std::string AlphanumMutation::BitString(){
 }*/
 std::string AlphanumMutation::Uniform(){
 	AlphanumEncoding cAlphanumEncoding;
-	return cAlphanumEncoding.RandomData(m_Node);
+	return cAlphanumEncoding.RandomData(m_Node->parent());
 }
 /*std::string AlphanumMutation::Gaussian(double sigma = 1.0){
 	return "";
@@ -750,8 +780,8 @@ std::string AlphanumMutation::Duplication(){
 	}
 
 	//if there is a maxChars attribute, cut off the string at that length
-	if(m_Node->first_attribute("maxChars")){
-		int chars = atoi(m_Node->first_attribute("maxChars")->value());
+	if(m_Node->parent()->first_attribute("maxChars")){
+		int chars = atoi(m_Node->parent()->first_attribute("maxChars")->value());
 		strValue = strValue.substr(0, chars);
 	}
 
@@ -773,8 +803,8 @@ std::string AlphanumMutation::Insertion(){
 	std::string strValue = m_Node->value();
 
 	//check if there is a maxChars attribute
-	if(m_Node->first_attribute("maxChars")){
-		int nChars = atoi(m_Node->first_attribute("maxChars")->value());
+	if(m_Node->parent()->first_attribute("maxChars")){
+		int nChars = atoi(m_Node->parent()->first_attribute("maxChars")->value());
 		if((int)strValue.size() >= nChars){
 			return strValue;
 		}
@@ -849,7 +879,7 @@ std::string CustomMutation::BitString(){
 std::string CustomMutation::Uniform(){
 	CustomEncoding cCustomEncoding;
 	cCustomEncoding.SetChars(m_Node->parent()->first_attribute("chars")->value());
-	return cCustomEncoding.RandomData(m_Node);
+	return cCustomEncoding.RandomData(m_Node->parent());
 }
 /*std::string CustomMutation::Gaussian(double sigma = 1.0){
 	return "";
@@ -862,12 +892,11 @@ std::string CustomMutation::Duplication(){
 		int nBegin = rand() % strValue.size();
 		int nEnd = (rand() % (strValue.size()-1 - nBegin + 1)) + nBegin;
 		strValue.insert(nBegin, strValue, nBegin, nEnd-nBegin+1); // insert substring of strValue from index [nBegin,nEnd) into strValue at index nBegin
-
 	}
 
 	//if there is a maxChars attribute, cut off the string at that length
-	if(m_Node->first_attribute("maxChars")){
-		int chars = atoi(m_Node->first_attribute("maxChars")->value());
+	if(m_Node->parent()->first_attribute("maxChars")){
+		int chars = atoi(m_Node->parent()->first_attribute("maxChars")->value());
 		strValue = strValue.substr(0, chars);
 	}
 
@@ -889,8 +918,8 @@ std::string CustomMutation::Insertion(){
 	std::string strValue = m_Node->value();
 
 	//check if there is a maxChars attribute
-	if(m_Node->first_attribute("maxChars")){
-		int nChars = atoi(m_Node->first_attribute("maxChars")->value());
+	if(m_Node->parent()->first_attribute("maxChars")){
+		int nChars = atoi(m_Node->parent()->first_attribute("maxChars")->value());
 		if((int)strValue.size() >= nChars){
 			return strValue;
 		}
@@ -1057,8 +1086,9 @@ std::string ChromosomeMutation::Deletion(){
 		rapidxml::xml_node<>* geneNode;
 
 		for(int i = nBegin; i <= nEnd; i++){
-			geneNode = Mutation::GetGeneNode(i);
+			geneNode = Mutation::GetGeneNode(nBegin);
 			m_Node->remove_node(geneNode);
+
 		}
 	}
 
@@ -1071,24 +1101,65 @@ std::string ChromosomeMutation::Insertion(){
 		nGenes++;
 	}
 
-	//if there are genes, swap at random 2 genes
-	if(nGenes){
-		int nRandom1 = rand() % nGenes;
+		int nRandom1 = rand() % (nGenes+1);
 
 		rapidxml::xml_node<>* geneNode;
 		rapidxml::xml_node<>* newNode;
 
 		geneNode = Mutation::GetGeneNode(nRandom1);
-		newNode = doc.allocate_node(rapidxml::node_element, "Gene");
+		newNode = m_Node->document()->allocate_node(rapidxml::node_element, "Gene");
 
+		char* pchRandomData;
+
+
+		std::string strEncoding = m_Node->first_attribute("encoding")->value();
+
+		if(strEncoding == "binary"){
+			BinaryEncoding cBinaryEncoding;
+			Encoding& rEncoding = cBinaryEncoding;
+			pchRandomData = m_Node->document()->allocate_string(rEncoding.RandomData(m_Node).c_str());
+		}
+		else if(strEncoding == "integer"){
+			IntegerEncoding cIntegerEncoding;
+			Encoding& rEncoding = cIntegerEncoding;
+			pchRandomData = m_Node->document()->allocate_string(rEncoding.RandomData(m_Node).c_str());
+		}
+		else if(strEncoding == "double"){
+			DoubleEncoding cDoubleEncoding;
+			Encoding& rEncoding = cDoubleEncoding;
+			pchRandomData = m_Node->document()->allocate_string(rEncoding.RandomData(m_Node).c_str());
+		}
+		else if(strEncoding == "alphanum"){
+			AlphanumEncoding cAlphanumEncoding;
+			Encoding& rEncoding = cAlphanumEncoding;
+			pchRandomData = m_Node->document()->allocate_string(rEncoding.RandomData(m_Node).c_str());
+		}
+		else if(strEncoding == "custom"){
+			CustomEncoding cCustomEncoding;
+			if(m_Node->first_attribute("chars")){
+				std::string	strCharacters = m_Node->first_attribute("chars")->value();
+				cCustomEncoding.SetChars(strCharacters);
+			}
+			Encoding& rEncoding = cCustomEncoding;
+			pchRandomData = m_Node->document()->allocate_string(rEncoding.RandomData(m_Node).c_str());
+		}
+		else if(strEncoding == "tree"){
+			TreeEncoding cTreeEncoding;
+			Encoding& rEncoding = cTreeEncoding;
+			pchRandomData = m_Node->document()->allocate_string(rEncoding.RandomData(m_Node).c_str());
+		}
+		else if(strEncoding == "list"){
+			ListEncoding cListEncoding;
+			Encoding& rEncoding = cListEncoding;
+			pchRandomData = m_Node->document()->allocate_string(rEncoding.RandomData(m_Node).c_str());
+		}
+		else{
+			std::cout << "unknown encoding type" << std::endl;
+		}
+
+		newNode->value(pchRandomData);
 		m_Node->insert_node(geneNode, newNode);
 
-
-
-	}
-	std::string xml_as_string;
-	rapidxml::print(std::back_inserter(xml_as_string), *m_Node);
-	std::cout << xml_as_string << std::endl;
 
 	return "";
 }
@@ -1127,9 +1198,6 @@ std::string ChromosomeMutation::Swap(){
 
 
 	}
-	std::string xml_as_string;
-	rapidxml::print(std::back_inserter(xml_as_string), *m_Node);
-	std::cout << xml_as_string << std::endl;
 
 	return "";
 }

@@ -8874,3 +8874,31 @@ Caused by: java.lang.IllegalArgumentException: Index out of bounds
 	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
 	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
 	... 22 more
+!SESSION 2012-03-12 14:22:57.276 -----------------------------------------------
+eclipse.buildId=M20110909-1335
+java.version=1.6.0_29
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=nl_BE
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.jface 2 0 2012-03-12 14:23:10.380
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2012-03-12 14:23:10.380
+!MESSAGE A conflict occurred for CTRL+SHIFT+W:
+Binding(CTRL+SHIFT+W,
+	ParameterizedCommand(Command(org.eclipse.ui.file.closeAll,Close All,
+		Close all editors,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.CloseAllHandler@10b95f2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+W,
+	ParameterizedCommand(Command(org.wsdl.tools.wsdlauditor.plugin.commands.generate,WAudit,
+		Generate Audit Report for Wsdl,
+		Category(org.wsdl.tools.wsdlauditor.plugin.commands.category,Wsdl Auditor,Generate Audit Report for Wsdl,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)

@@ -211,7 +211,10 @@ std::string IntegerMutation::BitString(){
 		}
 
 	}
-	return strValue;
+	std::stringstream ss;
+	ss << atoi(strValue.c_str());
+
+	return ss.str();
 }
 /*std::string IntegerMutation::FlipBits(){
 	return "";
@@ -312,7 +315,12 @@ std::string IntegerMutation::Duplication(){
 			}
 		}
 	}
-	return strValue;
+
+
+	std::stringstream ss;
+	ss << atoi(strValue.c_str());
+
+	return ss.str();
 }
 std::string IntegerMutation::Deletion(){
 	std::string strValue = m_Node->value();
@@ -344,7 +352,10 @@ std::string IntegerMutation::Deletion(){
 		strValue = "";
 	}
 
-	return strValue;
+	std::stringstream ss;
+	ss << atoi(strValue.c_str());
+
+	return ss.str();
 }
 std::string IntegerMutation::Insertion(){
 	std::string strValue = m_Node->value();
@@ -384,7 +395,11 @@ std::string IntegerMutation::Insertion(){
 		}
 	}
 
-	return strValue;
+
+	std::stringstream ss;
+	ss << atoi(strValue.c_str());
+
+	return ss.str();
 }
 std::string IntegerMutation::Swap(){
 	std::string strValue = m_Node->value();
@@ -417,7 +432,10 @@ std::string IntegerMutation::Swap(){
 		}
 	}
 
-	return strValue;
+	std::stringstream ss;
+	ss << atoi(strValue.c_str());
+
+	return ss.str();
 }
 
 /***************************************************************************************************************
@@ -452,7 +470,10 @@ std::string DoubleMutation::BitString(){
 			}
 		}
 	}
-	return strValue;
+	std::stringstream ss;
+	ss << atof(strValue.c_str());
+
+	return ss.str();
 }
 /*std::string DoubleMutation::FlipBits(){
 	return "";
@@ -530,7 +551,10 @@ std::string DoubleMutation::Gaussian(double sigma = 1.0){
 
 	}
 
-	return strValue;
+	std::stringstream ss2;
+	ss2 << atof(strValue.c_str());
+
+	return ss2.str();
 }
 std::string DoubleMutation::Duplication(){
 	std::string strValue = m_Node->value();
@@ -585,7 +609,10 @@ std::string DoubleMutation::Duplication(){
 			}
 		}
 	}
-	return strValue;
+	std::stringstream ss;
+	ss << atof(strValue.c_str());
+
+	return ss.str();
 }
 std::string DoubleMutation::Deletion(){
 	std::string strValue = m_Node->value();
@@ -616,8 +643,10 @@ std::string DoubleMutation::Deletion(){
 	if(strValue == "-"){
 		strValue = "";
 	}
+	std::stringstream ss;
+	ss << atof(strValue.c_str());
 
-	return strValue;
+	return ss.str();
 }
 std::string DoubleMutation::Insertion(){
 	std::string strValue = m_Node->value();
@@ -674,7 +703,10 @@ std::string DoubleMutation::Insertion(){
 		}
 	}
 
-	return strValue;
+	std::stringstream ss;
+	ss << atof(strValue.c_str());
+
+	return ss.str();
 }
 std::string DoubleMutation::Swap(){
 	std::string strValue = m_Node->value();
@@ -716,7 +748,10 @@ std::string DoubleMutation::Swap(){
 		}
 	}
 
-	return strValue;
+	std::stringstream ss;
+	ss << atof(strValue.c_str());
+
+	return ss.str();
 }
 
 /***************************************************************************************************************
