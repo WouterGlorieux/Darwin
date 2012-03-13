@@ -17,11 +17,11 @@ float box_muller(float m, float s);
 
 class Mutation
 {
-protected:
+private:
 	std::string m_strValue;
-	rapidxml::xml_node<>* m_ChromosomeNode;
 
 public:
+	rapidxml::xml_node<>* m_Node;
 
 	Mutation() // default constructor
     {	}
@@ -47,10 +47,9 @@ private:
 
 public:
 
-	BitMutation(std::string value, rapidxml::xml_node<>* chromosomeNode) // default constructor
+	BitMutation(rapidxml::xml_node<>* node) // default constructor
     {
-		m_strValue = value;
-		m_ChromosomeNode = chromosomeNode;
+		m_Node = node;
     }
 
 	virtual ~BitMutation() // default deconstructor
@@ -74,10 +73,9 @@ private:
 
 public:
 
-	IntegerMutation(std::string value, rapidxml::xml_node<>* chromosomeNode) // default constructor
+	IntegerMutation(rapidxml::xml_node<>* node) // default constructor
     {
-		m_strValue = value;
-		m_ChromosomeNode = chromosomeNode;
+		m_Node = node;
     }
 
 	virtual ~IntegerMutation() // default deconstructor
@@ -101,10 +99,9 @@ private:
 
 public:
 
-	DoubleMutation(std::string value, rapidxml::xml_node<>* chromosomeNode) // default constructor
+	DoubleMutation(rapidxml::xml_node<>* node) // default constructor
     {
-		m_strValue = value;
-		m_ChromosomeNode = chromosomeNode;
+		m_Node = node;
 
     }
 
@@ -129,10 +126,9 @@ private:
 
 public:
 
-	AlphanumMutation(std::string value, rapidxml::xml_node<>* chromosomeNode) // default constructor
+	AlphanumMutation(rapidxml::xml_node<>* node) // default constructor
     {
-		m_strValue = value;
-		m_ChromosomeNode = chromosomeNode;
+		m_Node = node;
 
     }
 
@@ -157,10 +153,9 @@ private:
 
 public:
 
-	CustomMutation(std::string value, rapidxml::xml_node<>* chromosomeNode) // default constructor
+	CustomMutation(rapidxml::xml_node<>* node) // default constructor
     {
-		m_strValue = value;
-		m_ChromosomeNode = chromosomeNode;
+		m_Node = node;
     }
 
 	virtual ~CustomMutation() // default deconstructor
@@ -184,10 +179,9 @@ private:
 
 public:
 
-	TreeMutation(std::string value, rapidxml::xml_node<>* chromosomeNode) // default constructor
+	TreeMutation(rapidxml::xml_node<>* node) // default constructor
     {
-		m_strValue = value;
-		m_ChromosomeNode = chromosomeNode;
+		m_Node = node;
     }
 
 	virtual ~TreeMutation() // default deconstructor
@@ -211,10 +205,9 @@ private:
 
 public:
 
-	ListMutation(std::string value, rapidxml::xml_node<>* chromosomeNode) // default constructor
+	ListMutation(rapidxml::xml_node<>* node) // default constructor
     {
-		m_strValue = value;
-		m_ChromosomeNode = chromosomeNode;
+		m_Node = node;
     }
 
 	virtual ~ListMutation() // default deconstructor

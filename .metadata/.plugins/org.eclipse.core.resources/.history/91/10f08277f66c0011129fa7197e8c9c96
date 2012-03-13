@@ -275,7 +275,7 @@ void Genome::DoMutations(MutationChances mutationChances){
 		//do chromosome mutations
 		ChromosomeMutation cChromosomeMutation(chromosomeNode);
 		if(strEncoding == "binary"){
-			ChromosomeMutations(chromosomeNode, cChromosomeMutation, mutationChances.BinaryMutationChance);
+			ChromosomeMutations(&chromosomeNode, cChromosomeMutation, mutationChances.BinaryMutationChance);
 		}
 		else if(strEncoding == "integer"){
 			ChromosomeMutations(chromosomeNode, cChromosomeMutation, mutationChances.IntegerMutationChance);
@@ -303,37 +303,37 @@ void Genome::DoMutations(MutationChances mutationChances){
 		for (rapidxml::xml_node<>* geneNode = chromosomeNode->first_node("Gene"); geneNode; geneNode = geneNode->next_sibling("Gene"))
 		{
 			if(strEncoding == "binary"){
-				BitMutation cBitMutation(geneNode->value(), chromosomeNode);
+				BitMutation cBitMutation(geneNode);
 				Mutation& rMutation = cBitMutation;
 				GeneMutations(doc, geneNode, rMutation, mutationChances.BinaryMutationChance);
 			}
 			else if(strEncoding == "integer"){
-				IntegerMutation cIntegerMutation(geneNode->value(), chromosomeNode);
+				IntegerMutation cIntegerMutation(geneNode);
 				Mutation& rMutation = cIntegerMutation;
 				GeneMutations(doc, geneNode, rMutation, mutationChances.IntegerMutationChance);
 			}
 			else if(strEncoding == "double"){
-				DoubleMutation cDoubleMutation(geneNode->value(), chromosomeNode);
+				DoubleMutation cDoubleMutation(geneNode);
 				Mutation& rMutation = cDoubleMutation;
 				GeneMutations(doc, geneNode, rMutation, mutationChances.DoubleMutationChance);
 			}
 			else if(strEncoding == "alphanum"){
-				AlphanumMutation cAlphanumMutation(geneNode->value(), chromosomeNode);
+				AlphanumMutation cAlphanumMutation(geneNode);
 				Mutation& rMutation =  cAlphanumMutation;
 				GeneMutations(doc, geneNode, rMutation, mutationChances.AlphanumMutationChance);
 			}
 			else if(strEncoding == "custom"){
-				CustomMutation cCustomMutation(geneNode->value(), chromosomeNode);
+				CustomMutation cCustomMutation(geneNode);
 				Mutation& rMutation = cCustomMutation;
 				GeneMutations(doc, geneNode, rMutation, mutationChances.CustomMutationChance);
 			}
 			else if(strEncoding == "tree"){
-				TreeMutation cTreeMutation(geneNode->value(), chromosomeNode);
+				TreeMutation cTreeMutation(geneNode);
 				Mutation& rMutation = cTreeMutation;
 				GeneMutations(doc, geneNode, rMutation, mutationChances.TreeMutationChance);
 			}
 			else if(strEncoding == "list"){
-				ListMutation cListMutation(geneNode->value(), chromosomeNode);
+				ListMutation cListMutation(geneNode);
 				Mutation& rMutation = cListMutation;
 				GeneMutations(doc, geneNode, rMutation, mutationChances.ListMutationChance);
 			}
@@ -412,7 +412,7 @@ void Genome::GeneMutations(rapidxml::xml_document<>& doc, rapidxml::xml_node<>* 
 
 }
 
-void Genome::ChromosomeMutations(rapidxml::xml_node<>* chromosomeNode, ChromosomeMutation& mutation, MutationChance mutationChance){
+void Genome::ChromosomeMutations(rapidxml::xml_node<>* chromosomeNode, Mutation& mutation, MutationChance mutationChance){
 	int nLow = 0;
 	int nHigh = RAND_MAX;
 

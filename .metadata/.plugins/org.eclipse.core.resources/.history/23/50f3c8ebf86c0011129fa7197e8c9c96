@@ -24,31 +24,31 @@ rapidxml::xml_node<>* ChromosomeMutation::GetGeneNode(int n){
 
 
 std::string Mutation::BitString(){
-	return m_strValue;
+	return m_Node->value();
 }
 std::string Mutation::FlipBits(){
-	return m_strValue;
+	return m_Node->value();
 }
 std::string Mutation::Boundary(){
-	return m_strValue;
+	return m_Node->value();
 }
 std::string Mutation::Uniform(){
-	return m_strValue;
+	return m_Node->value();
 }
 std::string Mutation::Gaussian(double sigma = 1.0){
-	return m_strValue;
+	return m_Node->value();
 }
 std::string Mutation::Duplication(){
-	return m_strValue;
+	return m_Node->value();
 }
 std::string Mutation::Deletion(){
-	return m_strValue;
+	return m_Node->value();
 }
 std::string Mutation::Insertion(){
-	return m_strValue;
+	return m_Node->value();
 }
 std::string Mutation::Swap(){
-	return m_strValue;
+	return m_Node->value();
 }
 
 
@@ -57,7 +57,7 @@ std::string Mutation::Swap(){
  ***************************************************************************************************************/
 
 std::string BitMutation::BitString(){
-	std::string strValue = m_strValue;
+	std::string strValue = m_Node->value();
 
 	int nRandom = 0;
 	if(strValue.size() > 0){
@@ -68,7 +68,7 @@ std::string BitMutation::BitString(){
 	return strValue;
 }
 std::string BitMutation::FlipBits(){
-	std::string strValue = m_strValue;
+	std::string strValue = m_Node->value();
 
 	for(unsigned int i = 0; i < strValue.size(); i++){
 		(strValue.at(i) =='1')?strValue.at(i) = '0':strValue.at(i) = '1';
@@ -78,7 +78,7 @@ std::string BitMutation::FlipBits(){
 }
 std::string BitMutation::Boundary(){
 
-	std::string strValue = m_strValue;
+	std::string strValue = m_Node->value();
 	std::stringstream ss;//create a stringstream
 
 	int bit = rand() % 2;
@@ -91,13 +91,13 @@ std::string BitMutation::Boundary(){
 }
 std::string BitMutation::Uniform(){
 	BinaryEncoding cBinaryEncoding;
-	return cBinaryEncoding.RandomData(m_ChromosomeNode);
+	return cBinaryEncoding.RandomData(m_Node->parent());
 }
 /*std::string BitMutation::Gaussian(double sigma = 1.0){
 	return "";
 }*/
 std::string BitMutation::Duplication(){
-	std::string strValue = m_strValue;
+	std::string strValue = m_Node->value();
 
 	if(strValue.size() > 0){
 		//duplicate a random part of the string
@@ -107,15 +107,15 @@ std::string BitMutation::Duplication(){
 	}
 
 	//if there is a bits attribute, cut off the string at that length
-	if(m_ChromosomeNode->first_attribute("bits")){
-		int bits = atoi(m_ChromosomeNode->first_attribute("bits")->value());
+	if(m_Node->parent()->first_attribute("bits")){
+		int bits = atoi(m_Node->parent()->first_attribute("bits")->value());
 		strValue = strValue.substr(0, bits);
 	}
 
 	return strValue;
 }
 std::string BitMutation::Deletion(){
-	std::string strValue = m_strValue;
+	std::string strValue = m_Node->value();
 
 	if(strValue.size() > 0){
 		//delete a random part of the string
@@ -124,7 +124,7 @@ std::string BitMutation::Deletion(){
 		strValue = strValue.erase(nBegin, nEnd-nBegin+1);
 
 		//if there is a bits attribute, fill the rest of string with random bits
-		if(m_ChromosomeNode->first_attribute("bits")){
+		if(m_Node->parent()->first_attribute("bits")){
 			std::stringstream ss;//create a stringstream
 			int bit;
 			for(int i = 0; i < (nEnd-nBegin+1); i++){
@@ -137,7 +137,7 @@ std::string BitMutation::Deletion(){
 	return strValue;
 }
 std::string BitMutation::Insertion(){
-	std::string strValue = m_strValue;
+	std::string strValue = m_Node->value();
 
 	int nBegin = 0;
 	int nEnd = 0;
@@ -159,15 +159,15 @@ std::string BitMutation::Insertion(){
 	strValue.insert(nBegin, ss.str()); // insert ss.str() at index nBegin
 
 	//if there is a bits attribute, cut off the string at that length
-	if(m_ChromosomeNode->first_attribute("bits")){
-		int bits = atoi(m_ChromosomeNode->first_attribute("bits")->value());
+	if(m_Node->parent()->first_attribute("bits")){
+		int bits = atoi(m_Node->parent()->first_attribute("bits")->value());
 		strValue = strValue.substr(0, bits);
 	}
 
 	return strValue;
 }
 std::string BitMutation::Swap(){
-	std::string strValue = m_strValue;
+	std::string strValue = m_Node->value();
 
 	int nRandom1 = 0;
 	int nRandom2 = 0;
@@ -186,7 +186,7 @@ std::string BitMutation::Swap(){
  * Derived Class IntegerMutation
  ***************************************************************************************************************/
 std::string IntegerMutation::BitString(){
-	std::string strValue = m_strValue;
+	std::string strValue = m_Node->value();
 
 	if(strValue.size() > 0){
 		int nRandom = rand() % strValue.size();
@@ -197,16 +197,16 @@ std::string IntegerMutation::BitString(){
 		strValue.replace(nRandom, 1, ss.str());
 
 		//make sure new value is not smaller than min boundary
-		if(m_ChromosomeNode->first_attribute("min")){
-			if( atoi(strValue.c_str()) < atoi(m_ChromosomeNode->first_attribute("min")->value()) ){
-				return m_strValue;
+		if(m_Node->parent()->first_attribute("min")){
+			if( atoi(strValue.c_str()) < atoi(m_Node->parent()->first_attribute("min")->value()) ){
+				return m_Node->value();
 			}
 		}
 
 		//make sure new value is not greater than max boundary
-		if(m_ChromosomeNode->first_attribute("max")){
-			if( atoi(strValue.c_str()) > atoi(m_ChromosomeNode->first_attribute("max")->value()) ){
-				return m_strValue;
+		if(m_Node->parent()->first_attribute("max")){
+			if( atoi(strValue.c_str()) > atoi(m_Node->parent()->first_attribute("max")->value()) ){
+				return m_Node->value();
 			}
 		}
 
@@ -221,22 +221,22 @@ std::string IntegerMutation::BitString(){
 }*/
 std::string IntegerMutation::Boundary(){
 
-	std::string strValue = m_strValue;
+	std::string strValue = m_Node->value();
 
 	std::stringstream ss;//create a stringstream
 
-	if(m_ChromosomeNode->first_attribute("min") && m_ChromosomeNode->first_attribute("max")){
+	if(m_Node->parent()->first_attribute("min") && m_Node->parent()->first_attribute("max")){
 		//pick one of the 2 boundaries at random
 		int nRandom = rand() % 2;
-		(nRandom == 0) ? ss << m_ChromosomeNode->first_attribute("min")->value() : ss << m_ChromosomeNode->first_attribute("max")->value();
+		(nRandom == 0) ? ss << m_Node->parent()->first_attribute("min")->value() : ss << m_Node->parent()->first_attribute("max")->value();
 		return ss.str();//return a string with the contents of the stream
 	}
-	else if(m_ChromosomeNode->first_attribute("min")){
-		 ss << m_ChromosomeNode->first_attribute("min")->value();
+	else if(m_Node->parent()->first_attribute("min")){
+		 ss << m_Node->parent()->first_attribute("min")->value();
 		return ss.str();//return a string with the contents of the stream
 	}
-	else if(m_ChromosomeNode->first_attribute("max")){
-		ss << m_ChromosomeNode->first_attribute("max")->value();
+	else if(m_Node->parent()->first_attribute("max")){
+		ss << m_Node->parent()->first_attribute("max")->value();
 		return ss.str();//return a string with the contents of the stream
 	}
 	else
@@ -247,26 +247,26 @@ std::string IntegerMutation::Boundary(){
 }
 std::string IntegerMutation::Uniform(){
 	IntegerEncoding cIntegerEncoding;
-	return cIntegerEncoding.RandomData(m_ChromosomeNode);
+	return cIntegerEncoding.RandomData(m_Node->parent());
 }
 std::string IntegerMutation::Gaussian(double sigma = 1.0){
-	std::string strValue = m_strValue;
+	std::string strValue = m_Node->value();
 
 	int nValue = atoi(strValue.c_str());
 	int nChange = (int)box_muller(0, sigma);
 	nValue += nChange;
 
 	//make sure new value is not smaller than min boundary
-	if(m_ChromosomeNode->first_attribute("min")){
-		if( nValue < atoi(m_ChromosomeNode->first_attribute("min")->value()) ){
-			return m_strValue;
+	if(m_Node->parent()->first_attribute("min")){
+		if( nValue < atoi(m_Node->parent()->first_attribute("min")->value()) ){
+			return m_Node->value();
 		}
 	}
 
 	//make sure new value is not greater than max boundary
-	if(m_ChromosomeNode->first_attribute("max")){
-		if( nValue > atoi(m_ChromosomeNode->first_attribute("max")->value()) ){
-			return m_strValue;
+	if(m_Node->parent()->first_attribute("max")){
+		if( nValue > atoi(m_Node->parent()->first_attribute("max")->value()) ){
+			return m_Node->value();
 		}
 	}
 
@@ -275,7 +275,7 @@ std::string IntegerMutation::Gaussian(double sigma = 1.0){
 	return ss.str();
 }
 std::string IntegerMutation::Duplication(){
-	std::string strValue = m_strValue;
+	std::string strValue = m_Node->value();
 
 	if(strValue.size() > 0){
 		//duplicate a random part of the string
@@ -302,16 +302,16 @@ std::string IntegerMutation::Duplication(){
 
 
 		//make sure new value is not smaller than min boundary
-		if(m_ChromosomeNode->first_attribute("min")){
-			if( atoi(strValue.c_str()) < atoi(m_ChromosomeNode->first_attribute("min")->value()) ){
-				return m_strValue;
+		if(m_Node->parent()->first_attribute("min")){
+			if( atoi(strValue.c_str()) < atoi(m_Node->parent()->first_attribute("min")->value()) ){
+				return m_Node->value();
 			}
 		}
 
 		//make sure new value is not greater than max boundary
-		if(m_ChromosomeNode->first_attribute("max")){
-			if( atoi(strValue.c_str()) > atoi(m_ChromosomeNode->first_attribute("max")->value()) ){
-				return m_strValue;
+		if(m_Node->parent()->first_attribute("max")){
+			if( atoi(strValue.c_str()) > atoi(m_Node->parent()->first_attribute("max")->value()) ){
+				return m_Node->value();
 			}
 		}
 	}
@@ -323,7 +323,7 @@ std::string IntegerMutation::Duplication(){
 	return ss.str();
 }
 std::string IntegerMutation::Deletion(){
-	std::string strValue = m_strValue;
+	std::string strValue = m_Node->value();
 
 	if(strValue.size() > 0){
 		//delete a random part of the string
@@ -334,16 +334,16 @@ std::string IntegerMutation::Deletion(){
 
 
 	//make sure new value is not smaller than min boundary
-	if(m_ChromosomeNode->first_attribute("min")){
-		if( atoi(strValue.c_str()) < atoi(m_ChromosomeNode->first_attribute("min")->value()) ){
-			return m_strValue;
+	if(m_Node->parent()->first_attribute("min")){
+		if( atoi(strValue.c_str()) < atoi(m_Node->parent()->first_attribute("min")->value()) ){
+			return m_Node->value();
 		}
 	}
 
 	//make sure new value is not greater than max boundary
-	if(m_ChromosomeNode->first_attribute("max")){
-		if( atoi(strValue.c_str()) > atoi(m_ChromosomeNode->first_attribute("max")->value()) ){
-			return m_strValue;
+	if(m_Node->parent()->first_attribute("max")){
+		if( atoi(strValue.c_str()) > atoi(m_Node->parent()->first_attribute("max")->value()) ){
+			return m_Node->value();
 		}
 	}
 
@@ -358,7 +358,7 @@ std::string IntegerMutation::Deletion(){
 	return ss.str();
 }
 std::string IntegerMutation::Insertion(){
-	std::string strValue = m_strValue;
+	std::string strValue = m_Node->value();
 	int nRandom = rand() % 10;
 
 	int nBegin = 0;
@@ -382,16 +382,16 @@ std::string IntegerMutation::Insertion(){
 
 
 	//make sure new value is not smaller than min boundary
-	if(m_ChromosomeNode->first_attribute("min")){
-		if( atoi(strValue.c_str()) < atoi(m_ChromosomeNode->first_attribute("min")->value()) ){
-			return m_strValue;
+	if(m_Node->parent()->first_attribute("min")){
+		if( atoi(strValue.c_str()) < atoi(m_Node->parent()->first_attribute("min")->value()) ){
+			return m_Node->value();
 		}
 	}
 
 	//make sure new value is not greater than max boundary
-	if(m_ChromosomeNode->first_attribute("max")){
-		if( atoi(strValue.c_str()) > atoi(m_ChromosomeNode->first_attribute("max")->value()) ){
-			return m_strValue;
+	if(m_Node->parent()->first_attribute("max")){
+		if( atoi(strValue.c_str()) > atoi(m_Node->parent()->first_attribute("max")->value()) ){
+			return m_Node->value();
 		}
 	}
 
@@ -402,7 +402,7 @@ std::string IntegerMutation::Insertion(){
 	return ss.str();
 }
 std::string IntegerMutation::Swap(){
-	std::string strValue = m_strValue;
+	std::string strValue = m_Node->value();
 
 	int nRandom1 = 0;
 	int nRandom2 = 0;
@@ -419,16 +419,16 @@ std::string IntegerMutation::Swap(){
 	}
 
 	//make sure new value is not smaller than min boundary
-	if(m_ChromosomeNode->first_attribute("min")){
-		if( atoi(strValue.c_str()) < atoi(m_ChromosomeNode->first_attribute("min")->value()) ){
-			return m_strValue;
+	if(m_Node->parent()->first_attribute("min")){
+		if( atoi(strValue.c_str()) < atoi(m_Node->parent()->first_attribute("min")->value()) ){
+			return m_Node->value();
 		}
 	}
 
 	//make sure new value is not greater than max boundary
-	if(m_ChromosomeNode->first_attribute("max")){
-		if( atoi(strValue.c_str()) > atoi(m_ChromosomeNode->first_attribute("max")->value()) ){
-			return m_strValue;
+	if(m_Node->parent()->first_attribute("max")){
+		if( atoi(strValue.c_str()) > atoi(m_Node->parent()->first_attribute("max")->value()) ){
+			return m_Node->value();
 		}
 	}
 
@@ -442,7 +442,7 @@ std::string IntegerMutation::Swap(){
  * Derived Class DoubleMutation
  ***************************************************************************************************************/
 std::string DoubleMutation::BitString(){
-	std::string strValue = m_strValue;
+	std::string strValue = m_Node->value();
 
 	if(strValue.size() > 0){
 		int nRandom = rand() % strValue.size();	//position to be replaced
@@ -457,16 +457,16 @@ std::string DoubleMutation::BitString(){
 		}
 
 		//make sure new value is not smaller than min boundary
-		if(m_ChromosomeNode->first_attribute("min")){
-			if( atof(strValue.c_str()) < atof(m_ChromosomeNode->first_attribute("min")->value()) ){
-				return m_strValue;
+		if(m_Node->parent()->first_attribute("min")){
+			if( atof(strValue.c_str()) < atof(m_Node->parent()->first_attribute("min")->value()) ){
+				return m_Node->value();
 			}
 		}
 
 		//make sure new value is not greater than max boundary
-		if(m_ChromosomeNode->first_attribute("max")){
-			if( atof(strValue.c_str()) > atof(m_ChromosomeNode->first_attribute("max")->value()) ){
-				return m_strValue;
+		if(m_Node->parent()->first_attribute("max")){
+			if( atof(strValue.c_str()) > atof(m_Node->parent()->first_attribute("max")->value()) ){
+				return m_Node->value();
 			}
 		}
 	}
@@ -479,22 +479,22 @@ std::string DoubleMutation::BitString(){
 	return "";
 }*/
 std::string DoubleMutation::Boundary(){
-	std::string strValue = m_strValue;
+	std::string strValue = m_Node->value();
 
 	std::stringstream ss;//create a stringstream
 
-	if(m_ChromosomeNode->first_attribute("min") && m_ChromosomeNode->first_attribute("max")){
+	if(m_Node->parent()->first_attribute("min") && m_Node->parent()->first_attribute("max")){
 		//pick one of the 2 boundaries at random
 		int nRandom = rand() % 2;
-		(nRandom == 0) ? ss << m_ChromosomeNode->first_attribute("min")->value() : ss << m_ChromosomeNode->first_attribute("max")->value();
+		(nRandom == 0) ? ss << m_Node->parent()->first_attribute("min")->value() : ss << m_Node->parent()->first_attribute("max")->value();
 		return ss.str();//return a string with the contents of the stream
 	}
-	else if(m_ChromosomeNode->first_attribute("min")){
-		 ss << m_ChromosomeNode->first_attribute("min")->value();
+	else if(m_Node->parent()->first_attribute("min")){
+		 ss << m_Node->parent()->first_attribute("min")->value();
 		return ss.str();//return a string with the contents of the stream
 	}
-	else if(m_ChromosomeNode->first_attribute("max")){
-		ss << m_ChromosomeNode->first_attribute("max")->value();
+	else if(m_Node->parent()->first_attribute("max")){
+		ss << m_Node->parent()->first_attribute("max")->value();
 		return ss.str();//return a string with the contents of the stream
 	}
 	else
@@ -504,10 +504,10 @@ std::string DoubleMutation::Boundary(){
 }
 std::string DoubleMutation::Uniform(){
 	DoubleEncoding cDoubleEncoding;
-	return cDoubleEncoding.RandomData(m_ChromosomeNode);
+	return cDoubleEncoding.RandomData(m_Node->parent());
 }
 std::string DoubleMutation::Gaussian(double sigma = 1.0){
-	std::string strValue = m_strValue;
+	std::string strValue = m_Node->value();
 
 	double dValue = atof(strValue.c_str());
 	double dChange = box_muller(0, sigma);
@@ -515,16 +515,16 @@ std::string DoubleMutation::Gaussian(double sigma = 1.0){
 	dValue += dChange;
 
 	//make sure new value is not smaller than min boundary
-	if(m_ChromosomeNode->first_attribute("min")){
-		if( dValue < atoi(m_ChromosomeNode->first_attribute("min")->value()) ){
-			return m_strValue;
+	if(m_Node->parent()->first_attribute("min")){
+		if( dValue < atoi(m_Node->parent()->first_attribute("min")->value()) ){
+			return m_Node->value();
 		}
 	}
 
 	//make sure new value is not greater than max boundary
-	if(m_ChromosomeNode->first_attribute("max")){
-		if( dValue > atoi(m_ChromosomeNode->first_attribute("max")->value()) ){
-			return m_strValue;
+	if(m_Node->parent()->first_attribute("max")){
+		if( dValue > atoi(m_Node->parent()->first_attribute("max")->value()) ){
+			return m_Node->value();
 		}
 	}
 
@@ -535,8 +535,8 @@ std::string DoubleMutation::Gaussian(double sigma = 1.0){
 	strValue = ss.str();
 
 	//make sure new value doesn't have more decimals than allowed
-	if(m_ChromosomeNode->first_attribute("decimals")){
-		int nDecimals = atoi(m_ChromosomeNode->first_attribute("decimals")->value());
+	if(m_Node->parent()->first_attribute("decimals")){
+		int nDecimals = atoi(m_Node->parent()->first_attribute("decimals")->value());
 		size_t nFound = strValue.find('.');
 
 		if(nFound != std::string::npos && (strValue.size()-nFound) > nDecimals){
@@ -557,7 +557,7 @@ std::string DoubleMutation::Gaussian(double sigma = 1.0){
 	return ss2.str();
 }
 std::string DoubleMutation::Duplication(){
-	std::string strValue = m_strValue;
+	std::string strValue = m_Node->value();
 
 	if(strValue.size() > 0){
 		//duplicate a random part of the string
@@ -587,22 +587,22 @@ std::string DoubleMutation::Duplication(){
 		}
 
 		//make sure new value is not smaller than min boundary
-		if(m_ChromosomeNode->first_attribute("min")){
-			if( atof(strValue.c_str()) < atof(m_ChromosomeNode->first_attribute("min")->value()) ){
-				return m_strValue;
+		if(m_Node->parent()->first_attribute("min")){
+			if( atof(strValue.c_str()) < atof(m_Node->parent()->first_attribute("min")->value()) ){
+				return m_Node->value();
 			}
 		}
 
 		//make sure new value is not greater than max boundary
-		if(m_ChromosomeNode->first_attribute("max")){
-			if( atof(strValue.c_str()) > atof(m_ChromosomeNode->first_attribute("max")->value()) ){
-				return m_strValue;
+		if(m_Node->parent()->first_attribute("max")){
+			if( atof(strValue.c_str()) > atof(m_Node->parent()->first_attribute("max")->value()) ){
+				return m_Node->value();
 			}
 		}
 
 		//make sure new value doesn't have more decimals than allowed
-		if(m_ChromosomeNode->first_attribute("decimals")){
-			int nDecimals = atoi(m_ChromosomeNode->first_attribute("decimals")->value());
+		if(m_Node->parent()->first_attribute("decimals")){
+			int nDecimals = atoi(m_Node->parent()->first_attribute("decimals")->value());
 			nFound = strValue.find('.');
 			if(nFound != std::string::npos && (strValue.size()-nFound) > nDecimals){
 				strValue = strValue.substr(0, nFound + nDecimals+1);
@@ -615,7 +615,7 @@ std::string DoubleMutation::Duplication(){
 	return ss.str();
 }
 std::string DoubleMutation::Deletion(){
-	std::string strValue = m_strValue;
+	std::string strValue = m_Node->value();
 
 	if(strValue.size() > 0){
 		//delete a random part of the string
@@ -626,16 +626,16 @@ std::string DoubleMutation::Deletion(){
 
 
 	//make sure new value is not smaller than min boundary
-	if(m_ChromosomeNode->first_attribute("min")){
-		if( atof(strValue.c_str()) < atof(m_ChromosomeNode->first_attribute("min")->value()) ){
-			return m_strValue;
+	if(m_Node->parent()->first_attribute("min")){
+		if( atof(strValue.c_str()) < atof(m_Node->parent()->first_attribute("min")->value()) ){
+			return m_Node->value();
 		}
 	}
 
 	//make sure new value is not greater than max boundary
-	if(m_ChromosomeNode->first_attribute("max")){
-		if( atof(strValue.c_str()) > atof(m_ChromosomeNode->first_attribute("max")->value()) ){
-			return m_strValue;
+	if(m_Node->parent()->first_attribute("max")){
+		if( atof(strValue.c_str()) > atof(m_Node->parent()->first_attribute("max")->value()) ){
+			return m_Node->value();
 		}
 	}
 
@@ -649,7 +649,7 @@ std::string DoubleMutation::Deletion(){
 	return ss.str();
 }
 std::string DoubleMutation::Insertion(){
-	std::string strValue = m_strValue;
+	std::string strValue = m_Node->value();
 	int nRandom = rand() % 10;
 
 	int nBegin = 0;
@@ -672,31 +672,31 @@ std::string DoubleMutation::Insertion(){
 
 
 	//check if there is a min attribute
-	if(m_ChromosomeNode->first_attribute("max")){
-		int nMin = atoi(m_ChromosomeNode->first_attribute("min")->value());
+	if(m_Node->parent()->first_attribute("max")){
+		int nMin = atoi(m_Node->parent()->first_attribute("min")->value());
 		//check if the new value is smaller than min, if so return original value
 		if(atoi(strValue.c_str()) < nMin){
-			return m_strValue;
+			return m_Node->value();
 		}
 	}
 
 	//make sure new value is not smaller than min boundary
-	if(m_ChromosomeNode->first_attribute("min")){
-		if( atof(strValue.c_str()) < atof(m_ChromosomeNode->first_attribute("min")->value()) ){
-			return m_strValue;
+	if(m_Node->parent()->first_attribute("min")){
+		if( atof(strValue.c_str()) < atof(m_Node->parent()->first_attribute("min")->value()) ){
+			return m_Node->value();
 		}
 	}
 
 	//make sure new value is not greater than max boundary
-	if(m_ChromosomeNode->first_attribute("max")){
-		if( atof(strValue.c_str()) > atof(m_ChromosomeNode->first_attribute("max")->value()) ){
-			return m_strValue;
+	if(m_Node->parent()->first_attribute("max")){
+		if( atof(strValue.c_str()) > atof(m_Node->parent()->first_attribute("max")->value()) ){
+			return m_Node->value();
 		}
 	}
 
 	//make sure new value doesn't have more decimals than allowed
-	if(m_ChromosomeNode->first_attribute("decimals")){
-		int nDecimals = atoi(m_ChromosomeNode->first_attribute("decimals")->value());
+	if(m_Node->parent()->first_attribute("decimals")){
+		int nDecimals = atoi(m_Node->parent()->first_attribute("decimals")->value());
 		size_t nFound = strValue.find('.');
 		if(nFound != std::string::npos && (strValue.size()-nFound) > nDecimals){
 			strValue = strValue.substr(0, nFound + nDecimals+1);
@@ -709,7 +709,7 @@ std::string DoubleMutation::Insertion(){
 	return ss.str();
 }
 std::string DoubleMutation::Swap(){
-	std::string strValue = m_strValue;
+	std::string strValue = m_Node->value();
 
 	int nRandom1 = 0;
 	int nRandom2 = 0;
@@ -726,22 +726,22 @@ std::string DoubleMutation::Swap(){
 	}
 
 	//make sure new value is not smaller than min boundary
-	if(m_ChromosomeNode->first_attribute("min")){
-		if( atof(strValue.c_str()) < atof(m_ChromosomeNode->first_attribute("min")->value()) ){
-			return m_strValue;
+	if(m_Node->parent()->first_attribute("min")){
+		if( atof(strValue.c_str()) < atof(m_Node->parent()->first_attribute("min")->value()) ){
+			return m_Node->value();
 		}
 	}
 
 	//make sure new value is not greater than max boundary
-	if(m_ChromosomeNode->first_attribute("max")){
-		if( atof(strValue.c_str()) > atof(m_ChromosomeNode->first_attribute("max")->value()) ){
-			return m_strValue;
+	if(m_Node->parent()->first_attribute("max")){
+		if( atof(strValue.c_str()) > atof(m_Node->parent()->first_attribute("max")->value()) ){
+			return m_Node->value();
 		}
 	}
 
 	//make sure new value doesn't have more decimals than allowed
-	if(m_ChromosomeNode->first_attribute("decimals")){
-		int nDecimals = atoi(m_ChromosomeNode->first_attribute("decimals")->value());
+	if(m_Node->parent()->first_attribute("decimals")){
+		int nDecimals = atoi(m_Node->parent()->first_attribute("decimals")->value());
 		size_t nFound = strValue.find('.');
 		if(nFound != std::string::npos && (strValue.size()-nFound) > nDecimals){
 			strValue = strValue.substr(0, nFound + nDecimals+1);
@@ -758,7 +758,7 @@ std::string DoubleMutation::Swap(){
  * Derived Class AlphanumMutation
  ***************************************************************************************************************/
 std::string AlphanumMutation::BitString(){
-	std::string strValue = m_strValue;
+	std::string strValue = m_Node->value();
 
 	// make sure there is a string
 	if(strValue.size() > 0 ){
@@ -783,13 +783,13 @@ std::string AlphanumMutation::BitString(){
 }*/
 std::string AlphanumMutation::Uniform(){
 	AlphanumEncoding cAlphanumEncoding;
-	return cAlphanumEncoding.RandomData(m_ChromosomeNode);
+	return cAlphanumEncoding.RandomData(m_Node->parent());
 }
 /*std::string AlphanumMutation::Gaussian(double sigma = 1.0){
 	return "";
 }*/
 std::string AlphanumMutation::Duplication(){
-	std::string strValue = m_strValue;
+	std::string strValue = m_Node->value();
 
 	if(strValue.size() > 0){
 		//duplicate a random part of the string
@@ -800,15 +800,15 @@ std::string AlphanumMutation::Duplication(){
 	}
 
 	//if there is a maxChars attribute, cut off the string at that length
-	if(m_ChromosomeNode->first_attribute("maxChars")){
-		int chars = atoi(m_ChromosomeNode->first_attribute("maxChars")->value());
+	if(m_Node->parent()->first_attribute("maxChars")){
+		int chars = atoi(m_Node->parent()->first_attribute("maxChars")->value());
 		strValue = strValue.substr(0, chars);
 	}
 
 	return strValue;
 }
 std::string AlphanumMutation::Deletion(){
-	std::string strValue = m_strValue;
+	std::string strValue = m_Node->value();
 
 	if(strValue.size() > 0){
 		//delete a random part of the string
@@ -820,11 +820,11 @@ std::string AlphanumMutation::Deletion(){
 	return strValue;
 }
 std::string AlphanumMutation::Insertion(){
-	std::string strValue = m_strValue;
+	std::string strValue = m_Node->value();
 
 	//check if there is a maxChars attribute
-	if(m_ChromosomeNode->first_attribute("maxChars")){
-		int nChars = atoi(m_ChromosomeNode->first_attribute("maxChars")->value());
+	if(m_Node->parent()->first_attribute("maxChars")){
+		int nChars = atoi(m_Node->parent()->first_attribute("maxChars")->value());
 		if((int)strValue.size() >= nChars){
 			return strValue;
 		}
@@ -849,7 +849,7 @@ std::string AlphanumMutation::Insertion(){
 	return strValue;
 }
 std::string AlphanumMutation::Swap(){
-	std::string strValue = m_strValue;
+	std::string strValue = m_Node->value();
 
 	int nRandom1 = 0;
 	int nRandom2 = 0;
@@ -872,12 +872,12 @@ std::string AlphanumMutation::Swap(){
  * Derived Class CustomMutation
  ***************************************************************************************************************/
 std::string CustomMutation::BitString(){
-		std::string strValue = m_strValue;
+		std::string strValue = m_Node->value();
 
 		// make sure there is a string
 		if(strValue.size() > 0 ){
 			CustomEncoding cCustomEncoding;
-			cCustomEncoding.SetChars(m_ChromosomeNode->first_attribute("chars")->value());
+			cCustomEncoding.SetChars(m_Node->parent()->first_attribute("chars")->value());
 			std::vector<char> characters = cCustomEncoding.GetChars();
 
 			int nRandom = rand() % strValue.size();
@@ -898,14 +898,14 @@ std::string CustomMutation::BitString(){
 }*/
 std::string CustomMutation::Uniform(){
 	CustomEncoding cCustomEncoding;
-	cCustomEncoding.SetChars(m_ChromosomeNode->first_attribute("chars")->value());
-	return cCustomEncoding.RandomData(m_ChromosomeNode);
+	cCustomEncoding.SetChars(m_Node->parent()->first_attribute("chars")->value());
+	return cCustomEncoding.RandomData(m_Node->parent());
 }
 /*std::string CustomMutation::Gaussian(double sigma = 1.0){
 	return "";
 }*/
 std::string CustomMutation::Duplication(){
-	std::string strValue = m_strValue;
+	std::string strValue = m_Node->value();
 
 	if(strValue.size() > 0){
 		//duplicate a random part of the string
@@ -915,15 +915,15 @@ std::string CustomMutation::Duplication(){
 	}
 
 	//if there is a maxChars attribute, cut off the string at that length
-	if(m_ChromosomeNode->first_attribute("maxChars")){
-		int chars = atoi(m_ChromosomeNode->first_attribute("maxChars")->value());
+	if(m_Node->parent()->first_attribute("maxChars")){
+		int chars = atoi(m_Node->parent()->first_attribute("maxChars")->value());
 		strValue = strValue.substr(0, chars);
 	}
 
 	return strValue;
 }
 std::string CustomMutation::Deletion(){
-	std::string strValue = m_strValue;
+	std::string strValue = m_Node->value();
 
 	if(strValue.size() > 0){
 		//delete a random part of the string
@@ -935,11 +935,11 @@ std::string CustomMutation::Deletion(){
 	return strValue;
 }
 std::string CustomMutation::Insertion(){
-	std::string strValue = m_strValue;
+	std::string strValue = m_Node->value();
 
 	//check if there is a maxChars attribute
-	if(m_ChromosomeNode->first_attribute("maxChars")){
-		int nChars = atoi(m_ChromosomeNode->first_attribute("maxChars")->value());
+	if(m_Node->parent()->first_attribute("maxChars")){
+		int nChars = atoi(m_Node->parent()->first_attribute("maxChars")->value());
 		if((int)strValue.size() >= nChars){
 			return strValue;
 		}
@@ -947,7 +947,7 @@ std::string CustomMutation::Insertion(){
 
 	//get a random character and insert it in strValue;
 	CustomEncoding cCustomEncoding;
-	cCustomEncoding.SetChars(m_ChromosomeNode->first_attribute("chars")->value());
+	cCustomEncoding.SetChars(m_Node->parent()->first_attribute("chars")->value());
 	std::vector<char> vCharacters = cCustomEncoding.GetChars();
 
 	int nRandom = rand() % vCharacters.size();
@@ -965,7 +965,7 @@ std::string CustomMutation::Insertion(){
 	return strValue;
 }
 std::string CustomMutation::Swap(){
-	std::string strValue = m_strValue;
+	std::string strValue = m_Node->value();
 
 	int nRandom1 = 0;
 	int nRandom2 = 0;
@@ -1012,7 +1012,7 @@ std::string CustomMutation::Swap(){
 	return "";
 }*/
 /*std::string TreeMutation::Swap(){
-	return m_strValue;
+	return m_Node->value();
 }*/
 
 /***************************************************************************************************************
@@ -1043,7 +1043,7 @@ std::string CustomMutation::Swap(){
 	return "";
 }*/
 /*std::string ListMutation::Swap(){
-	return m_strValue;
+	return m_Node->value();
 }*/
 
 

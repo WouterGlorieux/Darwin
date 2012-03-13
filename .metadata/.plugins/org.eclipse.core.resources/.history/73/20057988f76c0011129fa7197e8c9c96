@@ -20,7 +20,7 @@ private:
 	std::string m_strXML;
 	void FillGenes(rapidxml::xml_document<>& doc, rapidxml::xml_node<>* chromosomeNode, Encoding& encoding);
 	void GeneMutations(rapidxml::xml_document<>& doc, rapidxml::xml_node<>* geneNode, Mutation& mutation, MutationChance mutationChance);
-	void ChromosomeMutations(rapidxml::xml_node<>* chromosomeNode, ChromosomeMutation& mutation, MutationChance mutationChance);
+	void ChromosomeMutations(rapidxml::xml_node<>* chromosomeNode, Mutation& mutation, MutationChance mutationChance);
 
 public:
 

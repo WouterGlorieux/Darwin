@@ -19,7 +19,6 @@ class Mutation
 {
 protected:
 	std::string m_strValue;
-	rapidxml::xml_node<>* m_ChromosomeNode;
 
 public:
 
@@ -50,7 +49,6 @@ public:
 	BitMutation(std::string value, rapidxml::xml_node<>* chromosomeNode) // default constructor
     {
 		m_strValue = value;
-		m_ChromosomeNode = chromosomeNode;
     }
 
 	virtual ~BitMutation() // default deconstructor
@@ -77,7 +75,6 @@ public:
 	IntegerMutation(std::string value, rapidxml::xml_node<>* chromosomeNode) // default constructor
     {
 		m_strValue = value;
-		m_ChromosomeNode = chromosomeNode;
     }
 
 	virtual ~IntegerMutation() // default deconstructor
@@ -104,7 +101,6 @@ public:
 	DoubleMutation(std::string value, rapidxml::xml_node<>* chromosomeNode) // default constructor
     {
 		m_strValue = value;
-		m_ChromosomeNode = chromosomeNode;
 
     }
 
@@ -132,7 +128,6 @@ public:
 	AlphanumMutation(std::string value, rapidxml::xml_node<>* chromosomeNode) // default constructor
     {
 		m_strValue = value;
-		m_ChromosomeNode = chromosomeNode;
 
     }
 
@@ -160,7 +155,6 @@ public:
 	CustomMutation(std::string value, rapidxml::xml_node<>* chromosomeNode) // default constructor
     {
 		m_strValue = value;
-		m_ChromosomeNode = chromosomeNode;
     }
 
 	virtual ~CustomMutation() // default deconstructor
@@ -187,7 +181,6 @@ public:
 	TreeMutation(std::string value, rapidxml::xml_node<>* chromosomeNode) // default constructor
     {
 		m_strValue = value;
-		m_ChromosomeNode = chromosomeNode;
     }
 
 	virtual ~TreeMutation() // default deconstructor
@@ -214,7 +207,6 @@ public:
 	ListMutation(std::string value, rapidxml::xml_node<>* chromosomeNode) // default constructor
     {
 		m_strValue = value;
-		m_ChromosomeNode = chromosomeNode;
     }
 
 	virtual ~ListMutation() // default deconstructor
