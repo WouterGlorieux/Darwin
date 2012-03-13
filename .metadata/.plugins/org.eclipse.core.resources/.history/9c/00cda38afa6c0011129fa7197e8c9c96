@@ -1076,7 +1076,7 @@ void ChromosomeMutation::Duplication(){
 		}
 	}
 
-
+	void
 }
 void ChromosomeMutation::Deletion(){
 	int nGenes = 0;

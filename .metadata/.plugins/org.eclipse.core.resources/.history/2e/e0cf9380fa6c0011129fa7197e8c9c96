@@ -1050,8 +1050,22 @@ std::string CustomMutation::Swap(){
 /***************************************************************************************************************
  * Derived Class ChromosomeMutation
  ***************************************************************************************************************/
-
-void ChromosomeMutation::Duplication(){
+/*std::string ChromosomeMutation::BitString(){
+	return "";
+}*/
+/*std::string ChromosomeMutation::FlipBits(){
+	return "";
+}*/
+/*std::string ChromosomeMutation::Boundary(){
+	return "";
+}*/
+/*std::string ChromosomeMutation::Uniform(){
+	return "";
+}*/
+/*std::string ChromosomeMutation::Gaussian(double sigma = 1.0){
+	return "";
+}*/
+std::string ChromosomeMutation::Duplication(){
 	int nGenes = 0;
 	//count genes
 	for (rapidxml::xml_node<>* geneNode = m_Node->first_node("Gene"); geneNode; geneNode = geneNode->next_sibling("Gene")){
@@ -1076,9 +1090,9 @@ void ChromosomeMutation::Duplication(){
 		}
 	}
 
-
+	return "";
 }
-void ChromosomeMutation::Deletion(){
+std::string ChromosomeMutation::Deletion(){
 	int nGenes = 0;
 	//count genes
 	for (rapidxml::xml_node<>* geneNode = m_Node->first_node("Gene"); geneNode; geneNode = geneNode->next_sibling("Gene")){
@@ -1098,9 +1112,9 @@ void ChromosomeMutation::Deletion(){
 		}
 	}
 
-
+	return "";
 }
-void ChromosomeMutation::Insertion(){
+std::string ChromosomeMutation::Insertion(){
 	int nGenes = 0;
 	//count genes
 	for (rapidxml::xml_node<>* geneNode = m_Node->first_node("Gene"); geneNode; geneNode = geneNode->next_sibling("Gene")){
@@ -1167,9 +1181,9 @@ void ChromosomeMutation::Insertion(){
 		m_Node->insert_node(geneNode, newNode);
 
 
-
+	return "";
 }
-void ChromosomeMutation::Swap(){
+std::string ChromosomeMutation::Swap(){
 	int nGenes = 0;
 	//count genes
 	for (rapidxml::xml_node<>* geneNode = m_Node->first_node("Gene"); geneNode; geneNode = geneNode->next_sibling("Gene")){
@@ -1205,7 +1219,7 @@ void ChromosomeMutation::Swap(){
 
 	}
 
-
+	return "";
 }
 
 /***************************************************************************************************************
