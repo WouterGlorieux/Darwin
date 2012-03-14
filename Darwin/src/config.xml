@@ -13,7 +13,7 @@
     <MaxParents>2</MaxParents>
     <Recombination >3</Recombination>
       <Termination>
-        <MaxGenerations>100</MaxGenerations>
+        <MaxGenerations>1000</MaxGenerations>
         <MaxTimeTotal>30</MaxTimeTotal>
         <MaxTimeGeneration>5</MaxTimeGeneration>
         <Stagnation>100</Stagnation>
@@ -96,7 +96,7 @@
       <Insertion allowed="true">0.05</Insertion>
       <Swap allowed="true">0.05</Swap>
       <GeneDuplication allowed="true">0.05</GeneDuplication>
-      <GeneDeletion allowed="true">0.0</GeneDeletion>
+      <GeneDeletion allowed="true">0.05</GeneDeletion>
       <GeneInsertion allowed="true">0.05</GeneInsertion>
       <GeneSwap allowed="true">0.05</GeneSwap>
     </List>

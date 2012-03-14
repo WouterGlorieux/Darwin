@@ -1018,33 +1018,233 @@ std::string CustomMutation::Swap(){
 /***************************************************************************************************************
  * Derived Class ListMutation
  ***************************************************************************************************************/
-/*std::string ListMutation::BitString(){
-	return "";
-}*/
+void StringExplode(std::string str, std::string separator, std::vector<std::string>* results){
+    std::size_t found;
+    found = str.find_first_of(separator);
+    while(found != std::string::npos){
+        if(found > 0){
+            results->push_back(str.substr(0,found));
+        }
+        str = str.substr(found+1);
+        found = str.find_first_of(separator);
+    }
+    if(str.length() > 0){
+        results->push_back(str);
+    }
+}
+
+
+std::string ListMutation::BitString(){
+	std::vector<std::string> vstrData;
+	StringExplode(m_strValue, "|", &vstrData);
+	// vector vstrData now contains each double!
+
+	unsigned int nSelectedElement = 0;  //the index of the element to be mutated
+	if(vstrData.size() > 0){
+		nSelectedElement = rand() % vstrData.size();
+	}
+
+	std::string strData = "";
+	std::stringstream ss;//create a stringstream
+	for(unsigned int i = 0; i < vstrData.size(); i++){
+		strData = vstrData.at(i);
+		if(i == nSelectedElement){
+			DoubleMutation cDoubleMutation(strData, m_ChromosomeNode);
+			strData = cDoubleMutation.BitString();
+		}
+		ss << strData;		//add number to the stream
+		if(i < vstrData.size()-1){
+			ss << "|";   	//add separator to the stream
+		}
+	}
+
+   return ss.str();//return a string with the contents of the stream
+}
 /*std::string ListMutation::FlipBits(){
 	return "";
 }*/
-/*std::string ListMutation::Boundary(){
-	return "";
-}*/
-/*std::string ListMutation::Uniform(){
-	return "";
-}*/
-/*std::string ListMutation::Gaussian(double sigma = 1.0){
-	return "";
-}*/
-/*std::string ListMutation::Duplication(){
-	return "";
-}*/
-/*std::string ListMutation::Deletion(){
-	return "";
-}*/
-/*std::string ListMutation::Insertion(){
-	return "";
-}*/
-/*std::string ListMutation::Swap(){
-	return m_strValue;
-}*/
+std::string ListMutation::Boundary(){
+	std::vector<std::string> vstrData;
+	StringExplode(m_strValue, "|", &vstrData);
+	// vector vstrData now contains each double!
+
+	unsigned int nSelectedElement = 0;  //the index of the element to be mutated
+	if(vstrData.size() > 0){
+		nSelectedElement = rand() % vstrData.size();
+	}
+
+	std::string strData = "";
+	std::stringstream ss;//create a stringstream
+	for(unsigned int i = 0; i < vstrData.size(); i++){
+		strData = vstrData.at(i);
+		if(i == nSelectedElement){
+			DoubleMutation cDoubleMutation(strData, m_ChromosomeNode);
+			strData = cDoubleMutation.Boundary();
+		}
+		ss << strData;		//add number to the stream
+		if(i < vstrData.size()-1){
+			ss << "|";   	//add separator to the stream
+		}
+	}
+
+   return ss.str();//return a string with the contents of the stream
+}
+std::string ListMutation::Uniform(){
+	std::vector<std::string> vstrData;
+	StringExplode(m_strValue, "|", &vstrData);
+	// vector vstrData now contains each double!
+
+	unsigned int nSelectedElement = 0;  //the index of the element to be mutated
+	if(vstrData.size() > 0){
+		nSelectedElement = rand() % vstrData.size();
+	}
+
+	std::string strData = "";
+	std::stringstream ss;//create a stringstream
+	for(unsigned int i = 0; i < vstrData.size(); i++){
+		strData = vstrData.at(i);
+		if(i == nSelectedElement){
+			DoubleMutation cDoubleMutation(strData, m_ChromosomeNode);
+			strData = cDoubleMutation.Uniform();
+		}
+		ss << strData;		//add number to the stream
+		if(i < vstrData.size()-1){
+			ss << "|";   	//add separator to the stream
+		}
+	}
+
+   return ss.str();//return a string with the contents of the stream
+}
+std::string ListMutation::Gaussian(double sigma = 1.0){
+	std::vector<std::string> vstrData;
+	StringExplode(m_strValue, "|", &vstrData);
+	// vector vstrData now contains each double!
+
+	unsigned int nSelectedElement = 0;  //the index of the element to be mutated
+	if(vstrData.size() > 0){
+		nSelectedElement = rand() % vstrData.size();
+	}
+
+	std::string strData = "";
+	std::stringstream ss;//create a stringstream
+	for(unsigned int i = 0; i < vstrData.size(); i++){
+		strData = vstrData.at(i);
+		if(i == nSelectedElement){
+			DoubleMutation cDoubleMutation(strData, m_ChromosomeNode);
+			strData = cDoubleMutation.Gaussian(sigma);
+		}
+		ss << strData;		//add number to the stream
+		if(i < vstrData.size()-1){
+			ss << "|";   	//add separator to the stream
+		}
+	}
+
+   return ss.str();//return a string with the contents of the stream
+}
+std::string ListMutation::Duplication(){
+	std::vector<std::string> vstrData;
+	StringExplode(m_strValue, "|", &vstrData);
+	// vector vstrData now contains each double!
+
+	unsigned int nSelectedElement = 0;  //the index of the element to be mutated
+	if(vstrData.size() > 0){
+		nSelectedElement = rand() % vstrData.size();
+	}
+
+	std::string strData = "";
+	std::stringstream ss;//create a stringstream
+	for(unsigned int i = 0; i < vstrData.size(); i++){
+		strData = vstrData.at(i);
+		if(i == nSelectedElement){
+			DoubleMutation cDoubleMutation(strData, m_ChromosomeNode);
+			strData = cDoubleMutation.Duplication();
+		}
+		ss << strData;		//add number to the stream
+		if(i < vstrData.size()-1){
+			ss << "|";   	//add separator to the stream
+		}
+	}
+
+   return ss.str();//return a string with the contents of the stream
+}
+std::string ListMutation::Deletion(){
+	std::vector<std::string> vstrData;
+	StringExplode(m_strValue, "|", &vstrData);
+	// vector vstrData now contains each double!
+
+	unsigned int nSelectedElement = 0;  //the index of the element to be mutated
+	if(vstrData.size() > 0){
+		nSelectedElement = rand() % vstrData.size();
+	}
+
+	std::string strData = "";
+	std::stringstream ss;//create a stringstream
+	for(unsigned int i = 0; i < vstrData.size(); i++){
+		strData = vstrData.at(i);
+		if(i == nSelectedElement){
+			DoubleMutation cDoubleMutation(strData, m_ChromosomeNode);
+			strData = cDoubleMutation.Deletion();
+		}
+		ss << strData;		//add number to the stream
+		if(i < vstrData.size()-1){
+			ss << "|";   	//add separator to the stream
+		}
+	}
+
+   return ss.str();//return a string with the contents of the stream
+}
+std::string ListMutation::Insertion(){
+	std::vector<std::string> vstrData;
+	StringExplode(m_strValue, "|", &vstrData);
+	// vector vstrData now contains each double!
+
+	unsigned int nSelectedElement = 0;  //the index of the element to be mutated
+	if(vstrData.size() > 0){
+		nSelectedElement = rand() % vstrData.size();
+	}
+
+	std::string strData = "";
+	std::stringstream ss;//create a stringstream
+	for(unsigned int i = 0; i < vstrData.size(); i++){
+		strData = vstrData.at(i);
+		if(i == nSelectedElement){
+			DoubleMutation cDoubleMutation(strData, m_ChromosomeNode);
+			strData = cDoubleMutation.Insertion();
+		}
+		ss << strData;		//add number to the stream
+		if(i < vstrData.size()-1){
+			ss << "|";   	//add separator to the stream
+		}
+	}
+
+   return ss.str();//return a string with the contents of the stream
+}
+std::string ListMutation::Swap(){
+	std::vector<std::string> vstrData;
+	StringExplode(m_strValue, "|", &vstrData);
+	// vector vstrData now contains each double!
+
+	unsigned int nSelectedElement = 0;  //the index of the element to be mutated
+	if(vstrData.size() > 0){
+		nSelectedElement = rand() % vstrData.size();
+	}
+
+	std::string strData = "";
+	std::stringstream ss;//create a stringstream
+	for(unsigned int i = 0; i < vstrData.size(); i++){
+		strData = vstrData.at(i);
+		if(i == nSelectedElement){
+			DoubleMutation cDoubleMutation(strData, m_ChromosomeNode);
+			strData = cDoubleMutation.Swap();
+		}
+		ss << strData;		//add number to the stream
+		if(i < vstrData.size()-1){
+			ss << "|";   	//add separator to the stream
+		}
+	}
+
+   return ss.str();//return a string with the contents of the stream
+}
 
 
 /***************************************************************************************************************

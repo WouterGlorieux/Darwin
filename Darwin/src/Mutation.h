@@ -28,6 +28,7 @@ public:
     virtual ~Mutation() // default deconstructor
     {    }
 
+   // typedef std::string (Mutation::*pMutation)() ;
 
 
 	virtual std::string BitString();
@@ -220,15 +221,15 @@ public:
 	virtual ~ListMutation() // default deconstructor
     {    }
 
-    //virtual std::string BitString();
+    virtual std::string BitString();
     //virtual std::string FlipBits();
-    //virtual std::string Boundary();
-    //virtual std::string Uniform();
-    //virtual std::string Gaussian(double sigma );
-    //virtual std::string Duplication();
-    //virtual std::string Deletion();
-    //virtual std::string Insertion();
-    //virtual std::string Swap();
+    virtual std::string Boundary();
+    virtual std::string Uniform();
+    virtual std::string Gaussian(double sigma );
+    virtual std::string Duplication();
+    virtual std::string Deletion();
+    virtual std::string Insertion();
+    virtual std::string Swap();
 
 };
 

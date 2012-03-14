@@ -138,7 +138,7 @@ void Evolver::start(){
 		pacPopulation[i].randomGenome();
 	}
 
-	std::cout << pacPopulation[0].cGenome.GetXML() << std::endl;
+	//std::cout << pacPopulation[0].cGenome.GetXML() << std::endl;
 	//create Aperture object
 
 	m_nGeneration = 1;
@@ -228,7 +228,7 @@ while(DoNextGeneration()){
 }
 //loop
 
-	std::cout << pacNextGeneration[0].cGenome.GetXML() << std::endl;
+	//std::cout << pacNextGeneration[0].cGenome.GetXML() << std::endl;
 
 
 

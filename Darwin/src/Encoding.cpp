@@ -35,7 +35,7 @@ std::string BinaryEncoding::RandomData(rapidxml::xml_node<>* chromosomeNode){
 std::string IntegerEncoding::RandomData(rapidxml::xml_node<>* chromosomeNode){
 
 	int nLow = 0;
-	int nHigh = 32767;		//default range of rand()
+	int nHigh = RAND_MAX;		//default range of rand()
 
 	//check if there is a "min" attribute in the chromosomeNode
 	if(chromosomeNode->first_attribute("min")){
@@ -57,7 +57,7 @@ std::string IntegerEncoding::RandomData(rapidxml::xml_node<>* chromosomeNode){
 std::string DoubleEncoding::RandomData(rapidxml::xml_node<>* chromosomeNode){
 
 	int nLow = 0;
-	int nHigh = 32767;	//default range of rand()
+	int nHigh = RAND_MAX;	//default range of rand()
 	int nDecimals = 2;
 
 	//check if there is a "min" attribute in the chromosomeNode
@@ -91,7 +91,7 @@ std::string DoubleEncoding::RandomData(rapidxml::xml_node<>* chromosomeNode){
 
 std::string AlphanumEncoding::RandomData(rapidxml::xml_node<>* chromosomeNode){
 
-	int nMaxChars = 32767;	//default maxChars
+	int nMaxChars = RAND_MAX;	//default maxChars
 	int nChars;
 
 	//check if there is a "maxChars" attribute in the chromosomeNode
@@ -114,7 +114,7 @@ std::string AlphanumEncoding::RandomData(rapidxml::xml_node<>* chromosomeNode){
 
 std::string CustomEncoding::RandomData(rapidxml::xml_node<>* chromosomeNode){
 
-	int nMaxChars = 32767;	//default maxChars
+	int nMaxChars = RAND_MAX;	//default maxChars
 	int nChars;
 
 	//check if there is a "maxChars" attribute in the chromosomeNode
@@ -156,13 +156,28 @@ std::string TreeEncoding::RandomData(rapidxml::xml_node<>* chromosomeNode){
 
 std::string ListEncoding::RandomData(rapidxml::xml_node<>* chromosomeNode){
 
-	int nLow = 0;
-	int nHigh = 100;
+	int nElements = 0;
 
-	int data = (rand() % (nHigh - nLow + 1)) + nLow;
+	//check if there is a "elements" attribute in the chromosomeNode
+	if(chromosomeNode->first_attribute("elements")){
+		nElements = atoi(chromosomeNode->first_attribute("elements")->value());
 
-	   std::stringstream ss;//create a stringstream
-	   ss << data;//add number to the stream
-	   return ss.str();//return a string with the contents of the stream
+	}
+
+	std::stringstream ss;//create a stringstream
+	for(int i = 0; i < nElements; i++){
+		DoubleEncoding cDoubleEncoding;
+
+		std::string data = "";
+		data = cDoubleEncoding.RandomData(chromosomeNode);
+		ss << data;		//add number to the stream
+		if(i < nElements-1){
+			ss << "|";   	//add separator to the stream
+		}
+	}
+
+
+
+   return ss.str();//return a string with the contents of the stream
 
 }

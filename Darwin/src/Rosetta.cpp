@@ -68,6 +68,15 @@ void Rosetta::initTokamak(){
 	cGenome.addGene("2", "Magnetic Field2");
 	cGenome.addGene("3", "Magnetic Field2");
 
+	cGenome.addChromosome("Magnetic Field3", ENCODING_LIST);
+	cGenome.addChromosomeAttribute("Magnetic Field3",  "elements", "3");
+	cGenome.addChromosomeAttribute("Magnetic Field3", "min", "-1000");
+	cGenome.addChromosomeAttribute("Magnetic Field3", "max", "1000");
+	cGenome.addChromosomeAttribute("Magnetic Field3",  "decimals", "5");
+	cGenome.addGene("1", "Magnetic Field3");
+	cGenome.addGene("2", "Magnetic Field3");
+	cGenome.addGene("3", "Magnetic Field3");
+
 	//cGenome.addChromosome("Plasma Density2", ENCODING_TREE);
 	//cGenome.addGene("1", "Plasma Density2");
 

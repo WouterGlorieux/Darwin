@@ -23,7 +23,7 @@ public:
     virtual ~Encoding() // default deconstructor
     {    }
 
-    virtual std::string RandomData(rapidxml::xml_node<>* geneNode);
+    virtual std::string RandomData(rapidxml::xml_node<>* chromosomeNode);
 
 };
 
@@ -43,7 +43,7 @@ public:
 	virtual ~BinaryEncoding() // default deconstructor
     {    }
 
-	virtual std::string RandomData(rapidxml::xml_node<>* geneNode);
+	virtual std::string RandomData(rapidxml::xml_node<>* chromosomeNode);
 
 };
 
@@ -60,7 +60,7 @@ public:
     virtual ~IntegerEncoding() // default deconstructor
     {    }
 
-    virtual std::string RandomData(rapidxml::xml_node<>* geneNode);
+    virtual std::string RandomData(rapidxml::xml_node<>* chromosomeNode);
 
 };
 
@@ -77,7 +77,7 @@ public:
     virtual ~DoubleEncoding() // default deconstructor
     {    }
 
-    virtual std::string RandomData(rapidxml::xml_node<>* geneNode);
+    virtual std::string RandomData(rapidxml::xml_node<>* chromosomeNode);
 
 };
 
@@ -98,7 +98,7 @@ public:
     virtual ~AlphanumEncoding() // default deconstructor
     {    }
 
-    virtual std::string RandomData(rapidxml::xml_node<>* geneNode);
+    virtual std::string RandomData(rapidxml::xml_node<>* chromosomeNode);
     std::vector<char> GetChars(){ return m_vChars; }
 
 };
@@ -118,7 +118,7 @@ public:
     virtual ~CustomEncoding() // default deconstructor
     {    }
 
-    virtual std::string RandomData(rapidxml::xml_node<>* geneNode);
+    virtual std::string RandomData(rapidxml::xml_node<>* chromosomeNode);
 
     void SetChars(std::string characters);
     std::vector<char> GetChars(){ return m_vChars; }
@@ -141,7 +141,7 @@ public:
 	virtual ~TreeEncoding() // default deconstructor
     {    }
 
-    virtual std::string RandomData(rapidxml::xml_node<>* geneNode);
+    virtual std::string RandomData(rapidxml::xml_node<>* chromosomeNode);
 
 };
 
@@ -158,7 +158,7 @@ public:
 	virtual ~ListEncoding() // default deconstructor
     {    }
 
-    virtual std::string RandomData(rapidxml::xml_node<>* geneNode);
+    virtual std::string RandomData(rapidxml::xml_node<>* chromosomeNode);
 
 };
 
