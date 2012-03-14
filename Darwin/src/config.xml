@@ -13,7 +13,7 @@
     <MaxParents>2</MaxParents>
     <Recombination >3</Recombination>
       <Termination>
-        <MaxGenerations>1000</MaxGenerations>
+        <MaxGenerations>100</MaxGenerations>
         <MaxTimeTotal>30</MaxTimeTotal>
         <MaxTimeGeneration>5</MaxTimeGeneration>
         <Stagnation>100</Stagnation>

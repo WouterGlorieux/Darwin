@@ -68,5 +68,17 @@ struct Parent
 
 };
 
+struct Vertex
+{
+	double nX;
+	double nY;
+};
+
+struct Edge
+{
+	int nVertex1;
+	int nVertex2;
+	double dCost;
+};
 
 #endif /* GLOBALS_H_ */

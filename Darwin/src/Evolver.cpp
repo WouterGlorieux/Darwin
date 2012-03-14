@@ -228,7 +228,7 @@ while(DoNextGeneration()){
 }
 //loop
 
-	//std::cout << pacNextGeneration[0].cGenome.GetXML() << std::endl;
+	std::cout << pacNextGeneration[0].cGenome.GetXML() << std::endl;
 
 
 

@@ -1,0 +1,18 @@
+/*
+ * Vertices.cpp
+ *
+ *  Created on: 14-mrt.-2012
+ *      Author: woutergl
+ */
+
+#include "Vertices.h"
+
+std::string Vertices::ToString(){
+	std::string strValue = "";
+
+
+
+
+	return strValue;
+}
+

@@ -12,6 +12,8 @@
 #include "Encoding.h"
 #include "Mutation.h"
 #include "MutationChance.h"
+#include "Vertices.h"
+#include "Edges.h"
 
 class Genome
 {
@@ -38,6 +40,9 @@ public:
     void newGenome(const char* pchId );
     void addChromosome(const char* pchId , EncodingType encoding);
     void addGene(const char* pchId , std::string strChromosomeId );
+
+    void AddVertices(std::string strChromosomeId, std::vector<Vertex> vertices);
+    void AddEdges(std::string strChromosomeId, std::vector<Edge> edges);
 
     void addChromosomeAttribute(std::string strChromosomeId, std::string strName, std::string strValue);
     void addGeneAttribute(std::string strChromosomeId, std::string strGeneId, std::string strName, std::string strValue);

@@ -1,0 +1,21 @@
+/*
+ * Edges.cpp
+ *
+ *  Created on: 14-mrt.-2012
+ *      Author: woutergl
+ */
+
+#include "Edges.h"
+
+std::string Edges::ToString(){
+	std::string strValue = "";
+
+
+
+
+	return strValue;
+}
+
+
+
+

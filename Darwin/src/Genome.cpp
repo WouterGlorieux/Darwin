@@ -161,6 +161,63 @@ void Genome::addGeneAttribute(std::string strChromosomeId, std::string strGeneId
 
 }
 
+void Genome::AddVertices(std::string strChromosomeId, std::vector<Vertex> vertices){
+    rapidxml::xml_document<> doc;
+    std::vector<char> xml_copy(m_strXML.begin(), m_strXML.end());
+    xml_copy.push_back('\0');
+
+    doc.parse<rapidxml::parse_declaration_node | rapidxml::parse_no_data_nodes>(&xml_copy[0]);
+
+    rapidxml::xml_node<>* rootNode = doc.first_node("Genome");
+
+	for (rapidxml::xml_node<> *chromosomeNode = rootNode->first_node("Chromosome"); chromosomeNode; chromosomeNode = chromosomeNode->next_sibling("Chromosome"))
+	{
+	    if(chromosomeNode->first_attribute("id")->value() == strChromosomeId){
+	    // vertices node
+		rapidxml::xml_node<>* verticesNode = doc.allocate_node(rapidxml::node_element, "Vertices");
+
+		Vertices cVertices(vertices);
+		char* pchRandomData = doc.allocate_string(cVertices.ToString().c_str());
+		verticesNode->value(pchRandomData);
+
+		chromosomeNode->append_node(verticesNode);
+
+		break;
+	    }
+
+	}
+
+	Genome::Save(doc);
+}
+void Genome::AddEdges(std::string strChromosomeId, std::vector<Edge> edges){
+    rapidxml::xml_document<> doc;
+    std::vector<char> xml_copy(m_strXML.begin(), m_strXML.end());
+    xml_copy.push_back('\0');
+
+    doc.parse<rapidxml::parse_declaration_node | rapidxml::parse_no_data_nodes>(&xml_copy[0]);
+
+    rapidxml::xml_node<>* rootNode = doc.first_node("Genome");
+
+	for (rapidxml::xml_node<> *chromosomeNode = rootNode->first_node("Chromosome"); chromosomeNode; chromosomeNode = chromosomeNode->next_sibling("Chromosome"))
+	{
+	    if(chromosomeNode->first_attribute("id")->value() == strChromosomeId){
+	    // edges node
+		rapidxml::xml_node<>* edgesNode = doc.allocate_node(rapidxml::node_element, "Vertices");
+
+		Edges cEdges(edges);
+		char* pchRandomData = doc.allocate_string(cEdges.ToString().c_str());
+		edgesNode->value(pchRandomData);
+
+		chromosomeNode->append_node(edgesNode);
+
+		break;
+	    }
+
+	}
+
+	Genome::Save(doc);
+}
+
 
 void Genome::SetXML(std::string input_xml){
 	m_strXML = input_xml;
