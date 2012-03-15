@@ -1349,6 +1349,11 @@ void ChromosomeMutation::Insertion(){
 			Encoding& rEncoding = cCustomEncoding;
 			pchRandomData = m_Node->document()->allocate_string(rEncoding.RandomData(m_Node).c_str());
 		}
+		else if(strEncoding == "tree"){
+			TreeEncoding cTreeEncoding;
+			Encoding& rEncoding = cTreeEncoding;
+			pchRandomData = m_Node->document()->allocate_string(rEncoding.RandomData(m_Node).c_str());
+		}
 		else if(strEncoding == "list"){
 			ListEncoding cListEncoding;
 			Encoding& rEncoding = cListEncoding;

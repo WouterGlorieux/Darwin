@@ -77,7 +77,7 @@ void Rosetta::initTokamak(){
 	cGenome.addGene("2", "Magnetic Field3");
 	cGenome.addGene("3", "Magnetic Field3");
 
-	cGenome.addChromosome("tree graph", ENCODING_TREE);
+/*	cGenome.addChromosome("tree graph", ENCODING_TREE);
 
 	Vertex sVertex;
 	std::vector<Vertex> vsVertices;
@@ -101,7 +101,7 @@ void Rosetta::initTokamak(){
 	cGenome.AddVertices("tree graph", vsVertices);
 	cGenome.addChromosomeAttribute("tree graph", "vertices", "5");
 	cGenome.addGene("1", "tree graph");
-
+*/
 
 
 }

@@ -115,7 +115,11 @@ void Evolver::printMutationChance(MutationChance mutationChance){
 			<< " Duplication: " << mutationChance.dDuplication << std::endl
 			<< " Deletion: " << mutationChance.dDeletion << std::endl
 			<< " Insertion: " << mutationChance.dInsertion << std::endl
-			<< " Swap: " << mutationChance.dSwap << std::endl << std::endl;
+			<< " Swap: " << mutationChance.dSwap << std::endl
+			<< " Gene Duplication: " << mutationChance.dGeneDuplication << std::endl
+			<< " Gene Deletion: " << mutationChance.dGeneDeletion << std::endl
+			<< " Gene Insertion: " << mutationChance.dGeneInsertion << std::endl
+			<< " Gene Swap: " << mutationChance.dGeneSwap << std::endl << std::endl;
 }
 
 void Evolver::start(){
@@ -134,7 +138,7 @@ void Evolver::start(){
 		pacPopulation[i].randomGenome();
 	}
 
-	std::cout << pacPopulation[0].cGenome.GetXML() << std::endl;
+	//std::cout << pacPopulation[0].cGenome.GetXML() << std::endl;
 	//create Aperture object
 
 	m_nGeneration = 1;
@@ -454,6 +458,38 @@ MutationChance Evolver::SetMutationChance(rapidxml::xml_node<>* node ){
 		}
 	}
 
+	sMutationChance.dGeneDuplication = 0;
+	if(node->first_node("GeneDuplication")){
+		rapidxml::xml_node<>* DuplicationNode = node->first_node("GeneDuplication");
+		if(DuplicationNode->first_attribute("allowed")){
+			DuplicationNode->first_attribute("allowed")->value() == std::string("true")?	sMutationChance.dGeneDuplication = atof(DuplicationNode->value()) : sMutationChance.dGeneDuplication = 0;
+		}
+	}
+
+	sMutationChance.dGeneDeletion = 0;
+	if(node->first_node("GeneDeletion")){
+		rapidxml::xml_node<>* DeletionNode = node->first_node("GeneDeletion");
+		if(DeletionNode->first_attribute("allowed")){
+			DeletionNode->first_attribute("allowed")->value() == std::string("true")?	sMutationChance.dGeneDeletion = atof(DeletionNode->value()) : sMutationChance.dGeneDeletion = 0;
+		}
+	}
+
+	sMutationChance.dGeneInsertion = 0;
+	if(node->first_node("GeneInsertion")){
+		rapidxml::xml_node<>* InsertionNode = node->first_node("GeneInsertion");
+		if(InsertionNode->first_attribute("allowed")){
+			InsertionNode->first_attribute("allowed")->value() == std::string("true")?	sMutationChance.dGeneInsertion = atof(InsertionNode->value()) : sMutationChance.dGeneInsertion = 0;
+		}
+	}
+
+	sMutationChance.dGeneSwap = 0;
+	if(node->first_node("GeneSwap")){
+		rapidxml::xml_node<>* InsertionNode = node->first_node("GeneSwap");
+		if(InsertionNode->first_attribute("allowed")){
+			InsertionNode->first_attribute("allowed")->value() == std::string("true")?	sMutationChance.dGeneSwap = atof(InsertionNode->value()) : sMutationChance.dGeneSwap = 0;
+		}
+	}
+
 
 	return sMutationChance;
 }
@@ -481,10 +517,6 @@ MutationChance Evolver::GetMutationChance(EncodingType encodingType){
 
 	        case ENCODING_CUSTOM:
 	        	cMutationChance =  sMutationChances.CustomMutationChance;
-	            break;
-
-	        case ENCODING_TREE:
-	        	cMutationChance =  sMutationChances.TreeMutationChance;
 	            break;
 
 	        default:

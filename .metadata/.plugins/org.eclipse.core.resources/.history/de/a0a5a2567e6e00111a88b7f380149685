@@ -57,6 +57,7 @@ struct MutationChances
     MutationChance DoubleMutationChance;
     MutationChance AlphanumMutationChance;
     MutationChance CustomMutationChance;
+    MutationChance TreeMutationChance;
     MutationChance ListMutationChance;
 };
 

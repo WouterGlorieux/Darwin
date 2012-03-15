@@ -42,34 +42,65 @@ void Rosetta::initTokamak(){
 
 	cGenome.addChromosome("Magnetic Field", ENCODING_INTEGER);
 	cGenome.addChromosomeAttribute("Magnetic Field", "min", "-1000");
-	cGenome.addChromosomeAttribute("Magnetic Field", "max", "0");
+	cGenome.addChromosomeAttribute("Magnetic Field", "max", "1000");
 	cGenome.addGene("1", "Magnetic Field");
 	cGenome.addGene("2", "Magnetic Field");
 	cGenome.addGene("3", "Magnetic Field");
 
 	cGenome.addChromosome("Plasma Density", ENCODING_DOUBLE);
 	cGenome.addChromosomeAttribute("Plasma Density", "min", "-1000");
-	cGenome.addChromosomeAttribute("Plasma Density", "max", "0");
-	cGenome.addChromosomeAttribute("Plasma Density",  "decimals", "1");
+	cGenome.addChromosomeAttribute("Plasma Density", "max", "1000");
+	cGenome.addChromosomeAttribute("Plasma Density",  "decimals", "5");
 	cGenome.addGene("1", "Plasma Density");
 	cGenome.addGene("2", "Plasma Density");
 	cGenome.addGene("3", "Plasma Density");
 
 	cGenome.addChromosome("Auxiliary Heating Power2", ENCODING_ALPHANUM);
-	cGenome.addChromosomeAttribute("Auxiliary Heating Power2", "maxChars", "5");
+	cGenome.addChromosomeAttribute("Auxiliary Heating Power2", "maxChars", "50");
 	cGenome.addGene("1", "Auxiliary Heating Power2");
 	cGenome.addGene("2", "Auxiliary Heating Power2");
 	cGenome.addGene("3", "Auxiliary Heating Power2");
 
 	cGenome.addChromosome("Magnetic Field2", ENCODING_CUSTOM);
 	cGenome.addChromosomeAttribute("Magnetic Field2", "chars", "ACGT");
-	cGenome.addChromosomeAttribute("Magnetic Field2", "maxChars", "10");
+	cGenome.addChromosomeAttribute("Magnetic Field2", "maxChars", "50");
 	cGenome.addGene("1", "Magnetic Field2");
 	cGenome.addGene("2", "Magnetic Field2");
 	cGenome.addGene("3", "Magnetic Field2");
 
-	//cGenome.addChromosome("Plasma Density2", ENCODING_TREE);
-	//cGenome.addGene("1", "Plasma Density2");
+	cGenome.addChromosome("Magnetic Field3", ENCODING_LIST);
+	cGenome.addChromosomeAttribute("Magnetic Field3",  "elements", "3");
+	cGenome.addChromosomeAttribute("Magnetic Field3", "min", "-1000");
+	cGenome.addChromosomeAttribute("Magnetic Field3", "max", "1000");
+	cGenome.addChromosomeAttribute("Magnetic Field3",  "decimals", "5");
+	cGenome.addGene("1", "Magnetic Field3");
+	cGenome.addGene("2", "Magnetic Field3");
+	cGenome.addGene("3", "Magnetic Field3");
+
+	cGenome.addChromosome("tree graph", ENCODING_TREE);
+
+	Vertex sVertex;
+	std::vector<Vertex> vsVertices;
+
+	sVertex.nX = 1.61754;
+	sVertex.nY = 3.68479;
+	vsVertices.push_back(sVertex);
+	sVertex.nX = 9.18746;
+	sVertex.nY = 6.16434;
+	vsVertices.push_back(sVertex);
+	sVertex.nX = 5.62784;
+	sVertex.nY = 7.16856;
+	vsVertices.push_back(sVertex);
+	sVertex.nX = 2.95121;
+	sVertex.nY = 1.65446;
+	vsVertices.push_back(sVertex);
+	sVertex.nX = 8.36979;
+	sVertex.nY = 4.15946;
+	vsVertices.push_back(sVertex);
+
+	cGenome.AddVertices("tree graph", vsVertices);
+	cGenome.addChromosomeAttribute("tree graph", "vertices", "5");
+	cGenome.addGene("1", "tree graph");
 
 
 

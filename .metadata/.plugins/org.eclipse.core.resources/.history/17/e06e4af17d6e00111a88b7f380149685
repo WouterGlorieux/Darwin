@@ -125,6 +125,26 @@ public:
 };
 
 
+
+
+
+class TreeEncoding : public Encoding
+{
+private:
+
+
+
+public:
+
+	TreeEncoding() // default constructor
+    {    }
+	virtual ~TreeEncoding() // default deconstructor
+    {    }
+
+    virtual std::string RandomData(rapidxml::xml_node<>* chromosomeNode);
+
+};
+
 class ListEncoding : public Encoding
 {
 private:

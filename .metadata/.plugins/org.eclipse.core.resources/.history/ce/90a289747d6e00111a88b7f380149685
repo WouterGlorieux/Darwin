@@ -55,7 +55,8 @@ enum EncodingType
 	ENCODING_DOUBLE = 3,			//genes are encoded as numeric values
 	ENCODING_ALPHANUM = 4,			//genes are encoded as alphanumeric characters
 	ENCODING_CUSTOM = 5,			//genes are encodes as a custom string of characters
-	ENCODING_LIST = 6				//genes are encoded as a list of doubles
+	ENCODING_TREE = 6,				//genes are encoded as a tree structure
+	ENCODING_LIST = 7					//genes are encoded as a list of doubles
 };
 
 struct Parent

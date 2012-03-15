@@ -61,10 +61,6 @@ void Genome::addChromosome(const char* pchId, EncodingType encoding ){
 	        	strEncoding = "custom";
 	            break;
 
-	        case ENCODING_TREE:
-	        	strEncoding = "tree";
-	            break;
-
 	        case ENCODING_LIST:
 	        	strEncoding = "list";
 	            break;
@@ -161,6 +157,63 @@ void Genome::addGeneAttribute(std::string strChromosomeId, std::string strGeneId
 
 }
 
+void Genome::AddVertices(std::string strChromosomeId, std::vector<Vertex> vertices){
+    rapidxml::xml_document<> doc;
+    std::vector<char> xml_copy(m_strXML.begin(), m_strXML.end());
+    xml_copy.push_back('\0');
+
+    doc.parse<rapidxml::parse_declaration_node | rapidxml::parse_no_data_nodes>(&xml_copy[0]);
+
+    rapidxml::xml_node<>* rootNode = doc.first_node("Genome");
+
+	for (rapidxml::xml_node<> *chromosomeNode = rootNode->first_node("Chromosome"); chromosomeNode; chromosomeNode = chromosomeNode->next_sibling("Chromosome"))
+	{
+	    if(chromosomeNode->first_attribute("id")->value() == strChromosomeId){
+	    // vertices node
+		rapidxml::xml_node<>* verticesNode = doc.allocate_node(rapidxml::node_element, "Vertices");
+
+		Vertices cVertices(vertices);
+		char* pchRandomData = doc.allocate_string(cVertices.ToString().c_str());
+		verticesNode->value(pchRandomData);
+
+		chromosomeNode->append_node(verticesNode);
+
+		break;
+	    }
+
+	}
+
+	Genome::Save(doc);
+}
+void Genome::AddEdges(std::string strChromosomeId, std::vector<Edge> edges){
+    rapidxml::xml_document<> doc;
+    std::vector<char> xml_copy(m_strXML.begin(), m_strXML.end());
+    xml_copy.push_back('\0');
+
+    doc.parse<rapidxml::parse_declaration_node | rapidxml::parse_no_data_nodes>(&xml_copy[0]);
+
+    rapidxml::xml_node<>* rootNode = doc.first_node("Genome");
+
+	for (rapidxml::xml_node<> *chromosomeNode = rootNode->first_node("Chromosome"); chromosomeNode; chromosomeNode = chromosomeNode->next_sibling("Chromosome"))
+	{
+	    if(chromosomeNode->first_attribute("id")->value() == strChromosomeId){
+	    // edges node
+		rapidxml::xml_node<>* edgesNode = doc.allocate_node(rapidxml::node_element, "Vertices");
+
+		Edges cEdges(edges);
+		char* pchRandomData = doc.allocate_string(cEdges.ToString().c_str());
+		edgesNode->value(pchRandomData);
+
+		chromosomeNode->append_node(edgesNode);
+
+		break;
+	    }
+
+	}
+
+	Genome::Save(doc);
+}
+
 
 void Genome::SetXML(std::string input_xml){
 	m_strXML = input_xml;
@@ -215,12 +268,6 @@ void Genome::FillWithRandomData(){
 			Encoding& rEncoding = cCustomEncoding;
 			FillGenes(doc, child, rEncoding);
 		}
-		else if(strEncoding == "tree"){
-			//std::cout << "putting random data in tree genes" << std::endl;
-			TreeEncoding cTreeEncoding;
-			Encoding& rEncoding = cTreeEncoding;
-			FillGenes(doc, child, rEncoding);
-		}
 		else if(strEncoding == "list"){
 			//std::cout << "putting random data in list genes" << std::endl;
 			ListEncoding cListEncoding;
@@ -270,48 +317,65 @@ void Genome::DoMutations(MutationChances mutationChances){
 
 	for (rapidxml::xml_node<>* chromosomeNode = rootNode->first_node("Chromosome"); chromosomeNode; chromosomeNode = chromosomeNode->next_sibling("Chromosome"))
 	{
-		ChromosomeMutation cChromosomeMutation(chromosomeNode);
-		//cChromosomeMutation.Duplication();
-		//cChromosomeMutation.Deletion();
-		//cChromosomeMutation.Insertion();
-		//cChromosomeMutation.Swap();
+		std::string strEncoding = chromosomeNode->first_attribute("encoding")->value();
 
+		//do chromosome mutations
+		ChromosomeMutation cChromosomeMutation(chromosomeNode);
+		if(strEncoding == "binary"){
+			ChromosomeMutations(chromosomeNode, cChromosomeMutation, mutationChances.BinaryMutationChance);
+		}
+		else if(strEncoding == "integer"){
+			ChromosomeMutations(chromosomeNode, cChromosomeMutation, mutationChances.IntegerMutationChance);
+		}
+		else if(strEncoding == "double"){
+			ChromosomeMutations(chromosomeNode, cChromosomeMutation, mutationChances.DoubleMutationChance);
+		}
+		else if(strEncoding == "alphanum"){
+			ChromosomeMutations(chromosomeNode, cChromosomeMutation, mutationChances.AlphanumMutationChance);
+		}
+		else if(strEncoding == "custom"){
+			ChromosomeMutations(chromosomeNode, cChromosomeMutation, mutationChances.CustomMutationChance);
+		}
+		else if(strEncoding == "tree"){
+			ChromosomeMutations(chromosomeNode, cChromosomeMutation, mutationChances.TreeMutationChance);
+		}
+		else if(strEncoding == "list"){
+			ChromosomeMutations(chromosomeNode, cChromosomeMutation, mutationChances.ListMutationChance);
+		}
+		else{
+			std::cout << "unknown encoding type" << std::endl;
+		}
+
+		//do gene mutations for each gene in this chromosome
 		for (rapidxml::xml_node<>* geneNode = chromosomeNode->first_node("Gene"); geneNode; geneNode = geneNode->next_sibling("Gene"))
 		{
-			std::string strEncoding = chromosomeNode->first_attribute("encoding")->value();
-
 			if(strEncoding == "binary"){
-				BitMutation cBitMutation(geneNode);
+				BitMutation cBitMutation(geneNode->value(), chromosomeNode);
 				Mutation& rMutation = cBitMutation;
 				GeneMutations(doc, geneNode, rMutation, mutationChances.BinaryMutationChance);
 			}
 			else if(strEncoding == "integer"){
-				IntegerMutation cIntegerMutation(geneNode);
+				IntegerMutation cIntegerMutation(geneNode->value(), chromosomeNode);
 				Mutation& rMutation = cIntegerMutation;
 				GeneMutations(doc, geneNode, rMutation, mutationChances.IntegerMutationChance);
 			}
 			else if(strEncoding == "double"){
-				DoubleMutation cDoubleMutation(geneNode);
+				DoubleMutation cDoubleMutation(geneNode->value(), chromosomeNode);
 				Mutation& rMutation = cDoubleMutation;
 				GeneMutations(doc, geneNode, rMutation, mutationChances.DoubleMutationChance);
 			}
 			else if(strEncoding == "alphanum"){
-				AlphanumMutation cAlphanumMutation(geneNode);
+				AlphanumMutation cAlphanumMutation(geneNode->value(), chromosomeNode);
 				Mutation& rMutation =  cAlphanumMutation;
 				GeneMutations(doc, geneNode, rMutation, mutationChances.AlphanumMutationChance);
 			}
 			else if(strEncoding == "custom"){
-				CustomMutation cCustomMutation(geneNode);
+				CustomMutation cCustomMutation(geneNode->value(), chromosomeNode);
 				Mutation& rMutation = cCustomMutation;
 				GeneMutations(doc, geneNode, rMutation, mutationChances.CustomMutationChance);
 			}
-			else if(strEncoding == "tree"){
-				TreeMutation cTreeMutation(geneNode);
-				Mutation& rMutation = cTreeMutation;
-				GeneMutations(doc, geneNode, rMutation, mutationChances.TreeMutationChance);
-			}
 			else if(strEncoding == "list"){
-				ListMutation cListMutation(geneNode);
+				ListMutation cListMutation(geneNode->value(), chromosomeNode);
 				Mutation& rMutation = cListMutation;
 				GeneMutations(doc, geneNode, rMutation, mutationChances.ListMutationChance);
 			}
@@ -327,7 +391,6 @@ void Genome::DoMutations(MutationChances mutationChances){
 void Genome::GeneMutations(rapidxml::xml_document<>& doc, rapidxml::xml_node<>* geneNode, Mutation& mutation, MutationChance mutationChance){
 
 		char* pchMutatedData;
-		MutationChance cMutationChance ;
 
 		int nLow = 0;
 		int nHigh = RAND_MAX;
@@ -391,3 +454,28 @@ void Genome::GeneMutations(rapidxml::xml_document<>& doc, rapidxml::xml_node<>* 
 
 }
 
+void Genome::ChromosomeMutations(rapidxml::xml_node<>* chromosomeNode, ChromosomeMutation& mutation, MutationChance mutationChance){
+	int nLow = 0;
+	int nHigh = RAND_MAX;
+
+	double dRandom;
+	dRandom = (double)((rand() % (nHigh - nLow + 1)) + nLow)/nHigh;
+	if(dRandom <=  mutationChance.dGeneDuplication){
+		mutation.Duplication();
+	}
+
+	dRandom = (double)((rand() % (nHigh - nLow + 1)) + nLow)/nHigh;
+	if(dRandom <=  mutationChance.dGeneDeletion){
+		mutation.Deletion();
+	}
+
+	dRandom = (double)((rand() % (nHigh - nLow + 1)) + nLow)/nHigh;
+	if(dRandom <=  mutationChance.dGeneInsertion){
+		mutation.Insertion();
+	}
+
+	dRandom = (double)((rand() % (nHigh - nLow + 1)) + nLow)/nHigh;
+	if(dRandom <=  mutationChance.dGeneSwap){
+		mutation.Swap();
+	}
+}

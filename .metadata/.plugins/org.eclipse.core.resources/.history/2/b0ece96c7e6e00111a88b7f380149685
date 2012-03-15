@@ -73,6 +73,8 @@ void Evolver::traverse_xml(const std::string& input_xml)
     if(mutationsNode->first_node("Custom"))
     	sMutationChances.CustomMutationChance = Evolver::SetMutationChance(mutationsNode->first_node("Custom"));
 
+    if(mutationsNode->first_node("Tree"))
+    	sMutationChances.TreeMutationChance = Evolver::SetMutationChance(mutationsNode->first_node("Tree"));
 
     if(mutationsNode->first_node("List"))
     	sMutationChances.ListMutationChance = Evolver::SetMutationChance(mutationsNode->first_node("List"));
@@ -98,6 +100,8 @@ void Evolver::printSettings(){
 	Evolver::printMutationChance(sMutationChances.AlphanumMutationChance);
 	std::cout << "Custom:" << std::endl;
 	Evolver::printMutationChance(sMutationChances.CustomMutationChance);
+	std::cout << "Tree:" << std::endl;
+	Evolver::printMutationChance(sMutationChances.TreeMutationChance);
 	std::cout << "List:" << std::endl;
 	Evolver::printMutationChance(sMutationChances.ListMutationChance);
 }

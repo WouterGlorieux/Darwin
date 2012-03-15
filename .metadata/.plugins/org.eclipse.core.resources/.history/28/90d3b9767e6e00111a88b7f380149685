@@ -98,6 +98,8 @@ void Evolver::printSettings(){
 	Evolver::printMutationChance(sMutationChances.AlphanumMutationChance);
 	std::cout << "Custom:" << std::endl;
 	Evolver::printMutationChance(sMutationChances.CustomMutationChance);
+	std::cout << "Tree:" << std::endl;
+	Evolver::printMutationChance(sMutationChances.TreeMutationChance);
 	std::cout << "List:" << std::endl;
 	Evolver::printMutationChance(sMutationChances.ListMutationChance);
 }

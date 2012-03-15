@@ -141,19 +141,6 @@ void CustomEncoding::SetChars(std::string characters){
 	std::copy ( characters.begin(), characters.end(), std::back_inserter ( m_vChars ) );
 }
 
-std::string TreeEncoding::RandomData(rapidxml::xml_node<>* chromosomeNode){
-
-	int nLow = 0;
-	int nHigh = 100;
-
-	int data = (rand() % (nHigh - nLow + 1)) + nLow;
-
-	   std::stringstream ss;//create a stringstream
-	   ss << data;//add number to the stream
-	   return ss.str();//return a string with the contents of the stream
-
-}
-
 std::string ListEncoding::RandomData(rapidxml::xml_node<>* chromosomeNode){
 
 	int nElements = 0;
