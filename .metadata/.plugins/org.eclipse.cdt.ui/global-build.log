@@ -13,3 +13,737 @@ Nothing to build for Darwin
 
 **** Internal Builder is used for build               ****
 Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+In file included from ..\src\Darwin.cpp:13:0:
+..\src\/Evolver.h:25:14: fout: expected ‘;’ at end of member declaration
+..\src\/Evolver.h:26:14: fout: expected ‘;’ at end of member declaration
+Build error occurred, build is stopped
+Time consumed: 421  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2262  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::traverse_xml(const string&)’:
+..\src\Evolver.cpp:40:33: let op: onbekende escape sequence: '\S' [enabled by default]
+..\src\Evolver.cpp:41:38: let op: onbekende escape sequence: '\C' [enabled by default]
+g++ -o Darwin.exe src\Vertices.o src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1653  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1638  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1591  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1704  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2148  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2191  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -o Darwin.exe src\Vertices.o src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2169  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp:299:5: fout: prototype for ‘int Evolver::SaveChampion(Rosetta*)’ does not match any in class ‘Evolver’
+..\src\/Evolver.h:86:10: fout: kandidaat is: void Evolver::SaveChampion(Rosetta*)
+Build error occurred, build is stopped
+Time consumed: 615  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp:299:5: fout: prototype for ‘int Evolver::SaveChampion(Rosetta*)’ does not match any in class ‘Evolver’
+..\src\/Evolver.h:86:10: fout: kandidaat is: void Evolver::SaveChampion(Rosetta*)
+Build error occurred, build is stopped
+Time consumed: 478  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp:299:5: fout: prototype for ‘int Evolver::SaveChampion(Rosetta*)’ does not match any in class ‘Evolver’
+..\src\/Evolver.h:86:10: fout: kandidaat is: void Evolver::SaveChampion(Rosetta*)
+Build error occurred, build is stopped
+Time consumed: 478  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp:299:5: fout: prototype for ‘int Evolver::SaveChampion(Rosetta*)’ does not match any in class ‘Evolver’
+..\src\/Evolver.h:86:10: fout: kandidaat is: void Evolver::SaveChampion(Rosetta*)
+Build error occurred, build is stopped
+Time consumed: 500  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp:299:5: fout: prototype for ‘int Evolver::SaveChampion(Rosetta*)’ does not match any in class ‘Evolver’
+..\src\/Evolver.h:86:10: fout: kandidaat is: void Evolver::SaveChampion(Rosetta*)
+Build error occurred, build is stopped
+Time consumed: 426  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘int Evolver::SaveChampion(Rosetta*)’:
+..\src\Evolver.cpp:305:50: fout: no match for ‘operator+’ in ‘((Evolver*)this)->Evolver::m_strChampionsPath + ((Evolver*)this)->Evolver::m_nGeneration’
+..\src\Evolver.cpp:305:50: note: candidates are:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:352:3: note: std::_Bit_const_iterator std::operator+(std::ptrdiff_t, const std::_Bit_const_iterator&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:352:3: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘std::ptrdiff_t {aka int}’
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:266:3: note: std::_Bit_iterator std::operator+(std::ptrdiff_t, const std::_Bit_iterator&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:266:3: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘std::ptrdiff_t {aka int}’
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2359:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, _CharT)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2343:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.tcc:710:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(_CharT, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.tcc:694:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const _CharT*, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2306:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:327:5: note: template<class _Iterator> std::reverse_iterator<_Iterator> std::operator+(typename std::reverse_iterator<_Iterator>::difference_type, const std::reverse_iterator<_Iterator>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:896:5: note: template<class _Iterator, class _Container> __gnu_cxx::__normal_iterator<_Iterator, _Container> __gnu_cxx::operator+(typename __gnu_cxx::__normal_iterator<_Iterator, _Container>::difference_type, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)
+..\src\Evolver.cpp:306:25: fout: ‘strFileName’ was not declared in this scope
+..\src\Evolver.cpp:306:38: fout: ‘ios’ has not been declared
+..\src\Evolver.cpp:305:15: let op: unused variable ‘strFilename’ [-Wunused-variable]
+Build error occurred, build is stopped
+Time consumed: 693  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘int Evolver::SaveChampion(Rosetta*)’:
+..\src\Evolver.cpp:306:50: fout: no match for ‘operator+’ in ‘((Evolver*)this)->Evolver::m_strChampionsPath + ((Evolver*)this)->Evolver::m_nGeneration’
+..\src\Evolver.cpp:306:50: note: candidates are:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:352:3: note: std::_Bit_const_iterator std::operator+(std::ptrdiff_t, const std::_Bit_const_iterator&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:352:3: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘std::ptrdiff_t {aka int}’
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:266:3: note: std::_Bit_iterator std::operator+(std::ptrdiff_t, const std::_Bit_iterator&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:266:3: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘std::ptrdiff_t {aka int}’
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2359:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, _CharT)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2343:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.tcc:710:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(_CharT, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.tcc:694:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const _CharT*, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2306:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:327:5: note: template<class _Iterator> std::reverse_iterator<_Iterator> std::operator+(typename std::reverse_iterator<_Iterator>::difference_type, const std::reverse_iterator<_Iterator>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:896:5: note: template<class _Iterator, class _Container> __gnu_cxx::__normal_iterator<_Iterator, _Container> __gnu_cxx::operator+(typename __gnu_cxx::__normal_iterator<_Iterator, _Container>::difference_type, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)
+..\src\Evolver.cpp:307:25: fout: ‘strFileName’ was not declared in this scope
+..\src\Evolver.cpp:307:38: fout: ‘ios’ has not been declared
+..\src\Evolver.cpp:306:15: let op: unused variable ‘strFilename’ [-Wunused-variable]
+Build error occurred, build is stopped
+Time consumed: 1276  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘int Evolver::SaveChampion(Rosetta*)’:
+..\src\Evolver.cpp:307:50: fout: no match for ‘operator+’ in ‘((Evolver*)this)->Evolver::m_strChampionsPath + ((Evolver*)this)->Evolver::m_nGeneration’
+..\src\Evolver.cpp:307:50: note: candidates are:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:352:3: note: std::_Bit_const_iterator std::operator+(std::ptrdiff_t, const std::_Bit_const_iterator&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:352:3: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘std::ptrdiff_t {aka int}’
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:266:3: note: std::_Bit_iterator std::operator+(std::ptrdiff_t, const std::_Bit_iterator&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:266:3: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘std::ptrdiff_t {aka int}’
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2359:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, _CharT)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2343:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.tcc:710:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(_CharT, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.tcc:694:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const _CharT*, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2306:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:327:5: note: template<class _Iterator> std::reverse_iterator<_Iterator> std::operator+(typename std::reverse_iterator<_Iterator>::difference_type, const std::reverse_iterator<_Iterator>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:896:5: note: template<class _Iterator, class _Container> __gnu_cxx::__normal_iterator<_Iterator, _Container> __gnu_cxx::operator+(typename __gnu_cxx::__normal_iterator<_Iterator, _Container>::difference_type, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)
+..\src\Evolver.cpp:308:25: fout: ‘strFileName’ was not declared in this scope
+..\src\Evolver.cpp:308:38: fout: ‘ios’ has not been declared
+..\src\Evolver.cpp:307:15: let op: unused variable ‘strFilename’ [-Wunused-variable]
+Build error occurred, build is stopped
+Time consumed: 704  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘int Evolver::SaveChampion(Rosetta*)’:
+..\src\Evolver.cpp:307:50: fout: no match for ‘operator+’ in ‘((Evolver*)this)->Evolver::m_strChampionsPath + ((Evolver*)this)->Evolver::m_nGeneration’
+..\src\Evolver.cpp:307:50: note: candidates are:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:352:3: note: std::_Bit_const_iterator std::operator+(std::ptrdiff_t, const std::_Bit_const_iterator&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:352:3: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘std::ptrdiff_t {aka int}’
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:266:3: note: std::_Bit_iterator std::operator+(std::ptrdiff_t, const std::_Bit_iterator&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:266:3: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘std::ptrdiff_t {aka int}’
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2359:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, _CharT)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2343:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.tcc:710:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(_CharT, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.tcc:694:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const _CharT*, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2306:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:327:5: note: template<class _Iterator> std::reverse_iterator<_Iterator> std::operator+(typename std::reverse_iterator<_Iterator>::difference_type, const std::reverse_iterator<_Iterator>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:896:5: note: template<class _Iterator, class _Container> __gnu_cxx::__normal_iterator<_Iterator, _Container> __gnu_cxx::operator+(typename __gnu_cxx::__normal_iterator<_Iterator, _Container>::difference_type, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)
+..\src\Evolver.cpp:308:25: fout: ‘strFileName’ was not declared in this scope
+..\src\Evolver.cpp:307:15: let op: unused variable ‘strFilename’ [-Wunused-variable]
+Build error occurred, build is stopped
+Time consumed: 697  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘int Evolver::SaveChampion(Rosetta*)’:
+..\src\Evolver.cpp:306:50: fout: no match for ‘operator+’ in ‘((Evolver*)this)->Evolver::m_strChampionsPath + ((Evolver*)this)->Evolver::m_nGeneration’
+..\src\Evolver.cpp:306:50: note: candidates are:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:352:3: note: std::_Bit_const_iterator std::operator+(std::ptrdiff_t, const std::_Bit_const_iterator&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:352:3: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘std::ptrdiff_t {aka int}’
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:266:3: note: std::_Bit_iterator std::operator+(std::ptrdiff_t, const std::_Bit_iterator&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:266:3: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘std::ptrdiff_t {aka int}’
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2359:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, _CharT)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2343:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.tcc:710:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(_CharT, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.tcc:694:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const _CharT*, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2306:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:327:5: note: template<class _Iterator> std::reverse_iterator<_Iterator> std::operator+(typename std::reverse_iterator<_Iterator>::difference_type, const std::reverse_iterator<_Iterator>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:896:5: note: template<class _Iterator, class _Container> __gnu_cxx::__normal_iterator<_Iterator, _Container> __gnu_cxx::operator+(typename __gnu_cxx::__normal_iterator<_Iterator, _Container>::difference_type, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)
+..\src\Evolver.cpp:307:25: fout: ‘strFileName’ was not declared in this scope
+..\src\Evolver.cpp:306:15: let op: unused variable ‘strFilename’ [-Wunused-variable]
+Build error occurred, build is stopped
+Time consumed: 741  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘int Evolver::SaveChampion(Rosetta*)’:
+..\src\Evolver.cpp:306:50: fout: no match for ‘operator+’ in ‘((Evolver*)this)->Evolver::m_strChampionsPath + ((Evolver*)this)->Evolver::m_nGeneration’
+..\src\Evolver.cpp:306:50: note: candidates are:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:352:3: note: std::_Bit_const_iterator std::operator+(std::ptrdiff_t, const std::_Bit_const_iterator&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:352:3: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘std::ptrdiff_t {aka int}’
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:266:3: note: std::_Bit_iterator std::operator+(std::ptrdiff_t, const std::_Bit_iterator&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:266:3: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘std::ptrdiff_t {aka int}’
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2359:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, _CharT)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2343:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.tcc:710:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(_CharT, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.tcc:694:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const _CharT*, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2306:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:327:5: note: template<class _Iterator> std::reverse_iterator<_Iterator> std::operator+(typename std::reverse_iterator<_Iterator>::difference_type, const std::reverse_iterator<_Iterator>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:896:5: note: template<class _Iterator, class _Container> __gnu_cxx::__normal_iterator<_Iterator, _Container> __gnu_cxx::operator+(typename __gnu_cxx::__normal_iterator<_Iterator, _Container>::difference_type, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)
+..\src\Evolver.cpp:307:53: fout: no matching function for call to ‘std::basic_ofstream<char>::basic_ofstream(std::string&, const openmode&)’
+..\src\Evolver.cpp:307:53: note: candidates are:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/fstream:629:7: note: std::basic_ofstream<_CharT, _Traits>::basic_ofstream(const char*, std::ios_base::openmode) [with _CharT = char, _Traits = std::char_traits<char>, std::ios_base::openmode = std::_Ios_Openmode]
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/fstream:629:7: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘const char*’
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/fstream:614:7: note: std::basic_ofstream<_CharT, _Traits>::basic_ofstream() [with _CharT = char, _Traits = std::char_traits<char>]
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/fstream:614:7: note:   candidate expects 0 arguments, 2 provided
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/fstream:588:11: note: std::basic_ofstream<char>::basic_ofstream(const std::basic_ofstream<char>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/fstream:588:11: note:   candidate expects 1 argument, 2 provided
+Build error occurred, build is stopped
+Time consumed: 792  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘int Evolver::SaveChampion(Rosetta*)’:
+..\src\Evolver.cpp:307:38: fout: no match for ‘operator+’ in ‘((Evolver*)this)->Evolver::m_strChampionsPath + ((Evolver*)this)->Evolver::m_nGeneration’
+..\src\Evolver.cpp:307:38: note: candidates are:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:352:3: note: std::_Bit_const_iterator std::operator+(std::ptrdiff_t, const std::_Bit_const_iterator&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:352:3: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘std::ptrdiff_t {aka int}’
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:266:3: note: std::_Bit_iterator std::operator+(std::ptrdiff_t, const std::_Bit_iterator&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:266:3: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘std::ptrdiff_t {aka int}’
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2359:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, _CharT)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2343:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.tcc:710:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(_CharT, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.tcc:694:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const _CharT*, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2306:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:327:5: note: template<class _Iterator> std::reverse_iterator<_Iterator> std::operator+(typename std::reverse_iterator<_Iterator>::difference_type, const std::reverse_iterator<_Iterator>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:896:5: note: template<class _Iterator, class _Container> __gnu_cxx::__normal_iterator<_Iterator, _Container> __gnu_cxx::operator+(typename __gnu_cxx::__normal_iterator<_Iterator, _Container>::difference_type, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)
+..\src\Evolver.cpp:308:53: fout: no matching function for call to ‘std::basic_ofstream<char>::basic_ofstream(std::string&, const openmode&)’
+..\src\Evolver.cpp:308:53: note: candidates are:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/fstream:629:7: note: std::basic_ofstream<_CharT, _Traits>::basic_ofstream(const char*, std::ios_base::openmode) [with _CharT = char, _Traits = std::char_traits<char>, std::ios_base::openmode = std::_Ios_Openmode]
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/fstream:629:7: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘const char*’
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/fstream:614:7: note: std::basic_ofstream<_CharT, _Traits>::basic_ofstream() [with _CharT = char, _Traits = std::char_traits<char>]
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/fstream:614:7: note:   candidate expects 0 arguments, 2 provided
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/fstream:588:11: note: std::basic_ofstream<char>::basic_ofstream(const std::basic_ofstream<char>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/fstream:588:11: note:   candidate expects 1 argument, 2 provided
+Build error occurred, build is stopped
+Time consumed: 794  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘int Evolver::SaveChampion(Rosetta*)’:
+..\src\Evolver.cpp:307:38: fout: no match for ‘operator+’ in ‘((Evolver*)this)->Evolver::m_strChampionsPath + ((Evolver*)this)->Evolver::m_nGeneration’
+..\src\Evolver.cpp:307:38: note: candidates are:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:352:3: note: std::_Bit_const_iterator std::operator+(std::ptrdiff_t, const std::_Bit_const_iterator&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:352:3: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘std::ptrdiff_t {aka int}’
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:266:3: note: std::_Bit_iterator std::operator+(std::ptrdiff_t, const std::_Bit_iterator&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:266:3: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘std::ptrdiff_t {aka int}’
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2359:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, _CharT)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2343:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.tcc:710:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(_CharT, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.tcc:694:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const _CharT*, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2306:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:327:5: note: template<class _Iterator> std::reverse_iterator<_Iterator> std::operator+(typename std::reverse_iterator<_Iterator>::difference_type, const std::reverse_iterator<_Iterator>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:896:5: note: template<class _Iterator, class _Container> __gnu_cxx::__normal_iterator<_Iterator, _Container> __gnu_cxx::operator+(typename __gnu_cxx::__normal_iterator<_Iterator, _Container>::difference_type, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)
+Build error occurred, build is stopped
+Time consumed: 683  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘int Evolver::SaveChampion(Rosetta*)’:
+..\src\Evolver.cpp:307:39: fout: no match for ‘operator<<’ in ‘((Evolver*)this)->Evolver::m_strChampionsPath << ((Evolver*)this)->Evolver::m_nGeneration’
+..\src\Evolver.cpp:307:39: note: candidates are:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/iomanip:237:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setw)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/iomanip:207:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setprecision)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/iomanip:177:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setfill<_CharT>)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/iomanip:142:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setbase)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/iomanip:108:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Setiosflags)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/iomanip:78:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::_Resetiosflags)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:528:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:523:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:510:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/ostream.tcc:323:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const char*)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:493:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const _CharT*)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:473:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:468:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:462:5: note: template<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:456:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, char)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:451:5: note: template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, _CharT)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2693:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+Build error occurred, build is stopped
+Time consumed: 759  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘int Evolver::SaveChampion(Rosetta*)’:
+..\src\Evolver.cpp:307:38: fout: no match for ‘operator+’ in ‘((Evolver*)this)->Evolver::m_strChampionsPath + ((Evolver*)this)->Evolver::m_nGeneration’
+..\src\Evolver.cpp:307:38: note: candidates are:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:352:3: note: std::_Bit_const_iterator std::operator+(std::ptrdiff_t, const std::_Bit_const_iterator&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:352:3: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘std::ptrdiff_t {aka int}’
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:266:3: note: std::_Bit_iterator std::operator+(std::ptrdiff_t, const std::_Bit_iterator&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:266:3: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘std::ptrdiff_t {aka int}’
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2359:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, _CharT)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2343:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.tcc:710:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(_CharT, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.tcc:694:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const _CharT*, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2306:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:327:5: note: template<class _Iterator> std::reverse_iterator<_Iterator> std::operator+(typename std::reverse_iterator<_Iterator>::difference_type, const std::reverse_iterator<_Iterator>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:896:5: note: template<class _Iterator, class _Container> __gnu_cxx::__normal_iterator<_Iterator, _Container> __gnu_cxx::operator+(typename __gnu_cxx::__normal_iterator<_Iterator, _Container>::difference_type, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)
+Build error occurred, build is stopped
+Time consumed: 732  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘int Evolver::SaveChampion(Rosetta*)’:
+..\src\Evolver.cpp:307:38: fout: no match for ‘operator+’ in ‘((Evolver*)this)->Evolver::m_strChampionsPath + ((Evolver*)this)->Evolver::m_nGeneration’
+..\src\Evolver.cpp:307:38: note: candidates are:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:352:3: note: std::_Bit_const_iterator std::operator+(std::ptrdiff_t, const std::_Bit_const_iterator&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:352:3: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘std::ptrdiff_t {aka int}’
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:266:3: note: std::_Bit_iterator std::operator+(std::ptrdiff_t, const std::_Bit_iterator&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:266:3: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘std::ptrdiff_t {aka int}’
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2359:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, _CharT)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2343:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.tcc:710:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(_CharT, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.tcc:694:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const _CharT*, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2306:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:327:5: note: template<class _Iterator> std::reverse_iterator<_Iterator> std::operator+(typename std::reverse_iterator<_Iterator>::difference_type, const std::reverse_iterator<_Iterator>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:896:5: note: template<class _Iterator, class _Container> __gnu_cxx::__normal_iterator<_Iterator, _Container> __gnu_cxx::operator+(typename __gnu_cxx::__normal_iterator<_Iterator, _Container>::difference_type, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)
+Build error occurred, build is stopped
+Time consumed: 688  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘int Evolver::SaveChampion(Rosetta*)’:
+..\src\Evolver.cpp:308:37: fout: ‘std::stringstream’ has no member named ‘c_str’
+Build error occurred, build is stopped
+Time consumed: 501  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘int Evolver::SaveChampion(Rosetta*)’:
+..\src\Evolver.cpp:308:59: fout: no matching function for call to ‘std::basic_ofstream<char>::basic_ofstream(std::basic_stringstream<char>::__string_type, const openmode&)’
+..\src\Evolver.cpp:308:59: note: candidates are:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/fstream:629:7: note: std::basic_ofstream<_CharT, _Traits>::basic_ofstream(const char*, std::ios_base::openmode) [with _CharT = char, _Traits = std::char_traits<char>, std::ios_base::openmode = std::_Ios_Openmode]
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/fstream:629:7: note:   no known conversion for argument 1 from ‘std::basic_stringstream<char>::__string_type {aka std::basic_string<char>}’ to ‘const char*’
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/fstream:614:7: note: std::basic_ofstream<_CharT, _Traits>::basic_ofstream() [with _CharT = char, _Traits = std::char_traits<char>]
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/fstream:614:7: note:   candidate expects 0 arguments, 2 provided
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/fstream:588:11: note: std::basic_ofstream<char>::basic_ofstream(const std::basic_ofstream<char>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/fstream:588:11: note:   candidate expects 1 argument, 2 provided
+Build error occurred, build is stopped
+Time consumed: 534  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1678  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1828  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1708  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start()’:
+..\src\Evolver.cpp:178:60: fout: no matching function for call to ‘Evolver::SaveChampion(Rosetta&)’
+..\src\Evolver.cpp:178:60: note: candidate is:
+..\src\/Evolver.h:86:9: note: int Evolver::SaveChampion(Rosetta*)
+..\src\/Evolver.h:86:9: note:   no known conversion for argument 1 from ‘Rosetta’ to ‘Rosetta*’
+Build error occurred, build is stopped
+Time consumed: 512  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1643  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2209  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In functie ‘int SaveGeneration(Rosetta**)’:
+..\src\Evolver.cpp:327:1: let op: no return statement in function returning non-void [-Wreturn-type]
+g++ -o Darwin.exe src\Vertices.o src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1693  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In functie ‘int SaveGeneration(Rosetta**)’:
+..\src\Evolver.cpp:326:17: fout: ‘m_strSavePath’ was not declared in this scope
+..\src\Evolver.cpp:326:34: fout: ‘m_nGeneration’ was not declared in this scope
+..\src\Evolver.cpp:337:23: fout: request for member ‘cGenome’ in ‘* champion’, which is of non-class type ‘Rosetta*’
+Build error occurred, build is stopped
+Time consumed: 484  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘int Evolver::SaveGeneration(Rosetta**)’:
+..\src\Evolver.cpp:337:23: fout: request for member ‘cGenome’ in ‘* champion’, which is of non-class type ‘Rosetta*’
+Build error occurred, build is stopped
+Time consumed: 440  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1719  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start()’:
+..\src\Evolver.cpp:229:39: fout: no matching function for call to ‘Evolver::SaveGeneration(Rosetta*&)’
+..\src\Evolver.cpp:229:39: note: candidate is:
+..\src\/Evolver.h:87:9: note: int Evolver::SaveGeneration(Rosetta**)
+..\src\/Evolver.h:87:9: note:   no known conversion for argument 1 from ‘Rosetta*’ to ‘Rosetta**’
+Build error occurred, build is stopped
+Time consumed: 510  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1681  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp:326:5: fout: prototype for ‘int Evolver::SaveGeneration(Rosetta**)’ does not match any in class ‘Evolver’
+..\src\/Evolver.h:87:9: fout: kandidaat is: int Evolver::SaveGeneration(Rosetta*)
+Build error occurred, build is stopped
+Time consumed: 480  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start()’:
+..\src\Evolver.cpp:229:39: fout: no matching function for call to ‘Evolver::SaveGeneration(Rosetta*&)’
+..\src\Evolver.cpp:229:39: note: candidate is:
+..\src\/Evolver.h:87:9: note: int Evolver::SaveGeneration(Rosetta)
+..\src\/Evolver.h:87:9: note:   no known conversion for argument 1 from ‘Rosetta*’ to ‘Rosetta’
+..\src\Evolver.cpp: At global scope:
+..\src\Evolver.cpp:326:5: fout: prototype for ‘int Evolver::SaveGeneration(Rosetta**)’ does not match any in class ‘Evolver’
+..\src\/Evolver.h:87:9: fout: kandidaat is: int Evolver::SaveGeneration(Rosetta)
+Build error occurred, build is stopped
+Time consumed: 1081  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start()’:
+..\src\Evolver.cpp:229:40: fout: expected primary-expression before ‘]’ token
+..\src\Evolver.cpp: At global scope:
+..\src\Evolver.cpp:326:5: fout: prototype for ‘int Evolver::SaveGeneration(Rosetta**)’ does not match any in class ‘Evolver’
+..\src\/Evolver.h:87:9: fout: kandidaat is: int Evolver::SaveGeneration(Rosetta)
+Build error occurred, build is stopped
+Time consumed: 504  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start()’:
+..\src\Evolver.cpp:229:41: fout: expected primary-expression before ‘]’ token
+..\src\Evolver.cpp: At global scope:
+..\src\Evolver.cpp:326:5: fout: prototype for ‘int Evolver::SaveGeneration(Rosetta**)’ does not match any in class ‘Evolver’
+..\src\/Evolver.h:87:9: fout: kandidaat is: int Evolver::SaveGeneration(Rosetta)
+Build error occurred, build is stopped
+Time consumed: 503  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start()’:
+..\src\Evolver.cpp:229:41: fout: expected primary-expression before ‘]’ token
+..\src\Evolver.cpp: At global scope:
+..\src\Evolver.cpp:326:5: fout: prototype for ‘int Evolver::SaveGeneration(Rosetta**)’ does not match any in class ‘Evolver’
+..\src\/Evolver.h:87:9: fout: kandidaat is: int Evolver::SaveGeneration(Rosetta*)
+Build error occurred, build is stopped
+Time consumed: 1030  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start()’:
+..\src\Evolver.cpp:229:41: fout: expected primary-expression before ‘]’ token
+..\src\Evolver.cpp: In memberfunctie ‘int Evolver::SaveGeneration(Rosetta*)’:
+..\src\Evolver.cpp:341:24: fout: base operand of ‘->’ has non-pointer type ‘Rosetta’
+Build error occurred, build is stopped
+Time consumed: 479  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start()’:
+..\src\Evolver.cpp:229:41: fout: expected primary-expression before ‘]’ token
+Build error occurred, build is stopped
+Time consumed: 498  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1678  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -o Darwin.exe src\Vertices.o src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2224  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1695  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1682  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin

@@ -1,0 +1,95 @@
+/*
+ * Filesystem.h
+ *
+ *  Created on: 15-mrt.-2012
+ *      Author: woutergl
+ */
+
+#ifndef FILESYSTEM_H_
+#define FILESYSTEM_H_
+
+    //#pragma warning(disable: 4786)
+    #include <io.h>
+    #include <string>
+    #include <vector>
+    #include <list>
+    #include <iostream>
+    using namespace std;
+
+
+    // structure to hold a directory and all its filenames.
+    struct FILELIST
+    {
+    string path;
+    vector<string> theList;
+    };
+
+
+    list<int> test;
+
+
+
+    void TransverseDirectory(string path, list<FILELIST>& theList)
+    {
+    struct _finddatai64_t data;
+    string fname = path + "\\*.*";
+    long h = _findfirsti64(fname.c_str(),&data);
+    if(h >= 0)
+    {
+    FILELIST thisList;
+    theList.push_back(thisList);
+    list<FILELIST>::iterator it = theList.end();
+    it--;
+
+    (*it).path = path;
+    do {
+    if( (data.attrib & _A_SUBDIR) )
+    {
+    // make sure we skip "." and "..". Have to use strcmp here because
+    // some file names can start with a dot, so just testing for the
+    // first dot is not suffient.
+    if( strcmp(data.name,".") != 0 &&strcmp(data.name,"..") != 0)
+    {
+    // We found a sub-directory, so get the files in it too
+    fname = path + "\\" + data.name;
+    // recurrsion here!
+    TransverseDirectory(fname,theList);
+    }
+
+    }
+    else
+    {
+    // this is just a normal filename. So just add it to our vector
+    (*it).theList.push_back(data.name);
+
+    }
+    }while( _findnexti64(h,&data) == 0);
+    _findclose(h);
+
+    }
+
+    }
+
+    int GetDirectoryList()
+    {
+    list<FILELIST> MyList;
+    string path;
+    cout << "Enter starting path ... ";
+    getline(cin,path);
+    TransverseDirectory(path,MyList);
+    list<FILELIST>::iterator it;
+    for(it = MyList.begin(); it != MyList.end(); it++)
+    {
+    vector<string>::iterator its;
+    for(its = (*it).theList.begin(); its != (*it).theList.end(); its++)
+    {
+    cout << (*it).path + "\\" + (*its) << endl;
+    }
+
+    }
+    cin.ignore();
+    return 0;
+    }
+
+
+#endif /* FILESYSTEM_H_ */

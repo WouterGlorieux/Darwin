@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;Darwin/src/Filesystem.h&apos;" deleteContents="false" description="Delete resource &apos;Darwin/src/Filesystem.h&apos;" element1="/Darwin/src/Filesystem.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1331894384010"/>
+</session>

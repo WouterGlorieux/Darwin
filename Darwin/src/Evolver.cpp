@@ -10,6 +10,7 @@
 
 
 
+
 void Evolver::readConfig(std::string strFileName)
 {
 	std::ifstream t(strFileName.c_str());
@@ -37,6 +38,10 @@ void Evolver::traverse_xml(const std::string& input_xml)
     m_strTitle = rootNode->first_node("Title")->value();
     m_strDescription = rootNode->first_node("Description")->value();
     m_strPath = rootNode->first_node("DirectoryPath")->value();
+    m_strSavePath = m_strPath + "\\Save\\";
+    m_strChampionsPath = m_strPath + "\\Champions\\";
+    m_nPeriodicSave = rootNode->first_node("PeriodicSave")?atoi(rootNode->first_node("PeriodicSave")->value()):1;
+
     m_eGenomeType = static_cast<GenomeType> (atoi(rootNode->first_node("GenomeType")->value()));
 
     rapidxml::xml_node<>* settingsNode = rootNode->first_node("Settings");
@@ -84,6 +89,8 @@ void Evolver::printSettings(){
 	std::cout << "Title: " << m_strTitle << std::endl;
 	std::cout << "Description: " << m_strDescription << std::endl;
 	std::cout << "Directory path: " << m_strPath << std::endl;
+	std::cout << "Save path: " << m_strSavePath << std::endl;
+	std::cout << "Champions path: " << m_strChampionsPath << std::endl;
 	std::cout << "PopulationSize: " << m_nPopulationSize << std::endl;
 	std::cout << "Max Generations: " << m_nMaxGenerations << std::endl << std::endl;
 
@@ -169,6 +176,10 @@ while(DoNextGeneration()){
 	}
 */
 
+	//Save the champion of this generation
+	if((m_nGeneration % m_nPeriodicSave) == 0)
+		Evolver::SaveChampion(&pacPopulation[vsSelection[0].nIndex]);
+
 
 	//if elitims is true, set the first genome of the next generation to the genome with highest fitness
 	if(m_bElitism){
@@ -216,6 +227,12 @@ while(DoNextGeneration()){
 		pacPopulation[i].SetGenome(pacNextGeneration[i].cGenome.GetXML());
 		pacPopulation[i].SetGenomeType(m_eGenomeType);
 	}
+
+	//save this generation
+	if((m_nGeneration % m_nPeriodicSave) == 0)
+		Evolver::SaveGeneration(pacPopulation);
+
+
 
 	m_nGeneration++;
 	finish = clock();
@@ -290,6 +307,48 @@ bool Evolver::DoNextGeneration(){
 
 
 	return doNextGeneration;
+}
+
+int Evolver::SaveChampion(Rosetta* champion){
+	std::stringstream strFilename ;
+	strFilename << m_strChampionsPath << m_nGeneration << ".xml";
+    std::ofstream outf(strFilename.str().c_str(), std::ios::trunc);
+
+    // If we couldn't open the output file stream for writing
+    if (!outf)
+    {
+        // Print an error and exit
+        std::cerr << std::endl << strFilename.str() << " could not be opened for writing!" << std::endl;
+        return 1;
+    }
+
+    outf << champion->cGenome.GetXML() << std::endl;
+
+    outf.close();
+    return 0;
+}
+int Evolver::SaveGeneration(Rosetta* population){
+
+	for(int i = 0; i < m_nPopulationSize; i++){
+		std::stringstream strFilename ;
+		strFilename << m_strSavePath << i << ".xml";
+		std::ofstream outf(strFilename.str().c_str(), std::ios::trunc);
+
+		// If we couldn't open the output file stream for writing
+		if (!outf)
+		{
+			// Print an error and exit
+			std::cerr << std::endl << strFilename.str() << " could not be opened for writing!" << std::endl;
+			return 1;
+		}
+
+		outf << population[i].cGenome.GetXML() << std::endl;
+
+		outf.close();
+	}
+
+    return 0;
+
 }
 
 std::vector<Parent> Evolver::MakeSelection(Rosetta* population){
