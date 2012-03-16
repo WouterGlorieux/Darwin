@@ -19,13 +19,12 @@ int main(int argc, char *argv[]) {
 
 
 	if(argc == 3){
-		if(argv[2] == std::string("-c")){
+		if(argv[2] == "-c"){
 			std::cout  << "Resuming from last save."<< std::endl;
 			bResume = true;
 		}
 	}
-
-	if(argc == 2 || argc == 3){
+	if(argc == 2){
 		std::cout  << "Loading config file: " << argv[1] << std::endl;
 		std::string strFileName(argv[1]);
 		cEvolver.readConfig(strFileName);
@@ -42,6 +41,10 @@ int main(int argc, char *argv[]) {
 
 	//start evolving
 	cEvolver.start(bResume);
+
+	//save results
+	//cEvolver.saveResults();
+
 
 	//std::cout << "Press any key to terminate this program. " ;
 	//getch();

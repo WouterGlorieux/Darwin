@@ -747,3 +747,248 @@ Time consumed: 1682  ms.
 
 **** Internal Builder is used for build               ****
 Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -o Darwin.exe src\Vertices.o src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2454  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+..\src\Darwin.cpp: In functie ‘int main(int, char**)’:
+..\src\Darwin.cpp:35:17: fout: no matching function for call to ‘Evolver::start()’
+..\src\Darwin.cpp:35:17: note: candidate is:
+..\src\/Evolver.h:84:10: note: void Evolver::start(bool)
+..\src\/Evolver.h:84:10: note:   candidate expects 1 argument, 0 provided
+Build error occurred, build is stopped
+Time consumed: 1653  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp:129:46: fout: default argument given for parameter 1 of ‘void Evolver::start(bool)’ [-fpermissive]
+..\src\/Evolver.h:84:10: fout: after previous specification in ‘void Evolver::start(bool)’ [-fpermissive]
+Build error occurred, build is stopped
+Time consumed: 1034  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+..\src\Darwin.cpp: In functie ‘int main(int, char**)’:
+..\src\Darwin.cpp:35:17: fout: no matching function for call to ‘Evolver::start()’
+..\src\Darwin.cpp:35:17: note: candidate is:
+..\src\/Evolver.h:84:10: note: void Evolver::start(bool)
+..\src\/Evolver.h:84:10: note:   candidate expects 1 argument, 0 provided
+Build error occurred, build is stopped
+Time consumed: 624  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -o Darwin.exe src\Vertices.o src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2253  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2309  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1702  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -o Darwin.exe src\Vertices.o src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 924  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start(bool)’:
+..\src\Evolver.cpp:165:16: fout: ambiguous overload for ‘operator>>’ in ‘inf >> strInput’
+..\src\Evolver.cpp:165:16: note: candidates are:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/istream:122:7: note: std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(std::basic_istream<_CharT, _Traits>::__istream_type& (*)(std::basic_istream<_CharT, _Traits>::__istream_type&)) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>] <near match>
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/istream:122:7: note:   no known conversion for argument 1 from ‘std::stringstream {aka std::basic_stringstream<char>}’ to ‘std::basic_istream<char>::__istream_type& (*)(std::basic_istream<char>::__istream_type&) {aka std::basic_istream<char>& (*)(std::basic_istream<char>&)}’
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/istream:126:7: note: std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(std::basic_istream<_CharT, _Traits>::__ios_type& (*)(std::basic_istream<_CharT, _Traits>::__ios_type&)) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>, std::basic_istream<_CharT, _Traits>::__ios_type = std::basic_ios<char>] <near match>
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/istream:126:7: note:   no known conversion for argument 1 from ‘std::stringstream {aka std::basic_stringstream<char>}’ to ‘std::basic_istream<char>::__ios_type& (*)(std::basic_istream<char>::__ios_type&) {aka std::basic_ios<char>& (*)(std::basic_ios<char>&)}’
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/istream:133:7: note: std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(std::ios_base& (*)(std::ios_base&)) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>] <near match>
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/istream:133:7: note:   no known conversion for argument 1 from ‘std::stringstream {aka std::basic_stringstream<char>}’ to ‘std::ios_base& (*)(std::ios_base&)’
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/istream:241:7: note: std::basic_istream<_CharT, _Traits>& std::basic_istream<_CharT, _Traits>::operator>>(std::basic_istream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_istream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<char>] <near match>
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/istream:241:7: note:   no known conversion for argument 1 from ‘std::stringstream {aka std::basic_stringstream<char>}’ to ‘std::basic_istream<char>::__streambuf_type* {aka std::basic_streambuf<char>*}’
+Build error occurred, build is stopped
+Time consumed: 920  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start(bool)’:
+..\src\Evolver.cpp:165:16: fout: ambiguous overload for ‘operator>>’ in ‘inf >> strInput’
+..\src\Evolver.cpp:165:16: note: candidates are:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/istream:122:7: note: std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(std::basic_istream<_CharT, _Traits>::__istream_type& (*)(std::basic_istream<_CharT, _Traits>::__istream_type&)) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>] <near match>
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/istream:122:7: note:   no known conversion for argument 1 from ‘std::stringstream {aka std::basic_stringstream<char>}’ to ‘std::basic_istream<char>::__istream_type& (*)(std::basic_istream<char>::__istream_type&) {aka std::basic_istream<char>& (*)(std::basic_istream<char>&)}’
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/istream:126:7: note: std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(std::basic_istream<_CharT, _Traits>::__ios_type& (*)(std::basic_istream<_CharT, _Traits>::__ios_type&)) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>, std::basic_istream<_CharT, _Traits>::__ios_type = std::basic_ios<char>] <near match>
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/istream:126:7: note:   no known conversion for argument 1 from ‘std::stringstream {aka std::basic_stringstream<char>}’ to ‘std::basic_istream<char>::__ios_type& (*)(std::basic_istream<char>::__ios_type&) {aka std::basic_ios<char>& (*)(std::basic_ios<char>&)}’
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/istream:133:7: note: std::basic_istream<_CharT, _Traits>::__istream_type& std::basic_istream<_CharT, _Traits>::operator>>(std::ios_base& (*)(std::ios_base&)) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_istream<_CharT, _Traits>::__istream_type = std::basic_istream<char>] <near match>
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/istream:133:7: note:   no known conversion for argument 1 from ‘std::stringstream {aka std::basic_stringstream<char>}’ to ‘std::ios_base& (*)(std::ios_base&)’
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/istream:241:7: note: std::basic_istream<_CharT, _Traits>& std::basic_istream<_CharT, _Traits>::operator>>(std::basic_istream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char, _Traits = std::char_traits<char>, std::basic_istream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<char>] <near match>
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/istream:241:7: note:   no known conversion for argument 1 from ‘std::stringstream {aka std::basic_stringstream<char>}’ to ‘std::basic_istream<char>::__streambuf_type* {aka std::basic_streambuf<char>*}’
+Build error occurred, build is stopped
+Time consumed: 872  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1723  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+c:/mingw/bin/../lib/gcc/mingw32/4.6.2/../../../../mingw32/bin/ld.exe: cannot open output file Darwin.exe: Permission denied
+collect2: ld gaf exit-status 1 terug
+Build error occurred, build is stopped
+Time consumed: 3326  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1748  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1700  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1950  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start(bool)’:
+..\src\Evolver.cpp:151:37: fout: expected ‘)’ before ‘c_str’
+..\src\Evolver.cpp:151:44: fout: no matching function for call to ‘std::basic_ifstream<char>::basic_ifstream(std::basic_stringstream<char>::__string_type)’
+..\src\Evolver.cpp:151:44: note: candidates are:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/fstream:460:7: note: std::basic_ifstream<_CharT, _Traits>::basic_ifstream(const char*, std::ios_base::openmode) [with _CharT = char, _Traits = std::char_traits<char>, std::ios_base::openmode = std::_Ios_Openmode]
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/fstream:460:7: note:   no known conversion for argument 1 from ‘std::basic_stringstream<char>::__string_type {aka std::basic_string<char>}’ to ‘const char*’
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/fstream:446:7: note: std::basic_ifstream<_CharT, _Traits>::basic_ifstream() [with _CharT = char, _Traits = std::char_traits<char>]
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/fstream:446:7: note:   candidate expects 0 arguments, 1 provided
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/fstream:420:11: note: std::basic_ifstream<char>::basic_ifstream(const std::basic_ifstream<char>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/fstream:420:11: note:   no known conversion for argument 1 from ‘std::basic_stringstream<char>::__string_type {aka std::basic_string<char>}’ to ‘const std::basic_ifstream<char>&’
+Build error occurred, build is stopped
+Time consumed: 624  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1732  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1684  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+..\src\Darwin.cpp: In functie ‘int main(int, char**)’:
+..\src\Darwin.cpp:22:17: let op: comparison with string literal results in unspecified behaviour [-Waddress]
+g++ -o Darwin.exe src\Vertices.o src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 999  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -o Darwin.exe src\Vertices.o src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 998  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -o Darwin.exe src\Vertices.o src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 421  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -o Darwin.exe src\Vertices.o src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1014  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -o Darwin.exe src\Vertices.o src\Rosetta.o src\Recombination.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1014  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin

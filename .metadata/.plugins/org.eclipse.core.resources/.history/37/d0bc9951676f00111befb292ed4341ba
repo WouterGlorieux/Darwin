@@ -21,7 +21,10 @@ class Evolver
 {
 private:
 
-	std::string m_strPath; 			//Path to working directory
+	std::string m_strPath; 				//Path to working directory
+	std::string m_strSavePath;       	//Path to save directory
+	std::string m_strChampionsPath;   	//Path to directory with genomes with highest fitness of each generation
+	int m_nPeriodicSave;				//Save every n generations
 
     std::string m_strTitle;			//Title of this job
     std::string m_strDescription; 	//detailed description of this job
@@ -81,6 +84,8 @@ public:
     void start();
     std::vector<Parent> MakeSelection(Rosetta* population);
 
+    int SaveChampion(Rosetta* champion);
+    int SaveGeneration(Rosetta* population);
 
 };
 

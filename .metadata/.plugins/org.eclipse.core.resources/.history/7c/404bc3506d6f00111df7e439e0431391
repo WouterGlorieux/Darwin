@@ -157,6 +157,9 @@ void Evolver::start(bool loadLastSave = false){
 	}
 
 
+	std::cout << pacPopulation[0].cGenome.GetXML() << std::endl;
+	//create Aperture object
+
 	m_nGeneration = 1;
 	m_dHighestFitness = 0;
 	m_vdFitness.clear();

@@ -81,7 +81,8 @@ public:
     void printSettings();
     void printMutationChance(MutationChance mutationChance);
 
-    void start(bool loadLastSave);
+    void LoadLastSave();
+    void start();
 
     std::vector<Parent> MakeSelection(Rosetta* population);
 

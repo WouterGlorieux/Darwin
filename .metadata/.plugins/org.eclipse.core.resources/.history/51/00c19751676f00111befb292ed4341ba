@@ -125,8 +125,7 @@ void Evolver::printMutationChance(MutationChance mutationChance){
 			<< " Gene Swap: " << mutationChance.dGeneSwap << std::endl << std::endl;
 }
 
-
-void Evolver::start(bool loadLastSave = false){
+void Evolver::start(){
 
 	//create pointer to array of Rosetta objects for population and next generation
 	Rosetta* pacPopulation = new Rosetta[m_nPopulationSize];
@@ -134,28 +133,16 @@ void Evolver::start(bool loadLastSave = false){
 
 
 
-	if(loadLastSave == false){
-		//initialize Rosetta objects
-		for(int i = 0; i<m_nPopulationSize; i++ ){
-			pacPopulation[i].SetGenomeType(m_eGenomeType);
-			pacPopulation[i].initGenome();
-			//put random data in all genomes
-			pacPopulation[i].randomGenome();
-		}
-	}
-	else{
-		for(int i = 0; i<m_nPopulationSize; i++ ){
-			std::stringstream strFilename;
-			strFilename << m_strSavePath << i << ".xml";
-
-			std::ifstream t(strFilename.str().c_str());
-			std::stringstream buffer;
-			buffer << t.rdbuf();
-
-			pacPopulation[i].SetGenome(buffer.str());
-		}
+	//initialize Rosetta objects
+	for(int i = 0; i<m_nPopulationSize; i++ ){
+		pacPopulation[i].SetGenomeType(m_eGenomeType);
+		pacPopulation[i].initGenome();
+		//put random data in all genomes
+		pacPopulation[i].randomGenome();
 	}
 
+	//std::cout << pacPopulation[0].cGenome.GetXML() << std::endl;
+	//create Aperture object
 
 	m_nGeneration = 1;
 	m_dHighestFitness = 0;

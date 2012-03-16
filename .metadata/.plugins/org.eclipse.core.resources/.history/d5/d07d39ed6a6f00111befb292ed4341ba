@@ -145,17 +145,33 @@ void Evolver::start(bool loadLastSave = false){
 	}
 	else{
 		for(int i = 0; i<m_nPopulationSize; i++ ){
-			std::stringstream strFilename;
+			std::stringstream strFilename ;
+			std::stringstream strInput;
 			strFilename << m_strSavePath << i << ".xml";
+			std::ifstream inf(strFilename.str().c_str());
 
-			std::ifstream t(strFilename.str().c_str());
-			std::stringstream buffer;
-			buffer << t.rdbuf();
+			 // If we couldn't open the input file stream for reading
+			 if (!inf)
+			 {
+			     // Print an error and exit
+			     std::cerr << strFilename << " could not be opened for reading!" << std::endl;
+			     exit(1);
+			 }
 
-			pacPopulation[i].SetGenome(buffer.str());
+			 // While there's still stuff left to read
+			 while (inf)
+			 {
+			     // read stuff from the file into a string and print it
+			     inf >> strInput;
+			 }
+
+  			 pacPopulation[i].SetGenome(strInput.str());
 		}
 	}
 
+
+	//std::cout << pacPopulation[0].cGenome.GetXML() << std::endl;
+	//create Aperture object
 
 	m_nGeneration = 1;
 	m_dHighestFitness = 0;

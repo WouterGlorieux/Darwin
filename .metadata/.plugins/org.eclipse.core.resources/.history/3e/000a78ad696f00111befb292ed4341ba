@@ -143,19 +143,9 @@ void Evolver::start(bool loadLastSave = false){
 			pacPopulation[i].randomGenome();
 		}
 	}
-	else{
-		for(int i = 0; i<m_nPopulationSize; i++ ){
-			std::stringstream strFilename;
-			strFilename << m_strSavePath << i << ".xml";
 
-			std::ifstream t(strFilename.str().c_str());
-			std::stringstream buffer;
-			buffer << t.rdbuf();
-
-			pacPopulation[i].SetGenome(buffer.str());
-		}
-	}
-
+	//std::cout << pacPopulation[0].cGenome.GetXML() << std::endl;
+	//create Aperture object
 
 	m_nGeneration = 1;
 	m_dHighestFitness = 0;
