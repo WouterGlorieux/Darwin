@@ -128,14 +128,14 @@ void Evolver::printMutationChance(MutationChance mutationChance){
 
 void Evolver::start(bool loadLastSave = false){
 
-	//create pointer to array of Rosetta objects for population and next generation
-	Rosetta* pacPopulation = new Rosetta[m_nPopulationSize];
-	Rosetta* pacNextGeneration = new Rosetta[m_nPopulationSize];
+	//create pointer to array of Population objects for population and next generation
+	Population* pacPopulation = new Population[m_nPopulationSize];
+	Population* pacNextGeneration = new Population[m_nPopulationSize];
 
 
 
 	if(loadLastSave == false){
-		//initialize Rosetta objects
+		//initialize Population objects
 		for(int i = 0; i<m_nPopulationSize; i++ ){
 			pacPopulation[i].SetGenomeType(m_eGenomeType);
 			pacPopulation[i].initGenome();
@@ -322,7 +322,7 @@ bool Evolver::DoNextGeneration(){
 	return doNextGeneration;
 }
 
-int Evolver::SaveChampion(Rosetta* champion){
+int Evolver::SaveChampion(Population* champion){
 	std::stringstream strFilename ;
 	strFilename << m_strChampionsPath << m_nGeneration << ".xml";
     std::ofstream outf(strFilename.str().c_str(), std::ios::trunc);
@@ -340,7 +340,7 @@ int Evolver::SaveChampion(Rosetta* champion){
     outf.close();
     return 0;
 }
-int Evolver::SaveGeneration(Rosetta* population){
+int Evolver::SaveGeneration(Population* population){
 
 	for(int i = 0; i < m_nPopulationSize; i++){
 		std::stringstream strFilename ;
@@ -364,7 +364,7 @@ int Evolver::SaveGeneration(Rosetta* population){
 
 }
 
-std::vector<Parent> Evolver::MakeSelection(Rosetta* population){
+std::vector<Parent> Evolver::MakeSelection(Population* population){
 	//calculate which genomes are selected as possible parents
 	int nSelectedGenomes;  		//number of genomes that get to have offspring
 
@@ -598,7 +598,7 @@ MutationChance Evolver::GetMutationChance(EncodingType encodingType){
 	return cMutationChance;
 }
 
-void Evolver::RWS(std::vector<Parent> selection, Rosetta* population){
+void Evolver::RWS(std::vector<Parent> selection, Population* population){
 
 	int nLow = 0;
 	int nHigh = 10000;	//5 decimals
@@ -619,7 +619,7 @@ void Evolver::RWS(std::vector<Parent> selection, Rosetta* population){
 	}
 
 }
-void Evolver::SUS(std::vector<Parent> selection, Rosetta* population){
+void Evolver::SUS(std::vector<Parent> selection, Population* population){
 	int nLow = 0;
 	int nHigh = 10000;	//5 decimals
 	double dRandom = 0;
@@ -640,7 +640,7 @@ void Evolver::SUS(std::vector<Parent> selection, Rosetta* population){
 		(dRandom > 1)?dRandom -= 1:dRandom;		//if dRandom get bigger than 1, subtract 1 to make it between 0 and 1 again
 	}
 }
-void Evolver::Tournament(std::vector<Parent> selection, Rosetta* population){
+void Evolver::Tournament(std::vector<Parent> selection, Population* population){
 
 	int nLow = 0;
 	int nHigh = selection.size()-1;

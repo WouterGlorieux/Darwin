@@ -992,3 +992,70 @@ Time consumed: 1014  ms.
 
 **** Internal Builder is used for build               ****
 Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+In file included from ..\src\Evolver.cpp:8:0:
+..\src\/Evolver.h:14:21: fatale fout: Rosetta.h: No such file or directory
+compilation terminated.
+Build error occurred, build is stopped
+Time consumed: 561  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+In file included from ..\src\Darwin.cpp:13:0:
+..\src\/Evolver.h:14:21: fatale fout: Rosetta.h: No such file or directory
+compilation terminated.
+Build error occurred, build is stopped
+Time consumed: 156  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Population.o ..\src\Population.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+In file included from ..\src\Darwin.cpp:13:0:
+..\src\/Evolver.h:14:21: fatale fout: Rosetta.h: No such file or directory
+compilation terminated.
+Build error occurred, build is stopped
+Time consumed: 749  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start(bool)’:
+..\src\Evolver.cpp:132:2: fout: ‘Rosetta’ was not declared in this scope
+..\src\Evolver.cpp:132:11: fout: ‘pacPopulation’ was not declared in this scope
+..\src\Evolver.cpp:132:31: fout: expected type-specifier before ‘Rosetta’
+..\src\Evolver.cpp:132:31: fout: expected ‘;’ before ‘Rosetta’
+..\src\Evolver.cpp:133:11: fout: ‘pacNextGeneration’ was not declared in this scope
+..\src\Evolver.cpp:133:35: fout: expected type-specifier before ‘Rosetta’
+..\src\Evolver.cpp:133:35: fout: expected ‘;’ before ‘Rosetta’
+..\src\Evolver.cpp:262:11: fout: type ‘<type error>’ argument given to ‘delete’, expected pointer
+..\src\Evolver.cpp:263:11: fout: type ‘<type error>’ argument given to ‘delete’, expected pointer
+..\src\Evolver.cpp: At global scope:
+..\src\Evolver.cpp:325:27: fout: ‘int Evolver::SaveChampion’ is not a static member of ‘class Evolver’
+..\src\Evolver.cpp:325:27: fout: ‘Rosetta’ was not declared in this scope
+..\src\Evolver.cpp:325:36: fout: ‘champion’ was not declared in this scope
+..\src\Evolver.cpp:325:45: fout: expected ‘,’ or ‘;’ before ‘{’ token
+Build error occurred, build is stopped
+Time consumed: 468  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2465  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin

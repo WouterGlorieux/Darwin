@@ -11,7 +11,7 @@
 #include "Globals.h"
 
 #include "Genome.h"
-#include "Population.h"
+#include "Rosetta.h"
 #include "Recombination.h"
 #include "MutationChance.h"
 
@@ -57,9 +57,9 @@ private:
     MutationChances sMutationChances;
 
 
-    void RWS(std::vector<Parent> selection, Population* population);
-    void SUS(std::vector<Parent> selection, Population* population);
-    void Tournament(std::vector<Parent> selection, Population* population);
+    void RWS(std::vector<Parent> selection, Rosetta* population);
+    void SUS(std::vector<Parent> selection, Rosetta* population);
+    void Tournament(std::vector<Parent> selection, Rosetta* population);
 
     bool DoNextGeneration();
 
@@ -83,10 +83,10 @@ public:
 
     void start(bool loadLastSave);
 
-    std::vector<Parent> MakeSelection(Population* population);
+    std::vector<Parent> MakeSelection(Rosetta* population);
 
-    int SaveChampion(Population* champion);
-    int SaveGeneration(Population* population);
+    int SaveChampion(Rosetta* champion);
+    int SaveGeneration(Rosetta* population);
 
 };
 

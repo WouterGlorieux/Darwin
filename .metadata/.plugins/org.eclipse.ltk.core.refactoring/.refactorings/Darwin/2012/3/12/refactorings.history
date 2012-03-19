@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;Darwin/src/Rosetta.h&apos; to &apos;Population.h&apos;" description="Rename resource &apos;Rosetta.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/Rosetta.h" name="Population.h" stamp="1332144400948" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;Darwin/src/Rosetta.cpp&apos; to &apos;Population.cpp&apos;" description="Rename resource &apos;Rosetta.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/Rosetta.cpp" name="Population.cpp" stamp="1332144415861" updateReferences="true"/>
+</session>
