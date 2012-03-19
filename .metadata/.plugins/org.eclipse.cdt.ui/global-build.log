@@ -2052,3 +2052,71 @@ Time consumed: 936  ms.
 
 **** Internal Builder is used for build               ****
 Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2309  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1700  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::start(bool)’:
+..\src\Evolver.cpp:256:44: fout: ‘vsSelection’ was not declared in this scope
+Build error occurred, build is stopped
+Time consumed: 468  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1841  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1669  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1685  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2013  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin

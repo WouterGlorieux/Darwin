@@ -347,7 +347,7 @@ int Evolver::SaveChampion(Population* champion){
 }
 int Evolver::SaveFinalSolution(Population* champion){
 	std::stringstream strFilename ;
-	strFilename << m_strPath << "\\finalsolution.xml";
+	strFilename << m_strPath << "\finalsolution.xml";
     std::ofstream outf(strFilename.str().c_str(), std::ios::trunc);
 
     // If we couldn't open the output file stream for writing

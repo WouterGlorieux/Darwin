@@ -86,7 +86,6 @@ public:
     std::vector<Parent> MakeSelection(Population* population);
 
     int SaveChampion(Population* champion);
-    int SaveFinalSolution(Population* champion);
     int SaveGeneration(Population* population);
 
 };
