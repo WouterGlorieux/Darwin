@@ -688,6 +688,14 @@ std::string AlphanumMutation::Deletion(){
 std::string AlphanumMutation::Insertion(){
 	std::string strValue = m_strValue;
 
+	//check if there is a maxChars attribute
+	if(m_ChromosomeNode->first_attribute("maxChars")){
+		int nChars = atoi(m_ChromosomeNode->first_attribute("maxChars")->value());
+		if((int)strValue.size() >= nChars){
+			return strValue;
+		}
+	}
+
 	//get a random character and insert it in strValue;
 	AlphanumEncoding cAlphanumEncoding;
 	std::vector<char> vCharacters = cAlphanumEncoding.GetChars();
@@ -703,8 +711,6 @@ std::string AlphanumMutation::Insertion(){
 	std::stringstream ss;//create a stringstream
 	ss << vCharacters.at(nRandom);
 	strValue.insert(nBegin, ss.str());
-
-	strValue = Mutation::ValidateMutation(strValue);
 
 	return strValue;
 }
@@ -793,6 +799,14 @@ std::string CustomMutation::Deletion(){
 std::string CustomMutation::Insertion(){
 	std::string strValue = m_strValue;
 
+	//check if there is a maxChars attribute
+	if(m_ChromosomeNode->first_attribute("maxChars")){
+		int nChars = atoi(m_ChromosomeNode->first_attribute("maxChars")->value());
+		if((int)strValue.size() >= nChars){
+			return strValue;
+		}
+	}
+
 	//get a random character and insert it in strValue;
 	CustomEncoding cCustomEncoding;
 	cCustomEncoding.SetChars(m_ChromosomeNode->first_attribute("chars")->value());
@@ -809,8 +823,6 @@ std::string CustomMutation::Insertion(){
 	std::stringstream ss;//create a stringstream
 	ss << vCharacters.at(nRandom);
 	strValue.insert(nBegin, ss.str());
-
-	strValue = Mutation::ValidateMutation(strValue);
 
 	return strValue;
 }

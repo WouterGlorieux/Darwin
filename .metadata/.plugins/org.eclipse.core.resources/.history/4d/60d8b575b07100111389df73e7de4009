@@ -444,11 +444,10 @@ std::string DoubleMutation::BitString(){
 			strValue.replace(nRandom, 1, ss.str());
 		}
 	}
-
-	std::stringstream ss;//create a stringstream
-	char buffer[256]; //use sprintf to make sure no decimals are lost
-	std::sprintf(buffer, "%s", strValue.c_str());
-	ss << buffer;
+	std::stringstream ss;
+	std::cout << strValue << std::endl;
+	ss << atof(strValue.c_str());
+	std::cout << ss.str() << std::endl;
 
 	strValue = Mutation::ValidateMutation(ss.str());
 
@@ -533,10 +532,8 @@ std::string DoubleMutation::Duplication(){
 		}
 
 	}
-	std::stringstream ss;//create a stringstream
-	char buffer[256]; //use sprintf to make sure no decimals are lost
-	std::sprintf(buffer, "%s", strValue.c_str());
-	ss << buffer;
+	std::stringstream ss;
+	ss << atof(strValue.c_str());
 
 	strValue = Mutation::ValidateMutation(ss.str());
 
@@ -557,10 +554,8 @@ std::string DoubleMutation::Deletion(){
 		strValue = "";
 	}
 
-	std::stringstream ss;//create a stringstream
-	char buffer[256]; //use sprintf to make sure no decimals are lost
-	std::sprintf(buffer, "%s", strValue.c_str());
-	ss << buffer;
+	std::stringstream ss;
+	ss << atof(strValue.c_str());
 
 	strValue = Mutation::ValidateMutation(ss.str());
 
@@ -588,10 +583,8 @@ std::string DoubleMutation::Insertion(){
 		}
 	}
 
-	std::stringstream ss;//create a stringstream
-	char buffer[256]; //use sprintf to make sure no decimals are lost
-	std::sprintf(buffer, "%s", strValue.c_str());
-	ss << buffer;
+	std::stringstream ss;
+	ss << atof(strValue.c_str());
 
 	strValue = Mutation::ValidateMutation(ss.str());
 
@@ -614,10 +607,8 @@ std::string DoubleMutation::Swap(){
 
 	}
 
-	std::stringstream ss;//create a stringstream
-	char buffer[256]; //use sprintf to make sure no decimals are lost
-	std::sprintf(buffer, "%s", strValue.c_str());
-	ss << buffer;
+	std::stringstream ss;
+	ss << atof(strValue.c_str());
 
 	strValue = Mutation::ValidateMutation(ss.str());
 
@@ -688,6 +679,14 @@ std::string AlphanumMutation::Deletion(){
 std::string AlphanumMutation::Insertion(){
 	std::string strValue = m_strValue;
 
+	//check if there is a maxChars attribute
+	if(m_ChromosomeNode->first_attribute("maxChars")){
+		int nChars = atoi(m_ChromosomeNode->first_attribute("maxChars")->value());
+		if((int)strValue.size() >= nChars){
+			return strValue;
+		}
+	}
+
 	//get a random character and insert it in strValue;
 	AlphanumEncoding cAlphanumEncoding;
 	std::vector<char> vCharacters = cAlphanumEncoding.GetChars();
@@ -703,8 +702,6 @@ std::string AlphanumMutation::Insertion(){
 	std::stringstream ss;//create a stringstream
 	ss << vCharacters.at(nRandom);
 	strValue.insert(nBegin, ss.str());
-
-	strValue = Mutation::ValidateMutation(strValue);
 
 	return strValue;
 }
@@ -793,6 +790,14 @@ std::string CustomMutation::Deletion(){
 std::string CustomMutation::Insertion(){
 	std::string strValue = m_strValue;
 
+	//check if there is a maxChars attribute
+	if(m_ChromosomeNode->first_attribute("maxChars")){
+		int nChars = atoi(m_ChromosomeNode->first_attribute("maxChars")->value());
+		if((int)strValue.size() >= nChars){
+			return strValue;
+		}
+	}
+
 	//get a random character and insert it in strValue;
 	CustomEncoding cCustomEncoding;
 	cCustomEncoding.SetChars(m_ChromosomeNode->first_attribute("chars")->value());
@@ -809,8 +814,6 @@ std::string CustomMutation::Insertion(){
 	std::stringstream ss;//create a stringstream
 	ss << vCharacters.at(nRandom);
 	strValue.insert(nBegin, ss.str());
-
-	strValue = Mutation::ValidateMutation(strValue);
 
 	return strValue;
 }

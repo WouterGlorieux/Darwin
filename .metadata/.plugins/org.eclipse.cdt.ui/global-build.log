@@ -1766,3 +1766,289 @@ Time consumed: 1575  ms.
 
 **** Internal Builder is used for build               ****
 Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1623  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1576  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
+..\src\Mutation.cpp: In memberfunctie ‘virtual std::string DoubleMutation::BitString()’:
+..\src\Mutation.cpp:450:37: fout: cannot pass objects of non-trivially-copyable type ‘std::string {aka struct std::basic_string<char>}’ through ‘...’
+..\src\Mutation.cpp:450:37: let op: format ‘%f’ expects argument of type ‘double’, but argument 3 has type ‘std::string {aka std::basic_string<char>}’ [-Wformat]
+Build error occurred, build is stopped
+Time consumed: 437  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
+..\src\Mutation.cpp: In memberfunctie ‘virtual std::string DoubleMutation::BitString()’:
+..\src\Mutation.cpp:450:37: fout: cannot pass objects of non-trivially-copyable type ‘std::string {aka struct std::basic_string<char>}’ through ‘...’
+..\src\Mutation.cpp:450:37: let op: format ‘%s’ expects argument of type ‘char*’, but argument 3 has type ‘std::string {aka std::basic_string<char>}’ [-Wformat]
+Build error occurred, build is stopped
+Time consumed: 453  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1591  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1654  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1560  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1560  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1576  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1591  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1560  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1669  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1654  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Population.o ..\src\Population.cpp
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 936  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
