@@ -77,7 +77,7 @@ void Genome::addChromosome(const char* pchId, EncodingType encoding ){
 
 }
 
-void Genome::addGene(const char* pchId, std::string strChromosomeId ){
+void Genome::addGene(std::string strChromosomeId ){
 
     rapidxml::xml_document<> doc;
     std::vector<char> xml_copy(m_strXML.begin(), m_strXML.end());
@@ -92,7 +92,6 @@ void Genome::addGene(const char* pchId, std::string strChromosomeId ){
 	    if(child->first_attribute("id")->value() == strChromosomeId){
 	    // gene node
 		rapidxml::xml_node<>* gene = doc.allocate_node(rapidxml::node_element, "Gene");
-		gene->append_attribute(doc.allocate_attribute("id", pchId ));
 		child->append_node(gene);
 
 		break;
@@ -455,19 +454,24 @@ void Genome::ChromosomeMutations(rapidxml::xml_node<>* chromosomeNode, Chromosom
 	int nLow = 0;
 	int nHigh = RAND_MAX;
 
+	bool variableGenes = true;
+	if(chromosomeNode->first_attribute("genes")){
+		variableGenes = false;
+	}
+
 	double dRandom;
 	dRandom = (double)((rand() % (nHigh - nLow + 1)) + nLow)/nHigh;
-	if(dRandom <=  mutationChance.dGeneDuplication){
+	if(variableGenes && dRandom <=  mutationChance.dGeneDuplication){
 		mutation.Duplication();
 	}
 
 	dRandom = (double)((rand() % (nHigh - nLow + 1)) + nLow)/nHigh;
-	if(dRandom <=  mutationChance.dGeneDeletion){
+	if(variableGenes && dRandom <=  mutationChance.dGeneDeletion){
 		mutation.Deletion();
 	}
 
 	dRandom = (double)((rand() % (nHigh - nLow + 1)) + nLow)/nHigh;
-	if(dRandom <=  mutationChance.dGeneInsertion){
+	if(variableGenes && dRandom <=  mutationChance.dGeneInsertion){
 		mutation.Insertion();
 	}
 

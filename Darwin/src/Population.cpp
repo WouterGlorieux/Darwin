@@ -8,28 +8,48 @@
 #include "Population.h"
 
 
-void Population::initGenome(){
+void Population::initGenome(std::string genomeTemplate){
 
-	switch (m_eGenomeType)
-	    {
-	        case GENOME_TOKAMAK:
-	           // std::cout << "Initializing steady state tokamak genome" << std::endl;
-	            initTokamak();
-	            break;
-	        case GENOME_TOKAMAKTIME:
-	           // std::cout << "Initializing time dependent tokamak genome" << std::endl;
-	            initTokamak();
-	            break;
+	std::ifstream t(genomeTemplate.c_str());
+	std::stringstream buffer;
+	buffer << t.rdbuf();
+	std::string input_xml = buffer.str();
 
-	        default:
-	            std::cout << "Unknown genome type" << std::endl;
-	            break;
-	    }
+    // make a safe-to-modify copy of input_xml
+    // (you should never modify the contents of an std::string directly)
+    std::vector<char> xml_copy(input_xml.begin(), input_xml.end());
+    xml_copy.push_back('\0');
 
+    // only use xml_copy from here on!
+    rapidxml::xml_document<> doc;
+    doc.parse<rapidxml::parse_declaration_node | rapidxml::parse_no_data_nodes>(&xml_copy[0]);
+
+    rapidxml::xml_node<>* genomeNode = doc.first_node("Genome");
+	for (rapidxml::xml_node<>* chromosomeNode = genomeNode->first_node("Chromosome"); chromosomeNode; chromosomeNode = chromosomeNode->next_sibling("Chromosome"))
+	{
+		if(chromosomeNode->first_attribute("genes")){
+			int nGenes = atoi(chromosomeNode->first_attribute("genes")->value());
+
+			for(int i = 0 ; i < nGenes; i++){
+			    // gene node
+				rapidxml::xml_node<>* geneNode = doc.allocate_node(rapidxml::node_element, "Gene");
+				chromosomeNode->append_node(geneNode);
+			}
+
+		}
+	}
+
+
+	std::string xml_as_string;
+	rapidxml::print(std::back_inserter(xml_as_string), doc);
+	// xml_as_string now contains the XML in string form, indented
+	// (in all its angle bracket glory)
+
+	cGenome.SetXML(xml_as_string);
 
 }
 
-void Population::initTokamak(){
+/*void Population::initTokamak(){
 
 	cGenome.newGenome("Tokamak steady state");
 
@@ -77,7 +97,7 @@ void Population::initTokamak(){
 	cGenome.addGene("2", "Magnetic Field3");
 	cGenome.addGene("3", "Magnetic Field3");
 
-/*	cGenome.addChromosome("tree graph", ENCODING_TREE);
+	cGenome.addChromosome("tree graph", ENCODING_TREE);
 
 	Vertex sVertex;
 	std::vector<Vertex> vsVertices;
@@ -101,10 +121,10 @@ void Population::initTokamak(){
 	cGenome.AddVertices("tree graph", vsVertices);
 	cGenome.addChromosomeAttribute("tree graph", "vertices", "5");
 	cGenome.addGene("1", "tree graph");
-*/
 
 
-}
+
+}*/
 
 void Population::CalcFitness(){
 

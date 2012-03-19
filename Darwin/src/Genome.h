@@ -39,7 +39,7 @@ public:
 
     void newGenome(const char* pchId );
     void addChromosome(const char* pchId , EncodingType encoding);
-    void addGene(const char* pchId , std::string strChromosomeId );
+    void addGene(std::string strChromosomeId );
 
     void AddVertices(std::string strChromosomeId, std::vector<Vertex> vertices);
     void AddEdges(std::string strChromosomeId, std::vector<Edge> edges);

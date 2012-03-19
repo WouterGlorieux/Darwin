@@ -17,7 +17,7 @@
 class Population
 {
 private:
-	GenomeType m_eGenomeType;
+	//GenomeType m_eGenomeType;
 	double m_dFitness;
 
 public:
@@ -30,13 +30,13 @@ public:
     }
 
     void randomGenome();	//fills the genome with random data
-    void initGenome();
+    void initGenome(std::string genomeTemplate);
 
-    void initTokamak();
+   // void initTokamak();
 
-    void SetGenomeType(GenomeType eGenomeType) {m_eGenomeType = eGenomeType; }
+   // void SetGenomeType(GenomeType eGenomeType) {m_eGenomeType = eGenomeType; }
 
-    GenomeType GetGenomeType() { return m_eGenomeType; }
+   // GenomeType GetGenomeType() { return m_eGenomeType; }
 
     double GetFitness() { return m_dFitness; }
 

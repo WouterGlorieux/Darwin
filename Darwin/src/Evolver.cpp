@@ -41,6 +41,7 @@ void Evolver::traverse_xml(const std::string& input_xml)
     m_strSavePath = m_strPath + "\\Save\\";
     m_strChampionsPath = m_strPath + "\\Champions\\";
     m_nPeriodicSave = rootNode->first_node("PeriodicSave")?atoi(rootNode->first_node("PeriodicSave")->value()):1;
+    m_strTemplate = rootNode->first_node("Template")->value();
 
     m_eGenomeType = static_cast<GenomeType> (atoi(rootNode->first_node("GenomeType")->value()));
 
@@ -91,6 +92,7 @@ void Evolver::printSettings(){
 	std::cout << "Directory path: " << m_strPath << std::endl;
 	std::cout << "Save path: " << m_strSavePath << std::endl;
 	std::cout << "Champions path: " << m_strChampionsPath << std::endl;
+	std::cout << "Template: " << m_strTemplate << std::endl;
 	std::cout << "PopulationSize: " << m_nPopulationSize << std::endl;
 	std::cout << "Max Generations: " << m_nMaxGenerations << std::endl << std::endl;
 
@@ -137,8 +139,8 @@ void Evolver::start(bool loadLastSave = false){
 	if(loadLastSave == false){
 		//initialize Population objects
 		for(int i = 0; i<m_nPopulationSize; i++ ){
-			pacPopulation[i].SetGenomeType(m_eGenomeType);
-			pacPopulation[i].initGenome();
+			//pacPopulation[i].SetGenomeType(m_eGenomeType);
+			pacPopulation[i].initGenome(m_strTemplate);
 			//put random data in all genomes
 			pacPopulation[i].randomGenome();
 		}
@@ -200,7 +202,7 @@ while(DoNextGeneration()){
 	//if elitims is true, set the first genome of the next generation to the genome with highest fitness
 	if(m_bElitism){
 		pacNextGeneration[0].SetGenome(pacPopulation[nChampion].cGenome.GetXML());
-		pacNextGeneration[0].SetGenomeType(m_eGenomeType);
+		//pacNextGeneration[0].SetGenomeType(m_eGenomeType);
 	}
 
 	//do recombinations
@@ -225,7 +227,7 @@ while(DoNextGeneration()){
 		}
 
 		pacNextGeneration[i].SetGenome(m_cRecombination.RecombinedGenomeXML());
-		pacNextGeneration[i].SetGenomeType(m_eGenomeType);
+		//pacNextGeneration[i].SetGenomeType(m_eGenomeType);
 	}
 
 	//do mutations
@@ -241,7 +243,7 @@ while(DoNextGeneration()){
 	//copy next generation to population
 	for(int i = 0; i<m_nPopulationSize; i++ ){
 		pacPopulation[i].SetGenome(pacNextGeneration[i].cGenome.GetXML());
-		pacPopulation[i].SetGenomeType(m_eGenomeType);
+		//pacPopulation[i].SetGenomeType(m_eGenomeType);
 	}
 
 	//save this generation
