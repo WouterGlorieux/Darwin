@@ -552,9 +552,9 @@ std::string DoubleMutation::Deletion(){
 		strValue = strValue.erase(nBegin, nEnd-nBegin+1);
 	}
 
-	//make sure the new value is not just a - or empty
-	if(strValue == "-" || strValue == ""){
-		strValue = "0";
+	//make sure the new value is not just a -
+	if(strValue == "-"){
+		strValue = "";
 	}
 
 	std::stringstream ss;//create a stringstream
