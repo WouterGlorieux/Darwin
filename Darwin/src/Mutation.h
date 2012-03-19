@@ -28,9 +28,6 @@ public:
     virtual ~Mutation() // default deconstructor
     {    }
 
-   // typedef std::string (Mutation::*pMutation)() ;
-
-
 	virtual std::string BitString();
     virtual std::string FlipBits();
     virtual std::string Boundary();
@@ -40,6 +37,9 @@ public:
     virtual std::string Deletion();
     virtual std::string Insertion();
     virtual std::string Swap();
+
+    std::string ValidateMutation(std::string value);		//checks if mutation is valid, and if necessary modifies the string to make it valid
+
 };
 
 class BitMutation : public Mutation
@@ -67,6 +67,7 @@ public:
     virtual std::string Insertion();
     virtual std::string Swap();
 
+
 };
 
 class IntegerMutation : public Mutation
@@ -93,6 +94,8 @@ public:
     virtual std::string Deletion();
     virtual std::string Insertion();
     virtual std::string Swap();
+
+
 
 };
 
@@ -122,6 +125,8 @@ public:
     virtual std::string Insertion();
     virtual std::string Swap();
 
+
+
 };
 
 class AlphanumMutation : public Mutation
@@ -150,6 +155,8 @@ public:
     virtual std::string Insertion();
     virtual std::string Swap();
 
+
+
 };
 
 class CustomMutation : public Mutation
@@ -176,6 +183,8 @@ public:
     virtual std::string Deletion();
     virtual std::string Insertion();
     virtual std::string Swap();
+
+
 
 };
 
@@ -204,6 +213,8 @@ public:
     virtual std::string Deletion();
     virtual std::string Insertion();
     virtual std::string Swap();
+
+
 
 };
 
