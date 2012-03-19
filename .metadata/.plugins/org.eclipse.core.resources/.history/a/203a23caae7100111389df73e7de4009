@@ -495,7 +495,11 @@ std::string DoubleMutation::Gaussian(double sigma = 1.0){
 	std::sprintf(buffer, "%f", dValue);
 	ss << buffer;
 
-	strValue = Mutation::ValidateMutation(ss.str());
+	std::cout << "0: " << ss.str() << std::endl;
+	strValue = atof(ss.str().c_str());
+	std::cout << "1: "<<strValue << std::endl;
+
+	strValue = Mutation::ValidateMutation(strValue);
 
 	return strValue;
 }
@@ -578,6 +582,16 @@ std::string DoubleMutation::Insertion(){
 		if(!(nRandom == 0 && ((strValue.at(0) == '-' && nBegin == 1) || nBegin == 0))){
 			ss << nRandom;
 			strValue.insert(nBegin, ss.str());
+		}
+	}
+
+
+	//check if there is a min attribute
+	if(m_ChromosomeNode->first_attribute("max")){
+		int nMin = atoi(m_ChromosomeNode->first_attribute("min")->value());
+		//check if the new value is smaller than min, if so return original value
+		if(atoi(strValue.c_str()) < nMin){
+			return m_strValue;
 		}
 	}
 

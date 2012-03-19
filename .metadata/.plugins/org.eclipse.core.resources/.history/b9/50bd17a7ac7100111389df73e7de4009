@@ -490,10 +490,25 @@ std::string DoubleMutation::Gaussian(double sigma = 1.0){
 
 	dValue += dChange;
 
+	//make sure new value is not smaller than min boundary
+	if(m_ChromosomeNode->first_attribute("min")){
+		if( dValue < atoi(m_ChromosomeNode->first_attribute("min")->value()) ){
+			return m_strValue;
+		}
+	}
+
+	//make sure new value is not greater than max boundary
+	if(m_ChromosomeNode->first_attribute("max")){
+		if( dValue > atoi(m_ChromosomeNode->first_attribute("max")->value()) ){
+			return m_strValue;
+		}
+	}
+
 	std::stringstream ss;//create a stringstream
 	char buffer[256]; //use sprintf to make sure no decimals are lost
 	std::sprintf(buffer, "%f", dValue);
 	ss << buffer;
+	strValue = atof(ss.str());
 
 	strValue = Mutation::ValidateMutation(ss.str());
 
@@ -578,6 +593,16 @@ std::string DoubleMutation::Insertion(){
 		if(!(nRandom == 0 && ((strValue.at(0) == '-' && nBegin == 1) || nBegin == 0))){
 			ss << nRandom;
 			strValue.insert(nBegin, ss.str());
+		}
+	}
+
+
+	//check if there is a min attribute
+	if(m_ChromosomeNode->first_attribute("max")){
+		int nMin = atoi(m_ChromosomeNode->first_attribute("min")->value());
+		//check if the new value is smaller than min, if so return original value
+		if(atoi(strValue.c_str()) < nMin){
+			return m_strValue;
 		}
 	}
 

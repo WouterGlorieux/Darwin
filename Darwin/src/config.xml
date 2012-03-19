@@ -50,17 +50,17 @@
       <GeneSwap allowed="true">0.05</GeneSwap>
     </Integer>
     <Double>
-      <BitString allowed="true">0.05</BitString>
-      <Boundary allowed="true">0.05</Boundary>
-      <Uniform allowed="true">0.05</Uniform>
-      <Gaussian allowed="true" sigma="5.0">0.05</Gaussian>
-      <Duplication allowed="true">0.05</Duplication>
-      <Deletion allowed="true">0.05</Deletion>
-      <Insertion allowed="true">0.05</Insertion>
-      <Swap allowed="true">0.05</Swap>
-      <GeneDuplication allowed="true">0.05</GeneDuplication>
-      <GeneDeletion allowed="true">0.05</GeneDeletion>
-      <GeneInsertion allowed="true">0.05</GeneInsertion>
+      <BitString allowed="true">0.0</BitString>
+      <Boundary allowed="true">0.00</Boundary>
+      <Uniform allowed="true">0.0</Uniform>
+      <Gaussian allowed="true" sigma="5.0">1</Gaussian>
+      <Duplication allowed="true">0.0</Duplication>
+      <Deletion allowed="true">0.0</Deletion>
+      <Insertion allowed="true">0.0</Insertion>
+      <Swap allowed="true">0.0</Swap>
+      <GeneDuplication allowed="true">0.01</GeneDuplication>
+      <GeneDeletion allowed="true">0.0</GeneDeletion>
+      <GeneInsertion allowed="true">0.01</GeneInsertion>
       <GeneSwap allowed="true">0.05</GeneSwap>
     </Double>
     <Alphanum>

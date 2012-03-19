@@ -91,7 +91,7 @@ std::string Mutation::ValidateMutation(std::string value){
 	//make sure new value doesn't have more decimals than allowed
 	if((m_ChromosomeNode->first_attribute("encoding")->value() == std::string("double") || m_ChromosomeNode->first_attribute("encoding")->value() == std::string("list")) && m_ChromosomeNode->first_attribute("decimals")){
 		int nDecimals = atoi(m_ChromosomeNode->first_attribute("decimals")->value());
-		size_t nFound = strValue.find('.');
+		nFound = strValue.find('.');
 		if(nFound != std::string::npos && (strValue.size()-nFound) > nDecimals){
 			strValue = strValue.substr(0, nFound + nDecimals+1);
 		}
@@ -439,8 +439,8 @@ std::string DoubleMutation::BitString(){
 		std::stringstream ss;//create a stringstream
 		ss << nNewBit;
 
-		//make sure the decimal point or minus sign is not replaced
-		if(strValue.at(nRandom) != '.' && strValue.at(nRandom) != '-'){
+		//make sure the decimal point is not replaced
+		if(strValue.at(nRandom) != '.'){
 			strValue.replace(nRandom, 1, ss.str());
 		}
 	}
@@ -490,14 +490,47 @@ std::string DoubleMutation::Gaussian(double sigma = 1.0){
 
 	dValue += dChange;
 
+	//make sure new value is not smaller than min boundary
+	if(m_ChromosomeNode->first_attribute("min")){
+		if( dValue < atoi(m_ChromosomeNode->first_attribute("min")->value()) ){
+			return m_strValue;
+		}
+	}
+
+	//make sure new value is not greater than max boundary
+	if(m_ChromosomeNode->first_attribute("max")){
+		if( dValue > atoi(m_ChromosomeNode->first_attribute("max")->value()) ){
+			return m_strValue;
+		}
+	}
+
 	std::stringstream ss;//create a stringstream
 	char buffer[256]; //use sprintf to make sure no decimals are lost
 	std::sprintf(buffer, "%f", dValue);
 	ss << buffer;
+	strValue = ss.str();
 
-	strValue = Mutation::ValidateMutation(ss.str());
+	//make sure new value doesn't have more decimals than allowed
+	if(m_ChromosomeNode->first_attribute("decimals")){
+		int nDecimals = atoi(m_ChromosomeNode->first_attribute("decimals")->value());
+		size_t nFound = strValue.find('.');
 
-	return strValue;
+		if(nFound != std::string::npos && (strValue.size()-nFound) > nDecimals){
+			//if decimals is 0, make sure the new value doesn't end with a point
+			if(nDecimals == 0){
+				nFound--;
+			}
+			strValue = strValue.substr(0, nFound + nDecimals+1);
+		}
+
+
+
+	}
+
+	std::stringstream ss2;
+	ss2 << atof(strValue.c_str());
+
+	return ss2.str();
 }
 std::string DoubleMutation::Duplication(){
 	std::string strValue = m_strValue;
@@ -529,6 +562,14 @@ std::string DoubleMutation::Duplication(){
 			strValue.insert(nBegin, strSubstring); // insert substring into strValue at index nBegin
 		}
 
+		//make sure new value doesn't have more decimals than allowed
+		if(m_ChromosomeNode->first_attribute("decimals")){
+			int nDecimals = atoi(m_ChromosomeNode->first_attribute("decimals")->value());
+			nFound = strValue.find('.');
+			if(nFound != std::string::npos && (strValue.size()-nFound) > nDecimals){
+				strValue = strValue.substr(0, nFound + nDecimals+1);
+			}
+		}
 	}
 	std::stringstream ss;
 	ss << atof(strValue.c_str());
@@ -581,6 +622,25 @@ std::string DoubleMutation::Insertion(){
 		}
 	}
 
+
+	//check if there is a min attribute
+	if(m_ChromosomeNode->first_attribute("max")){
+		int nMin = atoi(m_ChromosomeNode->first_attribute("min")->value());
+		//check if the new value is smaller than min, if so return original value
+		if(atoi(strValue.c_str()) < nMin){
+			return m_strValue;
+		}
+	}
+
+	//make sure new value doesn't have more decimals than allowed
+	if(m_ChromosomeNode->first_attribute("decimals")){
+		int nDecimals = atoi(m_ChromosomeNode->first_attribute("decimals")->value());
+		size_t nFound = strValue.find('.');
+		if(nFound != std::string::npos && (strValue.size()-nFound) > nDecimals){
+			strValue = strValue.substr(0, nFound + nDecimals+1);
+		}
+	}
+
 	std::stringstream ss;
 	ss << atof(strValue.c_str());
 
@@ -603,6 +663,15 @@ std::string DoubleMutation::Swap(){
 			strValue.at(nRandom2) = chTmp;
 		}
 
+	}
+
+	//make sure new value doesn't have more decimals than allowed
+	if(m_ChromosomeNode->first_attribute("decimals")){
+		int nDecimals = atoi(m_ChromosomeNode->first_attribute("decimals")->value());
+		size_t nFound = strValue.find('.');
+		if(nFound != std::string::npos && (strValue.size()-nFound) > nDecimals){
+			strValue = strValue.substr(0, nFound + nDecimals+1);
+		}
 	}
 
 	std::stringstream ss;

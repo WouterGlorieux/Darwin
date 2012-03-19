@@ -581,6 +581,16 @@ std::string DoubleMutation::Insertion(){
 		}
 	}
 
+
+	//check if there is a min attribute
+	if(m_ChromosomeNode->first_attribute("max")){
+		int nMin = atoi(m_ChromosomeNode->first_attribute("min")->value());
+		//check if the new value is smaller than min, if so return original value
+		if(atoi(strValue.c_str()) < nMin){
+			return m_strValue;
+		}
+	}
+
 	std::stringstream ss;
 	ss << atof(strValue.c_str());
 
