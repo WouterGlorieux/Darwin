@@ -1053,3 +1053,81 @@ Nothing to build for Darwin
 
 **** Internal Builder is used for build               ****
 Nothing to build for Tokamak
+
+**** Build of configuration Debug for project Tokamak ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -O0 -g3 -Wall -c -fmessage-length=0 -o src\Tokamak.o ..\src\Tokamak.cpp
+g++ -o Tokamak.exe src\Tokamak.o
+Build complete for project Tokamak
+Time consumed: 983  ms.  
+
+**** Build of configuration Debug for project Tokamak ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -O0 -g3 -Wall -c -fmessage-length=0 -o src\Tokamak.o ..\src\Tokamak.cpp
+g++ -o Tokamak.exe src\Tokamak.o
+Build complete for project Tokamak
+Time consumed: 952  ms.  
+
+**** Build of configuration Debug for project Tokamak ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -O0 -g3 -Wall -c -fmessage-length=0 -o src\Tokamak.o ..\src\Tokamak.cpp
+g++ -o Tokamak.exe src\Tokamak.o
+Build complete for project Tokamak
+Time consumed: 1061  ms.  
+
+**** Build of configuration Debug for project Tokamak ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -O0 -g3 -Wall -c -fmessage-length=0 -o src\Tokamak.o ..\src\Tokamak.cpp
+g++ -o Tokamak.exe src\Tokamak.o
+Build complete for project Tokamak
+Time consumed: 999  ms.  
+
+**** Build of configuration Debug for project Tokamak ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -O0 -g3 -Wall -c -fmessage-length=0 -o src\Tokamak.o ..\src\Tokamak.cpp
+..\src\Tokamak.cpp: In functie ‘int main(int, char**)’:
+..\src\Tokamak.cpp:259:16: fout: ‘m_strValue’ was not declared in this scope
+Build error occurred, build is stopped
+Time consumed: 406  ms.  
+
+**** Build of configuration Debug for project Tokamak ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -O0 -g3 -Wall -c -fmessage-length=0 -o src\Tokamak.o ..\src\Tokamak.cpp
+g++ -o Tokamak.exe src\Tokamak.o
+Build complete for project Tokamak
+Time consumed: 1045  ms.  
+
+**** Build of configuration Debug for project Tokamak ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -O0 -g3 -Wall -c -fmessage-length=0 -o src\Tokamak.o ..\src\Tokamak.cpp
+..\src\Tokamak.cpp: In functie ‘int main(int, char**)’:
+..\src\Tokamak.cpp:262:33: fout: cannot convert ‘std::basic_string<char>’ to ‘const char*’ for argument ‘1’ to ‘double atof(const char*)’
+..\src\Tokamak.cpp:263:36: fout: cannot convert ‘std::basic_string<char>’ to ‘const char*’ for argument ‘1’ to ‘double atof(const char*)’
+..\src\Tokamak.cpp:264:34: fout: cannot convert ‘std::basic_string<char>’ to ‘const char*’ for argument ‘1’ to ‘double atof(const char*)’
+Build error occurred, build is stopped
+Time consumed: 406  ms.  
+
+**** Build of configuration Debug for project Tokamak ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -O0 -g3 -Wall -c -fmessage-length=0 -o src\Tokamak.o ..\src\Tokamak.cpp
+g++ -o Tokamak.exe src\Tokamak.o
+Build complete for project Tokamak
+Time consumed: 1060  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Tokamak ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Tokamak
