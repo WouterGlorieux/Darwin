@@ -2,4 +2,6 @@
 **** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
-Nothing to build for Darwin
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 421  ms.  

@@ -3,7 +3,7 @@
   <Title>Title of this job</Title>
   <Description>A more detailed discription of this job.</Description>
   <DirectoryPath>C:\Darwin</DirectoryPath>
-  <Template>C:\Darwin\TokamakTemplate2.xml</Template>
+  <Template>C:\Darwin\TokamakTemplate.xml</Template>
   <PeriodicSave>20</PeriodicSave>
   <GenomeType>1</GenomeType>
   <FitnessFunction>Tokamak</FitnessFunction>
