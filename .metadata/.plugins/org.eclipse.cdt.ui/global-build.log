@@ -1007,3 +1007,49 @@ Nothing to build for Darwin
 
 **** Internal Builder is used for build               ****
 Nothing to build for Tokamak
+
+**** Build of configuration Debug for project Tokamak ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -O0 -g3 -Wall -c -fmessage-length=0 -o src\Tokamak.o ..\src\Tokamak.cpp
+g++ -o Tokamak.exe src\Tokamak.o
+Build complete for project Tokamak
+Time consumed: 1077  ms.  
+
+**** Build of configuration Debug for project Tokamak ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -O0 -g3 -Wall -c -fmessage-length=0 -o src\Tokamak.o ..\src\Tokamak.cpp
+g++ -o Tokamak.exe src\Tokamak.o
+Build complete for project Tokamak
+Time consumed: 951  ms.  
+
+**** Build of configuration Debug for project Tokamak ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -O0 -g3 -Wall -c -fmessage-length=0 -o src\Tokamak.o ..\src\Tokamak.cpp
+..\src\Tokamak.cpp: In functie ‘int main(int, char**)’:
+..\src\Tokamak.cpp:160:18: let op: gebruik liefst haakjes rond toewijzingen die als waarheid gebruikt worden [-Wparentheses]
+..\src\Tokamak.cpp:181:18: let op: gebruik liefst haakjes rond toewijzingen die als waarheid gebruikt worden [-Wparentheses]
+..\src\Tokamak.cpp:200:18: let op: gebruik liefst haakjes rond toewijzingen die als waarheid gebruikt worden [-Wparentheses]
+g++ -o Tokamak.exe src\Tokamak.o
+Build complete for project Tokamak
+Time consumed: 1076  ms.  
+
+**** Build of configuration Debug for project Tokamak ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -O0 -g3 -Wall -c -fmessage-length=0 -o src\Tokamak.o ..\src\Tokamak.cpp
+g++ -o Tokamak.exe src\Tokamak.o
+Build complete for project Tokamak
+Time consumed: 998  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Tokamak ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Tokamak

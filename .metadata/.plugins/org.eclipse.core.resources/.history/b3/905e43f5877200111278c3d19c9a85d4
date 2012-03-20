@@ -62,7 +62,7 @@ int main(int argc, char *argv[]) {
     rapidxml::xml_node<>* magneticNode = powerNode->next_sibling("Chromosome");
     rapidxml::xml_node<>* plasmaNode = magneticNode->next_sibling("Chromosome");
 
-    std::stringstream ss;
+    std::stringstream ss, ss2, ss3;
 
     /**
      * Power
@@ -140,74 +140,6 @@ int main(int argc, char *argv[]) {
      * integer
      ***********************************************************************************************************************/
 
-
-
-
-
-    int nInt, nDec;
-    /**
-     * Power
-     */
-    powerNode = plasmaNode->next_sibling("Chromosome");
-
-    intNode = powerNode->first_node("Gene");
-    nInt = atoi(intNode->value());
-
-    powerNode = powerNode->next_sibling("Chromosome");
-    decNode = powerNode->first_node("Gene");
-    nDec = atoi(decNode->value());
-
-    if(nInt == 100){
-    	nDec = 0;
-    }
-
-    ss.str("");
-    ss << nInt << "." << nDec;
-    dPower = atof(ss.str().c_str());
-
-
-    /**
-     * Magnetic
-     */
-    magneticNode = powerNode->next_sibling("Chromosome");
-
-    intNode = magneticNode->first_node("Gene");
-    nInt = atoi(intNode->value());
-
-    magneticNode = magneticNode->next_sibling("Chromosome");
-    decNode = magneticNode->first_node("Gene");
-    nDec = atoi(decNode->value());
-
-    if(nInt == 100){
-    	nDec = 0;
-    }
-    ss.str("");
-    ss << nInt << "." << nDec;
-    dMagnetic = atof(ss.str().c_str());
-
-    /**
-     * Plasma
-     */
-    plasmaNode = magneticNode->next_sibling("Chromosome");
-
-    intNode = plasmaNode->first_node("Gene");
-    nInt = atoi(intNode->value());
-
-    plasmaNode = plasmaNode->next_sibling("Chromosome");
-    decNode = plasmaNode->first_node("Gene");
-    nDec = atoi(decNode->value());
-
-    if(nInt == 100){
-    	nDec = 0;
-    }
-
-    ss.str("");
-    ss << nInt << "." << nDec;
-    dPlasma = atof(ss.str().c_str());
-
-
-
-    std::cout << dPower << " " << dMagnetic << " " << dPlasma << std::endl;
 
     /***********************************************************************************************************************
      * double

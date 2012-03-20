@@ -157,10 +157,6 @@ int main(int argc, char *argv[]) {
     decNode = powerNode->first_node("Gene");
     nDec = atoi(decNode->value());
 
-    if(nInt == 100){
-    	nDec = 0;
-    }
-
     ss.str("");
     ss << nInt << "." << nDec;
     dPower = atof(ss.str().c_str());
@@ -178,9 +174,6 @@ int main(int argc, char *argv[]) {
     decNode = magneticNode->first_node("Gene");
     nDec = atoi(decNode->value());
 
-    if(nInt == 100){
-    	nDec = 0;
-    }
     ss.str("");
     ss << nInt << "." << nDec;
     dMagnetic = atof(ss.str().c_str());
@@ -196,10 +189,6 @@ int main(int argc, char *argv[]) {
     plasmaNode = plasmaNode->next_sibling("Chromosome");
     decNode = plasmaNode->first_node("Gene");
     nDec = atoi(decNode->value());
-
-    if(nInt == 100){
-    	nDec = 0;
-    }
 
     ss.str("");
     ss << nInt << "." << nDec;

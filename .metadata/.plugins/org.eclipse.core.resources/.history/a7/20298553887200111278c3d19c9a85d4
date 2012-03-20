@@ -157,7 +157,7 @@ int main(int argc, char *argv[]) {
     decNode = powerNode->first_node("Gene");
     nDec = atoi(decNode->value());
 
-    if(nInt == 100){
+    if(nInt = 100){
     	nDec = 0;
     }
 
@@ -178,7 +178,7 @@ int main(int argc, char *argv[]) {
     decNode = magneticNode->first_node("Gene");
     nDec = atoi(decNode->value());
 
-    if(nInt == 100){
+    if(nInt = 100){
     	nDec = 0;
     }
     ss.str("");
@@ -197,7 +197,7 @@ int main(int argc, char *argv[]) {
     decNode = plasmaNode->first_node("Gene");
     nDec = atoi(decNode->value());
 
-    if(nInt == 100){
+    if(nInt = 100){
     	nDec = 0;
     }
 
