@@ -29,7 +29,6 @@ int main(int argc, char *argv[]) {
 	}
 	else{
 		std::cout << "Usage: Tokamak.exe inputFilename outputFilename" << std::endl;
-		exit(1);
 	}
 
 	//std::cout << "loading file: " << strFileName << std::endl;

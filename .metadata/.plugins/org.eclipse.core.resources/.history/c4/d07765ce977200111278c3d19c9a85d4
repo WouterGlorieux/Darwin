@@ -20,7 +20,3 @@ environment/buildEnvironmentLibrary/cdt.managedbuild.config.gnu.mingw.exe.debug.
 environment/buildEnvironmentLibrary/cdt.managedbuild.config.gnu.mingw.exe.debug.117227151/LIBRARY_PATH/operation=remove
 environment/buildEnvironmentLibrary/cdt.managedbuild.config.gnu.mingw.exe.debug.117227151/append=true
 environment/buildEnvironmentLibrary/cdt.managedbuild.config.gnu.mingw.exe.debug.117227151/appendContributed=true
-environment/buildEnvironmentLibrary/cdt.managedbuild.config.gnu.mingw.exe.release.5228502/LIBRARY_PATH/delimiter=;
-environment/buildEnvironmentLibrary/cdt.managedbuild.config.gnu.mingw.exe.release.5228502/LIBRARY_PATH/operation=remove
-environment/buildEnvironmentLibrary/cdt.managedbuild.config.gnu.mingw.exe.release.5228502/append=true
-environment/buildEnvironmentLibrary/cdt.managedbuild.config.gnu.mingw.exe.release.5228502/appendContributed=true

@@ -21,26 +21,17 @@ double StringToDouble(std::string value);
 
 int main(int argc, char *argv[]) {
 	std::string strFileName = "";
-	std::string strOutputFileName = "";
 
-	if(argc == 3){
+	if(argc == 2 || argc == 3){
 		strFileName= argv[1];
-		strOutputFileName= argv[2];
-	}
-	else{
-		std::cout << "Usage: Tokamak.exe inputFilename outputFilename" << std::endl;
-		exit(1);
 	}
 
-	//std::cout << "loading file: " << strFileName << std::endl;
+	std::cout << "loading file: " << strFileName << std::endl;
 	std::ifstream t(strFileName.c_str());
 	std::stringstream buffer;
 	buffer << t.rdbuf();
 
 	std::string input_xml = buffer.str() ;
-
-	std::ofstream output(strOutputFileName.c_str());
-
 
     // make a safe-to-modify copy of input_xml
     // (you should never modify the contents of an std::string directly)
@@ -143,7 +134,7 @@ int main(int argc, char *argv[]) {
 
 
 
-    output << dPower << " " << dMagnetic << " " << dPlasma << std::endl;
+    std::cout << dPower << " " << dMagnetic << " " << dPlasma << std::endl;
 
 
 
@@ -218,7 +209,7 @@ int main(int argc, char *argv[]) {
 
 
 
-    output << dPower << " " << dMagnetic << " " << dPlasma << std::endl;
+    std::cout << dPower << " " << dMagnetic << " " << dPlasma << std::endl;
 
     /***********************************************************************************************************************
      * double
@@ -232,7 +223,7 @@ int main(int argc, char *argv[]) {
     dMagnetic = atof(magneticNode->first_node("Gene")->value());
     dPlasma = atof(plasmaNode->first_node("Gene")->value());
 
-    output << dPower << " " << dMagnetic << " " << dPlasma << std::endl;
+    std::cout << dPower << " " << dMagnetic << " " << dPlasma << std::endl;
 
     /***********************************************************************************************************************
      * alphanum
@@ -241,13 +232,13 @@ int main(int argc, char *argv[]) {
     magneticNode = powerNode->next_sibling("Chromosome");
     plasmaNode = magneticNode->next_sibling("Chromosome");
 
+   StringToDouble(powerNode->first_node("Gene")->value());
 
+    dPower = atof(powerNode->first_node("Gene")->value());
+    dMagnetic = atof(magneticNode->first_node("Gene")->value());
+    dPlasma = atof(plasmaNode->first_node("Gene")->value());
 
-    dPower = StringToDouble(powerNode->first_node("Gene")->value());
-    dMagnetic = StringToDouble(magneticNode->first_node("Gene")->value());
-    dPlasma = StringToDouble(plasmaNode->first_node("Gene")->value());
-
-    output << dPower << " " << dMagnetic << " " << dPlasma << std::endl;
+    std::cout << dPower << " " << dMagnetic << " " << dPlasma << std::endl;
 
     /***********************************************************************************************************************
      * custom
@@ -260,7 +251,7 @@ int main(int argc, char *argv[]) {
     dMagnetic = atof(magneticNode->first_node("Gene")->value())/100;
     dPlasma = atof(plasmaNode->first_node("Gene")->value())/100;
 
-    output << dPower << " " << dMagnetic << " " << dPlasma << std::endl;
+    std::cout << dPower << " " << dMagnetic << " " << dPlasma << std::endl;
     /***********************************************************************************************************************
      * list
      ***********************************************************************************************************************/
@@ -275,10 +266,9 @@ int main(int argc, char *argv[]) {
     dMagnetic = atof(vstrData.at(1).c_str());
     dPlasma = atof(vstrData.at(2).c_str());
 
-    output << dPower << " " << dMagnetic << " " << dPlasma << std::endl;
+    std::cout << dPower << " " << dMagnetic << " " << dPlasma << std::endl;
 
 
-    output.close();
 	return 0;
 }
 
@@ -300,21 +290,14 @@ void StringExplode(std::string str, std::string separator, std::vector<std::stri
 
 double StringToDouble(std::string value){
 	double dValue = 0.0;
-	std::string characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-
 
 	for(unsigned int i = 0; i < value.size(); i++){
-		dValue += characters.find(value.at(i));
+		dValue += (int)value.at(i);
 	}
 
-	dValue = (dValue / (value.size()*61))*100;
+	std::cout << "sum of values: " << dValue << std::endl;
 
-	std::stringstream ss;//create a stringstream
-	char buffer[256]; //use sprintf to make sure no decimals are lost
-	std::sprintf(buffer, "%.2f", dValue);
-	ss << buffer;
 
-	dValue = atof(ss.str().c_str());
 
-	return dValue;
+	return 0.0;
 }
