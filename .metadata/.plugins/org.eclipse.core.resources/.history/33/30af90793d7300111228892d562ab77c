@@ -349,7 +349,7 @@ void Evolver::TranslateGenomes(Population* population){
 		ss.str("");
 		ss << m_strCandidatesPath << i << ".txt";
 		strOutputFile = ss.str();
-		spawnl(P_WAIT, m_strRosetta.c_str(), m_strRosetta.c_str(), strInputFile.c_str(), strOutputFile.c_str() , NULL);
+		spawnl(P_WAIT, m_strRosetta.c_str(), "Tokamak.exe", strInputFile.c_str(), strOutputFile.c_str() , NULL);
 	}
 
 }
