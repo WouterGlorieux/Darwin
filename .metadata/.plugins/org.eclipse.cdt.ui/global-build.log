@@ -1,16 +1,707 @@
 
-**** Build of configuration Release for project Tokamak ****
+**** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
-g++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\include -O3 -Wall -c -fmessage-length=0 -o src\Tokamak.o ..\src\Tokamak.cpp
-g++ -o Tokamak.exe src\Tokamak.o
-Build complete for project Tokamak
-Time consumed: 1381  ms.  
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::TranslateGenomes(Population*)’:
+..\src\Evolver.cpp:362:13: fout: invalid conversion from ‘const char*’ to ‘LPSTR {aka char*}’ [-fpermissive]
+..\src\Evolver.cpp:362:13: fout: cannot convert ‘const char*’ to ‘LPSECURITY_ATTRIBUTES {aka _SECURITY_ATTRIBUTES*}’ for argument ‘3’ to ‘BOOL CreateProcessA(LPCSTR, LPSTR, LPSECURITY_ATTRIBUTES, LPSECURITY_ATTRIBUTES, BOOL, DWORD, PVOID, LPCSTR, LPSTARTUPINFOA, LPPROCESS_INFORMATION)’
+Build error occurred, build is stopped
+Time consumed: 655  ms.  
 
-**** Build of configuration Debug for project Tokamak ****
+**** Build of configuration Debug for project Darwin ****
 
 **** Internal Builder is used for build               ****
-Nothing to build for Tokamak
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::TranslateGenomes(Population*)’:
+..\src\Evolver.cpp:366:5: fout: invalid conversion from ‘const char*’ to ‘LPSTR {aka char*}’ [-fpermissive]
+..\src\Evolver.cpp:366:5: fout: cannot convert ‘const char*’ to ‘LPSECURITY_ATTRIBUTES {aka _SECURITY_ATTRIBUTES*}’ for argument ‘3’ to ‘BOOL CreateProcessA(LPCSTR, LPSTR, LPSECURITY_ATTRIBUTES, LPSECURITY_ATTRIBUTES, BOOL, DWORD, PVOID, LPCSTR, LPSTARTUPINFOA, LPPROCESS_INFORMATION)’
+..\src\Evolver.cpp:367:5: fout: expected ‘)’ before ‘{’ token
+Build error occurred, build is stopped
+Time consumed: 796  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::TranslateGenomes(Population*)’:
+..\src\Evolver.cpp:365:24: fout: invalid conversion from ‘const char*’ to ‘LPSTR {aka char*}’ [-fpermissive]
+..\src\Evolver.cpp:365:24: fout: cannot convert ‘const char*’ to ‘LPSECURITY_ATTRIBUTES {aka _SECURITY_ATTRIBUTES*}’ for argument ‘3’ to ‘BOOL CreateProcessA(LPCSTR, LPSTR, LPSECURITY_ATTRIBUTES, LPSECURITY_ATTRIBUTES, BOOL, DWORD, PVOID, LPCSTR, LPSTARTUPINFOA, LPPROCESS_INFORMATION)’
+Build error occurred, build is stopped
+Time consumed: 718  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::TranslateGenomes(Population*)’:
+..\src\Evolver.cpp:362:13: fout: invalid conversion from ‘const char*’ to ‘LPSTR {aka char*}’ [-fpermissive]
+..\src\Evolver.cpp:362:13: fout: cannot convert ‘const char*’ to ‘LPSECURITY_ATTRIBUTES {aka _SECURITY_ATTRIBUTES*}’ for argument ‘3’ to ‘BOOL CreateProcessA(LPCSTR, LPSTR, LPSECURITY_ATTRIBUTES, LPSECURITY_ATTRIBUTES, BOOL, DWORD, PVOID, LPCSTR, LPSTARTUPINFOA, LPPROCESS_INFORMATION)’
+Build error occurred, build is stopped
+Time consumed: 717  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::TranslateGenomes(Population*)’:
+..\src\Evolver.cpp:362:12: fout: invalid conversion from ‘const char*’ to ‘LPSTR {aka char*}’ [-fpermissive]
+..\src\Evolver.cpp:362:12: fout: cannot convert ‘const char*’ to ‘LPSECURITY_ATTRIBUTES {aka _SECURITY_ATTRIBUTES*}’ for argument ‘3’ to ‘BOOL CreateProcessA(LPCSTR, LPSTR, LPSECURITY_ATTRIBUTES, LPSECURITY_ATTRIBUTES, BOOL, DWORD, PVOID, LPCSTR, LPSTARTUPINFOA, LPPROCESS_INFORMATION)’
+..\src\Evolver.cpp:370:29: fout: request for member ‘hProcess’ in ‘pi’, which is of non-class type ‘PROCESS_INFORMATION* {aka _PROCESS_INFORMATION*}’
+..\src\Evolver.cpp:373:21: fout: request for member ‘hProcess’ in ‘pi’, which is of non-class type ‘PROCESS_INFORMATION* {aka _PROCESS_INFORMATION*}’
+..\src\Evolver.cpp:374:21: fout: request for member ‘hThread’ in ‘pi’, which is of non-class type ‘PROCESS_INFORMATION* {aka _PROCESS_INFORMATION*}’
+Build error occurred, build is stopped
+Time consumed: 758  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::TranslateGenomes(Population*)’:
+..\src\Evolver.cpp:362:13: fout: invalid conversion from ‘const char*’ to ‘LPSTR {aka char*}’ [-fpermissive]
+..\src\Evolver.cpp:362:13: fout: cannot convert ‘const char*’ to ‘LPSECURITY_ATTRIBUTES {aka _SECURITY_ATTRIBUTES*}’ for argument ‘3’ to ‘BOOL CreateProcessA(LPCSTR, LPSTR, LPSECURITY_ATTRIBUTES, LPSECURITY_ATTRIBUTES, BOOL, DWORD, PVOID, LPCSTR, LPSTARTUPINFOA, LPPROCESS_INFORMATION)’
+Build error occurred, build is stopped
+Time consumed: 692  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::TranslateGenomes(Population*)’:
+..\src\Evolver.cpp:362:10: fout: no match for ‘operator*’ in ‘*pi’
+Build error occurred, build is stopped
+Time consumed: 721  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::TranslateGenomes(Population*)’:
+..\src\Evolver.cpp:362:12: fout: invalid conversion from ‘const char*’ to ‘LPSTR {aka char*}’ [-fpermissive]
+..\src\Evolver.cpp:362:12: fout: cannot convert ‘const char*’ to ‘LPSECURITY_ATTRIBUTES {aka _SECURITY_ATTRIBUTES*}’ for argument ‘3’ to ‘BOOL CreateProcessA(LPCSTR, LPSTR, LPSECURITY_ATTRIBUTES, LPSECURITY_ATTRIBUTES, BOOL, DWORD, PVOID, LPCSTR, LPSTARTUPINFOA, LPPROCESS_INFORMATION)’
+Build error occurred, build is stopped
+Time consumed: 802  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::TranslateGenomes(Population*)’:
+..\src\Evolver.cpp:362:13: fout: invalid conversion from ‘const char*’ to ‘LPSTR {aka char*}’ [-fpermissive]
+..\src\Evolver.cpp:362:13: fout: cannot convert ‘const char*’ to ‘LPSECURITY_ATTRIBUTES {aka _SECURITY_ATTRIBUTES*}’ for argument ‘3’ to ‘BOOL CreateProcessA(LPCSTR, LPSTR, LPSECURITY_ATTRIBUTES, LPSECURITY_ATTRIBUTES, BOOL, DWORD, PVOID, LPCSTR, LPSTARTUPINFOA, LPPROCESS_INFORMATION)’
+Build error occurred, build is stopped
+Time consumed: 758  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::TranslateGenomes(Population*)’:
+..\src\Evolver.cpp:362:13: fout: invalid conversion from ‘const char*’ to ‘LPSTR {aka char*}’ [-fpermissive]
+..\src\Evolver.cpp:362:13: fout: cannot convert ‘const char*’ to ‘LPSECURITY_ATTRIBUTES {aka _SECURITY_ATTRIBUTES*}’ for argument ‘3’ to ‘BOOL CreateProcessA(LPCSTR, LPSTR, LPSECURITY_ATTRIBUTES, LPSECURITY_ATTRIBUTES, BOOL, DWORD, PVOID, LPCSTR, LPSTARTUPINFOA, LPPROCESS_INFORMATION)’
+Build error occurred, build is stopped
+Time consumed: 722  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::TranslateGenomes(Population*)’:
+..\src\Evolver.cpp:362:13: fout: invalid conversion from ‘const char*’ to ‘LPSTR {aka char*}’ [-fpermissive]
+..\src\Evolver.cpp:362:13: fout: cannot convert ‘const char*’ to ‘LPSECURITY_ATTRIBUTES {aka _SECURITY_ATTRIBUTES*}’ for argument ‘3’ to ‘BOOL CreateProcessA(LPCSTR, LPSTR, LPSECURITY_ATTRIBUTES, LPSECURITY_ATTRIBUTES, BOOL, DWORD, PVOID, LPCSTR, LPSTARTUPINFOA, LPPROCESS_INFORMATION)’
+Build error occurred, build is stopped
+Time consumed: 689  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 3298  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2191  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::TranslateGenomes(Population*)’:
+..\src\Evolver.cpp:338:35: fout: cannot convert ‘std::string {aka std::basic_string<char>}’ to ‘const char*’ for argument ‘1’ to ‘intptr_t execl(const char*, const char*, ...)’
+Build error occurred, build is stopped
+Time consumed: 776  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::TranslateGenomes(Population*)’:
+..\src\Evolver.cpp:338:51: let op: not enough variable arguments to fit a sentinel [-Wformat]
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2436  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::TranslateGenomes(Population*)’:
+..\src\Evolver.cpp:338:28: fout: too few arguments to function ‘intptr_t execl(const char*, const char*, ...)’
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/process.h:114:42: note: declared here
+Build error occurred, build is stopped
+Time consumed: 740  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::TranslateGenomes(Population*)’:
+..\src\Evolver.cpp:340:37: let op: not enough variable arguments to fit a sentinel [-Wformat]
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2233  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::TranslateGenomes(Population*)’:
+..\src\Evolver.cpp:338:31: let op: not enough variable arguments to fit a sentinel [-Wformat]
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2284  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2204  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2253  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::TranslateGenomes(Population*)’:
+..\src\Evolver.cpp:338:23: fout: cannot convert ‘std::string {aka std::basic_string<char>}’ to ‘const char*’ for argument ‘1’ to ‘intptr_t execl(const char*, const char*, ...)’
+Build error occurred, build is stopped
+Time consumed: 678  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::TranslateGenomes(Population*)’:
+..\src\Evolver.cpp:338:23: fout: cannot convert ‘std::string {aka std::basic_string<char>}’ to ‘const char*’ for argument ‘1’ to ‘intptr_t execl(const char*, const char*, ...)’
+Build error occurred, build is stopped
+Time consumed: 676  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::TranslateGenomes(Population*)’:
+..\src\Evolver.cpp:338:31: let op: not enough variable arguments to fit a sentinel [-Wformat]
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2218  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::TranslateGenomes(Population*)’:
+..\src\Evolver.cpp:338:36: let op: not enough variable arguments to fit a sentinel [-Wformat]
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2253  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::TranslateGenomes(Population*)’:
+..\src\Evolver.cpp:338:36: let op: not enough variable arguments to fit a sentinel [-Wformat]
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2240  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::TranslateGenomes(Population*)’:
+..\src\Evolver.cpp:352:9: fout: ‘argc’ was not declared in this scope
+..\src\Evolver.cpp:354:41: fout: ‘argv’ was not declared in this scope
+..\src\Evolver.cpp:372:13: let op: deprecated conversion from string constant to ‘LPSTR {aka char*}’ [-Wwrite-strings]
+..\src\Evolver.cpp:372:13: fout: cannot convert ‘const char*’ to ‘LPSECURITY_ATTRIBUTES {aka _SECURITY_ATTRIBUTES*}’ for argument ‘3’ to ‘BOOL CreateProcessA(LPCSTR, LPSTR, LPSECURITY_ATTRIBUTES, LPSECURITY_ATTRIBUTES, BOOL, DWORD, PVOID, LPCSTR, LPSTARTUPINFOA, LPPROCESS_INFORMATION)’
+Build error occurred, build is stopped
+Time consumed: 750  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::TranslateGenomes(Population*)’:
+..\src\Evolver.cpp:362:13: let op: deprecated conversion from string constant to ‘LPSTR {aka char*}’ [-Wwrite-strings]
+..\src\Evolver.cpp:362:13: fout: cannot convert ‘const char*’ to ‘LPSECURITY_ATTRIBUTES {aka _SECURITY_ATTRIBUTES*}’ for argument ‘3’ to ‘BOOL CreateProcessA(LPCSTR, LPSTR, LPSECURITY_ATTRIBUTES, LPSECURITY_ATTRIBUTES, BOOL, DWORD, PVOID, LPCSTR, LPSTARTUPINFOA, LPPROCESS_INFORMATION)’
+Build error occurred, build is stopped
+Time consumed: 705  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::TranslateGenomes(Population*)’:
+..\src\Evolver.cpp:340:37: let op: not enough variable arguments to fit a sentinel [-Wformat]
+..\src\Evolver.cpp:342:36: let op: not enough variable arguments to fit a sentinel [-Wformat]
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2278  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::TranslateGenomes(Population*)’:
+..\src\Evolver.cpp:340:41: let op: sentinel ontbreekt in functie-oproep [-Wformat]
+..\src\Evolver.cpp:342:36: let op: not enough variable arguments to fit a sentinel [-Wformat]
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2218  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::TranslateGenomes(Population*)’:
+..\src\Evolver.cpp:342:36: let op: not enough variable arguments to fit a sentinel [-Wformat]
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2193  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2242  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2266  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::TranslateGenomes(Population*)’:
+..\src\Evolver.cpp:340:37: let op: not enough variable arguments to fit a sentinel [-Wformat]
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2258  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::TranslateGenomes(Population*)’:
+..\src\Evolver.cpp:342:56: let op: not enough variable arguments to fit a sentinel [-Wformat]
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2246  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::TranslateGenomes(Population*)’:
+..\src\Evolver.cpp:342:98: let op: not enough variable arguments to fit a sentinel [-Wformat]
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2315  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::TranslateGenomes(Population*)’:
+..\src\Evolver.cpp:342:102: let op: sentinel ontbreekt in functie-oproep [-Wformat]
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2951  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::TranslateGenomes(Population*)’:
+..\src\Evolver.cpp:342:113: let op: sentinel ontbreekt in functie-oproep [-Wformat]
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2273  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::TranslateGenomes(Population*)’:
+..\src\Evolver.cpp:342:100: let op: sentinel ontbreekt in functie-oproep [-Wformat]
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2246  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::TranslateGenomes(Population*)’:
+..\src\Evolver.cpp:342:103: let op: sentinel ontbreekt in functie-oproep [-Wformat]
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2247  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::TranslateGenomes(Population*)’:
+..\src\Evolver.cpp:342:116: let op: sentinel ontbreekt in functie-oproep [-Wformat]
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2214  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::TranslateGenomes(Population*)’:
+..\src\Evolver.cpp:342:8: let op: onbekende escape sequence: '\d' [enabled by default]
+..\src\Evolver.cpp:342:8: let op: onbekende escape sequence: '\T' [enabled by default]
+..\src\Evolver.cpp:342:48: let op: onbekende escape sequence: '\D' [enabled by default]
+..\src\Evolver.cpp:342:79: let op: onbekende escape sequence: '\D' [enabled by default]
+..\src\Evolver.cpp:342:79: let op: onbekende escape sequence: '\C' [enabled by default]
+..\src\Evolver.cpp:342:109: let op: sentinel ontbreekt in functie-oproep [-Wformat]
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2170  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::TranslateGenomes(Population*)’:
+..\src\Evolver.cpp:342:112: let op: sentinel ontbreekt in functie-oproep [-Wformat]
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2295  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp:342:8: let op: karakterconstante te lang voor zijn type [enabled by default]
+..\src\Evolver.cpp:342:35: let op: karakterconstante te lang voor zijn type [enabled by default]
+..\src\Evolver.cpp:342:46: let op: karakterconstante te lang voor zijn type [enabled by default]
+..\src\Evolver.cpp:342:79: let op: karakterconstante te lang voor zijn type [enabled by default]
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::TranslateGenomes(Population*)’:
+..\src\Evolver.cpp:342:112: fout: invalid conversion from ‘int’ to ‘const char*’ [-fpermissive]
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/process.h:114:42: fout:   initializing argument 1 of ‘intptr_t execl(const char*, const char*, ...)’ [-fpermissive]
+..\src\Evolver.cpp:342:112: fout: invalid conversion from ‘int’ to ‘const char*’ [-fpermissive]
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/../../../../include/process.h:114:42: fout:   initializing argument 2 of ‘intptr_t execl(const char*, const char*, ...)’ [-fpermissive]
+..\src\Evolver.cpp:342:112: let op: sentinel ontbreekt in functie-oproep [-Wformat]
+Build error occurred, build is stopped
+Time consumed: 730  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::TranslateGenomes(Population*)’:
+..\src\Evolver.cpp:340:53: let op: sentinel ontbreekt in functie-oproep [-Wformat]
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2238  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2228  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2206  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2240  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2195  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2251  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2450  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2220  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2233  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::TranslateGenomes(Population*)’:
+..\src\Evolver.cpp:340:41: let op: left operand of comma operator has no effect [-Wunused-value]
+..\src\Evolver.cpp:340:43: fout: expected ‘;’ before ‘)’ token
+..\src\Evolver.cpp:341:34: fout: no match for ‘operator+’ in ‘((Evolver*)this)->Evolver::m_strSavePath + i’
+..\src\Evolver.cpp:341:34: note: candidates are:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:352:3: note: std::_Bit_const_iterator std::operator+(std::ptrdiff_t, const std::_Bit_const_iterator&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:352:3: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘std::ptrdiff_t {aka int}’
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:266:3: note: std::_Bit_iterator std::operator+(std::ptrdiff_t, const std::_Bit_iterator&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:266:3: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘std::ptrdiff_t {aka int}’
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2359:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, _CharT)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2343:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.tcc:710:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(_CharT, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.tcc:694:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const _CharT*, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2306:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:327:5: note: template<class _Iterator> std::reverse_iterator<_Iterator> std::operator+(typename std::reverse_iterator<_Iterator>::difference_type, const std::reverse_iterator<_Iterator>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:896:5: note: template<class _Iterator, class _Container> __gnu_cxx::__normal_iterator<_Iterator, _Container> __gnu_cxx::operator+(typename __gnu_cxx::__normal_iterator<_Iterator, _Container>::difference_type, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)
+..\src\Evolver.cpp:342:41: fout: no match for ‘operator+’ in ‘((Evolver*)this)->Evolver::m_strCandidatesPath + i’
+..\src\Evolver.cpp:342:41: note: candidates are:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:352:3: note: std::_Bit_const_iterator std::operator+(std::ptrdiff_t, const std::_Bit_const_iterator&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:352:3: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘std::ptrdiff_t {aka int}’
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:266:3: note: std::_Bit_iterator std::operator+(std::ptrdiff_t, const std::_Bit_iterator&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:266:3: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘std::ptrdiff_t {aka int}’
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2359:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, _CharT)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2343:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.tcc:710:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(_CharT, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.tcc:694:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const _CharT*, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2306:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:327:5: note: template<class _Iterator> std::reverse_iterator<_Iterator> std::operator+(typename std::reverse_iterator<_Iterator>::difference_type, const std::reverse_iterator<_Iterator>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:896:5: note: template<class _Iterator, class _Container> __gnu_cxx::__normal_iterator<_Iterator, _Container> __gnu_cxx::operator+(typename __gnu_cxx::__normal_iterator<_Iterator, _Container>::difference_type, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)
+Build error occurred, build is stopped
+Time consumed: 1482  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::TranslateGenomes(Population*)’:
+..\src\Evolver.cpp:341:34: fout: no match for ‘operator+’ in ‘((Evolver*)this)->Evolver::m_strSavePath + i’
+..\src\Evolver.cpp:341:34: note: candidates are:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:352:3: note: std::_Bit_const_iterator std::operator+(std::ptrdiff_t, const std::_Bit_const_iterator&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:352:3: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘std::ptrdiff_t {aka int}’
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:266:3: note: std::_Bit_iterator std::operator+(std::ptrdiff_t, const std::_Bit_iterator&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:266:3: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘std::ptrdiff_t {aka int}’
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2359:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, _CharT)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2343:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.tcc:710:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(_CharT, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.tcc:694:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const _CharT*, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2306:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:327:5: note: template<class _Iterator> std::reverse_iterator<_Iterator> std::operator+(typename std::reverse_iterator<_Iterator>::difference_type, const std::reverse_iterator<_Iterator>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:896:5: note: template<class _Iterator, class _Container> __gnu_cxx::__normal_iterator<_Iterator, _Container> __gnu_cxx::operator+(typename __gnu_cxx::__normal_iterator<_Iterator, _Container>::difference_type, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)
+..\src\Evolver.cpp:342:41: fout: no match for ‘operator+’ in ‘((Evolver*)this)->Evolver::m_strCandidatesPath + i’
+..\src\Evolver.cpp:342:41: note: candidates are:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:352:3: note: std::_Bit_const_iterator std::operator+(std::ptrdiff_t, const std::_Bit_const_iterator&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:352:3: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘std::ptrdiff_t {aka int}’
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:266:3: note: std::_Bit_iterator std::operator+(std::ptrdiff_t, const std::_Bit_iterator&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:266:3: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘std::ptrdiff_t {aka int}’
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2359:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, _CharT)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2343:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.tcc:710:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(_CharT, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.tcc:694:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const _CharT*, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2306:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:327:5: note: template<class _Iterator> std::reverse_iterator<_Iterator> std::operator+(typename std::reverse_iterator<_Iterator>::difference_type, const std::reverse_iterator<_Iterator>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:896:5: note: template<class _Iterator, class _Container> __gnu_cxx::__normal_iterator<_Iterator, _Container> __gnu_cxx::operator+(typename __gnu_cxx::__normal_iterator<_Iterator, _Container>::difference_type, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)
+Build error occurred, build is stopped
+Time consumed: 1233  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::TranslateGenomes(Population*)’:
+..\src\Evolver.cpp:341:47: fout: invalid conversion from ‘int’ to ‘const char*’ [-fpermissive]
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.tcc:214:5: fout:   initializing argument 1 of ‘std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>]’ [-fpermissive]
+..\src\Evolver.cpp:342:54: fout: invalid conversion from ‘int’ to ‘const char*’ [-fpermissive]
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.tcc:214:5: fout:   initializing argument 1 of ‘std::basic_string<_CharT, _Traits, _Alloc>::basic_string(const _CharT*, const _Alloc&) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>]’ [-fpermissive]
+Build error occurred, build is stopped
+Time consumed: 702  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+..\src\Evolver.cpp: In memberfunctie ‘void Evolver::TranslateGenomes(Population*)’:
+..\src\Evolver.cpp:343:25: fout: no match for ‘operator+’ in ‘((Evolver*)this)->Evolver::m_strSavePath + i’
+..\src\Evolver.cpp:343:25: note: candidates are:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:352:3: note: std::_Bit_const_iterator std::operator+(std::ptrdiff_t, const std::_Bit_const_iterator&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:352:3: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘std::ptrdiff_t {aka int}’
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:266:3: note: std::_Bit_iterator std::operator+(std::ptrdiff_t, const std::_Bit_iterator&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:266:3: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘std::ptrdiff_t {aka int}’
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2359:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, _CharT)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2343:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.tcc:710:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(_CharT, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.tcc:694:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const _CharT*, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2306:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:327:5: note: template<class _Iterator> std::reverse_iterator<_Iterator> std::operator+(typename std::reverse_iterator<_Iterator>::difference_type, const std::reverse_iterator<_Iterator>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:896:5: note: template<class _Iterator, class _Container> __gnu_cxx::__normal_iterator<_Iterator, _Container> __gnu_cxx::operator+(typename __gnu_cxx::__normal_iterator<_Iterator, _Container>::difference_type, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)
+..\src\Evolver.cpp:346:31: fout: no match for ‘operator+’ in ‘((Evolver*)this)->Evolver::m_strCandidatesPath + i’
+..\src\Evolver.cpp:346:31: note: candidates are:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:352:3: note: std::_Bit_const_iterator std::operator+(std::ptrdiff_t, const std::_Bit_const_iterator&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:352:3: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘std::ptrdiff_t {aka int}’
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:266:3: note: std::_Bit_iterator std::operator+(std::ptrdiff_t, const std::_Bit_iterator&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_bvector.h:266:3: note:   no known conversion for argument 1 from ‘std::string {aka std::basic_string<char>}’ to ‘std::ptrdiff_t {aka int}’
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2359:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, _CharT)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2343:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.tcc:710:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(_CharT, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.tcc:694:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const _CharT*, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2306:5: note: template<class _CharT, class _Traits, class _Alloc> std::basic_string<_CharT, _Traits, _Alloc> std::operator+(const std::basic_string<_CharT, _Traits, _Alloc>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:327:5: note: template<class _Iterator> std::reverse_iterator<_Iterator> std::operator+(typename std::reverse_iterator<_Iterator>::difference_type, const std::reverse_iterator<_Iterator>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:896:5: note: template<class _Iterator, class _Container> __gnu_cxx::__normal_iterator<_Iterator, _Container> __gnu_cxx::operator+(typename __gnu_cxx::__normal_iterator<_Iterator, _Container>::difference_type, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)
+Build error occurred, build is stopped
+Time consumed: 1232  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 3198  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2308  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2356  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2200  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2294  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 2339  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
 
 **** Build of configuration Debug for project Darwin ****
 

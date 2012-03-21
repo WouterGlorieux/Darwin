@@ -15,7 +15,11 @@
 #include "Recombination.h"
 #include "MutationChance.h"
 
+#include <windows.h>
+#include <stdio.h>
+#include <tchar.h>
 
+#include <process.h>
 
 class Evolver
 {
@@ -24,8 +28,10 @@ private:
 	std::string m_strPath; 				//Path to working directory
 	std::string m_strSavePath;       	//Path to save directory
 	std::string m_strChampionsPath;   	//Path to directory with genomes with highest fitness of each generation
+	std::string m_strCandidatesPath;    //Path to directory with candidates
 
 	std::string m_strTemplate;			//filename of genome template xml
+	std::string m_strRosetta;			//filename of rosetta exe
 	int m_nPeriodicSave;				//Save every n generations
 
     std::string m_strTitle;			//Title of this job
@@ -86,6 +92,8 @@ public:
     void start(bool loadLastSave);
 
     std::vector<Parent> MakeSelection(Population* population);
+
+    void TranslateGenomes(Population* population);
 
     int SaveChampion(Population* champion);
     int SaveFinalSolution(Population* champion);

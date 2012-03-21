@@ -40,10 +40,11 @@ void Evolver::traverse_xml(const std::string& input_xml)
     m_strPath = rootNode->first_node("DirectoryPath")->value();
     m_strSavePath = m_strPath + "\\Save\\";
     m_strChampionsPath = m_strPath + "\\Champions\\";
+    m_strCandidatesPath = m_strPath + "\\Candidates\\";
     m_nPeriodicSave = rootNode->first_node("PeriodicSave")?atoi(rootNode->first_node("PeriodicSave")->value()):1;
     m_strTemplate = rootNode->first_node("Template")->value();
+    m_strRosetta = rootNode->first_node("Rosetta")->value();
 
-    m_eGenomeType = static_cast<GenomeType> (atoi(rootNode->first_node("GenomeType")->value()));
 
     rapidxml::xml_node<>* settingsNode = rootNode->first_node("Settings");
     m_nPopulationSize = atoi(settingsNode->first_node("PopulationSize")->value());
@@ -93,6 +94,7 @@ void Evolver::printSettings(){
 	std::cout << "Save path: " << m_strSavePath << std::endl;
 	std::cout << "Champions path: " << m_strChampionsPath << std::endl;
 	std::cout << "Template: " << m_strTemplate << std::endl;
+	std::cout << "Rosetta: " << m_strRosetta << std::endl;
 	std::cout << "PopulationSize: " << m_nPopulationSize << std::endl;
 	std::cout << "Max Generations: " << m_nMaxGenerations << std::endl << std::endl;
 
@@ -173,6 +175,12 @@ while(DoNextGeneration()){
 	start = clock();
 	std::cout << "Generation " << m_nGeneration;
 
+	//save this generation
+	Evolver::SaveGeneration(pacPopulation);
+
+	//TranslateGenomes into Candidates
+	Evolver::TranslateGenomes(pacPopulation);
+
 	//calculate fitness
 	for(int i = 0; i<m_nPopulationSize; i++ ){
 		pacPopulation[i].CalcFitness();
@@ -246,9 +254,7 @@ while(DoNextGeneration()){
 		//pacPopulation[i].SetGenomeType(m_eGenomeType);
 	}
 
-	//save this generation
-	if((m_nGeneration % m_nPeriodicSave) == 0)
-		Evolver::SaveGeneration(pacPopulation);
+
 
 
 
@@ -270,6 +276,7 @@ while(DoNextGeneration()){
 	delete[] pacNextGeneration;
 
 	std::cout << "Evolution finished" << std::endl;
+
 }
 
 bool Evolver::DoNextGeneration(){
@@ -328,6 +335,25 @@ bool Evolver::DoNextGeneration(){
 
 	return doNextGeneration;
 }
+
+void Evolver::TranslateGenomes(Population* population){
+
+	std::string strInputFile;
+	std::string strOutputFile;
+
+	std::stringstream ss;
+	for(int i = 0; i < m_nPopulationSize; i++){
+		ss.str("");
+		ss << m_strSavePath << i << ".xml";
+		strInputFile = ss.str();
+		ss.str("");
+		ss << m_strCandidatesPath << i << ".txt";
+		strOutputFile = ss.str();
+		spawnl(P_WAIT, m_strRosetta.c_str(), "Tokamak.exe", strInputFile.c_str(), strOutputFile.c_str() , NULL);
+	}
+
+}
+
 
 int Evolver::SaveChampion(Population* champion){
 	std::stringstream strFilename ;

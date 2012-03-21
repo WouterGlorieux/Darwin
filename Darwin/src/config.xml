@@ -4,8 +4,8 @@
   <Description>A more detailed discription of this job.</Description>
   <DirectoryPath>C:\Darwin</DirectoryPath>
   <Template>C:\Darwin\TokamakTemplate.xml</Template>
+  <Rosetta>C:\\Darwin\\Tokamak.exe</Rosetta>
   <PeriodicSave>20</PeriodicSave>
-  <GenomeType>1</GenomeType>
   <FitnessFunction>Tokamak</FitnessFunction>
   <Settings>
     <PopulationSize>100</PopulationSize>
