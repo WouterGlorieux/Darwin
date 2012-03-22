@@ -179,7 +179,7 @@ while(DoNextGeneration()){
 	Evolver::SaveGeneration(pacPopulation);
 
 	//TranslateGenomes into Candidates
-	Evolver::TranslateGenomes(pacPopulation);
+	Evolver::TranslateGenomes();
 
 	//calculate fitness
 	for(int i = 0; i<m_nPopulationSize; i++ ){
@@ -336,7 +336,7 @@ bool Evolver::DoNextGeneration(){
 	return doNextGeneration;
 }
 
-void Evolver::TranslateGenomes(Population* population){
+void Evolver::TranslateGenomes(){
 
 	std::string strInputFile;
 	std::string strOutputFile;

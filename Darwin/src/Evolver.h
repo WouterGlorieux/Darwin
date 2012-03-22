@@ -93,7 +93,7 @@ public:
 
     std::vector<Parent> MakeSelection(Population* population);
 
-    void TranslateGenomes(Population* population);
+    void TranslateGenomes();
 
     int SaveChampion(Population* champion);
     int SaveFinalSolution(Population* champion);

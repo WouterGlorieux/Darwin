@@ -2,27 +2,27 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="511" key="DIALOG_WIDTH"/>
-		<item value="218" key="DIALOG_Y_ORIGIN"/>
-		<item value="765" key="DIALOG_X_ORIGIN"/>
+		<item value="260" key="DIALOG_Y_ORIGIN"/>
 		<item value="555" key="DIALOG_HEIGHT"/>
+		<item value="1133" key="DIALOG_X_ORIGIN"/>
 		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="true" key="wrap"/>
-		<item value="false" key="casesensitive"/>
 		<item value="false" key="isRegEx"/>
+		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="Population" key="selection"/>
+		<item value="Temperature" key="selection"/>
 		<list key="findhistory">
+			<item value="temperature"/>
+			<item value="test"/>
+			<item value="oTemperature_"/>
+			<item value="bla"/>
+			<item value="oCurrent_"/>
+			<item value="oBField_"/>
 			<item value="Rosetta"/>
 			<item value="tree"/>
-			<item value="m_Node-&gt;parent()"/>
-			<item value="m_Node-&gt;value()"/>
-			<item value="m_strValue"/>
-			<item value="RandomData"/>
-			<item value="geneNode"/>
-			<item value="geneNode-&gt;parent()-&gt;first_attribute"/>
 		</list>
 		<list key="replacehistory">
 			<item value="Population"/>
