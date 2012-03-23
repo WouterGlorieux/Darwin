@@ -43,8 +43,17 @@ void Evolver::traverse_xml(const std::string& input_xml)
     m_strCandidatesPath = m_strPath + "\\Candidates\\";
     m_nPeriodicSave = rootNode->first_node("PeriodicSave")?atoi(rootNode->first_node("PeriodicSave")->value()):1;
     m_strTemplate = rootNode->first_node("Template")->value();
-    m_strRosetta = rootNode->first_node("Rosetta")->value();
+    m_strRosetta = rootNode->first_node("RosettaStone")->value();
 
+    rapidxml::xml_node<>* apertureNode = rootNode->first_node("Aperture");
+	for (rapidxml::xml_node<> *testChamberNode = apertureNode->first_node("TestChamber"); testChamberNode; testChamberNode = testChamberNode->next_sibling("TestChamber"))
+	{
+		TestChamber sTestChamber;
+		sTestChamber.strFileName = testChamberNode->value();
+		sTestChamber.strArguments = testChamberNode->first_attribute("arg")? testChamberNode->first_attribute("arg")->value() : "";
+		sTestChamber.dMultiplier = testChamberNode->first_attribute("multiplier")? atof(testChamberNode->first_attribute("multiplier")->value()) : 1;
+		m_vsTestChambers.push_back(sTestChamber);
+	}
 
     rapidxml::xml_node<>* settingsNode = rootNode->first_node("Settings");
     m_nPopulationSize = atoi(settingsNode->first_node("PopulationSize")->value());
@@ -92,13 +101,23 @@ void Evolver::printSettings(){
 	std::cout << "Description: " << m_strDescription << std::endl;
 	std::cout << "Directory path: " << m_strPath << std::endl;
 	std::cout << "Save path: " << m_strSavePath << std::endl;
-	std::cout << "Champions path: " << m_strChampionsPath << std::endl;
-	std::cout << "Template: " << m_strTemplate << std::endl;
-	std::cout << "Rosetta: " << m_strRosetta << std::endl;
+	std::cout << "Champions path: " << m_strChampionsPath << std::endl << std::endl;
+
 	std::cout << "PopulationSize: " << m_nPopulationSize << std::endl;
 	std::cout << "Max Generations: " << m_nMaxGenerations << std::endl << std::endl;
 
-	std::cout << "Mutation chances:" << std::endl;
+	std::cout << "Genome:" << std::endl;
+	std::cout << "Template: " << m_strTemplate << std::endl;
+	std::cout << "RosettaStone: " << m_strRosetta << std::endl << std::endl;
+
+
+	std::cout << "Aperture:" << std::endl;
+	for(unsigned int i = 0; i < m_vsTestChambers.size(); i++){
+		std::cout << "TestChamber " << i+1 << ": "<< m_vsTestChambers.at(i).strFileName << " " << m_vsTestChambers.at(i).strArguments << " " << m_vsTestChambers.at(i).dMultiplier << std::endl;
+	}
+
+
+	std::cout << "\nMutation chances:" << std::endl;
 	std::cout << "Binary:" << std::endl;
 	Evolver::printMutationChance(sMutationChances.BinaryMutationChance);
 	std::cout << "Integer:" << std::endl;

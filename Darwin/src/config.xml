@@ -4,9 +4,12 @@
   <Description>A more detailed discription of this job.</Description>
   <DirectoryPath>C:\Darwin</DirectoryPath>
   <Template>C:\Darwin\TokamakTemplate.xml</Template>
-  <Rosetta>C:\\Darwin\\Tokamak.exe</Rosetta>
+  <RosettaStone>C:\\Darwin\\Tokamak.exe</RosettaStone>
+  <Aperture>
+    <TestChamber arg="-average" multiplier="0.5">C:\\Darwin\\SteadyStateTokamak.exe</TestChamber>
+    <TestChamber arg="-highest" multiplier="0.5">C:\\Darwin\\SteadyStateTokamak.exe</TestChamber>
+  </Aperture>
   <PeriodicSave>20</PeriodicSave>
-  <FitnessFunction>Tokamak</FitnessFunction>
   <Settings>
     <PopulationSize>100</PopulationSize>
     <TargetFitness>33750</TargetFitness>
@@ -15,7 +18,7 @@
     <MaxParents>2</MaxParents>
     <Recombination >3</Recombination>
       <Termination>
-        <MaxGenerations>100</MaxGenerations>
+        <MaxGenerations>10</MaxGenerations>
         <MaxTimeTotal>30</MaxTimeTotal>
         <MaxTimeGeneration>5</MaxTimeGeneration>
         <Stagnation>100</Stagnation>

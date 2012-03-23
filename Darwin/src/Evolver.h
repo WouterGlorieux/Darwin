@@ -32,6 +32,9 @@ private:
 
 	std::string m_strTemplate;			//filename of genome template xml
 	std::string m_strRosetta;			//filename of rosetta exe
+
+	std::vector<TestChamber> m_vsTestChambers; //vector containing the testchambers
+
 	int m_nPeriodicSave;				//Save every n generations
 
     std::string m_strTitle;			//Title of this job

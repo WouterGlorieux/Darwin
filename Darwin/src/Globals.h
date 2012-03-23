@@ -67,6 +67,13 @@ struct Parent
 
 };
 
+struct TestChamber
+{
+	std::string strFileName;   //filename of testchamber executable
+	std::string strArguments;  //optional arguments
+	double dMultiplier;		   //multiplier for score, in case of multiple testchambers the sum of the multipliers must be 1
+};
+
 struct Vertex
 {
 	double nX;
