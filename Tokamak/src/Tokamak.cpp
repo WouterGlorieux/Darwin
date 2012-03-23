@@ -56,6 +56,11 @@ int main(int argc, char *argv[]) {
     double dMagnetic = 0.0;
     double dPlasma = 0.0;
 
+    //the chromosomes are encoded to have a value between 0 and 100, so we need a multiplier to put the value in the correct range
+    double dPowerMultiplier  = 1;		//power is from 0 to 100
+    double dMagneticMultiplier  = 0.14; //magnetic is from 0 to 14
+    double dPlasmaMultiplier  = 0.06;   //plasma is from 0 to 6
+
     /***********************************************************************************************************************
      * binary
      ***********************************************************************************************************************/
@@ -94,7 +99,7 @@ int main(int argc, char *argv[]) {
     }
 
     ss << lInt*100/255 << "." << lDec*100/255;
-    dPower = atof(ss.str().c_str());
+    dPower = atof(ss.str().c_str()) * dPowerMultiplier;
 
 
     /**
@@ -117,7 +122,7 @@ int main(int argc, char *argv[]) {
     }
     ss.str("");
     ss << lInt*100/255 << "." << lDec*100/255;
-    dMagnetic = atof(ss.str().c_str());
+    dMagnetic = atof(ss.str().c_str()) * dMagneticMultiplier;
 
     /**
      * Plasma
@@ -139,7 +144,7 @@ int main(int argc, char *argv[]) {
     }
     ss.str("");
     ss << lInt*100/255 << "." << lDec*100/255;
-    dPlasma = atof(ss.str().c_str());
+    dPlasma = atof(ss.str().c_str()) * dPlasmaMultiplier;
 
 
 
@@ -174,7 +179,7 @@ int main(int argc, char *argv[]) {
 
     ss.str("");
     ss << nInt << "." << nDec;
-    dPower = atof(ss.str().c_str());
+    dPower = atof(ss.str().c_str()) * dPowerMultiplier ;
 
 
     /**
@@ -194,7 +199,7 @@ int main(int argc, char *argv[]) {
     }
     ss.str("");
     ss << nInt << "." << nDec;
-    dMagnetic = atof(ss.str().c_str());
+    dMagnetic = atof(ss.str().c_str()) * dMagneticMultiplier;
 
     /**
      * Plasma
@@ -214,7 +219,7 @@ int main(int argc, char *argv[]) {
 
     ss.str("");
     ss << nInt << "." << nDec;
-    dPlasma = atof(ss.str().c_str());
+    dPlasma = atof(ss.str().c_str()) * dPlasmaMultiplier;
 
 
 
@@ -228,9 +233,9 @@ int main(int argc, char *argv[]) {
     magneticNode = powerNode->next_sibling("Chromosome");
     plasmaNode = magneticNode->next_sibling("Chromosome");
 
-    dPower = atof(powerNode->first_node("Gene")->value());
-    dMagnetic = atof(magneticNode->first_node("Gene")->value());
-    dPlasma = atof(plasmaNode->first_node("Gene")->value());
+    dPower = atof(powerNode->first_node("Gene")->value()) * dPowerMultiplier;
+    dMagnetic = atof(magneticNode->first_node("Gene")->value()) * dMagneticMultiplier;
+    dPlasma = atof(plasmaNode->first_node("Gene")->value()) * dPlasmaMultiplier;
 
     output << dPower << " " << dMagnetic << " " << dPlasma << std::endl;
 
@@ -243,9 +248,9 @@ int main(int argc, char *argv[]) {
 
 
 
-    dPower = StringToDouble(powerNode->first_node("Gene")->value());
-    dMagnetic = StringToDouble(magneticNode->first_node("Gene")->value());
-    dPlasma = StringToDouble(plasmaNode->first_node("Gene")->value());
+    dPower = StringToDouble(powerNode->first_node("Gene")->value()) * dPowerMultiplier;
+    dMagnetic = StringToDouble(magneticNode->first_node("Gene")->value()) * dMagneticMultiplier;
+    dPlasma = StringToDouble(plasmaNode->first_node("Gene")->value()) * dPlasmaMultiplier;
 
     output << dPower << " " << dMagnetic << " " << dPlasma << std::endl;
 
@@ -256,9 +261,9 @@ int main(int argc, char *argv[]) {
     magneticNode = powerNode->next_sibling("Chromosome");
     plasmaNode = magneticNode->next_sibling("Chromosome");
 
-    dPower = atof(powerNode->first_node("Gene")->value())/100;
-    dMagnetic = atof(magneticNode->first_node("Gene")->value())/100;
-    dPlasma = atof(plasmaNode->first_node("Gene")->value())/100;
+    dPower = (atof(powerNode->first_node("Gene")->value())/100) * dPowerMultiplier;
+    dMagnetic = (atof(magneticNode->first_node("Gene")->value())/100) * dMagneticMultiplier;
+    dPlasma = (atof(plasmaNode->first_node("Gene")->value())/100) * dPlasmaMultiplier;
 
     output << dPower << " " << dMagnetic << " " << dPlasma << std::endl;
     /***********************************************************************************************************************
@@ -271,9 +276,9 @@ int main(int argc, char *argv[]) {
 	StringExplode(powerNode->first_node("Gene")->value(), "|", &vstrData);
 	// vector vstrData now contains each double!
 
-    dPower = atof(vstrData.at(0).c_str());
-    dMagnetic = atof(vstrData.at(1).c_str());
-    dPlasma = atof(vstrData.at(2).c_str());
+    dPower = atof(vstrData.at(0).c_str()) * dPowerMultiplier;
+    dMagnetic = atof(vstrData.at(1).c_str()) * dMagneticMultiplier;
+    dPlasma = atof(vstrData.at(2).c_str()) * dPlasmaMultiplier;
 
     output << dPower << " " << dMagnetic << " " << dPlasma << std::endl;
 
