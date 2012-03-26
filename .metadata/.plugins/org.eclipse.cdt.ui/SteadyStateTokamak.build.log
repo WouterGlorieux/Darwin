@@ -2,4 +2,7 @@
 **** Build of configuration Release for project SteadyStateTokamak ****
 
 **** Internal Builder is used for build               ****
-Nothing to build for SteadyStateTokamak
+g++ -O3 -Wall -c -fmessage-length=0 -o src\SteadyStateTokamak.o ..\src\SteadyStateTokamak.cpp
+g++ -o SteadyStateTokamak.exe src\SteadyStateTokamak.o
+Build complete for project SteadyStateTokamak
+Time consumed: 905  ms.  

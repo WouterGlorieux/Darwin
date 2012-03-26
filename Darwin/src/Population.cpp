@@ -126,13 +126,22 @@ void Population::initGenome(std::string genomeTemplate){
 
 }*/
 
-void Population::CalcFitness(){
+void Population::CalcFitness(std::vector<TestChamber> aperture, std::string candidate){
 
-	int nLow = 0;
-	int nHigh = RAND_MAX;
+	std::string strTestChamber;
+	std::string strArguments;
 
-	m_dFitness = (rand() % (nHigh - nLow + 1)) + nLow;
+	double dFitness = 0;
 
+	for(unsigned int i = 0; i < aperture.size(); i++){
+		strTestChamber = aperture.at(i).strFileName;
+		strArguments = aperture.at(i).strArguments;
+		int nFitness = spawnl(P_WAIT, strTestChamber.c_str(), strTestChamber.c_str(), candidate.c_str(), strArguments.c_str() , NULL);
+
+		dFitness += (nFitness * aperture.at(i).dMultiplier);
+	}
+
+	m_dFitness = dFitness;
 
 }
 

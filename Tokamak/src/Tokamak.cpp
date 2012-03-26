@@ -23,6 +23,7 @@ int main(int argc, char *argv[]) {
 	std::string strFileName = "";
 	std::string strOutputFileName = "";
 
+
 	if(argc == 3){
 		strFileName= argv[1];
 		strOutputFileName= argv[2];
@@ -313,6 +314,10 @@ double StringToDouble(std::string value){
 	}
 
 	dValue = (dValue / (value.size()*61))*100;
+
+	if(value == ""){
+		dValue = 0;
+	}
 
 	std::stringstream ss;//create a stringstream
 	char buffer[256]; //use sprintf to make sure no decimals are lost

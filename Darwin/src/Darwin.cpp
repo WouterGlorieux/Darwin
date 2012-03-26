@@ -41,11 +41,12 @@ int main(int argc, char *argv[]) {
 	}
 
 	//start evolving
-	cEvolver.start(bResume);
+	int nHighestFitness = 0;
+	nHighestFitness =cEvolver.start(bResume);
 
 	//std::cout << "Press any key to terminate this program. " ;
 	//getch();
-	return 0;
+	return nHighestFitness;
 }
 
 /*

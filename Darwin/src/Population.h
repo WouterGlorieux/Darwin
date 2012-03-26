@@ -12,7 +12,7 @@
 #include "Globals.h"
 
 #include "Genome.h"
-
+#include <process.h>
 
 class Population
 {
@@ -32,15 +32,10 @@ public:
     void randomGenome();	//fills the genome with random data
     void initGenome(std::string genomeTemplate);
 
-   // void initTokamak();
-
-   // void SetGenomeType(GenomeType eGenomeType) {m_eGenomeType = eGenomeType; }
-
-   // GenomeType GetGenomeType() { return m_eGenomeType; }
 
     double GetFitness() { return m_dFitness; }
 
-    void CalcFitness();
+    void CalcFitness(std::vector<TestChamber> aperture, std::string path);
     void SetGenome(const std::string& input_xml);
 
     void DoMutations(MutationChances mutationChances);

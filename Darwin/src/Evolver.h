@@ -15,10 +15,6 @@
 #include "Recombination.h"
 #include "MutationChance.h"
 
-#include <windows.h>
-#include <stdio.h>
-#include <tchar.h>
-
 #include <process.h>
 
 class Evolver
@@ -92,7 +88,7 @@ public:
     void printSettings();
     void printMutationChance(MutationChance mutationChance);
 
-    void start(bool loadLastSave);
+    int start(bool loadLastSave);
 
     std::vector<Parent> MakeSelection(Population* population);
 

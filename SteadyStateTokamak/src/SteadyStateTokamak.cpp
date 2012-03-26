@@ -1155,9 +1155,12 @@ public :
 
     //std::cout << "bisection test " << f * fmid << std::endl;
 
-    if (f * fmid > 0)
+    if (f * fmid > 0){
+    	//std::cout << "Interval does not bracket root" << std::endl;
+    	return 0;
       throw /*new RootSolverException(*/"Interval does not bracket root"/*)*/;
 
+    }
     //std::cout << "bisection check done " << f * fmid << std::endl;
 
 
@@ -1235,16 +1238,59 @@ void StringExplode(std::string str, std::string separator, std::vector<std::stri
     }
 }
 
+void CalcAll(){
+	double dMaxScore = 0;
+	double dPower;
+	double dMagnetic;
+	double dPlasma;
+
+	double dStep = 0.01;
+
+	for(double i = 0; i <= 1; i += dStep){
+		std::cout << i << "%" << std::endl;
+
+		for(double j = 0; j <= 14; j += dStep){
+			for(double k = 0.01; k <= 6; k += dStep){
+				double dScore = calcFitness(j, k, i );
+				if(dScore > dMaxScore){
+					dPower = i;
+					dMagnetic = j;
+					dPlasma = k;
+					dMaxScore = dScore;
+				}
+
+			}
+		}
+	}
+
+	std::cout << "Max score: " << dMaxScore << std::endl;
+	std::cout << "Power: " << dPower << std::endl;
+	std::cout << "Magnetic: " << dMagnetic << std::endl;
+	std::cout << "Plasma: " << dPlasma << std::endl;
+}
+
 int main(int argc, char *argv[]) {
 
 	std::string strFileName = "";
 
 	int nMode = 0;
 
+	//CalcAll();
 
 	//std::cout << calcFitness(7.0, 3.0, 40);
 
-	if(argc == 3){
+	bool bVerbose = false;
+	if(argc == 4){
+		strFileName= argv[1];
+		 if(argv[2] == std::string("-highest")){
+			 nMode = 1;
+		 }
+		 else if (argv[2] == std::string("-average")){
+			 nMode = 2;
+		 }
+		bVerbose = true;
+	}
+	else if(argc == 3){
 		strFileName= argv[1];
 		 if(argv[2] == std::string("-highest")){
 			 nMode = 1;
@@ -1254,7 +1300,7 @@ int main(int argc, char *argv[]) {
 		 }
 	}
 	else{
-		std::cout << "Usage: Tokamak.exe inputFilename [-highest , -average]" << std::endl;
+		std::cout << "Usage: Tokamak.exe inputFilename [-highest , -average] [-verbose]" << std::endl;
 		exit(1);
 	}
 
@@ -1284,9 +1330,19 @@ int main(int argc, char *argv[]) {
         	if(vstrData[2] == "0"){
         		vstrData[2] = "0.01";
         	}
-        	//std::cout << "calculate: " << atof(vstrData[1].c_str()) << " " << atof(vstrData[2].c_str()) << " " << atof(vstrData[0].c_str()) << ": "<<calcFitness(atof(vstrData[1].c_str()), atof(vstrData[2].c_str()), atof(vstrData[0].c_str()) ) <<std::endl;
-        	vnScores.push_back(calcFitness(atof(vstrData[1].c_str()), atof(vstrData[2].c_str()), atof(vstrData[0].c_str()) ));
 
+        	double dScore;
+        	dScore = calcFitness(atof(vstrData[1].c_str()), atof(vstrData[2].c_str()), atof(vstrData[0].c_str()) );
+
+        	vnScores.push_back(dScore);
+
+        	if(bVerbose){
+        	        	std::cout << "\nMagnetic Field: \t" << atof(vstrData[1].c_str())
+        	        			<< "\nPlasma Density: \t" << atof(vstrData[2].c_str())
+        	        			<< "\nAuxiliary Power: \t" << atof(vstrData[0].c_str())
+        	        			<< "\nSCORE: \t" << dScore << std::endl ;
+
+        	}
         }
     }
 
@@ -1309,8 +1365,9 @@ int main(int argc, char *argv[]) {
             break;
     }
 
-    //std::cout << "SCORE: " << nScore << std::endl;
-
+    if(bVerbose){
+    	std::cout << "\n TOTAL SCORE: " << nScore << std::endl;
+    }
 
 
 	return nScore;

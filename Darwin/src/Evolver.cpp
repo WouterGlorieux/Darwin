@@ -149,7 +149,7 @@ void Evolver::printMutationChance(MutationChance mutationChance){
 }
 
 
-void Evolver::start(bool loadLastSave = false){
+int Evolver::start(bool loadLastSave = false){
 
 	//create pointer to array of Population objects for population and next generation
 	Population* pacPopulation = new Population[m_nPopulationSize];
@@ -202,12 +202,15 @@ while(DoNextGeneration()){
 
 	//calculate fitness
 	for(int i = 0; i<m_nPopulationSize; i++ ){
-		pacPopulation[i].CalcFitness();
+		std::stringstream ss;
+		ss << m_strCandidatesPath << i << ".txt";
+		std::string strCandidate =  ss.str();
+		pacPopulation[i].CalcFitness(m_vsTestChambers, strCandidate);
 		//std::cout << "fitness of " << i << ": " << pacPopulation[i].GetFitness() << std::endl;
 	}
 
 	std::vector<Parent> vsSelection = MakeSelection(pacPopulation);
-	std::cout << "\tHighest fitness: " << vsSelection[0].dFitness ;
+	std::cout << "\tHighest fitness: " << vsSelection[0].dFitness  << "\tcandidate: " << vsSelection[0].nIndex;
 	m_dHighestFitness = vsSelection[0].dFitness;
 	m_vdFitness.push_back(vsSelection[0].dFitness);
 
@@ -259,7 +262,7 @@ while(DoNextGeneration()){
 
 	//do mutations
 	//std::cout << pacNextGeneration[0].cGenome.GetXML() << std::endl;
-	for(int i = 0; i<m_nPopulationSize; i++ ){
+	for(int i = m_bElitism; i<m_nPopulationSize; i++ ){
 		pacNextGeneration[i].DoMutations(sMutationChances);
 
 	}
@@ -295,6 +298,8 @@ while(DoNextGeneration()){
 	delete[] pacNextGeneration;
 
 	std::cout << "Evolution finished" << std::endl;
+
+	return 0;
 
 }
 
