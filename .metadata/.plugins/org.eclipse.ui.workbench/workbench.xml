@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="34" version="2.0">
+<workbench progressCount="33" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="1024" x="245" y="155">
 <fastViewData fastViewLocation="1024"/>
@@ -34,6 +34,8 @@
 <part id="2"/>
 <part id="3"/>
 <part id="4"/>
+<part id="5"/>
+<part id="6"/>
 </presentation>
 </folder>
 </info>
@@ -50,13 +52,21 @@
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/DRSTokamak/src/DRSTokamak.cpp"/>
 <editorState selectionHorizontalPixel="0" selectionLength="2997" selectionOffset="307" selectionTopPixel="971"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Mutation.cpp" partName="Mutation.cpp" path="C:/workspaces/Darwin/Darwin/src/Mutation.cpp" title="Mutation.cpp" tooltip="Darwin/src/Mutation.cpp" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="Mutation.cpp" partName="Mutation.cpp" path="C:/workspaces/Darwin/Darwin/src/Mutation.cpp" title="Mutation.cpp" tooltip="Darwin/src/Mutation.cpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Darwin/src/Mutation.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1505" selectionTopPixel="615"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2404" selectionTopPixel="1605"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="Encoding.cpp" partName="Encoding.cpp" path="C:/workspaces/Darwin/Darwin/src/Encoding.cpp" title="Encoding.cpp" tooltip="Darwin/src/Encoding.cpp" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Encoding.cpp" partName="Encoding.cpp" path="C:/workspaces/Darwin/Darwin/src/Encoding.cpp" title="Encoding.cpp" tooltip="Darwin/src/Encoding.cpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Darwin/src/Encoding.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="798" selectionTopPixel="225"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4043" selectionTopPixel="2366"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Mutation.h" partName="Mutation.h" path="C:/workspaces/Darwin/Darwin/src/Mutation.h" title="Mutation.h" tooltip="Darwin/src/Mutation.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Darwin/src/Mutation.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="2430"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Encoding.h" partName="Encoding.h" path="C:/workspaces/Darwin/Darwin/src/Encoding.h" title="Encoding.h" tooltip="Darwin/src/Encoding.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Darwin/src/Encoding.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="1575"/>
 </editor>
 </editors>
 <views>
@@ -73,7 +83,6 @@
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
 <category IMemento.internal.id="Warnings (4 items)"/>
-<category IMemento.internal.id="Warnings"/>
 <category IMemento.internal.id="Errors"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="129" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="1255"/>
@@ -118,7 +127,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.ui.views.ProblemView" activePerspective="org.eclipse.cdt.ui.CPerspective">
+<perspectives activePart="org.eclipse.cdt.ui.editor.CEditor" activePerspective="org.eclipse.cdt.ui.CPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.cdt.internal.ui.CPerspectiveFactory" id="org.eclipse.cdt.ui.CPerspective" label="C/C++"/>
 <alwaysOnActionSet id="org.eclipse.egit.ui.navigation"/>
@@ -225,7 +234,7 @@
 </folder>
 </info>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@fbc0bd" ratio="0.6208426" ratioLeft="560" ratioRight="342" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.views.ProblemView" appearance="2" expanded="2">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
@@ -258,61 +267,10 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Mutation.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Mutation.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Encoding.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Mutation.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Mutation.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Encoding.h"/>
 </editors>
-<item historyLabel="DRSTokamak.cpp" index="1">
-<position info="not_deleted" x="3305" y="0"/>
-</item>
-<item historyLabel="Tokamak.cpp" index="2">
-<position info="not_deleted" x="514" y="9884"/>
-</item>
-<item historyLabel="DRSTokamak.cpp" index="1">
-<position info="not_deleted" x="449" y="0"/>
-</item>
-<item historyLabel="Tokamak.cpp" index="2">
-<position info="not_deleted" x="9402" y="438"/>
-</item>
-<item historyLabel="DRSTokamak.cpp" index="1">
-<position info="not_deleted" x="449" y="0"/>
-</item>
-<item historyLabel="DRSTokamak.cpp" index="1">
-<position info="not_deleted" x="426" y="0"/>
-</item>
-<item historyLabel="Tokamak.cpp" index="2">
-<position info="not_deleted" x="489" y="23"/>
-</item>
-<item historyLabel="DRSTokamak.cpp" index="1">
-<position info="not_deleted" x="426" y="0"/>
-</item>
-<item historyLabel="Tokamak.cpp" index="2">
-<position info="not_deleted" x="415" y="18"/>
-</item>
-<item historyLabel="DRSTokamak.cpp" index="1">
-<position info="not_deleted" x="426" y="0"/>
-</item>
-<item historyLabel="Tokamak.cpp" index="2">
-<position info="not_deleted" x="434" y="18"/>
-</item>
-<item historyLabel="DRSTokamak.cpp" index="1">
-<position info="not_deleted" x="425" y="0"/>
-</item>
-<item historyLabel="Tokamak.cpp" index="2">
-<position info="not_deleted" x="340" y="19"/>
-</item>
-<item historyLabel="DRSTokamak.cpp" index="1">
-<position info="not_deleted" x="425" y="0"/>
-</item>
-<item historyLabel="Tokamak.cpp" index="2">
-<position info="not_deleted" x="340" y="19"/>
-</item>
-<item historyLabel="DRSTokamak.cpp" index="1">
-<position info="not_deleted" x="2996" y="0"/>
-</item>
-<item historyLabel="Tokamak.cpp" index="2">
-<position info="not_deleted" x="2472" y="234"/>
-</item>
-<item historyLabel="DRSTokamak.cpp" index="1">
-<position info="not_deleted" x="3300" y="0"/>
-</item>
 <item historyLabel="SteadyStateTokamak.cpp" index="3">
 <position info="not_deleted" x="42128" y="0"/>
 </item>
@@ -406,8 +364,62 @@
 <item historyLabel="Mutation.cpp" index="11">
 <position info="not_deleted" x="1505" y="0"/>
 </item>
-<item active="true" historyLabel="Encoding.cpp" index="12">
+<item historyLabel="Encoding.cpp" index="12">
 <position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Encoding.cpp" index="12">
+<position/>
+</item>
+<item historyLabel="Mutation.cpp" index="13">
+<position info="not_deleted" x="1505" y="0"/>
+</item>
+<item historyLabel="Mutation.cpp" index="13">
+<position info="not_deleted" x="2083" y="0"/>
+</item>
+<item historyLabel="Mutation.cpp" index="13">
+<position info="not_deleted" x="8270" y="0"/>
+</item>
+<item historyLabel="Encoding.cpp" index="12">
+<position info="not_deleted" x="2897" y="0"/>
+</item>
+<item historyLabel="Mutation.cpp" index="13">
+<position info="not_deleted" x="8270" y="0"/>
+</item>
+<item historyLabel="Mutation.cpp" index="13">
+<position info="not_deleted" x="5096" y="0"/>
+</item>
+<item historyLabel="Encoding.cpp" index="12">
+<position info="not_deleted" x="4043" y="0"/>
+</item>
+<item historyLabel="Mutation.cpp" index="13">
+<position info="not_deleted" x="5096" y="0"/>
+</item>
+<item historyLabel="Mutation.cpp" index="13">
+<position info="not_deleted" x="1159" y="26"/>
+</item>
+<item historyLabel="Mutation.cpp" index="13">
+<position info="not_deleted" x="5096" y="0"/>
+</item>
+<item historyLabel="Mutation.cpp" index="13">
+<position info="not_deleted" x="26059" y="0"/>
+</item>
+<item historyLabel="Encoding.cpp" index="12">
+<position info="not_deleted" x="4043" y="0"/>
+</item>
+<item historyLabel="Mutation.cpp" index="13">
+<position info="not_deleted" x="26059" y="0"/>
+</item>
+<item historyLabel="Mutation.cpp" index="13">
+<position info="not_deleted" x="2404" y="0"/>
+</item>
+<item historyLabel="Mutation.h" index="14">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Encoding.h" index="15">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item active="true" historyLabel="Mutation.cpp" index="13">
+<position info="not_deleted" x="2404" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -427,6 +439,12 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Encoding.h" tooltip="Darwin/src/Encoding.h">
+<persistable path="/Darwin/src/Encoding.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Mutation.h" tooltip="Darwin/src/Mutation.h">
+<persistable path="/Darwin/src/Mutation.h"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Encoding.cpp" tooltip="Darwin/src/Encoding.cpp">
 <persistable path="/Darwin/src/Encoding.cpp"/>
 </file>
@@ -465,12 +483,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Genome.cpp" tooltip="Darwin/src/Genome.cpp">
 <persistable path="/Darwin/src/Genome.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Encoding.h" tooltip="Darwin/src/Encoding.h">
-<persistable path="/Darwin/src/Encoding.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Filesystem.h" tooltip="Darwin/src/Filesystem.h">
-<persistable path="/Darwin/src/Filesystem.h"/>
 </file>
 </mruList>
 </workbench>

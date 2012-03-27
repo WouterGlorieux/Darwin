@@ -121,8 +121,31 @@ std::string Mutation::ValidateMutation(std::string value){
 	if((m_ChromosomeNode->first_attribute("encoding")->value() == std::string("alphanum") || m_ChromosomeNode->first_attribute("encoding")->value() == std::string("custom")) && m_ChromosomeNode->first_attribute("min")){
 		unsigned int nChars = atoi(m_ChromosomeNode->first_attribute("min")->value());
 		if(strValue.size() < nChars){
-			std::string strLeadingZeros ((nChars -strValue.size()), '0');
-			strValue = strValue.insert(0, strLeadingZeros.c_str());
+			int nRandomChars = nChars - strValue.size();
+			std::string strRandomChars = "";
+			if(m_ChromosomeNode->first_attribute("encoding")->value() == std::string("alphanum") ){
+				AlphanumEncoding cEncoding;
+				std::vector<char> vChars = cEncoding.GetChars();
+				std::stringstream ss;//create a stringstream
+				for(int j = 0; j < nRandomChars; j++){
+					int i = rand() % vChars.size();
+					ss << vChars[i];//add character to the stream
+				}
+				strRandomChars = ss.str();
+			}
+			else if(m_ChromosomeNode->first_attribute("encoding")->value() == std::string("custom") && m_ChromosomeNode->first_attribute("chars")){
+				CustomEncoding cEncoding;
+				cEncoding.SetChars(m_ChromosomeNode->first_attribute("chars")->value());
+				std::vector<char> vChars = cEncoding.GetChars();
+				std::stringstream ss;//create a stringstream
+				for(int j = 0; j < nRandomChars; j++){
+					int i = rand() % vChars.size();
+					ss << vChars[i];//add character to the stream
+				}
+				strRandomChars = ss.str();
+			}
+
+			strValue = strValue.append(strRandomChars.c_str());
 		}
 	}
 
