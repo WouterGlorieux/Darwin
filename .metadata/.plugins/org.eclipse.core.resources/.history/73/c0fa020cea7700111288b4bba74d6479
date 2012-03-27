@@ -103,6 +103,7 @@ std::string AlphanumEncoding::RandomData(rapidxml::xml_node<>* chromosomeNode){
 
 	int nMin, nMax;
 
+	int nMaxChars = RAND_MAX;	//default maxChars
 	int nChars;
 
 	//check if there is a "max" attribute in the chromosomeNode
@@ -130,22 +131,17 @@ std::string AlphanumEncoding::RandomData(rapidxml::xml_node<>* chromosomeNode){
 
 std::string CustomEncoding::RandomData(rapidxml::xml_node<>* chromosomeNode){
 
-	int nMin, nMax;
-
+	int nMaxChars = RAND_MAX;	//default maxChars
 	int nChars;
 
-	//check if there is a "max" attribute in the chromosomeNode
-	if(chromosomeNode->first_attribute("max")){
-		nMax = atoi(chromosomeNode->first_attribute("max")->value());
-
-	}
-	//check if there is a "min" attribute in the chromosomeNode
-	if(chromosomeNode->first_attribute("min")){
-		nMin = atoi(chromosomeNode->first_attribute("min")->value());
+	//check if there is a "maxChars" attribute in the chromosomeNode
+	if(chromosomeNode->first_attribute("maxChars")){
+		nMaxChars = atoi(chromosomeNode->first_attribute("maxChars")->value());
 
 	}
 
-	nChars = (rand() % (nMax - nMin + 1)) + nMin;
+	nChars = rand() % nMaxChars;
+
 
 	std::stringstream ss;//create a stringstream
 	for(int j = 0; j < nChars; j++){

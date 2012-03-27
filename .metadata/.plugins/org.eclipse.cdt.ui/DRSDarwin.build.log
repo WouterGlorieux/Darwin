@@ -1,8 +1,5 @@
 
-**** Rebuild of configuration Debug for project DRSDarwin ****
+**** Build of configuration Debug for project DRSDarwin ****
 
 **** Internal Builder is used for build               ****
-g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSDarwin.o ..\src\DRSDarwin.cpp
-g++ -o DRSDarwin.exe src\DRSDarwin.o
-Build complete for project DRSDarwin
-Time consumed: 952  ms.  
+Nothing to build for DRSDarwin

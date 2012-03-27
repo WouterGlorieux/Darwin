@@ -292,3 +292,92 @@ g++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.
 g++ -o Tokamak.exe src\Tokamak.o
 Build complete for project Tokamak
 Time consumed: 1592  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
+..\src\Encoding.cpp: In memberfunctie ‘virtual std::string AlphanumEncoding::RandomData(rapidxml::xml_node<>*)’:
+..\src\Encoding.cpp:106:6: let op: unused variable ‘nMaxChars’ [-Wunused-variable]
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1077  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+c:/mingw/bin/../lib/gcc/mingw32/4.6.2/../../../../mingw32/bin/ld.exe: cannot open output file Darwin.exe: Permission denied
+collect2: ld gaf exit-status 1 terug
+Build error occurred, build is stopped
+Time consumed: 843  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 406  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1607  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1559  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1092  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1684  ms.  
+
+**** Build of configuration Debug for project DRSDarwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DRSDarwin
+
+**** Build of configuration Release for project DRSTokamak ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DRSTokamak
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Release for project SteadyStateTokamak ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for SteadyStateTokamak
+
+**** Build of configuration Release for project Tokamak ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Tokamak

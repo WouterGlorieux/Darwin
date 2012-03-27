@@ -110,7 +110,7 @@ std::string Mutation::ValidateMutation(std::string value){
 
 
 	//if there is a max attribute, cut off the string at that length
-	if((m_ChromosomeNode->first_attribute("encoding")->value() == std::string("alphanum") || m_ChromosomeNode->first_attribute("encoding")->value() == std::string("custom")) && m_ChromosomeNode->first_attribute("max")){
+	if((m_ChromosomeNode->first_attribute("encoding")->value() == std::string("alphanum") || m_ChromosomeNode->first_attribute("encoding")->value() == std::string("custom")) && m_ChromosomeNode->first_attribute("maxChars")){
 		unsigned int nChars = atoi(m_ChromosomeNode->first_attribute("max")->value());
 		if(strValue.size() > nChars){
 			strValue = strValue.substr(0, nChars);
@@ -118,7 +118,7 @@ std::string Mutation::ValidateMutation(std::string value){
 	}
 
 	//if there is a min attribute, make sure there are at least the minimum amount of characters
-	if((m_ChromosomeNode->first_attribute("encoding")->value() == std::string("alphanum") || m_ChromosomeNode->first_attribute("encoding")->value() == std::string("custom")) && m_ChromosomeNode->first_attribute("min")){
+	if((m_ChromosomeNode->first_attribute("encoding")->value() == std::string("alphanum") || m_ChromosomeNode->first_attribute("encoding")->value() == std::string("custom")) && m_ChromosomeNode->first_attribute("maxChars")){
 		unsigned int nChars = atoi(m_ChromosomeNode->first_attribute("min")->value());
 		if(strValue.size() < nChars){
 			std::string strLeadingZeros ((nChars -strValue.size()), '0');
@@ -700,9 +700,6 @@ std::string AlphanumMutation::Deletion(){
 		strValue = strValue.erase(nBegin, nEnd-nBegin+1);
 
 	}
-
-	strValue = Mutation::ValidateMutation(strValue);
-
 	return strValue;
 }
 std::string AlphanumMutation::Insertion(){
@@ -808,9 +805,6 @@ std::string CustomMutation::Deletion(){
 		strValue = strValue.erase(nBegin, nEnd-nBegin+1);
 
 	}
-
-	strValue = Mutation::ValidateMutation(strValue);
-
 	return strValue;
 }
 std::string CustomMutation::Insertion(){

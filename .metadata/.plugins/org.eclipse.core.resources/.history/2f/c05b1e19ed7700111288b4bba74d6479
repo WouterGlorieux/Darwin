@@ -700,9 +700,6 @@ std::string AlphanumMutation::Deletion(){
 		strValue = strValue.erase(nBegin, nEnd-nBegin+1);
 
 	}
-
-	strValue = Mutation::ValidateMutation(strValue);
-
 	return strValue;
 }
 std::string AlphanumMutation::Insertion(){
@@ -808,9 +805,6 @@ std::string CustomMutation::Deletion(){
 		strValue = strValue.erase(nBegin, nEnd-nBegin+1);
 
 	}
-
-	strValue = Mutation::ValidateMutation(strValue);
-
 	return strValue;
 }
 std::string CustomMutation::Insertion(){
