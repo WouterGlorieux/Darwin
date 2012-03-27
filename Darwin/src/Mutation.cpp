@@ -55,9 +55,20 @@ std::string Mutation::ValidateMutation(std::string value){
 	std::string strValue = value;
 
 	//if there is a bits attribute, cut off the string at that length
-	if(m_ChromosomeNode->first_attribute("encoding")->value() == std::string("binary") && m_ChromosomeNode->first_attribute("bits")){
-		int bits = atoi(m_ChromosomeNode->first_attribute("bits")->value());
-		strValue = strValue.substr(0, bits);
+	if(m_ChromosomeNode->first_attribute("encoding")->value() == std::string("binary") && m_ChromosomeNode->first_attribute("max")){
+		unsigned int bits = atoi(m_ChromosomeNode->first_attribute("max")->value());
+		if(strValue.size() > bits){
+			strValue = strValue.substr(0, bits);
+		}
+	}
+
+	//if there is a min attribute, make sure there are at least the minimum amount of bits by adding leading zero's
+	if(m_ChromosomeNode->first_attribute("encoding")->value() == std::string("binary") && m_ChromosomeNode->first_attribute("min")){
+		unsigned int bits = atoi(m_ChromosomeNode->first_attribute("min")->value());
+		if(strValue.size() < bits){
+			std::string strLeadingZeros ((bits -strValue.size()), '0');
+			strValue = strValue.insert(0, strLeadingZeros.c_str());
+		}
 	}
 
 	//make sure new value is not smaller than min boundary
@@ -174,17 +185,10 @@ std::string BitMutation::Deletion(){
 		int nEnd = (rand() % (strValue.size()-1 - nBegin + 1)) + nBegin;
 		strValue = strValue.erase(nBegin, nEnd-nBegin+1);
 
-		//if there is a bits attribute, fill the rest of string with random bits
-		if(m_ChromosomeNode->first_attribute("bits")){
-			std::stringstream ss;//create a stringstream
-			int bit;
-			for(int i = 0; i < (nEnd-nBegin+1); i++){
-				bit = rand() % 2;
-				ss << bit;//add bit to the stream
-			}
-			strValue.append(ss.str());
-		}
 	}
+
+	strValue = Mutation::ValidateMutation(strValue);
+
 	return strValue;
 }
 std::string BitMutation::Insertion(){

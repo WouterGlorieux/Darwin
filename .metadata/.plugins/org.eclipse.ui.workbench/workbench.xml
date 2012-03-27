@@ -34,34 +34,29 @@
 <part id="2"/>
 <part id="3"/>
 <part id="4"/>
-<part id="5"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Population.cpp" partName="Population.cpp" path="C:/workspaces/Darwin/Darwin/src/Population.cpp" title="Population.cpp" tooltip="Darwin/src/Population.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Darwin/src/Population.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4925" selectionTopPixel="1905"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="SteadyStateTokamak.cpp" partName="SteadyStateTokamak.cpp" path="C:/workspaces/Darwin/SteadyStateTokamak/src/SteadyStateTokamak.cpp" title="SteadyStateTokamak.cpp" tooltip="SteadyStateTokamak/src/SteadyStateTokamak.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SteadyStateTokamak/src/SteadyStateTokamak.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="40408" selectionTopPixel="19409"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Evolver.cpp" partName="Evolver.cpp" path="C:/workspaces/Darwin/Darwin/src/Evolver.cpp" title="Evolver.cpp" tooltip="Darwin/src/Evolver.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Darwin/src/Evolver.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="12016" selectionTopPixel="4004"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="DRSDarwin.cpp" partName="DRSDarwin.cpp" path="C:/workspaces/Darwin/DRSDarwin/src/DRSDarwin.cpp" title="DRSDarwin.cpp" tooltip="DRSDarwin/src/DRSDarwin.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/DRSDarwin/src/DRSDarwin.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2835" selectionTopPixel="911"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Tokamak.cpp" partName="Tokamak.cpp" path="C:/workspaces/Darwin/Tokamak/src/Tokamak.cpp" title="Tokamak.cpp" tooltip="Tokamak/src/Tokamak.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Tokamak/src/Tokamak.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="234" selectionOffset="2472" selectionTopPixel="765"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="DRSTokamak.cpp" partName="DRSTokamak.cpp" path="C:/workspaces/Darwin/DRSTokamak/src/DRSTokamak.cpp" title="DRSTokamak.cpp" tooltip="DRSTokamak/src/DRSTokamak.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/DRSTokamak/src/DRSTokamak.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="2997" selectionOffset="307" selectionTopPixel="971"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Darwin.cpp" partName="Darwin.cpp" path="C:/workspaces/Darwin/Darwin/src/Darwin.cpp" title="Darwin.cpp" tooltip="Darwin/src/Darwin.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Darwin/src/Darwin.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1173" selectionTopPixel="180"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Mutation.cpp" partName="Mutation.cpp" path="C:/workspaces/Darwin/Darwin/src/Mutation.cpp" title="Mutation.cpp" tooltip="Darwin/src/Mutation.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Darwin/src/Mutation.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1505" selectionTopPixel="615"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Evolver.h" partName="Evolver.h" path="C:/workspaces/Darwin/Darwin/src/Evolver.h" title="Evolver.h" tooltip="Darwin/src/Evolver.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Darwin/src/Evolver.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3510" selectionTopPixel="900"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="Globals.h" partName="Globals.h" path="C:/workspaces/Darwin/Darwin/src/Globals.h" title="Globals.h" tooltip="Darwin/src/Globals.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Darwin/src/Globals.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="270"/>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="Encoding.cpp" partName="Encoding.cpp" path="C:/workspaces/Darwin/Darwin/src/Encoding.cpp" title="Encoding.cpp" tooltip="Darwin/src/Encoding.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Darwin/src/Encoding.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="798" selectionTopPixel="225"/>
 </editor>
 </editors>
 <views>
@@ -123,7 +118,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.ui.navigator.ProjectExplorer" activePerspective="org.eclipse.cdt.ui.CPerspective">
+<perspectives activePart="org.eclipse.ui.views.ProblemView" activePerspective="org.eclipse.cdt.ui.CPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.cdt.internal.ui.CPerspectiveFactory" id="org.eclipse.cdt.ui.CPerspective" label="C/C++"/>
 <alwaysOnActionSet id="org.eclipse.egit.ui.navigation"/>
@@ -229,8 +224,8 @@
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@fbc0bd" ratio="0.47782704" ratioLeft="431" ratioRight="471" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@fbc0bd" ratio="0.6208426" ratioLeft="560" ratioRight="342" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.views.ProblemView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
@@ -251,151 +246,101 @@
 <navigationHistory>
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Evolver.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Tokamak/src/Tokamak.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SteadyStateTokamak/src/SteadyStateTokamak.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/DRSTokamak/src/DRSTokamak.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Tokamak/src/Tokamak.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SteadyStateTokamak/src/SteadyStateTokamak.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Darwin.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Evolver.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Globals.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SteadyStateTokamak/src/SteadyStateTokamak.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/DRSDarwin/src/DRSDarwin.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/DRSTokamak/src/DRSTokamak.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Mutation.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Mutation.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Encoding.cpp"/>
 </editors>
-<item historyLabel="Evolver.cpp" index="0">
-<position info="not_deleted" x="9285" y="0"/>
-</item>
-<item historyLabel="Evolver.cpp" index="0">
-<position info="not_deleted" x="15999" y="22"/>
-</item>
-<item historyLabel="Evolver.cpp" index="0">
-<position info="not_deleted" x="16582" y="0"/>
-</item>
-<item historyLabel="Evolver.cpp" index="0">
-<position info="not_deleted" x="7568" y="14"/>
-</item>
-<item historyLabel="Tokamak.cpp" index="1">
-<position info="not_deleted" x="756" y="0"/>
-</item>
-<item historyLabel="SteadyStateTokamak.cpp" index="2">
-<position/>
-</item>
-<item historyLabel="SteadyStateTokamak.cpp" index="2">
-<position/>
-</item>
-<item historyLabel="Tokamak.cpp" index="1">
-<position info="not_deleted" x="929" y="0"/>
-</item>
-<item historyLabel="SteadyStateTokamak.cpp" index="2">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="SteadyStateTokamak.cpp" index="2">
-<position info="not_deleted" x="39753" y="4"/>
-</item>
-<item historyLabel="SteadyStateTokamak.cpp" index="2">
-<position info="not_deleted" x="39747" y="0"/>
-</item>
-<item historyLabel="SteadyStateTokamak.cpp" index="2">
-<position info="not_deleted" x="39593" y="0"/>
-</item>
-<item historyLabel="SteadyStateTokamak.cpp" index="2">
-<position info="not_deleted" x="39524" y="0"/>
-</item>
-<item historyLabel="SteadyStateTokamak.cpp" index="2">
-<position info="not_deleted" x="39280" y="0"/>
-</item>
-<item historyLabel="SteadyStateTokamak.cpp" index="2">
-<position info="not_deleted" x="39264" y="0"/>
-</item>
-<item historyLabel="SteadyStateTokamak.cpp" index="2">
-<position info="not_deleted" x="39916" y="0"/>
-</item>
-<item historyLabel="Tokamak.cpp" index="1">
-<position info="not_deleted" x="929" y="0"/>
-</item>
-<item historyLabel="Evolver.cpp" index="0">
-<position info="not_deleted" x="11308" y="0"/>
-</item>
-<item historyLabel="DRSTokamak.cpp" index="3">
+<item historyLabel="DRSTokamak.cpp" index="1">
 <position info="not_deleted" x="3305" y="0"/>
 </item>
-<item historyLabel="Tokamak.cpp" index="4">
+<item historyLabel="Tokamak.cpp" index="2">
 <position info="not_deleted" x="514" y="9884"/>
 </item>
-<item historyLabel="DRSTokamak.cpp" index="3">
+<item historyLabel="DRSTokamak.cpp" index="1">
 <position info="not_deleted" x="449" y="0"/>
 </item>
-<item historyLabel="Tokamak.cpp" index="4">
+<item historyLabel="Tokamak.cpp" index="2">
 <position info="not_deleted" x="9402" y="438"/>
 </item>
-<item historyLabel="DRSTokamak.cpp" index="3">
+<item historyLabel="DRSTokamak.cpp" index="1">
 <position info="not_deleted" x="449" y="0"/>
 </item>
-<item historyLabel="DRSTokamak.cpp" index="3">
+<item historyLabel="DRSTokamak.cpp" index="1">
 <position info="not_deleted" x="426" y="0"/>
 </item>
-<item historyLabel="Tokamak.cpp" index="4">
+<item historyLabel="Tokamak.cpp" index="2">
 <position info="not_deleted" x="489" y="23"/>
 </item>
-<item historyLabel="DRSTokamak.cpp" index="3">
+<item historyLabel="DRSTokamak.cpp" index="1">
 <position info="not_deleted" x="426" y="0"/>
 </item>
-<item historyLabel="Tokamak.cpp" index="4">
+<item historyLabel="Tokamak.cpp" index="2">
 <position info="not_deleted" x="415" y="18"/>
 </item>
-<item historyLabel="DRSTokamak.cpp" index="3">
+<item historyLabel="DRSTokamak.cpp" index="1">
 <position info="not_deleted" x="426" y="0"/>
 </item>
-<item historyLabel="Tokamak.cpp" index="4">
+<item historyLabel="Tokamak.cpp" index="2">
 <position info="not_deleted" x="434" y="18"/>
 </item>
-<item historyLabel="DRSTokamak.cpp" index="3">
+<item historyLabel="DRSTokamak.cpp" index="1">
 <position info="not_deleted" x="425" y="0"/>
 </item>
-<item historyLabel="Tokamak.cpp" index="4">
+<item historyLabel="Tokamak.cpp" index="2">
 <position info="not_deleted" x="340" y="19"/>
 </item>
-<item historyLabel="DRSTokamak.cpp" index="3">
+<item historyLabel="DRSTokamak.cpp" index="1">
 <position info="not_deleted" x="425" y="0"/>
 </item>
-<item historyLabel="Tokamak.cpp" index="4">
+<item historyLabel="Tokamak.cpp" index="2">
 <position info="not_deleted" x="340" y="19"/>
 </item>
-<item historyLabel="DRSTokamak.cpp" index="3">
+<item historyLabel="DRSTokamak.cpp" index="1">
 <position info="not_deleted" x="2996" y="0"/>
 </item>
-<item historyLabel="Tokamak.cpp" index="4">
+<item historyLabel="Tokamak.cpp" index="2">
 <position info="not_deleted" x="2472" y="234"/>
 </item>
-<item historyLabel="DRSTokamak.cpp" index="3">
+<item historyLabel="DRSTokamak.cpp" index="1">
 <position info="not_deleted" x="3300" y="0"/>
 </item>
-<item historyLabel="SteadyStateTokamak.cpp" index="5">
+<item historyLabel="SteadyStateTokamak.cpp" index="3">
 <position info="not_deleted" x="42128" y="0"/>
 </item>
-<item historyLabel="DRSTokamak.cpp" index="3">
+<item historyLabel="DRSTokamak.cpp" index="1">
 <position info="not_deleted" x="3300" y="0"/>
 </item>
-<item historyLabel="DRSTokamak.cpp" index="3">
+<item historyLabel="DRSTokamak.cpp" index="1">
 <position info="not_deleted" x="3286" y="0"/>
 </item>
-<item historyLabel="DRSTokamak.cpp" index="3">
+<item historyLabel="DRSTokamak.cpp" index="1">
 <position info="not_deleted" x="2473" y="0"/>
 </item>
-<item historyLabel="DRSTokamak.cpp" index="3">
+<item historyLabel="DRSTokamak.cpp" index="1">
 <position info="not_deleted" x="2544" y="0"/>
 </item>
-<item historyLabel="DRSTokamak.cpp" index="3">
+<item historyLabel="DRSTokamak.cpp" index="1">
 <position info="not_deleted" x="3266" y="0"/>
 </item>
-<item historyLabel="Tokamak.cpp" index="4">
+<item historyLabel="Tokamak.cpp" index="2">
 <position info="not_deleted" x="2472" y="234"/>
 </item>
 <item historyLabel="Evolver.cpp" index="0">
 <position info="not_deleted" x="11523" y="0"/>
 </item>
-<item historyLabel="Darwin.cpp" index="6">
+<item historyLabel="Darwin.cpp" index="4">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Evolver.h" index="7">
+<item historyLabel="Evolver.h" index="5">
 <position info="not_deleted" x="3510" y="0"/>
 </item>
 <item historyLabel="Evolver.cpp" index="0">
@@ -404,10 +349,64 @@
 <item historyLabel="Evolver.cpp" index="0">
 <position info="not_deleted" x="12016" y="0"/>
 </item>
-<item historyLabel="Darwin.cpp" index="6">
+<item historyLabel="Darwin.cpp" index="4">
 <position info="not_deleted" x="1173" y="0"/>
 </item>
-<item active="true" historyLabel="Globals.h" index="8">
+<item historyLabel="Globals.h" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="SteadyStateTokamak.cpp" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="DRSDarwin.cpp" index="8">
+<position info="not_deleted" x="3303" y="0"/>
+</item>
+<item historyLabel="DRSDarwin.cpp" index="8">
+<position/>
+</item>
+<item historyLabel="DRSTokamak.cpp" index="9">
+<position info="not_deleted" x="307" y="2997"/>
+</item>
+<item historyLabel="DRSDarwin.cpp" index="8">
+<position/>
+</item>
+<item historyLabel="Mutation.cpp" index="10">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Mutation.cpp" index="10">
+<position info="not_deleted" x="2191" y="0"/>
+</item>
+<item historyLabel="DRSDarwin.cpp" index="8">
+<position info="not_deleted" x="2835" y="0"/>
+</item>
+<item historyLabel="Mutation.cpp" index="11">
+<position info="not_deleted" x="2726" y="0"/>
+</item>
+<item historyLabel="Mutation.cpp" index="11">
+<position info="not_deleted" x="1159" y="26"/>
+</item>
+<item historyLabel="Mutation.cpp" index="11">
+<position info="not_deleted" x="1452" y="0"/>
+</item>
+<item historyLabel="Mutation.cpp" index="11">
+<position info="not_deleted" x="1547" y="0"/>
+</item>
+<item historyLabel="Mutation.cpp" index="11">
+<position info="not_deleted" x="1595" y="0"/>
+</item>
+<item historyLabel="Mutation.cpp" index="11">
+<position info="not_deleted" x="2083" y="0"/>
+</item>
+<item historyLabel="Mutation.cpp" index="11">
+<position/>
+</item>
+<item historyLabel="Mutation.cpp" index="11">
+<position info="not_deleted" x="2020" y="0"/>
+</item>
+<item historyLabel="Mutation.cpp" index="11">
+<position info="not_deleted" x="1505" y="0"/>
+</item>
+<item active="true" historyLabel="Encoding.cpp" index="12">
 <position info="not_deleted" x="0" y="0"/>
 </item>
 </navigationHistory>
@@ -428,6 +427,21 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Encoding.cpp" tooltip="Darwin/src/Encoding.cpp">
+<persistable path="/Darwin/src/Encoding.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Mutation.cpp" tooltip="Darwin/src/Mutation.cpp">
+<persistable path="/Darwin/src/Mutation.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="DRSTokamak.cpp" tooltip="DRSTokamak/src/DRSTokamak.cpp">
+<persistable path="/DRSTokamak/src/DRSTokamak.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="DRSDarwin.cpp" tooltip="DRSDarwin/src/DRSDarwin.cpp">
+<persistable path="/DRSDarwin/src/DRSDarwin.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="SteadyStateTokamak.cpp" tooltip="SteadyStateTokamak/src/SteadyStateTokamak.cpp">
+<persistable path="/SteadyStateTokamak/src/SteadyStateTokamak.cpp"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Globals.h" tooltip="Darwin/src/Globals.h">
 <persistable path="/Darwin/src/Globals.h"/>
 </file>
@@ -437,14 +451,8 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Darwin.cpp" tooltip="Darwin/src/Darwin.cpp">
 <persistable path="/Darwin/src/Darwin.cpp"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="SteadyStateTokamak.cpp" tooltip="SteadyStateTokamak/src/SteadyStateTokamak.cpp">
-<persistable path="/SteadyStateTokamak/src/SteadyStateTokamak.cpp"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Tokamak.cpp" tooltip="Tokamak/src/Tokamak.cpp">
 <persistable path="/Tokamak/src/Tokamak.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="DRSTokamak.cpp" tooltip="DRSTokamak/src/DRSTokamak.cpp">
-<persistable path="/DRSTokamak/src/DRSTokamak.cpp"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Evolver.cpp" tooltip="Darwin/src/Evolver.cpp">
 <persistable path="/Darwin/src/Evolver.cpp"/>
@@ -458,20 +466,11 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Genome.cpp" tooltip="Darwin/src/Genome.cpp">
 <persistable path="/Darwin/src/Genome.cpp"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Mutation.cpp" tooltip="Darwin/src/Mutation.cpp">
-<persistable path="/Darwin/src/Mutation.cpp"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Encoding.h" tooltip="Darwin/src/Encoding.h">
 <persistable path="/Darwin/src/Encoding.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Encoding.cpp" tooltip="Darwin/src/Encoding.cpp">
-<persistable path="/Darwin/src/Encoding.cpp"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Filesystem.h" tooltip="Darwin/src/Filesystem.h">
 <persistable path="/Darwin/src/Filesystem.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Rosetta.h" tooltip="Darwin/src/Rosetta.h">
-<persistable path="/Darwin/src/Rosetta.h"/>
 </file>
 </mruList>
 </workbench>

@@ -14,18 +14,28 @@ std::string Encoding::RandomData(rapidxml::xml_node<>* chromosomeNode){
 
 std::string BinaryEncoding::RandomData(rapidxml::xml_node<>* chromosomeNode){
 
-	//check if there is a "bits" attribute in the chromosomeNode
-	if(chromosomeNode->first_attribute("bits")){
-		m_nbits = atoi(chromosomeNode->first_attribute("bits")->value());
+	int nMin, nMax;
+
+	//check if there is a "min" attribute in the chromosomeNode
+	if(chromosomeNode->first_attribute("min")){
+		nMin = atoi(chromosomeNode->first_attribute("min")->value());
 	}
 
-	int bit ;
+	//check if there is a "max" attribute in the chromosomeNode
+	if(chromosomeNode->first_attribute("max")){
+		nMax = atoi(chromosomeNode->first_attribute("max")->value());
+	}
 
+
+	m_nbits = (rand() % (nMax - nMin + 1)) + nMin;
+
+	int bit;
 	std::stringstream ss;//create a stringstream
 	for(int i = 0 ; i < m_nbits ; i++){
 		bit = rand() % 2;
 		ss << bit;//add number to the stream
 	}
+
 
 	return ss.str();//return a string with the contents of the stream
 
