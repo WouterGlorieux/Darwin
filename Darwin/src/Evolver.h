@@ -28,6 +28,7 @@ private:
 
 	std::string m_strTemplate;			//filename of genome template xml
 	std::string m_strRosetta;			//filename of rosetta exe
+	std::string m_strRosettaArgs; 		//optional arguments for rosetta exe
 
 	std::vector<TestChamber> m_vsTestChambers; //vector containing the testchambers
 
@@ -97,6 +98,8 @@ public:
     int SaveChampion(Population* champion);
     int SaveFinalSolution(Population* champion);
     int SaveGeneration(Population* population);
+
+    int SaveProgress(Population* champion);
 
 };
 

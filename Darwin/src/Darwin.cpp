@@ -42,7 +42,7 @@ int main(int argc, char *argv[]) {
 
 	//start evolving
 	int nHighestFitness = 0;
-	nHighestFitness =cEvolver.start(bResume);
+	nHighestFitness = cEvolver.start(bResume);
 
 	//std::cout << "Press any key to terminate this program. " ;
 	//getch();

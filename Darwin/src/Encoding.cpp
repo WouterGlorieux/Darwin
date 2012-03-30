@@ -14,7 +14,8 @@ std::string Encoding::RandomData(rapidxml::xml_node<>* chromosomeNode){
 
 std::string BinaryEncoding::RandomData(rapidxml::xml_node<>* chromosomeNode){
 
-	int nMin, nMax;
+	int nMin = 0;
+	int nMax = 0;
 
 	//check if there is a "min" attribute in the chromosomeNode
 	if(chromosomeNode->first_attribute("min")){
@@ -101,7 +102,8 @@ std::string DoubleEncoding::RandomData(rapidxml::xml_node<>* chromosomeNode){
 
 std::string AlphanumEncoding::RandomData(rapidxml::xml_node<>* chromosomeNode){
 
-	int nMin, nMax;
+	int nMin = 0;
+	int nMax = 0;
 
 	int nChars;
 
@@ -130,7 +132,8 @@ std::string AlphanumEncoding::RandomData(rapidxml::xml_node<>* chromosomeNode){
 
 std::string CustomEncoding::RandomData(rapidxml::xml_node<>* chromosomeNode){
 
-	int nMin, nMax;
+	int nMin = 0;
+	int nMax = 0;
 
 	int nChars;
 

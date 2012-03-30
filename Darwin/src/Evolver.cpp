@@ -43,7 +43,8 @@ void Evolver::traverse_xml(const std::string& input_xml)
     m_strCandidatesPath = m_strPath + "\\Candidates\\";
     m_nPeriodicSave = rootNode->first_node("PeriodicSave")?atoi(rootNode->first_node("PeriodicSave")->value()):1;
     m_strTemplate = rootNode->first_node("Template")->value();
-    m_strRosetta = rootNode->first_node("RosettaStone")->value();
+    m_strRosetta = rootNode->first_node("RosettaStone")?rootNode->first_node("RosettaStone")->value():"";
+    m_strRosettaArgs = rootNode->first_node("RosettaStone")->first_attribute("args")?rootNode->first_node("RosettaStone")->first_attribute("args")->value():"";
 
     rapidxml::xml_node<>* apertureNode = rootNode->first_node("Aperture");
 	for (rapidxml::xml_node<> *testChamberNode = apertureNode->first_node("TestChamber"); testChamberNode; testChamberNode = testChamberNode->next_sibling("TestChamber"))
@@ -156,6 +157,7 @@ int Evolver::start(bool loadLastSave = false){
 	Population* pacNextGeneration = new Population[m_nPopulationSize];
 
 
+	m_nGeneration = 1;
 
 	if(loadLastSave == false){
 		//initialize Population objects
@@ -177,10 +179,15 @@ int Evolver::start(bool loadLastSave = false){
 
 			pacPopulation[i].SetGenome(buffer.str());
 		}
+		if(m_nPopulationSize >= 2){
+			m_nGeneration = pacPopulation[1].cGenome.GetGeneration();
+			m_nMaxGenerations += m_nGeneration-1;
+		}
 	}
 
 
-	m_nGeneration = 1;
+
+
 	m_dHighestFitness = 0;
 	m_vdFitness.clear();
 	m_vdGenerationTime.clear();
@@ -188,9 +195,12 @@ int Evolver::start(bool loadLastSave = false){
 
 	int nChampion = 0;  //index of genome with highest fitnest in current population
 
+
+
 	clock_t start, finish;
 //do until maxGenerations or a suitable solution is reached
 while(DoNextGeneration()){
+
 	start = clock();
 	std::cout << "Generation " << m_nGeneration;
 
@@ -228,6 +238,8 @@ while(DoNextGeneration()){
 	if((m_nGeneration % m_nPeriodicSave) == 0)
 		Evolver::SaveChampion(&pacPopulation[nChampion]);
 
+	//save progress
+	Evolver::SaveProgress(&pacPopulation[nChampion]);
 
 	//if elitims is true, set the first genome of the next generation to the genome with highest fitness
 	if(m_bElitism){
@@ -256,7 +268,9 @@ while(DoNextGeneration()){
 				break;
 		}
 
-		pacNextGeneration[i].SetGenome(m_cRecombination.RecombinedGenomeXML());
+		std::stringstream ss;
+		ss << m_nGeneration+1;
+		pacNextGeneration[i].SetGenome(m_cRecombination.RecombinedGenomeXML(ss.str()));
 		//pacNextGeneration[i].SetGenomeType(m_eGenomeType);
 	}
 
@@ -288,8 +302,10 @@ while(DoNextGeneration()){
 //loop
 	Evolver::SaveFinalSolution(&pacPopulation[nChampion]);
 
+	//save last generation
+	Evolver::SaveGeneration(pacPopulation);
 
-	std::cout << pacNextGeneration[0].cGenome.GetXML() << std::endl;
+	//std::cout << pacNextGeneration[0].cGenome.GetXML() << std::endl;
 
 
 
@@ -299,7 +315,7 @@ while(DoNextGeneration()){
 
 	std::cout << "Evolution finished" << std::endl;
 
-	return 0;
+	return (int) pacPopulation[nChampion].GetFitness();
 
 }
 
@@ -333,14 +349,14 @@ bool Evolver::DoNextGeneration(){
 		doNextGeneration = false;
 		std::cout << "Found suitable solution " << m_dHighestFitness  << std::endl;
 	}
-
+/*
 	//see if the time for the last generation was more than the maximum time allowed
 	if(m_nMaxTimeGeneration && m_nGeneration > 1 && m_vdGenerationTime.at(m_vdGenerationTime.size()-1) >= m_nMaxTimeGeneration ){
 		doNextGeneration = false;
 		std::cout << "Maximum time to calculate each generation has been reached." << std::endl;
 
 	}
-
+*/
 	//see if the total time is more than the maximum time allowed
 	double dTotalTime = 0;
 	for(unsigned int i = 0; i < m_vdGenerationTime.size(); i++){
@@ -373,7 +389,7 @@ void Evolver::TranslateGenomes(){
 		ss.str("");
 		ss << m_strCandidatesPath << i << ".txt";
 		strOutputFile = ss.str();
-		spawnl(P_WAIT, m_strRosetta.c_str(), m_strRosetta.c_str(), strInputFile.c_str(), strOutputFile.c_str() , NULL);
+		spawnl(P_WAIT, m_strRosetta.c_str(), m_strRosetta.c_str(), strInputFile.c_str(), strOutputFile.c_str(), m_strRosettaArgs.c_str() , NULL);
 	}
 
 }
@@ -437,6 +453,24 @@ int Evolver::SaveGeneration(Population* population){
 
     return 0;
 
+}
+int Evolver::SaveProgress(Population* champion){
+	std::stringstream strFilename ;
+	strFilename << m_strPath << "\\progress.txt";
+    std::ofstream outf(strFilename.str().c_str(), std::ios::app);
+
+    // If we couldn't open the output file stream for writing
+    if (!outf)
+    {
+        // Print an error and exit
+        std::cerr << std::endl << strFilename.str() << " could not be opened for writing!" << std::endl;
+        return 1;
+    }
+
+    outf << m_nGeneration << ";" << champion->GetFitness() << std::endl;
+
+    outf.close();
+    return 0;
 }
 
 std::vector<Parent> Evolver::MakeSelection(Population* population){

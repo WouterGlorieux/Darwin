@@ -15,6 +15,7 @@
 #include "Vertices.h"
 #include "Edges.h"
 
+
 class Genome
 {
 private:
@@ -53,6 +54,8 @@ public:
     void Save(rapidxml::xml_document<>& doc);
     void SetXML(std::string input_xml);
     std::string GetXML() {return m_strXML;}
+
+    int GetGeneration();
 };
 
 

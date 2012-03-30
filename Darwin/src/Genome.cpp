@@ -21,7 +21,7 @@ void Genome::newGenome(const char* pchId ){
 	// root node
 	rapidxml::xml_node<>* root = doc.allocate_node(rapidxml::node_element, "Genome");
 
-	root->append_attribute(doc.allocate_attribute("type", pchId));
+	root->append_attribute(doc.allocate_attribute("generation", pchId));
 	doc.append_node(root);
 
 	Genome::Save(doc);
@@ -218,6 +218,22 @@ void Genome::SetXML(std::string input_xml){
 	m_strXML = input_xml;
 }
 
+int Genome::GetGeneration(){
+
+	int nGeneration = 0;
+
+    rapidxml::xml_document<> doc;
+    std::vector<char> xml_copy(m_strXML.begin(), m_strXML.end());
+    xml_copy.push_back('\0');
+
+    doc.parse<rapidxml::parse_declaration_node | rapidxml::parse_no_data_nodes>(&xml_copy[0]);
+    rapidxml::xml_node<>* rootNode = doc.first_node("Genome");
+
+    nGeneration = rootNode->first_attribute("generation") ? atoi(rootNode->first_attribute("generation")->value()) : 1;
+
+	return nGeneration;
+}
+
 
 void Genome::FillWithRandomData(){
     rapidxml::xml_document<> doc;
@@ -291,6 +307,7 @@ void Genome::FillGenes(rapidxml::xml_document<>& doc, rapidxml::xml_node<>* chro
 		geneNode->value(pchRandomData);
 
 	}
+
 
 }
 
@@ -395,54 +412,63 @@ void Genome::GeneMutations(rapidxml::xml_document<>& doc, rapidxml::xml_node<>* 
 
 
 		dRandom = (double)((rand() % (nHigh - nLow + 1)) + nLow)/nHigh;
+		dRandom = dRandom * 100;
 		if(dRandom <=  mutationChance.dBitString){
 			pchMutatedData = doc.allocate_string(mutation.BitString().c_str());
 			geneNode->value(pchMutatedData);
 		}
 
 		dRandom = (double)((rand() % (nHigh - nLow + 1)) + nLow)/nHigh;
+		dRandom = dRandom * 100;
 		if(dRandom <=  mutationChance.dFlipBits){
 			pchMutatedData = doc.allocate_string(mutation.FlipBits().c_str());
 			geneNode->value(pchMutatedData);
 		}
 
 		dRandom = (double)((rand() % (nHigh - nLow + 1)) + nLow)/nHigh;
+		dRandom = dRandom * 100;
 		if(dRandom <=  mutationChance.dBoundary){
 			pchMutatedData = doc.allocate_string(mutation.Boundary().c_str());
 			geneNode->value(pchMutatedData);
 		}
 
 		dRandom = (double)((rand() % (nHigh - nLow + 1)) + nLow)/nHigh;
+		dRandom = dRandom * 100;
 		if(dRandom <=  mutationChance.dUniform){
 			pchMutatedData = doc.allocate_string(mutation.Uniform().c_str());
 			geneNode->value(pchMutatedData);
 		}
 
 		dRandom = (double)((rand() % (nHigh - nLow + 1)) + nLow)/nHigh;
+		dRandom = dRandom * 100;
 		if(dRandom <=  mutationChance.dGaussian){
 			pchMutatedData = doc.allocate_string(mutation.Gaussian(mutationChance.dGaussianSigma).c_str());
 			geneNode->value(pchMutatedData);
 		}
 
 		dRandom = (double)((rand() % (nHigh - nLow + 1)) + nLow)/nHigh;
+		dRandom = dRandom * 100;
 		if(dRandom <=  mutationChance.dDuplication){
 			pchMutatedData = doc.allocate_string(mutation.Duplication().c_str());
 			geneNode->value(pchMutatedData);
 		}
 
 		dRandom = (double)((rand() % (nHigh - nLow + 1)) + nLow)/nHigh;
+		dRandom = dRandom * 100;
 		if(dRandom <=  mutationChance.dDeletion){
 			pchMutatedData = doc.allocate_string(mutation.Deletion().c_str());
 			geneNode->value(pchMutatedData);
 		}
 
 		dRandom = (double)((rand() % (nHigh - nLow + 1)) + nLow)/nHigh;
+		dRandom = dRandom * 100;
 		if(dRandom <=  mutationChance.dInsertion){
 			pchMutatedData = doc.allocate_string(mutation.Insertion().c_str());
 			geneNode->value(pchMutatedData);
 		}
 
 		dRandom = (double)((rand() % (nHigh - nLow + 1)) + nLow)/nHigh;
+		dRandom = dRandom * 100;
 		if(dRandom <=  mutationChance.dSwap){
 			pchMutatedData = doc.allocate_string(mutation.Swap().c_str());
 			geneNode->value(pchMutatedData);
@@ -461,21 +487,25 @@ void Genome::ChromosomeMutations(rapidxml::xml_node<>* chromosomeNode, Chromosom
 
 	double dRandom;
 	dRandom = (double)((rand() % (nHigh - nLow + 1)) + nLow)/nHigh;
+	dRandom = dRandom * 100;
 	if(variableGenes && dRandom <=  mutationChance.dGeneDuplication){
 		mutation.Duplication();
 	}
 
 	dRandom = (double)((rand() % (nHigh - nLow + 1)) + nLow)/nHigh;
+	dRandom = dRandom * 100;
 	if(variableGenes && dRandom <=  mutationChance.dGeneDeletion){
 		mutation.Deletion();
 	}
 
 	dRandom = (double)((rand() % (nHigh - nLow + 1)) + nLow)/nHigh;
+	dRandom = dRandom * 100;
 	if(variableGenes && dRandom <=  mutationChance.dGeneInsertion){
 		mutation.Insertion();
 	}
 
 	dRandom = (double)((rand() % (nHigh - nLow + 1)) + nLow)/nHigh;
+	dRandom = dRandom * 100;
 	if(dRandom <=  mutationChance.dGeneSwap){
 		mutation.Swap();
 	}

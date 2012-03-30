@@ -19,12 +19,12 @@ void Recombination::AddParent(const std::string& input_xml){
 	vstrParents.push_back(input_xml);
 }
 
-std::string	Recombination::RecombinedGenomeXML(){
+std::string	Recombination::RecombinedGenomeXML(std::string generation){
 
 
 
 	Genome newGenome;
-    newGenome.newGenome("next generation");
+    newGenome.newGenome(generation.c_str());
 
     std::string newGenomeXML = newGenome.GetXML();
     std::vector<char> xml_copyNewGenome(newGenomeXML.begin(), newGenomeXML.end());
