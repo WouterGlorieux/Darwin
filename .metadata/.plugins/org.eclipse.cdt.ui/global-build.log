@@ -693,3 +693,81 @@ Nothing to build for SteadyStateTokamak
 
 **** Internal Builder is used for build               ****
 Nothing to build for Tokamak
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 1981  ms.  
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Release for project DRSDarwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DRSDarwin
+
+**** Build of configuration Release for project DRSTokamak ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DRSTokamak
+
+**** Build of configuration Release for project DTCRandomFitness ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DTCRandomFitness
+
+**** Build of configuration Debug for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Release for project SteadyStateTokamak ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for SteadyStateTokamak
+
+**** Build of configuration Release for project Tokamak ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Tokamak
