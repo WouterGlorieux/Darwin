@@ -54,8 +54,6 @@ private:
     bool m_bElitism;				//Elitism enabled or not?
 
     int m_nGeneration;
-    int m_nStartingGeneration;
-
     double m_dHighestFitness;
     std::vector<double> m_vdFitness; 		//a vector with the highest fitness of each generation
     std::vector<double> m_vdGenerationTime; 	//a vector with the time in seconds it took to calculate each generation

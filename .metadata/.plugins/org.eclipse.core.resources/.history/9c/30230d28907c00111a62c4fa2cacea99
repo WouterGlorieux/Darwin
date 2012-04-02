@@ -157,7 +157,6 @@ int Evolver::start(bool loadLastSave = false){
 	Population* pacNextGeneration = new Population[m_nPopulationSize];
 
 
-	m_nStartingGeneration = 1;
 	m_nGeneration = 1;
 
 	if(loadLastSave == false){
@@ -181,8 +180,7 @@ int Evolver::start(bool loadLastSave = false){
 			pacPopulation[i].SetGenome(buffer.str());
 		}
 		if(m_nPopulationSize >= 2){
-			m_nStartingGeneration = pacPopulation[1].cGenome.GetGeneration();
-			m_nGeneration = m_nStartingGeneration;
+			m_nGeneration = pacPopulation[1].cGenome.GetGeneration();
 			m_nMaxGenerations += m_nGeneration-1;
 		}
 	}
@@ -325,7 +323,7 @@ bool Evolver::DoNextGeneration(){
 	bool doNextGeneration = true;
 
 	//see if the evolution has stagnated
-	if(m_nStagnation && (m_nGeneration-m_nStartingGeneration+1) > m_nStagnation){
+	if(m_nStagnation && m_nGeneration > m_nStagnation){
 		bool stagnation = true;
 		for(int i = 0; i < m_nStagnation; i++){
 			if( m_vdFitness.at(m_vdFitness.size()-1-i) != m_dHighestFitness) {
@@ -339,7 +337,7 @@ bool Evolver::DoNextGeneration(){
 		}
 	}
 
-
+	std::cout << "test" << std::endl;
 	//see if maximum number of generations is reached
 	if(m_nMaxGenerations && m_nGeneration > m_nMaxGenerations){
 		doNextGeneration = false;
@@ -353,14 +351,14 @@ bool Evolver::DoNextGeneration(){
 	}
 
 
-
+/*
 	//see if the time for the last generation was more than the maximum time allowed
-	if(m_nMaxTimeGeneration && (m_nGeneration-m_nStartingGeneration+1) > 1 && m_vdGenerationTime.at(m_vdGenerationTime.size()-1) >= m_nMaxTimeGeneration ){
+	if(m_nMaxTimeGeneration && m_nGeneration > 1 && m_vdGenerationTime.at(m_vdGenerationTime.size()-1) >= m_nMaxTimeGeneration ){
 		doNextGeneration = false;
 		std::cout << "Maximum time to calculate each generation has been reached." << std::endl;
 
 	}
-
+*/
 	//see if the total time is more than the maximum time allowed
 	double dTotalTime = 0;
 	for(unsigned int i = 0; i < m_vdGenerationTime.size(); i++){

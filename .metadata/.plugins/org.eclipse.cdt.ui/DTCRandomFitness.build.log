@@ -1,8 +1,5 @@
 
-**** Rebuild of configuration Release for project DTCRandomFitness ****
+**** Build of configuration Release for project DTCRandomFitness ****
 
 **** Internal Builder is used for build               ****
-g++ -O3 -Wall -c -fmessage-length=0 -o src\DTCRandomFitness.o ..\src\DTCRandomFitness.cpp
-g++ -o DTCRandomFitness.exe src\DTCRandomFitness.o
-Build complete for project DTCRandomFitness
-Time consumed: 355  ms.  
+Nothing to build for DTCRandomFitness

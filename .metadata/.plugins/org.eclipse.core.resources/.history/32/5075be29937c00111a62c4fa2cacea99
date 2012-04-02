@@ -324,6 +324,7 @@ while(DoNextGeneration()){
 bool Evolver::DoNextGeneration(){
 	bool doNextGeneration = true;
 
+	std::cout << "test" << std::endl;
 	//see if the evolution has stagnated
 	if(m_nStagnation && (m_nGeneration-m_nStartingGeneration+1) > m_nStagnation){
 		bool stagnation = true;
@@ -353,14 +354,14 @@ bool Evolver::DoNextGeneration(){
 	}
 
 
-
+/*
 	//see if the time for the last generation was more than the maximum time allowed
-	if(m_nMaxTimeGeneration && (m_nGeneration-m_nStartingGeneration+1) > 1 && m_vdGenerationTime.at(m_vdGenerationTime.size()-1) >= m_nMaxTimeGeneration ){
+	if(m_nMaxTimeGeneration && m_nGeneration > 1 && m_vdGenerationTime.at(m_vdGenerationTime.size()-1) >= m_nMaxTimeGeneration ){
 		doNextGeneration = false;
 		std::cout << "Maximum time to calculate each generation has been reached." << std::endl;
 
 	}
-
+*/
 	//see if the total time is more than the maximum time allowed
 	double dTotalTime = 0;
 	for(unsigned int i = 0; i < m_vdGenerationTime.size(); i++){
