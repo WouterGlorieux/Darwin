@@ -150,17 +150,23 @@ std::string Mutation::ValidateMutation(std::string value){
 	}
 
 	//check for multiple leading zero's like 001 or -001
-	if(( m_ChromosomeNode->first_attribute("encoding")->value() == std::string("integer") || m_ChromosomeNode->first_attribute("encoding")->value() == std::string("double"))){
+	if(( m_ChromosomeNode->first_attribute("encoding")->value() == std::string("integer") || m_ChromosomeNode->first_attribute("encoding")->value() == std::string("double") || m_ChromosomeNode->first_attribute("encoding")->value() == std::string("list"))){
 		if(strValue.size() > 1 ){
 			if(strValue.at(0) == '0' && strValue.at(1) == '0'){
+				std::cout << "\nMultiple leading zeros found: " << strValue << std::endl;
 				strValue.erase(0,1);
+				std::cout << "new value: " << strValue << std::endl;
 			}
+
 		}
 
 		if(strValue.size() > 2 ){
 			if(strValue.at(0) == '-' && strValue.at(1) == '0' && strValue.at(2) == '0'){
+				std::cout << "\nMultiple leading zeros found: " << strValue << std::endl;
 				strValue.erase(1,1);
+				std::cout << "new value: " << strValue << std::endl;
 			}
+
 		}
 	}
 
