@@ -56,7 +56,6 @@ public:
     std::string GetXML() {return m_strXML;}
 
     int GetGeneration();
-    void SetFitness(double fitness);
 };
 
 

@@ -245,15 +245,9 @@ void Genome::SetFitness(double fitness){
     doc.parse<rapidxml::parse_declaration_node | rapidxml::parse_no_data_nodes>(&xml_copy[0]);
     rapidxml::xml_node<>* rootNode = doc.first_node("Genome");
 
-    char* pchData = doc.allocate_string(ss.str().c_str());
-    if(rootNode->first_attribute("fitness")){
-    	rootNode->first_attribute("fitness")->value(pchData);
-    }
-    else{
-    	rootNode->append_attribute(doc.allocate_attribute("fitness", pchData ));
-    }
+    //nGeneration = rootNode->first_attribute("generation") ? atoi(rootNode->first_attribute("generation")->value()) : 1;
 
-    Genome::Save(doc);
+
 
 }
 

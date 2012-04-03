@@ -223,7 +223,6 @@ while(DoNextGeneration()){
 		ss << m_strCandidatesPath << i << ".txt";
 		std::string strCandidate =  ss.str();
 		pacPopulation[i].CalcFitness(m_vsTestChambers, strCandidate);
-		pacPopulation[i].cGenome.SetFitness(pacPopulation[i].GetFitness());
 		//std::cout << "fitness of " << i << ": " << pacPopulation[i].GetFitness() << std::endl;
 	}
 

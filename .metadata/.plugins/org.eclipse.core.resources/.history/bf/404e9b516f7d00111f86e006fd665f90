@@ -234,28 +234,6 @@ int Genome::GetGeneration(){
 	return nGeneration;
 }
 
-void Genome::SetFitness(double fitness){
-	std::stringstream ss;
-	ss << fitness;
-
-    rapidxml::xml_document<> doc;
-    std::vector<char> xml_copy(m_strXML.begin(), m_strXML.end());
-    xml_copy.push_back('\0');
-
-    doc.parse<rapidxml::parse_declaration_node | rapidxml::parse_no_data_nodes>(&xml_copy[0]);
-    rapidxml::xml_node<>* rootNode = doc.first_node("Genome");
-
-    char* pchData = doc.allocate_string(ss.str().c_str());
-    if(rootNode->first_attribute("fitness")){
-    	rootNode->first_attribute("fitness")->value(pchData);
-    }
-    else{
-    	rootNode->append_attribute(doc.allocate_attribute("fitness", pchData ));
-    }
-
-    Genome::Save(doc);
-
-}
 
 void Genome::FillWithRandomData(){
     rapidxml::xml_document<> doc;

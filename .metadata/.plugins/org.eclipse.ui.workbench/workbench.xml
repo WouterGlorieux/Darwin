@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench progressCount="34" version="2.0">
 <workbenchAdvisor/>
-<window height="768" width="1024" x="193" y="333">
+<window height="768" maximized="true" width="1024" x="193" y="333">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
 </perspectiveBar>
 <coolbarLayout>
 <coolItem id="group.file" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="192" y="22"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="153" y="22"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.cdt.ui.CElementCreationActionSet" itemType="typeToolBarContribution" x="167" y="22"/>
 <coolItem id="org.eclipse.cdt.ui.buildConfigActionSet" itemType="typeToolBarContribution" x="89" y="22"/>
@@ -48,9 +48,9 @@
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/DRSDarwin/src/DRSDarwin.cpp"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="768" selectionTopPixel="149"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Evolver.cpp" partName="Evolver.cpp" path="C:/workspaces/Darwin/Darwin/src/Evolver.cpp" title="Evolver.cpp" tooltip="Darwin/src/Evolver.cpp" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="Evolver.cpp" partName="Evolver.cpp" path="C:/workspaces/Darwin/Darwin/src/Evolver.cpp" title="Evolver.cpp" tooltip="Darwin/src/Evolver.cpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Darwin/src/Evolver.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="13831" selectionTopPixel="5139"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="8553" selectionTopPixel="2280"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="Genome.cpp" partName="Genome.cpp" path="C:/workspaces/Darwin/Darwin/src/Genome.cpp" title="Genome.cpp" tooltip="Darwin/src/Genome.cpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Darwin/src/Genome.cpp"/>
@@ -68,9 +68,9 @@
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Darwin/src/Darwin.cpp"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1047" selectionTopPixel="371"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="Mutation.cpp" partName="Mutation.cpp" path="C:/workspaces/Darwin/Darwin/src/Mutation.cpp" title="Mutation.cpp" tooltip="Darwin/src/Mutation.cpp" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Mutation.cpp" partName="Mutation.cpp" path="C:/workspaces/Darwin/Darwin/src/Mutation.cpp" title="Mutation.cpp" tooltip="Darwin/src/Mutation.cpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Darwin/src/Mutation.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2404" selectionTopPixel="1965"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2404" selectionTopPixel="1695"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="Recombination.cpp" partName="Recombination.cpp" path="C:/workspaces/Darwin/Darwin/src/Recombination.cpp" title="Recombination.cpp" tooltip="Darwin/src/Recombination.cpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Darwin/src/Recombination.cpp"/>
@@ -101,9 +101,6 @@
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>
-<category IMemento.internal.id="Warnings (4 items)"/>
-</expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="129" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="1255"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
@@ -279,28 +276,8 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Evolver.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Evolver.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Mutation.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Evolver.cpp"/>
 </editors>
-<item historyLabel="Genome.h" index="2">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Genome.h" index="2">
-<position info="not_deleted" x="1658" y="20"/>
-</item>
-<item historyLabel="Genome.cpp" index="1">
-<position info="not_deleted" x="8178" y="0"/>
-</item>
-<item historyLabel="Genome.cpp" index="1">
-<position info="not_deleted" x="6896" y="14"/>
-</item>
-<item historyLabel="Genome.cpp" index="1">
-<position info="not_deleted" x="7437" y="0"/>
-</item>
-<item historyLabel="Genome.h" index="2">
-<position info="not_deleted" x="269" y="0"/>
-</item>
-<item historyLabel="Genome.cpp" index="1">
-<position info="not_deleted" x="7437" y="0"/>
-</item>
 <item historyLabel="Genome.h" index="2">
 <position/>
 </item>
@@ -427,8 +404,29 @@
 <item historyLabel="Mutation.cpp" index="5">
 <position info="not_deleted" x="6058" y="0"/>
 </item>
-<item active="true" historyLabel="Mutation.cpp" index="5">
+<item historyLabel="Mutation.cpp" index="5">
 <position info="not_deleted" x="1159" y="26"/>
+</item>
+<item historyLabel="Evolver.cpp" index="6">
+<position info="not_deleted" x="14007" y="0"/>
+</item>
+<item historyLabel="Evolver.cpp" index="6">
+<position info="not_deleted" x="7768" y="14"/>
+</item>
+<item historyLabel="Evolver.cpp" index="6">
+<position info="not_deleted" x="8372" y="0"/>
+</item>
+<item historyLabel="Evolver.cpp" index="6">
+<position info="not_deleted" x="16923" y="21"/>
+</item>
+<item historyLabel="Evolver.cpp" index="6">
+<position info="not_deleted" x="16969" y="147"/>
+</item>
+<item historyLabel="Evolver.cpp" index="6">
+<position info="not_deleted" x="7768" y="14"/>
+</item>
+<item active="true" historyLabel="Evolver.cpp" index="6">
+<position info="not_deleted" x="8553" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>

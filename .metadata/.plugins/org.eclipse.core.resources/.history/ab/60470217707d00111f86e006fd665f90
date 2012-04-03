@@ -253,8 +253,6 @@ void Genome::SetFitness(double fitness){
     	rootNode->append_attribute(doc.allocate_attribute("fitness", pchData ));
     }
 
-    Genome::Save(doc);
-
 }
 
 void Genome::FillWithRandomData(){
