@@ -1,1002 +1,790 @@
 
-**** Build of configuration Debug for project Darwin ****
+**** Rebuild of configuration Debug for project DRSStl ****
 
 **** Internal Builder is used for build               ****
-Nothing to build for Darwin
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 702  ms.  
 
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
+**** Build of configuration Debug for project DRSStl ****
 
 **** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 3214  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-..\src\Evolver.cpp: In memberfunctie ‘int Evolver::start(bool)’:
-..\src\Evolver.cpp:260:26: fout: conversion from ‘const char [1]’ to non-scalar type ‘std::stringstream {aka std::basic_stringstream<char>}’ requested
-..\src\Evolver.cpp:261:9: fout: ‘nGeneration’ was not declared in this scope
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:53:2: fout: ‘cout’ was not declared in this scope
+..\src\DRSStl.cpp:53:2: note: suggested alternative:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/iostream:62:18: note:   ‘std::cout’
+..\src\DRSStl.cpp:53:16: fout: ‘endl’ was not declared in this scope
+..\src\DRSStl.cpp:53:16: note: suggested alternative:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:543:5: note:   ‘std::endl’
+..\src\DRSStl.cpp:50:27: let op: unused variable ‘rootNode’ [-Wunused-variable]
 Build error occurred, build is stopped
-Time consumed: 1575  ms.  
+Time consumed: 499  ms.  
 
-**** Build of configuration Debug for project Darwin ****
+**** Build of configuration Debug for project DRSStl ****
 
 **** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-..\src\Evolver.cpp: In memberfunctie ‘int Evolver::start(bool)’:
-..\src\Evolver.cpp:260:26: fout: conversion from ‘const char [1]’ to non-scalar type ‘std::stringstream {aka std::basic_stringstream<char>}’ requested
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:50:27: let op: unused variable ‘rootNode’ [-Wunused-variable]
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 920  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:53:2: fout: ‘cout’ was not declared in this scope
+..\src\DRSStl.cpp:53:2: note: suggested alternative:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/iostream:62:18: note:   ‘std::cout’
+..\src\DRSStl.cpp:53:16: fout: ‘endl’ was not declared in this scope
+..\src\DRSStl.cpp:53:16: note: suggested alternative:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:543:5: note:   ‘std::endl’
+..\src\DRSStl.cpp:50:27: let op: unused variable ‘rootNode’ [-Wunused-variable]
 Build error occurred, build is stopped
-Time consumed: 1060  ms.  
+Time consumed: 343  ms.  
 
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1903  ms.  
-
-**** Build of configuration Debug for project Darwin ****
+**** Build of configuration Debug for project DRSStl ****
 
 **** Internal Builder is used for build               ****
-Nothing to build for Darwin
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:50:27: let op: unused variable ‘rootNode’ [-Wunused-variable]
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 874  ms.  
 
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
+**** Build of configuration Debug for project DRSStl ****
 
 **** Internal Builder is used for build               ****
-Nothing to build for Darwin
+Nothing to build for DRSStl
 
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
+**** Build of configuration Debug for project DRSStl ****
 
 **** Internal Builder is used for build               ****
-Nothing to build for Darwin
+Nothing to build for DRSStl
 
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
+**** Build of configuration Debug for project DRSStl ****
 
 **** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1872  ms.  
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:55:27: let op: unused variable ‘middlesNode’ [-Wunused-variable]
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 952  ms.  
 
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1887  ms.  
-
-**** Build of configuration Debug for project Darwin ****
+**** Build of configuration Debug for project DRSStl ****
 
 **** Internal Builder is used for build               ****
-Nothing to build for Darwin
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:54:27: let op: unused variable ‘middlesNode’ [-Wunused-variable]
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 983  ms.  
 
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
+**** Build of configuration Debug for project DRSStl ****
 
 **** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 2091  ms.  
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:54:27: let op: unused variable ‘middlesNode’ [-Wunused-variable]
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1185  ms.  
 
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
+**** Build of configuration Debug for project DRSStl ****
 
 **** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1965  ms.  
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:54:27: let op: unused variable ‘middlesNode’ [-Wunused-variable]
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 999  ms.  
 
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
+**** Build of configuration Debug for project DRSStl ****
 
 **** Internal Builder is used for build               ****
-Nothing to build for Darwin
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:54:27: let op: unused variable ‘middlesNode’ [-Wunused-variable]
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1014  ms.  
 
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
+**** Build of configuration Debug for project DRSStl ****
 
 **** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1903  ms.  
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:60:27: let op: unused variable ‘middlesNode’ [-Wunused-variable]
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1123  ms.  
 
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
+**** Build of configuration Debug for project DRSStl ****
 
 **** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Population.o ..\src\Population.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-..\src\Evolver.cpp: In memberfunctie ‘int Evolver::start(bool)’:
-..\src\Evolver.cpp:173:3: fout: expected unqualified-id before ‘}’ token
-..\src\Evolver.cpp:173:3: fout: expected ‘;’ before ‘}’ token
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1061  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1123  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1123  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:63:10: let op: variable ‘sGrid’ set but not used [-Wunused-but-set-variable]
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1124  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:123:33: fout: ‘struct grid’ has no member named ‘x’
+..\src\DRSStl.cpp:123:52: fout: expected ‘)’ before ‘{’ token
 Build error occurred, build is stopped
-Time consumed: 2574  ms.  
+Time consumed: 405  ms.  
 
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Population.o ..\src\Population.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-..\src\Evolver.cpp: In memberfunctie ‘int Evolver::start(bool)’:
-..\src\Evolver.cpp:173:3: fout: expected unqualified-id before ‘}’ token
-..\src\Evolver.cpp:173:3: fout: expected ‘;’ before ‘}’ token
-Build error occurred, build is stopped
-Time consumed: 2933  ms.  
-
-**** Build of configuration Debug for project Darwin ****
+**** Build of configuration Debug for project DRSStl ****
 
 **** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
-..\src\Genome.cpp: In functie ‘int GetGeneration()’:
-..\src\Genome.cpp:226:32: fout: ‘m_strXML’ was not declared in this scope
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:123:33: fout: ‘struct grid’ has no member named ‘x’
+..\src\DRSStl.cpp:123:52: fout: expected ‘)’ before ‘{’ token
 Build error occurred, build is stopped
 Time consumed: 406  ms.  
 
-**** Build of configuration Debug for project Darwin ****
+**** Build of configuration Debug for project DRSStl ****
 
 **** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-..\src\Evolver.cpp: In memberfunctie ‘int Evolver::start(bool)’:
-..\src\Evolver.cpp:173:3: fout: expected unqualified-id before ‘}’ token
-..\src\Evolver.cpp:173:3: fout: expected ‘;’ before ‘}’ token
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:123:33: fout: ‘struct grid’ has no member named ‘x’
+..\src\DRSStl.cpp:124:48: fout: expected ‘;’ before ‘std’
+Build error occurred, build is stopped
+Time consumed: 358  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:124:48: fout: expected ‘;’ before ‘std’
+Build error occurred, build is stopped
+Time consumed: 359  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1092  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:127:40: let op: comparison between signed and unsigned integer expressions [-Wsign-compare]
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1202  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:127:44: let op: comparison between signed and unsigned integer expressions [-Wsign-compare]
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1123  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:127:49: let op: comparison between signed and unsigned integer expressions [-Wsign-compare]
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1061  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1123  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1107  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:135:41: let op: comparison between signed and unsigned integer expressions [-Wsign-compare]
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1123  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1233  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1108  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘point3D GetCorner(int, int, int)’:
+..\src\DRSStl.cpp:169:23: fout: no match for ‘operator=’ in ‘sPoint3D = vsCorners.std::vector<_Tp, _Alloc>::at [with _Tp = point3D, _Alloc = std::allocator<point3D>, std::vector<_Tp, _Alloc>::const_reference = const point3D&, std::vector<_Tp, _Alloc>::size_type = unsigned int]’
+..\src\DRSStl.cpp:169:23: note: candidate is:
+..\src\DRSStl.cpp:18:8: note: point3D& point3D::operator=(const point3D&)
+..\src\DRSStl.cpp:18:8: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘const point3D&’
+..\src\DRSStl.cpp:171:2: fout: expected ‘,’ or ‘;’ before ‘return’
+..\src\DRSStl.cpp:168:6: let op: unused variable ‘i’ [-Wunused-variable]
+..\src\DRSStl.cpp:172:1: let op: no return statement in function returning non-void [-Wreturn-type]
+Build error occurred, build is stopped
+Time consumed: 406  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1127  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1205  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1072  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1128  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1279  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:155:18: fout: invalid conversion from ‘int’ to ‘Corner’ [-fpermissive]
+..\src\DRSStl.cpp:156:25: fout: ‘GetCorner’ was not declared in this scope
+Build error occurred, build is stopped
+Time consumed: 368  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:158:18: fout: invalid conversion from ‘int’ to ‘Corner’ [-fpermissive]
+Build error occurred, build is stopped
+Time consumed: 349  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1089  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DRSStl
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1186  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1149  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1330  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1128  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1124  ms.  
+
+**** Build of configuration Release for project DRSDarwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DRSDarwin
+
+**** Build of configuration Debug for project DRSDxf ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DRSDxf
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DRSStl
+
+**** Build of configuration Release for project DRSTokamak ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DRSTokamak
+
+**** Build of configuration Release for project DTCRandomFitness ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DTCRandomFitness
+
+**** Build of configuration Release for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
+
+**** Build of configuration Release for project SteadyStateTokamak ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for SteadyStateTokamak
+
+**** Build of configuration Release for project Tokamak ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Tokamak
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1073  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:118:3: fout: ‘vsHEdges’ was not declared in this scope
+..\src\DRSStl.cpp:129:3: fout: ‘vsVEdges’ was not declared in this scope
+..\src\DRSStl.cpp:147:5: fout: ‘vsHEdges’ was not declared in this scope
+..\src\DRSStl.cpp:151:5: fout: ‘vsVEdges’ was not declared in this scope
+..\src\DRSStl.cpp:160:42: fout: ‘vsHEdges’ was not declared in this scope
+..\src\DRSStl.cpp:160:68: fout: ‘vsVEdges’ was not declared in this scope
+Build error occurred, build is stopped
+Time consumed: 421  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:147:5: fout: ‘vsHEdges’ was not declared in this scope
+..\src\DRSStl.cpp:151:5: fout: ‘vsVEdges’ was not declared in this scope
+..\src\DRSStl.cpp:160:42: fout: ‘vsHEdges’ was not declared in this scope
+..\src\DRSStl.cpp:160:68: fout: ‘vsVEdges’ was not declared in this scope
+Build error occurred, build is stopped
+Time consumed: 344  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:147:5: fout: ‘vsHEdges’ was not declared in this scope
+..\src\DRSStl.cpp:151:5: fout: ‘vsVEdges’ was not declared in this scope
+Build error occurred, build is stopped
+Time consumed: 390  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1108  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1107  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘point3D GetZEdge(Corner, int, int, int)’:
+..\src\DRSStl.cpp:296:13: fout: ‘vsZEdges’ was not declared in this scope
+Build error occurred, build is stopped
+Time consumed: 358  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1108  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1123  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1139  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1123  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1185  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DRSStl
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1123  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1077  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1139  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1108  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1217  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:179:34: fout: ‘struct point3D’ has no member named ‘x’
+..\src\DRSStl.cpp:179:64: fout: ‘struct point3D’ has no member named ‘y’
+..\src\DRSStl.cpp:179:94: fout: ‘struct point3D’ has no member named ‘z’
+..\src\DRSStl.cpp:180:25: fout: ‘struct point3D’ has no member named ‘x’
+..\src\DRSStl.cpp:180:54: fout: ‘struct point3D’ has no member named ‘y’
+..\src\DRSStl.cpp:180:83: fout: ‘struct point3D’ has no member named ‘z’
+..\src\DRSStl.cpp:181:25: fout: ‘struct point3D’ has no member named ‘x’
+..\src\DRSStl.cpp:181:55: fout: ‘struct point3D’ has no member named ‘y’
+..\src\DRSStl.cpp:181:85: fout: ‘struct point3D’ has no member named ‘z’
+..\src\DRSStl.cpp:182:25: fout: ‘struct point3D’ has no member named ‘x’
+..\src\DRSStl.cpp:182:55: fout: ‘struct point3D’ has no member named ‘y’
+..\src\DRSStl.cpp:182:85: fout: ‘struct point3D’ has no member named ‘z’
+..\src\DRSStl.cpp:185:7: fout: no match for ‘operator=’ in ‘ss = ""’
+..\src\DRSStl.cpp:185:7: note: candidate is:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/sstream:483:11: note: std::basic_stringstream<char>& std::basic_stringstream<char>::operator=(const std::basic_stringstream<char>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/sstream:483:11: note:   no known conversion for argument 1 from ‘const char [1]’ to ‘const std::basic_stringstream<char>&’
+Build error occurred, build is stopped
+Time consumed: 406  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:185:7: fout: no match for ‘operator=’ in ‘ss = ""’
+..\src\DRSStl.cpp:185:7: note: candidate is:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/sstream:483:11: note: std::basic_stringstream<char>& std::basic_stringstream<char>::operator=(const std::basic_stringstream<char>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/sstream:483:11: note:   no known conversion for argument 1 from ‘const char [1]’ to ‘const std::basic_stringstream<char>&’
+Build error occurred, build is stopped
+Time consumed: 358  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1185  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1341  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1248  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘std::string GetSCAD(int, int, int)’:
+..\src\DRSStl.cpp:367:42: fout: default argument given for parameter 3 of ‘std::string GetSCAD(int, int, int)’ [-fpermissive]
+..\src\DRSStl.cpp:56:13: fout: after previous specification in ‘std::string GetSCAD(int, int, int)’ [-fpermissive]
+Build error occurred, build is stopped
+Time consumed: 484  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1186  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1279  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp:60:6: fout: ongeldige suffix "Dmode" aan integerconstante
+..\src\DRSStl.cpp:229:5: fout: ongeldige suffix "DMode" aan integerconstante
+..\src\DRSStl.cpp:263:5: fout: ongeldige suffix "DMode" aan integerconstante
+..\src\DRSStl.cpp:296:5: fout: ongeldige suffix "DMode" aan integerconstante
+..\src\DRSStl.cpp:328:5: fout: ongeldige suffix "DMode" aan integerconstante
+..\src\DRSStl.cpp:361:5: fout: ongeldige suffix "DMode" aan integerconstante
+..\src\DRSStl.cpp:60:6: fout: expected unqualified-id before numeric constant
 Build error occurred, build is stopped
 Time consumed: 500  ms.  
 
-**** Build of configuration Debug for project Darwin ****
+**** Build of configuration Debug for project DRSStl ****
 
 **** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Population.o ..\src\Population.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 5569  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1872  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1919  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1903  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
-..\src\Genome.cpp: In memberfunctie ‘int Genome::GetGeneration()’:
-..\src\Genome.cpp:230:27: let op: unused variable ‘rootNode’ [-Wunused-variable]
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1638  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1685  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1857  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1841  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1888  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1997  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1872  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1903  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1856  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1919  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1888  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-..\src\Evolver.cpp:455:5: fout: prototype for ‘int Evolver::SaveProgress(Population*)’ does not match any in class ‘Evolver’
-..\src\/Evolver.h:102:9: fout: kandidaat is: int Evolver::SaveProgress()
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp:60:6: fout: ongeldige suffix "Dmode" aan integerconstante
+..\src\DRSStl.cpp:229:5: fout: ongeldige suffix "Dmode" aan integerconstante
+..\src\DRSStl.cpp:263:5: fout: ongeldige suffix "Dmode" aan integerconstante
+..\src\DRSStl.cpp:296:5: fout: ongeldige suffix "Dmode" aan integerconstante
+..\src\DRSStl.cpp:328:5: fout: ongeldige suffix "Dmode" aan integerconstante
+..\src\DRSStl.cpp:361:5: fout: ongeldige suffix "Dmode" aan integerconstante
+..\src\DRSStl.cpp:60:6: fout: expected unqualified-id before numeric constant
 Build error occurred, build is stopped
-Time consumed: 624  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 2590  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1903  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1934  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Release for project DRSDarwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O3 -Wall -c -fmessage-length=0 -o src\DRSDarwin.o ..\src\DRSDarwin.cpp
-g++ -o DRSDarwin.exe src\DRSDarwin.o
-Build complete for project DRSDarwin
-Time consumed: 2406  ms.  
-
-**** Rebuild of configuration Release for project DRSTokamak ****
-
-**** Internal Builder is used for build               ****
-g++ -O3 -Wall -c -fmessage-length=0 -o src\DRSTokamak.o ..\src\DRSTokamak.cpp
-g++ -o DRSTokamak.exe src\DRSTokamak.o
-Build complete for project DRSTokamak
-Time consumed: 1151  ms.  
-
-**** Rebuild of configuration Release for project DTCRandomFitness ****
-
-**** Internal Builder is used for build               ****
-g++ -O3 -Wall -c -fmessage-length=0 -o src\DTCRandomFitness.o ..\src\DTCRandomFitness.cpp
-g++ -o DTCRandomFitness.exe src\DTCRandomFitness.o
-Build complete for project DTCRandomFitness
-Time consumed: 355  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Rebuild of configuration Release for project SteadyStateTokamak ****
-
-**** Internal Builder is used for build               ****
-g++ -O3 -Wall -c -fmessage-length=0 -o src\SteadyStateTokamak.o ..\src\SteadyStateTokamak.cpp
-g++ -o SteadyStateTokamak.exe src\SteadyStateTokamak.o
-Build complete for project SteadyStateTokamak
-Time consumed: 1005  ms.  
-
-**** Rebuild of configuration Release for project Tokamak ****
-
-**** Internal Builder is used for build               ****
-g++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\include -O3 -Wall -c -fmessage-length=0 -o src\Tokamak.o ..\src\Tokamak.cpp
-g++ -o Tokamak.exe src\Tokamak.o
-Build complete for project Tokamak
-Time consumed: 1435  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 2371  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1856  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1919  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 2543  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1903  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1872  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 2075  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1965  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1840  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Release for project DRSDarwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for DRSDarwin
-
-**** Build of configuration Release for project DRSTokamak ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for DRSTokamak
-
-**** Build of configuration Release for project DTCRandomFitness ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for DTCRandomFitness
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Release for project SteadyStateTokamak ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for SteadyStateTokamak
-
-**** Build of configuration Release for project Tokamak ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Tokamak
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1981  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Release for project DRSDarwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for DRSDarwin
-
-**** Build of configuration Release for project DRSTokamak ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for DRSTokamak
-
-**** Build of configuration Release for project DTCRandomFitness ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for DTCRandomFitness
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Release for project SteadyStateTokamak ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for SteadyStateTokamak
-
-**** Build of configuration Release for project Tokamak ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Tokamak
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
-..\src\Genome.cpp: In memberfunctie ‘void Genome::SetFitness(double)’:
-..\src\Genome.cpp:246:27: let op: unused variable ‘rootNode’ [-Wunused-variable]
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Population.o ..\src\Population.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 6458  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1623  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1622  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1622  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1887  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Release for project DRSDarwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for DRSDarwin
-
-**** Build of configuration Release for project DRSTokamak ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for DRSTokamak
-
-**** Build of configuration Release for project DTCRandomFitness ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for DTCRandomFitness
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Release for project SteadyStateTokamak ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for SteadyStateTokamak
-
-**** Build of configuration Release for project Tokamak ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Tokamak
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
-..\src\Mutation.cpp: In memberfunctie ‘std::string Mutation::ValidateMutation(std::string)’:
-..\src\Mutation.cpp:155:40: fout: no match for ‘operator==’ in ‘strValue.std::basic_string<_CharT, _Traits, _Alloc>::at [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>, std::basic_string<_CharT, _Traits, _Alloc>::reference = char&, std::basic_string<_CharT, _Traits, _Alloc>::size_type = unsigned int](0u) == std::basic_string<char>(((const char*)"0"), (*(const std::allocator<char>*)(& std::allocator<char>())))’
-..\src\Mutation.cpp:155:40: note: candidates are:
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stream_iterator.h:130:5: note: template<class _Tp, class _CharT, class _Traits, class _Dist> bool std::operator==(const std::istream_iterator<_Tp, _CharT, _Traits, _Dist>&, const std::istream_iterator<_Tp, _CharT, _Traits, _Dist>&)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_vector.h:1273:5: note: template<class _Tp, class _Alloc> bool std::operator==(const std::vector<_Tp, _Alloc>&, const std::vector<_Tp, _Alloc>&)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/streambuf_iterator.h:194:5: note: template<class _CharT, class _Traits> bool std::operator==(const std::istreambuf_iterator<_CharT, _Traits>&, const std::istreambuf_iterator<_CharT, _Traits>&)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2460:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2448:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const _CharT*, const std::basic_string<_CharT, _Traits, _Alloc>&)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2434:5: note: template<class _CharT> typename __gnu_cxx::__enable_if<std::__is_char<_Tp>::__value, bool>::__type std::operator==(const std::basic_string<_CharT>&, const std::basic_string<_CharT>&)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2427:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const std::basic_string<_CharT, _Traits, _Alloc>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/allocator.h:127:5: note: template<class _Tp> bool std::operator==(const std::allocator<_Tp1>&, const std::allocator<_Tp1>&)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/allocator.h:122:5: note: template<class _T1, class _T2> bool std::operator==(const std::allocator<_T1>&, const std::allocator<_T2>&)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:335:5: note: template<class _IteratorL, class _IteratorR> bool std::operator==(const std::reverse_iterator<_IteratorL>&, const std::reverse_iterator<_IteratorR>&)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:285:5: note: template<class _Iterator> bool std::operator==(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_pair.h:201:5: note: template<class _T1, class _T2> bool std::operator==(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/postypes.h:218:5: note: template<class _StateT> bool std::operator==(const std::fpos<_StateT>&, const std::fpos<_StateT>&)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ext/new_allocator.h:123:5: note: template<class _Tp> bool __gnu_cxx::operator==(const __gnu_cxx::new_allocator<_Tp>&, const __gnu_cxx::new_allocator<_Tp>&)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:805:5: note: template<class _Iterator, class _Container> bool __gnu_cxx::operator==(const __gnu_cxx::__normal_iterator<_Iterator, _Container>&, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:799:5: note: template<class _IteratorL, class _IteratorR, class _Container> bool __gnu_cxx::operator==(const __gnu_cxx::__normal_iterator<_IteratorL, _Container>&, const __gnu_cxx::__normal_iterator<_IteratorR, _Container>&)
-..\src\Mutation.cpp:155:78: fout: no match for ‘operator==’ in ‘strValue.std::basic_string<_CharT, _Traits, _Alloc>::at [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>, std::basic_string<_CharT, _Traits, _Alloc>::reference = char&, std::basic_string<_CharT, _Traits, _Alloc>::size_type = unsigned int](1u) == std::basic_string<char>(((const char*)"0"), (*(const std::allocator<char>*)(& std::allocator<char>())))’
-..\src\Mutation.cpp:155:78: note: candidates are:
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stream_iterator.h:130:5: note: template<class _Tp, class _CharT, class _Traits, class _Dist> bool std::operator==(const std::istream_iterator<_Tp, _CharT, _Traits, _Dist>&, const std::istream_iterator<_Tp, _CharT, _Traits, _Dist>&)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_vector.h:1273:5: note: template<class _Tp, class _Alloc> bool std::operator==(const std::vector<_Tp, _Alloc>&, const std::vector<_Tp, _Alloc>&)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/streambuf_iterator.h:194:5: note: template<class _CharT, class _Traits> bool std::operator==(const std::istreambuf_iterator<_CharT, _Traits>&, const std::istreambuf_iterator<_CharT, _Traits>&)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2460:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2448:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const _CharT*, const std::basic_string<_CharT, _Traits, _Alloc>&)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2434:5: note: template<class _CharT> typename __gnu_cxx::__enable_if<std::__is_char<_Tp>::__value, bool>::__type std::operator==(const std::basic_string<_CharT>&, const std::basic_string<_CharT>&)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2427:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const std::basic_string<_CharT, _Traits, _Alloc>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/allocator.h:127:5: note: template<class _Tp> bool std::operator==(const std::allocator<_Tp1>&, const std::allocator<_Tp1>&)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/allocator.h:122:5: note: template<class _T1, class _T2> bool std::operator==(const std::allocator<_T1>&, const std::allocator<_T2>&)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:335:5: note: template<class _IteratorL, class _IteratorR> bool std::operator==(const std::reverse_iterator<_IteratorL>&, const std::reverse_iterator<_IteratorR>&)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:285:5: note: template<class _Iterator> bool std::operator==(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_pair.h:201:5: note: template<class _T1, class _T2> bool std::operator==(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/postypes.h:218:5: note: template<class _StateT> bool std::operator==(const std::fpos<_StateT>&, const std::fpos<_StateT>&)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ext/new_allocator.h:123:5: note: template<class _Tp> bool __gnu_cxx::operator==(const __gnu_cxx::new_allocator<_Tp>&, const __gnu_cxx::new_allocator<_Tp>&)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:805:5: note: template<class _Iterator, class _Container> bool __gnu_cxx::operator==(const __gnu_cxx::__normal_iterator<_Iterator, _Container>&, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)
-c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:799:5: note: template<class _IteratorL, class _IteratorR, class _Container> bool __gnu_cxx::operator==(const __gnu_cxx::__normal_iterator<_IteratorL, _Container>&, const __gnu_cxx::__normal_iterator<_IteratorR, _Container>&)
+Time consumed: 484  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp:60:6: fout: ongeldige suffix "Dmode" aan integerconstante
+..\src\DRSStl.cpp:229:5: fout: ongeldige suffix "Dmode" aan integerconstante
+..\src\DRSStl.cpp:263:5: fout: ongeldige suffix "Dmode" aan integerconstante
+..\src\DRSStl.cpp:296:5: fout: ongeldige suffix "Dmode" aan integerconstante
+..\src\DRSStl.cpp:328:5: fout: ongeldige suffix "Dmode" aan integerconstante
+..\src\DRSStl.cpp:361:5: fout: ongeldige suffix "Dmode" aan integerconstante
+..\src\DRSStl.cpp:60:6: fout: expected unqualified-id before numeric constant
 Build error occurred, build is stopped
-Time consumed: 1497  ms.  
+Time consumed: 406  ms.  
 
-**** Build of configuration Debug for project Darwin ****
+**** Build of configuration Debug for project DRSStl ****
 
 **** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
-..\src\Mutation.cpp: In memberfunctie ‘std::string Mutation::ValidateMutation(std::string)’:
-..\src\Mutation.cpp:155:25: let op: comparison with string literal results in unspecified behaviour [-Waddress]
-..\src\Mutation.cpp:155:25: fout: ISO C++ forbids comparison between pointer and integer [-fpermissive]
-..\src\Mutation.cpp:155:50: let op: comparison with string literal results in unspecified behaviour [-Waddress]
-..\src\Mutation.cpp:155:50: fout: ISO C++ forbids comparison between pointer and integer [-fpermissive]
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp:60:6: fout: ongeldige suffix "Dmode" aan integerconstante
+..\src\DRSStl.cpp:229:5: fout: ongeldige suffix "Dmode" aan integerconstante
+..\src\DRSStl.cpp:263:5: fout: ongeldige suffix "Dmode" aan integerconstante
+..\src\DRSStl.cpp:296:5: fout: ongeldige suffix "Dmode" aan integerconstante
+..\src\DRSStl.cpp:328:5: fout: ongeldige suffix "Dmode" aan integerconstante
+..\src\DRSStl.cpp:361:5: fout: ongeldige suffix "Dmode" aan integerconstante
+..\src\DRSStl.cpp:60:6: fout: expected unqualified-id before numeric constant
+Build error occurred, build is stopped
+Time consumed: 421  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp:229:5: fout: ongeldige suffix "Dmode" aan integerconstante
+..\src\DRSStl.cpp:263:5: fout: ongeldige suffix "Dmode" aan integerconstante
+..\src\DRSStl.cpp:296:5: fout: ongeldige suffix "Dmode" aan integerconstante
+..\src\DRSStl.cpp:328:5: fout: ongeldige suffix "Dmode" aan integerconstante
+..\src\DRSStl.cpp:361:5: fout: ongeldige suffix "Dmode" aan integerconstante
 Build error occurred, build is stopped
 Time consumed: 468  ms.  
 
-**** Build of configuration Debug for project Darwin ****
+**** Build of configuration Debug for project DRSStl ****
 
 **** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1591  ms.  
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1248  ms.  
 
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
+**** Build of configuration Debug for project DRSStl ****
 
 **** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1653  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1599  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1687  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1573  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1645  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1614  ms.  
-
-**** Build of configuration Debug for project Darwin ****
-
-**** Internal Builder is used for build               ****
-g++ -O0 -g3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 1637  ms.  
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1264  ms.  
 
 **** Build of configuration Release for project DRSDarwin ****
 
 **** Internal Builder is used for build               ****
 Nothing to build for DRSDarwin
+
+**** Build of configuration Debug for project DRSDxf ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DRSDxf
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DRSStl
 
 **** Build of configuration Release for project DRSTokamak ****
 
@@ -1008,7 +796,7 @@ Nothing to build for DRSTokamak
 **** Internal Builder is used for build               ****
 Nothing to build for DTCRandomFitness
 
-**** Build of configuration Debug for project Darwin ****
+**** Build of configuration Release for project Darwin ****
 
 **** Internal Builder is used for build               ****
 Nothing to build for Darwin

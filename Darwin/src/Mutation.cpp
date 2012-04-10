@@ -1194,7 +1194,7 @@ void ChromosomeMutation::Insertion(){
 		geneNode = ChromosomeMutation::GetGeneNode(nRandom1);
 		newNode = m_Node->document()->allocate_node(rapidxml::node_element, "Gene");
 
-		char* pchRandomData;
+		char* pchRandomData = 0;
 
 
 		std::string strEncoding = m_Node->first_attribute("encoding")->value();

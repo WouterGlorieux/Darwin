@@ -1,0 +1,85 @@
+//============================================================================
+// Name        : DRSStl.cpp
+// Author      : Wouter Glorieux
+// Version     :
+// Copyright   : 
+// Description : Hello World in C++, Ansi-style
+//============================================================================
+
+#include <iostream>
+#include <vector>
+#include <string>
+#include "rapidxml.hpp"
+#include <fstream>
+#include <sstream>
+
+void StringExplode(std::string str, std::string separator, std::vector<std::string>* results);
+
+
+int main(int argc, char *argv[]) {
+	std::string strFileName = "";
+	std::string strOutputFileName = "";
+
+
+	if(argc == 3){
+		strFileName= argv[1];
+		strOutputFileName= argv[2];
+	}
+	else{
+		std::cout << "Usage: Tokamak.exe inputFilename outputFilename" << std::endl;
+		std::exit(1);
+	}
+
+	//std::cout << "loading file: " << strFileName << std::endl;
+	std::ifstream t(strFileName.c_str());
+	std::stringstream buffer;
+	buffer << t.rdbuf();
+
+	std::string input_xml = buffer.str() ;
+	std::ofstream output(strOutputFileName.c_str());
+
+    // make a safe-to-modify copy of input_xml
+    // (you should never modify the contents of an std::string directly)
+    std::vector<char> xml_copy(input_xml.begin(), input_xml.end());
+    xml_copy.push_back('\0');
+
+    // only use xml_copy from here on!
+    rapidxml::xml_document<> doc;
+    doc.parse<rapidxml::parse_declaration_node | rapidxml::parse_no_data_nodes>(&xml_copy[0]);
+    rapidxml::xml_node<>* rootNode = doc.first_node("Genome");
+
+    rapidxml::xml_node<>* cornersNode = rootNode->first_node("Chromosome");
+    rapidxml::xml_node<>* horizontalEdgesNode = cornersNode->next_sibling("Chromosome");
+    rapidxml::xml_node<>* verticalEdgesNode = horizontalEdgesNode->next_sibling("Chromosome");
+    rapidxml::xml_node<>* middlesNode = verticalEdgesNode->next_sibling("Chromosome");
+
+	for (rapidxml::xml_node<>* geneNode = cornersNode->first_node("Gene"); geneNode; geneNode = geneNode->next_sibling("Gene"))
+	{
+		std::vector<std::string> vstrData;
+		StringExplode(geneNode->value(), " ", &vstrData);
+	}
+
+
+
+
+
+
+
+	return 0;
+}
+
+
+void StringExplode(std::string str, std::string separator, std::vector<std::string>* results){
+    std::size_t found;
+    found = str.find_first_of(separator);
+    while(found != std::string::npos){
+        if(found > 0){
+            results->push_back(str.substr(0,found));
+        }
+        str = str.substr(found+1);
+        found = str.find_first_of(separator);
+    }
+    if(str.length() > 0){
+        results->push_back(str);
+    }
+}
