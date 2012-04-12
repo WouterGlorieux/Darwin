@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="33" version="2.0">
+<workbench progressCount="34" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="1024" x="193" y="333">
 <fastViewData fastViewLocation="1024"/>
@@ -43,7 +43,7 @@
 </editor>
 <editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="DRSStl.cpp" partName="DRSStl.cpp" path="C:/workspaces/Darwin/DRSStl/src/DRSStl.cpp" title="DRSStl.cpp" tooltip="DRSStl/src/DRSStl.cpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/DRSStl/src/DRSStl.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1425" selectionTopPixel="3015"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="14987" selectionTopPixel="7181"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="Genome.cpp" partName="Genome.cpp" path="C:/workspaces/Darwin/Darwin/src/Genome.cpp" title="Genome.cpp" tooltip="Darwin/src/Genome.cpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Darwin/src/Genome.cpp"/>
@@ -68,8 +68,8 @@
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
 <category IMemento.internal.id="Warnings (4 items)"/>
-<category IMemento.internal.id="Warnings"/>
 <category IMemento.internal.id="Errors"/>
+<category IMemento.internal.id="Warnings"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="129" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="1255"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -241,130 +241,31 @@
 <navigationHistory>
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/DRSStl/src/DRSStl.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Globals.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/DRSTokamak/src/DRSTokamak.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/DRSDarwin/src/DRSDarwin.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Genome.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Mutation.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Encoding.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Recombination.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Evolver.cpp"/>
 </editors>
-<item historyLabel="DRSTokamak.cpp" index="2">
-<position info="not_deleted" x="552" y="0"/>
-</item>
-<item historyLabel="DRSDarwin.cpp" index="3">
+<item historyLabel="Mutation.cpp" index="2">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="DRSTokamak.cpp" index="2">
-<position info="not_deleted" x="552" y="0"/>
+<item historyLabel="Encoding.cpp" index="3">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="3774" y="0"/>
+<item historyLabel="Recombination.cpp" index="4">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Genome.cpp" index="4">
+<item historyLabel="Encoding.cpp" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Mutation.cpp" index="2">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Genome.cpp" index="1">
 <position info="not_deleted" x="2459" y="125"/>
 </item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="3774" y="0"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="3149" y="0"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position/>
-</item>
-<item historyLabel="Globals.h" index="1">
-<position info="not_deleted" x="2054" y="46"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="3230" y="0"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="3232" y="0"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="3355" y="0"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="5127" y="0"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="5153" y="0"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="5179" y="0"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="2456" y="0"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="2468" y="0"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="4634" y="0"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="4648" y="0"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="4649" y="0"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="4713" y="0"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="5265" y="0"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="4655" y="58"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="4719" y="52"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="8593" y="0"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="2585" y="0"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="6277" y="16"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="6268" y="0"/>
-</item>
-<item historyLabel="Globals.h" index="1">
-<position info="not_deleted" x="815" y="196"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="5745" y="0"/>
-</item>
-<item historyLabel="Genome.cpp" index="4">
-<position info="not_deleted" x="2459" y="125"/>
-</item>
-<item historyLabel="Mutation.cpp" index="5">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Encoding.cpp" index="6">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Recombination.cpp" index="7">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Encoding.cpp" index="6">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Mutation.cpp" index="5">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Genome.cpp" index="4">
-<position info="not_deleted" x="2459" y="125"/>
-</item>
-<item historyLabel="Evolver.cpp" index="8">
+<item historyLabel="Evolver.cpp" index="5">
 <position info="not_deleted" x="11338" y="373"/>
 </item>
 <item historyLabel="DRSStl.cpp" index="0">
@@ -397,8 +298,104 @@
 <item historyLabel="DRSStl.cpp" index="0">
 <position info="not_deleted" x="5161" y="0"/>
 </item>
-<item active="true" historyLabel="DRSStl.cpp" index="0">
+<item historyLabel="DRSStl.cpp" index="0">
 <position info="not_deleted" x="4719" y="52"/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position info="not_deleted" x="1257" y="0"/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position info="not_deleted" x="5421" y="0"/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position info="not_deleted" x="12145" y="0"/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position info="not_deleted" x="12143" y="0"/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position info="not_deleted" x="5517" y="0"/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position info="not_deleted" x="6786" y="0"/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position info="not_deleted" x="6763" y="0"/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position info="not_deleted" x="1276" y="6"/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position info="not_deleted" x="6754" y="11"/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position info="not_deleted" x="1392" y="0"/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position info="not_deleted" x="13324" y="0"/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position info="not_deleted" x="13322" y="0"/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position info="not_deleted" x="13324" y="0"/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position info="not_deleted" x="437" y="0"/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position info="not_deleted" x="13256" y="68"/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position info="not_deleted" x="13395" y="0"/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position info="not_deleted" x="2203" y="0"/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position info="not_deleted" x="1992" y="81"/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position info="not_deleted" x="13395" y="0"/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position info="not_deleted" x="2223" y="0"/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position info="not_deleted" x="4334" y="0"/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position info="not_deleted" x="2478" y="35"/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position info="not_deleted" x="1443" y="0"/>
+</item>
+<item active="true" historyLabel="DRSStl.cpp" index="0">
+<position info="not_deleted" x="6520" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -406,12 +403,6 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
-<trimArea IMemento.internal.id="16384">
-<trimItem IMemento.internal.id="topLeft"/>
-</trimArea>
-<trimArea IMemento.internal.id="131072">
-<trimItem IMemento.internal.id="topRight"/>
-</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 <trimItem IMemento.internal.id="org.eclipse.mylyn.tasks.ui.trim.container"/>
@@ -420,7 +411,6 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
-<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@fbc0bd"/>
 </trimArea>
 </trimLayout>
 </window>

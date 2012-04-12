@@ -12,8 +12,8 @@
 #include "rapidxml.hpp"
 #include <fstream>
 #include <sstream>
-
-
+#include <math.h>
+#include <algorithm>
 
 struct point3D
 {
@@ -37,38 +37,42 @@ struct grid
 	int Z;
 };
 
-enum Corner
-{
-	NW = 1,			//North-West corner
-	NE = 2,			//North-East corner
-	SW = 3,	        //South-West corner
-	SE = 4			//South-East corner
-};
+
 
 void StringExplode(std::string str, std::string separator, std::vector<std::string>* results);
-point3D GetCorner(Corner corner, int i, int j, int k);
-point3D GetXEdge(Corner corner, int i, int j, int k);
-point3D GetYEdge(Corner corner, int i, int j, int k);
-point3D GetZEdge(Corner corner, int i, int j, int k);
-point3D GetMiddle(Corner corner, int i, int j, int k);
+
 
 controlPoints GetControlPoints(int i, int j, int k);
 std::string GetSCAD(int i, int j, int k);
+void SortControlPoints();
 
 
 grid sGrid;
-bool mode2D = true;
+bool mode2D = false;
+
+point3D asPoints[16][16];			//2d array of coördinates of all points
+std::vector<point3D> vsPoints;      //vector with all points
 
 
-std::vector<point3D> vsCorners;		//vector of coördinates of the corners
-std::vector<point3D> vsXEdges;		//vector of coördinates of the horizontal edges
-std::vector<point3D> vsYEdges;		//vector of coördinates of the vertical edges
-std::vector<point3D> vsZEdges;		//vector of coördinates of the depth edges
-std::vector<point3D> vsMiddles;		//vector of coördinates of the middles
+bool sortByX(const point3D &a, const point3D &b)
+{
+    return a.X < b.X;
+}
+
+bool sortByY(const point3D &a, const point3D &b)
+{
+    return a.Y > b.Y;
+}
+
 
 int main(int argc, char *argv[]) {
 	std::string strFileName = "";
 	std::string strOutputFileName = "";
+
+
+	double dXmultiplier = 0.01;
+	double dYmultiplier = 0.01;
+	double dZmultiplier = 0.0001;
 
 
 	if(argc == 3){
@@ -103,83 +107,75 @@ int main(int argc, char *argv[]) {
     sGrid.Y = atoi(rootNode->first_attribute("gridY")->value());
     sGrid.Z = atoi(rootNode->first_attribute("gridZ")->value());
 
-    rapidxml::xml_node<>* cornersNode = rootNode->first_node("Chromosome");
-    rapidxml::xml_node<>* horizontalEdgesNode = cornersNode->next_sibling("Chromosome");
-    rapidxml::xml_node<>* verticalEdgesNode = horizontalEdgesNode->next_sibling("Chromosome");
-    rapidxml::xml_node<>* middlesNode = verticalEdgesNode->next_sibling("Chromosome");
 
-
-
-
-	for (rapidxml::xml_node<>* geneNode = cornersNode->first_node("Gene"); geneNode; geneNode = geneNode->next_sibling("Gene"))
+	for (rapidxml::xml_node<>* chromosomeNode = rootNode->first_node("Chromosome"); chromosomeNode; chromosomeNode = chromosomeNode->next_sibling("Chromosome"))
 	{
-		std::vector<std::string> vstrData;
-		StringExplode(geneNode->value(), "|", &vstrData);
-		point3D sPoint3D;
-		sPoint3D.X = atof(vstrData.at(0).c_str());
-		sPoint3D.Y = atof(vstrData.at(1).c_str());
-		sPoint3D.Z = atof(vstrData.at(2).c_str());
-		vsCorners.push_back(sPoint3D);
+		for (rapidxml::xml_node<>* geneNode = chromosomeNode->first_node("Gene"); geneNode; geneNode = geneNode->next_sibling("Gene"))
+		{
+			std::vector<std::string> vstrData;
+			StringExplode(geneNode->value(), "|", &vstrData);
+			point3D sPoint3D;
+			sPoint3D.X = atof(vstrData.at(0).c_str()) * dXmultiplier;
+			sPoint3D.Y = atof(vstrData.at(1).c_str()) * dYmultiplier;
+			if(!mode2D){
+				sPoint3D.Z = atof(vstrData.at(2).c_str()) * dZmultiplier;
+			}
+			else{
+				sPoint3D.Z = 0;
+			}
+
+			//sPoint3D.deltaX = 10.0;
+			//sPoint3D.deltaY = 5.0;
+
+			//std::cout << i << " " << j << std::endl;
+			vsPoints.push_back(sPoint3D);
+
+		}
 	}
 
-	for (rapidxml::xml_node<>* geneNode = horizontalEdgesNode->first_node("Gene"); geneNode; geneNode = geneNode->next_sibling("Gene"))
-	{
-		std::vector<std::string> vstrData;
-		StringExplode(geneNode->value(), "|", &vstrData);
-		point3D sPoint3D;
-		sPoint3D.X = atof(vstrData.at(0).c_str());
-		sPoint3D.Y = atof(vstrData.at(1).c_str());
-		sPoint3D.Z = atof(vstrData.at(2).c_str());
-		vsXEdges.push_back(sPoint3D);
-	}
+	SortControlPoints();
 
-	for (rapidxml::xml_node<>* geneNode = verticalEdgesNode->first_node("Gene"); geneNode; geneNode = geneNode->next_sibling("Gene"))
-	{
-		std::vector<std::string> vstrData;
-		StringExplode(geneNode->value(), "|", &vstrData);
-		point3D sPoint3D;
-		sPoint3D.X = atof(vstrData.at(0).c_str());
-		sPoint3D.Y = atof(vstrData.at(1).c_str());
-		sPoint3D.Z = atof(vstrData.at(2).c_str());
-		vsYEdges.push_back(sPoint3D);
-	}
 
-	for (rapidxml::xml_node<>* geneNode = middlesNode->first_node("Gene"); geneNode; geneNode = geneNode->next_sibling("Gene"))
-	{
-		std::vector<std::string> vstrData;
-		StringExplode(geneNode->value(), "|", &vstrData);
-		point3D sPoint3D;
-		sPoint3D.X = atof(vstrData.at(0).c_str());
-		sPoint3D.Y = atof(vstrData.at(1).c_str());
-		sPoint3D.Z = atof(vstrData.at(2).c_str());
-		vsMiddles.push_back(sPoint3D);
-	}
 
-	if(vsCorners.size() != ((sGrid.X+1) * (sGrid.Y+1))){
-		std::cout << "Wrong number of corner genes." << std::endl;
-	}
-
-	if(vsXEdges.size() != (int)(sGrid.X*2*(sGrid.Y+1))){
-		std::cout << "Wrong number of horizontal edge genes." << std::endl;
-	}
-
-	if(vsYEdges.size() != (int)(sGrid.Y*2*(sGrid.X+1))){
-		std::cout << "Wrong number of horizontal edge genes." << std::endl;
-	}
-
-	if(vsMiddles.size() != (int)(sGrid.X*sGrid.Y*4)){
-		std::cout << "Wrong number of middle genes." << std::endl;
+	for(int x=0; x < 16; x++){
+		for(int y=0; y < 16; y++){
+			std::cout << x << "-" << y << " " << asPoints[x][y].X << " " << asPoints[x][y].Y << " " << asPoints[x][y].Z << std::endl;
+		}
 	}
 
 
-	std::cout << vsCorners.size() << " " << vsXEdges.size() << " " << vsYEdges.size() << " " << vsMiddles.size() << std::endl;
 
+	std::cout << GetSCAD(0,0,0) << std::endl << std::endl;
+	std::cout << GetSCAD(0,1,0) << std::endl << std::endl;
+	std::cout << GetSCAD(0,2,0) << std::endl << std::endl;
+	std::cout << GetSCAD(0,3,0) << std::endl << std::endl;
+	std::cout << GetSCAD(0,4,0) << std::endl << std::endl;
 
-	std::cout << GetSCAD(2,2,0) << std::endl << std::endl;
-	std::cout << GetSCAD(2,1,0) << std::endl << std::endl;
-	std::cout << GetSCAD(2,3,0) << std::endl << std::endl;
+	std::cout << GetSCAD(1,0,0) << std::endl << std::endl;
+	std::cout << GetSCAD(1,1,0) << std::endl << std::endl;
 	std::cout << GetSCAD(1,2,0) << std::endl << std::endl;
+	std::cout << GetSCAD(1,3,0) << std::endl << std::endl;
+	std::cout << GetSCAD(1,4,0) << std::endl << std::endl;
+
+	std::cout << GetSCAD(2,0,0) << std::endl << std::endl;
+	std::cout << GetSCAD(2,1,0) << std::endl << std::endl;
+	std::cout << GetSCAD(2,2,0) << std::endl << std::endl;
+	std::cout << GetSCAD(2,3,0) << std::endl << std::endl;
+	std::cout << GetSCAD(2,4,0) << std::endl << std::endl;
+
+	std::cout << GetSCAD(3,0,0) << std::endl << std::endl;
+	std::cout << GetSCAD(3,1,0) << std::endl << std::endl;
 	std::cout << GetSCAD(3,2,0) << std::endl << std::endl;
+	std::cout << GetSCAD(3,3,0) << std::endl << std::endl;
+	std::cout << GetSCAD(3,4,0) << std::endl << std::endl;
+
+	std::cout << GetSCAD(4,0,0) << std::endl << std::endl;
+	std::cout << GetSCAD(4,1,0) << std::endl << std::endl;
+	std::cout << GetSCAD(4,2,0) << std::endl << std::endl;
+	std::cout << GetSCAD(4,3,0) << std::endl << std::endl;
+	std::cout << GetSCAD(4,4,0) << std::endl << std::endl;
+
+
 
 	return 0;
 }
@@ -200,193 +196,31 @@ void StringExplode(std::string str, std::string separator, std::vector<std::stri
     }
 }
 
-point3D GetCorner(Corner corner, int i, int j, int k){
-	point3D sPoint3D;
-	int nIndex = 0;
 
-	switch (corner)
-	{
-		case NW:
-			nIndex = 1 + i + j*sGrid.X + j;
-			break;
-		case NE:
-			nIndex = 1 + i + j*sGrid.X + j + 1;
-			break;
-		case SW:
-			nIndex = 1 + i + j*sGrid.X + j + sGrid.X+1;
-			break;
-		case SE:
-			nIndex = 1 + i + j*sGrid.X + j + sGrid.X+2;
-			break;
-		default:
-			std::cout << "Unknown corner type" << std::endl;
-			break;
-	}
-
-	//std::cout << corner << " " << i << "," << j << ": " << nIndex << std::endl;
-	sPoint3D = vsCorners.at(nIndex);
-
-	if(mode2D){
-		sPoint3D.Z = 0;
-	}
-
-	return sPoint3D;
-}
-
-
-point3D GetXEdge(Corner corner, int i, int j, int k){
-	point3D sPoint3D;
-	int nIndex = 0;
-
-	switch (corner)
-	{
-		case NW:
-			nIndex = (i + j*sGrid.X)*2 + 1;
-			break;
-		case NE:
-			nIndex = 1 + i + j*sGrid.X + j + 1;
-			break;
-		case SW:
-			nIndex = 1 + i + j*sGrid.X + j + (sGrid.X*2)+1;
-			break;
-		case SE:
-			nIndex = 1 + i + j*sGrid.X + j + (sGrid.X*2)+2;
-			break;
-		default:
-			std::cout << "Unknown corner type" << std::endl;
-			break;
-	}
-
-	//std::cout << corner << " " << i << "," << j << ": " << nIndex << std::endl;
-	sPoint3D = vsXEdges.at(nIndex);
-
-	if(mode2D){
-		sPoint3D.Z = 0;
-	}
-
-	return sPoint3D;
-}
-
-point3D GetYEdge(Corner corner, int i, int j, int k){
-	point3D sPoint3D;
-	int nIndex = 0;
-
-	switch (corner)
-	{
-		case NW:
-			nIndex = (i + j*sGrid.X)*2 + 1;
-			break;
-		case NE:
-			nIndex = 1 + i + j*sGrid.X + j + 1;
-			break;
-		case SW:
-			nIndex = 1 + i + j*sGrid.X + j + (sGrid.X*2)+1;
-			break;
-		case SE:
-			nIndex = 1 + i + j*sGrid.X + j + (sGrid.X*2)+2;
-			break;
-		default:
-			std::cout << "Unknown corner type" << std::endl;
-			break;
-	}
-
-	//std::cout << corner << " " << i << "," << j << ": " << nIndex << std::endl;
-	sPoint3D = vsYEdges.at(nIndex);
-
-	if(mode2D){
-		sPoint3D.Z = 0;
-	}
-
-	return sPoint3D;
-}
-point3D GetZEdge(Corner corner, int i, int j, int k){
-	point3D sPoint3D;
-	int nIndex = 0;
-
-	switch (corner)
-	{
-		case NW:
-			nIndex = 1 + i + j*sGrid.X + j;
-			break;
-		case NE:
-			nIndex = 1 + i + j*sGrid.X + j + 1;
-			break;
-		case SW:
-			nIndex = 1 + i + j*sGrid.X + j + sGrid.X+1;
-			break;
-		case SE:
-			nIndex = 1 + i + j*sGrid.X + j + sGrid.X+2;
-			break;
-		default:
-			std::cout << "Unknown corner type" << std::endl;
-			break;
-	}
-
-	//std::cout << corner << " " << i << "," << j << ": " << nIndex << std::endl;
-	sPoint3D = vsZEdges.at(nIndex);
-
-	if(mode2D){
-		sPoint3D.Z = 0;
-	}
-
-	return sPoint3D;
-}
-
-point3D GetMiddle(Corner corner, int i, int j, int k){
-	point3D sPoint3D;
-	int nIndex = 0;
-
-	switch (corner)
-	{
-		case NW:
-			nIndex = (i + j*sGrid.X)*4 + 1 ;
-			break;
-		case NE:
-			nIndex = (i + j*sGrid.X)*4 + 2 ;
-			break;
-		case SW:
-			nIndex = (i + j*sGrid.X)*4 + 3 ;
-			break;
-		case SE:
-			nIndex = (i + j*sGrid.X)*4 + 4 ;
-			break;
-		default:
-			std::cout << "Unknown corner type" << std::endl;
-			break;
-	}
-
-	//std::cout << corner << " " << i << "," << j << ": " << nIndex << std::endl;
-	sPoint3D = vsMiddles.at(nIndex);
-
-	if(mode2D){
-		sPoint3D.Z = 0;
-	}
-
-	return sPoint3D;
-}
 
 controlPoints GetControlPoints(int i, int j, int k){
 	controlPoints sControlPoints;
 
-	sControlPoints.a1 = GetCorner(NW, i, j, k);
-	sControlPoints.a2 = GetXEdge(NW, i, j, k);
-	sControlPoints.a3 = GetXEdge(NE, i, j, k);
-	sControlPoints.a4 = GetCorner(NE, i, j, k);
+	sControlPoints.a1 = asPoints[i*3][j*3];
+	sControlPoints.a2 = asPoints[i*3+1][j*3];
+	sControlPoints.a3 = asPoints[i*3+2][j*3];
+	sControlPoints.a4 = asPoints[i*3+3][j*3];
 
-	sControlPoints.b1 = GetYEdge(NW, i, j, k);
-	sControlPoints.b2 = GetMiddle(NW, i, j, k);
-	sControlPoints.b3 = GetMiddle(NE, i, j, k);
-	sControlPoints.b4 = GetYEdge(NE, i, j, k);
+	sControlPoints.b1 = asPoints[i*3][j*3+1];
+	sControlPoints.b2 = asPoints[i*3+1][j*3+1];
+	sControlPoints.b3 = asPoints[i*3+2][j*3+1];
+	sControlPoints.b4 = asPoints[i*3+3][j*3+1];
 
-	sControlPoints.c1 = GetYEdge(SW, i, j, k);
-	sControlPoints.c2 = GetMiddle(SW, i, j, k);
-	sControlPoints.c3 = GetMiddle(SE, i, j, k);
-	sControlPoints.c4 = GetYEdge(SE, i, j, k);
+	sControlPoints.c1 = asPoints[i*3][j*3+2];
+	sControlPoints.c2 = asPoints[i*3+1][j*3+2];
+	sControlPoints.c3 = asPoints[i*3+2][j*3+2];
+	sControlPoints.c4 = asPoints[i*3+3][j*3+2];
 
-	sControlPoints.d1 = GetCorner(SW, i, j, k);
-	sControlPoints.d2 = GetXEdge(SW, i, j, k);
-	sControlPoints.d3 = GetXEdge(SE, i, j, k);
-	sControlPoints.d4 = GetCorner(SE, i, j, k);
+	sControlPoints.d1 = asPoints[i*3][j*3+3];
+	sControlPoints.d2 = asPoints[i*3+1][j*3+3];
+	sControlPoints.d3 = asPoints[i*3+2][j*3+3];
+	sControlPoints.d4 = asPoints[i*3+3][j*3+3];
+
 
 	return sControlPoints;
 }
@@ -437,7 +271,60 @@ std::string GetSCAD(int i, int j, int k=0){
 									<< gcp2 <<  ", "
 									<< gcp3 << ", "
 									<< gcp4
-									<< "], steps=16, thickness=100);" << std::endl;
+									<< "], steps=16, thickness=10);" << std::endl;
+
+/*	ss << "DisplayBezControlFrame([" << gcp1 <<  ", "
+									<< gcp2 <<  ", "
+									<< gcp3 << ", "
+									<< gcp4
+									<< "], $fn=3);" << std::endl;
+*/
+	//DisplayBezControlFrame([gcp1, gcp2, gcp3, gcp4], $fn=3);
+
 
 	return ss.str();
 }
+
+void SortControlPoints(){
+	std::cout << vsPoints.size() << std::endl;
+	std::sort(vsPoints.begin(), vsPoints.end(), sortByX);
+	for(int i=((sGrid.Y-1)*(sGrid.Y-1))-1; i >= 0; i--){
+		std::sort(vsPoints.end()-(16), vsPoints.end(), sortByY);
+		asPoints[i][15] = vsPoints.at(vsPoints.size()-1);
+		vsPoints.pop_back();
+		asPoints[i][14] = vsPoints.at(vsPoints.size()-1);
+		vsPoints.pop_back();
+		asPoints[i][13] = vsPoints.at(vsPoints.size()-1);
+		vsPoints.pop_back();
+		asPoints[i][12] = vsPoints.at(vsPoints.size()-1);
+		vsPoints.pop_back();
+		asPoints[i][11] = vsPoints.at(vsPoints.size()-1);
+		vsPoints.pop_back();
+		asPoints[i][10] = vsPoints.at(vsPoints.size()-1);
+		vsPoints.pop_back();
+		asPoints[i][9] = vsPoints.at(vsPoints.size()-1);
+		vsPoints.pop_back();
+		asPoints[i][8] = vsPoints.at(vsPoints.size()-1);
+		vsPoints.pop_back();
+		asPoints[i][7] = vsPoints.at(vsPoints.size()-1);
+		vsPoints.pop_back();
+		asPoints[i][6] = vsPoints.at(vsPoints.size()-1);
+		vsPoints.pop_back();
+		asPoints[i][5] = vsPoints.at(vsPoints.size()-1);
+		vsPoints.pop_back();
+		asPoints[i][4] = vsPoints.at(vsPoints.size()-1);
+		vsPoints.pop_back();
+		asPoints[i][3] = vsPoints.at(vsPoints.size()-1);
+		vsPoints.pop_back();
+		asPoints[i][2] = vsPoints.at(vsPoints.size()-1);
+		vsPoints.pop_back();
+		asPoints[i][1] = vsPoints.at(vsPoints.size()-1);
+		vsPoints.pop_back();
+		asPoints[i][0] = vsPoints.at(vsPoints.size()-1);
+		vsPoints.pop_back();
+
+	}
+
+	std::cout << vsPoints.size() << std::endl;
+}
+
