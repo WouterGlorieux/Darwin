@@ -45,6 +45,8 @@ void Evolver::traverse_xml(const std::string& input_xml)
     m_strTemplate = rootNode->first_node("Template")->value();
     m_strRosetta = rootNode->first_node("RosettaStone")?rootNode->first_node("RosettaStone")->value():"";
     m_strRosettaArgs = rootNode->first_node("RosettaStone")->first_attribute("args")?rootNode->first_node("RosettaStone")->first_attribute("args")->value():"";
+    m_strCandidateExtension = rootNode->first_node("RosettaStone")->first_attribute("extension")?rootNode->first_node("RosettaStone")->first_attribute("extension")->value():"txt";
+
 
     rapidxml::xml_node<>* apertureNode = rootNode->first_node("Aperture");
 	for (rapidxml::xml_node<> *testChamberNode = apertureNode->first_node("TestChamber"); testChamberNode; testChamberNode = testChamberNode->next_sibling("TestChamber"))
@@ -215,7 +217,7 @@ while(DoNextGeneration()){
 	Evolver::SaveGeneration(pacPopulation);
 
 	//TranslateGenomes into Candidates
-	Evolver::TranslateGenomes();
+	Evolver::TranslateGenomes(m_strCandidateExtension);
 
 	//calculate fitness
 	for(int i = 0; i<m_nPopulationSize; i++ ){
@@ -386,7 +388,7 @@ bool Evolver::DoNextGeneration(){
 	return doNextGeneration;
 }
 
-void Evolver::TranslateGenomes(){
+void Evolver::TranslateGenomes(std::string extension){
 
 	std::string strInputFile;
 	std::string strOutputFile;
@@ -397,7 +399,7 @@ void Evolver::TranslateGenomes(){
 		ss << m_strSavePath << i << ".xml";
 		strInputFile = ss.str();
 		ss.str("");
-		ss << m_strCandidatesPath << i << ".txt";
+		ss << m_strCandidatesPath << i << "." << extension;
 		strOutputFile = ss.str();
 		spawnl(P_WAIT, m_strRosetta.c_str(), m_strRosetta.c_str(), strInputFile.c_str(), strOutputFile.c_str(), m_strRosettaArgs.c_str() , NULL);
 	}

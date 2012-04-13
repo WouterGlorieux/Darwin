@@ -14,6 +14,7 @@
 #include <sstream>
 #include <math.h>
 #include <algorithm>
+#include <process.h>
 
 struct point3D
 {
@@ -45,9 +46,12 @@ void StringExplode(std::string str, std::string separator, std::vector<std::stri
 controlPoints GetControlPoints(int i, int j, int k);
 std::string GetSCAD(int i, int j, int k);
 void SortControlPoints();
+void WriteSTL(std::string outputFileName);
+void SelectSegments();
 
 
 grid sGrid;
+bool abGrid[5][5];
 bool mode2D = false;
 
 point3D asPoints[16][16];			//2d array of coördinates of all points
@@ -72,7 +76,7 @@ int main(int argc, char *argv[]) {
 
 	double dXmultiplier = 0.01;
 	double dYmultiplier = 0.01;
-	double dZmultiplier = 0.0001;
+	double dZmultiplier = 0.001;
 
 
 	if(argc == 3){
@@ -90,7 +94,7 @@ int main(int argc, char *argv[]) {
 	buffer << t.rdbuf();
 
 	std::string input_xml = buffer.str() ;
-	std::ofstream output(strOutputFileName.c_str());
+	//std::ofstream output(strOutputFileName.c_str());
 
     // make a safe-to-modify copy of input_xml
     // (you should never modify the contents of an std::string directly)
@@ -108,75 +112,59 @@ int main(int argc, char *argv[]) {
     sGrid.Z = atoi(rootNode->first_attribute("gridZ")->value());
 
 
+
+
+
 	for (rapidxml::xml_node<>* chromosomeNode = rootNode->first_node("Chromosome"); chromosomeNode; chromosomeNode = chromosomeNode->next_sibling("Chromosome"))
 	{
-		for (rapidxml::xml_node<>* geneNode = chromosomeNode->first_node("Gene"); geneNode; geneNode = geneNode->next_sibling("Gene"))
-		{
-			std::vector<std::string> vstrData;
-			StringExplode(geneNode->value(), "|", &vstrData);
-			point3D sPoint3D;
-			sPoint3D.X = atof(vstrData.at(0).c_str()) * dXmultiplier;
-			sPoint3D.Y = atof(vstrData.at(1).c_str()) * dYmultiplier;
-			if(!mode2D){
-				sPoint3D.Z = atof(vstrData.at(2).c_str()) * dZmultiplier;
-			}
-			else{
-				sPoint3D.Z = 0;
-			}
+		if(chromosomeNode->first_attribute("id")->value() == std::string("grid")){
 
-			//sPoint3D.deltaX = 10.0;
-			//sPoint3D.deltaY = 5.0;
+			int j = 0;
+			for (rapidxml::xml_node<>* geneNode = chromosomeNode->first_node("Gene"); geneNode; geneNode = geneNode->next_sibling("Gene"))
+			{
 
-			//std::cout << i << " " << j << std::endl;
-			vsPoints.push_back(sPoint3D);
+				std::string strData = geneNode->value();
+				for(unsigned int i = 0; i < strData.size(); i++){
+					abGrid[j][i] = strData.at(i) == '1'? true : false ;
+				}
+				j++;
+			}
 
 		}
+		else{
+			for (rapidxml::xml_node<>* geneNode = chromosomeNode->first_node("Gene"); geneNode; geneNode = geneNode->next_sibling("Gene"))
+			{
+				std::vector<std::string> vstrData;
+				StringExplode(geneNode->value(), "|", &vstrData);
+				point3D sPoint3D;
+				sPoint3D.X = atof(vstrData.at(0).c_str()) * dXmultiplier;
+				sPoint3D.Y = atof(vstrData.at(1).c_str()) * dYmultiplier;
+				if(!mode2D){
+					sPoint3D.Z = atof(vstrData.at(2).c_str()) * dZmultiplier;
+				}
+				else{
+					sPoint3D.Z = 0;
+				}
+
+				//sPoint3D.deltaX = 10.0;
+				//sPoint3D.deltaY = 5.0;
+
+				//std::cout << i << " " << j << std::endl;
+				vsPoints.push_back(sPoint3D);
+
+			}
+		}
 	}
+
+	abGrid[0][0] = true;
+    SelectSegments();
 
 	SortControlPoints();
 
+	WriteSTL(strOutputFileName);
 
 
-	for(int x=0; x < 16; x++){
-		for(int y=0; y < 16; y++){
-			std::cout << x << "-" << y << " " << asPoints[x][y].X << " " << asPoints[x][y].Y << " " << asPoints[x][y].Z << std::endl;
-		}
-	}
-
-
-
-	std::cout << GetSCAD(0,0,0) << std::endl << std::endl;
-	std::cout << GetSCAD(0,1,0) << std::endl << std::endl;
-	std::cout << GetSCAD(0,2,0) << std::endl << std::endl;
-	std::cout << GetSCAD(0,3,0) << std::endl << std::endl;
-	std::cout << GetSCAD(0,4,0) << std::endl << std::endl;
-
-	std::cout << GetSCAD(1,0,0) << std::endl << std::endl;
-	std::cout << GetSCAD(1,1,0) << std::endl << std::endl;
-	std::cout << GetSCAD(1,2,0) << std::endl << std::endl;
-	std::cout << GetSCAD(1,3,0) << std::endl << std::endl;
-	std::cout << GetSCAD(1,4,0) << std::endl << std::endl;
-
-	std::cout << GetSCAD(2,0,0) << std::endl << std::endl;
-	std::cout << GetSCAD(2,1,0) << std::endl << std::endl;
-	std::cout << GetSCAD(2,2,0) << std::endl << std::endl;
-	std::cout << GetSCAD(2,3,0) << std::endl << std::endl;
-	std::cout << GetSCAD(2,4,0) << std::endl << std::endl;
-
-	std::cout << GetSCAD(3,0,0) << std::endl << std::endl;
-	std::cout << GetSCAD(3,1,0) << std::endl << std::endl;
-	std::cout << GetSCAD(3,2,0) << std::endl << std::endl;
-	std::cout << GetSCAD(3,3,0) << std::endl << std::endl;
-	std::cout << GetSCAD(3,4,0) << std::endl << std::endl;
-
-	std::cout << GetSCAD(4,0,0) << std::endl << std::endl;
-	std::cout << GetSCAD(4,1,0) << std::endl << std::endl;
-	std::cout << GetSCAD(4,2,0) << std::endl << std::endl;
-	std::cout << GetSCAD(4,3,0) << std::endl << std::endl;
-	std::cout << GetSCAD(4,4,0) << std::endl << std::endl;
-
-
-
+	//std::cout << "done" << std::endl;
 	return 0;
 }
 
@@ -271,23 +259,24 @@ std::string GetSCAD(int i, int j, int k=0){
 									<< gcp2 <<  ", "
 									<< gcp3 << ", "
 									<< gcp4
-									<< "], steps=16, thickness=10);" << std::endl;
+									<< "], steps=5, thickness=10);" << std::endl;
 
 /*	ss << "DisplayBezControlFrame([" << gcp1 <<  ", "
 									<< gcp2 <<  ", "
 									<< gcp3 << ", "
 									<< gcp4
 									<< "], $fn=3);" << std::endl;
+
 */
-	//DisplayBezControlFrame([gcp1, gcp2, gcp3, gcp4], $fn=3);
 
-
+	//std::cout << ss.str() << std::endl;
 	return ss.str();
 }
 
 void SortControlPoints(){
-	std::cout << vsPoints.size() << std::endl;
+
 	std::sort(vsPoints.begin(), vsPoints.end(), sortByX);
+
 	for(int i=((sGrid.Y-1)*(sGrid.Y-1))-1; i >= 0; i--){
 		std::sort(vsPoints.end()-(16), vsPoints.end(), sortByY);
 		asPoints[i][15] = vsPoints.at(vsPoints.size()-1);
@@ -325,6 +314,61 @@ void SortControlPoints(){
 
 	}
 
-	std::cout << vsPoints.size() << std::endl;
+
+}
+
+void WriteSTL(std::string outputFileName){
+	std::string strTempSCADfile = "temp.scad";
+	std::ofstream output(strTempSCADfile.c_str());
+	output << "include <bezierSurface.scad>" << std::endl;
+
+
+	for(int i = 0; i < sGrid.X ; i++ ){
+		for(int j = 0; j < sGrid.Y ; j++ ){
+			if(abGrid[i][j] == true){
+				output << GetSCAD(i,j,0) << std::endl << std::endl;
+			}
+		}
+	}
+
+	output.close();
+
+
+	std::cout << "Writing stl: " << outputFileName << std::endl;
+	spawnl(P_WAIT, "c:\\Darwin\\RosettaStones\\STL\\openscad.exe", "openscad.exe", "-o", outputFileName.c_str(), "temp.scad" , NULL);
+
+
+}
+
+void SelectSegments(){
+	std::cout << std::endl;
+	for(int i = 0; i < sGrid.X ; i++ ){
+		for(int j = 0; j < sGrid.Y ; j++ ){
+
+				int nLeft = i - 1;
+				int nUp = j - 1;
+
+				if(nLeft >= 0 && nUp >= 0){
+					if(!(abGrid[nLeft][j] == true || abGrid[i][nUp] == true)){
+						abGrid[i][j]= false;
+					}
+				}
+				else if( nUp >= 0){
+					if(abGrid[i][nUp] != true){
+						abGrid[i][j]= false;
+					}
+				}
+				else if(nLeft >= 0){
+					if(abGrid[nLeft][j] != true){
+						abGrid[i][j]= false;
+					}
+				}
+
+
+			std::cout << "\t" << abGrid[i][j]  ;
+		}
+
+		std::cout << std::endl;
+	}
 }
 

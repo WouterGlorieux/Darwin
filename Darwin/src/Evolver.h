@@ -29,6 +29,7 @@ private:
 	std::string m_strTemplate;			//filename of genome template xml
 	std::string m_strRosetta;			//filename of rosetta exe
 	std::string m_strRosettaArgs; 		//optional arguments for rosetta exe
+	std::string m_strCandidateExtension; //filename extension of the candidates
 
 	std::vector<TestChamber> m_vsTestChambers; //vector containing the testchambers
 
@@ -95,7 +96,7 @@ public:
 
     std::vector<Parent> MakeSelection(Population* population);
 
-    void TranslateGenomes();
+    void TranslateGenomes(std::string extension);
 
     int SaveChampion(Population* champion);
     int SaveFinalSolution(Population* champion);
