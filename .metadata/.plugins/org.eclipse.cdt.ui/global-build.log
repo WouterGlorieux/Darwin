@@ -5,44 +5,76 @@
 g++ -O3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
 g++ -o DRSStl.exe src\DRSStl.o
 Build complete for project DRSStl
-Time consumed: 2084  ms.  
+Time consumed: 2558  ms.  
 
-**** Build of configuration Release for project DRSDarwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for DRSDarwin
-
-**** Build of configuration Debug for project DRSDxf ****
+**** Rebuild of configuration Release for project DRSDarwin ****
 
 **** Internal Builder is used for build               ****
-Nothing to build for DRSDxf
+g++ -O3 -Wall -c -fmessage-length=0 -o src\DRSDarwin.o ..\src\DRSDarwin.cpp
+g++ -o DRSDarwin.exe src\DRSDarwin.o
+Build complete for project DRSDarwin
+Time consumed: 2293  ms.  
+
+**** Rebuild of configuration Debug for project DRSDxf ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSDxf.o ..\src\DRSDxf.cpp
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\dl_writer_ascii.o ..\src\dl_writer_ascii.cpp
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\dl_dxf.o ..\src\dl_dxf.cpp
+g++ -o DRSDxf.exe src\dl_writer_ascii.o src\dl_dxf.o src\DRSDxf.o
+Build complete for project DRSDxf
+Time consumed: 2995  ms.  
 
 **** Build of configuration Release for project DRSStl ****
 
 **** Internal Builder is used for build               ****
 Nothing to build for DRSStl
 
-**** Build of configuration Release for project DRSTokamak ****
+**** Rebuild of configuration Release for project DRSTokamak ****
 
 **** Internal Builder is used for build               ****
-Nothing to build for DRSTokamak
+g++ -O3 -Wall -c -fmessage-length=0 -o src\DRSTokamak.o ..\src\DRSTokamak.cpp
+g++ -o DRSTokamak.exe src\DRSTokamak.o
+Build complete for project DRSTokamak
+Time consumed: 1170  ms.  
 
-**** Build of configuration Release for project DTCRandomFitness ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for DTCRandomFitness
-
-**** Build of configuration Release for project Darwin ****
+**** Rebuild of configuration Release for project DTCRandomFitness ****
 
 **** Internal Builder is used for build               ****
-Nothing to build for Darwin
+g++ -O3 -Wall -c -fmessage-length=0 -o src\DTCRandomFitness.o ..\src\DTCRandomFitness.cpp
+g++ -o DTCRandomFitness.exe src\DTCRandomFitness.o
+Build complete for project DTCRandomFitness
+Time consumed: 437  ms.  
 
-**** Build of configuration Release for project SteadyStateTokamak ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for SteadyStateTokamak
-
-**** Build of configuration Release for project Tokamak ****
+**** Rebuild of configuration Release for project Darwin ****
 
 **** Internal Builder is used for build               ****
-Nothing to build for Tokamak
+g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Aperture.o ..\src\Aperture.cpp
+g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Population.o ..\src\Population.cpp
+g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Vertices.o ..\src\Vertices.cpp
+g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
+g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
+g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
+g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Edges.o ..\src\Edges.cpp
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 13650  ms.  
+
+**** Rebuild of configuration Release for project SteadyStateTokamak ****
+
+**** Internal Builder is used for build               ****
+g++ -O3 -Wall -c -fmessage-length=0 -o src\SteadyStateTokamak.o ..\src\SteadyStateTokamak.cpp
+g++ -o SteadyStateTokamak.exe src\SteadyStateTokamak.o
+Build complete for project SteadyStateTokamak
+Time consumed: 905  ms.  
+
+**** Rebuild of configuration Release for project Tokamak ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\include -O3 -Wall -c -fmessage-length=0 -o src\Tokamak.o ..\src\Tokamak.cpp
+g++ -o Tokamak.exe src\Tokamak.o
+Build complete for project Tokamak
+Time consumed: 1373  ms.  

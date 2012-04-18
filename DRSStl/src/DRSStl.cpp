@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include <vector>
+#include <set>
 #include <string>
 #include "rapidxml.hpp"
 #include <fstream>
@@ -22,6 +23,8 @@ struct point3D
 	double Y;
 	double Z;
 };
+
+
 
 struct controlPoints
 {
@@ -38,7 +41,53 @@ struct grid
 	int Z;
 };
 
+struct cube
+{
+	int i;
+	int j;
+	int k;
 
+	  bool operator<(const cube& rhs) const
+	  {
+	    if(k != rhs.k){
+	    	return k < rhs.k;
+	    }
+	    else if(j != rhs.j){
+	    	return j < rhs.j;
+	    }
+	    else{
+	    	return i < rhs.i;
+	    }
+
+	  }
+
+	  bool operator==(const cube& rhs) const
+	  {
+	    return i == rhs.i && j == rhs.j && k == rhs.k;
+	  }
+
+};
+
+enum ORIENTATION
+{
+	XPOS,
+	XNEG,
+	YPOS,
+	YNEG,
+	ZPOS,
+	ZNEG
+};
+
+struct segment
+{
+	double i;
+	double j;
+	double k;
+	ORIENTATION orientation;
+};
+
+
+std::vector<segment> vsSegments;
 
 void StringExplode(std::string str, std::string separator, std::vector<std::string>* results);
 
@@ -46,15 +95,22 @@ void StringExplode(std::string str, std::string separator, std::vector<std::stri
 controlPoints GetControlPoints(int i, int j, int k);
 std::string GetSCAD(int i, int j, int k);
 void SortControlPoints();
+void InitializeGrid();
+void ExpandGrid();
+void ShiftXY(int x, int y, double Xvalue, double Yvalue);
+
+std::string SquareToFacets(point3D a, point3D b, point3D c, point3D d, ORIENTATION orentation );
+void MakeSTL(std::vector<segment> vsSegments, std::string outputFileName);
 void WriteSTL(std::string outputFileName);
-void SelectSegments();
+std::set<cube> SelectCubes();
+std::vector<segment> SelectSegments(std::set<cube> setCubes);
 
 
 grid sGrid;
-bool abGrid[5][5];
+bool abGrid[5][5][5];
 bool mode2D = false;
 
-point3D asPoints[16][16];			//2d array of coördinates of all points
+point3D asPoints[16][16][16];			//3d array of coördinates of all points
 std::vector<point3D> vsPoints;      //vector with all points
 
 
@@ -68,6 +124,10 @@ bool sortByY(const point3D &a, const point3D &b)
     return a.Y > b.Y;
 }
 
+bool sortByZ(const point3D &a, const point3D &b)
+{
+    return a.Z < b.Z;
+}
 
 int main(int argc, char *argv[]) {
 	std::string strFileName = "";
@@ -76,7 +136,7 @@ int main(int argc, char *argv[]) {
 
 	double dXmultiplier = 0.01;
 	double dYmultiplier = 0.01;
-	double dZmultiplier = 0.001;
+	double dZmultiplier = 0.0001;
 
 
 	if(argc == 3){
@@ -111,12 +171,17 @@ int main(int argc, char *argv[]) {
     sGrid.Y = atoi(rootNode->first_attribute("gridY")->value());
     sGrid.Z = atoi(rootNode->first_attribute("gridZ")->value());
 
+    sGrid.X = 5;
+    sGrid.Y = 5;
+    sGrid.Z = 5;
 
 
 
 
+    int k = 0;
 	for (rapidxml::xml_node<>* chromosomeNode = rootNode->first_node("Chromosome"); chromosomeNode; chromosomeNode = chromosomeNode->next_sibling("Chromosome"))
 	{
+
 		if(chromosomeNode->first_attribute("id")->value() == std::string("grid")){
 
 			int j = 0;
@@ -125,11 +190,12 @@ int main(int argc, char *argv[]) {
 
 				std::string strData = geneNode->value();
 				for(unsigned int i = 0; i < strData.size(); i++){
-					abGrid[j][i] = strData.at(i) == '1'? true : false ;
-				}
+					abGrid[i][j][k] = strData.at(i) == '1'? true : false ;
+					//std::cout << i << "-" << j << "-" << k << ": " << abGrid[i][j][k] << std::endl;
+ 				}
 				j++;
 			}
-
+			k++;
 		}
 		else{
 			for (rapidxml::xml_node<>* geneNode = chromosomeNode->first_node("Gene"); geneNode; geneNode = geneNode->next_sibling("Gene"))
@@ -146,8 +212,8 @@ int main(int argc, char *argv[]) {
 					sPoint3D.Z = 0;
 				}
 
-				//sPoint3D.deltaX = 10.0;
-				//sPoint3D.deltaY = 5.0;
+				//sPoint3D.X = 10.0;
+				//sPoint3D.Y = 5.0;
 
 				//std::cout << i << " " << j << std::endl;
 				vsPoints.push_back(sPoint3D);
@@ -156,12 +222,21 @@ int main(int argc, char *argv[]) {
 		}
 	}
 
-	abGrid[0][0] = true;
-    SelectSegments();
+	abGrid[0][0][0] = true;
 
-	SortControlPoints();
 
-	WriteSTL(strOutputFileName);
+    std::set<cube> setCubes = SelectCubes();
+    std::vector<segment> vsSegments = SelectSegments(setCubes);
+
+
+
+	//SortControlPoints();
+	//ExpandGrid();
+
+	InitializeGrid();
+
+	MakeSTL(vsSegments, strOutputFileName);
+	//WriteSTL(strOutputFileName);
 
 
 	//std::cout << "done" << std::endl;
@@ -189,25 +264,25 @@ void StringExplode(std::string str, std::string separator, std::vector<std::stri
 controlPoints GetControlPoints(int i, int j, int k){
 	controlPoints sControlPoints;
 
-	sControlPoints.a1 = asPoints[i*3][j*3];
-	sControlPoints.a2 = asPoints[i*3+1][j*3];
-	sControlPoints.a3 = asPoints[i*3+2][j*3];
-	sControlPoints.a4 = asPoints[i*3+3][j*3];
+	sControlPoints.a1 = asPoints[i][j][k];
+	sControlPoints.a2 = asPoints[i+1][j][k];
+	sControlPoints.a3 = asPoints[i+2][j][k];
+	sControlPoints.a4 = asPoints[i+3][j][k];
 
-	sControlPoints.b1 = asPoints[i*3][j*3+1];
-	sControlPoints.b2 = asPoints[i*3+1][j*3+1];
-	sControlPoints.b3 = asPoints[i*3+2][j*3+1];
-	sControlPoints.b4 = asPoints[i*3+3][j*3+1];
+	sControlPoints.b1 = asPoints[i][j+1][k];
+	sControlPoints.b2 = asPoints[i+1][j+1][k];
+	sControlPoints.b3 = asPoints[i+2][j+1][k];
+	sControlPoints.b4 = asPoints[i+3][j+1][k];
 
-	sControlPoints.c1 = asPoints[i*3][j*3+2];
-	sControlPoints.c2 = asPoints[i*3+1][j*3+2];
-	sControlPoints.c3 = asPoints[i*3+2][j*3+2];
-	sControlPoints.c4 = asPoints[i*3+3][j*3+2];
+	sControlPoints.c1 = asPoints[i][j+2][k];
+	sControlPoints.c2 = asPoints[i+1][j+2][k];
+	sControlPoints.c3 = asPoints[i+2][j+2][k];
+	sControlPoints.c4 = asPoints[i+3][j+2][k];
 
-	sControlPoints.d1 = asPoints[i*3][j*3+3];
-	sControlPoints.d2 = asPoints[i*3+1][j*3+3];
-	sControlPoints.d3 = asPoints[i*3+2][j*3+3];
-	sControlPoints.d4 = asPoints[i*3+3][j*3+3];
+	sControlPoints.d1 = asPoints[i][j+3][k];
+	sControlPoints.d2 = asPoints[i+1][j+3][k];
+	sControlPoints.d3 = asPoints[i+2][j+3][k];
+	sControlPoints.d4 = asPoints[i+3][j+3][k];
 
 
 	return sControlPoints;
@@ -255,19 +330,20 @@ std::string GetSCAD(int i, int j, int k=0){
 	ss.str("");
 
 
-	ss << "DisplayBezSurface([" << gcp1 <<  ", "
+/*	ss << "DisplayBezSurface([" << gcp1 <<  ", "
 									<< gcp2 <<  ", "
 									<< gcp3 << ", "
 									<< gcp4
 									<< "], steps=5, thickness=10);" << std::endl;
-
+*/
 /*	ss << "DisplayBezControlFrame([" << gcp1 <<  ", "
 									<< gcp2 <<  ", "
 									<< gcp3 << ", "
 									<< gcp4
 									<< "], $fn=3);" << std::endl;
-
 */
+
+
 
 	//std::cout << ss.str() << std::endl;
 	return ss.str();
@@ -277,43 +353,203 @@ void SortControlPoints(){
 
 	std::sort(vsPoints.begin(), vsPoints.end(), sortByX);
 
-	for(int i=((sGrid.Y-1)*(sGrid.Y-1))-1; i >= 0; i--){
-		std::sort(vsPoints.end()-(16), vsPoints.end(), sortByY);
-		asPoints[i][15] = vsPoints.at(vsPoints.size()-1);
-		vsPoints.pop_back();
-		asPoints[i][14] = vsPoints.at(vsPoints.size()-1);
-		vsPoints.pop_back();
-		asPoints[i][13] = vsPoints.at(vsPoints.size()-1);
-		vsPoints.pop_back();
-		asPoints[i][12] = vsPoints.at(vsPoints.size()-1);
-		vsPoints.pop_back();
-		asPoints[i][11] = vsPoints.at(vsPoints.size()-1);
-		vsPoints.pop_back();
-		asPoints[i][10] = vsPoints.at(vsPoints.size()-1);
-		vsPoints.pop_back();
-		asPoints[i][9] = vsPoints.at(vsPoints.size()-1);
-		vsPoints.pop_back();
-		asPoints[i][8] = vsPoints.at(vsPoints.size()-1);
-		vsPoints.pop_back();
-		asPoints[i][7] = vsPoints.at(vsPoints.size()-1);
-		vsPoints.pop_back();
-		asPoints[i][6] = vsPoints.at(vsPoints.size()-1);
-		vsPoints.pop_back();
-		asPoints[i][5] = vsPoints.at(vsPoints.size()-1);
-		vsPoints.pop_back();
-		asPoints[i][4] = vsPoints.at(vsPoints.size()-1);
-		vsPoints.pop_back();
-		asPoints[i][3] = vsPoints.at(vsPoints.size()-1);
-		vsPoints.pop_back();
-		asPoints[i][2] = vsPoints.at(vsPoints.size()-1);
-		vsPoints.pop_back();
-		asPoints[i][1] = vsPoints.at(vsPoints.size()-1);
-		vsPoints.pop_back();
-		asPoints[i][0] = vsPoints.at(vsPoints.size()-1);
-		vsPoints.pop_back();
+	for(int i=sGrid.X*3; i >= 0; i--){
+		std::sort(vsPoints.end()-((sGrid.Y*3+1)*(sGrid.Z*3+1)), vsPoints.end(), sortByY);
+		for (int j = sGrid.Y*3 ; j >= 0; j--){
+			std::sort(vsPoints.end()-(sGrid.Z*3+1), vsPoints.end(), sortByZ);
+			for (int k = sGrid.Z*3 ; k >= 0; k--){
+				asPoints[i][j][k] = vsPoints.at(vsPoints.size()-1);
+					vsPoints.pop_back();
+			}
+
+		}
+	}
+
+
+}
+void InitializeGrid(){
+	for(int i=0; i <= sGrid.X*3; i++){
+		for (int j = 0 ; j <= sGrid.Y*3 ; j++){
+			for (int k = 0 ; k <= sGrid.Z*3; k++){
+				point3D sPoint3D;
+				sPoint3D.X = i*10;
+				sPoint3D.Y = j*10;
+				sPoint3D.Z = k*10;
+				asPoints[i][j][k] = sPoint3D;
+				//std::cout << "translate([" << sPoint3D.X << "," << sPoint3D.Y << "," << sPoint3D.Z << "]) sphere(1);" << std::endl;
+			}
+
+		}
+	}
+
+
+	for(int i=0; i < sGrid.X; i++){
+		for (int j = 0 ; j < sGrid.Y ; j++){
+			for (int k = 0 ; k <= sGrid.Z; k++){
+				//std::cout <<  GetSCAD(i*3,j*3,k*3) << std::endl << std::endl;
+
+			}
+
+		}
+	}
+
+
+}
+
+std::string SquareToFacets(point3D a, point3D b, point3D c, point3D d, ORIENTATION orientation ){
+	std::stringstream ss;
+
+	std::string strFacet = "";
+	switch (orientation)
+	    {
+	        case XPOS:
+	        	strFacet = "1 0 0";
+	            break;
+
+	        case XNEG:
+	        	strFacet = "-1 0 0";
+	            break;
+
+	        case YPOS:
+	        	strFacet = "0 1 0";
+	            break;
+
+	        case YNEG:
+	        	strFacet = "0 -1 0";
+	            break;
+
+	        case ZPOS:
+	        	strFacet = "0 0 1";
+	            break;
+
+	        case ZNEG:
+	        	strFacet = "0 0 -1";
+	            break;
+
+	        default:
+	            std::cout << "Unknown orientation" << std::endl;
+	            break;
+	    }
+
+
+
+	ss << "facet normal " << strFacet << std::endl;
+	ss << "outer loop" << std::endl;
+	if(orientation == XPOS || orientation == YNEG || orientation == ZPOS){
+		ss << "vertex " << b.X << " " << b.Y << " " << b.Z << std::endl;
+		ss << "vertex " << a.X << " " << a.Y << " " << a.Z << std::endl;
+		ss << "vertex " << c.X << " " << c.Y << " " << c.Z << std::endl;
+	}
+	else if(orientation == XNEG || orientation == YPOS || orientation == ZNEG){
+		ss << "vertex " << a.X << " " << a.Y << " " << a.Z << std::endl;
+		ss << "vertex " << b.X << " " << b.Y << " " << b.Z << std::endl;
+		ss << "vertex " << c.X << " " << c.Y << " " << c.Z << std::endl;
+	}
+	ss << "endloop" << std::endl;
+	ss << "endfacet" << std::endl;
+
+	ss << "facet normal " << strFacet << std::endl;
+	ss << "outer loop" << std::endl;
+	if(orientation == XPOS || orientation == YNEG || orientation == ZPOS){
+		ss << "vertex " << b.X << " " << b.Y << " " << b.Z << std::endl;
+		ss << "vertex " << c.X << " " << c.Y << " " << c.Z << std::endl;
+		ss << "vertex " << d.X << " " << d.Y << " " << d.Z << std::endl;
+	}
+	else if(orientation == XNEG || orientation == YPOS || orientation == ZNEG){
+		ss << "vertex " << b.X << " " << b.Y << " " << b.Z << std::endl;
+		ss << "vertex " << d.X << " " << d.Y << " " << d.Z << std::endl;
+		ss << "vertex " << c.X << " " << c.Y << " " << c.Z << std::endl;
+	}
+	ss << "endloop" << std::endl;
+	ss << "endfacet" << std::endl;
+
+	return ss.str();
+}
+
+
+void ExpandGrid(){
+
+	for(unsigned int i = 0; i < vsPoints.size(); i++){
+		int x = (int) i/16;
+		int y =  i % 16;
+
+		ShiftXY(x, y, vsPoints.at(i).X, vsPoints.at(i).X);
+
+	}
+}
+
+void ShiftXY(int x, int y, double Xvalue, double Yvalue){
+
+	int k=1;
+
+	for(int i = x; i < sGrid.X; i++){
+		//for(int j = 0; j < sGrid.Y; j++){
+			asPoints[i][y][k].X += Xvalue;
+		//}
 
 	}
 
+	for(int j = y; j < sGrid.Y; j++){
+		//for(int i = 0; i < sGrid.X; i++){
+			asPoints[x][j][k].Y += Yvalue;
+		//}
+
+	}
+}
+
+void MakeSTL(std::vector<segment> vsSegments, std::string outputFileName){
+	std::ofstream output(outputFileName.c_str());
+	output << "solid mystl" << std::endl;
+
+
+    for(unsigned int l = 0; l < vsSegments.size(); l++ ){
+    	//std::cout << vsSegments.at(l).i << "-" << vsSegments.at(l).j << "-" << vsSegments.at(l).k << " " << vsSegments.at(l).orientation << std::endl;
+
+    	int i, j, k;
+    	i = vsSegments.at(l).i;
+    	j = vsSegments.at(l).j;
+    	k = vsSegments.at(l).k;
+
+    	switch (vsSegments.at(l).orientation)
+    	    {
+    	        case XPOS:
+    	        	output << SquareToFacets(asPoints[i+1][j+1][k+1], asPoints[i+1][j+1][k], asPoints[i+1][j][k+1], asPoints[i+1][j][k], XPOS);
+    	            break;
+
+    	        case XNEG:
+    	        	output << SquareToFacets(asPoints[i][j+1][k+1], asPoints[i][j+1][k], asPoints[i][j][k+1], asPoints[i][j][k], XNEG);
+    	            break;
+
+    	        case YPOS:
+    	        	output << SquareToFacets(asPoints[i][j+1][k+1], asPoints[i+1][j+1][k+1], asPoints[i][j+1][k], asPoints[i+1][j+1][k], YPOS);
+    	            break;
+
+    	        case YNEG:
+    	        	output << SquareToFacets(asPoints[i][j][k+1], asPoints[i+1][j][k+1], asPoints[i][j][k], asPoints[i+1][j][k], YNEG);
+    	            break;
+
+    	        case ZPOS:
+    	        	output << SquareToFacets(asPoints[i][j+1][k+1], asPoints[i+1][j+1][k+1], asPoints[i][j][k+1], asPoints[i+1][j][k+1], ZPOS);
+    	            break;
+
+    	        case ZNEG:
+    	        	output << SquareToFacets(asPoints[i][j+1][k], asPoints[i+1][j+1][k], asPoints[i][j][k], asPoints[i+1][j][k], ZNEG);
+    	            break;
+
+    	        default:
+    	            std::cout << "Unknown orientation" << std::endl;
+    	            break;
+    	    }
+
+
+
+    }
+
+
+	output << "endsolid mystl" << std::endl;
+	output.close();
+
+	std::cout << "writing " << outputFileName << std::endl;
 
 }
 
@@ -323,11 +559,14 @@ void WriteSTL(std::string outputFileName){
 	output << "include <bezierSurface.scad>" << std::endl;
 
 
-	for(int i = 0; i < sGrid.X ; i++ ){
+	for(int k = 0; k < sGrid.Z ; k++ ){
 		for(int j = 0; j < sGrid.Y ; j++ ){
-			if(abGrid[i][j] == true){
-				output << GetSCAD(i,j,0) << std::endl << std::endl;
+			for(int i = 0; i < sGrid.X ; i++ ){
+				if(abGrid[i][j][k] == true){
+				output << GetSCAD(i,j,k) << std::endl << std::endl;
+				}
 			}
+
 		}
 	}
 
@@ -340,35 +579,155 @@ void WriteSTL(std::string outputFileName){
 
 }
 
-void SelectSegments(){
-	std::cout << std::endl;
-	for(int i = 0; i < sGrid.X ; i++ ){
-		for(int j = 0; j < sGrid.Y ; j++ ){
 
-				int nLeft = i - 1;
-				int nUp = j - 1;
-
-				if(nLeft >= 0 && nUp >= 0){
-					if(!(abGrid[nLeft][j] == true || abGrid[i][nUp] == true)){
-						abGrid[i][j]= false;
-					}
-				}
-				else if( nUp >= 0){
-					if(abGrid[i][nUp] != true){
-						abGrid[i][j]= false;
-					}
-				}
-				else if(nLeft >= 0){
-					if(abGrid[nLeft][j] != true){
-						abGrid[i][j]= false;
-					}
-				}
+std::set<cube> SelectCubes(){
+	cube sCube;
+	std::set<cube> setCubes;
 
 
-			std::cout << "\t" << abGrid[i][j]  ;
+	sCube.i = 0;
+	sCube.j = 0;
+	sCube.k = 0;
+	setCubes.insert(sCube);
+
+	bool bCubesAdded = true;
+
+	std::set<cube>::iterator it;
+	while(bCubesAdded){
+		//std::cout << setCubes.size() << std::endl;
+		unsigned int nCubes = setCubes.size();
+		bCubesAdded = false;
+		for( it = setCubes.begin(); it != setCubes.end(); it++ ) {
+			if(it->i+1 < sGrid.X && abGrid[it->i+1][it->j][it->k] == true){
+				sCube.i = it->i+1;
+				sCube.j = it->j;
+				sCube.k = it->k;
+				setCubes.insert(sCube);
+			}
+
+			if(it->j+1 < sGrid.Y && abGrid[it->i][it->j+1][it->k] == true){
+				sCube.i = it->i;
+				sCube.j = it->j+1;
+				sCube.k = it->k;
+				setCubes.insert(sCube);
+			}
+
+			if(it->k+1 < sGrid.Z && abGrid[it->i][it->j][it->k+1] == true){
+				sCube.i = it->i;
+				sCube.j = it->j;
+				sCube.k = it->k+1;
+				setCubes.insert(sCube);
+			}
+
+			if(it->i-1 >= 0 && abGrid[it->i-1][it->j][it->k] == true){
+				sCube.i = it->i-1;
+				sCube.j = it->j;
+				sCube.k = it->k;
+				setCubes.insert(sCube);
+			}
+
+			if(it->j-1 >= 0 && abGrid[it->i][it->j-1][it->k] == true){
+				sCube.i = it->i;
+				sCube.j = it->j-1;
+				sCube.k = it->k;
+				setCubes.insert(sCube);
+			}
+
+			if(it->k-1 >= 0 && abGrid[it->i][it->j][it->k-1] == true){
+				sCube.i = it->i;
+				sCube.j = it->j;
+				sCube.k = it->k-1;
+				setCubes.insert(sCube);
+			}
 		}
 
-		std::cout << std::endl;
+
+		if(nCubes < setCubes.size()){
+			bCubesAdded = true;
+		}
 	}
+
+	return setCubes;
+}
+
+
+std::vector<segment> SelectSegments(std::set<cube> setCubes){
+	std::vector<segment> vsSegments;
+	std::set<cube>::iterator it;
+	std::set<cube>::const_iterator cit;
+
+	for( it = setCubes.begin(); it != setCubes.end(); it++ ) {
+		//std::cout << it->i << "-" << it->j << "-" << it->k << std::endl;
+
+		segment sSegment;
+		sSegment.i = it->i;
+		sSegment.j = it->j;
+		sSegment.k = it->k;
+
+		cube adjCube;
+		adjCube.i = it->i+1;
+		adjCube.j = it->j;
+		adjCube.k = it->k;
+
+		cit = setCubes.find(adjCube) ;
+		if(cit == setCubes.end()){
+			sSegment.orientation = XPOS;
+			vsSegments.push_back(sSegment);
+		}
+
+		adjCube.i = it->i;
+		adjCube.j = it->j+1;
+		adjCube.k = it->k;
+
+		cit = setCubes.find(adjCube) ;
+		if(cit == setCubes.end()){
+			sSegment.orientation = YPOS;
+			vsSegments.push_back(sSegment);
+		}
+
+		adjCube.i = it->i;
+		adjCube.j = it->j;
+		adjCube.k = it->k+1;
+
+		cit = setCubes.find(adjCube) ;
+		if(cit == setCubes.end()){
+			sSegment.orientation = ZPOS;
+			vsSegments.push_back(sSegment);
+		}
+
+		adjCube.i = it->i-1;
+		adjCube.j = it->j;
+		adjCube.k = it->k;
+
+		cit = setCubes.find(adjCube) ;
+		if(cit == setCubes.end()){
+			sSegment.orientation = XNEG;
+			vsSegments.push_back(sSegment);
+		}
+
+		adjCube.i = it->i;
+		adjCube.j = it->j-1;
+		adjCube.k = it->k;
+
+		cit = setCubes.find(adjCube) ;
+		if(cit == setCubes.end()){
+			sSegment.orientation = YNEG;
+			vsSegments.push_back(sSegment);
+		}
+
+		adjCube.i = it->i;
+		adjCube.j = it->j;
+		adjCube.k = it->k-1;
+
+		cit = setCubes.find(adjCube) ;
+		if(cit == setCubes.end()){
+			sSegment.orientation = ZNEG;
+			vsSegments.push_back(sSegment);
+		}
+
+	}
+
+	return vsSegments;
+
 }
 
