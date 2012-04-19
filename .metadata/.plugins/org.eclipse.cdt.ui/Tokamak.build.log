@@ -1,8 +1,5 @@
 
-**** Rebuild of configuration Release for project Tokamak ****
+**** Build of configuration Release for project Tokamak ****
 
 **** Internal Builder is used for build               ****
-g++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\include -O3 -Wall -c -fmessage-length=0 -o src\Tokamak.o ..\src\Tokamak.cpp
-g++ -o Tokamak.exe src\Tokamak.o
-Build complete for project Tokamak
-Time consumed: 1373  ms.  
+Nothing to build for Tokamak

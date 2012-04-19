@@ -1,67 +1,442 @@
 
-**** Build of configuration Release for project DRSStl ****
+**** Build of configuration Debug for project DTCStl ****
 
 **** Internal Builder is used for build               ****
-g++ -O3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
-g++ -o DRSStl.exe src\DRSStl.o
-Build complete for project DRSStl
-Time consumed: 2558  ms.  
+Nothing to build for DTCStl
 
-**** Rebuild of configuration Release for project DRSDarwin ****
+**** Build of configuration Debug for project DTCStl ****
 
 **** Internal Builder is used for build               ****
-g++ -O3 -Wall -c -fmessage-length=0 -o src\DRSDarwin.o ..\src\DRSDarwin.cpp
-g++ -o DRSDarwin.exe src\DRSDarwin.o
-Build complete for project DRSDarwin
-Time consumed: 2293  ms.  
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DTCStl.o ..\src\DTCStl.cpp
+..\src\DTCStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DTCStl.cpp:53:5: fout: ‘ifstream’ was not declared in this scope
+..\src\DTCStl.cpp:53:5: note: suggested alternative:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/iosfwd:159:34: note:   ‘std::ifstream’
+..\src\DTCStl.cpp:53:14: fout: expected ‘;’ before ‘inf’
+..\src\DTCStl.cpp:56:10: fout: ‘inf’ was not declared in this scope
+..\src\DTCStl.cpp:59:9: fout: ‘cerr’ was not declared in this scope
+..\src\DTCStl.cpp:59:9: note: suggested alternative:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/iostream:63:18: note:   ‘std::cerr’
+..\src\DTCStl.cpp:59:71: fout: ‘endl’ was not declared in this scope
+..\src\DTCStl.cpp:59:71: note: suggested alternative:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:543:5: note:   ‘std::endl’
+..\src\DTCStl.cpp:64:12: fout: ‘inf’ was not declared in this scope
+..\src\DTCStl.cpp:71:48: fout: ‘StringExplode’ was not declared in this scope
+Build error occurred, build is stopped
+Time consumed: 468  ms.  
 
-**** Rebuild of configuration Debug for project DRSDxf ****
+**** Build of configuration Debug for project DTCStl ****
 
 **** Internal Builder is used for build               ****
-g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSDxf.o ..\src\DRSDxf.cpp
-g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\dl_writer_ascii.o ..\src\dl_writer_ascii.cpp
-g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\dl_dxf.o ..\src\dl_dxf.cpp
-g++ -o DRSDxf.exe src\dl_writer_ascii.o src\dl_dxf.o src\DRSDxf.o
-Build complete for project DRSDxf
-Time consumed: 2995  ms.  
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DTCStl.o ..\src\DTCStl.cpp
+..\src\DTCStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DTCStl.cpp:59:9: fout: ‘cerr’ was not declared in this scope
+..\src\DTCStl.cpp:59:9: note: suggested alternative:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/iostream:63:18: note:   ‘std::cerr’
+..\src\DTCStl.cpp:59:71: fout: ‘endl’ was not declared in this scope
+..\src\DTCStl.cpp:59:71: note: suggested alternative:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:543:5: note:   ‘std::endl’
+..\src\DTCStl.cpp:71:48: fout: ‘StringExplode’ was not declared in this scope
+Build error occurred, build is stopped
+Time consumed: 281  ms.  
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DTCStl.o ..\src\DTCStl.cpp
+..\src\DTCStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DTCStl.cpp:59:76: fout: ‘endl’ was not declared in this scope
+..\src\DTCStl.cpp:59:76: note: suggested alternative:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:543:5: note:   ‘std::endl’
+..\src\DTCStl.cpp:71:48: fout: ‘StringExplode’ was not declared in this scope
+Build error occurred, build is stopped
+Time consumed: 280  ms.  
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DTCStl.o ..\src\DTCStl.cpp
+..\src\DTCStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DTCStl.cpp:71:48: fout: ‘StringExplode’ was not declared in this scope
+Build error occurred, build is stopped
+Time consumed: 297  ms.  
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DTCStl.o ..\src\DTCStl.cpp
+g++ -o DTCStl.exe src\DTCStl.o
+Build complete for project DTCStl
+Time consumed: 671  ms.  
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DTCStl.o ..\src\DTCStl.cpp
+g++ -o DTCStl.exe src\DTCStl.o
+Build complete for project DTCStl
+Time consumed: 686  ms.  
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DTCStl.o ..\src\DTCStl.cpp
+g++ -o DTCStl.exe src\DTCStl.o
+Build complete for project DTCStl
+Time consumed: 810  ms.  
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DTCStl.o ..\src\DTCStl.cpp
+..\src\DTCStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DTCStl.cpp:99:35: fout: cannot convert ‘std::basic_string<char>’ to ‘float’ in assignment
+..\src\DTCStl.cpp:100:35: fout: cannot convert ‘std::basic_string<char>’ to ‘float’ in assignment
+..\src\DTCStl.cpp:101:35: fout: cannot convert ‘std::basic_string<char>’ to ‘float’ in assignment
+..\src\DTCStl.cpp:115:28: fout: expected type-specifier before ‘triangles’
+..\src\DTCStl.cpp:115:28: fout: cannot convert ‘int*’ to ‘data*’ in initialization
+..\src\DTCStl.cpp:115:28: fout: expected ‘,’ or ‘;’ before ‘triangles’
+..\src\DTCStl.cpp:129:5: fout: ‘cout’ was not declared in this scope
+..\src\DTCStl.cpp:129:5: note: suggested alternative:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/iostream:62:18: note:   ‘std::cout’
+..\src\DTCStl.cpp:129:13: fout: ‘endl’ was not declared in this scope
+..\src\DTCStl.cpp:129:13: note: suggested alternative:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:543:5: note:   ‘std::endl’
+Build error occurred, build is stopped
+Time consumed: 454  ms.  
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DTCStl.o ..\src\DTCStl.cpp
+..\src\DTCStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DTCStl.cpp:99:35: fout: cannot convert ‘std::basic_string<char>’ to ‘float’ in assignment
+..\src\DTCStl.cpp:100:35: fout: cannot convert ‘std::basic_string<char>’ to ‘float’ in assignment
+..\src\DTCStl.cpp:101:35: fout: cannot convert ‘std::basic_string<char>’ to ‘float’ in assignment
+..\src\DTCStl.cpp:115:28: fout: expected type-specifier before ‘triangles’
+..\src\DTCStl.cpp:115:28: fout: cannot convert ‘int*’ to ‘data*’ in initialization
+..\src\DTCStl.cpp:115:28: fout: expected ‘,’ or ‘;’ before ‘triangles’
+Build error occurred, build is stopped
+Time consumed: 329  ms.  
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DTCStl.o ..\src\DTCStl.cpp
+..\src\DTCStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DTCStl.cpp:99:41: fout: cannot convert ‘std::basic_string<char>’ to ‘const char*’ for argument ‘1’ to ‘double atof(const char*)’
+..\src\DTCStl.cpp:100:41: fout: cannot convert ‘std::basic_string<char>’ to ‘const char*’ for argument ‘1’ to ‘double atof(const char*)’
+..\src\DTCStl.cpp:101:41: fout: cannot convert ‘std::basic_string<char>’ to ‘const char*’ for argument ‘1’ to ‘double atof(const char*)’
+..\src\DTCStl.cpp:115:28: fout: expected type-specifier before ‘triangles’
+..\src\DTCStl.cpp:115:28: fout: cannot convert ‘int*’ to ‘data*’ in initialization
+..\src\DTCStl.cpp:115:28: fout: expected ‘,’ or ‘;’ before ‘triangles’
+Build error occurred, build is stopped
+Time consumed: 302  ms.  
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DTCStl.o ..\src\DTCStl.cpp
+..\src\DTCStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DTCStl.cpp:100:41: fout: cannot convert ‘std::basic_string<char>’ to ‘const char*’ for argument ‘1’ to ‘double atof(const char*)’
+..\src\DTCStl.cpp:101:41: fout: cannot convert ‘std::basic_string<char>’ to ‘const char*’ for argument ‘1’ to ‘double atof(const char*)’
+..\src\DTCStl.cpp:102:41: fout: cannot convert ‘std::basic_string<char>’ to ‘const char*’ for argument ‘1’ to ‘double atof(const char*)’
+..\src\DTCStl.cpp:116:28: fout: expected type-specifier before ‘triangles’
+..\src\DTCStl.cpp:116:28: fout: cannot convert ‘int*’ to ‘data*’ in initialization
+..\src\DTCStl.cpp:116:28: fout: expected ‘,’ or ‘;’ before ‘triangles’
+Build error occurred, build is stopped
+Time consumed: 338  ms.  
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DTCStl.o ..\src\DTCStl.cpp
+..\src\DTCStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DTCStl.cpp:100:41: fout: cannot convert ‘std::basic_string<char>’ to ‘const char*’ for argument ‘1’ to ‘double atof(const char*)’
+..\src\DTCStl.cpp:101:41: fout: cannot convert ‘std::basic_string<char>’ to ‘const char*’ for argument ‘1’ to ‘double atof(const char*)’
+..\src\DTCStl.cpp:102:41: fout: cannot convert ‘std::basic_string<char>’ to ‘const char*’ for argument ‘1’ to ‘double atof(const char*)’
+..\src\DTCStl.cpp:116:28: fout: expected type-specifier before ‘triangles’
+..\src\DTCStl.cpp:116:28: fout: cannot convert ‘int*’ to ‘data*’ in initialization
+..\src\DTCStl.cpp:116:28: fout: expected ‘,’ or ‘;’ before ‘triangles’
+Build error occurred, build is stopped
+Time consumed: 359  ms.  
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DTCStl.o ..\src\DTCStl.cpp
+..\src\DTCStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DTCStl.cpp:99:16: let op: variable ‘cData’ set but not used [-Wunused-but-set-variable]
+..\src\DTCStl.cpp:116:28: fout: expected type-specifier before ‘triangles’
+..\src\DTCStl.cpp:116:28: fout: cannot convert ‘int*’ to ‘data*’ in initialization
+..\src\DTCStl.cpp:116:28: fout: expected ‘,’ or ‘;’ before ‘triangles’
+Build error occurred, build is stopped
+Time consumed: 304  ms.  
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DTCStl.o ..\src\DTCStl.cpp
+..\src\DTCStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DTCStl.cpp:99:16: let op: variable ‘cData’ set but not used [-Wunused-but-set-variable]
+..\src\DTCStl.cpp:129:28: fout: expected type-specifier before ‘triangles’
+..\src\DTCStl.cpp:129:28: fout: cannot convert ‘int*’ to ‘data*’ in initialization
+..\src\DTCStl.cpp:129:28: fout: expected ‘,’ or ‘;’ before ‘triangles’
+Build error occurred, build is stopped
+Time consumed: 301  ms.  
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DTCStl.o ..\src\DTCStl.cpp
+..\src\DTCStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DTCStl.cpp:131:28: fout: expected type-specifier before ‘triangles’
+..\src\DTCStl.cpp:131:28: fout: cannot convert ‘int*’ to ‘data*’ in initialization
+..\src\DTCStl.cpp:131:28: fout: expected ‘,’ or ‘;’ before ‘triangles’
+Build error occurred, build is stopped
+Time consumed: 302  ms.  
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DTCStl.o ..\src\DTCStl.cpp
+..\src\DTCStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DTCStl.cpp:131:28: fout: expected type-specifier before ‘triangles’
+..\src\DTCStl.cpp:131:28: fout: cannot convert ‘int*’ to ‘data*’ in initialization
+..\src\DTCStl.cpp:131:28: fout: expected ‘,’ or ‘;’ before ‘triangles’
+Build error occurred, build is stopped
+Time consumed: 302  ms.  
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DTCStl.o ..\src\DTCStl.cpp
+..\src\DTCStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DTCStl.cpp:132:28: fout: expected type-specifier before ‘triangles’
+..\src\DTCStl.cpp:132:28: fout: cannot convert ‘int*’ to ‘data*’ in initialization
+..\src\DTCStl.cpp:132:28: fout: expected ‘,’ or ‘;’ before ‘triangles’
+Build error occurred, build is stopped
+Time consumed: 310  ms.  
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DTCStl.o ..\src\DTCStl.cpp
+..\src\DTCStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DTCStl.cpp:132:27: fout: expected type-specifier before ‘triangles’
+..\src\DTCStl.cpp:132:27: fout: cannot convert ‘int*’ to ‘data*’ in initialization
+..\src\DTCStl.cpp:132:27: fout: expected ‘,’ or ‘;’ before ‘triangles’
+Build error occurred, build is stopped
+Time consumed: 288  ms.  
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DTCStl.o ..\src\DTCStl.cpp
+..\src\DTCStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DTCStl.cpp:144:52: fout: ‘totalVolume’ was not declared in this scope
+..\src\DTCStl.cpp:145:48: fout: ‘xCenter’ was not declared in this scope
+..\src\DTCStl.cpp:146:48: fout: ‘yCenter’ was not declared in this scope
+..\src\DTCStl.cpp:147:48: fout: ‘zCenter’ was not declared in this scope
+..\src\DTCStl.cpp:151:14: fout: ‘triangles’ was not declared in this scope
+..\src\DTCStl.cpp:129:9: let op: unused variable ‘numTriangles’ [-Wunused-variable]
+Build error occurred, build is stopped
+Time consumed: 313  ms.  
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DTCStl.o ..\src\DTCStl.cpp
+..\src\DTCStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DTCStl.cpp:129:9: let op: unused variable ‘numTriangles’ [-Wunused-variable]
+g++ -o DTCStl.exe src\DTCStl.o
+Build complete for project DTCStl
+Time consumed: 730  ms.  
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DTCStl.o ..\src\DTCStl.cpp
+..\src\DTCStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DTCStl.cpp:130:27: fout: expected type-specifier before ‘triangles’
+..\src\DTCStl.cpp:130:27: fout: cannot convert ‘int*’ to ‘data*’ in initialization
+..\src\DTCStl.cpp:130:27: fout: expected ‘,’ or ‘;’ before ‘triangles’
+..\src\DTCStl.cpp:129:9: let op: unused variable ‘numTriangles’ [-Wunused-variable]
+..\src\DTCStl.cpp:130:11: let op: unused variable ‘triangles’ [-Wunused-variable]
+Build error occurred, build is stopped
+Time consumed: 346  ms.  
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DTCStl.o ..\src\DTCStl.cpp
+..\src\DTCStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DTCStl.cpp:130:11: let op: unused variable ‘triangles’ [-Wunused-variable]
+g++ -o DTCStl.exe src\DTCStl.o
+Build complete for project DTCStl
+Time consumed: 722  ms.  
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DTCStl.o ..\src\DTCStl.cpp
+g++ -o DTCStl.exe src\DTCStl.o
+Build complete for project DTCStl
+Time consumed: 763  ms.  
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DTCStl.o ..\src\DTCStl.cpp
+g++ -o DTCStl.exe src\DTCStl.o
+Build complete for project DTCStl
+Time consumed: 837  ms.  
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DTCStl.o ..\src\DTCStl.cpp
+g++ -o DTCStl.exe src\DTCStl.o
+Build complete for project DTCStl
+Time consumed: 723  ms.  
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DTCStl.o ..\src\DTCStl.cpp
+g++ -o DTCStl.exe src\DTCStl.o
+Build complete for project DTCStl
+Time consumed: 791  ms.  
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DTCStl.o ..\src\DTCStl.cpp
+g++ -o DTCStl.exe src\DTCStl.o
+Build complete for project DTCStl
+Time consumed: 764  ms.  
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DTCStl.o ..\src\DTCStl.cpp
+g++ -o DTCStl.exe src\DTCStl.o
+Build complete for project DTCStl
+Time consumed: 777  ms.  
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DTCStl.o ..\src\DTCStl.cpp
+g++ -o DTCStl.exe src\DTCStl.o
+Build complete for project DTCStl
+Time consumed: 778  ms.  
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DTCStl
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DTCStl
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DTCStl
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DTCStl
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DTCStl
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DTCStl
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DTCStl
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DTCStl
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DTCStl
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DTCStl.o ..\src\DTCStl.cpp
+..\src\DTCStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DTCStl.cpp:149:18: fout: ‘m’ was not declared in this scope
+..\src\DTCStl.cpp:150:6: fout: expected ‘;’ before ‘std’
+Build error occurred, build is stopped
+Time consumed: 384  ms.  
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DTCStl.o ..\src\DTCStl.cpp
+g++ -o DTCStl.exe src\DTCStl.o
+Build complete for project DTCStl
+Time consumed: 1036  ms.  
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DTCStl.o ..\src\DTCStl.cpp
+g++ -o DTCStl.exe src\DTCStl.o
+Build complete for project DTCStl
+Time consumed: 912  ms.  
+
+**** Build of configuration Release for project DRSDarwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DRSDarwin
+
+**** Build of configuration Debug for project DRSDxf ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DRSDxf
 
 **** Build of configuration Release for project DRSStl ****
 
 **** Internal Builder is used for build               ****
 Nothing to build for DRSStl
 
-**** Rebuild of configuration Release for project DRSTokamak ****
+**** Build of configuration Release for project DRSTokamak ****
 
 **** Internal Builder is used for build               ****
-g++ -O3 -Wall -c -fmessage-length=0 -o src\DRSTokamak.o ..\src\DRSTokamak.cpp
-g++ -o DRSTokamak.exe src\DRSTokamak.o
-Build complete for project DRSTokamak
-Time consumed: 1170  ms.  
+Nothing to build for DRSTokamak
 
-**** Rebuild of configuration Release for project DTCRandomFitness ****
+**** Build of configuration Release for project DTCRandomFitness ****
 
 **** Internal Builder is used for build               ****
-g++ -O3 -Wall -c -fmessage-length=0 -o src\DTCRandomFitness.o ..\src\DTCRandomFitness.cpp
-g++ -o DTCRandomFitness.exe src\DTCRandomFitness.o
-Build complete for project DTCRandomFitness
-Time consumed: 437  ms.  
+Nothing to build for DTCRandomFitness
 
-**** Rebuild of configuration Release for project Darwin ****
+**** Build of configuration Debug for project DTCStl ****
 
 **** Internal Builder is used for build               ****
-g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Aperture.o ..\src\Aperture.cpp
-g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Population.o ..\src\Population.cpp
-g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Vertices.o ..\src\Vertices.cpp
-g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
-g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
-g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
-g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
-g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Edges.o ..\src\Edges.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 13650  ms.  
+Nothing to build for DTCStl
+
+**** Build of configuration Release for project Darwin ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for Darwin
 
 **** Rebuild of configuration Release for project SteadyStateTokamak ****
 
@@ -69,12 +444,9 @@ Time consumed: 13650  ms.
 g++ -O3 -Wall -c -fmessage-length=0 -o src\SteadyStateTokamak.o ..\src\SteadyStateTokamak.cpp
 g++ -o SteadyStateTokamak.exe src\SteadyStateTokamak.o
 Build complete for project SteadyStateTokamak
-Time consumed: 905  ms.  
+Time consumed: 1201  ms.  
 
-**** Rebuild of configuration Release for project Tokamak ****
+**** Build of configuration Release for project Tokamak ****
 
 **** Internal Builder is used for build               ****
-g++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\include -O3 -Wall -c -fmessage-length=0 -o src\Tokamak.o ..\src\Tokamak.cpp
-g++ -o Tokamak.exe src\Tokamak.o
-Build complete for project Tokamak
-Time consumed: 1373  ms.  
+Nothing to build for Tokamak

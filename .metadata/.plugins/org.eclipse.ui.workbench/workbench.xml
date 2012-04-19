@@ -41,7 +41,7 @@
 </editor>
 <editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="DRSStl.cpp" partName="DRSStl.cpp" path="C:/workspaces/Darwin/DRSStl/src/DRSStl.cpp" title="DRSStl.cpp" tooltip="DRSStl/src/DRSStl.cpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/DRSStl/src/DRSStl.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="14656" selectionTopPixel="8926"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="12983" selectionTopPixel="7333"/>
 </editor>
 </editors>
 <views>
@@ -60,9 +60,8 @@
 <category IMemento.internal.id="Warnings (4 items)"/>
 <category IMemento.internal.id="Warnings"/>
 <category IMemento.internal.id="Errors"/>
-<category IMemento.internal.id="Infos"/>
 </expanded>
-<columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="129" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="1255"/>
+<columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="129" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="1695"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
@@ -232,75 +231,18 @@
 <navigationHistory>
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/DRSStl/src/DRSStl.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Globals.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Encoding.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Genome.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Genome.cpp"/>
 </editors>
 <item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="9770" y="0"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="764" y="0"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="725" y="5"/>
-</item>
-<item historyLabel="Globals.h" index="1">
-<position info="not_deleted" x="815" y="196"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="730" y="0"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="9165" y="0"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="9784" y="0"/>
-</item>
-<item historyLabel="Encoding.cpp" index="2">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Genome.cpp" index="3">
-<position info="not_deleted" x="1264" y="681"/>
-</item>
-<item historyLabel="Encoding.cpp" index="2">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="9784" y="0"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="9219" y="0"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="10167" y="0"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="9221" y="20"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="9942" y="0"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="10360" y="0"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
 <position info="not_deleted" x="10148" y="75"/>
 </item>
-<item historyLabel="Genome.cpp" index="4">
+<item historyLabel="Genome.cpp" index="1">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Genome.cpp" index="4">
+<item historyLabel="Genome.cpp" index="1">
 <position info="not_deleted" x="11080" y="19"/>
 </item>
-<item historyLabel="Genome.cpp" index="4">
+<item historyLabel="Genome.cpp" index="1">
 <position info="not_deleted" x="15200" y="0"/>
 </item>
 <item historyLabel="DRSStl.cpp" index="0">
@@ -384,8 +326,62 @@
 <item historyLabel="DRSStl.cpp" index="0">
 <position info="not_deleted" x="14240" y="0"/>
 </item>
-<item active="true" historyLabel="DRSStl.cpp" index="0">
+<item historyLabel="DRSStl.cpp" index="0">
 <position info="not_deleted" x="14335" y="0"/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position info="not_deleted" x="15415" y="0"/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position info="not_deleted" x="15353" y="0"/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position info="not_deleted" x="14897" y="0"/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position info="not_deleted" x="16403" y="29"/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position info="not_deleted" x="5095" y="0"/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position info="not_deleted" x="1866" y="0"/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position info="not_deleted" x="16486" y="61"/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position info="not_deleted" x="17081" y="0"/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position info="not_deleted" x="17281" y="0"/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position info="not_deleted" x="16957" y="23"/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position info="not_deleted" x="17077" y="0"/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position info="not_deleted" x="5067" y="0"/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position info="not_deleted" x="5094" y="0"/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position info="not_deleted" x="12903" y="0"/>
+</item>
+<item historyLabel="DRSStl.cpp" index="0">
+<position info="not_deleted" x="12884" y="12"/>
+</item>
+<item active="true" historyLabel="DRSStl.cpp" index="0">
+<position info="not_deleted" x="12553" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
