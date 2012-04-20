@@ -23,6 +23,13 @@ public:
     float x3,y3,z3;
 };
 
+struct point3D
+{
+	double x;
+	double y;
+	double z;
+};
+
 
 void StringExplode(std::string str, std::string separator, std::vector<std::string>* results){
     std::size_t found;
@@ -39,35 +46,89 @@ void StringExplode(std::string str, std::string separator, std::vector<std::stri
     }
 }
 
+double Distance(point3D targetCenter, point3D centerMass){
+	double xd = centerMass.x-targetCenter.x;
+	double yd = centerMass.y-targetCenter.y;
+	double zd = centerMass.z-targetCenter.z;
+
+	double distance = sqrt(xd*xd + yd*yd + zd*zd);
+
+	return distance;
+}
+
+enum volumeMode
+{
+	NOVOLUME = 0,
+	MINVOLUME = 1,
+	MAXVOLUME = 2
+};
+
+enum centerMassMode
+{
+	NOCENTERMASS = 0,
+	MINCENTERMASS = 1,
+	MAXCENTERMASS = 2
+
+};
+
 int main(int argc, char *argv[]) {
 
 	std::string strFileName = "";
 
-	int nMode = 0;
+	volumeMode nVolumeMode = NOVOLUME;
+	centerMassMode nCenterMassMode = NOCENTERMASS;
+
+	point3D sTargetCenter;
+	sTargetCenter.x = 0;
+	sTargetCenter.y = 0;
+	sTargetCenter.z = 0;
+
 
 	bool bVerbose = false;
-	if(argc == 4){
+	if(argc >= 2){
 		strFileName= argv[1];
-		 if(argv[2] == std::string("-volume")){
-			 nMode = 1;
-		 }
-		 else if (argv[2] == std::string("-centermass")){
-			 nMode = 2;
-		 }
-		bVerbose = true;
+
+		for(int i = 2; i < argc; i++){
+			//std::cout << argv[i] << std::endl;
+			std::string arg = argv[i];
+
+			if(arg == std::string("-verbose")){
+				bVerbose = true;
+			}
+			else if(arg == std::string("-minvolume")){
+				nVolumeMode = MINVOLUME;
+			}
+			else if(arg == std::string("-maxvolume")){
+				nVolumeMode = MAXVOLUME;
+			}
+			else if(arg.substr(0,9) ==  std::string("-Xcenter:")){
+				sTargetCenter.x = atof(arg.substr(9, arg.size()).c_str());
+				nCenterMassMode = MINCENTERMASS;
+			}
+			else if(arg.substr(0,9) ==  std::string("-Ycenter:")){
+				sTargetCenter.y = atof(arg.substr(9, arg.size()).c_str());
+				nCenterMassMode = MINCENTERMASS;
+			}
+			else if(arg.substr(0,9) ==  std::string("-Zcenter:")){
+				sTargetCenter.z = atof(arg.substr(9, arg.size()).c_str());
+				nCenterMassMode = MINCENTERMASS;
+			}
+			else if(arg ==  std::string("-maxcentermass")){
+				nCenterMassMode = MAXCENTERMASS;
+			}
+		}
 	}
-	else if(argc == 3){
-		strFileName= argv[1];
-		 if(argv[2] == std::string("-volume")){
-			 nMode = 1;
-		 }
-		 else if (argv[2] == std::string("-centermass")){
-			 nMode = 2;
-		 }
-	}
+
 	else{
-		std::cout << "Usage: DTCStl.exe inputFilename [-volume , -centermass] [-verbose]" << std::endl;
-		exit(1);
+		std::cout << "Usage: DTCStl.exe inputFilename  [-verbose] [-minvolume , -maxvolume] [-Xcenter:x] [-Ycenter:y] [-Zcenter:Z] [-maxcentermass] " << std::endl;
+		exit(0);
+	}
+
+
+	if(bVerbose && nCenterMassMode){
+		std::cout << "Target center X: " << sTargetCenter.x;
+		std::cout << " Y: "<< sTargetCenter.y;
+		std::cout << " Z: "<< sTargetCenter.z << std::endl;
 	}
 
 
@@ -80,7 +141,7 @@ int main(int argc, char *argv[]) {
     {
         // Print an error and exit
         std::cerr << strFileName << " could not be opened for reading!" << std::endl;
-        exit(2);
+        exit(0);
     }
 
 
@@ -124,6 +185,7 @@ int main(int argc, char *argv[]) {
         }
     }
 
+    inf.close();
 
     int numTriangles = vcData.size(); // pull in the STL file and determine number of triangles
     data* triangles = new data[numTriangles];
@@ -154,27 +216,69 @@ int main(int argc, char *argv[]) {
     }
 
 
+    point3D sCenterMass;
+    sCenterMass.x = xCenter/totalVolume;
+    sCenterMass.y = yCenter/totalVolume;
+    sCenterMass.z = zCenter/totalVolume;
+
+
+
+
     delete[] triangles;
 
 
     int nScore = 0;
-    switch (nMode)
-    {
-        case 1:
 
+    double centerMassScore = 0;
+
+    switch (nCenterMassMode)
+    {
+
+    	case 0:
+    		centerMassScore = 0;
+    		break;
+        case 1:
+        	centerMassScore = (1/Distance(sTargetCenter, sCenterMass))*10000;
             break;
         case 2:
-
+        	centerMassScore = Distance(sTargetCenter, sCenterMass);
             break;
 
         default:
-            std::cout << "Unknown mode";
-            nScore = 0;
+            std::cout << "Unknown center mass mode";
+            centerMassScore = 0;
             break;
     }
 
+    double volumeScore = 0;
+
+    switch (nVolumeMode)
+    {
+
+    	case 0:
+    		volumeScore = 0;
+    		break;
+        case 1:
+        	volumeScore = (1/totalVolume)*10000;
+            break;
+        case 2:
+        	volumeScore = totalVolume;
+            break;
+
+        default:
+            std::cout << "Unknown volume mode";
+            volumeScore = 0;
+            break;
+    }
+
+
+    nScore = (int) (centerMassScore + volumeScore);
+
     if(bVerbose){
-    	std::cout << "\nSCORE: " << nScore << std::endl;
+    	std::cout << std::endl;
+    	std::cout << "center mass score: " << centerMassScore << std::endl;
+    	std::cout << "volume score : " << volumeScore << std::endl;
+    	std::cout << "\n\tTOTAL SCORE: " << nScore << std::endl;
     }
 
 

@@ -31,6 +31,8 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
+<part id="2"/>
+<part id="3"/>
 </presentation>
 </folder>
 </info>
@@ -39,9 +41,17 @@
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Darwin/src/Globals.h"/>
 <editorState selectionHorizontalPixel="0" selectionLength="196" selectionOffset="815" selectionTopPixel="180"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="DRSStl.cpp" partName="DRSStl.cpp" path="C:/workspaces/Darwin/DRSStl/src/DRSStl.cpp" title="DRSStl.cpp" tooltip="DRSStl/src/DRSStl.cpp" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="DRSStl.cpp" partName="DRSStl.cpp" path="C:/workspaces/Darwin/DRSStl/src/DRSStl.cpp" title="DRSStl.cpp" tooltip="DRSStl/src/DRSStl.cpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/DRSStl/src/DRSStl.cpp"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="12983" selectionTopPixel="7333"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="SteadyStateTokamak.cpp" partName="SteadyStateTokamak.cpp" path="C:/workspaces/Darwin/SteadyStateTokamak/src/SteadyStateTokamak.cpp" title="SteadyStateTokamak.cpp" tooltip="SteadyStateTokamak/src/SteadyStateTokamak.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SteadyStateTokamak/src/SteadyStateTokamak.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="18" selectionOffset="487" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="DTCStl.cpp" partName="DTCStl.cpp" path="C:/workspaces/Darwin/DTCStl/src/DTCStl.cpp" title="DTCStl.cpp" tooltip="DTCStl/src/DTCStl.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/DTCStl/src/DTCStl.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4297" selectionTopPixel="1646"/>
 </editor>
 </editors>
 <views>
@@ -58,7 +68,6 @@
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
 <category IMemento.internal.id="Warnings (4 items)"/>
-<category IMemento.internal.id="Warnings"/>
 <category IMemento.internal.id="Errors"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="129" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="1695"/>
@@ -231,113 +240,10 @@
 <navigationHistory>
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/DRSStl/src/DRSStl.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Darwin/src/Genome.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/DTCRandomFitness/src/DTCRandomFitness.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SteadyStateTokamak/src/SteadyStateTokamak.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/DTCStl/src/DTCStl.cpp"/>
 </editors>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="10148" y="75"/>
-</item>
-<item historyLabel="Genome.cpp" index="1">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Genome.cpp" index="1">
-<position info="not_deleted" x="11080" y="19"/>
-</item>
-<item historyLabel="Genome.cpp" index="1">
-<position info="not_deleted" x="15200" y="0"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="12048" y="0"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="1866" y="0"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="4085" y="54"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="4255" y="0"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="4926" y="0"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="13805" y="0"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="14813" y="22"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="15097" y="0"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="15196" y="0"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="15190" y="0"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="15107" y="17"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="4226" y="0"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="1807" y="0"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="14808" y="0"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="13948" y="14"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="1780" y="29"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="14659" y="0"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="14112" y="0"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="14656" y="0"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="5001" y="0"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="957" y="0"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="14240" y="0"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="14335" y="0"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="15415" y="0"/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position/>
-</item>
-<item historyLabel="DRSStl.cpp" index="0">
-<position info="not_deleted" x="15353" y="0"/>
-</item>
 <item historyLabel="DRSStl.cpp" index="0">
 <position info="not_deleted" x="14897" y="0"/>
 </item>
@@ -380,8 +286,113 @@
 <item historyLabel="DRSStl.cpp" index="0">
 <position info="not_deleted" x="12884" y="12"/>
 </item>
-<item active="true" historyLabel="DRSStl.cpp" index="0">
+<item historyLabel="DRSStl.cpp" index="0">
 <position info="not_deleted" x="12553" y="0"/>
+</item>
+<item historyLabel="DTCRandomFitness.cpp" index="1">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="SteadyStateTokamak.cpp" index="2">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="DTCStl.cpp" index="3">
+<position info="not_deleted" x="4930" y="0"/>
+</item>
+<item historyLabel="DTCStl.cpp" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="SteadyStateTokamak.cpp" index="2">
+<position info="not_deleted" x="39749" y="2491"/>
+</item>
+<item historyLabel="DTCStl.cpp" index="3">
+<position info="not_deleted" x="1576" y="0"/>
+</item>
+<item historyLabel="SteadyStateTokamak.cpp" index="2">
+<position info="not_deleted" x="39749" y="2491"/>
+</item>
+<item historyLabel="DTCStl.cpp" index="3">
+<position info="not_deleted" x="3181" y="0"/>
+</item>
+<item historyLabel="SteadyStateTokamak.cpp" index="2">
+<position info="not_deleted" x="312" y="193"/>
+</item>
+<item historyLabel="DTCStl.cpp" index="3">
+<position info="not_deleted" x="1979" y="0"/>
+</item>
+<item historyLabel="SteadyStateTokamak.cpp" index="2">
+<position info="not_deleted" x="312" y="193"/>
+</item>
+<item historyLabel="SteadyStateTokamak.cpp" index="2">
+<position info="not_deleted" x="38647" y="438"/>
+</item>
+<item historyLabel="DTCStl.cpp" index="3">
+<position info="not_deleted" x="1979" y="0"/>
+</item>
+<item historyLabel="DTCStl.cpp" index="3">
+<position/>
+</item>
+<item historyLabel="DTCStl.cpp" index="3">
+<position info="not_deleted" x="2382" y="0"/>
+</item>
+<item historyLabel="DTCStl.cpp" index="3">
+<position info="not_deleted" x="3180" y="0"/>
+</item>
+<item historyLabel="DTCStl.cpp" index="3">
+<position info="not_deleted" x="2011" y="0"/>
+</item>
+<item historyLabel="DTCStl.cpp" index="3">
+<position info="not_deleted" x="3169" y="0"/>
+</item>
+<item historyLabel="DTCStl.cpp" index="3">
+<position info="not_deleted" x="4310" y="54"/>
+</item>
+<item historyLabel="DTCStl.cpp" index="3">
+<position info="not_deleted" x="4603" y="0"/>
+</item>
+<item historyLabel="DTCStl.cpp" index="3">
+<position info="not_deleted" x="2559" y="0"/>
+</item>
+<item historyLabel="SteadyStateTokamak.cpp" index="2">
+<position info="not_deleted" x="487" y="18"/>
+</item>
+<item historyLabel="DTCStl.cpp" index="3">
+<position info="not_deleted" x="2559" y="0"/>
+</item>
+<item historyLabel="DTCStl.cpp" index="3">
+<position info="not_deleted" x="452" y="0"/>
+</item>
+<item historyLabel="DTCStl.cpp" index="3">
+<position info="not_deleted" x="3301" y="41"/>
+</item>
+<item historyLabel="DTCStl.cpp" index="3">
+<position info="not_deleted" x="3071" y="0"/>
+</item>
+<item historyLabel="DTCStl.cpp" index="3">
+<position info="not_deleted" x="3301" y="41"/>
+</item>
+<item historyLabel="DTCStl.cpp" index="3">
+<position info="not_deleted" x="3168" y="0"/>
+</item>
+<item historyLabel="DTCStl.cpp" index="3">
+<position/>
+</item>
+<item historyLabel="DTCStl.cpp" index="3">
+<position info="not_deleted" x="3301" y="41"/>
+</item>
+<item historyLabel="DTCStl.cpp" index="3">
+<position info="not_deleted" x="3455" y="0"/>
+</item>
+<item historyLabel="DTCStl.cpp" index="3">
+<position info="not_deleted" x="3497" y="0"/>
+</item>
+<item historyLabel="DTCStl.cpp" index="3">
+<position info="not_deleted" x="3491" y="0"/>
+</item>
+<item historyLabel="DTCStl.cpp" index="3">
+<position info="not_deleted" x="2588" y="0"/>
+</item>
+<item active="true" historyLabel="DTCStl.cpp" index="3">
+<position info="not_deleted" x="4299" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -401,6 +412,15 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="DTCStl.cpp" tooltip="DTCStl/src/DTCStl.cpp">
+<persistable path="/DTCStl/src/DTCStl.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="SteadyStateTokamak.cpp" tooltip="SteadyStateTokamak/src/SteadyStateTokamak.cpp">
+<persistable path="/SteadyStateTokamak/src/SteadyStateTokamak.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="DTCRandomFitness.cpp" tooltip="DTCRandomFitness/src/DTCRandomFitness.cpp">
+<persistable path="/DTCRandomFitness/src/DTCRandomFitness.cpp"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Genome.cpp" tooltip="Darwin/src/Genome.cpp">
 <persistable path="/Darwin/src/Genome.cpp"/>
 </file>
@@ -434,17 +454,8 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="DRSDarwin.cpp" tooltip="DRSDarwin/src/DRSDarwin.cpp">
 <persistable path="/DRSDarwin/src/DRSDarwin.cpp"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="SteadyStateTokamak.cpp" tooltip="SteadyStateTokamak/src/SteadyStateTokamak.cpp">
-<persistable path="/SteadyStateTokamak/src/SteadyStateTokamak.cpp"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="DRSStl.cpp" tooltip="DRSStl/src/DRSStl.cpp">
 <persistable path="/DRSStl/src/DRSStl.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Globals.h" tooltip="Darwin/src/Globals.h">
-<persistable path="/Darwin/src/Globals.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="dl_codes.h" tooltip="DRSDxf/src/dl_codes.h">
-<persistable path="/DRSDxf/src/dl_codes.h"/>
 </file>
 </mruList>
 </workbench>

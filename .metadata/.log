@@ -10915,3 +10915,31 @@ Binding(CTRL+SHIFT+W,
 
 !ENTRY org.eclipse.cdt.core 1 0 2012-04-19 08:43:42.735
 !MESSAGE Indexed 'DTCStl' (1 sources, 85 headers) in 1,89 sec: 8.039 declarations; 13.548 references; 6 unresolved inclusions; 6 syntax errors; 76 unresolved names (0,35%)
+!SESSION 2012-04-20 08:24:30.296 -----------------------------------------------
+eclipse.buildId=M20110909-1335
+java.version=1.6.0_31
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=nl_BE
+Framework arguments:  -product org.eclipse.epp.package.cpp.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product
+
+!ENTRY org.eclipse.jface 2 0 2012-04-20 08:24:34.898
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2012-04-20 08:24:34.898
+!MESSAGE A conflict occurred for CTRL+SHIFT+W:
+Binding(CTRL+SHIFT+W,
+	ParameterizedCommand(Command(org.eclipse.ui.file.closeAll,Close All,
+		Close all editors,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.CloseAllHandler@1680bc6,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+W,
+	ParameterizedCommand(Command(org.wsdl.tools.wsdlauditor.plugin.commands.generate,WAudit,
+		Generate Audit Report for Wsdl,
+		Category(org.wsdl.tools.wsdlauditor.plugin.commands.category,Wsdl Auditor,Generate Audit Report for Wsdl,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)

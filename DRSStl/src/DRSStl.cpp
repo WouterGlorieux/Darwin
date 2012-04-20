@@ -144,9 +144,11 @@ int main(int argc, char *argv[]) {
 		strOutputFileName= argv[2];
 	}
 	else{
-		std::cout << "Usage: Tokamak.exe inputFilename outputFilename" << std::endl;
+		std::cout << "Usage: DRSStl.exe inputFilename outputFilename" << std::endl;
 		std::exit(1);
 	}
+
+
 
 	//std::cout << "loading file: " << strFileName << std::endl;
 	std::ifstream t(strFileName.c_str());
@@ -167,9 +169,9 @@ int main(int argc, char *argv[]) {
     rapidxml::xml_node<>* rootNode = doc.first_node("Genome");
 
 
-    sGrid.X = atoi(rootNode->first_attribute("gridX")->value());
-    sGrid.Y = atoi(rootNode->first_attribute("gridY")->value());
-    sGrid.Z = atoi(rootNode->first_attribute("gridZ")->value());
+ //   sGrid.X = atoi(rootNode->first_attribute("gridX")->value());
+ //   sGrid.Y = atoi(rootNode->first_attribute("gridY")->value());
+ //   sGrid.Z = atoi(rootNode->first_attribute("gridZ")->value());
 
     sGrid.X = 5;
     sGrid.Y = 5;
@@ -372,9 +374,9 @@ void InitializeGrid(){
 		for (int j = 0 ; j <= sGrid.Y*3 ; j++){
 			for (int k = 0 ; k <= sGrid.Z*3; k++){
 				point3D sPoint3D;
-				sPoint3D.X = i*10;
-				sPoint3D.Y = j*10;
-				sPoint3D.Z = k*10;
+				sPoint3D.X = i*1;
+				sPoint3D.Y = j*1;
+				sPoint3D.Z = k*1;
 				asPoints[i][j][k] = sPoint3D;
 				//std::cout << "translate([" << sPoint3D.X << "," << sPoint3D.Y << "," << sPoint3D.Z << "]) sphere(1);" << std::endl;
 			}
@@ -549,7 +551,7 @@ void MakeSTL(std::vector<segment> vsSegments, std::string outputFileName){
 	output << "endsolid mystl" << std::endl;
 	output.close();
 
-	std::cout << "writing " << outputFileName << std::endl;
+	//std::cout << "writing " << outputFileName << std::endl;
 
 }
 

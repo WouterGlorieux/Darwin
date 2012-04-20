@@ -222,7 +222,7 @@ while(DoNextGeneration()){
 	//calculate fitness
 	for(int i = 0; i<m_nPopulationSize; i++ ){
 		std::stringstream ss;
-		ss << m_strCandidatesPath << i << ".txt";
+		ss << m_strCandidatesPath << i << "." + m_strCandidateExtension;
 		std::string strCandidate =  ss.str();
 		pacPopulation[i].CalcFitness(m_vsTestChambers, strCandidate);
 		pacPopulation[i].cGenome.SetFitness(pacPopulation[i].GetFitness());
