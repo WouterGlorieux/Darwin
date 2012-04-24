@@ -24,16 +24,6 @@ struct point3D
 	double Z;
 };
 
-
-
-struct controlPoints
-{
-	point3D a1, a2, a3, a4;
-	point3D b1, b2, b3, b4;
-	point3D c1, c2, c3, c4;
-	point3D d1, d2, d3, d4;
-};
-
 struct grid
 {
 	int X;
@@ -70,12 +60,12 @@ struct cube
 
 enum ORIENTATION
 {
-	XPOS,
-	XNEG,
-	YPOS,
-	YNEG,
-	ZPOS,
-	ZNEG
+	XPOS = 1,
+	XNEG = 2,
+	YPOS = 3,
+	YNEG = 4,
+	ZPOS = 5,
+	ZNEG = 6
 };
 
 struct segment
@@ -90,44 +80,18 @@ struct segment
 std::vector<segment> vsSegments;
 
 void StringExplode(std::string str, std::string separator, std::vector<std::string>* results);
-
-
-controlPoints GetControlPoints(int i, int j, int k);
-std::string GetSCAD(int i, int j, int k);
-void SortControlPoints();
-void InitializeGrid();
-void ExpandGrid();
-void ShiftXY(int x, int y, double Xvalue, double Yvalue);
-
+void InitializeGrid(point3D***asPoints);
 std::string SquareToFacets(point3D a, point3D b, point3D c, point3D d, ORIENTATION orentation );
-void MakeSTL(std::vector<segment> vsSegments, std::string outputFileName);
-void WriteSTL(std::string outputFileName);
-std::set<cube> SelectCubes();
+void MakeSTL(std::vector<segment> vsSegments, std::string outputFileName, point3D***asPoints);
+
+std::set<cube> SelectCubes(bool*** abGrid);
 std::vector<segment> SelectSegments(std::set<cube> setCubes);
 
 
 grid sGrid;
-bool abGrid[5][5][5];
-bool mode2D = false;
-
-point3D asPoints[16][16][16];			//3d array of coördinates of all points
+//point3D asPoints[100][100][100];			//3d array of coördinates of all points
 std::vector<point3D> vsPoints;      //vector with all points
 
-
-bool sortByX(const point3D &a, const point3D &b)
-{
-    return a.X < b.X;
-}
-
-bool sortByY(const point3D &a, const point3D &b)
-{
-    return a.Y > b.Y;
-}
-
-bool sortByZ(const point3D &a, const point3D &b)
-{
-    return a.Z < b.Z;
-}
 
 int main(int argc, char *argv[]) {
 	std::string strFileName = "";
@@ -169,15 +133,12 @@ int main(int argc, char *argv[]) {
     rapidxml::xml_node<>* rootNode = doc.first_node("Genome");
 
 
- //   sGrid.X = atoi(rootNode->first_attribute("gridX")->value());
- //   sGrid.Y = atoi(rootNode->first_attribute("gridY")->value());
- //   sGrid.Z = atoi(rootNode->first_attribute("gridZ")->value());
+    sGrid.X = 0;
+    sGrid.Y = 0;
+    sGrid.Z = 0;
 
-    sGrid.X = 5;
-    sGrid.Y = 5;
-    sGrid.Z = 5;
-
-
+    std::vector<std::string> vstrData;
+    std::vector< std::vector<std::string> > vstrGrid;
 
 
     int k = 0;
@@ -191,13 +152,28 @@ int main(int argc, char *argv[]) {
 			{
 
 				std::string strData = geneNode->value();
+				if( (int)strData.size() > sGrid.X){
+						sGrid.X = strData.size();
+				}
+				vstrData.push_back(strData);
+
 				for(unsigned int i = 0; i < strData.size(); i++){
-					abGrid[i][j][k] = strData.at(i) == '1'? true : false ;
+					//abGrid[i][j][k] = strData.at(i) == '1'? true : false ;
 					//std::cout << i << "-" << j << "-" << k << ": " << abGrid[i][j][k] << std::endl;
  				}
 				j++;
+				if(j > sGrid.Y){
+					sGrid.Y = j;
+				}
 			}
 			k++;
+			if(k > sGrid.Z){
+				sGrid.Z = k;
+			}
+
+			vstrGrid.push_back(vstrData);
+			vstrData.clear();
+
 		}
 		else{
 			for (rapidxml::xml_node<>* geneNode = chromosomeNode->first_node("Gene"); geneNode; geneNode = geneNode->next_sibling("Gene"))
@@ -207,19 +183,84 @@ int main(int argc, char *argv[]) {
 				point3D sPoint3D;
 				sPoint3D.X = atof(vstrData.at(0).c_str()) * dXmultiplier;
 				sPoint3D.Y = atof(vstrData.at(1).c_str()) * dYmultiplier;
-				if(!mode2D){
-					sPoint3D.Z = atof(vstrData.at(2).c_str()) * dZmultiplier;
-				}
-				else{
-					sPoint3D.Z = 0;
-				}
+				sPoint3D.Z = atof(vstrData.at(2).c_str()) * dZmultiplier;
 
-				//sPoint3D.X = 10.0;
-				//sPoint3D.Y = 5.0;
-
-				//std::cout << i << " " << j << std::endl;
 				vsPoints.push_back(sPoint3D);
 
+			}
+		}
+	}
+
+	//std::cout << sGrid.X << " " << sGrid.Y << " " << sGrid.Z << std::endl;
+	const int x = sGrid.X;
+	const int y = sGrid.Y;
+	const int z = sGrid.Z;
+
+
+	    //  Array Iterators
+	    int i, j;
+
+
+	   //  Allocate 3D Array
+	    bool ***abGrid = new bool**[x];
+	    point3D *** asPoints = new point3D**[x+1];
+
+	   for(i = 0; i < x; i++)
+	   {
+	       abGrid[i] = new bool*[y];
+	       for(j = 0; j < y; j++)
+	        {
+	           abGrid[i][j] = new bool[z];
+	       }
+	    }
+
+	    //  initialize array elements
+	    for(i = 0; i < x; i++)
+	    {
+	        for(j = 0; j < y; j++)
+	        {
+	            for(k = 0; k < z; k++)
+	            {
+	                abGrid[i][j][k] = false;
+	            }
+	        }
+	    }
+
+
+		   for(i = 0; i <= x; i++)
+		   {
+		       asPoints[i] = new point3D*[y+1];
+		       for(j = 0; j <= y; j++)
+		        {
+		           asPoints[i][j] = new point3D[z+1];
+		       }
+		    }
+
+		    //  initialize array elements
+		    for(i = 0; i <= x; i++)
+		    {
+		        for(j = 0; j <= y; j++)
+		        {
+		            for(k = 0; k <= z; k++)
+		            {
+		                point3D sPoint3D;
+		                sPoint3D.X = 0;
+		                sPoint3D.Y = 0;
+		                sPoint3D.Z = 0;
+		                asPoints[i][j][k]= sPoint3D;
+		            }
+		        }
+		    }
+
+
+
+	for( unsigned int l = 0; l < vstrGrid.size(); l++){
+		vstrData = vstrGrid.at(l);
+		for(unsigned int m = 0; m <vstrData.size(); m++){
+			std::string strData = vstrData.at(m);
+			for(unsigned int o = 0; o < strData.size(); o++){
+				//std::cout << o << "-" << m << "-" << l << std::endl;
+				abGrid[o][m][l] = strData.at(o) == '1' ? true : false;
 			}
 		}
 	}
@@ -227,18 +268,39 @@ int main(int argc, char *argv[]) {
 	abGrid[0][0][0] = true;
 
 
-    std::set<cube> setCubes = SelectCubes();
-    std::vector<segment> vsSegments = SelectSegments(setCubes);
+   std::set<cube> setCubes = SelectCubes(abGrid);
+   std::vector<segment> vsSegments = SelectSegments(setCubes);
+
+	InitializeGrid(asPoints);
+
+	MakeSTL(vsSegments, strOutputFileName, asPoints);
 
 
 
-	//SortControlPoints();
-	//ExpandGrid();
 
-	InitializeGrid();
 
-	MakeSTL(vsSegments, strOutputFileName);
-	//WriteSTL(strOutputFileName);
+	//  Deallocate 3D array abGrid
+	for(i = 0; i < x; i++)
+	{
+	    for(j = 0; j < y; j++)
+	    {
+	        delete[] abGrid[i][j];
+	    }
+      delete[] abGrid[i];
+    }
+	delete[] abGrid;
+
+
+	//  Deallocate 3D array asPoints
+	for(i = 0; i <= x; i++)
+	{
+	    for(j = 0; j <= y; j++)
+	    {
+	        delete[] asPoints[i][j];
+	    }
+      delete[] asPoints[i];
+    }
+	delete[] asPoints;
 
 
 	//std::cout << "done" << std::endl;
@@ -263,145 +325,29 @@ void StringExplode(std::string str, std::string separator, std::vector<std::stri
 
 
 
-controlPoints GetControlPoints(int i, int j, int k){
-	controlPoints sControlPoints;
-
-	sControlPoints.a1 = asPoints[i][j][k];
-	sControlPoints.a2 = asPoints[i+1][j][k];
-	sControlPoints.a3 = asPoints[i+2][j][k];
-	sControlPoints.a4 = asPoints[i+3][j][k];
-
-	sControlPoints.b1 = asPoints[i][j+1][k];
-	sControlPoints.b2 = asPoints[i+1][j+1][k];
-	sControlPoints.b3 = asPoints[i+2][j+1][k];
-	sControlPoints.b4 = asPoints[i+3][j+1][k];
-
-	sControlPoints.c1 = asPoints[i][j+2][k];
-	sControlPoints.c2 = asPoints[i+1][j+2][k];
-	sControlPoints.c3 = asPoints[i+2][j+2][k];
-	sControlPoints.c4 = asPoints[i+3][j+2][k];
-
-	sControlPoints.d1 = asPoints[i][j+3][k];
-	sControlPoints.d2 = asPoints[i+1][j+3][k];
-	sControlPoints.d3 = asPoints[i+2][j+3][k];
-	sControlPoints.d4 = asPoints[i+3][j+3][k];
 
 
-	return sControlPoints;
-}
+void InitializeGrid(point3D***asPoints){
+	for(int i=0; i <= sGrid.X; i++){
 
-std::string GetSCAD(int i, int j, int k=0){
+		for (int j = 0 ; j <= sGrid.Y ; j++){
 
+			for (int k = 0 ; k <= sGrid.Z; k++){
 
-	controlPoints sControlPoints;
-	sControlPoints = GetControlPoints(i,j,k);
-
-
-	std::stringstream ss;
-
-	ss << "[[" << sControlPoints.a1.X << "," << sControlPoints.a1.Y << "," << sControlPoints.a1.Z << "], ["
-			<< sControlPoints.a2.X <<"," << sControlPoints.a2.Y <<"," << sControlPoints.a2.Z << "], ["
-			<< sControlPoints.a3.X << "," << sControlPoints.a3.Y << "," << sControlPoints.a3.Z << "], ["
-			<< sControlPoints.a4.X << "," << sControlPoints.a4.Y << "," << sControlPoints.a4.Z << "]]";
-
-	std::string gcp1 = ss.str();
-	ss.str("");
-
-	ss << "[[" << sControlPoints.b1.X << "," << sControlPoints.b1.Y << "," << sControlPoints.b1.Z << "], ["
-			<< sControlPoints.b2.X <<"," << sControlPoints.b2.Y <<"," << sControlPoints.b2.Z << "], ["
-			<< sControlPoints.b3.X << "," << sControlPoints.b3.Y << "," << sControlPoints.b3.Z << "], ["
-			<< sControlPoints.b4.X << "," << sControlPoints.b4.Y << "," << sControlPoints.b4.Z << "]]";
-
-	std::string gcp2 = ss.str();
-	ss.str("");
-
-	ss << "[[" << sControlPoints.c1.X << "," << sControlPoints.c1.Y << "," << sControlPoints.c1.Z << "], ["
-			<< sControlPoints.c2.X <<"," << sControlPoints.c2.Y <<"," << sControlPoints.c2.Z << "], ["
-			<< sControlPoints.c3.X << "," << sControlPoints.c3.Y << "," << sControlPoints.c3.Z << "], ["
-			<< sControlPoints.c4.X << "," << sControlPoints.c4.Y << "," << sControlPoints.c4.Z << "]]";
-
-	std::string gcp3 = ss.str();
-	ss.str("");
-
-	ss << "[[" << sControlPoints.d1.X << "," << sControlPoints.d1.Y << "," << sControlPoints.d1.Z << "], ["
-			<< sControlPoints.d2.X <<"," << sControlPoints.d2.Y <<"," << sControlPoints.d2.Z << "], ["
-			<< sControlPoints.d3.X << "," << sControlPoints.d3.Y << "," << sControlPoints.d3.Z << "], ["
-			<< sControlPoints.d4.X << "," << sControlPoints.d4.Y << "," << sControlPoints.d4.Z << "]]";
-
-	std::string gcp4 = ss.str();
-	ss.str("");
-
-
-/*	ss << "DisplayBezSurface([" << gcp1 <<  ", "
-									<< gcp2 <<  ", "
-									<< gcp3 << ", "
-									<< gcp4
-									<< "], steps=5, thickness=10);" << std::endl;
-*/
-/*	ss << "DisplayBezControlFrame([" << gcp1 <<  ", "
-									<< gcp2 <<  ", "
-									<< gcp3 << ", "
-									<< gcp4
-									<< "], $fn=3);" << std::endl;
-*/
-
-
-
-	//std::cout << ss.str() << std::endl;
-	return ss.str();
-}
-
-void SortControlPoints(){
-
-	std::sort(vsPoints.begin(), vsPoints.end(), sortByX);
-
-	for(int i=sGrid.X*3; i >= 0; i--){
-		std::sort(vsPoints.end()-((sGrid.Y*3+1)*(sGrid.Z*3+1)), vsPoints.end(), sortByY);
-		for (int j = sGrid.Y*3 ; j >= 0; j--){
-			std::sort(vsPoints.end()-(sGrid.Z*3+1), vsPoints.end(), sortByZ);
-			for (int k = sGrid.Z*3 ; k >= 0; k--){
-				asPoints[i][j][k] = vsPoints.at(vsPoints.size()-1);
-					vsPoints.pop_back();
-			}
-
-		}
-	}
-
-
-}
-void InitializeGrid(){
-	for(int i=0; i <= sGrid.X*3; i++){
-		for (int j = 0 ; j <= sGrid.Y*3 ; j++){
-			for (int k = 0 ; k <= sGrid.Z*3; k++){
 				point3D sPoint3D;
 				sPoint3D.X = i*1;
 				sPoint3D.Y = j*1;
 				sPoint3D.Z = k*1;
 				asPoints[i][j][k] = sPoint3D;
-				//std::cout << "translate([" << sPoint3D.X << "," << sPoint3D.Y << "," << sPoint3D.Z << "]) sphere(1);" << std::endl;
 			}
-
 		}
 	}
-
-
-	for(int i=0; i < sGrid.X; i++){
-		for (int j = 0 ; j < sGrid.Y ; j++){
-			for (int k = 0 ; k <= sGrid.Z; k++){
-				//std::cout <<  GetSCAD(i*3,j*3,k*3) << std::endl << std::endl;
-
-			}
-
-		}
-	}
-
-
 }
 
 std::string SquareToFacets(point3D a, point3D b, point3D c, point3D d, ORIENTATION orientation ){
 	std::stringstream ss;
-
 	std::string strFacet = "";
+
 	switch (orientation)
 	    {
 	        case XPOS:
@@ -433,8 +379,6 @@ std::string SquareToFacets(point3D a, point3D b, point3D c, point3D d, ORIENTATI
 	            break;
 	    }
 
-
-
 	ss << "facet normal " << strFacet << std::endl;
 	ss << "outer loop" << std::endl;
 	if(orientation == XPOS || orientation == YNEG || orientation == ZPOS){
@@ -469,39 +413,10 @@ std::string SquareToFacets(point3D a, point3D b, point3D c, point3D d, ORIENTATI
 }
 
 
-void ExpandGrid(){
-
-	for(unsigned int i = 0; i < vsPoints.size(); i++){
-		int x = (int) i/16;
-		int y =  i % 16;
-
-		ShiftXY(x, y, vsPoints.at(i).X, vsPoints.at(i).X);
-
-	}
-}
-
-void ShiftXY(int x, int y, double Xvalue, double Yvalue){
-
-	int k=1;
-
-	for(int i = x; i < sGrid.X; i++){
-		//for(int j = 0; j < sGrid.Y; j++){
-			asPoints[i][y][k].X += Xvalue;
-		//}
-
-	}
-
-	for(int j = y; j < sGrid.Y; j++){
-		//for(int i = 0; i < sGrid.X; i++){
-			asPoints[x][j][k].Y += Yvalue;
-		//}
-
-	}
-}
-
-void MakeSTL(std::vector<segment> vsSegments, std::string outputFileName){
+void MakeSTL(std::vector<segment> vsSegments, std::string outputFileName, point3D***asPoints){
 	std::ofstream output(outputFileName.c_str());
 	output << "solid mystl" << std::endl;
+
 
 
     for(unsigned int l = 0; l < vsSegments.size(); l++ ){
@@ -524,7 +439,7 @@ void MakeSTL(std::vector<segment> vsSegments, std::string outputFileName){
 
     	        case YPOS:
     	        	output << SquareToFacets(asPoints[i][j+1][k+1], asPoints[i+1][j+1][k+1], asPoints[i][j+1][k], asPoints[i+1][j+1][k], YPOS);
-    	            break;
+    	        	break;
 
     	        case YNEG:
     	        	output << SquareToFacets(asPoints[i][j][k+1], asPoints[i+1][j][k+1], asPoints[i][j][k], asPoints[i+1][j][k], YNEG);
@@ -555,34 +470,8 @@ void MakeSTL(std::vector<segment> vsSegments, std::string outputFileName){
 
 }
 
-void WriteSTL(std::string outputFileName){
-	std::string strTempSCADfile = "temp.scad";
-	std::ofstream output(strTempSCADfile.c_str());
-	output << "include <bezierSurface.scad>" << std::endl;
 
-
-	for(int k = 0; k < sGrid.Z ; k++ ){
-		for(int j = 0; j < sGrid.Y ; j++ ){
-			for(int i = 0; i < sGrid.X ; i++ ){
-				if(abGrid[i][j][k] == true){
-				output << GetSCAD(i,j,k) << std::endl << std::endl;
-				}
-			}
-
-		}
-	}
-
-	output.close();
-
-
-	std::cout << "Writing stl: " << outputFileName << std::endl;
-	spawnl(P_WAIT, "c:\\Darwin\\RosettaStones\\STL\\openscad.exe", "openscad.exe", "-o", outputFileName.c_str(), "temp.scad" , NULL);
-
-
-}
-
-
-std::set<cube> SelectCubes(){
+std::set<cube> SelectCubes(bool*** abGrid){
 	cube sCube;
 	std::set<cube> setCubes;
 

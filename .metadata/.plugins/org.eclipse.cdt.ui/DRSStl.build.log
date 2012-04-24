@@ -2,4 +2,7 @@
 **** Build of configuration Release for project DRSStl ****
 
 **** Internal Builder is used for build               ****
-Nothing to build for DRSStl
+g++ -O3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 2324  ms.  

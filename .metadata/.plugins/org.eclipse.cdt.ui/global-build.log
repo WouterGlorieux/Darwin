@@ -1,53 +1,1416 @@
 
-**** Build of configuration Release for project DTCStl ****
+**** Build of configuration Release for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -O3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:181:10: let op: variable ‘abGrid’ set but not used [-Wunused-but-set-variable]
+..\src\DRSStl.cpp: In functie ‘void WriteSTL(std::string)’:
+..\src\DRSStl.cpp:585:8: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp: In functie ‘std::set<cube> SelectCubes()’:
+..\src\DRSStl.cpp:621:28: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:628:28: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:635:28: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:642:23: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:649:23: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:656:23: fout: ‘abGrid’ was not declared in this scope
+Build error occurred, build is stopped
+Time consumed: 484  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:181:10: let op: variable ‘abGrid’ set but not used [-Wunused-but-set-variable]
+..\src\DRSStl.cpp: In functie ‘void WriteSTL(std::string)’:
+..\src\DRSStl.cpp:585:8: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp: In functie ‘std::set<cube> SelectCubes()’:
+..\src\DRSStl.cpp:621:28: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:628:28: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:635:28: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:642:23: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:649:23: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:656:23: fout: ‘abGrid’ was not declared in this scope
+Build error occurred, build is stopped
+Time consumed: 515  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1794  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1778  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1748  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1762  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1779  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DRSStl
+
+**** Rebuild of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 2262  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1997  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1950  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:245:35: fout: ‘sGrid’ cannot appear in a constant-expression
+..\src\DRSStl.cpp:245:41: fout: ‘.’ cannot appear in a constant-expression
+..\src\DRSStl.cpp:245:44: fout: ‘sGrid’ cannot appear in a constant-expression
+..\src\DRSStl.cpp:245:50: fout: ‘.’ cannot appear in a constant-expression
+..\src\DRSStl.cpp:247:13: fout: invalid types ‘bool[int]’ for array subscript
+Build error occurred, build is stopped
+Time consumed: 685  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:250:29: fout: ‘y’ cannot appear in a constant-expression
+..\src\DRSStl.cpp:250:32: fout: ‘z’ cannot appear in a constant-expression
+..\src\DRSStl.cpp:252:13: fout: invalid types ‘bool[int]’ for array subscript
+Build error occurred, build is stopped
+Time consumed: 587  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:250:29: fout: ‘y’ cannot appear in a constant-expression
+..\src\DRSStl.cpp:250:32: fout: ‘z’ cannot appear in a constant-expression
+..\src\DRSStl.cpp:252:13: fout: invalid types ‘bool[int]’ for array subscript
+Build error occurred, build is stopped
+Time consumed: 566  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:202:6: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:250:29: fout: ‘y’ cannot appear in a constant-expression
+..\src\DRSStl.cpp:250:32: fout: ‘z’ cannot appear in a constant-expression
+..\src\DRSStl.cpp:252:13: fout: invalid types ‘bool[int]’ for array subscript
+..\src\DRSStl.cpp: In functie ‘void WriteSTL(std::string)’:
+..\src\DRSStl.cpp:592:8: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp: In functie ‘std::set<cube> SelectCubes()’:
+..\src\DRSStl.cpp:628:28: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:635:28: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:642:28: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:649:23: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:656:23: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:663:23: fout: ‘abGrid’ was not declared in this scope
+Build error occurred, build is stopped
+Time consumed: 621  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:250:29: fout: ‘y’ cannot appear in a constant-expression
+..\src\DRSStl.cpp:250:32: fout: ‘z’ cannot appear in a constant-expression
+..\src\DRSStl.cpp:252:13: fout: invalid types ‘bool[int]’ for array subscript
+..\src\DRSStl.cpp: In functie ‘void WriteSTL(std::string)’:
+..\src\DRSStl.cpp:592:8: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp: In functie ‘std::set<cube> SelectCubes()’:
+..\src\DRSStl.cpp:628:28: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:635:28: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:642:28: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:649:23: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:656:23: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:663:23: fout: ‘abGrid’ was not declared in this scope
+Build error occurred, build is stopped
+Time consumed: 581  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:250:7: let op: variable ‘abGrid’ set but not used [-Wunused-but-set-variable]
+..\src\DRSStl.cpp: In functie ‘void WriteSTL(std::string)’:
+..\src\DRSStl.cpp:592:8: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp: In functie ‘std::set<cube> SelectCubes()’:
+..\src\DRSStl.cpp:628:28: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:635:28: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:642:28: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:649:23: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:656:23: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:663:23: fout: ‘abGrid’ was not declared in this scope
+Build error occurred, build is stopped
+Time consumed: 572  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:250:7: let op: variable ‘abGrid’ set but not used [-Wunused-but-set-variable]
+..\src\DRSStl.cpp: In functie ‘void WriteSTL(std::string)’:
+..\src\DRSStl.cpp:603:8: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp: In functie ‘std::set<cube> SelectCubes()’:
+..\src\DRSStl.cpp:639:28: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:646:28: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:653:28: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:660:23: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:667:23: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:674:23: fout: ‘abGrid’ was not declared in this scope
+Build error occurred, build is stopped
+Time consumed: 590  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:250:7: let op: variable ‘abGrid’ set but not used [-Wunused-but-set-variable]
+..\src\DRSStl.cpp: In functie ‘void WriteSTL(std::string)’:
+..\src\DRSStl.cpp:603:8: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp: In functie ‘std::set<cube> SelectCubes()’:
+..\src\DRSStl.cpp:639:28: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:646:28: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:653:28: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:660:23: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:667:23: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:674:23: fout: ‘abGrid’ was not declared in this scope
+Build error occurred, build is stopped
+Time consumed: 591  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:250:7: let op: variable ‘abGrid’ set but not used [-Wunused-but-set-variable]
+..\src\DRSStl.cpp: In functie ‘std::set<cube> SelectCubes()’:
+..\src\DRSStl.cpp:642:28: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:649:28: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:656:28: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:663:23: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:670:23: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:677:23: fout: ‘abGrid’ was not declared in this scope
+Build error occurred, build is stopped
+Time consumed: 513  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:250:7: let op: variable ‘abGrid’ set but not used [-Wunused-but-set-variable]
+..\src\DRSStl.cpp: In functie ‘std::set<cube> SelectCubes()’:
+..\src\DRSStl.cpp:642:28: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:649:28: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:656:28: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:663:23: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:670:23: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:677:23: fout: ‘abGrid’ was not declared in this scope
+Build error occurred, build is stopped
+Time consumed: 567  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp:105:44: fout: declaration of ‘abGrid’ as multidimensional array must have bounds for all dimensions except the first
+..\src\DRSStl.cpp:624:44: fout: declaration of ‘abGrid’ as multidimensional array must have bounds for all dimensions except the first
+..\src\DRSStl.cpp: In functie ‘std::set<cube> SelectCubes(...)’:
+..\src\DRSStl.cpp:642:28: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:649:28: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:656:28: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:663:23: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:670:23: fout: ‘abGrid’ was not declared in this scope
+..\src\DRSStl.cpp:677:23: fout: ‘abGrid’ was not declared in this scope
+Build error occurred, build is stopped
+Time consumed: 599  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:266:43: fout: too few arguments to function ‘std::set<cube> SelectCubes(bool*)’
+..\src\DRSStl.cpp:105:16: note: declared here
+..\src\DRSStl.cpp: In functie ‘std::set<cube> SelectCubes(bool*)’:
+..\src\DRSStl.cpp:642:49: fout: invalid types ‘bool[const int]’ for array subscript
+..\src\DRSStl.cpp:649:49: fout: invalid types ‘bool[int]’ for array subscript
+..\src\DRSStl.cpp:656:47: fout: invalid types ‘bool[const int]’ for array subscript
+..\src\DRSStl.cpp:663:44: fout: invalid types ‘bool[const int]’ for array subscript
+..\src\DRSStl.cpp:670:44: fout: invalid types ‘bool[int]’ for array subscript
+..\src\DRSStl.cpp:677:42: fout: invalid types ‘bool[const int]’ for array subscript
+Build error occurred, build is stopped
+Time consumed: 555  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:254:16: fout: redeclaration of ‘int k’
+..\src\DRSStl.cpp:185:9: fout: ‘int k’ previously declared here
+..\src\DRSStl.cpp:272:10: fout: ‘cout’ was not declared in this scope
+..\src\DRSStl.cpp:272:10: note: suggested alternative:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/iostream:62:18: note:   ‘std::cout’
+..\src\DRSStl.cpp:272:23: fout: ‘endl’ was not declared in this scope
+..\src\DRSStl.cpp:272:23: note: suggested alternative:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:543:5: note:   ‘std::endl’
+..\src\DRSStl.cpp: At global scope:
+..\src\DRSStl.cpp:305:14: fout: ‘x’ was not declared in this scope
+..\src\DRSStl.cpp:305:17: fout: ‘y’ was not declared in this scope
+..\src\DRSStl.cpp:305:20: fout: ‘z’ was not declared in this scope
+..\src\DRSStl.cpp:307:2: fout: expected unqualified-id before ‘for’
+..\src\DRSStl.cpp:307:15: fout: ‘i’ does not name a type
+..\src\DRSStl.cpp:307:23: fout: ‘i’ does not name a type
+..\src\DRSStl.cpp:318:2: fout: ‘abGrid’ does not name a type
+..\src\DRSStl.cpp:321:43: fout: too few arguments to function ‘std::set<cube> SelectCubes(bool*)’
+..\src\DRSStl.cpp:105:16: note: declared here
+..\src\DRSStl.cpp:322:26: fout: redefinition of ‘std::vector<segment> vsSegments’
+..\src\DRSStl.cpp:90:22: fout: ‘std::vector<segment> vsSegments’ previously declared here
+..\src\DRSStl.cpp:329:18: fout: expected constructor, destructor, or type conversion before ‘;’ token
+..\src\DRSStl.cpp:331:9: fout: expected constructor, destructor, or type conversion before ‘(’ token
+..\src\DRSStl.cpp:336:2: fout: expected unqualified-id before ‘return’
+..\src\DRSStl.cpp:337:1: fout: expected declaration before ‘}’ token
+Build error occurred, build is stopped
+Time consumed: 601  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:273:10: fout: ‘cout’ was not declared in this scope
+..\src\DRSStl.cpp:273:10: note: suggested alternative:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/iostream:62:18: note:   ‘std::cout’
+..\src\DRSStl.cpp:273:23: fout: ‘endl’ was not declared in this scope
+..\src\DRSStl.cpp:273:23: note: suggested alternative:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ostream:543:5: note:   ‘std::endl’
+..\src\DRSStl.cpp: At global scope:
+..\src\DRSStl.cpp:306:14: fout: ‘x’ was not declared in this scope
+..\src\DRSStl.cpp:306:17: fout: ‘y’ was not declared in this scope
+..\src\DRSStl.cpp:306:20: fout: ‘z’ was not declared in this scope
+..\src\DRSStl.cpp:308:2: fout: expected unqualified-id before ‘for’
+..\src\DRSStl.cpp:308:15: fout: ‘i’ does not name a type
+..\src\DRSStl.cpp:308:23: fout: ‘i’ does not name a type
+..\src\DRSStl.cpp:319:2: fout: ‘abGrid’ does not name a type
+..\src\DRSStl.cpp:322:43: fout: too few arguments to function ‘std::set<cube> SelectCubes(bool*)’
+..\src\DRSStl.cpp:105:16: note: declared here
+..\src\DRSStl.cpp:323:26: fout: redefinition of ‘std::vector<segment> vsSegments’
+..\src\DRSStl.cpp:90:22: fout: ‘std::vector<segment> vsSegments’ previously declared here
+..\src\DRSStl.cpp:330:18: fout: expected constructor, destructor, or type conversion before ‘;’ token
+..\src\DRSStl.cpp:332:9: fout: expected constructor, destructor, or type conversion before ‘(’ token
+..\src\DRSStl.cpp:337:2: fout: expected unqualified-id before ‘return’
+..\src\DRSStl.cpp:338:1: fout: expected declaration before ‘}’ token
+Build error occurred, build is stopped
+Time consumed: 603  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp:306:14: fout: ‘x’ was not declared in this scope
+..\src\DRSStl.cpp:306:17: fout: ‘y’ was not declared in this scope
+..\src\DRSStl.cpp:306:20: fout: ‘z’ was not declared in this scope
+..\src\DRSStl.cpp:308:2: fout: expected unqualified-id before ‘for’
+..\src\DRSStl.cpp:308:15: fout: ‘i’ does not name a type
+..\src\DRSStl.cpp:308:23: fout: ‘i’ does not name a type
+..\src\DRSStl.cpp:319:2: fout: ‘abGrid’ does not name a type
+..\src\DRSStl.cpp:322:43: fout: too few arguments to function ‘std::set<cube> SelectCubes(bool*)’
+..\src\DRSStl.cpp:105:16: note: declared here
+..\src\DRSStl.cpp:323:26: fout: redefinition of ‘std::vector<segment> vsSegments’
+..\src\DRSStl.cpp:90:22: fout: ‘std::vector<segment> vsSegments’ previously declared here
+..\src\DRSStl.cpp:330:18: fout: expected constructor, destructor, or type conversion before ‘;’ token
+..\src\DRSStl.cpp:332:9: fout: expected constructor, destructor, or type conversion before ‘(’ token
+..\src\DRSStl.cpp:337:2: fout: expected unqualified-id before ‘return’
+..\src\DRSStl.cpp:338:1: fout: expected declaration before ‘}’ token
+Build error occurred, build is stopped
+Time consumed: 592  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp:319:2: fout: ‘abGrid’ does not name a type
+..\src\DRSStl.cpp:322:43: fout: too few arguments to function ‘std::set<cube> SelectCubes(bool*)’
+..\src\DRSStl.cpp:105:16: note: declared here
+..\src\DRSStl.cpp:323:26: fout: redefinition of ‘std::vector<segment> vsSegments’
+..\src\DRSStl.cpp:90:22: fout: ‘std::vector<segment> vsSegments’ previously declared here
+..\src\DRSStl.cpp:330:18: fout: expected constructor, destructor, or type conversion before ‘;’ token
+..\src\DRSStl.cpp:332:9: fout: expected constructor, destructor, or type conversion before ‘(’ token
+..\src\DRSStl.cpp:337:2: fout: expected unqualified-id before ‘return’
+..\src\DRSStl.cpp:338:1: fout: expected declaration before ‘}’ token
+Build error occurred, build is stopped
+Time consumed: 522  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp:319:2: fout: ‘abGrid’ does not name a type
+..\src\DRSStl.cpp:322:43: fout: too few arguments to function ‘std::set<cube> SelectCubes(bool*)’
+..\src\DRSStl.cpp:105:16: note: declared here
+..\src\DRSStl.cpp:323:26: fout: redefinition of ‘std::vector<segment> vsSegments’
+..\src\DRSStl.cpp:90:22: fout: ‘std::vector<segment> vsSegments’ previously declared here
+..\src\DRSStl.cpp:330:18: fout: expected constructor, destructor, or type conversion before ‘;’ token
+..\src\DRSStl.cpp:332:9: fout: expected constructor, destructor, or type conversion before ‘(’ token
+..\src\DRSStl.cpp:337:2: fout: expected unqualified-id before ‘return’
+..\src\DRSStl.cpp:338:1: fout: expected declaration before ‘}’ token
+Build error occurred, build is stopped
+Time consumed: 511  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp:319:2: fout: ‘abGrid’ does not name a type
+..\src\DRSStl.cpp:322:43: fout: too few arguments to function ‘std::set<cube> SelectCubes(bool*)’
+..\src\DRSStl.cpp:105:16: note: declared here
+..\src\DRSStl.cpp:323:26: fout: redefinition of ‘std::vector<segment> vsSegments’
+..\src\DRSStl.cpp:90:22: fout: ‘std::vector<segment> vsSegments’ previously declared here
+..\src\DRSStl.cpp:330:18: fout: expected constructor, destructor, or type conversion before ‘;’ token
+..\src\DRSStl.cpp:332:9: fout: expected constructor, destructor, or type conversion before ‘(’ token
+..\src\DRSStl.cpp:337:2: fout: expected unqualified-id before ‘return’
+..\src\DRSStl.cpp:338:1: fout: expected declaration before ‘}’ token
+Build error occurred, build is stopped
+Time consumed: 511  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp:322:43: fout: too few arguments to function ‘std::set<cube> SelectCubes(bool*)’
+..\src\DRSStl.cpp:105:16: note: declared here
+..\src\DRSStl.cpp:323:26: fout: redefinition of ‘std::vector<segment> vsSegments’
+..\src\DRSStl.cpp:90:22: fout: ‘std::vector<segment> vsSegments’ previously declared here
+..\src\DRSStl.cpp:330:18: fout: expected constructor, destructor, or type conversion before ‘;’ token
+..\src\DRSStl.cpp:332:9: fout: expected constructor, destructor, or type conversion before ‘(’ token
+..\src\DRSStl.cpp:337:2: fout: expected unqualified-id before ‘return’
+..\src\DRSStl.cpp:338:1: fout: expected declaration before ‘}’ token
+Build error occurred, build is stopped
+Time consumed: 502  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:322:43: fout: too few arguments to function ‘std::set<cube> SelectCubes(bool*)’
+..\src\DRSStl.cpp:105:16: note: declared here
+..\src\DRSStl.cpp: In functie ‘std::set<cube> SelectCubes(bool*)’:
+..\src\DRSStl.cpp:698:49: fout: invalid types ‘bool[const int]’ for array subscript
+..\src\DRSStl.cpp:705:49: fout: invalid types ‘bool[int]’ for array subscript
+..\src\DRSStl.cpp:712:47: fout: invalid types ‘bool[const int]’ for array subscript
+..\src\DRSStl.cpp:719:44: fout: invalid types ‘bool[const int]’ for array subscript
+..\src\DRSStl.cpp:726:44: fout: invalid types ‘bool[int]’ for array subscript
+..\src\DRSStl.cpp:733:42: fout: invalid types ‘bool[const int]’ for array subscript
+Build error occurred, build is stopped
+Time consumed: 559  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘std::set<cube> SelectCubes(bool*)’:
+..\src\DRSStl.cpp:698:49: fout: invalid types ‘bool[const int]’ for array subscript
+..\src\DRSStl.cpp:705:49: fout: invalid types ‘bool[int]’ for array subscript
+..\src\DRSStl.cpp:712:47: fout: invalid types ‘bool[const int]’ for array subscript
+..\src\DRSStl.cpp:719:44: fout: invalid types ‘bool[const int]’ for array subscript
+..\src\DRSStl.cpp:726:44: fout: invalid types ‘bool[int]’ for array subscript
+..\src\DRSStl.cpp:733:42: fout: invalid types ‘bool[const int]’ for array subscript
+Build error occurred, build is stopped
+Time consumed: 559  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘std::set<cube> SelectCubes(bool*)’:
+..\src\DRSStl.cpp:698:49: fout: invalid types ‘bool[const int]’ for array subscript
+..\src\DRSStl.cpp:705:49: fout: invalid types ‘bool[int]’ for array subscript
+..\src\DRSStl.cpp:712:47: fout: invalid types ‘bool[const int]’ for array subscript
+..\src\DRSStl.cpp:719:44: fout: invalid types ‘bool[const int]’ for array subscript
+..\src\DRSStl.cpp:726:44: fout: invalid types ‘bool[int]’ for array subscript
+..\src\DRSStl.cpp:733:42: fout: invalid types ‘bool[const int]’ for array subscript
+Build error occurred, build is stopped
+Time consumed: 504  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘std::set<cube> SelectCubes(bool*)’:
+..\src\DRSStl.cpp:690:7: let op: unused variable ‘bCubesAdded’ [-Wunused-variable]
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1684  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘std::set<cube> SelectCubes(bool*)’:
+..\src\DRSStl.cpp:686:7: let op: unused variable ‘bCubesAdded’ [-Wunused-variable]
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1719  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘std::set<cube> SelectCubes(bool*)’:
+..\src\DRSStl.cpp:686:7: let op: unused variable ‘bCubesAdded’ [-Wunused-variable]
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1662  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1703  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1683  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1732  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1738  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1806  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1801  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1799  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:279:31: let op: comparison between signed and unsigned integer expressions [-Wsign-compare]
+..\src\DRSStl.cpp:280:38: let op: comparison between signed and unsigned integer expressions [-Wsign-compare]
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1919  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1903  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:282:53: let op: comparison with string literal results in unspecified behaviour [-Waddress]
+..\src\DRSStl.cpp:282:53: fout: ISO C++ forbids comparison between pointer and integer [-fpermissive]
+..\src\DRSStl.cpp:328:94: fout: a function-definition is not allowed here before ‘{’ token
+..\src\DRSStl.cpp:816:1: fout: expected ‘}’ at end of input
+Build error occurred, build is stopped
+Time consumed: 546  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:282:53: let op: comparison with string literal results in unspecified behaviour [-Waddress]
+..\src\DRSStl.cpp:282:53: fout: ISO C++ forbids comparison between pointer and integer [-fpermissive]
+Build error occurred, build is stopped
+Time consumed: 577  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:282:68: fout: no match for ‘operator==’ in ‘(&(& vstrGrid.std::vector<_Tp, _Alloc>::at [with _Tp = std::vector<std::basic_string<char> >, _Alloc = std::allocator<std::vector<std::basic_string<char> > >, std::vector<_Tp, _Alloc>::reference = std::vector<std::basic_string<char> >&, std::vector<_Tp, _Alloc>::size_type = unsigned int](l))->std::vector<_Tp, _Alloc>::at [with _Tp = std::basic_string<char>, _Alloc = std::allocator<std::basic_string<char> >, std::vector<_Tp, _Alloc>::reference = std::basic_string<char>&, std::vector<_Tp, _Alloc>::size_type = unsigned int](m))->std::basic_string<_CharT, _Traits, _Alloc>::at [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>, std::basic_string<_CharT, _Traits, _Alloc>::reference = char&, std::basic_string<_CharT, _Traits, _Alloc>::size_type = unsigned int](o) == std::basic_string<char>(((const char*)"1"), (*(const std::allocator<char>*)(& std::allocator<char>())))’
+..\src\DRSStl.cpp:282:68: note: candidates are:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_multiset.h:679:5: note: template<class _Key, class _Compare, class _Alloc> bool std::operator==(const std::multiset<_Key, _Compare, _Alloc>&, const std::multiset<_Key, _Compare, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_set.h:696:5: note: template<class _Key, class _Compare, class _Alloc> bool std::operator==(const std::set<_Key, _Compare, _Alloc>&, const std::set<_Key, _Compare, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_tree.h:846:5: note: template<class _Key, class _Val, class _KeyOfValue, class _Compare, class _Alloc> bool std::operator==(const std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>&, const std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_tree.h:309:5: note: template<class _Val> bool std::operator==(const std::_Rb_tree_iterator<_Tp>&, const std::_Rb_tree_const_iterator<_Val>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_vector.h:1273:5: note: template<class _Tp, class _Alloc> bool std::operator==(const std::vector<_Tp, _Alloc>&, const std::vector<_Tp, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/streambuf_iterator.h:194:5: note: template<class _CharT, class _Traits> bool std::operator==(const std::istreambuf_iterator<_CharT, _Traits>&, const std::istreambuf_iterator<_CharT, _Traits>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2460:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2448:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const _CharT*, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2434:5: note: template<class _CharT> typename __gnu_cxx::__enable_if<std::__is_char<_Tp>::__value, bool>::__type std::operator==(const std::basic_string<_CharT>&, const std::basic_string<_CharT>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2427:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const std::basic_string<_CharT, _Traits, _Alloc>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/allocator.h:127:5: note: template<class _Tp> bool std::operator==(const std::allocator<_Tp1>&, const std::allocator<_Tp1>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/allocator.h:122:5: note: template<class _T1, class _T2> bool std::operator==(const std::allocator<_T1>&, const std::allocator<_T2>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:335:5: note: template<class _IteratorL, class _IteratorR> bool std::operator==(const std::reverse_iterator<_IteratorL>&, const std::reverse_iterator<_IteratorR>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:285:5: note: template<class _Iterator> bool std::operator==(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_pair.h:201:5: note: template<class _T1, class _T2> bool std::operator==(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/postypes.h:218:5: note: template<class _StateT> bool std::operator==(const std::fpos<_StateT>&, const std::fpos<_StateT>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ext/new_allocator.h:123:5: note: template<class _Tp> bool __gnu_cxx::operator==(const __gnu_cxx::new_allocator<_Tp>&, const __gnu_cxx::new_allocator<_Tp>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:805:5: note: template<class _Iterator, class _Container> bool __gnu_cxx::operator==(const __gnu_cxx::__normal_iterator<_Iterator, _Container>&, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:799:5: note: template<class _IteratorL, class _IteratorR, class _Container> bool __gnu_cxx::operator==(const __gnu_cxx::__normal_iterator<_IteratorL, _Container>&, const __gnu_cxx::__normal_iterator<_IteratorR, _Container>&)
+Build error occurred, build is stopped
+Time consumed: 1342  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1810  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+c:/mingw/bin/../lib/gcc/mingw32/4.6.2/../../../../mingw32/bin/ld.exe: cannot open output file DRSStl.exe: Permission denied
+collect2: ld gaf exit-status 1 terug
+Build error occurred, build is stopped
+Time consumed: 1748  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -o DRSStl.exe src\DRSStl.o
+c:/mingw/bin/../lib/gcc/mingw32/4.6.2/../../../../mingw32/bin/ld.exe: cannot open output file DRSStl.exe: Permission denied
+collect2: ld gaf exit-status 1 terug
+Build error occurred, build is stopped
+Time consumed: 405  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 281  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:284:55: fout: no match for ‘operator==’ in ‘strData.std::basic_string<_CharT, _Traits, _Alloc>::at [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>, std::basic_string<_CharT, _Traits, _Alloc>::reference = char&, std::basic_string<_CharT, _Traits, _Alloc>::size_type = unsigned int](o) == std::basic_string<char>(((const char*)"1"), (*(const std::allocator<char>*)(& std::allocator<char>())))’
+..\src\DRSStl.cpp:284:55: note: candidates are:
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_multiset.h:679:5: note: template<class _Key, class _Compare, class _Alloc> bool std::operator==(const std::multiset<_Key, _Compare, _Alloc>&, const std::multiset<_Key, _Compare, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_set.h:696:5: note: template<class _Key, class _Compare, class _Alloc> bool std::operator==(const std::set<_Key, _Compare, _Alloc>&, const std::set<_Key, _Compare, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_tree.h:846:5: note: template<class _Key, class _Val, class _KeyOfValue, class _Compare, class _Alloc> bool std::operator==(const std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>&, const std::_Rb_tree<_Key, _Val, _KeyOfValue, _Compare, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_tree.h:309:5: note: template<class _Val> bool std::operator==(const std::_Rb_tree_iterator<_Tp>&, const std::_Rb_tree_const_iterator<_Val>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_vector.h:1273:5: note: template<class _Tp, class _Alloc> bool std::operator==(const std::vector<_Tp, _Alloc>&, const std::vector<_Tp, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/streambuf_iterator.h:194:5: note: template<class _CharT, class _Traits> bool std::operator==(const std::istreambuf_iterator<_CharT, _Traits>&, const std::istreambuf_iterator<_CharT, _Traits>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2460:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const std::basic_string<_CharT, _Traits, _Alloc>&, const _CharT*)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2448:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const _CharT*, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2434:5: note: template<class _CharT> typename __gnu_cxx::__enable_if<std::__is_char<_Tp>::__value, bool>::__type std::operator==(const std::basic_string<_CharT>&, const std::basic_string<_CharT>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/basic_string.h:2427:5: note: template<class _CharT, class _Traits, class _Alloc> bool std::operator==(const std::basic_string<_CharT, _Traits, _Alloc>&, const std::basic_string<_CharT, _Traits, _Alloc>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/allocator.h:127:5: note: template<class _Tp> bool std::operator==(const std::allocator<_Tp1>&, const std::allocator<_Tp1>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/allocator.h:122:5: note: template<class _T1, class _T2> bool std::operator==(const std::allocator<_T1>&, const std::allocator<_T2>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:335:5: note: template<class _IteratorL, class _IteratorR> bool std::operator==(const std::reverse_iterator<_IteratorL>&, const std::reverse_iterator<_IteratorR>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:285:5: note: template<class _Iterator> bool std::operator==(const std::reverse_iterator<_Iterator>&, const std::reverse_iterator<_Iterator>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_pair.h:201:5: note: template<class _T1, class _T2> bool std::operator==(const std::pair<_T1, _T2>&, const std::pair<_T1, _T2>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/postypes.h:218:5: note: template<class _StateT> bool std::operator==(const std::fpos<_StateT>&, const std::fpos<_StateT>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/ext/new_allocator.h:123:5: note: template<class _Tp> bool __gnu_cxx::operator==(const __gnu_cxx::new_allocator<_Tp>&, const __gnu_cxx::new_allocator<_Tp>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:805:5: note: template<class _Iterator, class _Container> bool __gnu_cxx::operator==(const __gnu_cxx::__normal_iterator<_Iterator, _Container>&, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)
+c:\mingw\bin\../lib/gcc/mingw32/4.6.2/include/c++/bits/stl_iterator.h:799:5: note: template<class _IteratorL, class _IteratorR, class _Container> bool __gnu_cxx::operator==(const __gnu_cxx::__normal_iterator<_IteratorL, _Container>&, const __gnu_cxx::__normal_iterator<_IteratorR, _Container>&)
+Build error occurred, build is stopped
+Time consumed: 1576  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+c:/mingw/bin/../lib/gcc/mingw32/4.6.2/../../../../mingw32/bin/ld.exe: cannot open output file DRSStl.exe: Permission denied
+collect2: ld gaf exit-status 1 terug
+Build error occurred, build is stopped
+Time consumed: 1857  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 296  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DRSStl
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1872  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1794  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1841  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1857  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1794  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1794  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1857  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1888  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1981  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1778  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1794  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DRSStl
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1841  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DRSStl
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1809  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1825  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1794  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1825  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DRSStl
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1841  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1856  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1809  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DRSStl
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1810  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1731  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1747  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1747  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1810  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1794  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1809  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1794  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘int main(int, char**)’:
+..\src\DRSStl.cpp:187:9: fout: ‘mode2D’ was not declared in this scope
+Build error occurred, build is stopped
+Time consumed: 562  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1732  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1748  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1731  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1810  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘void InitializeGrid()’:
+..\src\DRSStl.cpp:318:5: fout: ‘asPoints’ was not declared in this scope
+..\src\DRSStl.cpp: In functie ‘void MakeSTL(std::vector<segment>, std::string)’:
+..\src\DRSStl.cpp:411:40: fout: ‘asPoints’ was not declared in this scope
+Build error occurred, build is stopped
+Time consumed: 593  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+..\src\DRSStl.cpp: In functie ‘void MakeSTL(std::vector<segment>, std::string)’:
+..\src\DRSStl.cpp:411:40: fout: ‘asPoints’ was not declared in this scope
+Build error occurred, build is stopped
+Time consumed: 577  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1716  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DRSStl
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1747  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1685  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1700  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1762  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1731  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1763  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1701  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1669  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1763  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1684  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1794  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1685  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1731  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1747  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1794  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1841  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1763  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1778  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1778  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1700  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1762  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1700  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1748  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1763  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1747  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1763  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1778  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1778  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1747  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1778  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1763  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1732  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DRSStl
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DRSStl
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1763  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1794  ms.  
+
+**** Build of configuration Debug for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 1809  ms.  
+
+**** Rebuild of configuration Release for project DRSDarwin ****
+
+**** Internal Builder is used for build               ****
+g++ -O3 -Wall -c -fmessage-length=0 -o src\DRSDarwin.o ..\src\DRSDarwin.cpp
+g++ -o DRSDarwin.exe src\DRSDarwin.o
+Build complete for project DRSDarwin
+Time consumed: 2481  ms.  
+
+**** Rebuild of configuration Debug for project DRSDxf ****
+
+**** Internal Builder is used for build               ****
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\dl_writer_ascii.o ..\src\dl_writer_ascii.cpp
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\DRSDxf.o ..\src\DRSDxf.cpp
+g++ -IC:\MinGW\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include-fixed -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\mingw32 -O0 -g3 -Wall -c -fmessage-length=0 -o src\dl_dxf.o ..\src\dl_dxf.cpp
+g++ -o DRSDxf.exe src\dl_writer_ascii.o src\dl_dxf.o src\DRSDxf.o
+Build complete for project DRSDxf
+Time consumed: 3448  ms.  
+
+**** Build of configuration Release for project DRSStl ****
+
+**** Internal Builder is used for build               ****
+g++ -O3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 2324  ms.  
+
+**** Rebuild of configuration Release for project DRSTokamak ****
+
+**** Internal Builder is used for build               ****
+g++ -O3 -Wall -c -fmessage-length=0 -o src\DRSTokamak.o ..\src\DRSTokamak.cpp
+g++ -o DRSTokamak.exe src\DRSTokamak.o
+Build complete for project DRSTokamak
+Time consumed: 1248  ms.  
+
+**** Rebuild of configuration Release for project DTCRandomFitness ****
+
+**** Internal Builder is used for build               ****
+g++ -O3 -Wall -c -fmessage-length=0 -o src\DTCRandomFitness.o ..\src\DTCRandomFitness.cpp
+g++ -o DTCRandomFitness.exe src\DTCRandomFitness.o
+Build complete for project DTCRandomFitness
+Time consumed: 453  ms.  
+
+**** Rebuild of configuration Release for project DTCStl ****
 
 **** Internal Builder is used for build               ****
 g++ -O3 -Wall -c -fmessage-length=0 -o src\DTCStl.o ..\src\DTCStl.cpp
 g++ -o DTCStl.exe src\DTCStl.o
 Build complete for project DTCStl
-Time consumed: 858  ms.  
+Time consumed: 998  ms.  
 
-**** Build of configuration Release for project DRSDarwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for DRSDarwin
-
-**** Build of configuration Debug for project DRSDxf ****
+**** Rebuild of configuration Release for project Darwin ****
 
 **** Internal Builder is used for build               ****
-Nothing to build for DRSDxf
+g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
+g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Vertices.o ..\src\Vertices.cpp
+g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
+g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
+g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Edges.o ..\src\Edges.cpp
+g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Aperture.o ..\src\Aperture.cpp
+g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
+g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Population.o ..\src\Population.cpp
+g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
+g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
+g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
+Build complete for project Darwin
+Time consumed: 14524  ms.  
 
-**** Build of configuration Release for project DRSStl ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for DRSStl
-
-**** Build of configuration Release for project DRSTokamak ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for DRSTokamak
-
-**** Build of configuration Release for project DTCRandomFitness ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for DTCRandomFitness
-
-**** Build of configuration Release for project DTCStl ****
+**** Rebuild of configuration Release for project SteadyStateTokamak ****
 
 **** Internal Builder is used for build               ****
-Nothing to build for DTCStl
+g++ -O3 -Wall -c -fmessage-length=0 -o src\SteadyStateTokamak.o ..\src\SteadyStateTokamak.cpp
+g++ -o SteadyStateTokamak.exe src\SteadyStateTokamak.o
+Build complete for project SteadyStateTokamak
+Time consumed: 1060  ms.  
 
-**** Build of configuration Release for project Darwin ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Darwin
-
-**** Build of configuration Release for project SteadyStateTokamak ****
+**** Rebuild of configuration Release for project Tokamak ****
 
 **** Internal Builder is used for build               ****
-Nothing to build for SteadyStateTokamak
-
-**** Build of configuration Release for project Tokamak ****
-
-**** Internal Builder is used for build               ****
-Nothing to build for Tokamak
+g++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++ -IC:\MinGW\lib\gcc\mingw32\4.6.2\include\c++\backward -IC:\MinGW\lib\gcc\mingw32\4.6.2\include -IC:\MinGW\include -O3 -Wall -c -fmessage-length=0 -o src\Tokamak.o ..\src\Tokamak.cpp
+g++ -o Tokamak.exe src\Tokamak.o
+Build complete for project Tokamak
+Time consumed: 1373  ms.  

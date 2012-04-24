@@ -60,7 +60,8 @@ enum volumeMode
 {
 	NOVOLUME = 0,
 	MINVOLUME = 1,
-	MAXVOLUME = 2
+	MAXVOLUME = 2,
+	VOLUME = 3
 };
 
 enum centerMassMode
@@ -76,6 +77,8 @@ int main(int argc, char *argv[]) {
 	std::string strFileName = "";
 
 	volumeMode nVolumeMode = NOVOLUME;
+	double dTargetVolume = 0;
+
 	centerMassMode nCenterMassMode = NOCENTERMASS;
 
 	point3D sTargetCenter;
@@ -101,6 +104,10 @@ int main(int argc, char *argv[]) {
 			else if(arg == std::string("-maxvolume")){
 				nVolumeMode = MAXVOLUME;
 			}
+			else if(arg.substr(0,8) ==  std::string("-volume:")){
+				dTargetVolume = atof(arg.substr(8, arg.size()).c_str());
+				nVolumeMode = VOLUME;
+			}
 			else if(arg.substr(0,9) ==  std::string("-Xcenter:")){
 				sTargetCenter.x = atof(arg.substr(9, arg.size()).c_str());
 				nCenterMassMode = MINCENTERMASS;
@@ -120,7 +127,7 @@ int main(int argc, char *argv[]) {
 	}
 
 	else{
-		std::cout << "Usage: DTCStl.exe inputFilename  [-verbose] [-minvolume , -maxvolume] [-Xcenter:x] [-Ycenter:y] [-Zcenter:Z] [-maxcentermass] " << std::endl;
+		std::cout << "Usage: DTCStl.exe inputFilename  [-verbose] [-minvolume , -maxvolume, -volume:volume] [-Xcenter:x] [-Ycenter:y] [-Zcenter:Z] [-maxcentermass] " << std::endl;
 		exit(0);
 	}
 
@@ -251,6 +258,7 @@ int main(int argc, char *argv[]) {
     }
 
     double volumeScore = 0;
+    double dDeltaVolume = 0;
 
     switch (nVolumeMode)
     {
@@ -263,6 +271,14 @@ int main(int argc, char *argv[]) {
             break;
         case 2:
         	volumeScore = totalVolume;
+            break;
+        case 3:
+        	dDeltaVolume = (totalVolume - dTargetVolume) >=0 ? (totalVolume - dTargetVolume) : (totalVolume - dTargetVolume)*-1;
+        	//std::cout << dDeltaVolume  << " "<<  totalVolume << " " << dTargetVolume << std::endl;
+        	if(dDeltaVolume <= 0.1){
+        		dDeltaVolume = 0.1;
+        	}
+        	volumeScore = (1/dDeltaVolume)*10000;
             break;
 
         default:
