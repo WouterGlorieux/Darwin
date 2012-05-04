@@ -7,7 +7,7 @@
 <intAttribute key="org.eclipse.cdt.launch.ATTR_BUILD_BEFORE_LAUNCH_ATTR" value="2"/>
 <stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_ID" value="org.eclipse.cdt.debug.mi.core.MinGW"/>
 <stringAttribute key="org.eclipse.cdt.launch.DEBUGGER_START_MODE" value="run"/>
-<stringAttribute key="org.eclipse.cdt.launch.PROGRAM_ARGUMENTS" value="&quot;C:\\Darwin\\Candidates\\0.stl&quot; -volume:40.01 -Xcenter:4 -Ycenter:4 -Zcenter:4 -verbose"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROGRAM_ARGUMENTS" value="&quot;C:\\Darwin\\Candidates\\0.stl&quot; -Xcenter:40 -Ycenter:60 -Zcenter:2 -Xsize:8 -Ysize:8 -Zsize:4 -verbose"/>
 <stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="Debug/DTCStl.exe"/>
 <stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="DTCStl"/>
 <stringAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_ID_ATTR" value="cdt.managedbuild.config.gnu.mingw.exe.debug.274489850"/>

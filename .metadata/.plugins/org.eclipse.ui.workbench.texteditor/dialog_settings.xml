@@ -13,16 +13,16 @@
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="abGrid" key="selection"/>
+		<item value="std::cout" key="selection"/>
 		<list key="findhistory">
+			<item value="std::cout"/>
+			<item value="test2"/>
 			<item value="array3D"/>
 			<item value="15"/>
 			<item value="16"/>
 			<item value="pchRandomData"/>
-			<item value="std::cout"/>
 			<item value="temperature"/>
 			<item value="test"/>
-			<item value="oTemperature_"/>
 		</list>
 		<list key="replacehistory">
 			<item value="abGrid"/>

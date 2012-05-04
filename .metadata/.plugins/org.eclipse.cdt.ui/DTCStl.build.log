@@ -1,8 +1,5 @@
 
-**** Rebuild of configuration Release for project DTCStl ****
+**** Build of configuration Release for project DTCStl ****
 
 **** Internal Builder is used for build               ****
-g++ -O3 -Wall -c -fmessage-length=0 -o src\DTCStl.o ..\src\DTCStl.cpp
-g++ -o DTCStl.exe src\DTCStl.o
-Build complete for project DTCStl
-Time consumed: 998  ms.  
+Nothing to build for DTCStl

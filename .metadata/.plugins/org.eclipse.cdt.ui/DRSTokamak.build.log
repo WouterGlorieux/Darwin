@@ -1,8 +1,5 @@
 
-**** Rebuild of configuration Release for project DRSTokamak ****
+**** Build of configuration Release for project DRSTokamak ****
 
 **** Internal Builder is used for build               ****
-g++ -O3 -Wall -c -fmessage-length=0 -o src\DRSTokamak.o ..\src\DRSTokamak.cpp
-g++ -o DRSTokamak.exe src\DRSTokamak.o
-Build complete for project DRSTokamak
-Time consumed: 1248  ms.  
+Nothing to build for DRSTokamak

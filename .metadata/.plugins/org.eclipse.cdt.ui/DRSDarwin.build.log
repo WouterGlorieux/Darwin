@@ -1,8 +1,5 @@
 
-**** Rebuild of configuration Release for project DRSDarwin ****
+**** Build of configuration Release for project DRSDarwin ****
 
 **** Internal Builder is used for build               ****
-g++ -O3 -Wall -c -fmessage-length=0 -o src\DRSDarwin.o ..\src\DRSDarwin.cpp
-g++ -o DRSDarwin.exe src\DRSDarwin.o
-Build complete for project DRSDarwin
-Time consumed: 2481  ms.  
+Nothing to build for DRSDarwin

@@ -72,6 +72,21 @@ enum centerMassMode
 
 };
 
+enum sizeMode
+{
+	NOSIZE = 0,
+	MINSIZE = 1,
+	MAXSIZE = 2
+
+};
+
+double xMax, xMin, yMax, yMin, zMax, zMin;
+
+void CheckSize(data data);
+
+
+
+
 int main(int argc, char *argv[]) {
 
 	std::string strFileName = "";
@@ -80,12 +95,16 @@ int main(int argc, char *argv[]) {
 	double dTargetVolume = 0;
 
 	centerMassMode nCenterMassMode = NOCENTERMASS;
-
 	point3D sTargetCenter;
 	sTargetCenter.x = 0;
 	sTargetCenter.y = 0;
 	sTargetCenter.z = 0;
 
+	sizeMode nSizeMode = NOSIZE;
+	point3D sTargetSize;
+	sTargetSize.x = 0;
+	sTargetSize.y = 0;
+	sTargetSize.z = 0;
 
 	bool bVerbose = false;
 	if(argc >= 2){
@@ -123,6 +142,21 @@ int main(int argc, char *argv[]) {
 			else if(arg ==  std::string("-maxcentermass")){
 				nCenterMassMode = MAXCENTERMASS;
 			}
+			else if(arg.substr(0,7) ==  std::string("-Xsize:")){
+				sTargetSize.x = atof(arg.substr(7, arg.size()).c_str());
+				nSizeMode = MINSIZE;
+			}
+			else if(arg.substr(0,7) ==  std::string("-Ysize:")){
+				sTargetSize.y = atof(arg.substr(7, arg.size()).c_str());
+				nSizeMode = MINSIZE;
+			}
+			else if(arg.substr(0,7) ==  std::string("-Zsize:")){
+				sTargetSize.z = atof(arg.substr(7, arg.size()).c_str());
+				nSizeMode = MINSIZE;
+			}
+			else if(arg ==  std::string("-maxsize")){
+				nSizeMode = MAXSIZE;
+			}
 		}
 	}
 
@@ -138,6 +172,11 @@ int main(int argc, char *argv[]) {
 		std::cout << " Z: "<< sTargetCenter.z << std::endl;
 	}
 
+	if(bVerbose && nSizeMode){
+		std::cout << "Target size X: " << sTargetSize.x;
+		std::cout << " Y: "<< sTargetSize.y;
+		std::cout << " Z: "<< sTargetSize.z << std::endl;
+	}
 
     // ifstream is used for reading files
     // We'll read from a file called Sample.dat
@@ -166,21 +205,21 @@ int main(int argc, char *argv[]) {
         	if(vstrData.at(0) == std::string("vertex")){
         		data cData;
         		cData.x1 = atof(vstrData.at(1).c_str());
-        		cData.x2 = atof(vstrData.at(2).c_str());
-        		cData.x3 = atof(vstrData.at(3).c_str());
+        		cData.y1 = atof(vstrData.at(2).c_str());
+        		cData.z1 = atof(vstrData.at(3).c_str());
         		vstrData.clear();
 
         		std::getline(inf, strInput);
         		StringExplode(strInput, " ", &vstrData);
-        		cData.y1 = atof(vstrData.at(1).c_str());
+        		cData.x2 = atof(vstrData.at(1).c_str());
         		cData.y2 = atof(vstrData.at(2).c_str());
-        		cData.y3 = atof(vstrData.at(3).c_str());
+        		cData.z2 = atof(vstrData.at(3).c_str());
         		vstrData.clear();
 
         		std::getline(inf, strInput);
         		StringExplode(strInput, " ", &vstrData);
-        		cData.z1 = atof(vstrData.at(1).c_str());
-        		cData.z2 = atof(vstrData.at(2).c_str());
+        		cData.x3 = atof(vstrData.at(1).c_str());
+        		cData.y3 = atof(vstrData.at(2).c_str());
         		cData.z3 = atof(vstrData.at(3).c_str());
         		vstrData.clear();
 
@@ -197,15 +236,28 @@ int main(int argc, char *argv[]) {
     int numTriangles = vcData.size(); // pull in the STL file and determine number of triangles
     data* triangles = new data[numTriangles];
 
+    //make sure xMin , xMax, .... are initialized
+    if(vcData.size()>= 1){
+    	data cData = vcData.at(0);
+    	xMin = cData.x1;
+    	xMax = cData.x1;
+    	yMin = cData.y1;
+    	yMax = cData.y1;
+    	zMin = cData.z1;
+    	zMax = cData.z2;
+    }
 
     // fill the triangles array with the data in the STL file
     for(unsigned int i=0; i < vcData.size(); i++){
     	triangles[i] = vcData.at(i);
+    	CheckSize(vcData.at(i));
     }
 
 
     double totalVolume = 0, currentVolume;
     double xCenter = 0, yCenter = 0, zCenter = 0;
+
+
 
     for (int i = 0; i < numTriangles; i++)
     {
@@ -213,6 +265,8 @@ int main(int argc, char *argv[]) {
         xCenter += ((triangles[i].x1 + triangles[i].x2 + triangles[i].x3) / 4) * currentVolume;
         yCenter += ((triangles[i].y1 + triangles[i].y2 + triangles[i].y3) / 4) * currentVolume;
         zCenter += ((triangles[i].z1 + triangles[i].z2 + triangles[i].z3) / 4) * currentVolume;
+
+
     }
 
     if(bVerbose){
@@ -220,6 +274,10 @@ int main(int argc, char *argv[]) {
     	std::cout << "X center = " << xCenter/totalVolume << std::endl;
     	std::cout << "Y center = " << yCenter/totalVolume << std::endl;
     	std::cout << "Z center = " << zCenter/totalVolume << std::endl;
+    	std::cout << "Size: " << std::endl;
+    	std::cout << "X size = "  << xMax-xMin << std::endl;
+    	std::cout << "Y size = "  << yMax-yMin << std::endl;
+    	std::cout << "Z size = "  << zMax-zMin << std::endl;
     }
 
 
@@ -234,7 +292,7 @@ int main(int argc, char *argv[]) {
     delete[] triangles;
 
 
-    int nScore = 0;
+    double nScore = 0;
 
     double centerMassScore = 0;
 
@@ -245,7 +303,7 @@ int main(int argc, char *argv[]) {
     		centerMassScore = 0;
     		break;
         case 1:
-        	centerMassScore = (1/Distance(sTargetCenter, sCenterMass))*10000;
+        	centerMassScore = -Distance(sTargetCenter, sCenterMass);
             break;
         case 2:
         	centerMassScore = Distance(sTargetCenter, sCenterMass);
@@ -267,7 +325,7 @@ int main(int argc, char *argv[]) {
     		volumeScore = 0;
     		break;
         case 1:
-        	volumeScore = (1/totalVolume)*10000;
+        	volumeScore = -totalVolume;
             break;
         case 2:
         	volumeScore = totalVolume;
@@ -287,16 +345,106 @@ int main(int argc, char *argv[]) {
             break;
     }
 
+    double sizeScore = 0;
+    point3D sSize;
+    sSize.x = xMax-xMin;
+    sSize.y = yMax-yMin;
+    sSize.z = zMax-zMin;
 
-    nScore = (int) (centerMassScore + volumeScore);
+
+    switch (nSizeMode)
+    {
+
+    	case 0:
+    		sizeScore = 0;
+    		break;
+        case 1:
+        	sizeScore = -Distance(sTargetSize, sSize);
+            break;
+        case 2:
+        	sizeScore = Distance(sTargetSize, sSize);
+            break;
+
+        default:
+            std::cout << "Unknown size mode";
+            sizeScore = 0;
+            break;
+    }
+
+
+
+    nScore = (centerMassScore + volumeScore + sizeScore)*1000;
 
     if(bVerbose){
     	std::cout << std::endl;
     	std::cout << "center mass score: " << centerMassScore << std::endl;
-    	std::cout << "volume score : " << volumeScore << std::endl;
+    	std::cout << "volume score: " << volumeScore << std::endl;
+    	std::cout << "size score: " << sizeScore << std::endl;
     	std::cout << "\n\tTOTAL SCORE: " << nScore << std::endl;
     }
 
 
-	return nScore;
+	return (int) nScore;
+}
+
+void CheckSize(data data){
+	if(data.x1 < xMin){
+		xMin = data.x1;
+	}
+	if(data.x2 < xMin){
+		xMin = data.x2;
+	}
+	if(data.x3 < xMin){
+		xMin = data.x3;
+	}
+
+	if(data.y1 < yMin){
+		yMin = data.y1;
+	}
+	if(data.y2 < yMin){
+		yMin = data.y2;
+	}
+	if(data.y3 < yMin){
+		yMin = data.y3;
+	}
+
+	if(data.z1 < zMin){
+		zMin = data.z1;
+	}
+	if(data.z2 < zMin){
+		zMin = data.z2;
+	}
+	if(data.z3 < zMin){
+		zMin = data.z3;
+	}
+
+	if(data.x1 > xMax){
+		xMax = data.x1;
+	}
+	if(data.x2 > xMax){
+		xMax = data.x2;
+	}
+	if(data.x3 > xMax){
+		xMax = data.x3;
+	}
+
+	if(data.y1 > yMax){
+		yMax = data.y1;
+	}
+	if(data.y2 > yMax){
+		yMax = data.y2;
+	}
+	if(data.y3 > yMax){
+		yMax = data.y3;
+	}
+
+	if(data.z1 > zMax){
+		zMax = data.z1;
+	}
+	if(data.z2 > zMax){
+		zMax = data.z2;
+	}
+	if(data.z3 > zMax){
+		zMax = data.z3;
+	}
 }
