@@ -171,6 +171,7 @@ int main(int argc, char *argv[]) {
     std::vector<std::string> vstrData;
     std::vector< std::vector<std::string> > vstrGrid;
 
+    int maxCubes = 0;
 
     int k = 0;
 	for (rapidxml::xml_node<>* chromosomeNode = rootNode->first_node("Chromosome"); chromosomeNode; chromosomeNode = chromosomeNode->next_sibling("Chromosome"))
@@ -205,6 +206,9 @@ int main(int argc, char *argv[]) {
 			vstrGrid.push_back(vstrData);
 			vstrData.clear();
 
+		}
+		else if(chromosomeNode->first_attribute("id")->value() == std::string("maxcubes")){
+			maxCubes = atoi(chromosomeNode->first_node()->value());
 		}
 		else{
 			for (rapidxml::xml_node<>* geneNode = chromosomeNode->first_node("Gene"); geneNode; geneNode = geneNode->next_sibling("Gene"))
@@ -396,7 +400,7 @@ int main(int argc, char *argv[]) {
 	seed.j = (int) sGrid.Y/2;
 	seed.k = (int) sGrid.Z/2;
 
-   std::list<cube> listCubes = SelectCubes(abGrid, seed, 100);
+   std::list<cube> listCubes = SelectCubes(abGrid, seed, maxCubes);
    std::vector<segment> vsSegments = SelectSegments(listCubes);
 
 	InitializeGrid(asPoints);

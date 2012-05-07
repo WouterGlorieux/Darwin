@@ -2,16 +2,4 @@
 **** Build of configuration Release for project Darwin ****
 
 **** Internal Builder is used for build               ****
-g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
-g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
-g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
-g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Vertices.o ..\src\Vertices.cpp
-g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
-g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Population.o ..\src\Population.cpp
-g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Aperture.o ..\src\Aperture.cpp
-g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Edges.o ..\src\Edges.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 13687  ms.  
+Nothing to build for Darwin

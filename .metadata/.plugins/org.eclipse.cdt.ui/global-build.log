@@ -1,16 +1,121 @@
 
-**** Build of configuration Release for project DTCStl ****
+**** Build of configuration Release for project DRSStl ****
 
 **** Internal Builder is used for build               ****
-g++ -O3 -Wall -c -fmessage-length=0 -o src\DTCStl.o ..\src\DTCStl.cpp
-g++ -o DTCStl.exe src\DTCStl.o
-Build complete for project DTCStl
-Time consumed: 1022  ms.  
+g++ -O3 -Wall -c -fmessage-length=0 -o src\DRSStl.o ..\src\DRSStl.cpp
+g++ -o DRSStl.exe src\DRSStl.o
+Build complete for project DRSStl
+Time consumed: 2452  ms.  
 
-**** Build of configuration Debug for project Darwin ****
+**** Build of configuration Debug for project DTCStl ****
 
 **** Internal Builder is used for build               ****
-Nothing to build for Darwin
+Nothing to build for DTCStl
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DTCStl
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DTCStl
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DTCStl
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DTCStl
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DTCStl
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DTCStl
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DTCStl
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DTCStl
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DTCStl
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DTCStl
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DTCStl
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DTCStl
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DTCStl
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DTCStl
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DTCStl
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DTCStl
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DTCStl
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DTCStl
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DTCStl
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DTCStl
+
+**** Build of configuration Debug for project DTCStl ****
+
+**** Internal Builder is used for build               ****
+Nothing to build for DTCStl
 
 **** Build of configuration Release for project DRSDarwin ****
 
@@ -35,10 +140,7 @@ Nothing to build for DRSTokamak
 **** Build of configuration Release for project DTCRandomFitness ****
 
 **** Internal Builder is used for build               ****
-g++ -O3 -Wall -c -fmessage-length=0 -o src\DTCRandomFitness.o ..\src\DTCRandomFitness.cpp
-g++ -o DTCRandomFitness.exe src\DTCRandomFitness.o
-Build complete for project DTCRandomFitness
-Time consumed: 404  ms.  
+Nothing to build for DTCRandomFitness
 
 **** Build of configuration Release for project DTCStl ****
 
@@ -48,19 +150,7 @@ Nothing to build for DTCStl
 **** Build of configuration Release for project Darwin ****
 
 **** Internal Builder is used for build               ****
-g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Darwin.o ..\src\Darwin.cpp
-g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Genome.o ..\src\Genome.cpp
-g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Encoding.o ..\src\Encoding.cpp
-g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Vertices.o ..\src\Vertices.cpp
-g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Mutation.o ..\src\Mutation.cpp
-g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Population.o ..\src\Population.cpp
-g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Aperture.o ..\src\Aperture.cpp
-g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Evolver.o ..\src\Evolver.cpp
-g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Recombination.o ..\src\Recombination.cpp
-g++ -IC:\Program Files (x86)\Liquid Technologies\Liquid XML Studio 2011\XmlDataBinder9\Redist9\cpp\include -O3 -Wall -c -fmessage-length=0 -o src\Edges.o ..\src\Edges.cpp
-g++ -o Darwin.exe src\Vertices.o src\Recombination.o src\Population.o src\Mutation.o src\Genome.o src\Evolver.o src\Encoding.o src\Edges.o src\Darwin.o src\Aperture.o
-Build complete for project Darwin
-Time consumed: 13687  ms.  
+Nothing to build for Darwin
 
 **** Build of configuration Release for project SteadyStateTokamak ****
 

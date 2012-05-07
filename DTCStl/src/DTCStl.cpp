@@ -56,12 +56,44 @@ double Distance(point3D targetCenter, point3D centerMass){
 	return distance;
 }
 
+double Area(data triangle){
+
+	double area = 0;
+
+	point3D a, b, c;
+	a.x = triangle.x1;
+	a.y = triangle.y1;
+	a.z = triangle.z1;
+
+	b.x = triangle.x2;
+	b.y = triangle.y2;
+	b.z = triangle.z2;
+
+	c.x = triangle.x3;
+	c.y = triangle.y3;
+	c.z = triangle.z3;
+
+	double perimeter = (Distance(a, b) + Distance(b, c) + Distance(c, a)) / 2;
+
+	area = sqrt( perimeter*(perimeter - Distance(a, b))*(perimeter - Distance(b, c))*(perimeter - Distance(c, a)) );
+	return area;
+}
+
+
 enum volumeMode
 {
 	NOVOLUME = 0,
 	MINVOLUME = 1,
 	MAXVOLUME = 2,
 	VOLUME = 3
+};
+
+enum areaMode
+{
+	NOAREA = 0,
+	MINAREA = 1,
+	MAXAREA = 2,
+	AREA = 3
 };
 
 enum centerMassMode
@@ -93,6 +125,9 @@ int main(int argc, char *argv[]) {
 
 	volumeMode nVolumeMode = NOVOLUME;
 	double dTargetVolume = 0;
+
+	areaMode nAreaMode = NOAREA;
+	double dTargetArea = 0;
 
 	centerMassMode nCenterMassMode = NOCENTERMASS;
 	point3D sTargetCenter;
@@ -126,6 +161,16 @@ int main(int argc, char *argv[]) {
 			else if(arg.substr(0,8) ==  std::string("-volume:")){
 				dTargetVolume = atof(arg.substr(8, arg.size()).c_str());
 				nVolumeMode = VOLUME;
+			}
+			else if(arg == std::string("-minarea")){
+				nAreaMode = MINAREA;
+			}
+			else if(arg == std::string("-maxarea")){
+				nAreaMode = MAXAREA;
+			}
+			else if(arg.substr(0,6) ==  std::string("-area:")){
+				dTargetArea = atof(arg.substr(6, arg.size()).c_str());
+				nAreaMode = AREA;
 			}
 			else if(arg.substr(0,9) ==  std::string("-Xcenter:")){
 				sTargetCenter.x = atof(arg.substr(9, arg.size()).c_str());
@@ -255,6 +300,7 @@ int main(int argc, char *argv[]) {
 
 
     double totalVolume = 0, currentVolume;
+    double totalArea = 0;
     double xCenter = 0, yCenter = 0, zCenter = 0;
 
 
@@ -265,12 +311,13 @@ int main(int argc, char *argv[]) {
         xCenter += ((triangles[i].x1 + triangles[i].x2 + triangles[i].x3) / 4) * currentVolume;
         yCenter += ((triangles[i].y1 + triangles[i].y2 + triangles[i].y3) / 4) * currentVolume;
         zCenter += ((triangles[i].z1 + triangles[i].z2 + triangles[i].z3) / 4) * currentVolume;
-
+        totalArea += Area(triangles[i]);
 
     }
 
     if(bVerbose){
     	std::cout << "Total Volume = " << totalVolume << std::endl;
+    	std::cout << "Total Area = " << totalArea << std::endl;
     	std::cout << "X center = " << xCenter/totalVolume << std::endl;
     	std::cout << "Y center = " << yCenter/totalVolume << std::endl;
     	std::cout << "Z center = " << zCenter/totalVolume << std::endl;
@@ -331,17 +378,40 @@ int main(int argc, char *argv[]) {
         	volumeScore = totalVolume;
             break;
         case 3:
-        	dDeltaVolume = (totalVolume - dTargetVolume) >=0 ? (totalVolume - dTargetVolume) : (totalVolume - dTargetVolume)*-1;
-        	//std::cout << dDeltaVolume  << " "<<  totalVolume << " " << dTargetVolume << std::endl;
-        	if(dDeltaVolume <= 0.1){
-        		dDeltaVolume = 0.1;
-        	}
-        	volumeScore = (1/dDeltaVolume)*10000;
+        	dDeltaVolume = (totalVolume - dTargetVolume) >=0 ? (totalVolume - dTargetVolume) : (dTargetVolume - totalVolume);
+        	volumeScore = -dDeltaVolume;
             break;
 
         default:
             std::cout << "Unknown volume mode";
             volumeScore = 0;
+            break;
+    }
+
+
+    double areaScore = 0;
+    double dDeltaArea = 0;
+
+    switch (nAreaMode)
+    {
+
+    	case 0:
+    		areaScore = 0;
+    		break;
+        case 1:
+        	areaScore = -totalArea;
+            break;
+        case 2:
+        	areaScore = totalArea;
+            break;
+        case 3:
+        	dDeltaArea = (totalArea - dTargetArea) >=0 ? (totalArea - dTargetArea) : (dTargetArea - totalArea);
+        	areaScore = -dDeltaArea;
+            break;
+
+        default:
+            std::cout << "Unknown area mode";
+            areaScore = 0;
             break;
     }
 
@@ -373,12 +443,13 @@ int main(int argc, char *argv[]) {
 
 
 
-    nScore = (centerMassScore + volumeScore + sizeScore)*1000;
+    nScore = (centerMassScore + volumeScore + areaScore + sizeScore)*1000;
 
     if(bVerbose){
     	std::cout << std::endl;
     	std::cout << "center mass score: " << centerMassScore << std::endl;
     	std::cout << "volume score: " << volumeScore << std::endl;
+    	std::cout << "area score: " << areaScore << std::endl;
     	std::cout << "size score: " << sizeScore << std::endl;
     	std::cout << "\n\tTOTAL SCORE: " << nScore << std::endl;
     }
